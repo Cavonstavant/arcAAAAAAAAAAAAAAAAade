@@ -4,8 +4,6 @@
     - fields:
         - unordered_map<"lib_name">
 
-
-
 - ICore:
 - ACore:
     - IDisplay:
@@ -14,29 +12,26 @@
         - Clear
     - IEntities:
         - CRUD
-            - IAssets
-                - Sound
-                - Textures
-                - ...
+          - IAssets
+          - Sound
+          - Textures
+          - ...
     - IGame:
         - start
         - stop
         - restart
         - update
 
-
-
 - IAsset:
-     - Réprésentent un asset:
+    - Réprésentent un asset:
         - Script
         - Musique
         - ...
 
 - IEvent:
     - Réprésentent un event
-        - clavier
-        - souris
-
+      - clavier
+      - souris
 
 # IGame game(lib + jeu);
 # Game.start();
