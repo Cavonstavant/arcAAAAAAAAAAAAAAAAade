@@ -23,7 +23,7 @@ for the JavaScript code in this file
 var NAVTREE =
 [
   [ "arcAAAAAAAAAAAAAAAAade", "index.html", [
-    [ "arcade-architecture", "md__src__common_interface__r_e_a_d_m_e.html", null ],
+    [ "arcade-architecture", "md__src__commom_interface__r_e_a_d_m_e.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
