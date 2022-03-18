@@ -1,0 +1,47 @@
+- LibFactory:
+    - methods:
+        - CRUD (create, read, ...)
+    - fields:
+        - unordered_map<"lib_name">
+
+
+
+- ICore:
+- ACore:
+    - IDisplay:
+        - Draw
+        - Refresh
+        - Clear
+    - IEntities:
+        - CRUD
+            - IAssets
+                - Sound
+                - Textures
+                - ...
+    - IGame:
+        - start
+        - stop
+        - restart
+        - update
+
+
+
+- IAsset:
+     - Réprésentent un asset:
+        - Script
+        - Musique
+        - ...
+
+- IEvent:
+    - Réprésentent un event
+        - clavier
+        - souris
+
+
+# IGame game(lib + jeu);
+# Game.start();
+
+- Qu'est-ce qui est indépendant:
+    - Factory
+    - Lib (graph, game)
+    - ICore
