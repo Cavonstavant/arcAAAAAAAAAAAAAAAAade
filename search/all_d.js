@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['_7eaentity_37',['~AEntity',['../class_a_entity.html#a1680c558ae2cb0d2d65f19147ac857c8',1,'AEntity']]],
-  ['_7eientity_38',['~IEntity',['../class_i_entity.html#acfe7cc7def33fa1cc8a2a56dc39d29e3',1,'IEntity']]],
-  ['_7eigame_39',['~IGame',['../class_i_game.html#a91b14c1b6019364120d5c5e4d4c64414',1,'IGame']]]
+  ['wall_5fentity_40',['WALL_ENTITY',['../class_i_entity.html#afb16cda5faf0c92f62619ef29f6212cbaf13f01b247ebed73aceb3e6b582a3e22',1,'IEntity']]]
 ];

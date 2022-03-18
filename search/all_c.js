@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['wall_5fentity_36',['WALL_ENTITY',['../class_i_entity.html#afb16cda5faf0c92f62619ef29f6212cbaf13f01b247ebed73aceb3e6b582a3e22',1,'IEntity']]]
+  ['update_39',['update',['../class_i_game.html#af8069181438736ca6924cd0930c5bdfe',1,'IGame']]]
 ];
