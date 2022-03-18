@@ -10,7 +10,7 @@ The documentation is currently hosted [here](https://cavonstavant.github.io/arcA
 *    g++20
 ### Building
 On Linux:
-```bash=
+```bash
     git clone https://github.com/Cavonstavant/arcAAAAAAAAAAAAAAAAade.git
     cd arcAAAAAAAAAAAAAAAAade/
     mkdir build && cd build
