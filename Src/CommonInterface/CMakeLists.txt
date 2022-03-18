@@ -15,5 +15,6 @@ set(SRC
 )
 
 add_library(${PROJECT_NAME} INTERFACE ${SRC})
+set_target_properties(${PROJECT_NAME} PROPERTIES PREFIX "")
 
 target_include_directories(${PROJECT_NAME} INTERFACE ${INCLUDE_ROOT})
