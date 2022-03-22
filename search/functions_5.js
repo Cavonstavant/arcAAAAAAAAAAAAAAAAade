@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['nibbler_71',['nibbler',['../_nibbler_8cpp.html#aaf800d5dd163dff0146e7aa921a2f4ba',1,'Nibbler.cpp']]]
+  ['igame_135',['IGame',['../class_i_game.html#ad800d719140d57a75cc285bfb452cc48',1,'IGame']]],
+  ['invalidfileexception_136',['InvalidFileException',['../class_invalid_file_exception.html#a57aea782c01c5297ffae058b27f33bde',1,'InvalidFileException']]]
 ];

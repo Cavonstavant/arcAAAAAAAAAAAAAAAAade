@@ -1,0 +1,7 @@
+<map id="FileCorruptedException" name="FileCorruptedException">
+<area shape="rect" id="node1" title="Exception class for the factory if a file is corrupted." alt="" coords="5,304,179,331"/>
+<area shape="rect" id="node2" href="$class_invalid_file_exception.html" title="Exception class for the factory if a file is invalid." alt="" coords="15,229,169,256"/>
+<area shape="rect" id="node3" href="$class_factory_exception.html" title="Exception class for the factory." alt="" coords="25,155,159,181"/>
+<area shape="rect" id="node4" href="$class_arcade_exception.html" title=" " alt="" coords="27,80,157,107"/>
+<area shape="rect" id="node5" title=" " alt="" coords="35,5,149,32"/>
+</map>

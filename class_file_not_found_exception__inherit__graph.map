@@ -1,0 +1,7 @@
+<map id="FileNotFoundException" name="FileNotFoundException">
+<area shape="rect" id="node1" title="Exception class for the factory if a file is not found." alt="" coords="5,304,176,331"/>
+<area shape="rect" id="node2" href="$class_invalid_file_exception.html" title="Exception class for the factory if a file is invalid." alt="" coords="14,229,167,256"/>
+<area shape="rect" id="node3" href="$class_factory_exception.html" title="Exception class for the factory." alt="" coords="24,155,157,181"/>
+<area shape="rect" id="node4" href="$class_arcade_exception.html" title=" " alt="" coords="25,80,156,107"/>
+<area shape="rect" id="node5" title=" " alt="" coords="33,5,148,32"/>
+</map>

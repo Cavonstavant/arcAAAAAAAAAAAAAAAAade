@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['destroy_6',['destroy',['../class_i_game.html#a16b2d3d1d41a37043ad22e6dd509ef87',1,'IGame']]]
+  ['core_2ecpp_12',['Core.cpp',['../_core_8cpp.html',1,'']]],
+  ['core_2ehpp_13',['Core.hpp',['../_core_8hpp.html',1,'']]]
 ];

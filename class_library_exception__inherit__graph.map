@@ -1,0 +1,7 @@
+<map id="LibraryException" name="LibraryException">
+<area shape="rect" id="node1" title="Exception class for the libraries." alt="" coords="77,155,208,181"/>
+<area shape="rect" id="node4" href="$class_game_exception.html" title="Exception class for the &quot;Game&quot; libraries." alt="" coords="5,229,131,256"/>
+<area shape="rect" id="node5" href="$class_graph_exception.html" title="Exception class for the &quot;Graph&quot; libraries." alt="" coords="155,229,280,256"/>
+<area shape="rect" id="node2" href="$class_arcade_exception.html" title=" " alt="" coords="77,80,208,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="85,5,200,32"/>
+</map>

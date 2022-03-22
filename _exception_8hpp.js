@@ -1,0 +1,28 @@
+var _exception_8hpp =
+[
+    [ "ArcadeException", "class_arcade_exception.html", "class_arcade_exception" ],
+    [ "FactoryException", "class_factory_exception.html", "class_factory_exception" ],
+    [ "InvalidFileException", "class_invalid_file_exception.html", "class_invalid_file_exception" ],
+    [ "FileNotFoundException", "class_file_not_found_exception.html", "class_file_not_found_exception" ],
+    [ "FileCorruptedException", "class_file_corrupted_exception.html", "class_file_corrupted_exception" ],
+    [ "FileUnreadableException", "class_file_unreadable_exception.html", "class_file_unreadable_exception" ],
+    [ "LibraryException", "class_library_exception.html", "class_library_exception" ],
+    [ "GameException", "class_game_exception.html", "class_game_exception" ],
+    [ "GraphException", "class_graph_exception.html", "class_graph_exception" ],
+    [ "EntityException", "class_entity_exception.html", "class_entity_exception" ],
+    [ "EventException", "class_event_exception.html", "class_event_exception" ],
+    [ "VeryStupidUserException", "class_very_stupid_user_exception.html", "class_very_stupid_user_exception" ],
+    [ "ArcadeEX", "_exception_8hpp.html#a60e2e0f1480b1094c7233d6f81fe1fa6", null ],
+    [ "EntityEX", "_exception_8hpp.html#a994c5050a28878424d6aa69fb5d8fd9b", null ],
+    [ "EventEX", "_exception_8hpp.html#ac801d8a96f2ebad2626770b5e383a4c4", null ],
+    [ "EX_PARAMS", "_exception_8hpp.html#af38aa357f9209e6ac8ac9a64b2c71bbe", null ],
+    [ "FactoryEX", "_exception_8hpp.html#a1d93ee803c1f6e7f29db5a7dba95f3dc", null ],
+    [ "FileCorruptedEX", "_exception_8hpp.html#a033b9fac15d1e2f6bd405021914b18bf", null ],
+    [ "FileNotFoundEX", "_exception_8hpp.html#acb44880e74d271ec307c6fe37fdd7e4e", null ],
+    [ "FileUnreadableEX", "_exception_8hpp.html#a69c500ad307d9a686d96e3eb75c006c6", null ],
+    [ "GameEX", "_exception_8hpp.html#a4206ef81d4c3e152b92efdee53c7c3a7", null ],
+    [ "GraphEX", "_exception_8hpp.html#ac963e90d648306d3a6deeaf48285bd83", null ],
+    [ "InvalidFileEX", "_exception_8hpp.html#a9995c0ae71a3206a2e7a5a65c7ae8678", null ],
+    [ "LibraryEX", "_exception_8hpp.html#ab0ebf601308efd2bb1fb627f02817018", null ],
+    [ "VeryStupidUserEX", "_exception_8hpp.html#a476d712f98aae9517f9224b012094e2a", null ]
+];
