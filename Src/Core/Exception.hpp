@@ -74,42 +74,42 @@ class InvalidFileException : public FactoryException {
 // @brief Exception class for the factory if a file is not found
 class FileNotFoundException : public InvalidFileException {
     public:
-        FileNotFoundException(std::string const &what, std::string const &func, int const &line, std::string const &file) : InvalidFileException(what, func, line, file) {};
+        FileNotFoundException(std::string const &what, std::string const &func, int const &line, std::string const &file) : InvalidFileException(what, func, line, file) { _name = "FileNotFoundException"; };
 };
 // @brief Exception class for the factory if a file is corrupted
 class FileCorruptedException : public InvalidFileException {
     public:
-        FileCorruptedException(std::string const &what, std::string const &func, int const &line, std::string const &file) : InvalidFileException(what, func, line, file) {};
+        FileCorruptedException(std::string const &what, std::string const &func, int const &line, std::string const &file) : InvalidFileException(what, func, line, file) { _name = "FileCorruptedException"; };
 };
 // @brief Exception class for the factory if a file is unreadable
 class FileUnreadableException : public InvalidFileException {
     public:
-        FileUnreadableException(std::string const &what, std::string const &func, int const &line, std::string const &file) : InvalidFileException(what, func, line, file) {};
+        FileUnreadableException(std::string const &what, std::string const &func, int const &line, std::string const &file) : InvalidFileException(what, func, line, file) { _name = "FileUnreadableException"; };
 };
 // @brief Exception class for the libraries
 class LibraryException : public ArcadeException {
     public:
-        LibraryException(std::string const &what, std::string const &func, int const &line, std::string const &file) : ArcadeException(what, func, line, file) {};
+        LibraryException(std::string const &what, std::string const &func, int const &line, std::string const &file) : ArcadeException(what, func, line, file) { _name = "LibraryException"; };
 };
 // @brief Exception class for the "Game" libraries
 class GameException : public LibraryException {
     public:
-        GameException(std::string const &what, std::string const &func, int const &line, std::string const &file) : LibraryException(what, func, line, file) {};
+        GameException(std::string const &what, std::string const &func, int const &line, std::string const &file) : LibraryException(what, func, line, file) { _name = "GameException"; };
 };
 // @brief Exception class for the "Graph" libraries
 class GraphException : public LibraryException {
     public:
-        GraphException(std::string const &what, std::string const &func, int const &line, std::string const &file) : LibraryException(what, func, line, file) {};
+        GraphException(std::string const &what, std::string const &func, int const &line, std::string const &file) : LibraryException(what, func, line, file) { _name = "GraphException"; };
 };
 // @brief Exception class for the entities
 class EntityException : public ArcadeException {
     public:
-        EntityException(std::string const &what, std::string const &func, int const &line, std::string const &file) : ArcadeException(what, func, line, file) {};
+        EntityException(std::string const &what, std::string const &func, int const &line, std::string const &file) : ArcadeException(what, func, line, file) { _name = "EntityException"; };
 };
 // @brief Exception class for the events
 class EventException : public ArcadeException {
     public:
-        EventException(std::string const &what, std::string const &func, int const &line, std::string const &file) : ArcadeException(what, func, line, file) {};
+        EventException(std::string const &what, std::string const &func, int const &line, std::string const &file) : ArcadeException(what, func, line, file) { _name = "EventException"; };
 };
 // @brief Exception class when a user is very stupid and we can't do what anything for them
 class VeryStupidUserException : public ArcadeException {
