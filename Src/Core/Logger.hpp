@@ -8,8 +8,6 @@
 #ifndef LOGGER_HPP_
 #define LOGGER_HPP_
 
-#include "IException.hpp"
-
 class Logger {
     public:
         Logger();
