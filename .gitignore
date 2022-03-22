@@ -47,3 +47,6 @@ arcade
 
 # Docs
 doc/html
+
+# Arcade generated files
+arcade.log
