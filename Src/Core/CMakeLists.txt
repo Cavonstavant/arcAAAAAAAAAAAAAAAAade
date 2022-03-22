@@ -14,7 +14,9 @@ set(SRC
     ${INCLUDE_ROOT}/Core.hpp
     ${INCLUDE_ROOT}/AEntity.hpp
     ${INCLUDE_ROOT}/Core.cpp
-    ${INCLUDE_ROOT}/AEntity.cpp)
+    ${INCLUDE_ROOT}/AEntity.cpp
+    ${INCLUDE_ROOT}/Exception.cpp
+    ${INCLUDE_ROOT}/Exception.hpp)
 
 set_target_properties(${TARGET_LIBNAME} PROPERTIES LINKER_LANGUAGE CXX)
 
