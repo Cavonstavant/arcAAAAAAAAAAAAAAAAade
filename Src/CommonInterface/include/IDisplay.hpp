@@ -13,4 +13,4 @@ class IDisplay {
 };
 
 
-#endif //ARCADE_IDISPLAY_HPP
+#endif//ARCADE_IDISPLAY_HPP
