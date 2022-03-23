@@ -10,7 +10,6 @@ var annotated_dup =
     [ "FileUnreadableException", "class_file_unreadable_exception.html", "class_file_unreadable_exception" ],
     [ "GameException", "class_game_exception.html", "class_game_exception" ],
     [ "GraphException", "class_graph_exception.html", "class_graph_exception" ],
-    [ "ICore", "class_i_core.html", null ],
     [ "IDisplay", "class_i_display.html", null ],
     [ "IEntity", "class_i_entity.html", "class_i_entity" ],
     [ "IGame", "class_i_game.html", "class_i_game" ],

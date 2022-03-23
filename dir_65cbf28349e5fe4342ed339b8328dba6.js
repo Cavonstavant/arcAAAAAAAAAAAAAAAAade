@@ -1,8 +1,5 @@
 var dir_65cbf28349e5fe4342ed339b8328dba6 =
 [
-    [ "ICore.hpp", "_i_core_8hpp.html", [
-      [ "ICore", "class_i_core.html", null ]
-    ] ],
     [ "IDisplay.hpp", "_i_display_8hpp.html", [
       [ "IDisplay", "class_i_display.html", null ]
     ] ],

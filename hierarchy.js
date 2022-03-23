@@ -18,7 +18,6 @@ var hierarchy =
         [ "VeryStupidUserException", "class_very_stupid_user_exception.html", null ]
       ] ]
     ] ],
-    [ "ICore", "class_i_core.html", null ],
     [ "IDisplay", "class_i_display.html", null ],
     [ "IEntity", "class_i_entity.html", [
       [ "AEntity", "class_a_entity.html", null ]

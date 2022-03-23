@@ -1,10 +1,11 @@
 var class_i_entity =
 [
     [ "EntityType", "class_i_entity.html#afb16cda5faf0c92f62619ef29f6212cb", [
-      [ "PLAYER_ENTITY", "class_i_entity.html#afb16cda5faf0c92f62619ef29f6212cba9eaf0379df0b5e0f9d7f803dd41aff73", null ],
-      [ "ENEMY_ENTITY", "class_i_entity.html#afb16cda5faf0c92f62619ef29f6212cbafbd0583e4324c850553d97c4d174d4eb", null ],
-      [ "ITEM_ENTITY", "class_i_entity.html#afb16cda5faf0c92f62619ef29f6212cba0cd653957b243de973932629fea22f08", null ],
-      [ "WALL_ENTITY", "class_i_entity.html#afb16cda5faf0c92f62619ef29f6212cbaf13f01b247ebed73aceb3e6b582a3e22", null ]
+      [ "PLAYER", "class_i_entity.html#afb16cda5faf0c92f62619ef29f6212cba1338589f35cfb3b9caec34f1612ce430", null ],
+      [ "ENEMY", "class_i_entity.html#afb16cda5faf0c92f62619ef29f6212cbaa8a69fc0de36d52a9422bce960f7ea6e", null ],
+      [ "ITEM", "class_i_entity.html#afb16cda5faf0c92f62619ef29f6212cbada938fa2e2be1550c7dd8049b10201c4", null ],
+      [ "WALL", "class_i_entity.html#afb16cda5faf0c92f62619ef29f6212cba906e5f94605e5680eeeba3dbf75dcc76", null ],
+      [ "ENTITY_NUM", "class_i_entity.html#afb16cda5faf0c92f62619ef29f6212cbadeaa2d1b1c94deb83fe4ad0092623460", null ]
     ] ],
     [ "~IEntity", "class_i_entity.html#acfe7cc7def33fa1cc8a2a56dc39d29e3", null ],
     [ "getPos", "class_i_entity.html#ab3209bdc669cf1a5812d7a8353f1e402", null ],
