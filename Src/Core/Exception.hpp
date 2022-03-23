@@ -176,4 +176,14 @@ class VeryStupidUserException : public ArcadeException {
         };
 };
 
+// #define info(what) try { throw Logger::log(ArcadeInfo(what, EX_PARAMS)) } catch (...) {}
+
+class ArcadeInfo : public ArcadeException {
+    public:
+        ArcadeInfo(std::string const &what, std::string const &func, int const &line, std::string const &file) : ArcadeException(what, func, line, file)
+        {
+            _name = "ArcadeInfo";
+        };
+};
+
 #endif /* !ARCADE_EXCEPTION_HPP */

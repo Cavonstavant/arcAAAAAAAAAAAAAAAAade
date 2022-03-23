@@ -35,6 +35,28 @@ ArcadeException Logger::log(ArcadeException ex)
     return ex;
 }
 
+ArcadeInfo Logger::log(ArcadeInfo info)
+{
+    std::stringstream ssColor;
+    std::stringstream ss;
+    std::ofstream ofLog;
+
+    ssColor << COLOR_BLUE << "[INFO] " << COLOR_BOLD << info.getName() << COLOR_RESET << " >> " << COLOR_BOLD << info.what() << COLOR_RESET << std::endl;
+    ssColor << COLOR_BLUE << ">> " << COLOR_BOLD << info.getFunc() << COLOR_RESET << " (" << info.getFile() << ":" << info.getLine() << ")" << std::endl;
+    std::cerr << ssColor.str() << std::endl;
+
+    try {
+        ss << "[INFO] " << info.getName() << " >> " << info.what() << std::endl;
+        ss << ">> " << info.getFunc() << " (" << info.getFile() << ":" << info.getLine() << ")" << std::endl;
+        ofLog.open("arcade.log", std::ios::app);
+        ofLog << ss.str() << std::endl;
+        ofLog.close();
+    } catch (std::exception &e) {
+        std::cerr << "Logging into 'arcade.log' file failed (" << e.what() << ")" << std::endl;
+    }
+    return info;
+}
+
 bool Logger::ENABLED()
 {
     return true;
