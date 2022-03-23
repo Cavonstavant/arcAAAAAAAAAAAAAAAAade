@@ -16,34 +16,34 @@
 #define EX_PARAMS __PRETTY_FUNCTION__, __LINE__, __FILE__
 
 /// \Get the exception and log it if necessary
-#define ExceptionTernary(exception, what, enabled) (enabled() == false ? exception(what, EX_PARAMS) : Logger::log(exception(what, EX_PARAMS)))
+#define ExceptionTernary(exception, what, severity) (severity() == Logger::Severity::SEVERITY_NONE ? exception(what, EX_PARAMS) : Logger::log(exception(what, EX_PARAMS), severity()))
 
 /// \These defines makes possible to specify the function, the file and the line where the exception is thrown
 /// \You MUST NOT throw the classical *Exceptions (ex: ArcadeException) but use the macros below
-#define ArcadeEX(what, enabled) ExceptionTernary(ArcadeException, what, enabled)
-#define FactoryEX(what, enabled) ExceptionTernary(FactoryException, what, enabled)
-#define InvalidFileEX(what, enabled) ExceptionTernary(InvalidFileException, what, enabled)
-#define FileNotFoundEX(what, enabled) ExceptionTernary(FileNotFoundException, what, enabled)
-#define FileCorruptedEX(what, enabled) ExceptionTernary(FileCorruptedException, what, enabled)
-#define FileUnreadableEX(what, enabled) ExceptionTernary(FileUnreadableException, what, enabled)
-#define LibraryEX(what, enabled) ExceptionTernary(LibraryException, what, enabled)
-#define GameEX(what, enabled) ExceptionTernary(GameException, what, enabled)
-#define GraphEX(what, enabled) ExceptionTernary(GraphException, what, enabled)
-#define EntityEX(what, enabled) ExceptionTernary(EntityException, what, enabled)
-#define EventEX(what, enabled) ExceptionTernary(EventException, what, enabled)
-#define VeryStupidUserEX(what, enabled) ExceptionTernary(VeryStupidUserException, what, enabled)
+#define ArcadeEX(what, severity) ExceptionTernary(ArcadeException, what, severity)
+#define FactoryEX(what, severity) ExceptionTernary(FactoryException, what, severity)
+#define InvalidFileEX(what, severity) ExceptionTernary(InvalidFileException, what, severity)
+#define FileNotFoundEX(what, severity) ExceptionTernary(FileNotFoundException, what, severity)
+#define FileCorruptedEX(what, severity) ExceptionTernary(FileCorruptedException, what, severity)
+#define FileUnreadableEX(what, severity) ExceptionTernary(FileUnreadableException, what, severity)
+#define LibraryEX(what, severity) ExceptionTernary(LibraryException, what, severity)
+#define GameEX(what, severity) ExceptionTernary(GameException, what, severity)
+#define GraphEX(what, severity) ExceptionTernary(GraphException, what, severity)
+#define EntityEX(what, severity) ExceptionTernary(EntityException, what, severity)
+#define EventEX(what, severity) ExceptionTernary(EventException, what, severity)
+#define VeryStupidUserEX(what, severity) ExceptionTernary(VeryStupidUserException, what, severity)
 
 /// \Defines the color codes to print the exceptions in color
-#define COLOR_RESET "\x1B[0m"
-#define COLOR_BLACK "\x1B[30m"
-#define COLOR_RED "\x1B[31m"
-#define COLOR_GREEN "\x1B[32m"
-#define COLOR_YELLOW "\x1B[33m"
-#define COLOR_BLUE "\x1B[34m"
-#define COLOR_PURPLE "\x1B[35m"
-#define COLOR_CYAN "\x1B[36m"
-#define COLOR_WHITE "\x1B[37m"
-#define COLOR_BOLD "\x1B[1m"
+#define LOGGER_COLOR_RESET "\x1B[0m"
+#define LOGGER_COLOR_BLACK "\x1B[30m"
+#define LOGGER_COLOR_RED "\x1B[31m"
+#define LOGGER_COLOR_GREEN "\x1B[32m"
+#define LOGGER_COLOR_YELLOW "\x1B[33m"
+#define LOGGER_COLOR_BLUE "\x1B[34m"
+#define LOGGER_COLOR_PURPLE "\x1B[35m"
+#define LOGGER_COLOR_CYAN "\x1B[36m"
+#define LOGGER_COLOR_WHITE "\x1B[37m"
+#define LOGGER_COLOR_BOLD "\x1B[1m"
 
 class ArcadeException : public std::exception {
     public:
