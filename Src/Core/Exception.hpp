@@ -8,26 +8,30 @@
 #ifndef ARCADE_EXCEPTION_HPP
 #define ARCADE_EXCEPTION_HPP
 
+#include "Logger.hpp"
 #include <exception>
 #include <string>
 
 /// \Defines the params taken by the exceptions in addition to the "what" message
 #define EX_PARAMS __PRETTY_FUNCTION__, __LINE__, __FILE__
 
+/// \Get the exception and log it if necessary
+#define ExceptionTernary(exception, what, enabled) (enabled() == false ? exception(what, EX_PARAMS) : Logger::log(exception(what, EX_PARAMS)))
+
 /// \These defines makes possible to specify the function, the file and the line where the exception is thrown
 /// \You MUST NOT throw the classical *Exceptions (ex: ArcadeException) but use the macros below
-#define ArcadeEX(what) ArcadeException(what, EX_PARAMS)
-#define FactoryEX(what) FactoryException(what, EX_PARAMS)
-#define InvalidFileEX(what) InvalidFileException(what, EX_PARAMS)
-#define FileNotFoundEX(what) FileNotFoundException(what, EX_PARAMS)
-#define FileCorruptedEX(what) FileCorruptedException(what, EX_PARAMS)
-#define FileUnreadableEX(what) FileUnreadableException(what, EX_PARAMS)
-#define LibraryEX(what) LibraryException(what, EX_PARAMS)
-#define GameEX(what) GameException(what, EX_PARAMS)
-#define GraphEX(what) GraphException(what, EX_PARAMS)
-#define EntityEX(what) EntityException(what, EX_PARAMS)
-#define EventEX(what) EventException(what, EX_PARAMS)
-#define VeryStupidUserEX(what) VeryStupidUserException(what, EX_PARAMS)
+#define ArcadeEX(what, enabled) ExceptionTernary(ArcadeException, what, enabled)
+#define FactoryEX(what, enabled) ExceptionTernary(FactoryException, what, enabled)
+#define InvalidFileEX(what, enabled) ExceptionTernary(InvalidFileException, what, enabled)
+#define FileNotFoundEX(what, enabled) ExceptionTernary(FileNotFoundException, what, enabled)
+#define FileCorruptedEX(what, enabled) ExceptionTernary(FileCorruptedException, what, enabled)
+#define FileUnreadableEX(what, enabled) ExceptionTernary(FileUnreadableException, what, enabled)
+#define LibraryEX(what, enabled) ExceptionTernary(LibraryException, what, enabled)
+#define GameEX(what, enabled) ExceptionTernary(GameException, what, enabled)
+#define GraphEX(what, enabled) ExceptionTernary(GraphException, what, enabled)
+#define EntityEX(what, enabled) ExceptionTernary(EntityException, what, enabled)
+#define EventEX(what, enabled) ExceptionTernary(EventException, what, enabled)
+#define VeryStupidUserEX(what, enabled) ExceptionTernary(VeryStupidUserException, what, enabled)
 
 /// \Defines the color codes to print the exceptions in color
 #define COLOR_RESET "\x1B[0m"

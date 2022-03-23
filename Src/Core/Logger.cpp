@@ -13,15 +13,7 @@
 #include <sstream>
 #include <string>
 
-Logger::Logger()
-{
-}
-
-Logger::~Logger()
-{
-}
-
-void Logger::log(ArcadeException &ex)
+ArcadeException Logger::log(ArcadeException ex)
 {
     std::stringstream ssColor;
     std::stringstream ss;
@@ -40,4 +32,15 @@ void Logger::log(ArcadeException &ex)
     } catch (std::exception &e) {
         std::cerr << "Logging into 'arcade.log' file failed (" << e.what() << ")" << std::endl;
     }
+    return ex;
+}
+
+bool Logger::ENABLED()
+{
+    return true;
+}
+
+bool Logger::DISABLED()
+{
+    return false;
 }

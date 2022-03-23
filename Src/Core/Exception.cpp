@@ -20,8 +20,6 @@ ArcadeException::ArcadeException(std::string const &what, std::string const &fun
 
     ss << func << " (" << file << ":" << line << ")";
     _where = ss.str();
-
-    Logger::log(*this);
 }
 
 const char *ArcadeException::what() const noexcept
