@@ -43,5 +43,5 @@
 
 - Qu'est-ce qui est indépendant:
     - Factory
-    - Lib (graph, game)
+    - lib (graph, game)
     - ICore
