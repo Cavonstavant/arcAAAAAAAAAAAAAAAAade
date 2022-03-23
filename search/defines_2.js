@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['factoryex_172',['FactoryEX',['../_exception_8hpp.html#a1d93ee803c1f6e7f29db5a7dba95f3dc',1,'Exception.hpp']]],
-  ['filecorruptedex_173',['FileCorruptedEX',['../_exception_8hpp.html#a033b9fac15d1e2f6bd405021914b18bf',1,'Exception.hpp']]],
-  ['filenotfoundex_174',['FileNotFoundEX',['../_exception_8hpp.html#acb44880e74d271ec307c6fe37fdd7e4e',1,'Exception.hpp']]],
-  ['fileunreadableex_175',['FileUnreadableEX',['../_exception_8hpp.html#a69c500ad307d9a686d96e3eb75c006c6',1,'Exception.hpp']]]
+  ['entityex_203',['EntityEX',['../_exception_8hpp.html#ab8701ed0fb1e2015495661824d99d65d',1,'Exception.hpp']]],
+  ['eventex_204',['EventEX',['../_exception_8hpp.html#af8149bcf419d8032b069df0ccaf89823',1,'Exception.hpp']]],
+  ['ex_5fparams_205',['EX_PARAMS',['../_exception_8hpp.html#af38aa357f9209e6ac8ac9a64b2c71bbe',1,'Exception.hpp']]],
+  ['exceptionternary_206',['ExceptionTernary',['../_exception_8hpp.html#a52af6208a11ddcb98c49111c391d3758',1,'Exception.hpp']]]
 ];

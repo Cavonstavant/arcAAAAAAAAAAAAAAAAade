@@ -22,5 +22,6 @@ var hierarchy =
     [ "IEntity", "class_i_entity.html", [
       [ "AEntity", "class_a_entity.html", null ]
     ] ],
-    [ "IGame", "class_i_game.html", null ]
+    [ "IGame", "class_i_game.html", null ],
+    [ "Logger", "class_logger.html", null ]
 ];
