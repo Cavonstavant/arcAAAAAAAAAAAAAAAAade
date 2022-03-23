@@ -10,8 +10,11 @@
 
 class ArcadeException;
 
+/// \brief Logger class to log exceptions
 class Logger {
     public:
+        /// \brief Deleted Constructor, this class must not be instantiated.
+        Logger() = delete;
         /// \brief log the exception before throwing it
         /// \param ex the exception to log
         /// \return the exception
