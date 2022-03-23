@@ -27,7 +27,7 @@ ArcadeException Logger::log(ArcadeException ex)
         ss << "[LOGGER] " << ex.getName() << " >> " << ex.what() << std::endl;
         ss << ">> " << ex.getFunc() << " (" << ex.getFile() << ":" << ex.getLine() << ")" << std::endl;
         ofLog.open("arcade.log", std::ios::app);
-        ofLog << ss.str();
+        ofLog << ss.str() << std::endl;
         ofLog.close();
     } catch (std::exception &e) {
         std::cerr << "Logging into 'arcade.log' file failed (" << e.what() << ")" << std::endl;
