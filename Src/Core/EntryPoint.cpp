@@ -1,14 +1,13 @@
 /*
 ** EPITECH PROJECT, 2022
-** Project
+** arcade
 ** File description:
-** entryPoint
+** EntryPoint
 */
 
-#include "Exception.hpp"
-#include <iostream>
+#include "Core.hpp"
 
-int main(void)
+int main(int ac, char **av)
 {
     return (0);
 }
