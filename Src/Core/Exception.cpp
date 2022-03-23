@@ -6,9 +6,8 @@
 */
 
 #include "Exception.hpp"
-#include <iostream>
+#include "Logger.hpp"
 #include <sstream>
-#include <string>
 
 ArcadeException::ArcadeException(std::string const &what, std::string const &func, int const &line, std::string const &file) : _name("ArcadeException")
 {
