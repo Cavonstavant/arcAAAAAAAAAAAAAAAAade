@@ -47,7 +47,6 @@ class Logger {
         static Severity INFO();
 
 
-
     protected:
     private:
 };
