@@ -5,8 +5,8 @@
 ** Logger
 */
 
-#include "Exception.hpp"
 #include "Logger.hpp"
+#include "Exception.hpp"
 #include <fstream>
 #include <iomanip>
 #include <iostream>
