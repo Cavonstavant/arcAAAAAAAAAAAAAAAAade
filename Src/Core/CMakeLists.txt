@@ -5,15 +5,21 @@ set(TARGET_LIB_NAME libarcade_core)
 set(TARGET_EXEC_NAME arcade)
 
 set(SRC
-    ${INCLUDE_ROOT}/Core.hpp
-    ${INCLUDE_ROOT}/AEntity.hpp
-    ${INCLUDE_ROOT}/Core.cpp
-    ${INCLUDE_ROOT}/AEntity.cpp
-    ${INCLUDE_ROOT}/Exception.cpp
-    ${INCLUDE_ROOT}/Exception.hpp
-    ${INCLUDE_ROOT}/Logger.hpp
-    ${INCLUDE_ROOT}/Logger.cpp
-)
+        ${INCLUDE_ROOT}/Entity/AEntity.hpp
+        ${INCLUDE_ROOT}/Entity/AEntity.cpp
+        ${INCLUDE_ROOT}/Entity/Enemy.cpp
+        ${INCLUDE_ROOT}/Entity/Enemy.hpp
+        ${INCLUDE_ROOT}/Entity/Object.cpp
+        ${INCLUDE_ROOT}/Entity/Object.hpp
+        ${INCLUDE_ROOT}/Entity/Player.cpp
+        ${INCLUDE_ROOT}/Entity/Player.hpp
+        ${INCLUDE_ROOT}/Core.hpp
+        ${INCLUDE_ROOT}/Core.cpp
+        ${INCLUDE_ROOT}/Exception.cpp
+        ${INCLUDE_ROOT}/Exception.hpp
+        ${INCLUDE_ROOT}/Logger.hpp
+        ${INCLUDE_ROOT}/Logger.cpp
+        )
 
 set_target_properties(${TARGET_LIBNAME} PROPERTIES LINKER_LANGUAGE CXX)
 
@@ -31,6 +37,6 @@ target_link_libraries(${TARGET_EXEC_NAME} PRIVATE ${TARGET_LIB_NAME})
 target_include_directories(${TARGET_EXEC_NAME} PRIVATE ${INCLUDE_ROOT})
 
 add_custom_command(TARGET ${TARGET_EXEC_NAME}
-    POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -E copy $<TARGET_FILE:${TARGET_EXEC_NAME}> ${PROJECT_SOURCE_DIR}
-)
+        POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy $<TARGET_FILE:${TARGET_EXEC_NAME}> ${PROJECT_SOURCE_DIR}
+        )
