@@ -8,12 +8,12 @@
 #ifndef ARCADE_ENEMY_HPP
 #define ARCADE_ENEMY_HPP
 
-#include "AEntity.hpp"
 #include "../../CommonInterface/include/IColor.hpp"
+#include "AEntity.hpp"
 
 /// \brief Enemy class inherits from AEntity
 /// \param No param to construct all value by default
-class Enemy : public AEntity{
+class Enemy : public AEntity {
     public:
         /// \brief Constructor
         Enemy();
@@ -21,7 +21,7 @@ class Enemy : public AEntity{
         ~Enemy() override;
 
         /// \brief Getters & setters \
-        /// Set the speed of the Enemy Entity
+    /// Set the speed of the Enemy Entity
         void setSpeed(int speed);
         /// \brief Set the Color of the Enemy Entity
         void setColor(COLOR_E color);
@@ -51,4 +51,4 @@ class Enemy : public AEntity{
         bool _enrage;
 };
 
-#endif //ARCADE_ENEMY_HPP
+#endif//ARCADE_ENEMY_HPP

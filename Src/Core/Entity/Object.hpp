@@ -8,17 +8,17 @@
 #ifndef ARCADE_OBJECT_HPP
 #define ARCADE_OBJECT_HPP
 
-#include "AEntity.hpp"
 #include "../../CommonInterface/include/IColor.hpp"
+#include "AEntity.hpp"
 
 /// \brief Object class represents all the Entity not moving. Like walls, fruits.
-class Object : public AEntity{
+class Object : public AEntity {
     public:
         enum TYPE_E {
-          WALL,
-          FRUITS,
-          POINTS,
-          ENUM_SIZE
+            WALL,
+            FRUITS,
+            POINTS,
+            ENUM_SIZE
         };
         /// \brief Constructor
         Object();
@@ -40,10 +40,11 @@ class Object : public AEntity{
         /// \brief Get the _type
         /// \return The TYPE_E _type of the Object
         TYPE_E getType() const;
+
     private:
         IColor *_color;
         TYPE_E _type;
 };
 
 
-#endif //ARCADE_OBJECT_HPP
+#endif//ARCADE_OBJECT_HPP

@@ -37,4 +37,4 @@ class Player : public AEntity {
 };
 
 
-#endif //ARCADE_PLAYER_HPP
+#endif//ARCADE_PLAYER_HPP

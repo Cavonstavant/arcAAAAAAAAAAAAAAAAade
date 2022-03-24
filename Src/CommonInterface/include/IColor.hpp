@@ -12,7 +12,7 @@
 class IColor {
     public:
         /// \brief Enum of standard colors
-        enum COLOR_E{
+        enum COLOR_E {
             RED,
             YELLOW,
             BLUE,
@@ -27,9 +27,10 @@ class IColor {
         /// \brief Get the color
         /// \return IColor
         virtual IColor getColor() const = 0;
+
     protected:
     private:
 };
 
 
-#endif //ARCADE_ICOLOR_HPP
+#endif//ARCADE_ICOLOR_HPP
