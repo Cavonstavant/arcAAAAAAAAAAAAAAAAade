@@ -14,12 +14,14 @@ class ArcadeException;
 class Logger {
     public:
         enum Severity {
-            SEVERITY_NONE = 0,
-            SEVERITY_LOW = 1,
-            SEVERITY_MEDIUM = 2,
-            SEVERITY_HIGH = 3,
-            SEVERITY_CRITICAL = 4,
-            SEVERITY_INFO = 5
+            SEVERITY_NONE,
+            SEVERITY_LOW,
+            SEVERITY_MEDIUM,
+            SEVERITY_HIGH,
+            SEVERITY_CRITICAL,
+            SEVERITY_INFO,
+
+            SEVERITY_ENUM_SIZE
         };
         /// \brief Deleted Constructor, this class must not be instantiated.
         Logger() = delete;
@@ -45,10 +47,6 @@ class Logger {
         /// \brief pass this function to the macros and they will log an info
         /// \return Severity::INFO
         static Severity INFO();
-
-
-    protected:
-    private:
 };
 
 #endif /* !LOGGER_HPP_ */
