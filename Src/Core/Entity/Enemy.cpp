@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2022
-** Enemy.cpp.cc
+** Enemy.cpp
 ** File description:
 ** Created by hjulien,
 */
