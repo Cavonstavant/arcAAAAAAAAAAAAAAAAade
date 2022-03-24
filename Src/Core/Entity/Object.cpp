@@ -30,7 +30,7 @@ void Object::setColor(IColor::COLOR_E color)
     _color->setColor(color);
 }
 
-IColor * Object::getColor() const
+IColor *Object::getColor() const
 {
     return _color;
 }
