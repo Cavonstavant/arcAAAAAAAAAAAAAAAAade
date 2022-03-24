@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['update_92',['update',['../class_i_game.html#af8069181438736ca6924cd0930c5bdfe',1,'IGame']]]
+  ['readme_2emd_100',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
+  ['red_101',['RED',['../class_i_color.html#a170b274430acf74d37db458282d83b26a4ade7b315a5d219f03a9ed1b57560a2b',1,'IColor']]],
+  ['running_102',['RUNNING',['../class_i_game.html#a4a7309d86599d6e581f764233085c7dda43491564ebcfd38568918efbd6e840fd',1,'IGame']]]
 ];

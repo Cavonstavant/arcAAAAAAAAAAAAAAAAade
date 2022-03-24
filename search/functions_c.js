@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['verystupiduserexception_169',['VeryStupidUserException',['../class_very_stupid_user_exception.html#a66c0e36fcdd1e591ce4cc0012372e6a3',1,'VeryStupidUserException']]]
+  ['update_221',['update',['../class_i_game.html#af8069181438736ca6924cd0930c5bdfe',1,'IGame']]]
 ];

@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['setdisplay_85',['setDisplay',['../class_i_game.html#a15327ab5de7c3c3d3ea7fc48dc6fdf26',1,'IGame']]],
-  ['setpos_86',['setPos',['../class_i_entity.html#a3dc74d4e58ee5091e5f1d54bbbcf5a13',1,'IEntity::setPos()'],['../class_a_entity.html#a4b9c45e027d1cb6e65b4afd557615b9c',1,'AEntity::setPos()']]],
-  ['setsize_87',['setSize',['../class_i_entity.html#a1868722c6177951cd8c07d83bcfbc0fa',1,'IEntity::setSize()'],['../class_a_entity.html#a478b957000e851e9f78f043cdce73fd2',1,'AEntity::setSize()']]],
-  ['settype_88',['setType',['../class_i_entity.html#a27dbfaf751760ad1ddaf4c5f696261f7',1,'IEntity::setType()'],['../class_a_entity.html#a1b7c8a1545f373d28f360fb0895bb8ac',1,'AEntity::setType()']]],
-  ['setup_89',['setup',['../class_i_game.html#a79f62f576a5cf86a8c2c0f25fd75b885',1,'IGame']]],
-  ['start_90',['start',['../class_i_game.html#a1054f8839203aff00de286e06dfb0788',1,'IGame']]],
-  ['stopped_91',['STOPPED',['../class_i_game.html#a4a7309d86599d6e581f764233085c7dda09d4d696b4e935115b9313e3c412509a',1,'IGame']]]
+  ['pacman_93',['pacman',['../_pacman_8cpp.html#a78a9e699835b9f1072f407dbbe4acf91',1,'Pacman.cpp']]],
+  ['pacman_2ecpp_94',['Pacman.cpp',['../_pacman_8cpp.html',1,'']]],
+  ['paused_95',['PAUSED',['../class_i_game.html#a4a7309d86599d6e581f764233085c7dda99b2439e63f73ad515f7ab2447a80673',1,'IGame']]],
+  ['player_96',['Player',['../class_player.html',1,'Player'],['../class_player.html#affe0cc3cb714f6deb4e62f0c0d3f1fd8',1,'Player::Player()']]],
+  ['player_2ecpp_97',['Player.cpp',['../_player_8cpp.html',1,'']]],
+  ['player_2ehpp_98',['Player.hpp',['../_player_8hpp.html',1,'']]],
+  ['points_99',['POINTS',['../class_object.html#aaaf3106c96ab4387c5ada5d22074c0ffa911644c0e5cf0c4828ad5410db73286c',1,'Object']]]
 ];

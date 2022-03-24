@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['enemy_183',['ENEMY',['../class_i_entity.html#afb16cda5faf0c92f62619ef29f6212cbaa8a69fc0de36d52a9422bce960f7ea6e',1,'IEntity']]],
-  ['entity_5fnum_184',['ENTITY_NUM',['../class_i_entity.html#afb16cda5faf0c92f62619ef29f6212cbadeaa2d1b1c94deb83fe4ad0092623460',1,'IEntity']]]
+  ['blue_241',['BLUE',['../class_i_color.html#a170b274430acf74d37db458282d83b26a7b0ac25cc84691926b3fcfef50af504a',1,'IColor']]]
 ];

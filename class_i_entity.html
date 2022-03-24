@@ -83,7 +83,6 @@ $(document).ready(function(){initNavTree('class_i_entity.html',''); initResizabl
 
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="class_i_entity-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -100,38 +99,20 @@ Inheritance diagram for IEntity:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_i_entity__inherit__graph.png" border="0" usemap="#_i_entity_inherit__map" alt="Inheritance graph"/></div>
 <map name="_i_entity_inherit__map" id="_i_entity_inherit__map">
-<area shape="rect" title="represents a generic entity within the game" alt="" coords="8,5,72,32"/>
-<area shape="rect" href="class_a_entity.html" title=" " alt="" coords="5,80,75,107"/>
+<area shape="rect" title="represents a generic entity within the game" alt="" coords="96,5,160,32"/>
+<area shape="rect" href="class_a_entity.html" title=" " alt="" coords="93,80,163,107"/>
+<area shape="rect" href="class_enemy.html" title="Enemy class inherits from AEntity." alt="" coords="5,155,72,181"/>
+<area shape="rect" href="class_object.html" title="Object class represents all the Entity not moving. Like walls, fruits." alt="" coords="96,155,160,181"/>
+<area shape="rect" href="class_player.html" title="Player class inherits from AEntity." alt="" coords="185,155,247,181"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:afb16cda5faf0c92f62619ef29f6212cb"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_entity.html#afb16cda5faf0c92f62619ef29f6212cb">EntityType</a> { <br />
-&#160;&#160;<a class="el" href="class_i_entity.html#afb16cda5faf0c92f62619ef29f6212cba1338589f35cfb3b9caec34f1612ce430">PLAYER</a>, 
-<a class="el" href="class_i_entity.html#afb16cda5faf0c92f62619ef29f6212cbaa8a69fc0de36d52a9422bce960f7ea6e">ENEMY</a>, 
-<a class="el" href="class_i_entity.html#afb16cda5faf0c92f62619ef29f6212cbada938fa2e2be1550c7dd8049b10201c4">ITEM</a>, 
-<a class="el" href="class_i_entity.html#afb16cda5faf0c92f62619ef29f6212cba906e5f94605e5680eeeba3dbf75dcc76">WALL</a>, 
-<br />
-&#160;&#160;<a class="el" href="class_i_entity.html#afb16cda5faf0c92f62619ef29f6212cbadeaa2d1b1c94deb83fe4ad0092623460">ENTITY_NUM</a>
-<br />
- }</td></tr>
-<tr class="memdesc:afb16cda5faf0c92f62619ef29f6212cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">represent the entity type  <a href="class_i_entity.html#afb16cda5faf0c92f62619ef29f6212cb">More...</a><br /></td></tr>
-<tr class="separator:afb16cda5faf0c92f62619ef29f6212cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:acfe7cc7def33fa1cc8a2a56dc39d29e3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_entity.html#acfe7cc7def33fa1cc8a2a56dc39d29e3">~IEntity</a> ()=default</td></tr>
 <tr class="memdesc:acfe7cc7def33fa1cc8a2a56dc39d29e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="class_i_entity.html#acfe7cc7def33fa1cc8a2a56dc39d29e3">More...</a><br /></td></tr>
 <tr class="separator:acfe7cc7def33fa1cc8a2a56dc39d29e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9da1cfdacbcca6b79b9b4b24ef9f94b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_i_entity.html#afb16cda5faf0c92f62619ef29f6212cb">EntityType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_entity.html#ae9da1cfdacbcca6b79b9b4b24ef9f94b">getType</a> () const =0</td></tr>
-<tr class="memdesc:ae9da1cfdacbcca6b79b9b4b24ef9f94b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the entity type.  <a href="class_i_entity.html#ae9da1cfdacbcca6b79b9b4b24ef9f94b">More...</a><br /></td></tr>
-<tr class="separator:ae9da1cfdacbcca6b79b9b4b24ef9f94b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27dbfaf751760ad1ddaf4c5f696261f7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_entity.html#a27dbfaf751760ad1ddaf4c5f696261f7">setType</a> (<a class="el" href="class_i_entity.html#afb16cda5faf0c92f62619ef29f6212cb">EntityType</a> type)=0</td></tr>
-<tr class="memdesc:a27dbfaf751760ad1ddaf4c5f696261f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the entity type.  <a href="class_i_entity.html#a27dbfaf751760ad1ddaf4c5f696261f7">More...</a><br /></td></tr>
-<tr class="separator:a27dbfaf751760ad1ddaf4c5f696261f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3209bdc669cf1a5812d7a8353f1e402"><td class="memItemLeft" align="right" valign="top">virtual std::pair&lt; int, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_entity.html#ab3209bdc669cf1a5812d7a8353f1e402">getPos</a> () const =0</td></tr>
-<tr class="memdesc:ab3209bdc669cf1a5812d7a8353f1e402"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the entity position.  <a href="class_i_entity.html#ab3209bdc669cf1a5812d7a8353f1e402">More...</a><br /></td></tr>
 <tr class="separator:ab3209bdc669cf1a5812d7a8353f1e402"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3dc74d4e58ee5091e5f1d54bbbcf5a13"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_entity.html#a3dc74d4e58ee5091e5f1d54bbbcf5a13">setPos</a> (std::pair&lt; int, int &gt; pos)=0</td></tr>
 <tr class="memdesc:a3dc74d4e58ee5091e5f1d54bbbcf5a13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the entity position.  <a href="class_i_entity.html#a3dc74d4e58ee5091e5f1d54bbbcf5a13">More...</a><br /></td></tr>
@@ -147,33 +128,7 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p>represents a generic entity within the game </p>
 
 <p class="definition">Definition at line <a class="el" href="_i_entity_8hpp_source.html#l00014">14</a> of file <a class="el" href="_i_entity_8hpp_source.html">IEntity.hpp</a>.</p>
-</div><h2 class="groupheader">Member Enumeration Documentation</h2>
-<a id="afb16cda5faf0c92f62619ef29f6212cb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afb16cda5faf0c92f62619ef29f6212cb">&#9670;&nbsp;</a></span>EntityType</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="class_i_entity.html#afb16cda5faf0c92f62619ef29f6212cb">IEntity::EntityType</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>represent the entity type </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="afb16cda5faf0c92f62619ef29f6212cba1338589f35cfb3b9caec34f1612ce430"></a>PLAYER&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="afb16cda5faf0c92f62619ef29f6212cbaa8a69fc0de36d52a9422bce960f7ea6e"></a>ENEMY&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="afb16cda5faf0c92f62619ef29f6212cbada938fa2e2be1550c7dd8049b10201c4"></a>ITEM&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="afb16cda5faf0c92f62619ef29f6212cba906e5f94605e5680eeeba3dbf75dcc76"></a>WALL&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="afb16cda5faf0c92f62619ef29f6212cbadeaa2d1b1c94deb83fe4ad0092623460"></a>ENTITY_NUM&#160;</td><td class="fielddoc"></td></tr>
-</table>
-
-<p class="definition">Definition at line <a class="el" href="_i_entity_8hpp_source.html#l00017">17</a> of file <a class="el" href="_i_entity_8hpp_source.html">IEntity.hpp</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="acfe7cc7def33fa1cc8a2a56dc39d29e3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acfe7cc7def33fa1cc8a2a56dc39d29e3">&#9670;&nbsp;</a></span>~IEntity()</h2>
 
@@ -225,9 +180,6 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get the entity position. </p>
-<dl class="section return"><dt>Returns</dt><dd>the std::pair&lt;int, int&gt; position </dd></dl>
-
 <p>Implemented in <a class="el" href="class_a_entity.html#a578061e764559921ce69ae9c02e2cda8">AEntity</a>.</p>
 
 </div>
@@ -259,36 +211,6 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>the std::pair&lt;int, int&gt; size </dd></dl>
 
 <p>Implemented in <a class="el" href="class_a_entity.html#ab03d1e6a4ebeb59309ae6eddde8dcc87">AEntity</a>.</p>
-
-</div>
-</div>
-<a id="ae9da1cfdacbcca6b79b9b4b24ef9f94b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae9da1cfdacbcca6b79b9b4b24ef9f94b">&#9670;&nbsp;</a></span>getType()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual <a class="el" href="class_i_entity.html#afb16cda5faf0c92f62619ef29f6212cb">EntityType</a> IEntity::getType </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the entity type. </p>
-<dl class="section return"><dt>Returns</dt><dd>the EntityType </dd></dl>
-
-<p>Implemented in <a class="el" href="class_a_entity.html#aaf4356b1aa95934cec21c22659cd1624">AEntity</a>.</p>
 
 </div>
 </div>
@@ -361,42 +283,6 @@ Public Member Functions</h2></td></tr>
 </dl>
 
 <p>Implemented in <a class="el" href="class_a_entity.html#a478b957000e851e9f78f043cdce73fd2">AEntity</a>.</p>
-
-</div>
-</div>
-<a id="a27dbfaf751760ad1ddaf4c5f696261f7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a27dbfaf751760ad1ddaf4c5f696261f7">&#9670;&nbsp;</a></span>setType()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void IEntity::setType </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_i_entity.html#afb16cda5faf0c92f62619ef29f6212cb">EntityType</a>&#160;</td>
-          <td class="paramname"><em>type</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Set the entity type. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">type</td><td>the EntityType </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Implemented in <a class="el" href="class_a_entity.html#a1b7c8a1545f373d28f360fb0895bb8ac">AEntity</a>.</p>
 
 </div>
 </div>

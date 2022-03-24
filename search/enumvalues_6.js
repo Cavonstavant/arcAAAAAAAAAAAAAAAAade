@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['wall_191',['WALL',['../class_i_entity.html#afb16cda5faf0c92f62619ef29f6212cba906e5f94605e5680eeeba3dbf75dcc76',1,'IEntity']]]
+  ['red_248',['RED',['../class_i_color.html#a170b274430acf74d37db458282d83b26a4ade7b315a5d219f03a9ed1b57560a2b',1,'IColor']]],
+  ['running_249',['RUNNING',['../class_i_game.html#a4a7309d86599d6e581f764233085c7dda43491564ebcfd38568918efbd6e840fd',1,'IGame']]]
 ];

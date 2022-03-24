@@ -1,12 +1,21 @@
 var searchData=
 [
-  ['ientity_60',['IEntity',['../class_i_entity.html',1,'']]],
-  ['ientity_2ehpp_61',['IEntity.hpp',['../_i_entity_8hpp.html',1,'']]],
-  ['igame_62',['IGame',['../class_i_game.html',1,'IGame'],['../class_i_game.html#ad800d719140d57a75cc285bfb452cc48',1,'IGame::IGame()']]],
-  ['igame_2ehpp_63',['IGame.hpp',['../_i_game_8hpp.html',1,'']]],
-  ['igraph_64',['IGraph',['../class_i_graph.html',1,'']]],
-  ['igraph_2ehpp_65',['IGraph.hpp',['../_i_graph_8hpp.html',1,'']]],
-  ['invalidfileex_66',['InvalidFileEX',['../_exception_8hpp.html#ad7a5ace104550a9edee4eb5aa40d3d45',1,'Exception.hpp']]],
-  ['invalidfileexception_67',['InvalidFileException',['../class_invalid_file_exception.html',1,'InvalidFileException'],['../class_invalid_file_exception.html#a57aea782c01c5297ffae058b27f33bde',1,'InvalidFileException::InvalidFileException()']]],
-  ['item_68',['ITEM',['../class_i_entity.html#afb16cda5faf0c92f62619ef29f6212cbada938fa2e2be1550c7dd8049b10201c4',1,'IEntity']]]
+  ['gameex_51',['GameEX',['../_exception_8hpp.html#a56e5321aa9838c71732a6ea1e61b5cf2',1,'Exception.hpp']]],
+  ['gameexception_52',['GameException',['../class_game_exception.html',1,'GameException'],['../class_game_exception.html#a2fc47f83971b856def5176360cac59a6',1,'GameException::GameException()']]],
+  ['gamestate_53',['GameState',['../class_i_game.html#a4a7309d86599d6e581f764233085c7dd',1,'IGame']]],
+  ['getboosted_54',['getBoosted',['../class_player.html#ab8a6fa5f22f2fbfc5f24201dd5915e46',1,'Player']]],
+  ['getcolor_55',['getColor',['../class_i_color.html#aef61dbc919a0f6a7d69d4c19bf0f2f0c',1,'IColor::getColor()'],['../class_enemy.html#a59b598dc0d997e94d9adafc470635944',1,'Enemy::getColor()'],['../class_object.html#a2397989ffbb2c83868fba0843eb693be',1,'Object::getColor()']]],
+  ['getenrage_56',['getEnrage',['../class_enemy.html#a4ded7b8fab6464d92dda58a8a93ae93a',1,'Enemy']]],
+  ['getfile_57',['getFile',['../class_arcade_exception.html#a8dfd1d16d4e530c7a997767b33263dd8',1,'ArcadeException']]],
+  ['getfunc_58',['getFunc',['../class_arcade_exception.html#a70ef303c6a9e1644fe32c8f387094f85',1,'ArcadeException']]],
+  ['getismoving_59',['getIsMoving',['../class_a_entity.html#ae71fa931609b2226a0e437fe04ab40ef',1,'AEntity::getIsMoving()'],['../class_enemy.html#af3ad00f5db4e91c220d367196364ee55',1,'Enemy::getIsMoving()'],['../class_object.html#a6675c531600779a9e2c1fe35947eb86a',1,'Object::getIsMoving()'],['../class_player.html#a858b0644480fbc9f4e473c58b7c82b5c',1,'Player::getIsMoving()']]],
+  ['getline_60',['getLine',['../class_arcade_exception.html#acc880a3f60746397a83ac453eb8b5181',1,'ArcadeException']]],
+  ['getname_61',['getName',['../class_arcade_exception.html#a0c949dff6638c08c2534f0550c2db89e',1,'ArcadeException']]],
+  ['getpos_62',['getPos',['../class_i_entity.html#ab3209bdc669cf1a5812d7a8353f1e402',1,'IEntity::getPos()'],['../class_a_entity.html#a578061e764559921ce69ae9c02e2cda8',1,'AEntity::getPos()']]],
+  ['getsize_63',['getSize',['../class_i_entity.html#a4644cf0bd8a130b0dabd59bd9bda96f5',1,'IEntity::getSize()'],['../class_a_entity.html#ab03d1e6a4ebeb59309ae6eddde8dcc87',1,'AEntity::getSize()']]],
+  ['getspeed_64',['getSpeed',['../class_enemy.html#ac1cc1be96a8fa6e280836afa7d6b24dd',1,'Enemy']]],
+  ['getstate_65',['getState',['../class_i_game.html#a44de7e08e7ee294be051445a84306299',1,'IGame']]],
+  ['gettype_66',['getType',['../class_object.html#a8153b7118f4c4872a9efe5ee68a8dbd1',1,'Object']]],
+  ['graphex_67',['GraphEX',['../_exception_8hpp.html#aa544842dce7ef6be0a10715ec81bab1f',1,'Exception.hpp']]],
+  ['graphexception_68',['GraphException',['../class_graph_exception.html',1,'GraphException'],['../class_graph_exception.html#a41cd93feccd4202812f434ec3243a0a8',1,'GraphException::GraphException()']]]
 ];

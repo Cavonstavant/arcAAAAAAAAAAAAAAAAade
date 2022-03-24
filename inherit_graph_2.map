@@ -1,3 +1,7 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$class_i_game.html" title="Game instance." alt="" coords="5,5,71,32"/>
+<area shape="rect" id="node1" href="$class_i_entity.html" title="represents a generic entity within the game" alt="" coords="5,56,69,83"/>
+<area shape="rect" id="node2" href="$class_a_entity.html" title=" " alt="" coords="117,56,187,83"/>
+<area shape="rect" id="node3" href="$class_enemy.html" title="Enemy class inherits from AEntity." alt="" coords="235,5,301,32"/>
+<area shape="rect" id="node4" href="$class_object.html" title="Object class represents all the Entity not moving. Like walls, fruits." alt="" coords="236,56,300,83"/>
+<area shape="rect" id="node5" href="$class_player.html" title="Player class inherits from AEntity." alt="" coords="237,107,299,133"/>
 </map>

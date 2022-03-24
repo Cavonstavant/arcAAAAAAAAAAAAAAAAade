@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['_7eaentity_172',['~AEntity',['../class_a_entity.html#a1680c558ae2cb0d2d65f19147ac857c8',1,'AEntity']]],
-  ['_7eientity_173',['~IEntity',['../class_i_entity.html#acfe7cc7def33fa1cc8a2a56dc39d29e3',1,'IEntity']]],
-  ['_7eigame_174',['~IGame',['../class_i_game.html#a91b14c1b6019364120d5c5e4d4c64414',1,'IGame']]]
+  ['what_223',['what',['../class_arcade_exception.html#a337bc156e58344e8b1aa58033b1a05ae',1,'ArcadeException']]],
+  ['where_224',['where',['../class_arcade_exception.html#ac4bb54de4b3af4f6631019838b4c3914',1,'ArcadeException']]]
 ];
