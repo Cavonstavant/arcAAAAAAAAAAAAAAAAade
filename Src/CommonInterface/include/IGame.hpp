@@ -10,7 +10,7 @@
 #ifndef ARCADE_IGAME_HPP
 #define ARCADE_IGAME_HPP
 
-#include "IDisplay.hpp"
+#include "IGraph.hpp"
 
 /// Game instance
 class IGame {
@@ -45,7 +45,7 @@ class IGame {
         /// \brief Update the game's display
         /// \return true if the game was successfully updated
         /// \note Calling this method without calling IGame::setup() beforehand will result in <b>undefined behavior</b>
-        virtual bool setDisplay(IDisplay &display) = 0;
+        virtual bool setDisplay(IGraph &display) = 0;
 
         /// \brief Update the game's status
         /// \param state the new game's status

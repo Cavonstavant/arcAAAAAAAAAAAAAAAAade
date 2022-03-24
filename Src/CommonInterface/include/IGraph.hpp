@@ -8,8 +8,7 @@
 #ifndef ARCADE_IDISPLAY_HPP
 #define ARCADE_IDISPLAY_HPP
 
-
-class IDisplay {
+class IGraph {
 };
 
 
