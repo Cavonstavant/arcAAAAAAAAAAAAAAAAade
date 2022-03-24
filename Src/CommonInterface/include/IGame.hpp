@@ -35,7 +35,7 @@ class IGame {
         /// \return true if the game was successfully initialized
         /// \note Each call to the method must be followed by a call to IGame::destroy()
         /// \warning Calling this method twice without calling IGame::destroy() beforehand will result in <b>undefined behavior</b>
-        virtual bool setup(IDisplay &display) = 0;
+        virtual bool setup(IGraph &display) = 0;
 
         /// \brief Destroy a game instance
         /// \return true if the game was successfully destroyed
