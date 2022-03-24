@@ -10,7 +10,7 @@ var class_i_game =
     [ "~IGame", "class_i_game.html#a91b14c1b6019364120d5c5e4d4c64414", null ],
     [ "destroy", "class_i_game.html#a16b2d3d1d41a37043ad22e6dd509ef87", null ],
     [ "getState", "class_i_game.html#a44de7e08e7ee294be051445a84306299", null ],
-    [ "setDisplay", "class_i_game.html#af3c1dd9d67acd1c5bc09b10c7a8453ae", null ],
+    [ "setDisplay", "class_i_game.html#a15327ab5de7c3c3d3ea7fc48dc6fdf26", null ],
     [ "setup", "class_i_game.html#a80f42254808f46947acd61762cd58ac6", null ],
     [ "start", "class_i_game.html#a1054f8839203aff00de286e06dfb0788", null ],
     [ "update", "class_i_game.html#af8069181438736ca6924cd0930c5bdfe", null ]

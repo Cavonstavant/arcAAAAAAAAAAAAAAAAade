@@ -112,15 +112,15 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad800d719140d57a75cc285bfb452cc48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91b14c1b6019364120d5c5e4d4c64414"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_game.html#a91b14c1b6019364120d5c5e4d4c64414">~IGame</a> ()=default</td></tr>
 <tr class="separator:a91b14c1b6019364120d5c5e4d4c64414"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80f42254808f46947acd61762cd58ac6"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_game.html#a80f42254808f46947acd61762cd58ac6">setup</a> (<a class="el" href="class_i_display.html">IDisplay</a> &amp;display)=0</td></tr>
+<tr class="memitem:a80f42254808f46947acd61762cd58ac6"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_game.html#a80f42254808f46947acd61762cd58ac6">setup</a> (IDisplay &amp;display)=0</td></tr>
 <tr class="memdesc:a80f42254808f46947acd61762cd58ac6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize a game instance.  <a href="class_i_game.html#a80f42254808f46947acd61762cd58ac6">More...</a><br /></td></tr>
 <tr class="separator:a80f42254808f46947acd61762cd58ac6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16b2d3d1d41a37043ad22e6dd509ef87"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_game.html#a16b2d3d1d41a37043ad22e6dd509ef87">destroy</a> ()=0</td></tr>
 <tr class="memdesc:a16b2d3d1d41a37043ad22e6dd509ef87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy a game instance.  <a href="class_i_game.html#a16b2d3d1d41a37043ad22e6dd509ef87">More...</a><br /></td></tr>
 <tr class="separator:a16b2d3d1d41a37043ad22e6dd509ef87"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3c1dd9d67acd1c5bc09b10c7a8453ae"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_game.html#af3c1dd9d67acd1c5bc09b10c7a8453ae">setDisplay</a> (<a class="el" href="class_i_display.html">IDisplay</a> &amp;display)=0</td></tr>
-<tr class="memdesc:af3c1dd9d67acd1c5bc09b10c7a8453ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the game's display.  <a href="class_i_game.html#af3c1dd9d67acd1c5bc09b10c7a8453ae">More...</a><br /></td></tr>
-<tr class="separator:af3c1dd9d67acd1c5bc09b10c7a8453ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15327ab5de7c3c3d3ea7fc48dc6fdf26"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_game.html#a15327ab5de7c3c3d3ea7fc48dc6fdf26">setDisplay</a> (<a class="el" href="class_i_graph.html">IGraph</a> &amp;display)=0</td></tr>
+<tr class="memdesc:a15327ab5de7c3c3d3ea7fc48dc6fdf26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the game's display.  <a href="class_i_game.html#a15327ab5de7c3c3d3ea7fc48dc6fdf26">More...</a><br /></td></tr>
+<tr class="separator:a15327ab5de7c3c3d3ea7fc48dc6fdf26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8069181438736ca6924cd0930c5bdfe"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_game.html#af8069181438736ca6924cd0930c5bdfe">update</a> (<a class="el" href="class_i_game.html#a4a7309d86599d6e581f764233085c7dd">GameState</a> state)=0</td></tr>
 <tr class="memdesc:af8069181438736ca6924cd0930c5bdfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the game's status.  <a href="class_i_game.html#af8069181438736ca6924cd0930c5bdfe">More...</a><br /></td></tr>
 <tr class="separator:af8069181438736ca6924cd0930c5bdfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -282,8 +282,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="af3c1dd9d67acd1c5bc09b10c7a8453ae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af3c1dd9d67acd1c5bc09b10c7a8453ae">&#9670;&nbsp;</a></span>setDisplay()</h2>
+<a id="a15327ab5de7c3c3d3ea7fc48dc6fdf26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15327ab5de7c3c3d3ea7fc48dc6fdf26">&#9670;&nbsp;</a></span>setDisplay()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -294,7 +294,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual bool IGame::setDisplay </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_i_display.html">IDisplay</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="class_i_graph.html">IGraph</a> &amp;&#160;</td>
           <td class="paramname"><em>display</em></td><td>)</td>
           <td></td>
         </tr>
@@ -324,7 +324,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual bool IGame::setup </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_i_display.html">IDisplay</a> &amp;&#160;</td>
+          <td class="paramtype">IDisplay &amp;&#160;</td>
           <td class="paramname"><em>display</em></td><td>)</td>
           <td></td>
         </tr>
