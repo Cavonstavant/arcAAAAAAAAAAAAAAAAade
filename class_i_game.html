@@ -112,9 +112,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad800d719140d57a75cc285bfb452cc48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91b14c1b6019364120d5c5e4d4c64414"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_game.html#a91b14c1b6019364120d5c5e4d4c64414">~IGame</a> ()=default</td></tr>
 <tr class="separator:a91b14c1b6019364120d5c5e4d4c64414"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80f42254808f46947acd61762cd58ac6"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_game.html#a80f42254808f46947acd61762cd58ac6">setup</a> (IDisplay &amp;display)=0</td></tr>
-<tr class="memdesc:a80f42254808f46947acd61762cd58ac6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize a game instance.  <a href="class_i_game.html#a80f42254808f46947acd61762cd58ac6">More...</a><br /></td></tr>
-<tr class="separator:a80f42254808f46947acd61762cd58ac6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79f62f576a5cf86a8c2c0f25fd75b885"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_game.html#a79f62f576a5cf86a8c2c0f25fd75b885">setup</a> (<a class="el" href="class_i_graph.html">IGraph</a> &amp;display)=0</td></tr>
+<tr class="memdesc:a79f62f576a5cf86a8c2c0f25fd75b885"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize a game instance.  <a href="class_i_game.html#a79f62f576a5cf86a8c2c0f25fd75b885">More...</a><br /></td></tr>
+<tr class="separator:a79f62f576a5cf86a8c2c0f25fd75b885"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16b2d3d1d41a37043ad22e6dd509ef87"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_game.html#a16b2d3d1d41a37043ad22e6dd509ef87">destroy</a> ()=0</td></tr>
 <tr class="memdesc:a16b2d3d1d41a37043ad22e6dd509ef87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy a game instance.  <a href="class_i_game.html#a16b2d3d1d41a37043ad22e6dd509ef87">More...</a><br /></td></tr>
 <tr class="separator:a16b2d3d1d41a37043ad22e6dd509ef87"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -249,7 +249,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Destroy a game instance. </p>
 <dl class="section return"><dt>Returns</dt><dd>true if the game was successfully destroyed </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>Calling this method twice without calling <a class="el" href="class_i_game.html#a80f42254808f46947acd61762cd58ac6" title="Initialize a game instance.">IGame::setup()</a> beforehand will result in <b>undefined behavior</b> </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Calling this method twice without calling <a class="el" href="class_i_game.html#a79f62f576a5cf86a8c2c0f25fd75b885" title="Initialize a game instance.">IGame::setup()</a> beforehand will result in <b>undefined behavior</b> </dd></dl>
 
 </div>
 </div>
@@ -278,7 +278,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get the game's status. </p>
 <dl class="section return"><dt>Returns</dt><dd>the game's status </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>Calling this method without calling <a class="el" href="class_i_game.html#a80f42254808f46947acd61762cd58ac6" title="Initialize a game instance.">IGame::setup()</a> beforehand will result in <b>undefined behavior</b> </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Calling this method without calling <a class="el" href="class_i_game.html#a79f62f576a5cf86a8c2c0f25fd75b885" title="Initialize a game instance.">IGame::setup()</a> beforehand will result in <b>undefined behavior</b> </dd></dl>
 
 </div>
 </div>
@@ -308,12 +308,12 @@ Public Member Functions</h2></td></tr>
 
 <p>Update the game's display. </p>
 <dl class="section return"><dt>Returns</dt><dd>true if the game was successfully updated </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>Calling this method without calling <a class="el" href="class_i_game.html#a80f42254808f46947acd61762cd58ac6" title="Initialize a game instance.">IGame::setup()</a> beforehand will result in <b>undefined behavior</b> </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Calling this method without calling <a class="el" href="class_i_game.html#a79f62f576a5cf86a8c2c0f25fd75b885" title="Initialize a game instance.">IGame::setup()</a> beforehand will result in <b>undefined behavior</b> </dd></dl>
 
 </div>
 </div>
-<a id="a80f42254808f46947acd61762cd58ac6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a80f42254808f46947acd61762cd58ac6">&#9670;&nbsp;</a></span>setup()</h2>
+<a id="a79f62f576a5cf86a8c2c0f25fd75b885"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79f62f576a5cf86a8c2c0f25fd75b885">&#9670;&nbsp;</a></span>setup()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -324,7 +324,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual bool IGame::setup </td>
           <td>(</td>
-          <td class="paramtype">IDisplay &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="class_i_graph.html">IGraph</a> &amp;&#160;</td>
           <td class="paramname"><em>display</em></td><td>)</td>
           <td></td>
         </tr>
@@ -374,7 +374,7 @@ Public Member Functions</h2></td></tr>
 
 <p>starts the game </p>
 <dl class="section return"><dt>Returns</dt><dd>true if the game was successfully started </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>Calling this method without calling <a class="el" href="class_i_game.html#a80f42254808f46947acd61762cd58ac6" title="Initialize a game instance.">IGame::setup()</a> beforehand will result in <b>undefined behavior</b> </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Calling this method without calling <a class="el" href="class_i_game.html#a79f62f576a5cf86a8c2c0f25fd75b885" title="Initialize a game instance.">IGame::setup()</a> beforehand will result in <b>undefined behavior</b> </dd></dl>
 
 </div>
 </div>
@@ -410,7 +410,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if the game was successfully updated </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>Calling this method without calling <a class="el" href="class_i_game.html#a80f42254808f46947acd61762cd58ac6" title="Initialize a game instance.">IGame::setup()</a> beforehand will result in <b>undefined behavior</b> </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Calling this method without calling <a class="el" href="class_i_game.html#a79f62f576a5cf86a8c2c0f25fd75b885" title="Initialize a game instance.">IGame::setup()</a> beforehand will result in <b>undefined behavior</b> </dd></dl>
 
 </div>
 </div>

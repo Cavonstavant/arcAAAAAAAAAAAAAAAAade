@@ -11,7 +11,7 @@ var class_i_game =
     [ "destroy", "class_i_game.html#a16b2d3d1d41a37043ad22e6dd509ef87", null ],
     [ "getState", "class_i_game.html#a44de7e08e7ee294be051445a84306299", null ],
     [ "setDisplay", "class_i_game.html#a15327ab5de7c3c3d3ea7fc48dc6fdf26", null ],
-    [ "setup", "class_i_game.html#a80f42254808f46947acd61762cd58ac6", null ],
+    [ "setup", "class_i_game.html#a79f62f576a5cf86a8c2c0f25fd75b885", null ],
     [ "start", "class_i_game.html#a1054f8839203aff00de286e06dfb0788", null ],
     [ "update", "class_i_game.html#af8069181438736ca6924cd0930c5bdfe", null ]
 ];
