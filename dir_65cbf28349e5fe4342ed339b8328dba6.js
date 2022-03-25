@@ -10,6 +10,6 @@ var dir_65cbf28349e5fe4342ed339b8328dba6 =
       [ "IGame", "class_i_game.html", "class_i_game" ]
     ] ],
     [ "IGraph.hpp", "_i_graph_8hpp.html", [
-      [ "IGraph", "class_i_graph.html", null ]
+      [ "IGraph", "class_i_graph.html", "class_i_graph" ]
     ] ]
 ];

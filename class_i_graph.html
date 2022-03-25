@@ -82,16 +82,339 @@ $(document).ready(function(){initNavTree('class_i_graph.html',''); initResizable
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="class_i_graph-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">IGraph Class Reference</div>  </div>
+<div class="title">IGraph Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="_i_graph_8hpp_source.html">IGraph.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a12f681e7abc397a40abd4abae7b8104c"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graph.html#a12f681e7abc397a40abd4abae7b8104c">~IGraph</a> ()=default</td></tr>
+<tr class="separator:a12f681e7abc397a40abd4abae7b8104c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52cabf556c64ace96b73f016c555701a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graph.html#a52cabf556c64ace96b73f016c555701a">drawCircle</a> (float x, float y, float size, std::string color)=0</td></tr>
+<tr class="separator:a52cabf556c64ace96b73f016c555701a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97eafb637da85009c05eca977e87f387"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graph.html#a97eafb637da85009c05eca977e87f387">drawRect</a> (float x, float y, float size, std::string color)=0</td></tr>
+<tr class="separator:a97eafb637da85009c05eca977e87f387"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9abe098a1896feec4d62b000c1f7c9be"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graph.html#a9abe098a1896feec4d62b000c1f7c9be">drawTriangle</a> (float x, float y, float size, std::string color)=0</td></tr>
+<tr class="separator:a9abe098a1896feec4d62b000c1f7c9be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a946c42c4d3b03fe2d2faab24d5806460"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graph.html#a946c42c4d3b03fe2d2faab24d5806460">drawText</a> (const std::string &amp;text)=0</td></tr>
+<tr class="separator:a946c42c4d3b03fe2d2faab24d5806460"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c031716b5b3bd141ef3bf2a64d2f660"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graph.html#a6c031716b5b3bd141ef3bf2a64d2f660">moveEntity</a> (<a class="el" href="class_i_entity.html">IEntity</a> &amp;entity)=0</td></tr>
+<tr class="separator:a6c031716b5b3bd141ef3bf2a64d2f660"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1a7b43ef1b57d5671fe29180b62bf34"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graph.html#ab1a7b43ef1b57d5671fe29180b62bf34">createWindow</a> ()=0</td></tr>
+<tr class="separator:ab1a7b43ef1b57d5671fe29180b62bf34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37713807fe67fdb7b963c59641b6acc8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graph.html#a37713807fe67fdb7b963c59641b6acc8">clearWindow</a> ()=0</td></tr>
+<tr class="separator:a37713807fe67fdb7b963c59641b6acc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa89d5fa0c769857a0dfd91889ea86797"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graph.html#aa89d5fa0c769857a0dfd91889ea86797">displayWindow</a> ()=0</td></tr>
+<tr class="separator:aa89d5fa0c769857a0dfd91889ea86797"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_i_graph_8hpp_source.html#l00011">11</a> of file <a class="el" href="_i_graph_8hpp_source.html">IGraph.hpp</a>.</p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+<p class="definition">Definition at line <a class="el" href="_i_graph_8hpp_source.html#l00014">14</a> of file <a class="el" href="_i_graph_8hpp_source.html">IGraph.hpp</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a12f681e7abc397a40abd4abae7b8104c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12f681e7abc397a40abd4abae7b8104c">&#9670;&nbsp;</a></span>~IGraph()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual IGraph::~IGraph </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a37713807fe67fdb7b963c59641b6acc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37713807fe67fdb7b963c59641b6acc8">&#9670;&nbsp;</a></span>clearWindow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IGraph::clearWindow </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab1a7b43ef1b57d5671fe29180b62bf34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1a7b43ef1b57d5671fe29180b62bf34">&#9670;&nbsp;</a></span>createWindow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IGraph::createWindow </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa89d5fa0c769857a0dfd91889ea86797"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa89d5fa0c769857a0dfd91889ea86797">&#9670;&nbsp;</a></span>displayWindow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IGraph::displayWindow </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a52cabf556c64ace96b73f016c555701a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52cabf556c64ace96b73f016c555701a">&#9670;&nbsp;</a></span>drawCircle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IGraph::drawCircle </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>color</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a97eafb637da85009c05eca977e87f387"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97eafb637da85009c05eca977e87f387">&#9670;&nbsp;</a></span>drawRect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IGraph::drawRect </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>color</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a946c42c4d3b03fe2d2faab24d5806460"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a946c42c4d3b03fe2d2faab24d5806460">&#9670;&nbsp;</a></span>drawText()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IGraph::drawText </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>text</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9abe098a1896feec4d62b000c1f7c9be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9abe098a1896feec4d62b000c1f7c9be">&#9670;&nbsp;</a></span>drawTriangle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IGraph::drawTriangle </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>color</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6c031716b5b3bd141ef3bf2a64d2f660"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c031716b5b3bd141ef3bf2a64d2f660">&#9670;&nbsp;</a></span>moveEntity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IGraph::moveEntity </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_i_entity.html">IEntity</a> &amp;&#160;</td>
+          <td class="paramname"><em>entity</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>Src/CommonInterface/include/<a class="el" href="_i_graph_8hpp_source.html">IGraph.hpp</a></li>
 </ul>
 </div><!-- contents -->

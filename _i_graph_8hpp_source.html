@@ -96,14 +96,44 @@ $(document).ready(function(){initNavTree('_i_graph_8hpp_source.html',''); initRe
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef ARCADE_IDISPLAY_HPP</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define ARCADE_IDISPLAY_HPP</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_i_graph.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_i_graph.html">IGraph</a> {</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;};</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_i_entity_8hpp.html">IEntity.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#endif//ARCADE_IDISPLAY_HPP</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_i_graph.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_i_graph.html">IGraph</a> {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="class_i_graph.html#a12f681e7abc397a40abd4abae7b8104c">~IGraph</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_i_graph.html#a52cabf556c64ace96b73f016c555701a">drawCircle</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> size, std::string color) = 0;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_i_graph.html#a97eafb637da85009c05eca977e87f387">drawRect</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> size, std::string color) = 0;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_i_graph.html#a9abe098a1896feec4d62b000c1f7c9be">drawTriangle</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> size, std::string color) = 0;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_i_graph.html#a946c42c4d3b03fe2d2faab24d5806460">drawText</a>(<span class="keyword">const</span> std::string &amp;text) = 0;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_i_graph.html#a6c031716b5b3bd141ef3bf2a64d2f660">moveEntity</a>(<a class="code" href="class_i_entity.html">IEntity</a> &amp;entity) = 0;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_i_graph.html#ab1a7b43ef1b57d5671fe29180b62bf34">createWindow</a>() = 0; <span class="comment">// à voir avec l&#39;autre groupe pour le return</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_i_graph.html#a37713807fe67fdb7b963c59641b6acc8">clearWindow</a>() = 0;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_i_graph.html#aa89d5fa0c769857a0dfd91889ea86797">displayWindow</a>() = 0;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;};</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#endif//ARCADE_IDISPLAY_HPP</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclass_i_graph_html"><div class="ttname"><a href="class_i_graph.html">IGraph</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_graph_8hpp_source.html#l00011">IGraph.hpp:11</a></div></div>
+<div class="ttc" id="aclass_i_graph_html_a52cabf556c64ace96b73f016c555701a"><div class="ttname"><a href="class_i_graph.html#a52cabf556c64ace96b73f016c555701a">IGraph::drawCircle</a></div><div class="ttdeci">virtual void drawCircle(float x, float y, float size, std::string color)=0</div></div>
+<div class="ttc" id="a_i_entity_8hpp_html"><div class="ttname"><a href="_i_entity_8hpp.html">IEntity.hpp</a></div></div>
+<div class="ttc" id="aclass_i_graph_html_a12f681e7abc397a40abd4abae7b8104c"><div class="ttname"><a href="class_i_graph.html#a12f681e7abc397a40abd4abae7b8104c">IGraph::~IGraph</a></div><div class="ttdeci">virtual ~IGraph()=default</div></div>
+<div class="ttc" id="aclass_i_graph_html"><div class="ttname"><a href="class_i_graph.html">IGraph</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_graph_8hpp_source.html#l00014">IGraph.hpp:14</a></div></div>
+<div class="ttc" id="aclass_i_entity_html"><div class="ttname"><a href="class_i_entity.html">IEntity</a></div><div class="ttdoc">represents a generic entity within the game</div><div class="ttdef"><b>Definition:</b> <a href="_i_entity_8hpp_source.html#l00014">IEntity.hpp:14</a></div></div>
+<div class="ttc" id="aclass_i_graph_html_aa89d5fa0c769857a0dfd91889ea86797"><div class="ttname"><a href="class_i_graph.html#aa89d5fa0c769857a0dfd91889ea86797">IGraph::displayWindow</a></div><div class="ttdeci">virtual void displayWindow()=0</div></div>
+<div class="ttc" id="aclass_i_graph_html_ab1a7b43ef1b57d5671fe29180b62bf34"><div class="ttname"><a href="class_i_graph.html#ab1a7b43ef1b57d5671fe29180b62bf34">IGraph::createWindow</a></div><div class="ttdeci">virtual void createWindow()=0</div></div>
+<div class="ttc" id="aclass_i_graph_html_a37713807fe67fdb7b963c59641b6acc8"><div class="ttname"><a href="class_i_graph.html#a37713807fe67fdb7b963c59641b6acc8">IGraph::clearWindow</a></div><div class="ttdeci">virtual void clearWindow()=0</div></div>
+<div class="ttc" id="aclass_i_graph_html_a946c42c4d3b03fe2d2faab24d5806460"><div class="ttname"><a href="class_i_graph.html#a946c42c4d3b03fe2d2faab24d5806460">IGraph::drawText</a></div><div class="ttdeci">virtual void drawText(const std::string &amp;text)=0</div></div>
+<div class="ttc" id="aclass_i_graph_html_a6c031716b5b3bd141ef3bf2a64d2f660"><div class="ttname"><a href="class_i_graph.html#a6c031716b5b3bd141ef3bf2a64d2f660">IGraph::moveEntity</a></div><div class="ttdeci">virtual void moveEntity(IEntity &amp;entity)=0</div></div>
+<div class="ttc" id="aclass_i_graph_html_a97eafb637da85009c05eca977e87f387"><div class="ttname"><a href="class_i_graph.html#a97eafb637da85009c05eca977e87f387">IGraph::drawRect</a></div><div class="ttdeci">virtual void drawRect(float x, float y, float size, std::string color)=0</div></div>
+<div class="ttc" id="aclass_i_graph_html_a9abe098a1896feec4d62b000c1f7c9be"><div class="ttname"><a href="class_i_graph.html#a9abe098a1896feec4d62b000c1f7c9be">IGraph::drawTriangle</a></div><div class="ttdeci">virtual void drawTriangle(float x, float y, float size, std::string color)=0</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
