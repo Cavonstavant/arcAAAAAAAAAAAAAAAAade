@@ -40,6 +40,7 @@ class AEntity : public IEntity {
         std::pair<int, int> _pos;
         std::pair<int, int> _size;
         bool _isMoving;
+
     private:
 };
 
