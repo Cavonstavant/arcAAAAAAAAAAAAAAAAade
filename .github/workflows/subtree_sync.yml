@@ -20,14 +20,22 @@ jobs:
         env:
           SSH_AUTH_SOCK: /tmp/ssh_agent.sock
         run: |
-           ssh-agent -a $SSH_AUTH_SOCK > /dev/null
-            ssh-add - <<< "${{ secrets.EPI_MIRRORING_KEY }}"
+          ssh-agent -a $SSH_AUTH_SOCK > /dev/null
+          ssh-add - <<< "${{ secrets.EPI_MIRRORING_KEY }}"
       - name: pull_subtree
         env:
           SSH_AUTH_SOCK: /tmp/ssh_agent.sock
-        run: git subtree pull --prefix ${{ github.workspace }}/Src/CommonInterface/ git@github.com:Cavonstavant/arcade-architecture.git main --squash
+        run: |
+          pwd
+          ls
+          cd ${{ github.workspace }}
+          git subtree pull --prefix Src/CommonInterface/ git@github.com:Cavonstavant/arcade-architecture.git main --squash
 
       - name: push_subtree
         env:
           SSH_AUTH_SOCK: /tmp/ssh_agent.sock
-        run: git subtree push --prefix ${{github.workspace}}/Src/CommonInterface/ git@github.com:Cavonstavant/arcade-architecture.git main
+        run: |
+          pwd
+          ls
+          cd ${{ github.workspace }}
+          git subtree push --prefix Src/CommonInterface/ git@github.com:Cavonstavant/arcade-architecture.git main
