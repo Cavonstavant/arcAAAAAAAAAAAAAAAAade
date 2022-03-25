@@ -7,10 +7,6 @@
 
 #include "Enemy.hpp"
 
-/// \brief Constructor with default values : \
-/// Default _speed = 0 \
-/// Default _color = RED \
-/// Default _enrage = false
 Enemy::Enemy() : AEntity()
 {
     _speed = 0;
@@ -42,7 +38,7 @@ int Enemy::getSpeed() const
     return _speed;
 }
 
-IColor *Enemy::getColor() const
+IColor* Enemy::getColor() const
 {
     return _color;
 }

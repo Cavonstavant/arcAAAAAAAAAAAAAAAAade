@@ -12,19 +12,21 @@
 #include "AEntity.hpp"
 
 /// \brief Enemy class inherits from AEntity
-/// \param No param to construct all value by default
 class Enemy : public AEntity {
     public:
-        /// \brief Constructor
+        /// \brief Constructor with default values : <br>
+        /// Default _speed = 0
+        /// Default _color = RED
+        /// Default _enrage = false
         Enemy();
         /// \brief Destructor override AEntity
-        ~Enemy() override;
+        ~Enemy();
 
-        /// \brief Getters & setters \
-    /// Set the speed of the Enemy Entity
+        /// \brief Getters & setters
+        /// Set the speed of the Enemy Entity
         void setSpeed(int speed);
         /// \brief Set the Color of the Enemy Entity
-        void setColor(COLOR_E color);
+        void setColor(IColor::COLOR_E color);
         /// \brief Set the enrage boolean of the Enemy Entity
         void setEnrage(bool enrage);
         /// \brief Get the speed of the Enemy Entity
@@ -32,10 +34,10 @@ class Enemy : public AEntity {
         int getSpeed() const;
         /// \brief Get the color of the Enemy Entity
         /// \return IColor color
-        Icolor *getColor() const;
+        IColor *getColor() const;
         /// \brief Get the enrage boolean of the Enemy Entity
         /// \return Bool Enrage
-        Bool getEnrage() const;
+        bool getEnrage() const;
         /// \brief Set the isMoving boolean of the Enemy Entity
         void setIsMoving(bool isMoving);
         /// \brief Get the isMoving boolean of the Enemy Entity

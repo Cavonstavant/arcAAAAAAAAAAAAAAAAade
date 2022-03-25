@@ -40,7 +40,7 @@ void Object::setType(const TYPE_E type)
     _type = type;
 }
 
-TYPE_E Object::getType() const
+Object::TYPE_E Object::getType() const
 {
     return _type;
 }
