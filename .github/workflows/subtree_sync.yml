@@ -16,8 +16,18 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       # Runs a single command using the runners shell
+      - name: setup_ssh_key
+        env:
+          SSH_AUTH_SOCK: /tmp/ssh_agent.sock
+        run: |
+           ssh-agent -a $SSH_AUTH_SOCK > /dev/null
+            ssh-add - <<< "${{ secrets.EPI_MIRRORING_KEY }}"
       - name: pull_subtree
+        env:
+          SSH_AUTH_SOCK: /tmp/ssh_agent.sock
         run: git subtree pull --prefix Src/CommonInterface/ git@github.com:Cavonstavant/arcade-architecture.git main --squash
 
       - name: push_subtree
+        env:
+          SSH_AUTH_SOCK: /tmp/ssh_agent.sock
         run: git subtree push --prefix Src/CommonInterface/ git@github.com:Cavonstavant/arcade-architecture.git main
