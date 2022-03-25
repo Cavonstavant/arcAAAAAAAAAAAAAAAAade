@@ -7,10 +7,6 @@
 
 #include "Enemy.hpp"
 
-/// \brief Constructor with default values : \
-/// Default _speed = 0 \
-/// Default _color = RED \
-/// Default _enrage = false
 Enemy::Enemy() : AEntity()
 {
     _speed = 0;
@@ -54,4 +50,5 @@ bool Enemy::getEnrage() const
 
 void Enemy::setIsMoving(bool isMoving)
 {
+    _isMoving = isMoving;
 }

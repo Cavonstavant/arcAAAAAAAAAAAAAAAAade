@@ -31,10 +31,10 @@ class Object : public AEntity {
         /// \return false in any case;
         bool getIsMoving() const override;
         /// \brief Set the Color of the Enemy Entity
-        void setColor(COLOR_E color);
+        void setColor(IColor::COLOR_E color);
         /// \brief Get the color of the Enemy Entity
         /// \return IColor color
-        Icolor getColor() const;
+        IColor *getColor() const;
         /// \brief Set the _type
         void setType(const TYPE_E type);
         /// \brief Get the _type

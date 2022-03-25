@@ -26,7 +26,7 @@ class IColor {
         virtual void setColor(const COLOR_E color) = 0;
         /// \brief Get the color
         /// \return IColor
-        virtual IColor getColor() const = 0;
+        virtual IColor *getColor() const = 0;
 
     protected:
     private:

@@ -37,10 +37,11 @@ class AEntity : public IEntity {
         virtual bool getIsMoving() const;
 
     protected:
-    private:
         std::pair<int, int> _pos;
         std::pair<int, int> _size;
         bool _isMoving;
+
+    private:
 };
 
 #endif /* !AENTITY_HPP_ */
