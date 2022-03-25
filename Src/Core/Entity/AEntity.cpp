@@ -11,7 +11,6 @@
 /// @param type The type of entity.
 AEntity::AEntity()
 {
-    _type = type;
     _pos = std::make_pair(0, 0);
     _size = std::make_pair(0, 0);
     _isMoving = false;
