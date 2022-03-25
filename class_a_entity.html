@@ -84,6 +84,7 @@ $(document).ready(function(){initNavTree('class_a_entity.html',''); initResizabl
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="class_a_entity-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">AEntity Class Reference</div>  </div>
@@ -143,6 +144,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:acfe7cc7def33fa1cc8a2a56dc39d29e3 inherit pub_methods_class_i_entity"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_entity.html#acfe7cc7def33fa1cc8a2a56dc39d29e3">~IEntity</a> ()=default</td></tr>
 <tr class="memdesc:acfe7cc7def33fa1cc8a2a56dc39d29e3 inherit pub_methods_class_i_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="class_i_entity.html#acfe7cc7def33fa1cc8a2a56dc39d29e3">More...</a><br /></td></tr>
 <tr class="separator:acfe7cc7def33fa1cc8a2a56dc39d29e3 inherit pub_methods_class_i_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a9844765ed1630017d86dd15737b69e2c"><td class="memItemLeft" align="right" valign="top">std::pair&lt; int, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_entity.html#a9844765ed1630017d86dd15737b69e2c">_pos</a></td></tr>
+<tr class="separator:a9844765ed1630017d86dd15737b69e2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60a8aa598b6a852c80853dd3e5c7f4a2"><td class="memItemLeft" align="right" valign="top">std::pair&lt; int, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_entity.html#a60a8aa598b6a852c80853dd3e5c7f4a2">_size</a></td></tr>
+<tr class="separator:a60a8aa598b6a852c80853dd3e5c7f4a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb13f68060a9aa6c516f5cc82a8cd715"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_entity.html#adb13f68060a9aa6c516f5cc82a8cd715">_isMoving</a></td></tr>
+<tr class="separator:adb13f68060a9aa6c516f5cc82a8cd715"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -192,7 +202,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Destructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="_a_entity_8cpp_source.html#l00021">21</a> of file <a class="el" href="_a_entity_8cpp_source.html">AEntity.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_entity_8cpp_source.html#l00020">20</a> of file <a class="el" href="_a_entity_8cpp_source.html">AEntity.cpp</a>.</p>
 
 </div>
 </div>
@@ -257,7 +267,7 @@ the std::pair&lt;int, int&gt; position </dd></dl>
 
 <p>Implements <a class="el" href="class_i_entity.html#ab3209bdc669cf1a5812d7a8353f1e402">IEntity</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_a_entity_8cpp_source.html#l00027">27</a> of file <a class="el" href="_a_entity_8cpp_source.html">AEntity.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_entity_8cpp_source.html#l00026">26</a> of file <a class="el" href="_a_entity_8cpp_source.html">AEntity.cpp</a>.</p>
 
 </div>
 </div>
@@ -291,7 +301,7 @@ the std::pair&lt;int, int&gt; size </dd></dl>
 
 <p>Implements <a class="el" href="class_i_entity.html#a4644cf0bd8a130b0dabd59bd9bda96f5">IEntity</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_a_entity_8cpp_source.html#l00041">41</a> of file <a class="el" href="_a_entity_8cpp_source.html">AEntity.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_entity_8cpp_source.html#l00040">40</a> of file <a class="el" href="_a_entity_8cpp_source.html">AEntity.cpp</a>.</p>
 
 </div>
 </div>
@@ -360,7 +370,7 @@ the std::pair&lt;int, int&gt; size </dd></dl>
 
 <p>Implements <a class="el" href="class_i_entity.html#a3dc74d4e58ee5091e5f1d54bbbcf5a13">IEntity</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_a_entity_8cpp_source.html#l00034">34</a> of file <a class="el" href="_a_entity_8cpp_source.html">AEntity.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_entity_8cpp_source.html#l00033">33</a> of file <a class="el" href="_a_entity_8cpp_source.html">AEntity.cpp</a>.</p>
 
 </div>
 </div>
@@ -399,7 +409,80 @@ the std::pair&lt;int, int&gt; size </dd></dl>
 
 <p>Implements <a class="el" href="class_i_entity.html#a1868722c6177951cd8c07d83bcfbc0fa">IEntity</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_a_entity_8cpp_source.html#l00048">48</a> of file <a class="el" href="_a_entity_8cpp_source.html">AEntity.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_entity_8cpp_source.html#l00047">47</a> of file <a class="el" href="_a_entity_8cpp_source.html">AEntity.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="adb13f68060a9aa6c516f5cc82a8cd715"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb13f68060a9aa6c516f5cc82a8cd715">&#9670;&nbsp;</a></span>_isMoving</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool AEntity::_isMoving</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_a_entity_8hpp_source.html#l00042">42</a> of file <a class="el" href="_a_entity_8hpp_source.html">AEntity.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a9844765ed1630017d86dd15737b69e2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9844765ed1630017d86dd15737b69e2c">&#9670;&nbsp;</a></span>_pos</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt;int, int&gt; AEntity::_pos</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_a_entity_8hpp_source.html#l00040">40</a> of file <a class="el" href="_a_entity_8hpp_source.html">AEntity.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a60a8aa598b6a852c80853dd3e5c7f4a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60a8aa598b6a852c80853dd3e5c7f4a2">&#9670;&nbsp;</a></span>_size</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt;int, int&gt; AEntity::_size</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_a_entity_8hpp_source.html#l00041">41</a> of file <a class="el" href="_a_entity_8hpp_source.html">AEntity.hpp</a>.</p>
 
 </div>
 </div>

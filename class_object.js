@@ -10,8 +10,8 @@ var class_object =
     [ "~Object", "class_object.html#ae8f5483f459e46687bd01e6f9977afd3", null ],
     [ "getColor", "class_object.html#a2397989ffbb2c83868fba0843eb693be", null ],
     [ "getIsMoving", "class_object.html#a6675c531600779a9e2c1fe35947eb86a", null ],
-    [ "getType", "class_object.html#a8153b7118f4c4872a9efe5ee68a8dbd1", null ],
-    [ "setColor", "class_object.html#ab9343d75dc2207cc31246618240ea4c3", null ],
+    [ "getType", "class_object.html#a6e1b7be2121dabb2aa54ed539fc7c6c7", null ],
+    [ "setColor", "class_object.html#ae5748538007c191d8fa35f99e4680449", null ],
     [ "setIsMoving", "class_object.html#a8004c95e7571e7d8d6005ac62ef0644c", null ],
     [ "setType", "class_object.html#a2c4b4b2dd6d8ea29c71006a35d007912", null ]
 ];

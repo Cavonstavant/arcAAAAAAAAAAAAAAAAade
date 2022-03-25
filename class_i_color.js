@@ -7,6 +7,6 @@ var class_i_color =
       [ "ORANGE", "class_i_color.html#a170b274430acf74d37db458282d83b26ac2d70fb5183d7b514b043c6ef4287471", null ]
     ] ],
     [ "~IColor", "class_i_color.html#a6d7b9c10c1c28bd4ceaf9de2786a60aa", null ],
-    [ "getColor", "class_i_color.html#aef61dbc919a0f6a7d69d4c19bf0f2f0c", null ],
+    [ "getColor", "class_i_color.html#a3ae8d824e2e0d3328b5bf1f114d365f0", null ],
     [ "setColor", "class_i_color.html#a574d63d6f2dfca644709d39c3bfbd53e", null ]
 ];

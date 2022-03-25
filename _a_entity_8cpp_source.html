@@ -97,44 +97,46 @@ $(document).ready(function(){initNavTree('_a_entity_8cpp_source.html',''); initR
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
 <div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_a_entity.html#aa420ad119608e8fa166868154f77c0d0">   12</a></span>&#160;<a class="code" href="class_a_entity.html#aa420ad119608e8fa166868154f77c0d0">AEntity::AEntity</a>()</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    _type = type;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    _pos = std::make_pair(0, 0);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    _size = std::make_pair(0, 0);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    _isMoving = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_a_entity.html#a1680c558ae2cb0d2d65f19147ac857c8">   21</a></span>&#160;<a class="code" href="class_a_entity.html#a1680c558ae2cb0d2d65f19147ac857c8">AEntity::~AEntity</a>()</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_a_entity.html#a578061e764559921ce69ae9c02e2cda8">   27</a></span>&#160;std::pair&lt;int, int&gt; <a class="code" href="class_a_entity.html#a578061e764559921ce69ae9c02e2cda8">AEntity::getPos</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">return</span> _pos;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_a_entity.html#a4b9c45e027d1cb6e65b4afd557615b9c">   34</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_a_entity.html#a4b9c45e027d1cb6e65b4afd557615b9c">AEntity::setPos</a>(std::pair&lt;int, int&gt; pos)</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    _pos = pos;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_a_entity.html#ab03d1e6a4ebeb59309ae6eddde8dcc87">   41</a></span>&#160;std::pair&lt;int, int&gt; <a class="code" href="class_a_entity.html#ab03d1e6a4ebeb59309ae6eddde8dcc87">AEntity::getSize</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">return</span> _size;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_a_entity.html#a478b957000e851e9f78f043cdce73fd2">   48</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_a_entity.html#a478b957000e851e9f78f043cdce73fd2">AEntity::setSize</a>(std::pair&lt;int, int&gt; size)</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;{</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    _size = size;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="class_a_entity.html#a9844765ed1630017d86dd15737b69e2c">_pos</a> = std::make_pair(0, 0);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="class_a_entity.html#a60a8aa598b6a852c80853dd3e5c7f4a2">_size</a> = std::make_pair(0, 0);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="class_a_entity.html#adb13f68060a9aa6c516f5cc82a8cd715">_isMoving</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_a_entity.html#a1680c558ae2cb0d2d65f19147ac857c8">   20</a></span>&#160;<a class="code" href="class_a_entity.html#a1680c558ae2cb0d2d65f19147ac857c8">AEntity::~AEntity</a>()</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_a_entity.html#a578061e764559921ce69ae9c02e2cda8">   26</a></span>&#160;std::pair&lt;int, int&gt; <a class="code" href="class_a_entity.html#a578061e764559921ce69ae9c02e2cda8">AEntity::getPos</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_a_entity.html#a9844765ed1630017d86dd15737b69e2c">_pos</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_a_entity.html#a4b9c45e027d1cb6e65b4afd557615b9c">   33</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_a_entity.html#a4b9c45e027d1cb6e65b4afd557615b9c">AEntity::setPos</a>(std::pair&lt;int, int&gt; pos)</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="class_a_entity.html#a9844765ed1630017d86dd15737b69e2c">_pos</a> = pos;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_a_entity.html#ab03d1e6a4ebeb59309ae6eddde8dcc87">   40</a></span>&#160;std::pair&lt;int, int&gt; <a class="code" href="class_a_entity.html#ab03d1e6a4ebeb59309ae6eddde8dcc87">AEntity::getSize</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_a_entity.html#a60a8aa598b6a852c80853dd3e5c7f4a2">_size</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_a_entity.html#a478b957000e851e9f78f043cdce73fd2">   47</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_a_entity.html#a478b957000e851e9f78f043cdce73fd2">AEntity::setSize</a>(std::pair&lt;int, int&gt; size)</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="class_a_entity.html#a60a8aa598b6a852c80853dd3e5c7f4a2">_size</a> = size;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclass_a_entity_html_a478b957000e851e9f78f043cdce73fd2"><div class="ttname"><a href="class_a_entity.html#a478b957000e851e9f78f043cdce73fd2">AEntity::setSize</a></div><div class="ttdeci">void setSize(std::pair&lt; int, int &gt; size)</div><div class="ttdoc">Set the entity size.</div><div class="ttdef"><b>Definition:</b> <a href="_a_entity_8cpp_source.html#l00048">AEntity.cpp:48</a></div></div>
+<div class="ttc" id="aclass_a_entity_html_a478b957000e851e9f78f043cdce73fd2"><div class="ttname"><a href="class_a_entity.html#a478b957000e851e9f78f043cdce73fd2">AEntity::setSize</a></div><div class="ttdeci">void setSize(std::pair&lt; int, int &gt; size)</div><div class="ttdoc">Set the entity size.</div><div class="ttdef"><b>Definition:</b> <a href="_a_entity_8cpp_source.html#l00047">AEntity.cpp:47</a></div></div>
+<div class="ttc" id="aclass_a_entity_html_a9844765ed1630017d86dd15737b69e2c"><div class="ttname"><a href="class_a_entity.html#a9844765ed1630017d86dd15737b69e2c">AEntity::_pos</a></div><div class="ttdeci">std::pair&lt; int, int &gt; _pos</div><div class="ttdef"><b>Definition:</b> <a href="_a_entity_8hpp_source.html#l00040">AEntity.hpp:40</a></div></div>
 <div class="ttc" id="a_a_entity_8hpp_html"><div class="ttname"><a href="_a_entity_8hpp.html">AEntity.hpp</a></div></div>
 <div class="ttc" id="aclass_a_entity_html_aa420ad119608e8fa166868154f77c0d0"><div class="ttname"><a href="class_a_entity.html#aa420ad119608e8fa166868154f77c0d0">AEntity::AEntity</a></div><div class="ttdeci">AEntity()</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> <a href="_a_entity_8cpp_source.html#l00012">AEntity.cpp:12</a></div></div>
-<div class="ttc" id="aclass_a_entity_html_a4b9c45e027d1cb6e65b4afd557615b9c"><div class="ttname"><a href="class_a_entity.html#a4b9c45e027d1cb6e65b4afd557615b9c">AEntity::setPos</a></div><div class="ttdeci">void setPos(std::pair&lt; int, int &gt; pos)</div><div class="ttdoc">Set the entity position.</div><div class="ttdef"><b>Definition:</b> <a href="_a_entity_8cpp_source.html#l00034">AEntity.cpp:34</a></div></div>
-<div class="ttc" id="aclass_a_entity_html_ab03d1e6a4ebeb59309ae6eddde8dcc87"><div class="ttname"><a href="class_a_entity.html#ab03d1e6a4ebeb59309ae6eddde8dcc87">AEntity::getSize</a></div><div class="ttdeci">std::pair&lt; int, int &gt; getSize() const</div><div class="ttdoc">Get the entity size.</div><div class="ttdef"><b>Definition:</b> <a href="_a_entity_8cpp_source.html#l00041">AEntity.cpp:41</a></div></div>
-<div class="ttc" id="aclass_a_entity_html_a578061e764559921ce69ae9c02e2cda8"><div class="ttname"><a href="class_a_entity.html#a578061e764559921ce69ae9c02e2cda8">AEntity::getPos</a></div><div class="ttdeci">std::pair&lt; int, int &gt; getPos() const</div><div class="ttdoc">Get the entity position.</div><div class="ttdef"><b>Definition:</b> <a href="_a_entity_8cpp_source.html#l00027">AEntity.cpp:27</a></div></div>
-<div class="ttc" id="aclass_a_entity_html_a1680c558ae2cb0d2d65f19147ac857c8"><div class="ttname"><a href="class_a_entity.html#a1680c558ae2cb0d2d65f19147ac857c8">AEntity::~AEntity</a></div><div class="ttdeci">~AEntity()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition:</b> <a href="_a_entity_8cpp_source.html#l00021">AEntity.cpp:21</a></div></div>
+<div class="ttc" id="aclass_a_entity_html_a4b9c45e027d1cb6e65b4afd557615b9c"><div class="ttname"><a href="class_a_entity.html#a4b9c45e027d1cb6e65b4afd557615b9c">AEntity::setPos</a></div><div class="ttdeci">void setPos(std::pair&lt; int, int &gt; pos)</div><div class="ttdoc">Set the entity position.</div><div class="ttdef"><b>Definition:</b> <a href="_a_entity_8cpp_source.html#l00033">AEntity.cpp:33</a></div></div>
+<div class="ttc" id="aclass_a_entity_html_ab03d1e6a4ebeb59309ae6eddde8dcc87"><div class="ttname"><a href="class_a_entity.html#ab03d1e6a4ebeb59309ae6eddde8dcc87">AEntity::getSize</a></div><div class="ttdeci">std::pair&lt; int, int &gt; getSize() const</div><div class="ttdoc">Get the entity size.</div><div class="ttdef"><b>Definition:</b> <a href="_a_entity_8cpp_source.html#l00040">AEntity.cpp:40</a></div></div>
+<div class="ttc" id="aclass_a_entity_html_a578061e764559921ce69ae9c02e2cda8"><div class="ttname"><a href="class_a_entity.html#a578061e764559921ce69ae9c02e2cda8">AEntity::getPos</a></div><div class="ttdeci">std::pair&lt; int, int &gt; getPos() const</div><div class="ttdoc">Get the entity position.</div><div class="ttdef"><b>Definition:</b> <a href="_a_entity_8cpp_source.html#l00026">AEntity.cpp:26</a></div></div>
+<div class="ttc" id="aclass_a_entity_html_a1680c558ae2cb0d2d65f19147ac857c8"><div class="ttname"><a href="class_a_entity.html#a1680c558ae2cb0d2d65f19147ac857c8">AEntity::~AEntity</a></div><div class="ttdeci">~AEntity()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition:</b> <a href="_a_entity_8cpp_source.html#l00020">AEntity.cpp:20</a></div></div>
+<div class="ttc" id="aclass_a_entity_html_adb13f68060a9aa6c516f5cc82a8cd715"><div class="ttname"><a href="class_a_entity.html#adb13f68060a9aa6c516f5cc82a8cd715">AEntity::_isMoving</a></div><div class="ttdeci">bool _isMoving</div><div class="ttdef"><b>Definition:</b> <a href="_a_entity_8hpp_source.html#l00042">AEntity.hpp:42</a></div></div>
+<div class="ttc" id="aclass_a_entity_html_a60a8aa598b6a852c80853dd3e5c7f4a2"><div class="ttname"><a href="class_a_entity.html#a60a8aa598b6a852c80853dd3e5c7f4a2">AEntity::_size</a></div><div class="ttdeci">std::pair&lt; int, int &gt; _size</div><div class="ttdef"><b>Definition:</b> <a href="_a_entity_8hpp_source.html#l00041">AEntity.hpp:41</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
