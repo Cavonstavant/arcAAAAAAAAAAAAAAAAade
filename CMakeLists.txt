@@ -9,7 +9,7 @@ set(INCLUDE_ROOT ${PROJECT_SOURCE_DIR}/include)
 
 set(SRC
     ${INCLUDE_ROOT}/IGame.hpp
-    ${INCLUDE_ROOT}/IDisplay.hpp
+    ${INCLUDE_ROOT}/IGraph.hpp
     ${INCLUDE_ROOT}/IEntity.hpp
 )
 
