@@ -25,7 +25,7 @@ jobs:
       - name: pull_subtree
         env:
           SSH_AUTH_SOCK: /tmp/ssh_agent.sock
-        run: git subtree pull --prefix ${{ github.GITHUB_WORKSPACE }}/Src/CommonInterface/ git@github.com:Cavonstavant/arcade-architecture.git main --squash
+        run: git subtree pull --prefix ${{ github.workspace }}/Src/CommonInterface/ git@github.com:Cavonstavant/arcade-architecture.git main --squash
 
       - name: push_subtree
         env:
