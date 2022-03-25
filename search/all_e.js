@@ -1,6 +1,10 @@
 var searchData=
 [
-  ['readme_2emd_100',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
-  ['red_101',['RED',['../class_i_color.html#a170b274430acf74d37db458282d83b26a4ade7b315a5d219f03a9ed1b57560a2b',1,'IColor']]],
-  ['running_102',['RUNNING',['../class_i_game.html#a4a7309d86599d6e581f764233085c7dda43491564ebcfd38568918efbd6e840fd',1,'IGame']]]
+  ['pacman_97',['pacman',['../_pacman_8cpp.html#a78a9e699835b9f1072f407dbbe4acf91',1,'Pacman.cpp']]],
+  ['pacman_2ecpp_98',['Pacman.cpp',['../_pacman_8cpp.html',1,'']]],
+  ['paused_99',['PAUSED',['../class_i_game.html#a4a7309d86599d6e581f764233085c7dda99b2439e63f73ad515f7ab2447a80673',1,'IGame']]],
+  ['player_100',['Player',['../class_player.html',1,'Player'],['../class_player.html#affe0cc3cb714f6deb4e62f0c0d3f1fd8',1,'Player::Player()']]],
+  ['player_2ecpp_101',['Player.cpp',['../_player_8cpp.html',1,'']]],
+  ['player_2ehpp_102',['Player.hpp',['../_player_8hpp.html',1,'']]],
+  ['points_103',['POINTS',['../class_object.html#aaaf3106c96ab4387c5ada5d22074c0ffa911644c0e5cf0c4828ad5410db73286c',1,'Object']]]
 ];

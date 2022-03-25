@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['object_89',['Object',['../class_object.html',1,'Object'],['../class_object.html#a40860402e64d8008fb42329df7097cdb',1,'Object::Object()']]],
-  ['object_2ecpp_90',['Object.cpp',['../_object_8cpp.html',1,'']]],
-  ['object_2ehpp_91',['Object.hpp',['../_object_8hpp.html',1,'']]],
-  ['orange_92',['ORANGE',['../class_i_color.html#a170b274430acf74d37db458282d83b26ac2d70fb5183d7b514b043c6ef4287471',1,'IColor']]]
+  ['nibbler_90',['nibbler',['../_nibbler_8cpp.html#aaf800d5dd163dff0146e7aa921a2f4ba',1,'Nibbler.cpp']]],
+  ['nibbler_2ecpp_91',['Nibbler.cpp',['../_nibbler_8cpp.html',1,'']]],
+  ['none_92',['NONE',['../class_logger.html#a1d61a808908f837373dcd89f52fa0c2a',1,'Logger']]]
 ];

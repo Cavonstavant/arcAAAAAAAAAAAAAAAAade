@@ -83,6 +83,7 @@ $(document).ready(function(){initNavTree('class_logger.html',''); initResizable(
 
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="class_logger-members.html">List of all members</a>  </div>
@@ -96,6 +97,21 @@ $(document).ready(function(){initNavTree('class_logger.html',''); initResizable(
 
 <p><code>#include &lt;<a class="el" href="_logger_8hpp_source.html">Logger.hpp</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a4cc16315b37eb0265c2d199880464a15"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logger.html#a4cc16315b37eb0265c2d199880464a15">Severity</a> { <br />
+&#160;&#160;<a class="el" href="class_logger.html#a4cc16315b37eb0265c2d199880464a15a3383eee663677570496f546789529e78">SEVERITY_NONE</a>, 
+<a class="el" href="class_logger.html#a4cc16315b37eb0265c2d199880464a15abfe181f20efaf6d412dae251c056b0ef">SEVERITY_LOW</a>, 
+<a class="el" href="class_logger.html#a4cc16315b37eb0265c2d199880464a15a5a5df8f74f95025d3feede9c40a37d82">SEVERITY_MEDIUM</a>, 
+<a class="el" href="class_logger.html#a4cc16315b37eb0265c2d199880464a15afe05cfd16d0acc2a1a1e9bf898e1a048">SEVERITY_HIGH</a>, 
+<br />
+&#160;&#160;<a class="el" href="class_logger.html#a4cc16315b37eb0265c2d199880464a15acbeef5b21ec10a69188ac3d4cfa3a62b">SEVERITY_CRITICAL</a>, 
+<a class="el" href="class_logger.html#a4cc16315b37eb0265c2d199880464a15a0cf342c9ca694807d05f915c8966a7e2">SEVERITY_INFO</a>, 
+<a class="el" href="class_logger.html#a4cc16315b37eb0265c2d199880464a15a54c72c96fec9f6575489ef4c10432627">SEVERITY_ENUM_SIZE</a>
+<br />
+ }</td></tr>
+<tr class="separator:a4cc16315b37eb0265c2d199880464a15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aefffc02e0c6c0ab09ec1f77fe35f6439"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logger.html#aefffc02e0c6c0ab09ec1f77fe35f6439">Logger</a> ()=delete</td></tr>
@@ -104,21 +120,59 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a9c2d66ad3413107ea26ababe9121bc25"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_arcade_exception.html">ArcadeException</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logger.html#a9c2d66ad3413107ea26ababe9121bc25">log</a> (<a class="el" href="class_arcade_exception.html">ArcadeException</a> exception)</td></tr>
-<tr class="memdesc:a9c2d66ad3413107ea26ababe9121bc25"><td class="mdescLeft">&#160;</td><td class="mdescRight">log the exception before throwing it  <a href="class_logger.html#a9c2d66ad3413107ea26ababe9121bc25">More...</a><br /></td></tr>
-<tr class="separator:a9c2d66ad3413107ea26ababe9121bc25"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a351b525bbe74b45f98958c93dc56a2c7"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logger.html#a351b525bbe74b45f98958c93dc56a2c7">ENABLED</a> ()</td></tr>
-<tr class="memdesc:a351b525bbe74b45f98958c93dc56a2c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">pass this function to the macros and they will log the exception  <a href="class_logger.html#a351b525bbe74b45f98958c93dc56a2c7">More...</a><br /></td></tr>
-<tr class="separator:a351b525bbe74b45f98958c93dc56a2c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d4dd70d292198fee88f49bc7330df69"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logger.html#a4d4dd70d292198fee88f49bc7330df69">DISABLED</a> ()</td></tr>
-<tr class="memdesc:a4d4dd70d292198fee88f49bc7330df69"><td class="mdescLeft">&#160;</td><td class="mdescRight">pass this function to the macros and they will not log the exception  <a href="class_logger.html#a4d4dd70d292198fee88f49bc7330df69">More...</a><br /></td></tr>
-<tr class="separator:a4d4dd70d292198fee88f49bc7330df69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c94dc9e415f13880bca3d5162270264"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_arcade_exception.html">ArcadeException</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logger.html#a2c94dc9e415f13880bca3d5162270264">log</a> (<a class="el" href="class_arcade_exception.html">ArcadeException</a> exception, <a class="el" href="class_logger.html#a4cc16315b37eb0265c2d199880464a15">Severity</a> severity)</td></tr>
+<tr class="memdesc:a2c94dc9e415f13880bca3d5162270264"><td class="mdescLeft">&#160;</td><td class="mdescRight">log the exception before throwing it  <a href="class_logger.html#a2c94dc9e415f13880bca3d5162270264">More...</a><br /></td></tr>
+<tr class="separator:a2c94dc9e415f13880bca3d5162270264"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d61a808908f837373dcd89f52fa0c2a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_logger.html#a4cc16315b37eb0265c2d199880464a15">Severity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logger.html#a1d61a808908f837373dcd89f52fa0c2a">NONE</a> ()</td></tr>
+<tr class="memdesc:a1d61a808908f837373dcd89f52fa0c2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">pass this function to the macros and they will not log the exception  <a href="class_logger.html#a1d61a808908f837373dcd89f52fa0c2a">More...</a><br /></td></tr>
+<tr class="separator:a1d61a808908f837373dcd89f52fa0c2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9a5cbfa2e29185315d0fb7b42ffcd79"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_logger.html#a4cc16315b37eb0265c2d199880464a15">Severity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logger.html#af9a5cbfa2e29185315d0fb7b42ffcd79">LOW</a> ()</td></tr>
+<tr class="memdesc:af9a5cbfa2e29185315d0fb7b42ffcd79"><td class="mdescLeft">&#160;</td><td class="mdescRight">pass this function to the macros and they will log the exception with a low severity  <a href="class_logger.html#af9a5cbfa2e29185315d0fb7b42ffcd79">More...</a><br /></td></tr>
+<tr class="separator:af9a5cbfa2e29185315d0fb7b42ffcd79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8db5fb65e82f81fb04eb4e21a931a1d6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_logger.html#a4cc16315b37eb0265c2d199880464a15">Severity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logger.html#a8db5fb65e82f81fb04eb4e21a931a1d6">MEDIUM</a> ()</td></tr>
+<tr class="memdesc:a8db5fb65e82f81fb04eb4e21a931a1d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">pass this function to the macros and they will log the exception with a medium severity  <a href="class_logger.html#a8db5fb65e82f81fb04eb4e21a931a1d6">More...</a><br /></td></tr>
+<tr class="separator:a8db5fb65e82f81fb04eb4e21a931a1d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb157b6b8da36ba0bed016d56ec1101a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_logger.html#a4cc16315b37eb0265c2d199880464a15">Severity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logger.html#abb157b6b8da36ba0bed016d56ec1101a">HIGH</a> ()</td></tr>
+<tr class="memdesc:abb157b6b8da36ba0bed016d56ec1101a"><td class="mdescLeft">&#160;</td><td class="mdescRight">pass this function to the macros and they will log the exception with a high severity  <a href="class_logger.html#abb157b6b8da36ba0bed016d56ec1101a">More...</a><br /></td></tr>
+<tr class="separator:abb157b6b8da36ba0bed016d56ec1101a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc36409db358f1c0dc363ee4469a212f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_logger.html#a4cc16315b37eb0265c2d199880464a15">Severity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logger.html#acc36409db358f1c0dc363ee4469a212f">CRITICAL</a> ()</td></tr>
+<tr class="memdesc:acc36409db358f1c0dc363ee4469a212f"><td class="mdescLeft">&#160;</td><td class="mdescRight">pass this function to the macros and they will log the exception with a critical severity  <a href="class_logger.html#acc36409db358f1c0dc363ee4469a212f">More...</a><br /></td></tr>
+<tr class="separator:acc36409db358f1c0dc363ee4469a212f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0444040bdc1a82659a84ad918b42a61d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_logger.html#a4cc16315b37eb0265c2d199880464a15">Severity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logger.html#a0444040bdc1a82659a84ad918b42a61d">INFO</a> ()</td></tr>
+<tr class="memdesc:a0444040bdc1a82659a84ad918b42a61d"><td class="mdescLeft">&#160;</td><td class="mdescRight">pass this function to the macros and they will log an info  <a href="class_logger.html#a0444040bdc1a82659a84ad918b42a61d">More...</a><br /></td></tr>
+<tr class="separator:a0444040bdc1a82659a84ad918b42a61d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_logger.html" title="Logger class to log exceptions.">Logger</a> class to log exceptions. </p>
 
 <p class="definition">Definition at line <a class="el" href="_logger_8hpp_source.html#l00014">14</a> of file <a class="el" href="_logger_8hpp_source.html">Logger.hpp</a>.</p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="a4cc16315b37eb0265c2d199880464a15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cc16315b37eb0265c2d199880464a15">&#9670;&nbsp;</a></span>Severity</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_logger.html#a4cc16315b37eb0265c2d199880464a15">Logger::Severity</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a4cc16315b37eb0265c2d199880464a15a3383eee663677570496f546789529e78"></a>SEVERITY_NONE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a4cc16315b37eb0265c2d199880464a15abfe181f20efaf6d412dae251c056b0ef"></a>SEVERITY_LOW&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a4cc16315b37eb0265c2d199880464a15a5a5df8f74f95025d3feede9c40a37d82"></a>SEVERITY_MEDIUM&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a4cc16315b37eb0265c2d199880464a15afe05cfd16d0acc2a1a1e9bf898e1a048"></a>SEVERITY_HIGH&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a4cc16315b37eb0265c2d199880464a15acbeef5b21ec10a69188ac3d4cfa3a62b"></a>SEVERITY_CRITICAL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a4cc16315b37eb0265c2d199880464a15a0cf342c9ca694807d05f915c8966a7e2"></a>SEVERITY_INFO&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a4cc16315b37eb0265c2d199880464a15a54c72c96fec9f6575489ef4c10432627"></a>SEVERITY_ENUM_SIZE&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="_logger_8hpp_source.html#l00016">16</a> of file <a class="el" href="_logger_8hpp_source.html">Logger.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aefffc02e0c6c0ab09ec1f77fe35f6439"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aefffc02e0c6c0ab09ec1f77fe35f6439">&#9670;&nbsp;</a></span>Logger()</h2>
 
@@ -147,8 +201,8 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a4d4dd70d292198fee88f49bc7330df69"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4d4dd70d292198fee88f49bc7330df69">&#9670;&nbsp;</a></span>DISABLED()</h2>
+<a id="acc36409db358f1c0dc363ee4469a212f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc36409db358f1c0dc363ee4469a212f">&#9670;&nbsp;</a></span>CRITICAL()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -157,7 +211,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool Logger::DISABLED </td>
+          <td class="memname"><a class="el" href="class_logger.html#a4cc16315b37eb0265c2d199880464a15">Logger::Severity</a> Logger::CRITICAL </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -170,15 +224,15 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>pass this function to the macros and they will not log the exception </p>
-<dl class="section return"><dt>Returns</dt><dd>false </dd></dl>
+<p>pass this function to the macros and they will log the exception with a critical severity </p>
+<dl class="section return"><dt>Returns</dt><dd>Severity::CRITICAL </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_logger_8cpp_source.html#l00043">43</a> of file <a class="el" href="_logger_8cpp_source.html">Logger.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_logger_8cpp_source.html#l00096">96</a> of file <a class="el" href="_logger_8cpp_source.html">Logger.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a351b525bbe74b45f98958c93dc56a2c7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a351b525bbe74b45f98958c93dc56a2c7">&#9670;&nbsp;</a></span>ENABLED()</h2>
+<a id="abb157b6b8da36ba0bed016d56ec1101a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb157b6b8da36ba0bed016d56ec1101a">&#9670;&nbsp;</a></span>HIGH()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -187,7 +241,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool Logger::ENABLED </td>
+          <td class="memname"><a class="el" href="class_logger.html#a4cc16315b37eb0265c2d199880464a15">Logger::Severity</a> Logger::HIGH </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -200,15 +254,45 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>pass this function to the macros and they will log the exception </p>
-<dl class="section return"><dt>Returns</dt><dd>true </dd></dl>
+<p>pass this function to the macros and they will log the exception with a high severity </p>
+<dl class="section return"><dt>Returns</dt><dd>Severity::HIGH </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_logger_8cpp_source.html#l00038">38</a> of file <a class="el" href="_logger_8cpp_source.html">Logger.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_logger_8cpp_source.html#l00091">91</a> of file <a class="el" href="_logger_8cpp_source.html">Logger.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a9c2d66ad3413107ea26ababe9121bc25"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9c2d66ad3413107ea26ababe9121bc25">&#9670;&nbsp;</a></span>log()</h2>
+<a id="a0444040bdc1a82659a84ad918b42a61d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0444040bdc1a82659a84ad918b42a61d">&#9670;&nbsp;</a></span>INFO()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_logger.html#a4cc16315b37eb0265c2d199880464a15">Logger::Severity</a> Logger::INFO </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>pass this function to the macros and they will log an info </p>
+<dl class="section return"><dt>Returns</dt><dd>Severity::INFO </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_logger_8cpp_source.html#l00101">101</a> of file <a class="el" href="_logger_8cpp_source.html">Logger.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a2c94dc9e415f13880bca3d5162270264"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c94dc9e415f13880bca3d5162270264">&#9670;&nbsp;</a></span>log()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -220,8 +304,18 @@ Static Public Member Functions</h2></td></tr>
           <td class="memname"><a class="el" href="class_arcade_exception.html">ArcadeException</a> Logger::log </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_arcade_exception.html">ArcadeException</a>&#160;</td>
-          <td class="paramname"><em>exception</em></td><td>)</td>
+          <td class="paramname"><em>exception</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="class_logger.html#a4cc16315b37eb0265c2d199880464a15">Severity</a>&#160;</td>
+          <td class="paramname"><em>severity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -240,7 +334,97 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the exception </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_logger_8cpp_source.html#l00016">16</a> of file <a class="el" href="_logger_8cpp_source.html">Logger.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_logger_8cpp_source.html#l00052">52</a> of file <a class="el" href="_logger_8cpp_source.html">Logger.cpp</a>.</p>
+
+</div>
+</div>
+<a id="af9a5cbfa2e29185315d0fb7b42ffcd79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9a5cbfa2e29185315d0fb7b42ffcd79">&#9670;&nbsp;</a></span>LOW()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_logger.html#a4cc16315b37eb0265c2d199880464a15">Logger::Severity</a> Logger::LOW </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>pass this function to the macros and they will log the exception with a low severity </p>
+<dl class="section return"><dt>Returns</dt><dd>Severity::LOW </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_logger_8cpp_source.html#l00081">81</a> of file <a class="el" href="_logger_8cpp_source.html">Logger.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a8db5fb65e82f81fb04eb4e21a931a1d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8db5fb65e82f81fb04eb4e21a931a1d6">&#9670;&nbsp;</a></span>MEDIUM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_logger.html#a4cc16315b37eb0265c2d199880464a15">Logger::Severity</a> Logger::MEDIUM </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>pass this function to the macros and they will log the exception with a medium severity </p>
+<dl class="section return"><dt>Returns</dt><dd>Severity::MEDIUM </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_logger_8cpp_source.html#l00086">86</a> of file <a class="el" href="_logger_8cpp_source.html">Logger.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a1d61a808908f837373dcd89f52fa0c2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d61a808908f837373dcd89f52fa0c2a">&#9670;&nbsp;</a></span>NONE()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_logger.html#a4cc16315b37eb0265c2d199880464a15">Logger::Severity</a> Logger::NONE </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>pass this function to the macros and they will not log the exception </p>
+<dl class="section return"><dt>Returns</dt><dd>Severity::NONE </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_logger_8cpp_source.html#l00076">76</a> of file <a class="el" href="_logger_8cpp_source.html">Logger.cpp</a>.</p>
 
 </div>
 </div>

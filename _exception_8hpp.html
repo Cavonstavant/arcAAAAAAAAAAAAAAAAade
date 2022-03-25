@@ -159,58 +159,58 @@ Macros</h2></td></tr>
 <tr class="memitem:af38aa357f9209e6ac8ac9a64b2c71bbe"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_exception_8hpp.html#af38aa357f9209e6ac8ac9a64b2c71bbe">EX_PARAMS</a>&#160;&#160;&#160;__PRETTY_FUNCTION__, __LINE__, __FILE__</td></tr>
 <tr class="memdesc:af38aa357f9209e6ac8ac9a64b2c71bbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">\Defines the params taken by the exceptions in addition to the "what" message  <a href="_exception_8hpp.html#af38aa357f9209e6ac8ac9a64b2c71bbe">More...</a><br /></td></tr>
 <tr class="separator:af38aa357f9209e6ac8ac9a64b2c71bbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52af6208a11ddcb98c49111c391d3758"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_exception_8hpp.html#a52af6208a11ddcb98c49111c391d3758">ExceptionTernary</a>(exception,  what,  enabled)&#160;&#160;&#160;(enabled() == false ? exception(what, <a class="el" href="_exception_8hpp.html#af38aa357f9209e6ac8ac9a64b2c71bbe">EX_PARAMS</a>) : <a class="el" href="class_logger.html#a9c2d66ad3413107ea26ababe9121bc25">Logger::log</a>(exception(what, <a class="el" href="_exception_8hpp.html#af38aa357f9209e6ac8ac9a64b2c71bbe">EX_PARAMS</a>)))</td></tr>
-<tr class="memdesc:a52af6208a11ddcb98c49111c391d3758"><td class="mdescLeft">&#160;</td><td class="mdescRight">\Get the exception and log it if necessary  <a href="_exception_8hpp.html#a52af6208a11ddcb98c49111c391d3758">More...</a><br /></td></tr>
-<tr class="separator:a52af6208a11ddcb98c49111c391d3758"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d9058cf4dbdcfe112eb05339b376f4d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_exception_8hpp.html#a3d9058cf4dbdcfe112eb05339b376f4d">ArcadeEX</a>(what,  enabled)&#160;&#160;&#160;<a class="el" href="_exception_8hpp.html#a52af6208a11ddcb98c49111c391d3758">ExceptionTernary</a>(<a class="el" href="class_arcade_exception.html">ArcadeException</a>, what, enabled)</td></tr>
-<tr class="separator:a3d9058cf4dbdcfe112eb05339b376f4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae4d1ffd84714d4e002416b1a12cd15d0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_exception_8hpp.html#ae4d1ffd84714d4e002416b1a12cd15d0">FactoryEX</a>(what,  enabled)&#160;&#160;&#160;<a class="el" href="_exception_8hpp.html#a52af6208a11ddcb98c49111c391d3758">ExceptionTernary</a>(<a class="el" href="class_factory_exception.html">FactoryException</a>, what, enabled)</td></tr>
-<tr class="separator:ae4d1ffd84714d4e002416b1a12cd15d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7a5ace104550a9edee4eb5aa40d3d45"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_exception_8hpp.html#ad7a5ace104550a9edee4eb5aa40d3d45">InvalidFileEX</a>(what,  enabled)&#160;&#160;&#160;<a class="el" href="_exception_8hpp.html#a52af6208a11ddcb98c49111c391d3758">ExceptionTernary</a>(<a class="el" href="class_invalid_file_exception.html">InvalidFileException</a>, what, enabled)</td></tr>
-<tr class="separator:ad7a5ace104550a9edee4eb5aa40d3d45"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5311e03088acad8f9ce3aad7cf9c231e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_exception_8hpp.html#a5311e03088acad8f9ce3aad7cf9c231e">FileNotFoundEX</a>(what,  enabled)&#160;&#160;&#160;<a class="el" href="_exception_8hpp.html#a52af6208a11ddcb98c49111c391d3758">ExceptionTernary</a>(<a class="el" href="class_file_not_found_exception.html">FileNotFoundException</a>, what, enabled)</td></tr>
-<tr class="separator:a5311e03088acad8f9ce3aad7cf9c231e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff16dcdba48b1f38043a6dca29e2d513"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_exception_8hpp.html#aff16dcdba48b1f38043a6dca29e2d513">FileCorruptedEX</a>(what,  enabled)&#160;&#160;&#160;<a class="el" href="_exception_8hpp.html#a52af6208a11ddcb98c49111c391d3758">ExceptionTernary</a>(<a class="el" href="class_file_corrupted_exception.html">FileCorruptedException</a>, what, enabled)</td></tr>
-<tr class="separator:aff16dcdba48b1f38043a6dca29e2d513"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a979982635590ed48846c1b7cfa7b4cc2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_exception_8hpp.html#a979982635590ed48846c1b7cfa7b4cc2">FileUnreadableEX</a>(what,  enabled)&#160;&#160;&#160;<a class="el" href="_exception_8hpp.html#a52af6208a11ddcb98c49111c391d3758">ExceptionTernary</a>(<a class="el" href="class_file_unreadable_exception.html">FileUnreadableException</a>, what, enabled)</td></tr>
-<tr class="separator:a979982635590ed48846c1b7cfa7b4cc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38084da0fa142cb866c7a0499b5c74a3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_exception_8hpp.html#a38084da0fa142cb866c7a0499b5c74a3">LibraryEX</a>(what,  enabled)&#160;&#160;&#160;<a class="el" href="_exception_8hpp.html#a52af6208a11ddcb98c49111c391d3758">ExceptionTernary</a>(<a class="el" href="class_library_exception.html">LibraryException</a>, what, enabled)</td></tr>
-<tr class="separator:a38084da0fa142cb866c7a0499b5c74a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56e5321aa9838c71732a6ea1e61b5cf2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_exception_8hpp.html#a56e5321aa9838c71732a6ea1e61b5cf2">GameEX</a>(what,  enabled)&#160;&#160;&#160;<a class="el" href="_exception_8hpp.html#a52af6208a11ddcb98c49111c391d3758">ExceptionTernary</a>(<a class="el" href="class_game_exception.html">GameException</a>, what, enabled)</td></tr>
-<tr class="separator:a56e5321aa9838c71732a6ea1e61b5cf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa544842dce7ef6be0a10715ec81bab1f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_exception_8hpp.html#aa544842dce7ef6be0a10715ec81bab1f">GraphEX</a>(what,  enabled)&#160;&#160;&#160;<a class="el" href="_exception_8hpp.html#a52af6208a11ddcb98c49111c391d3758">ExceptionTernary</a>(<a class="el" href="class_graph_exception.html">GraphException</a>, what, enabled)</td></tr>
-<tr class="separator:aa544842dce7ef6be0a10715ec81bab1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8701ed0fb1e2015495661824d99d65d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_exception_8hpp.html#ab8701ed0fb1e2015495661824d99d65d">EntityEX</a>(what,  enabled)&#160;&#160;&#160;<a class="el" href="_exception_8hpp.html#a52af6208a11ddcb98c49111c391d3758">ExceptionTernary</a>(<a class="el" href="class_entity_exception.html">EntityException</a>, what, enabled)</td></tr>
-<tr class="separator:ab8701ed0fb1e2015495661824d99d65d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8149bcf419d8032b069df0ccaf89823"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_exception_8hpp.html#af8149bcf419d8032b069df0ccaf89823">EventEX</a>(what,  enabled)&#160;&#160;&#160;<a class="el" href="_exception_8hpp.html#a52af6208a11ddcb98c49111c391d3758">ExceptionTernary</a>(<a class="el" href="class_event_exception.html">EventException</a>, what, enabled)</td></tr>
-<tr class="separator:af8149bcf419d8032b069df0ccaf89823"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1380cf5ceb908a58de20a073f7b1874e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_exception_8hpp.html#a1380cf5ceb908a58de20a073f7b1874e">VeryStupidUserEX</a>(what,  enabled)&#160;&#160;&#160;<a class="el" href="_exception_8hpp.html#a52af6208a11ddcb98c49111c391d3758">ExceptionTernary</a>(<a class="el" href="class_very_stupid_user_exception.html">VeryStupidUserException</a>, what, enabled)</td></tr>
-<tr class="separator:a1380cf5ceb908a58de20a073f7b1874e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17f760256046df23dd0ab46602f04d02"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_exception_8hpp.html#a17f760256046df23dd0ab46602f04d02">COLOR_RESET</a>&#160;&#160;&#160;&quot;\x1B[0m&quot;</td></tr>
-<tr class="memdesc:a17f760256046df23dd0ab46602f04d02"><td class="mdescLeft">&#160;</td><td class="mdescRight">\Defines the color codes to print the exceptions in color  <a href="_exception_8hpp.html#a17f760256046df23dd0ab46602f04d02">More...</a><br /></td></tr>
-<tr class="separator:a17f760256046df23dd0ab46602f04d02"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba2a7fe77a7501e5844370eec0185207"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_exception_8hpp.html#aba2a7fe77a7501e5844370eec0185207">COLOR_BLACK</a>&#160;&#160;&#160;&quot;\x1B[30m&quot;</td></tr>
-<tr class="separator:aba2a7fe77a7501e5844370eec0185207"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad86358bf19927183dd7b4ae215a29731"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_exception_8hpp.html#ad86358bf19927183dd7b4ae215a29731">COLOR_RED</a>&#160;&#160;&#160;&quot;\x1B[31m&quot;</td></tr>
-<tr class="separator:ad86358bf19927183dd7b4ae215a29731"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc9149f5de51bd9ac4f5ebbfa153f018"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_exception_8hpp.html#afc9149f5de51bd9ac4f5ebbfa153f018">COLOR_GREEN</a>&#160;&#160;&#160;&quot;\x1B[32m&quot;</td></tr>
-<tr class="separator:afc9149f5de51bd9ac4f5ebbfa153f018"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4534b577b74a58b0f4b7be027af664e0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_exception_8hpp.html#a4534b577b74a58b0f4b7be027af664e0">COLOR_YELLOW</a>&#160;&#160;&#160;&quot;\x1B[33m&quot;</td></tr>
-<tr class="separator:a4534b577b74a58b0f4b7be027af664e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23c70d699a5a775bc2e1ebeb8603f630"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_exception_8hpp.html#a23c70d699a5a775bc2e1ebeb8603f630">COLOR_BLUE</a>&#160;&#160;&#160;&quot;\x1B[34m&quot;</td></tr>
-<tr class="separator:a23c70d699a5a775bc2e1ebeb8603f630"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a361bd41194ac13caf9169f3f689dc179"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_exception_8hpp.html#a361bd41194ac13caf9169f3f689dc179">COLOR_PURPLE</a>&#160;&#160;&#160;&quot;\x1B[35m&quot;</td></tr>
-<tr class="separator:a361bd41194ac13caf9169f3f689dc179"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82573859711fce56f1aa0a76b18a9b18"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_exception_8hpp.html#a82573859711fce56f1aa0a76b18a9b18">COLOR_CYAN</a>&#160;&#160;&#160;&quot;\x1B[36m&quot;</td></tr>
-<tr class="separator:a82573859711fce56f1aa0a76b18a9b18"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b44987ffdc2af19b635206b94334b69"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_exception_8hpp.html#a9b44987ffdc2af19b635206b94334b69">COLOR_WHITE</a>&#160;&#160;&#160;&quot;\x1B[37m&quot;</td></tr>
-<tr class="separator:a9b44987ffdc2af19b635206b94334b69"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a302607d6f585b7e9ba1c3eab8d2199d5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_exception_8hpp.html#a302607d6f585b7e9ba1c3eab8d2199d5">COLOR_BOLD</a>&#160;&#160;&#160;&quot;\x1B[1m&quot;</td></tr>
-<tr class="separator:a302607d6f585b7e9ba1c3eab8d2199d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0191574963a1216d901dceaf960f43a2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_exception_8hpp.html#a0191574963a1216d901dceaf960f43a2">ExceptionTernary</a>(exception,  what,  severity)&#160;&#160;&#160;(severity() == <a class="el" href="class_logger.html#a4cc16315b37eb0265c2d199880464a15a3383eee663677570496f546789529e78">Logger::Severity::SEVERITY_NONE</a> ? exception(what, <a class="el" href="_exception_8hpp.html#af38aa357f9209e6ac8ac9a64b2c71bbe">EX_PARAMS</a>) : <a class="el" href="class_logger.html#a2c94dc9e415f13880bca3d5162270264">Logger::log</a>(exception(what, <a class="el" href="_exception_8hpp.html#af38aa357f9209e6ac8ac9a64b2c71bbe">EX_PARAMS</a>), severity()))</td></tr>
+<tr class="memdesc:a0191574963a1216d901dceaf960f43a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">\Get the exception and log it if necessary  <a href="_exception_8hpp.html#a0191574963a1216d901dceaf960f43a2">More...</a><br /></td></tr>
+<tr class="separator:a0191574963a1216d901dceaf960f43a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b3deaa642cc474ad5eb24c1f52ab723"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_exception_8hpp.html#a7b3deaa642cc474ad5eb24c1f52ab723">ArcadeEX</a>(what,  severity)&#160;&#160;&#160;<a class="el" href="_exception_8hpp.html#a0191574963a1216d901dceaf960f43a2">ExceptionTernary</a>(<a class="el" href="class_arcade_exception.html">ArcadeException</a>, what, severity)</td></tr>
+<tr class="separator:a7b3deaa642cc474ad5eb24c1f52ab723"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9f8984dfc3c403ea422e366ad25ebf0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_exception_8hpp.html#ab9f8984dfc3c403ea422e366ad25ebf0">FactoryEX</a>(what,  severity)&#160;&#160;&#160;<a class="el" href="_exception_8hpp.html#a0191574963a1216d901dceaf960f43a2">ExceptionTernary</a>(<a class="el" href="class_factory_exception.html">FactoryException</a>, what, severity)</td></tr>
+<tr class="separator:ab9f8984dfc3c403ea422e366ad25ebf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5121409402ded147b575649ee383226e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_exception_8hpp.html#a5121409402ded147b575649ee383226e">InvalidFileEX</a>(what,  severity)&#160;&#160;&#160;<a class="el" href="_exception_8hpp.html#a0191574963a1216d901dceaf960f43a2">ExceptionTernary</a>(<a class="el" href="class_invalid_file_exception.html">InvalidFileException</a>, what, severity)</td></tr>
+<tr class="separator:a5121409402ded147b575649ee383226e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95d89928628d8b0de0860eeb670676de"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_exception_8hpp.html#a95d89928628d8b0de0860eeb670676de">FileNotFoundEX</a>(what,  severity)&#160;&#160;&#160;<a class="el" href="_exception_8hpp.html#a0191574963a1216d901dceaf960f43a2">ExceptionTernary</a>(<a class="el" href="class_file_not_found_exception.html">FileNotFoundException</a>, what, severity)</td></tr>
+<tr class="separator:a95d89928628d8b0de0860eeb670676de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc2bdb583e8c4c1e76cded81db61b891"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_exception_8hpp.html#acc2bdb583e8c4c1e76cded81db61b891">FileCorruptedEX</a>(what,  severity)&#160;&#160;&#160;<a class="el" href="_exception_8hpp.html#a0191574963a1216d901dceaf960f43a2">ExceptionTernary</a>(<a class="el" href="class_file_corrupted_exception.html">FileCorruptedException</a>, what, severity)</td></tr>
+<tr class="separator:acc2bdb583e8c4c1e76cded81db61b891"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f94889ad6d1d63db0823366ab2a82d9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_exception_8hpp.html#a8f94889ad6d1d63db0823366ab2a82d9">FileUnreadableEX</a>(what,  severity)&#160;&#160;&#160;<a class="el" href="_exception_8hpp.html#a0191574963a1216d901dceaf960f43a2">ExceptionTernary</a>(<a class="el" href="class_file_unreadable_exception.html">FileUnreadableException</a>, what, severity)</td></tr>
+<tr class="separator:a8f94889ad6d1d63db0823366ab2a82d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad866a3c89725abeb494e0332171152af"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_exception_8hpp.html#ad866a3c89725abeb494e0332171152af">LibraryEX</a>(what,  severity)&#160;&#160;&#160;<a class="el" href="_exception_8hpp.html#a0191574963a1216d901dceaf960f43a2">ExceptionTernary</a>(<a class="el" href="class_library_exception.html">LibraryException</a>, what, severity)</td></tr>
+<tr class="separator:ad866a3c89725abeb494e0332171152af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3522dbcb82ada2926f59dc404cf65e0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_exception_8hpp.html#aa3522dbcb82ada2926f59dc404cf65e0">GameEX</a>(what,  severity)&#160;&#160;&#160;<a class="el" href="_exception_8hpp.html#a0191574963a1216d901dceaf960f43a2">ExceptionTernary</a>(<a class="el" href="class_game_exception.html">GameException</a>, what, severity)</td></tr>
+<tr class="separator:aa3522dbcb82ada2926f59dc404cf65e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83e490a00784747fa096b3a4e894636e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_exception_8hpp.html#a83e490a00784747fa096b3a4e894636e">GraphEX</a>(what,  severity)&#160;&#160;&#160;<a class="el" href="_exception_8hpp.html#a0191574963a1216d901dceaf960f43a2">ExceptionTernary</a>(<a class="el" href="class_graph_exception.html">GraphException</a>, what, severity)</td></tr>
+<tr class="separator:a83e490a00784747fa096b3a4e894636e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8bc3f0a6eb4348a010994ce46704600"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_exception_8hpp.html#ad8bc3f0a6eb4348a010994ce46704600">EntityEX</a>(what,  severity)&#160;&#160;&#160;<a class="el" href="_exception_8hpp.html#a0191574963a1216d901dceaf960f43a2">ExceptionTernary</a>(<a class="el" href="class_entity_exception.html">EntityException</a>, what, severity)</td></tr>
+<tr class="separator:ad8bc3f0a6eb4348a010994ce46704600"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae84ad551a8690bf278696cf4d24b6e6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_exception_8hpp.html#aae84ad551a8690bf278696cf4d24b6e6">EventEX</a>(what,  severity)&#160;&#160;&#160;<a class="el" href="_exception_8hpp.html#a0191574963a1216d901dceaf960f43a2">ExceptionTernary</a>(<a class="el" href="class_event_exception.html">EventException</a>, what, severity)</td></tr>
+<tr class="separator:aae84ad551a8690bf278696cf4d24b6e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ae399b5939ece8c60638d855d9db3c0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_exception_8hpp.html#a0ae399b5939ece8c60638d855d9db3c0">VeryStupidUserEX</a>(what,  severity)&#160;&#160;&#160;<a class="el" href="_exception_8hpp.html#a0191574963a1216d901dceaf960f43a2">ExceptionTernary</a>(<a class="el" href="class_very_stupid_user_exception.html">VeryStupidUserException</a>, what, severity)</td></tr>
+<tr class="separator:a0ae399b5939ece8c60638d855d9db3c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a011fa8043c2689f76dad72c2c6eb31b6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_exception_8hpp.html#a011fa8043c2689f76dad72c2c6eb31b6">LOGGER_COLOR_RESET</a>&#160;&#160;&#160;&quot;\x1B[0m&quot;</td></tr>
+<tr class="memdesc:a011fa8043c2689f76dad72c2c6eb31b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">\Defines the color codes to print the exceptions in color  <a href="_exception_8hpp.html#a011fa8043c2689f76dad72c2c6eb31b6">More...</a><br /></td></tr>
+<tr class="separator:a011fa8043c2689f76dad72c2c6eb31b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a966845eadcec615575e9b9b498d15980"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_exception_8hpp.html#a966845eadcec615575e9b9b498d15980">LOGGER_COLOR_BLACK</a>&#160;&#160;&#160;&quot;\x1B[30m&quot;</td></tr>
+<tr class="separator:a966845eadcec615575e9b9b498d15980"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c0a761d7fcefcef9849ce0e3900d962"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_exception_8hpp.html#a9c0a761d7fcefcef9849ce0e3900d962">LOGGER_COLOR_RED</a>&#160;&#160;&#160;&quot;\x1B[31m&quot;</td></tr>
+<tr class="separator:a9c0a761d7fcefcef9849ce0e3900d962"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9326ad572338a7384550d4eb7e1dd289"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_exception_8hpp.html#a9326ad572338a7384550d4eb7e1dd289">LOGGER_COLOR_GREEN</a>&#160;&#160;&#160;&quot;\x1B[32m&quot;</td></tr>
+<tr class="separator:a9326ad572338a7384550d4eb7e1dd289"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98277d3446d2917e7cb647b4d9fa15e7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_exception_8hpp.html#a98277d3446d2917e7cb647b4d9fa15e7">LOGGER_COLOR_YELLOW</a>&#160;&#160;&#160;&quot;\x1B[33m&quot;</td></tr>
+<tr class="separator:a98277d3446d2917e7cb647b4d9fa15e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dd5be6eedc6989bdfe0c3d75715600f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_exception_8hpp.html#a8dd5be6eedc6989bdfe0c3d75715600f">LOGGER_COLOR_BLUE</a>&#160;&#160;&#160;&quot;\x1B[34m&quot;</td></tr>
+<tr class="separator:a8dd5be6eedc6989bdfe0c3d75715600f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47fd9dd21d58bf7f2b7a1221dd846036"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_exception_8hpp.html#a47fd9dd21d58bf7f2b7a1221dd846036">LOGGER_COLOR_PURPLE</a>&#160;&#160;&#160;&quot;\x1B[35m&quot;</td></tr>
+<tr class="separator:a47fd9dd21d58bf7f2b7a1221dd846036"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a090553be72c1bb74fffe5b6a1739504e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_exception_8hpp.html#a090553be72c1bb74fffe5b6a1739504e">LOGGER_COLOR_CYAN</a>&#160;&#160;&#160;&quot;\x1B[36m&quot;</td></tr>
+<tr class="separator:a090553be72c1bb74fffe5b6a1739504e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a1d0bfc50d3760c6ec27e30aa74eff9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_exception_8hpp.html#a9a1d0bfc50d3760c6ec27e30aa74eff9">LOGGER_COLOR_WHITE</a>&#160;&#160;&#160;&quot;\x1B[37m&quot;</td></tr>
+<tr class="separator:a9a1d0bfc50d3760c6ec27e30aa74eff9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afed90c757c8f3263de91c616966271af"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_exception_8hpp.html#afed90c757c8f3263de91c616966271af">LOGGER_COLOR_BOLD</a>&#160;&#160;&#160;&quot;\x1B[1m&quot;</td></tr>
+<tr class="separator:afed90c757c8f3263de91c616966271af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a3d9058cf4dbdcfe112eb05339b376f4d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3d9058cf4dbdcfe112eb05339b376f4d">&#9670;&nbsp;</a></span>ArcadeEX</h2>
+<a id="a7b3deaa642cc474ad5eb24c1f52ab723"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b3deaa642cc474ad5eb24c1f52ab723">&#9670;&nbsp;</a></span>ArcadeEX</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -225,12 +225,12 @@ Macros</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">enabled&#160;</td>
+          <td class="paramname">severity&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;<a class="el" href="_exception_8hpp.html#a52af6208a11ddcb98c49111c391d3758">ExceptionTernary</a>(<a class="el" href="class_arcade_exception.html">ArcadeException</a>, what, enabled)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="_exception_8hpp.html#a0191574963a1216d901dceaf960f43a2">ExceptionTernary</a>(<a class="el" href="class_arcade_exception.html">ArcadeException</a>, what, severity)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -240,170 +240,8 @@ Macros</h2></td></tr>
 
 </div>
 </div>
-<a id="aba2a7fe77a7501e5844370eec0185207"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aba2a7fe77a7501e5844370eec0185207">&#9670;&nbsp;</a></span>COLOR_BLACK</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define COLOR_BLACK&#160;&#160;&#160;&quot;\x1B[30m&quot;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_exception_8hpp_source.html#l00038">38</a> of file <a class="el" href="_exception_8hpp_source.html">Exception.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a23c70d699a5a775bc2e1ebeb8603f630"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a23c70d699a5a775bc2e1ebeb8603f630">&#9670;&nbsp;</a></span>COLOR_BLUE</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define COLOR_BLUE&#160;&#160;&#160;&quot;\x1B[34m&quot;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_exception_8hpp_source.html#l00042">42</a> of file <a class="el" href="_exception_8hpp_source.html">Exception.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a302607d6f585b7e9ba1c3eab8d2199d5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a302607d6f585b7e9ba1c3eab8d2199d5">&#9670;&nbsp;</a></span>COLOR_BOLD</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define COLOR_BOLD&#160;&#160;&#160;&quot;\x1B[1m&quot;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_exception_8hpp_source.html#l00046">46</a> of file <a class="el" href="_exception_8hpp_source.html">Exception.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a82573859711fce56f1aa0a76b18a9b18"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a82573859711fce56f1aa0a76b18a9b18">&#9670;&nbsp;</a></span>COLOR_CYAN</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define COLOR_CYAN&#160;&#160;&#160;&quot;\x1B[36m&quot;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_exception_8hpp_source.html#l00044">44</a> of file <a class="el" href="_exception_8hpp_source.html">Exception.hpp</a>.</p>
-
-</div>
-</div>
-<a id="afc9149f5de51bd9ac4f5ebbfa153f018"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afc9149f5de51bd9ac4f5ebbfa153f018">&#9670;&nbsp;</a></span>COLOR_GREEN</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define COLOR_GREEN&#160;&#160;&#160;&quot;\x1B[32m&quot;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_exception_8hpp_source.html#l00040">40</a> of file <a class="el" href="_exception_8hpp_source.html">Exception.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a361bd41194ac13caf9169f3f689dc179"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a361bd41194ac13caf9169f3f689dc179">&#9670;&nbsp;</a></span>COLOR_PURPLE</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define COLOR_PURPLE&#160;&#160;&#160;&quot;\x1B[35m&quot;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_exception_8hpp_source.html#l00043">43</a> of file <a class="el" href="_exception_8hpp_source.html">Exception.hpp</a>.</p>
-
-</div>
-</div>
-<a id="ad86358bf19927183dd7b4ae215a29731"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad86358bf19927183dd7b4ae215a29731">&#9670;&nbsp;</a></span>COLOR_RED</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define COLOR_RED&#160;&#160;&#160;&quot;\x1B[31m&quot;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_exception_8hpp_source.html#l00039">39</a> of file <a class="el" href="_exception_8hpp_source.html">Exception.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a17f760256046df23dd0ab46602f04d02"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a17f760256046df23dd0ab46602f04d02">&#9670;&nbsp;</a></span>COLOR_RESET</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define COLOR_RESET&#160;&#160;&#160;&quot;\x1B[0m&quot;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>\Defines the color codes to print the exceptions in color </p>
-
-<p class="definition">Definition at line <a class="el" href="_exception_8hpp_source.html#l00037">37</a> of file <a class="el" href="_exception_8hpp_source.html">Exception.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a9b44987ffdc2af19b635206b94334b69"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9b44987ffdc2af19b635206b94334b69">&#9670;&nbsp;</a></span>COLOR_WHITE</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define COLOR_WHITE&#160;&#160;&#160;&quot;\x1B[37m&quot;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_exception_8hpp_source.html#l00045">45</a> of file <a class="el" href="_exception_8hpp_source.html">Exception.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a4534b577b74a58b0f4b7be027af664e0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4534b577b74a58b0f4b7be027af664e0">&#9670;&nbsp;</a></span>COLOR_YELLOW</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define COLOR_YELLOW&#160;&#160;&#160;&quot;\x1B[33m&quot;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_exception_8hpp_source.html#l00041">41</a> of file <a class="el" href="_exception_8hpp_source.html">Exception.hpp</a>.</p>
-
-</div>
-</div>
-<a id="ab8701ed0fb1e2015495661824d99d65d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab8701ed0fb1e2015495661824d99d65d">&#9670;&nbsp;</a></span>EntityEX</h2>
+<a id="ad8bc3f0a6eb4348a010994ce46704600"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8bc3f0a6eb4348a010994ce46704600">&#9670;&nbsp;</a></span>EntityEX</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -418,12 +256,12 @@ Macros</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">enabled&#160;</td>
+          <td class="paramname">severity&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;<a class="el" href="_exception_8hpp.html#a52af6208a11ddcb98c49111c391d3758">ExceptionTernary</a>(<a class="el" href="class_entity_exception.html">EntityException</a>, what, enabled)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="_exception_8hpp.html#a0191574963a1216d901dceaf960f43a2">ExceptionTernary</a>(<a class="el" href="class_entity_exception.html">EntityException</a>, what, severity)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -432,8 +270,8 @@ Macros</h2></td></tr>
 
 </div>
 </div>
-<a id="af8149bcf419d8032b069df0ccaf89823"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af8149bcf419d8032b069df0ccaf89823">&#9670;&nbsp;</a></span>EventEX</h2>
+<a id="aae84ad551a8690bf278696cf4d24b6e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae84ad551a8690bf278696cf4d24b6e6">&#9670;&nbsp;</a></span>EventEX</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -448,12 +286,12 @@ Macros</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">enabled&#160;</td>
+          <td class="paramname">severity&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;<a class="el" href="_exception_8hpp.html#a52af6208a11ddcb98c49111c391d3758">ExceptionTernary</a>(<a class="el" href="class_event_exception.html">EventException</a>, what, enabled)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="_exception_8hpp.html#a0191574963a1216d901dceaf960f43a2">ExceptionTernary</a>(<a class="el" href="class_event_exception.html">EventException</a>, what, severity)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -480,8 +318,8 @@ Macros</h2></td></tr>
 
 </div>
 </div>
-<a id="a52af6208a11ddcb98c49111c391d3758"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a52af6208a11ddcb98c49111c391d3758">&#9670;&nbsp;</a></span>ExceptionTernary</h2>
+<a id="a0191574963a1216d901dceaf960f43a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0191574963a1216d901dceaf960f43a2">&#9670;&nbsp;</a></span>ExceptionTernary</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -502,12 +340,12 @@ Macros</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">enabled&#160;</td>
+          <td class="paramname">severity&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;(enabled() == false ? exception(what, <a class="el" href="_exception_8hpp.html#af38aa357f9209e6ac8ac9a64b2c71bbe">EX_PARAMS</a>) : <a class="el" href="class_logger.html#a9c2d66ad3413107ea26ababe9121bc25">Logger::log</a>(exception(what, <a class="el" href="_exception_8hpp.html#af38aa357f9209e6ac8ac9a64b2c71bbe">EX_PARAMS</a>)))</td>
+          <td></td><td>&#160;&#160;&#160;(severity() == <a class="el" href="class_logger.html#a4cc16315b37eb0265c2d199880464a15a3383eee663677570496f546789529e78">Logger::Severity::SEVERITY_NONE</a> ? exception(what, <a class="el" href="_exception_8hpp.html#af38aa357f9209e6ac8ac9a64b2c71bbe">EX_PARAMS</a>) : <a class="el" href="class_logger.html#a2c94dc9e415f13880bca3d5162270264">Logger::log</a>(exception(what, <a class="el" href="_exception_8hpp.html#af38aa357f9209e6ac8ac9a64b2c71bbe">EX_PARAMS</a>), severity()))</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -518,8 +356,8 @@ Macros</h2></td></tr>
 
 </div>
 </div>
-<a id="ae4d1ffd84714d4e002416b1a12cd15d0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae4d1ffd84714d4e002416b1a12cd15d0">&#9670;&nbsp;</a></span>FactoryEX</h2>
+<a id="ab9f8984dfc3c403ea422e366ad25ebf0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9f8984dfc3c403ea422e366ad25ebf0">&#9670;&nbsp;</a></span>FactoryEX</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -534,12 +372,12 @@ Macros</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">enabled&#160;</td>
+          <td class="paramname">severity&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;<a class="el" href="_exception_8hpp.html#a52af6208a11ddcb98c49111c391d3758">ExceptionTernary</a>(<a class="el" href="class_factory_exception.html">FactoryException</a>, what, enabled)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="_exception_8hpp.html#a0191574963a1216d901dceaf960f43a2">ExceptionTernary</a>(<a class="el" href="class_factory_exception.html">FactoryException</a>, what, severity)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -548,8 +386,8 @@ Macros</h2></td></tr>
 
 </div>
 </div>
-<a id="aff16dcdba48b1f38043a6dca29e2d513"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aff16dcdba48b1f38043a6dca29e2d513">&#9670;&nbsp;</a></span>FileCorruptedEX</h2>
+<a id="acc2bdb583e8c4c1e76cded81db61b891"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc2bdb583e8c4c1e76cded81db61b891">&#9670;&nbsp;</a></span>FileCorruptedEX</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -564,12 +402,12 @@ Macros</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">enabled&#160;</td>
+          <td class="paramname">severity&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;<a class="el" href="_exception_8hpp.html#a52af6208a11ddcb98c49111c391d3758">ExceptionTernary</a>(<a class="el" href="class_file_corrupted_exception.html">FileCorruptedException</a>, what, enabled)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="_exception_8hpp.html#a0191574963a1216d901dceaf960f43a2">ExceptionTernary</a>(<a class="el" href="class_file_corrupted_exception.html">FileCorruptedException</a>, what, severity)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -578,8 +416,8 @@ Macros</h2></td></tr>
 
 </div>
 </div>
-<a id="a5311e03088acad8f9ce3aad7cf9c231e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5311e03088acad8f9ce3aad7cf9c231e">&#9670;&nbsp;</a></span>FileNotFoundEX</h2>
+<a id="a95d89928628d8b0de0860eeb670676de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95d89928628d8b0de0860eeb670676de">&#9670;&nbsp;</a></span>FileNotFoundEX</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -594,12 +432,12 @@ Macros</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">enabled&#160;</td>
+          <td class="paramname">severity&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;<a class="el" href="_exception_8hpp.html#a52af6208a11ddcb98c49111c391d3758">ExceptionTernary</a>(<a class="el" href="class_file_not_found_exception.html">FileNotFoundException</a>, what, enabled)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="_exception_8hpp.html#a0191574963a1216d901dceaf960f43a2">ExceptionTernary</a>(<a class="el" href="class_file_not_found_exception.html">FileNotFoundException</a>, what, severity)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -608,8 +446,8 @@ Macros</h2></td></tr>
 
 </div>
 </div>
-<a id="a979982635590ed48846c1b7cfa7b4cc2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a979982635590ed48846c1b7cfa7b4cc2">&#9670;&nbsp;</a></span>FileUnreadableEX</h2>
+<a id="a8f94889ad6d1d63db0823366ab2a82d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f94889ad6d1d63db0823366ab2a82d9">&#9670;&nbsp;</a></span>FileUnreadableEX</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -624,12 +462,12 @@ Macros</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">enabled&#160;</td>
+          <td class="paramname">severity&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;<a class="el" href="_exception_8hpp.html#a52af6208a11ddcb98c49111c391d3758">ExceptionTernary</a>(<a class="el" href="class_file_unreadable_exception.html">FileUnreadableException</a>, what, enabled)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="_exception_8hpp.html#a0191574963a1216d901dceaf960f43a2">ExceptionTernary</a>(<a class="el" href="class_file_unreadable_exception.html">FileUnreadableException</a>, what, severity)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -638,8 +476,8 @@ Macros</h2></td></tr>
 
 </div>
 </div>
-<a id="a56e5321aa9838c71732a6ea1e61b5cf2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a56e5321aa9838c71732a6ea1e61b5cf2">&#9670;&nbsp;</a></span>GameEX</h2>
+<a id="aa3522dbcb82ada2926f59dc404cf65e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3522dbcb82ada2926f59dc404cf65e0">&#9670;&nbsp;</a></span>GameEX</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -654,12 +492,12 @@ Macros</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">enabled&#160;</td>
+          <td class="paramname">severity&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;<a class="el" href="_exception_8hpp.html#a52af6208a11ddcb98c49111c391d3758">ExceptionTernary</a>(<a class="el" href="class_game_exception.html">GameException</a>, what, enabled)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="_exception_8hpp.html#a0191574963a1216d901dceaf960f43a2">ExceptionTernary</a>(<a class="el" href="class_game_exception.html">GameException</a>, what, severity)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -668,8 +506,8 @@ Macros</h2></td></tr>
 
 </div>
 </div>
-<a id="aa544842dce7ef6be0a10715ec81bab1f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa544842dce7ef6be0a10715ec81bab1f">&#9670;&nbsp;</a></span>GraphEX</h2>
+<a id="a83e490a00784747fa096b3a4e894636e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83e490a00784747fa096b3a4e894636e">&#9670;&nbsp;</a></span>GraphEX</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -684,12 +522,12 @@ Macros</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">enabled&#160;</td>
+          <td class="paramname">severity&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;<a class="el" href="_exception_8hpp.html#a52af6208a11ddcb98c49111c391d3758">ExceptionTernary</a>(<a class="el" href="class_graph_exception.html">GraphException</a>, what, enabled)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="_exception_8hpp.html#a0191574963a1216d901dceaf960f43a2">ExceptionTernary</a>(<a class="el" href="class_graph_exception.html">GraphException</a>, what, severity)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -698,8 +536,8 @@ Macros</h2></td></tr>
 
 </div>
 </div>
-<a id="ad7a5ace104550a9edee4eb5aa40d3d45"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad7a5ace104550a9edee4eb5aa40d3d45">&#9670;&nbsp;</a></span>InvalidFileEX</h2>
+<a id="a5121409402ded147b575649ee383226e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5121409402ded147b575649ee383226e">&#9670;&nbsp;</a></span>InvalidFileEX</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -714,12 +552,12 @@ Macros</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">enabled&#160;</td>
+          <td class="paramname">severity&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;<a class="el" href="_exception_8hpp.html#a52af6208a11ddcb98c49111c391d3758">ExceptionTernary</a>(<a class="el" href="class_invalid_file_exception.html">InvalidFileException</a>, what, enabled)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="_exception_8hpp.html#a0191574963a1216d901dceaf960f43a2">ExceptionTernary</a>(<a class="el" href="class_invalid_file_exception.html">InvalidFileException</a>, what, severity)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -728,8 +566,8 @@ Macros</h2></td></tr>
 
 </div>
 </div>
-<a id="a38084da0fa142cb866c7a0499b5c74a3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a38084da0fa142cb866c7a0499b5c74a3">&#9670;&nbsp;</a></span>LibraryEX</h2>
+<a id="ad866a3c89725abeb494e0332171152af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad866a3c89725abeb494e0332171152af">&#9670;&nbsp;</a></span>LibraryEX</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -744,12 +582,12 @@ Macros</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">enabled&#160;</td>
+          <td class="paramname">severity&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;<a class="el" href="_exception_8hpp.html#a52af6208a11ddcb98c49111c391d3758">ExceptionTernary</a>(<a class="el" href="class_library_exception.html">LibraryException</a>, what, enabled)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="_exception_8hpp.html#a0191574963a1216d901dceaf960f43a2">ExceptionTernary</a>(<a class="el" href="class_library_exception.html">LibraryException</a>, what, severity)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -758,8 +596,170 @@ Macros</h2></td></tr>
 
 </div>
 </div>
-<a id="a1380cf5ceb908a58de20a073f7b1874e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1380cf5ceb908a58de20a073f7b1874e">&#9670;&nbsp;</a></span>VeryStupidUserEX</h2>
+<a id="a966845eadcec615575e9b9b498d15980"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a966845eadcec615575e9b9b498d15980">&#9670;&nbsp;</a></span>LOGGER_COLOR_BLACK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LOGGER_COLOR_BLACK&#160;&#160;&#160;&quot;\x1B[30m&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_exception_8hpp_source.html#l00038">38</a> of file <a class="el" href="_exception_8hpp_source.html">Exception.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a8dd5be6eedc6989bdfe0c3d75715600f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8dd5be6eedc6989bdfe0c3d75715600f">&#9670;&nbsp;</a></span>LOGGER_COLOR_BLUE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LOGGER_COLOR_BLUE&#160;&#160;&#160;&quot;\x1B[34m&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_exception_8hpp_source.html#l00042">42</a> of file <a class="el" href="_exception_8hpp_source.html">Exception.hpp</a>.</p>
+
+</div>
+</div>
+<a id="afed90c757c8f3263de91c616966271af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afed90c757c8f3263de91c616966271af">&#9670;&nbsp;</a></span>LOGGER_COLOR_BOLD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LOGGER_COLOR_BOLD&#160;&#160;&#160;&quot;\x1B[1m&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_exception_8hpp_source.html#l00046">46</a> of file <a class="el" href="_exception_8hpp_source.html">Exception.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a090553be72c1bb74fffe5b6a1739504e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a090553be72c1bb74fffe5b6a1739504e">&#9670;&nbsp;</a></span>LOGGER_COLOR_CYAN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LOGGER_COLOR_CYAN&#160;&#160;&#160;&quot;\x1B[36m&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_exception_8hpp_source.html#l00044">44</a> of file <a class="el" href="_exception_8hpp_source.html">Exception.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a9326ad572338a7384550d4eb7e1dd289"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9326ad572338a7384550d4eb7e1dd289">&#9670;&nbsp;</a></span>LOGGER_COLOR_GREEN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LOGGER_COLOR_GREEN&#160;&#160;&#160;&quot;\x1B[32m&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_exception_8hpp_source.html#l00040">40</a> of file <a class="el" href="_exception_8hpp_source.html">Exception.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a47fd9dd21d58bf7f2b7a1221dd846036"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47fd9dd21d58bf7f2b7a1221dd846036">&#9670;&nbsp;</a></span>LOGGER_COLOR_PURPLE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LOGGER_COLOR_PURPLE&#160;&#160;&#160;&quot;\x1B[35m&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_exception_8hpp_source.html#l00043">43</a> of file <a class="el" href="_exception_8hpp_source.html">Exception.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a9c0a761d7fcefcef9849ce0e3900d962"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c0a761d7fcefcef9849ce0e3900d962">&#9670;&nbsp;</a></span>LOGGER_COLOR_RED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LOGGER_COLOR_RED&#160;&#160;&#160;&quot;\x1B[31m&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_exception_8hpp_source.html#l00039">39</a> of file <a class="el" href="_exception_8hpp_source.html">Exception.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a011fa8043c2689f76dad72c2c6eb31b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a011fa8043c2689f76dad72c2c6eb31b6">&#9670;&nbsp;</a></span>LOGGER_COLOR_RESET</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LOGGER_COLOR_RESET&#160;&#160;&#160;&quot;\x1B[0m&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>\Defines the color codes to print the exceptions in color </p>
+
+<p class="definition">Definition at line <a class="el" href="_exception_8hpp_source.html#l00037">37</a> of file <a class="el" href="_exception_8hpp_source.html">Exception.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a9a1d0bfc50d3760c6ec27e30aa74eff9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a1d0bfc50d3760c6ec27e30aa74eff9">&#9670;&nbsp;</a></span>LOGGER_COLOR_WHITE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LOGGER_COLOR_WHITE&#160;&#160;&#160;&quot;\x1B[37m&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_exception_8hpp_source.html#l00045">45</a> of file <a class="el" href="_exception_8hpp_source.html">Exception.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a98277d3446d2917e7cb647b4d9fa15e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98277d3446d2917e7cb647b4d9fa15e7">&#9670;&nbsp;</a></span>LOGGER_COLOR_YELLOW</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LOGGER_COLOR_YELLOW&#160;&#160;&#160;&quot;\x1B[33m&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_exception_8hpp_source.html#l00041">41</a> of file <a class="el" href="_exception_8hpp_source.html">Exception.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a0ae399b5939ece8c60638d855d9db3c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ae399b5939ece8c60638d855d9db3c0">&#9670;&nbsp;</a></span>VeryStupidUserEX</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -774,12 +774,12 @@ Macros</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">enabled&#160;</td>
+          <td class="paramname">severity&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;<a class="el" href="_exception_8hpp.html#a52af6208a11ddcb98c49111c391d3758">ExceptionTernary</a>(<a class="el" href="class_very_stupid_user_exception.html">VeryStupidUserException</a>, what, enabled)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="_exception_8hpp.html#a0191574963a1216d901dceaf960f43a2">ExceptionTernary</a>(<a class="el" href="class_very_stupid_user_exception.html">VeryStupidUserException</a>, what, severity)</td>
         </tr>
       </table>
 </div><div class="memdoc">

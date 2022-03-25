@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['nibbler_87',['nibbler',['../_nibbler_8cpp.html#aaf800d5dd163dff0146e7aa921a2f4ba',1,'Nibbler.cpp']]],
-  ['nibbler_2ecpp_88',['Nibbler.cpp',['../_nibbler_8cpp.html',1,'']]]
+  ['main_88',['main',['../_entry_point_8cpp.html#a0c99d968a34e803d378692bde2e3f18f',1,'EntryPoint.cpp']]],
+  ['medium_89',['MEDIUM',['../class_logger.html#a8db5fb65e82f81fb04eb4e21a931a1d6',1,'Logger']]]
 ];

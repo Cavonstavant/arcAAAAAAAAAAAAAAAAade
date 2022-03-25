@@ -1,10 +1,7 @@
 var searchData=
 [
-  ['pacman_93',['pacman',['../_pacman_8cpp.html#a78a9e699835b9f1072f407dbbe4acf91',1,'Pacman.cpp']]],
-  ['pacman_2ecpp_94',['Pacman.cpp',['../_pacman_8cpp.html',1,'']]],
-  ['paused_95',['PAUSED',['../class_i_game.html#a4a7309d86599d6e581f764233085c7dda99b2439e63f73ad515f7ab2447a80673',1,'IGame']]],
-  ['player_96',['Player',['../class_player.html',1,'Player'],['../class_player.html#affe0cc3cb714f6deb4e62f0c0d3f1fd8',1,'Player::Player()']]],
-  ['player_2ecpp_97',['Player.cpp',['../_player_8cpp.html',1,'']]],
-  ['player_2ehpp_98',['Player.hpp',['../_player_8hpp.html',1,'']]],
-  ['points_99',['POINTS',['../class_object.html#aaaf3106c96ab4387c5ada5d22074c0ffa911644c0e5cf0c4828ad5410db73286c',1,'Object']]]
+  ['object_93',['Object',['../class_object.html',1,'Object'],['../class_object.html#a40860402e64d8008fb42329df7097cdb',1,'Object::Object()']]],
+  ['object_2ecpp_94',['Object.cpp',['../_object_8cpp.html',1,'']]],
+  ['object_2ehpp_95',['Object.hpp',['../_object_8hpp.html',1,'']]],
+  ['orange_96',['ORANGE',['../class_i_color.html#a170b274430acf74d37db458282d83b26ac2d70fb5183d7b514b043c6ef4287471',1,'IColor']]]
 ];

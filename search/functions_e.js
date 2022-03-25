@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['what_223',['what',['../class_arcade_exception.html#a337bc156e58344e8b1aa58033b1a05ae',1,'ArcadeException']]],
-  ['where_224',['where',['../class_arcade_exception.html#ac4bb54de4b3af4f6631019838b4c3914',1,'ArcadeException']]]
+  ['update_237',['update',['../class_i_game.html#af8069181438736ca6924cd0930c5bdfe',1,'IGame']]]
 ];

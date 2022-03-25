@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['wall_119',['WALL',['../class_object.html#aaaf3106c96ab4387c5ada5d22074c0ffa82cc7ae0bdf831bf50486aefb75623c2',1,'Object']]],
-  ['what_120',['what',['../class_arcade_exception.html#a337bc156e58344e8b1aa58033b1a05ae',1,'ArcadeException']]],
-  ['where_121',['where',['../class_arcade_exception.html#ac4bb54de4b3af4f6631019838b4c3914',1,'ArcadeException']]]
+  ['verystupiduserex_129',['VeryStupidUserEX',['../_exception_8hpp.html#a0ae399b5939ece8c60638d855d9db3c0',1,'Exception.hpp']]],
+  ['verystupiduserexception_130',['VeryStupidUserException',['../class_very_stupid_user_exception.html',1,'VeryStupidUserException'],['../class_very_stupid_user_exception.html#a66c0e36fcdd1e591ce4cc0012372e6a3',1,'VeryStupidUserException::VeryStupidUserException()']]]
 ];

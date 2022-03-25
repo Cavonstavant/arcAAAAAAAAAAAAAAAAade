@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['update_221',['update',['../class_i_game.html#af8069181438736ca6924cd0930c5bdfe',1,'IGame']]]
+  ['pacman_224',['pacman',['../_pacman_8cpp.html#a78a9e699835b9f1072f407dbbe4acf91',1,'Pacman.cpp']]],
+  ['player_225',['Player',['../class_player.html#affe0cc3cb714f6deb4e62f0c0d3f1fd8',1,'Player']]]
 ];
