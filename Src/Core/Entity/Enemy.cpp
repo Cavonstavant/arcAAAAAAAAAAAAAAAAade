@@ -38,7 +38,7 @@ int Enemy::getSpeed() const
     return _speed;
 }
 
-IColor* Enemy::getColor() const
+IColor *Enemy::getColor() const
 {
     return _color;
 }
