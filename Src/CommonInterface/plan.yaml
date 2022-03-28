@@ -1,39 +1,37 @@
-- LibFactory:
+- LibManager:
     - methods:
-        - CRUD (create, read, ...)
+        - Read, Delete
     - fields:
-        - unordered_map<"lib_name">
+        - unordered_map<libName, libHandle>
 
+- IDisplay:
+    - Draw
+    - Refresh
+    - Clear
+- IEntities:
+    - CRUD
+        - IAssets
+            - Sound
+            - Textures
+            - ...
 
+- IColor:
+      
 
-- ICore:
-- ACore:
-    - IDisplay:
-        - Draw
-        - Refresh
-        - Clear
-    - IEntities:
-        - CRUD
-            - IAssets
-                - Sound
-                - Textures
-                - ...
-    - IGame:
-        - start
-        - stop
-        - restart
-        - update
-
-
+- IGame:
+    - start
+    - stop
+    - restart
+    - update
 
 - IAsset:
-     - Réprésentent un asset:
+     - Réprésente un assetet:
         - Script
         - Musique
         - ...
 
 - IEvent:
-    - Réprésentent un event
+    - Réprésente un event
         - clavier
         - souris
 

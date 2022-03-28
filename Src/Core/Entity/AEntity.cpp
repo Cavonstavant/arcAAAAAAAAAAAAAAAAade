@@ -9,30 +9,16 @@
 
 /// @brief Constructor
 /// @param type The type of entity.
-AEntity::AEntity(EntityType type)
+AEntity::AEntity()
 {
-    _type = type;
     _pos = std::make_pair(0, 0);
     _size = std::make_pair(0, 0);
+    _isMoving = false;
 }
 
 /// @brief Destructor
 AEntity::~AEntity()
 {
-}
-
-/// @brief Get the entity type
-/// @return the EntityType
-IEntity::EntityType AEntity::getType() const
-{
-    return _type;
-}
-
-/// @brief Set the entity type
-/// @param type the EntityType
-void AEntity::setType(IEntity::EntityType type)
-{
-    _type = type;
 }
 
 /// @brief Get the entity position
