@@ -18,7 +18,7 @@ LibManager::LibManager(std::string &libPath)
 
 LibManager::LibManager(std::vector<std::string> libPaths)
 {
-    for (auto &libPath : libPaths) {
+    for (auto &libPath: libPaths) {
         _libsHandle.emplace(libPath, nullptr);
     }
 }
