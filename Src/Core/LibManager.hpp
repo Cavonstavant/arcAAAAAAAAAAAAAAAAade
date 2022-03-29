@@ -12,6 +12,7 @@
 
 #include <string>
 #include <map>
+#include <vector>
 #include "Exception.hpp"
 
 /// \brief Wrapper around the dynamic library CRUD operations
@@ -26,7 +27,7 @@ class LibManager {
 
         /// \brief Creating a factory with multiple paths to libraries
         /// \param libPaths Paths to the game libraries
-        LibManager(std::span<std::string> libPaths);
+        LibManager(std::vector<std::string> libPaths);
 
         /// \brief A factory should be able to be copied
         LibManager(const LibManager &) = delete;
