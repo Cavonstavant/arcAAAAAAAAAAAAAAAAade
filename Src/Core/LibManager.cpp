@@ -8,7 +8,7 @@
 #include "LibManager.hpp"
 #include "Exception.hpp"
 extern "C" {
-    #include <dlfcn.h>
+#include <dlfcn.h>
 }
 
 LibManager::LibManager(std::string &libPath)
