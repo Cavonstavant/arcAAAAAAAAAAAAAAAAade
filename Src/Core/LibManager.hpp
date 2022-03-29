@@ -11,7 +11,6 @@
 #define ARCADE_LIBMANAGER_HPP
 
 #include <string>
-#include <span>
 #include <map>
 #include "Exception.hpp"
 
