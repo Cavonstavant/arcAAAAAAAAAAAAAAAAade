@@ -23,12 +23,10 @@ class LibManager {
 
         /// \brief Creating a factory with a path to a library
         /// \param path Path to the game library
-        /// \throw InvalidFileException if the library cannot be loaded
-        LibManager(std::string const &libPath);
+        LibManager(std::string &libPath);
 
         /// \brief Creating a factory with multiple paths to libraries
         /// \param libPaths Paths to the game libraries
-        /// \throw InvalidFileException if one of the libraries cannot be loaded
         LibManager(std::span<std::string> libPaths);
 
         /// \brief A factory should be able to be copied
@@ -49,14 +47,11 @@ class LibManager {
         void *openLib(std::string &libPath);
 
         /// \brief Closes a shared library
-        /// \param libHandle A pointer to the handle
+        /// \param libPath Path to the library
         /// \warning Not using this method after opening a library will lead to <b>Undefined Behaviour</b>
         /// \warning Using this method before opening a library will lead to <b>Undefined Behaviour</b>
         /// \throw LibraryException if the library cannot be closed
-        void closeLib(void *libHandle);
-
         void closeLib(std::string &libPath);
-        /// \overload void closeLib(void *libHandle)
 
         /// \brief Loads a symbol from a shared library
         /// \param libHandle A pointer to the handle
@@ -64,10 +59,10 @@ class LibManager {
         /// \return A pointer to the symbol
         /// \warning Using this method before opening a library will lead to <b>Undefined Behaviour</b>
         /// \throw LibraryException if the symbol cannot be loaded
-        void *loadSymbol(void *libHandle, std::string &symbolName);
+        void *getSymbol(void *libHandle, std::string &symbolName);
 
-        /// \overload void *loadSymbol(void *libHandle, std::string &symbolName)
-        void *loadSymbol(std::string &libPath, std::string &symbolName);
+        /// \overload void *getSymbol(void *libHandle, std::string &symbolName)
+        void *getSymbol(std::string &libPath, std::string &symbolName);
     private:
         ///\note Map of the libraries' handles represented like so {libPath, libHandle}
         std::map<std::string, void *> _libsHandle;
