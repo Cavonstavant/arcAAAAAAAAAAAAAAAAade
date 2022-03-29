@@ -16,7 +16,7 @@ LibManager::LibManager(std::string &libPath)
     _libsHandle.emplace(libPath, nullptr);
 }
 
-LibManager::LibManager(std::span<std::string> libPaths)
+LibManager::LibManager(std::vector<std::string> libPaths)
 {
     for (auto &libPath : libPaths) {
         _libsHandle.emplace(libPath, nullptr);
