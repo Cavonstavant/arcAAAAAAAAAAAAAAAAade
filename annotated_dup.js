@@ -16,6 +16,7 @@ var annotated_dup =
     [ "IGame", "class_i_game.html", "class_i_game" ],
     [ "IGraph", "class_i_graph.html", "class_i_graph" ],
     [ "InvalidFileException", "class_invalid_file_exception.html", "class_invalid_file_exception" ],
+    [ "LibManager", "class_lib_manager.html", "class_lib_manager" ],
     [ "LibraryException", "class_library_exception.html", "class_library_exception" ],
     [ "Logger", "class_logger.html", "class_logger" ],
     [ "Object", "class_object.html", "class_object" ],

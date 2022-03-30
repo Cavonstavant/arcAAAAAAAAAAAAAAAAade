@@ -28,5 +28,6 @@ var hierarchy =
     ] ],
     [ "IGame", "class_i_game.html", null ],
     [ "IGraph", "class_i_graph.html", null ],
+    [ "LibManager", "class_lib_manager.html", null ],
     [ "Logger", "class_logger.html", null ]
 ];
