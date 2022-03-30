@@ -10,10 +10,10 @@
 #ifndef ARCADE_LIBMANAGER_HPP
 #define ARCADE_LIBMANAGER_HPP
 
-#include <string>
-#include <map>
-#include <vector>
 #include "Exception.hpp"
+#include <map>
+#include <string>
+#include <vector>
 
 /// \brief Wrapper around the dynamic library CRUD operations
 class LibManager {
@@ -63,6 +63,7 @@ class LibManager {
 
         /// \overload void *getSymbol(void *libHandle, std::string &symbolName)
         void *getSymbol(std::string &libPath, std::string &symbolName);
+
     private:
         ///\note Map of the libraries' handles represented like so {libPath, libHandle}
         std::map<std::string, void *> _libsHandle;
