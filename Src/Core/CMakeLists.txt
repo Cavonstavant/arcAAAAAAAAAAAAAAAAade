@@ -19,6 +19,8 @@ set(SRC
         ${INCLUDE_ROOT}/Exception.hpp
         ${INCLUDE_ROOT}/Logger.hpp
         ${INCLUDE_ROOT}/Logger.cpp
+        ${INCLUDE_ROOT}/LibManager.cpp
+        ${INCLUDE_ROOT}/LibManager.hpp
         )
 
 set_target_properties(${TARGET_LIBNAME} PROPERTIES LINKER_LANGUAGE CXX)
