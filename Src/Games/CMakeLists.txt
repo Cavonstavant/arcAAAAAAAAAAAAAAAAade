@@ -4,21 +4,21 @@ function(create_arcade_game)
     cmake_parse_arguments(create_arcade_game "" "${game_name}" "${sources}" ${ARGN})
 
     if (NOT DEFINED create_arcade_game_GAME_NAME)
-        message(FATAL_ERROR "Game name not defined")
+        message(FATAL_ERROR "create_arcade_game: GAME_NAME not defined")
     endif()
     if (NOT DEFINED create_arcade_game_SRC)
-        message(FATAL_ERROR "Sources not defined")
+        message(FATAL_ERROR "create_arcade_game: SRC not defined")
     endif()
 
     add_library(${create_arcade_game_GAME_NAME} SHARED ${create_arcade_game_SRC})
 
     target_link_libraries(${create_arcade_game_GAME_NAME} PRIVATE ArcadeCommonInterface)
-    set_target_properties(${create_arcade_game_GAME_NAME} PROPERTIES PREFIX "")
+    set_target_properties(${create_arcade_game_GAME_NAME} PROPERTIES
+        PREFIX ""
+        LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib
+    )
     target_include_directories(${create_arcade_game_GAME_NAME} PRIVATE ${create_arcade_game_INCLUDE_DIRS})
 
-    add_custom_command(TARGET ${create_arcade_game_GAME_NAME}
-        POST_BUILD
-        COMMAND ${CMAKE_COMMAND} -E copy $<TARGET_FILE:${create_arcade_game_GAME_NAME}> ${PROJECT_SOURCE_DIR}/lib)
 endfunction()
 
 add_subdirectory(Nibbler)
