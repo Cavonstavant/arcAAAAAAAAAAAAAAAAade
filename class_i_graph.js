@@ -1,12 +1,11 @@
 var class_i_graph =
 [
     [ "~IGraph", "class_i_graph.html#a12f681e7abc397a40abd4abae7b8104c", null ],
-    [ "clearWindow", "class_i_graph.html#a37713807fe67fdb7b963c59641b6acc8", null ],
-    [ "createWindow", "class_i_graph.html#ab1a7b43ef1b57d5671fe29180b62bf34", null ],
-    [ "displayWindow", "class_i_graph.html#aa89d5fa0c769857a0dfd91889ea86797", null ],
-    [ "drawCircle", "class_i_graph.html#a52cabf556c64ace96b73f016c555701a", null ],
-    [ "drawRect", "class_i_graph.html#a97eafb637da85009c05eca977e87f387", null ],
-    [ "drawText", "class_i_graph.html#a946c42c4d3b03fe2d2faab24d5806460", null ],
-    [ "drawTriangle", "class_i_graph.html#a9abe098a1896feec4d62b000c1f7c9be", null ],
-    [ "moveEntity", "class_i_graph.html#a6c031716b5b3bd141ef3bf2a64d2f660", null ]
+    [ "clearWindow", "class_i_graph.html#ad093f704c4f0c13bc42ca4e494b76d20", null ],
+    [ "displayWindow", "class_i_graph.html#a703f8faaae8cb3b339b8686e5f442f81", null ],
+    [ "drawCircle", "class_i_graph.html#a765907ed9270ab90ed5fb30b986f55d9", null ],
+    [ "drawRect", "class_i_graph.html#a89883338241edc373659dd5ee56ab07f", null ],
+    [ "drawText", "class_i_graph.html#a066ad2c6f00fb15f5ae71d629c76f510", null ],
+    [ "drawTriangle", "class_i_graph.html#a78f6e4855623e707fd0207f9c32d20ad", null ],
+    [ "moveEntity", "class_i_graph.html#a9bd59bca4b234a487633d7db0f87e859", null ]
 ];

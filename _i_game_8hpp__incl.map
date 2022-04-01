@@ -1,6 +1,6 @@
 <map id="Src/CommonInterface/include/IGame.hpp" name="Src/CommonInterface/include/IGame.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,168,47"/>
-<area shape="rect" id="node2" href="$_i_graph_8hpp.html" title=" " alt="" coords="40,95,133,121"/>
-<area shape="rect" id="node3" title=" " alt="" coords="57,244,116,271"/>
-<area shape="rect" id="node4" href="$_i_entity_8hpp.html" title=" " alt="" coords="83,169,173,196"/>
+<area shape="rect" id="node1" title=" " alt="" coords="11,5,173,47"/>
+<area shape="rect" id="node2" href="$_i_graph_8hpp.html" title=" " alt="" coords="45,95,139,121"/>
+<area shape="rect" id="node3" href="$_i_entity_8hpp.html" title=" " alt="" coords="5,169,96,196"/>
+<area shape="rect" id="node4" title=" " alt="" coords="63,244,121,271"/>
 </map>
