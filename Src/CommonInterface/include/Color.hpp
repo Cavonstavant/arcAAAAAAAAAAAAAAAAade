@@ -12,18 +12,19 @@
 
 /// \brief Color structure
 struct Color {
-    Color() = default;
-    Color(char r, char g, char b, char a) {
-        _r = r;
-        _g = g;
-        _b = b;
-        _a = a;
-    };
-    ~Color() = default;
-    int _r;
-    int _g;
-    int _b;
-    int _a;
+        Color() = default;
+        Color(char r, char g, char b, char a)
+        {
+            _r = r;
+            _g = g;
+            _b = b;
+            _a = a;
+        };
+        ~Color() = default;
+        int _r;
+        int _g;
+        int _b;
+        int _a;
 };
 
 

@@ -84,7 +84,7 @@ bool SfmlLibrary::drawEntity(IEntity &entity, std::pair<float, float> pos)
         _window.draw(sprite);
         return true;
     } else {
-        defaultTextureRect.setSize(sf::Vector2f{(float)entity.getSize().first, (float)entity.getSize().second});
+        defaultTextureRect.setSize(sf::Vector2f{(float) entity.getSize().first, (float) entity.getSize().second});
         defaultTextureRect.setFillColor(sf::Color::Yellow);
         defaultTextureRect.setPosition(entity.getPos().first, entity.getPos().second);
         _window.draw(defaultTextureRect);
