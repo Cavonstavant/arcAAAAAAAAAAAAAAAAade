@@ -9,7 +9,7 @@
 
 SfmlLibrary::SfmlLibrary()
 {
-    const std::string font = "/Resources/Font/font.otf";
+    const std::string font = "/Resources/Font/ARCADE_N.TTF";
 
     _videoMode = sf::VideoMode(1200, 800, 32);
     _font.loadFromFile(font);
