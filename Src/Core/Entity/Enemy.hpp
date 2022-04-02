@@ -13,44 +13,44 @@
 
 /// \brief Enemy class inherits from AEntity
 class Enemy : public AEntity {
-    public:
-        /// \brief Constructor with default values : <br>
-        /// Default _speed = 0
-        /// Default _color = RED
-        /// Default _enrage = false
-        Enemy();
-        /// \brief Destructor override AEntity
-        ~Enemy();
+public:
+    /// \brief Constructor with default values : <br>
+    /// Default _speed = 0
+    /// Default _color = RED
+    /// Default _enrage = false
+    Enemy();
+    /// \brief Destructor override AEntity
+    ~Enemy();
 
-        /// \brief Getters & setters
-        /// Set the speed of the Enemy Entity
-        void setSpeed(int speed);
-        /// \brief Set the Color of the Enemy Entity
-        void setColor(Color color);
-        /// \brief Set the enrage boolean of the Enemy Entity
-        void setEnrage(bool enrage);
-        /// \brief Get the speed of the Enemy Entity
-        /// \return Int speed
-        int getSpeed() const;
-        /// \brief Get the color of the Enemy Entity
-        /// \return Color color
-        Color getColor() const;
-        /// \brief Get the enrage boolean of the Enemy Entity
-        /// \return Bool Enrage
-        bool getEnrage() const;
-        /// \brief Set the isMoving boolean of the Enemy Entity
-        void setIsMoving(bool isMoving);
-        /// \brief Get the isMoving boolean of the Enemy Entity
-        bool getIsMoving() const;
+    /// \brief Getters & setters
+    /// Set the speed of the Enemy Entity
+    void setSpeed(int speed);
+    /// \brief Set the Color of the Enemy Entity
+    void setColor(Color color);
+    /// \brief Set the enrage boolean of the Enemy Entity
+    void setEnrage(bool enrage);
+    /// \brief Get the speed of the Enemy Entity
+    /// \return Int speed
+    int getSpeed() const;
+    /// \brief Get the color of the Enemy Entity
+    /// \return Color color
+    Color getColor() const;
+    /// \brief Get the enrage boolean of the Enemy Entity
+    /// \return Bool Enrage
+    bool getEnrage() const;
+    /// \brief Set the isMoving boolean of the Enemy Entity
+    void setIsMoving(bool isMoving);
+    /// \brief Get the isMoving boolean of the Enemy Entity
+    bool getIsMoving() const;
 
-    protected:
-    private:
-        /// \brief Movement Speed of the Enemy Entity
-        int _speed;
-        /// \brief Color of the Enemy Entity. Color interface used by different Graphics Library
-        Color _color;
-        /// \brief Defines if the Enemy Entity is enrage or not
-        bool _enrage;
+protected:
+private:
+    /// \brief Movement Speed of the Enemy Entity
+    int _speed;
+    /// \brief Color of the Enemy Entity. Color interface used by different Graphics Library
+    Color _color;
+    /// \brief Defines if the Enemy Entity is enrage or not
+    bool _enrage;
 };
 
 #endif//ARCADE_ENEMY_HPP
