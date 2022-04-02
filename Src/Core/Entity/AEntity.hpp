@@ -54,6 +54,7 @@ class AEntity : public IEntity {
         std::pair<int, int> _size;
         bool _isMoving;
         std::string _texturePath;
+
     private:
 };
 

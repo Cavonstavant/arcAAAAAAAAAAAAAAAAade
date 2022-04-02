@@ -17,7 +17,7 @@ Object::~Object()
 
 void Object::setIsMoving(bool isMoving)
 {
-    (void)isMoving;
+    (void) isMoving;
     _isMoving = false;
 }
 
