@@ -25,6 +25,11 @@ class IEntity {
         /// \brief Set the entity size
         /// \param size the std::pair<int, int> size
         virtual void setSize(std::pair<int, int> size) = 0;
+        /// \brief Set the texturePath of the entity
+        /// \param std::string texturePath represents the path to find the texture
+        virtual void setTexturePath(std::string texturePath) = 0;
+        /// \brief Get the texturePAth of the Entity
+        virtual std::string getTexturePath(void) const = 0;
 };
 
 #endif /* !IENTITY_HPP_ */
