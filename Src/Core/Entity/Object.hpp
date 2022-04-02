@@ -8,7 +8,7 @@
 #ifndef ARCADE_OBJECT_HPP
 #define ARCADE_OBJECT_HPP
 
-#include "../../CommonInterface/include/IColor.hpp"
+#include "../../CommonInterface/include/Color.hpp"
 #include "AEntity.hpp"
 
 /// \brief Object class represents all the Entity not moving. Like walls, fruits.
@@ -31,10 +31,10 @@ class Object : public AEntity {
         /// \return false in any case;
         bool getIsMoving() const override;
         /// \brief Set the Color of the Enemy Entity
-        void setColor(IColor::COLOR_E color);
+        void setColor(Color color);
         /// \brief Get the color of the Enemy Entity
         /// \return IColor color
-        IColor *getColor() const;
+        Color getColor() const;
         /// \brief Set the _type
         void setType(const TYPE_E type);
         /// \brief Get the _type
@@ -42,7 +42,7 @@ class Object : public AEntity {
         TYPE_E getType() const;
 
     private:
-        IColor *_color;
+        Color _color;
         TYPE_E _type;
 };
 
