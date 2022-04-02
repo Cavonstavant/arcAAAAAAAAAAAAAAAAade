@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['loaded_300',['LOADED',['../class_i_game.html#a4a7309d86599d6e581f764233085c7ddab638272ceeff54912f043465e9a28c9b',1,'IGame']]]
+  ['paused_318',['PAUSED',['../class_i_game.html#a4a7309d86599d6e581f764233085c7dda99b2439e63f73ad515f7ab2447a80673',1,'IGame']]],
+  ['points_319',['POINTS',['../class_object.html#aaaf3106c96ab4387c5ada5d22074c0ffa911644c0e5cf0c4828ad5410db73286c',1,'Object']]]
 ];

@@ -83,20 +83,19 @@ $(document).ready(function(){initNavTree('class_i_graph.html',''); initResizable
 
 <div class="header">
   <div class="headertitle">
-<div class="title">IGraph Member List</div>  </div>
+<div class="title">IGraph&lt; T &gt; Member List</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>This is the complete list of members for <a class="el" href="class_i_graph.html">IGraph</a>, including all inherited members.</p>
+<p>This is the complete list of members for <a class="el" href="class_i_graph.html">IGraph&lt; T &gt;</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="class_i_graph.html#ad093f704c4f0c13bc42ca4e494b76d20">clearWindow</a>()=0</td><td class="entry"><a class="el" href="class_i_graph.html">IGraph</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_i_graph.html#a703f8faaae8cb3b339b8686e5f442f81">displayWindow</a>()=0</td><td class="entry"><a class="el" href="class_i_graph.html">IGraph</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_i_graph.html#a765907ed9270ab90ed5fb30b986f55d9">drawCircle</a>(std::pair&lt; float, float &gt; pos, float size, std::string color)=0</td><td class="entry"><a class="el" href="class_i_graph.html">IGraph</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_i_graph.html#a89883338241edc373659dd5ee56ab07f">drawRect</a>(std::pair&lt; float, float &gt; pos, float size, std::string color)=0</td><td class="entry"><a class="el" href="class_i_graph.html">IGraph</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_i_graph.html#a066ad2c6f00fb15f5ae71d629c76f510">drawText</a>(std::pair&lt; float, float &gt; pos, const std::string &amp;text)=0</td><td class="entry"><a class="el" href="class_i_graph.html">IGraph</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_i_graph.html#a78f6e4855623e707fd0207f9c32d20ad">drawTriangle</a>(std::pair&lt; float, float &gt; pos, float size, std::string color)=0</td><td class="entry"><a class="el" href="class_i_graph.html">IGraph</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_i_graph.html#a9bd59bca4b234a487633d7db0f87e859">moveEntity</a>(IEntity &amp;entity, std::pair&lt; float, float &gt; moveVector)=0</td><td class="entry"><a class="el" href="class_i_graph.html">IGraph</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_i_graph.html#a12f681e7abc397a40abd4abae7b8104c">~IGraph</a>()=default</td><td class="entry"><a class="el" href="class_i_graph.html">IGraph</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_i_graph.html#aea58cf7420416b15cd313048bd5e235a">clearWindow</a>()=0</td><td class="entry"><a class="el" href="class_i_graph.html">IGraph&lt; T &gt;</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_i_graph.html#aaf5c58c4d40020a4ea7061e28460bbfc">displayWindow</a>()=0</td><td class="entry"><a class="el" href="class_i_graph.html">IGraph&lt; T &gt;</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_i_graph.html#a408e82cec3770897b45ac60a178d844b">drawCircle</a>(std::pair&lt; T, T &gt; pos, T radius, Color color)=0</td><td class="entry"><a class="el" href="class_i_graph.html">IGraph&lt; T &gt;</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_i_graph.html#a8d0017caa8afeffeb8ae5ef9d932afd8">drawEntity</a>(IEntity &amp;entity, std::pair&lt; T, T &gt; pos)=0</td><td class="entry"><a class="el" href="class_i_graph.html">IGraph&lt; T &gt;</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_i_graph.html#ae175c4f41741562b24ca0fdcd0bf9ced">drawRect</a>(std::pair&lt; T, T &gt; pos, T width, T height, Color color)=0</td><td class="entry"><a class="el" href="class_i_graph.html">IGraph&lt; T &gt;</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_i_graph.html#a746bc1ba8e89f25de481e7fa0a109ba7">drawText</a>(std::pair&lt; T, T &gt; pos, const std::string &amp;content)=0</td><td class="entry"><a class="el" href="class_i_graph.html">IGraph&lt; T &gt;</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_i_graph.html#a4d0222e5b7d69deb8ab57e2a4cf91b2a">~IGraph</a>()=default</td><td class="entry"><a class="el" href="class_i_graph.html">IGraph&lt; T &gt;</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

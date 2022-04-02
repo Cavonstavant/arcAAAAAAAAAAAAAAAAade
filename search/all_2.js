@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['blue_15',['BLUE',['../class_i_color.html#a170b274430acf74d37db458282d83b26a7b0ac25cc84691926b3fcfef50af504a',1,'IColor']]]
+  ['b_17',['B',['../struct_color.html#a0460664d0d091fbe42cf4307744dcaca',1,'Color']]]
 ];

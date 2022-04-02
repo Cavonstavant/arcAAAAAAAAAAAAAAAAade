@@ -1,5 +1,6 @@
 var hierarchy =
 [
+    [ "Color", "struct_color.html", null ],
     [ "exception", null, [
       [ "ArcadeException", "class_arcade_exception.html", [
         [ "EntityException", "class_entity_exception.html", null ],
@@ -18,7 +19,6 @@ var hierarchy =
         [ "VeryStupidUserException", "class_very_stupid_user_exception.html", null ]
       ] ]
     ] ],
-    [ "IColor", "class_i_color.html", null ],
     [ "IEntity", "class_i_entity.html", [
       [ "AEntity", "class_a_entity.html", [
         [ "Enemy", "class_enemy.html", null ],
@@ -27,7 +27,10 @@ var hierarchy =
       ] ]
     ] ],
     [ "IGame", "class_i_game.html", null ],
-    [ "IGraph", "class_i_graph.html", null ],
+    [ "IGraph< T >", "class_i_graph.html", null ],
+    [ "IGraph< float >", "class_i_graph.html", [
+      [ "SfmlLibrary", "class_sfml_library.html", null ]
+    ] ],
     [ "LibManager", "class_lib_manager.html", null ],
     [ "Logger", "class_logger.html", null ]
 ];

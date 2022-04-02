@@ -1,5 +1,5 @@
 <map id="Player" name="Player">
 <area shape="rect" id="node1" title="Player class inherits from AEntity." alt="" coords="9,155,71,181"/>
-<area shape="rect" id="node2" href="$class_a_entity.html" title=" " alt="" coords="5,80,75,107"/>
+<area shape="rect" id="node2" href="$class_a_entity.html" title="Entity Abstract class." alt="" coords="5,80,75,107"/>
 <area shape="rect" id="node3" href="$class_i_entity.html" title="represents a generic entity within the game" alt="" coords="8,5,72,32"/>
 </map>

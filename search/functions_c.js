@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['pacman_258',['pacman',['../_pacman_8cpp.html#a78a9e699835b9f1072f407dbbe4acf91',1,'Pacman.cpp']]],
-  ['player_259',['Player',['../class_player.html#affe0cc3cb714f6deb4e62f0c0d3f1fd8',1,'Player']]]
+  ['pacman_269',['pacman',['../_pacman_8cpp.html#a78a9e699835b9f1072f407dbbe4acf91',1,'Pacman.cpp']]],
+  ['player_270',['Player',['../class_player.html#affe0cc3cb714f6deb4e62f0c0d3f1fd8',1,'Player']]]
 ];
