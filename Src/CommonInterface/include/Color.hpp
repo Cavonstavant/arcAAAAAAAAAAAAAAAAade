@@ -19,7 +19,7 @@ struct Color {
     /// \param G Amount of Green on a scale of 0 to 255
     /// \param B Amount of Blue on a scale of 0 to 255
     /// \param A Amount of Alpha of the color on a scale of 0 to 255. It represents the opacity of the color
-    Color(int r, int g, int b, int a) : R(r), G(g), B(b), A(a){};
+    Color(int r, int g, int b, int a) : R(r), G(g), B(b), A(a) {};
 
     /// \brief Default Destructor
     ~Color() = default;
