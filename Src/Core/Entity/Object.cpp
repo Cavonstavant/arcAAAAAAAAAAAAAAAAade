@@ -17,6 +17,7 @@ Object::~Object()
 
 void Object::setIsMoving(bool isMoving)
 {
+    (void) isMoving;
     _isMoving = false;
 }
 
@@ -25,12 +26,15 @@ bool Object::getIsMoving() const
     return false;
 }
 
-void Object::setColor(IColor::COLOR_E color)
+void Object::setColor(Color color)
 {
-    _color->setColor(color);
+    _color.R = color.R;
+    _color.G = color.G;
+    _color.B = color.B;
+    _color.A = color.A;
 }
 
-IColor *Object::getColor() const
+Color Object::getColor() const
 {
     return _color;
 }

@@ -10,7 +10,10 @@
 Enemy::Enemy() : AEntity()
 {
     _speed = 0;
-    _color = nullptr;
+    _color.R = 0;
+    _color.B = 0;
+    _color.G = 0;
+    _color.A = 255;
     _enrage = false;
 }
 
@@ -23,9 +26,12 @@ void Enemy::setSpeed(int speed)
     _speed = speed;
 }
 
-void Enemy::setColor(IColor::COLOR_E color)
+void Enemy::setColor(Color color)
 {
-    _color->setColor(color);
+    _color.R = color.R;
+    _color.G = color.G;
+    _color.B = color.B;
+    _color.A = color.A;
 }
 
 void Enemy::setEnrage(bool enrage)
@@ -38,7 +44,7 @@ int Enemy::getSpeed() const
     return _speed;
 }
 
-IColor *Enemy::getColor() const
+Color Enemy::getColor() const
 {
     return _color;
 }
