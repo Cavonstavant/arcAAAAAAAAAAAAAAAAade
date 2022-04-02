@@ -7,11 +7,11 @@ set(SRC
     ${SRC_ROOT}/entrypoint.cpp
 )
 
-set(INCCLUDE_DIRS ${INCLUDE_ROOT})
+set(INCLUDE_DIRS ${INCLUDE_ROOT})
 
 create_arcade_graph_lib(
     GRAPH_LIB_NAME SFML
-    INCLUDE_DIRS ${SRC_ROOT} ${INCLUDE_ROOT}
     SRC ${SRC}
+    INCLUDE_DIRS ${SRC_ROOT} ${INCLUDE_ROOT}
     DEPS ${SFML_LIBRARIES}
 )

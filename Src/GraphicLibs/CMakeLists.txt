@@ -20,7 +20,7 @@ function(create_arcade_graph_lib)
         PREFIX ""
         LIBRARY_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/lib
     )
-    target_include_directories(${LIB_NAME} PRIVATE ${INCLUDE_DIRS} ${SRC})
+    target_include_directories(${LIB_NAME} PRIVATE ${INCLUDE_DIRS} ${SRC_DIR})
     target_link_libraries(${LIB_NAME} PRIVATE ArcadeCommonInterface ${DEPS})
 endfunction()
 
