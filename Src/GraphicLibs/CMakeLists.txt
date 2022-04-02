@@ -18,7 +18,7 @@ function(create_arcade_graph_lib)
     add_library(${LIB_NAME} SHARED ${SRC})
     set_target_properties(${LIB_NAME} PROPERTIES
         PREFIX ""
-        LIBRARY_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/lib
+        LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib
     )
     target_include_directories(${LIB_NAME} PRIVATE ${INCLUDE_DIRS} ${SRC_DIR})
     target_link_libraries(${LIB_NAME} PRIVATE ArcadeCommonInterface ${DEPS})
