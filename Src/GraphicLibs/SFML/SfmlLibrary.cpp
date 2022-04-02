@@ -33,10 +33,10 @@ bool SfmlLibrary::drawCircle(std::pair<float, float> pos, float radius, Color co
     sf::CircleShape circleShape;
     sf::Color circleColor;
 
-    circleColor.r = color._r;
-    circleColor.g = color._g;
-    circleColor.b = color._b;
-    circleColor.a = color._a;
+    circleColor.r = color.R;
+    circleColor.g = color.G;
+    circleColor.b = color.B;
+    circleColor.a = color.A;
     circleShape.setPosition(pos.first, pos.second);
     circleShape.setRadius(radius);
     circleShape.setFillColor(circleColor);
@@ -49,10 +49,10 @@ bool SfmlLibrary::drawRect(std::pair<float, float> pos, float width, float heigh
     sf::RectangleShape rectangleShape;
     sf::Color rectangleColor;
 
-    rectangleColor.r = color._r;
-    rectangleColor.g = color._g;
-    rectangleColor.b = color._b;
-    rectangleColor.a = color._a;
+    rectangleColor.r = color.R;
+    rectangleColor.g = color.G;
+    rectangleColor.b = color.B;
+    rectangleColor.a = color.A;
     rectangleShape.setPosition(pos.first, pos.second);
     rectangleShape.setSize(sf::Vector2f(width, height));
     rectangleShape.setFillColor(rectangleColor);

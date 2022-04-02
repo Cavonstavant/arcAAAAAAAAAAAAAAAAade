@@ -28,10 +28,10 @@ bool Object::getIsMoving() const
 
 void Object::setColor(Color color)
 {
-    _color._r = color._r;
-    _color._g = color._g;
-    _color._b = color._b;
-    _color._a = color._a;
+    _color.R = color.R;
+    _color.G = color.G;
+    _color.B = color.B;
+    _color.A = color.A;
 }
 
 Color Object::getColor() const
