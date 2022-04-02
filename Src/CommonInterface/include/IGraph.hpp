@@ -9,8 +9,12 @@
 #define ARCADE_IDISPLAY_HPP
 
 #include "IEntity.hpp"
+#include "Color.hpp"
 #include <string>
 
+/// \brief Using template to make functions generics
+/// \param T is the using type
+template<typename T>
 /// \brief represents a generic graphical library
 class IGraph {
 
@@ -18,50 +22,43 @@ public:
   /// \brief Destructor
   virtual ~IGraph() = default;
 
-  /// \brief Draw a circle
-  /// \param pos the std::pair<float, float> position
-  /// \param size the float size
-  /// \param color the std::string color name
-  /// \return true if the circle is succesfully drawed
-  virtual bool drawCircle(std::pair<float, float> pos, float size,
-                          std::string color) = 0;
+  /// \brief Create a circle, set position, set radius, then display it on the window. After all destroy the Circle
+  /// \param pos the std::pair<T, T> position
+  /// \param radius represents the radius of the circle
+  /// \param represents the struct color (r, g, b, a) of the Circle
+  /// \return true if the circle is successfully draw
+  virtual bool drawCircle(std::pair<T, T> pos, T radius,
+                          Color color) = 0;
 
-  /// \brief Draw a rectangle
-  /// \param pos the std::pair<float, float> position
-  /// \param size the float size
-  /// \param color the std::string color name
-  /// \return true if the rectangle is succesfully drawed
-  virtual bool drawRect(std::pair<float, float> pos, float size,
-                        std::string color) = 0;
+  /// \brief Create a Rectangle, set position, set width & height, then display it on the window. After all destroy the Rectangle
+  /// \param pos the std::pair<T, T> position
+  /// \param height for the height of the rectangle
+  /// \param width for the width of the rectangle
+  /// \param represents the struct color (r, g, b, a) of the Rectangle
+  /// \return true if the rectangle is successfully draw
+  virtual bool drawRect(std::pair<T, T> pos, T width, T height,
+                        Color color) = 0;
 
-  /// \brief Draw a triangle
-  /// \param pos the std::pair<float, float> position
-  /// \param size the float size
-  /// \param color the std::string color name
-  /// \return true if the triangle is succesfully drawed
-  virtual bool drawTriangle(std::pair<float, float> pos, float size,
-                            std::string color) = 0;
-
-  /// \brief Draw a text
+  /// \brief Create a text, set position, set content, set font, then display it on the window. After all destroy the Text
   /// \param pos the std::pair<int, int> position
-  /// \param text the std::string to display
-  /// \return true if the text is succesfully drawed
-  virtual bool drawText(std::pair<float, float> pos,
-                        const std::string &text) = 0;
+  /// \param content the std::string content
+  /// \return true if the text is successfully draw
+  virtual bool drawText(std::pair<T, T> pos,
+                        const std::string &content) = 0;
 
-  /// \brief move an entity
-  /// \param entity the IEntity position
-  /// \param moveVector the std::pair<float, float> move vector
-  /// \return true if the entity is succesfully moved
-  virtual bool moveEntity(IEntity &entity,
-                          std::pair<float, float> moveVector) = 0;
+  /// \brief Create an Entity, set position, then display it on the window. After all destroy the Entity
+  /// \param IEntity representing the entity with its own properties
+  /// \param std::pair<T, T> pos to know where to display the entity in the window
+  /// \return true if the entity is successfully draw
+  virtual bool drawEntity(IEntity &entity,
+                          std::pair<T, T> pos) = 0;
 
   /// \brief clear the window
-  /// \return true if the window is succesfully cleared
+  /// \return true if the window is successfully cleared
   virtual bool clearWindow() = 0;
 
   /// \brief display the window
-  /// \return true if the window is succesfully displayed
+  /// \return true if the window is successfully displayed
   virtual bool displayWindow() = 0;
 
 protected:
