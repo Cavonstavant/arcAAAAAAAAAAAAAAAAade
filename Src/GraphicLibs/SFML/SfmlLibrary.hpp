@@ -9,12 +9,12 @@
 #define ARCADE_SFMLLIBRARY_HPP
 
 #include "../../CommonInterface/include/IGraph.hpp"
-#include <SFML/System.hpp>
 #include <SFML/Graphics.hpp>
+#include <SFML/System.hpp>
 #include <SFML/Window.hpp>
 
 /// \brief SFML library using float as template value from IGraph
-class SfmlLibrary : public IGraph<float>{
+class SfmlLibrary : public IGraph<float> {
     public:
         /// \brief Default Constructor
         SfmlLibrary();
@@ -30,11 +30,11 @@ class SfmlLibrary : public IGraph<float>{
         bool drawRect(std::pair<float, float> pos, float width, float height,
                       Color color) override;
         bool drawText(std::pair<float, float> pos,
-                           const std::string &content) override;
+                      const std::string &content) override;
         bool drawEntity(IEntity &entity,
                         std::pair<float, float> pos) override;
-    private:
 
+    private:
         /// \brief window member using to display every entities
         sf::RenderWindow _window;
 
@@ -43,8 +43,7 @@ class SfmlLibrary : public IGraph<float>{
 
         /// \brief Default font for every sf::Text in the SfmlLibrary
         sf::Font _font;
-
 };
 
 
-#endif //ARCADE_SFMLLIBRARY_HPP
+#endif//ARCADE_SFMLLIBRARY_HPP
