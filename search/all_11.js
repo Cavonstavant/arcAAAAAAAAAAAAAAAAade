@@ -1,4 +1,28 @@
 var searchData=
 [
-  ['type_5fe_150',['TYPE_E',['../class_object.html#aaaf3106c96ab4387c5ada5d22074c0ff',1,'Object']]]
+  ['setboosted_162',['setBoosted',['../class_player.html#ab2d62dec653793f9ef33073f73050b60',1,'Player']]],
+  ['setcolor_163',['setColor',['../class_enemy.html#ad07b62e241141eba58f82acf19ed8bfa',1,'Enemy::setColor()'],['../class_object.html#ace0776e0fa472c649bf88c97d7b0a16b',1,'Object::setColor()']]],
+  ['setdisplay_164',['setDisplay',['../class_i_game.html#a15327ab5de7c3c3d3ea7fc48dc6fdf26',1,'IGame']]],
+  ['setenrage_165',['setEnrage',['../class_enemy.html#aacbba95fea0f0989c972afd27abc40e5',1,'Enemy']]],
+  ['setismoving_166',['setIsMoving',['../class_a_entity.html#ab368552733252f1ce634b3c5db29568d',1,'AEntity::setIsMoving()'],['../class_enemy.html#aa9ab0edcac6bc6b6bbba427d159172ed',1,'Enemy::setIsMoving()'],['../class_object.html#a8004c95e7571e7d8d6005ac62ef0644c',1,'Object::setIsMoving()'],['../class_player.html#a362d0e74f9cd4daf84faee36be1fffd8',1,'Player::setIsMoving()']]],
+  ['setpos_167',['setPos',['../class_i_entity.html#a3dc74d4e58ee5091e5f1d54bbbcf5a13',1,'IEntity::setPos()'],['../class_a_entity.html#a4de390d62596a386c52a0ac1e28ae03e',1,'AEntity::setPos()']]],
+  ['setsize_168',['setSize',['../class_i_entity.html#a1868722c6177951cd8c07d83bcfbc0fa',1,'IEntity::setSize()'],['../class_a_entity.html#aff3c2aaf5ec9fe750878c8d8d805fc14',1,'AEntity::setSize()']]],
+  ['setspeed_169',['setSpeed',['../class_enemy.html#a2eb43517359b8ea1d538f8e8d9408931',1,'Enemy']]],
+  ['settexturepath_170',['setTexturePath',['../class_i_entity.html#a15efc69cf999c6e502b2221fba6815ef',1,'IEntity::setTexturePath()'],['../class_a_entity.html#ae46771dd1354b5c4e4350d9a8c63df45',1,'AEntity::setTexturePath()']]],
+  ['settype_171',['setType',['../class_object.html#a2c4b4b2dd6d8ea29c71006a35d007912',1,'Object']]],
+  ['setup_172',['setup',['../class_i_game.html#a79f62f576a5cf86a8c2c0f25fd75b885',1,'IGame']]],
+  ['severity_173',['Severity',['../class_logger.html#a4cc16315b37eb0265c2d199880464a15',1,'Logger']]],
+  ['severity_5fcritical_174',['SEVERITY_CRITICAL',['../class_logger.html#a4cc16315b37eb0265c2d199880464a15acbeef5b21ec10a69188ac3d4cfa3a62b',1,'Logger']]],
+  ['severity_5fenum_5fsize_175',['SEVERITY_ENUM_SIZE',['../class_logger.html#a4cc16315b37eb0265c2d199880464a15a54c72c96fec9f6575489ef4c10432627',1,'Logger']]],
+  ['severity_5fhigh_176',['SEVERITY_HIGH',['../class_logger.html#a4cc16315b37eb0265c2d199880464a15afe05cfd16d0acc2a1a1e9bf898e1a048',1,'Logger']]],
+  ['severity_5finfo_177',['SEVERITY_INFO',['../class_logger.html#a4cc16315b37eb0265c2d199880464a15a0cf342c9ca694807d05f915c8966a7e2',1,'Logger']]],
+  ['severity_5flow_178',['SEVERITY_LOW',['../class_logger.html#a4cc16315b37eb0265c2d199880464a15abfe181f20efaf6d412dae251c056b0ef',1,'Logger']]],
+  ['severity_5fmedium_179',['SEVERITY_MEDIUM',['../class_logger.html#a4cc16315b37eb0265c2d199880464a15a5a5df8f74f95025d3feede9c40a37d82',1,'Logger']]],
+  ['severity_5fnone_180',['SEVERITY_NONE',['../class_logger.html#a4cc16315b37eb0265c2d199880464a15a3383eee663677570496f546789529e78',1,'Logger']]],
+  ['sfmllibrary_181',['SfmlLibrary',['../class_sfml_library.html',1,'SfmlLibrary'],['../class_sfml_library.html#aecabbf8ac17ffd89d3333a3946a841ff',1,'SfmlLibrary::SfmlLibrary()']]],
+  ['sfmllibrary_2ecpp_182',['SfmlLibrary.cpp',['../_sfml_library_8cpp.html',1,'']]],
+  ['sfmllibrary_2ehpp_183',['SfmlLibrary.hpp',['../_sfml_library_8hpp.html',1,'']]],
+  ['start_184',['start',['../class_i_game.html#a1054f8839203aff00de286e06dfb0788',1,'IGame']]],
+  ['state_185',['State',['../structarcade_1_1_evt.html#afbc8345c45a8e66dc898500c8e78e3e3',1,'arcade::Evt::State()'],['../structarcade_1_1_evt_1_1_mouse_evt.html#aca7012f821f074c7fff6f32823c1d6ef',1,'arcade::Evt::MouseEvt::state()'],['../structarcade_1_1_evt_1_1_key_evt.html#a4385f8bf03413282be7fe6e8f2f41248',1,'arcade::Evt::KeyEvt::state()']]],
+  ['stopped_186',['STOPPED',['../class_i_game.html#a4a7309d86599d6e581f764233085c7dda09d4d696b4e935115b9313e3c412509a',1,'IGame']]]
 ];

@@ -1,5 +1,6 @@
 var annotated_dup =
 [
+    [ "arcade", "namespacearcade.html", "namespacearcade" ],
     [ "AEntity", "class_a_entity.html", "class_a_entity" ],
     [ "ArcadeException", "class_arcade_exception.html", "class_arcade_exception" ],
     [ "Color", "struct_color.html", "struct_color" ],

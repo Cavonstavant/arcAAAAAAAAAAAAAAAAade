@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['r_311',['R',['../struct_color.html#aed083afcc2c689243df7fbc3da5203d3',1,'Color']]]
+  ['evt_5ftype_364',['evt_type',['../structarcade_1_1_evt.html#a7764a06c037aa39423320d0fb8f426ea',1,'arcade::Evt']]]
 ];

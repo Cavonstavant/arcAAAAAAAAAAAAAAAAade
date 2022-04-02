@@ -1,6 +1,7 @@
 var hierarchy =
 [
     [ "Color", "struct_color.html", null ],
+    [ "arcade::Evt", "structarcade_1_1_evt.html", null ],
     [ "exception", null, [
       [ "ArcadeException", "class_arcade_exception.html", [
         [ "EntityException", "class_entity_exception.html", null ],
@@ -31,6 +32,12 @@ var hierarchy =
     [ "IGraph< float >", "class_i_graph.html", [
       [ "SfmlLibrary", "class_sfml_library.html", null ]
     ] ],
+    [ "arcade::Evt::KeyEvt", "structarcade_1_1_evt_1_1_key_evt.html", null ],
     [ "LibManager", "class_lib_manager.html", null ],
-    [ "Logger", "class_logger.html", null ]
+    [ "Logger", "class_logger.html", null ],
+    [ "arcade::Evt::MouseEvt< T >", "structarcade_1_1_evt_1_1_mouse_evt.html", null ],
+    [ "arcade::Evt::MouseEvt< float >", "structarcade_1_1_evt_1_1_mouse_evt.html", null ],
+    [ "arcade::Evt::MouseMove< T >", "structarcade_1_1_evt_1_1_mouse_move.html", null ],
+    [ "arcade::Evt::ResizeEvt< T >", "structarcade_1_1_evt_1_1_resize_evt.html", null ],
+    [ "arcade::Evt::ResizeEvt< float >", "structarcade_1_1_evt_1_1_resize_evt.html", null ]
 ];

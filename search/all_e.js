@@ -1,10 +1,9 @@
 var searchData=
 [
-  ['pacman_116',['pacman',['../_pacman_8cpp.html#a78a9e699835b9f1072f407dbbe4acf91',1,'Pacman.cpp']]],
-  ['pacman_2ecpp_117',['Pacman.cpp',['../_pacman_8cpp.html',1,'']]],
-  ['paused_118',['PAUSED',['../class_i_game.html#a4a7309d86599d6e581f764233085c7dda99b2439e63f73ad515f7ab2447a80673',1,'IGame']]],
-  ['player_119',['Player',['../class_player.html',1,'Player'],['../class_player.html#affe0cc3cb714f6deb4e62f0c0d3f1fd8',1,'Player::Player()']]],
-  ['player_2ecpp_120',['Player.cpp',['../_player_8cpp.html',1,'']]],
-  ['player_2ehpp_121',['Player.hpp',['../_player_8hpp.html',1,'']]],
-  ['points_122',['POINTS',['../class_object.html#aaaf3106c96ab4387c5ada5d22074c0ffa911644c0e5cf0c4828ad5410db73286c',1,'Object']]]
+  ['object_142',['Object',['../class_object.html',1,'Object'],['../class_object.html#a40860402e64d8008fb42329df7097cdb',1,'Object::Object()']]],
+  ['object_2ecpp_143',['Object.cpp',['../_object_8cpp.html',1,'']]],
+  ['object_2ehpp_144',['Object.hpp',['../_object_8hpp.html',1,'']]],
+  ['oldsize_145',['oldSize',['../structarcade_1_1_evt_1_1_resize_evt.html#aea4d12c0dc57e13016f545cd74c8da45',1,'arcade::Evt::ResizeEvt']]],
+  ['openlib_146',['openLib',['../class_lib_manager.html#a8fa91abc61c857427eae0a70c367ea7d',1,'LibManager']]],
+  ['operator_3d_147',['operator=',['../class_lib_manager.html#a84e8bc50673b4de646710eda756d7641',1,'LibManager']]]
 ];

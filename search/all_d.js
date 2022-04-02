@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['object_111',['Object',['../class_object.html',1,'Object'],['../class_object.html#a40860402e64d8008fb42329df7097cdb',1,'Object::Object()']]],
-  ['object_2ecpp_112',['Object.cpp',['../_object_8cpp.html',1,'']]],
-  ['object_2ehpp_113',['Object.hpp',['../_object_8hpp.html',1,'']]],
-  ['openlib_114',['openLib',['../class_lib_manager.html#a8fa91abc61c857427eae0a70c367ea7d',1,'LibManager']]],
-  ['operator_3d_115',['operator=',['../class_lib_manager.html#a84e8bc50673b4de646710eda756d7641',1,'LibManager']]]
+  ['newsize_138',['newSize',['../structarcade_1_1_evt_1_1_resize_evt.html#a41ebaf31669fb5bc432bc85638aca27b',1,'arcade::Evt::ResizeEvt']]],
+  ['nibbler_139',['nibbler',['../_nibbler_8cpp.html#aaf800d5dd163dff0146e7aa921a2f4ba',1,'Nibbler.cpp']]],
+  ['nibbler_2ecpp_140',['Nibbler.cpp',['../_nibbler_8cpp.html',1,'']]],
+  ['none_141',['NONE',['../class_logger.html#a1d61a808908f837373dcd89f52fa0c2a',1,'Logger']]]
 ];

@@ -1,13 +1,9 @@
 var searchData=
 [
-  ['_7eaentity_157',['~AEntity',['../class_a_entity.html#ac72923a9c2f41428d5c57e51a8a254aa',1,'AEntity']]],
-  ['_7ecolor_158',['~Color',['../struct_color.html#a2a84d3b91f2999a11b6728a4b8f85ae4',1,'Color']]],
-  ['_7eenemy_159',['~Enemy',['../class_enemy.html#ac0eec4755e28c02688065f9657150ac3',1,'Enemy']]],
-  ['_7eientity_160',['~IEntity',['../class_i_entity.html#acfe7cc7def33fa1cc8a2a56dc39d29e3',1,'IEntity']]],
-  ['_7eigame_161',['~IGame',['../class_i_game.html#a91b14c1b6019364120d5c5e4d4c64414',1,'IGame']]],
-  ['_7eigraph_162',['~IGraph',['../class_i_graph.html#a4d0222e5b7d69deb8ab57e2a4cf91b2a',1,'IGraph']]],
-  ['_7elibmanager_163',['~LibManager',['../class_lib_manager.html#ade5e45886e1d82e8f0c968de7eb59f04',1,'LibManager']]],
-  ['_7eobject_164',['~Object',['../class_object.html#ae8f5483f459e46687bd01e6f9977afd3',1,'Object']]],
-  ['_7eplayer_165',['~Player',['../class_player.html#a749d2c00e1fe0f5c2746f7505a58c062',1,'Player']]],
-  ['_7esfmllibrary_166',['~SfmlLibrary',['../class_sfml_library.html#a84d358d5385f0b498925e431c56b7ef5',1,'SfmlLibrary']]]
+  ['wall_193',['WALL',['../class_object.html#aaaf3106c96ab4387c5ada5d22074c0ffa82cc7ae0bdf831bf50486aefb75623c2',1,'Object']]],
+  ['what_194',['what',['../class_arcade_exception.html#a337bc156e58344e8b1aa58033b1a05ae',1,'ArcadeException']]],
+  ['wheel_195',['wheel',['../structarcade_1_1_evt_1_1_mouse_evt.html#adb9711fcb949c3f9566f1b84267e17c3',1,'arcade::Evt::MouseEvt']]],
+  ['where_196',['where',['../class_arcade_exception.html#ac4bb54de4b3af4f6631019838b4c3914',1,'ArcadeException']]],
+  ['win_5fclose_197',['WIN_CLOSE',['../structarcade_1_1_evt.html#a5752a0e6abfdb76c375af89139649575aecbeca85f389ba453b923ca284a06b5a',1,'arcade::Evt']]],
+  ['win_5fresize_198',['WIN_RESIZE',['../structarcade_1_1_evt.html#a5752a0e6abfdb76c375af89139649575ab26646eb5445f37c5576039aae27909e',1,'arcade::Evt']]]
 ];
