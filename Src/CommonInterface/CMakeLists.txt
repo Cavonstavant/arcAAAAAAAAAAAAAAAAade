@@ -11,7 +11,7 @@ set(SRC
     ${INCLUDE_ROOT}/IGame.hpp
     ${INCLUDE_ROOT}/IGraph.hpp
     ${INCLUDE_ROOT}/IEntity.hpp
-    ${INCLUDE_ROOT}/IColor.hpp
+    ${INCLUDE_ROOT}/Color.hpp
 )
 
 # ORIGINAL VERSION -- DELETE THIS AFTER REVIEW
