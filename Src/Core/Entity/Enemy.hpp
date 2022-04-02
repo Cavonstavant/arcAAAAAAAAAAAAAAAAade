@@ -8,7 +8,7 @@
 #ifndef ARCADE_ENEMY_HPP
 #define ARCADE_ENEMY_HPP
 
-#include "../../CommonInterface/include/IColor.hpp"
+#include "../../CommonInterface/include/Color.hpp"
 #include "AEntity.hpp"
 
 /// \brief Enemy class inherits from AEntity
@@ -26,15 +26,15 @@ class Enemy : public AEntity {
         /// Set the speed of the Enemy Entity
         void setSpeed(int speed);
         /// \brief Set the Color of the Enemy Entity
-        void setColor(IColor::COLOR_E color);
+        void setColor(Color color);
         /// \brief Set the enrage boolean of the Enemy Entity
         void setEnrage(bool enrage);
         /// \brief Get the speed of the Enemy Entity
         /// \return Int speed
         int getSpeed() const;
         /// \brief Get the color of the Enemy Entity
-        /// \return IColor color
-        IColor *getColor() const;
+        /// \return Color color
+        Color getColor() const;
         /// \brief Get the enrage boolean of the Enemy Entity
         /// \return Bool Enrage
         bool getEnrage() const;
@@ -47,8 +47,8 @@ class Enemy : public AEntity {
     private:
         /// \brief Movement Speed of the Enemy Entity
         int _speed;
-        /// \brief IColor of the Enemy Entity. IColor interface used by different Graphics Library
-        IColor *_color;
+        /// \brief Color of the Enemy Entity. Color interface used by different Graphics Library
+        Color _color;
         /// \brief Defines if the Enemy Entity is enrage or not
         bool _enrage;
 };
