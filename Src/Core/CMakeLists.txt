@@ -13,6 +13,8 @@ set(SRC
         ${INCLUDE_ROOT}/Entity/Object.hpp
         ${INCLUDE_ROOT}/Entity/Player.cpp
         ${INCLUDE_ROOT}/Entity/Player.hpp
+        ${INCLUDE_ROOT}/Entity/TextEntity.cpp
+        ${INCLUDE_ROOT}/Entity/TextEntity.hpp
         ${INCLUDE_ROOT}/Core.hpp
         ${INCLUDE_ROOT}/Core.cpp
         ${INCLUDE_ROOT}/Exception.cpp
@@ -21,6 +23,8 @@ set(SRC
         ${INCLUDE_ROOT}/Logger.cpp
         ${INCLUDE_ROOT}/LibManager.cpp
         ${INCLUDE_ROOT}/LibManager.hpp
+        ${INCLUDE_ROOT}/MainMenu/MainMenu.cpp
+        ${INCLUDE_ROOT}/MainMenu/MainMenu.hpp
         )
 
 set_target_properties(${TARGET_LIBNAME} PROPERTIES LINKER_LANGUAGE CXX)
