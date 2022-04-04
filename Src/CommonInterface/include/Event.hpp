@@ -28,7 +28,8 @@ namespace Arcade {
             enum MouseClick { LEFT,
                               RIGHT,
                               MIDDLE,
-                              MOUSE_CLICK_SIZE };
+                              MOUSE_CLICK_SIZE
+            };
 
             /// \brief represents the position of the cursor
             /// \todo x, y should be a templated vec2i
@@ -41,7 +42,8 @@ namespace Arcade {
             /// \brief represents the direction of the mouse wheel scoll
             enum MouseWheel { UP,
                               DOWN,
-                              MOUSE_WHEEL_SIZE };
+                              MOUSE_WHEEL_SIZE
+            };
 
             /// \brief represents the mouse event parameters
             template<typename T>
