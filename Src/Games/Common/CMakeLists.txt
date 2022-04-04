@@ -4,6 +4,10 @@ set (SRC_ROOT ${PROJECT_SOURCE_DIR}/Src/Games/Common/)
 set(TARGET_LIB_NAME graphic_lib_common)
 
 set(SRC
+    ${INCLUDE_ROOT}/AEntity.hpp
+    ${INCLUDE_ROOT}/AEntity.cpp
+    ${INCLUDE_ROOT}/Button.cpp
+    ${INCLUDE_ROOT}/Button.hpp
     ${INCLUDE_ROOT}/Enemy.cpp
     ${INCLUDE_ROOT}/Enemy.hpp
     ${INCLUDE_ROOT}/Object.cpp
