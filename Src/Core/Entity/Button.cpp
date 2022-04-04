@@ -18,8 +18,8 @@ Button::~Button()
 bool Button::isClicked(int x, int y)
 {
     return (
-               x >= getPos().first &&
-               x <= getPos().first + getSize().first &&
-               y >= getPos().second &&
-               y <= getPos().second + getSize().second);
+            x >= getPos().first &&
+            x <= getPos().first + getSize().first &&
+            y >= getPos().second &&
+            y <= getPos().second + getSize().second);
 }
