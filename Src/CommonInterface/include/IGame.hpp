@@ -10,11 +10,11 @@
 #ifndef ARCADE_IGAME_HPP
 #define ARCADE_IGAME_HPP
 
+#include "Event.hpp"
 #include "IGraph.hpp"
-#include <vector>
 #include <memory>
 #include <stack>
-#include "Event.hpp"
+#include <vector>
 
 /// Game instance
 class IGame {

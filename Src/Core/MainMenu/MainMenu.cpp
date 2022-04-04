@@ -8,8 +8,8 @@
 #include "MainMenu.hpp"
 #include "../Entity/Button.hpp"
 #include "../Entity/TextEntity.hpp"
-#include "Event.hpp"
 #include "../Exception.hpp"
+#include "Event.hpp"
 #include <stack>
 
 void closeGameCallback()
@@ -35,7 +35,7 @@ MainMenu::~MainMenu()
 
 void MainMenu::manageClickEvent(Arcade::Evt &event, std::vector<std::shared_ptr<IEntity>> &entities)
 {
-    for (auto &button : _buttons) {
+    for (auto &button: _buttons) {
         if (button->isClicked(event.mouse.x, event.mouse.y)) {
             button->callback();
         }

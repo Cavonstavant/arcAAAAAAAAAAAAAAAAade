@@ -7,13 +7,12 @@
 
 #pragma once
 
+#include "../Entity/Button.hpp"
 #include "IGame.hpp"
 #include "IGraph.hpp"
-#include "../Entity/Button.hpp"
 
 class MainMenu : public IGame {
     public:
-
         /// \brief Constructor
         MainMenu(std::vector<std::shared_ptr<IEntity>> &entities);
         /// \brief Destructor
