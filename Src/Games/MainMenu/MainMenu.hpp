@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include "../Entity/Button.hpp"
+#include "../../Games/Common/Button.hpp"
 #include "IGame.hpp"
 #include "IGraph.hpp"
 
