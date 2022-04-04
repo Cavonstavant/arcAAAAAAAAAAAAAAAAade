@@ -6,9 +6,9 @@
 */
 
 #include "MainMenu.hpp"
+#include "../../Core/Exception.hpp"
 #include "../Common/Button.hpp"
 #include "../Common/TextEntity.hpp"
-#include "../../Core/Exception.hpp"
 #include "Event.hpp"
 #include <stack>
 
