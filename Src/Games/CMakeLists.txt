@@ -12,7 +12,7 @@ function(create_arcade_game)
 
     add_library(${create_arcade_game_GAME_NAME} SHARED ${create_arcade_game_SRC})
 
-    target_link_libraries(${create_arcade_game_GAME_NAME} PRIVATE ArcadeCommonInterface)
+    target_link_libraries(${create_arcade_game_GAME_NAME} PRIVATE ArcadeCommonInterface graphic_lib_common)
     set_target_properties(${create_arcade_game_GAME_NAME} PROPERTIES
         PREFIX ""
         LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib

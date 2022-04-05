@@ -14,6 +14,7 @@ SfmlLibrary::SfmlLibrary()
     _videoMode = sf::VideoMode(1200, 800, 32);
     _font.loadFromFile(font);
     _window.create(_videoMode, "Window");
+    _name = "SFML";
 }
 
 bool SfmlLibrary::clearWindow()

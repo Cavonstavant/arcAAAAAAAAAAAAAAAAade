@@ -22,9 +22,8 @@ int main(int ac, char **av)
     try {
         MainMenu mainMenu(entities);
         LibManager libManager(av[1]);
-    } catch (...){
+    } catch (...) {
         return (84);
     }
-    MainMenu.start();
     return (0);
 }

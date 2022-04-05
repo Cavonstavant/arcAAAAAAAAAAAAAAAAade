@@ -4,7 +4,7 @@ set(INCLUDE_ROOT ${PROJECT_SOURCE_DIR}/Src/GraphicLibs/SDL)
 set(SRC_ROOT ${PROJECT_SOURCE_DIR}/Src/GraphicLibs/SDL)
 
 set(SRC
-    ${SRC_ROOT}/entrypoint.cpp
+    ${SRC_ROOT}/EntryPoint.cpp
 )
 
 set(INCLUDE_DIRS ${INCLUDE_ROOT})

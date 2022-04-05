@@ -33,7 +33,7 @@ class SfmlLibrary : public IGraph<float> {
                       const std::string &content) override;
         bool drawEntity(IEntity &entity,
                         std::pair<float, float> pos) override;
-
+        inline std::string getName() const override final { return _name;}
     private:
         /// \brief window member using to display every entities
         sf::RenderWindow _window;
@@ -43,6 +43,9 @@ class SfmlLibrary : public IGraph<float> {
 
         /// \brief Default font for every sf::Text in the SfmlLibrary
         sf::Font _font;
+
+        /// \brief Graphic library name
+        std::string _name;
 };
 
 
