@@ -10,6 +10,7 @@
 
 /// \brief Color structure
 struct Color {
+        /// \brief Enum for the terminal colors
         enum TermColors {
             BLACK = 0,
             RED = 1,
