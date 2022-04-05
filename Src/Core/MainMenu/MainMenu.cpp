@@ -7,9 +7,10 @@
 
 #include "MainMenu.hpp"
 #include "../../Core/Exception.hpp"
-#include "../Common/Button.hpp"
-#include "../Common/TextEntity.hpp"
+#include "../../Games/Common/Button.hpp"
+#include "../../Games/Common/TextEntity.hpp"
 #include "Event.hpp"
+#include <filesystem>
 #include <stack>
 
 void closeGameCallback()
@@ -19,6 +20,7 @@ void closeGameCallback()
 
 MainMenu::MainMenu(std::vector<std::shared_ptr<IEntity>> &entities)
 {
+    getAllLibraries();
     _gameState = GameState::LOADED;
     Button startGameButton;
     std::shared_ptr<Button> startGameButtonPtr = std::make_shared<Button>(startGameButton);
@@ -66,4 +68,14 @@ void MainMenu::update(std::vector<std::shared_ptr<IEntity>> &entities, std::stac
 void MainMenu::start()
 {
     _gameState = GameState::RUNNING;
+}
+
+#include <iostream>
+
+void MainMenu::getAllLibraries()
+{
+    std::string path = "../../../lib";
+    for (const auto & entry : std::filesystem::directory_iterator(path))
+        std::cout << entry.path() << std::endl;
+    throw NotImplementedEX("Graphical libraries not implemented", Logger::HIGH);
 }

@@ -13,6 +13,8 @@ set(SRC
         ${INCLUDE_ROOT}/Logger.cpp
         ${INCLUDE_ROOT}/LibManager.cpp
         ${INCLUDE_ROOT}/LibManager.hpp
+        ${INCLUDE_ROOT}/MainMenu/MainMenu.cpp
+        ${INCLUDE_ROOT}/MainMenu/MainMenu.hpp
         )
 
 set_target_properties(${TARGET_LIBNAME} PROPERTIES LINKER_LANGUAGE CXX)

@@ -9,7 +9,7 @@
 
 #include "../../Games/Common/Button.hpp"
 #include "IGame.hpp"
-#include "IGraph.hpp"
+#include <vector>
 
 class MainMenu : public IGame {
     public:
@@ -32,6 +32,8 @@ class MainMenu : public IGame {
     private:
         std::vector<std::shared_ptr<Button>> _buttons;
         GameState _gameState;
+        std::vector<std::string> _graphicalLibraries;
+        std::vector<std::string> _gameLibraries;
 
         /// \brief Manage the events
         /// \param events The event stack of the game
@@ -45,4 +47,6 @@ class MainMenu : public IGame {
         /// \param event The event stack of the game
         /// \param entities The entity vector of the game
         void manageKeyEvent(Arcade::Evt &event, std::vector<std::shared_ptr<IEntity>> &entities);
+        /// \brief Gets all the libraries and fills the vectors
+        void getAllLibraries();
 };
