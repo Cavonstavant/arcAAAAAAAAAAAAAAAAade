@@ -48,7 +48,7 @@ class LibManager {
         /// \brief Opens a shared library, calls it's lib entrypoint and returns a pointer to a graph instance
         /// \param libPath Path to the library
         /// \return A pointer to a graph instance
-        template <typename T>
+        template<typename T>
         IGraph<T> *openGraph(std::string libPath);
 
         /// \brief Closes a shared library
