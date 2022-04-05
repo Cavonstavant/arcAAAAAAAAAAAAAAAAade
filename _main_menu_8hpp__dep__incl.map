@@ -1,4 +1,4 @@
-<map id="Src/Games/MainMenu/MainMenu.hpp" name="Src/Games/MainMenu/MainMenu.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,169,47"/>
-<area shape="rect" id="node2" href="$_main_menu_8cpp.html" title=" " alt="" coords="5,95,169,136"/>
+<map id="Src/Core/MainMenu/MainMenu.hpp" name="Src/Core/MainMenu/MainMenu.hpp">
+<area shape="rect" id="node1" title="MainMenu class." alt="" coords="5,5,253,32"/>
+<area shape="rect" id="node2" href="$_main_menu_8cpp.html" title=" " alt="" coords="6,80,253,107"/>
 </map>

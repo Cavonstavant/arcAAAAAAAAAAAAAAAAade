@@ -1,14 +1,15 @@
-<map id="Src/Games/MainMenu/MainMenu.hpp" name="Src/Games/MainMenu/MainMenu.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="142,5,306,47"/>
-<area shape="rect" id="node2" href="$_button_8hpp.html" title=" " alt="" coords="31,95,185,136"/>
-<area shape="rect" id="node7" href="$_i_game_8hpp.html" title=" " alt="" coords="319,102,412,129"/>
-<area shape="rect" id="node9" href="$_i_graph_8hpp.html" title=" " alt="" coords="177,184,271,211"/>
-<area shape="rect" id="node3" href="$_a_entity_8hpp.html" title=" " alt="" coords="58,184,153,211"/>
-<area shape="rect" id="node4" href="$_i_entity_8hpp.html" title=" " alt="" coords="24,259,187,300"/>
-<area shape="rect" id="node6" title=" " alt="" coords="76,348,135,375"/>
-<area shape="rect" id="node5" href="$_color_8hpp.html" title=" " alt="" coords="196,348,279,375"/>
-<area shape="rect" id="node8" href="$_event_8hpp.html" title=" " alt="" coords="463,184,550,211"/>
-<area shape="rect" id="node10" title=" " alt="" coords="575,184,652,211"/>
-<area shape="rect" id="node11" title=" " alt="" coords="295,184,353,211"/>
-<area shape="rect" id="node12" title=" " alt="" coords="377,184,439,211"/>
+<map id="Src/Core/MainMenu/MainMenu.hpp" name="Src/Core/MainMenu/MainMenu.hpp">
+<area shape="rect" id="node1" title="MainMenu class." alt="" coords="353,5,601,32"/>
+<area shape="rect" id="node2" href="$_button_8hpp.html" title=" " alt="" coords="86,80,241,121"/>
+<area shape="rect" id="node8" href="$_i_game_8hpp.html" title=" " alt="" coords="430,87,523,114"/>
+<area shape="rect" id="node13" title=" " alt="" coords="648,169,711,196"/>
+<area shape="rect" id="node3" href="$_a_entity_8hpp.html" title=" " alt="" coords="116,169,211,196"/>
+<area shape="rect" id="node7" title=" " alt="" coords="5,169,92,196"/>
+<area shape="rect" id="node4" href="$_i_entity_8hpp.html" title=" " alt="" coords="326,244,489,285"/>
+<area shape="rect" id="node6" title=" " alt="" coords="378,333,437,360"/>
+<area shape="rect" id="node5" href="$_color_8hpp.html" title=" " alt="" coords="498,333,581,360"/>
+<area shape="rect" id="node9" href="$_event_8hpp.html" title=" " alt="" coords="235,169,321,196"/>
+<area shape="rect" id="node10" href="$_i_graph_8hpp.html" title=" " alt="" coords="530,169,623,196"/>
+<area shape="rect" id="node11" title=" " alt="" coords="346,169,423,196"/>
+<area shape="rect" id="node12" title=" " alt="" coords="448,169,505,196"/>
 </map>

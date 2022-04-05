@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>arcAAAAAAAAAAAAAAAAade: Src/Games/MainMenu/MainMenu.hpp File Reference</title>
+<title>arcAAAAAAAAAAAAAAAAade: Src/Core/MainMenu/MainMenu.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -88,35 +88,39 @@ $(document).ready(function(){initNavTree('_main_menu_8hpp.html',''); initResizab
 <div class="title">MainMenu.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><a class="el" href="class_main_menu.html">MainMenu</a> class.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="_button_8hpp_source.html">../../Games/Common/Button.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_i_game_8hpp_source.html">IGame.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="_i_graph_8hpp_source.html">IGraph.hpp</a>&quot;</code><br />
+<code>#include &lt;vector&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for MainMenu.hpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="_main_menu_8hpp__incl.png" border="0" usemap="#_src_2_games_2_main_menu_2_main_menu_8hpp" alt=""/></div>
-<map name="_src_2_games_2_main_menu_2_main_menu_8hpp" id="_src_2_games_2_main_menu_2_main_menu_8hpp">
-<area shape="rect" title=" " alt="" coords="142,5,306,47"/>
-<area shape="rect" href="_button_8hpp.html" title=" " alt="" coords="31,95,185,136"/>
-<area shape="rect" href="_i_game_8hpp.html" title=" " alt="" coords="319,102,412,129"/>
-<area shape="rect" href="_i_graph_8hpp.html" title=" " alt="" coords="177,184,271,211"/>
-<area shape="rect" href="_a_entity_8hpp.html" title=" " alt="" coords="58,184,153,211"/>
-<area shape="rect" href="_i_entity_8hpp.html" title=" " alt="" coords="24,259,187,300"/>
-<area shape="rect" title=" " alt="" coords="76,348,135,375"/>
-<area shape="rect" href="_color_8hpp.html" title=" " alt="" coords="196,348,279,375"/>
-<area shape="rect" href="_event_8hpp.html" title=" " alt="" coords="463,184,550,211"/>
-<area shape="rect" title=" " alt="" coords="575,184,652,211"/>
-<area shape="rect" title=" " alt="" coords="295,184,353,211"/>
-<area shape="rect" title=" " alt="" coords="377,184,439,211"/>
+<div class="center"><img src="_main_menu_8hpp__incl.png" border="0" usemap="#_src_2_core_2_main_menu_2_main_menu_8hpp" alt=""/></div>
+<map name="_src_2_core_2_main_menu_2_main_menu_8hpp" id="_src_2_core_2_main_menu_2_main_menu_8hpp">
+<area shape="rect" title="MainMenu class." alt="" coords="353,5,601,32"/>
+<area shape="rect" href="_button_8hpp.html" title=" " alt="" coords="86,80,241,121"/>
+<area shape="rect" href="_i_game_8hpp.html" title=" " alt="" coords="430,87,523,114"/>
+<area shape="rect" title=" " alt="" coords="648,169,711,196"/>
+<area shape="rect" href="_a_entity_8hpp.html" title=" " alt="" coords="116,169,211,196"/>
+<area shape="rect" title=" " alt="" coords="5,169,92,196"/>
+<area shape="rect" href="_i_entity_8hpp.html" title=" " alt="" coords="326,244,489,285"/>
+<area shape="rect" title=" " alt="" coords="378,333,437,360"/>
+<area shape="rect" href="_color_8hpp.html" title=" " alt="" coords="498,333,581,360"/>
+<area shape="rect" href="_event_8hpp.html" title=" " alt="" coords="235,169,321,196"/>
+<area shape="rect" href="_i_graph_8hpp.html" title=" " alt="" coords="530,169,623,196"/>
+<area shape="rect" title=" " alt="" coords="346,169,423,196"/>
+<area shape="rect" title=" " alt="" coords="448,169,505,196"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="_main_menu_8hpp__dep__incl.png" border="0" usemap="#_src_2_games_2_main_menu_2_main_menu_8hppdep" alt=""/></div>
-<map name="_src_2_games_2_main_menu_2_main_menu_8hppdep" id="_src_2_games_2_main_menu_2_main_menu_8hppdep">
-<area shape="rect" title=" " alt="" coords="5,5,169,47"/>
-<area shape="rect" href="_main_menu_8cpp.html" title=" " alt="" coords="5,95,169,136"/>
+<div class="center"><img src="_main_menu_8hpp__dep__incl.png" border="0" usemap="#_src_2_core_2_main_menu_2_main_menu_8hppdep" alt=""/></div>
+<map name="_src_2_core_2_main_menu_2_main_menu_8hppdep" id="_src_2_core_2_main_menu_2_main_menu_8hppdep">
+<area shape="rect" title="MainMenu class." alt="" coords="5,5,253,32"/>
+<area shape="rect" href="_main_menu_8cpp.html" title=" " alt="" coords="6,80,253,107"/>
 </map>
 </div>
 </div>
@@ -127,12 +131,16 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_menu.html">MainMenu</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="class_main_menu.html">MainMenu</a> class. </p>
+
+<p class="definition">Definition in file <a class="el" href="_main_menu_8hpp_source.html">MainMenu.hpp</a>.</p>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_413f4e031a85da0d68269c6fd2f76e1c.html">Src</a></li><li class="navelem"><a class="el" href="dir_4208a72c7c4a3b6002a179ad4ba33f9a.html">Games</a></li><li class="navelem"><a class="el" href="dir_38f4ca3e518e5b7d92108359f7bd5bfc.html">MainMenu</a></li><li class="navelem"><a class="el" href="_main_menu_8hpp.html">MainMenu.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_413f4e031a85da0d68269c6fd2f76e1c.html">Src</a></li><li class="navelem"><a class="el" href="dir_7b05109297cab176a390ab0b97b4eddc.html">Core</a></li><li class="navelem"><a class="el" href="dir_1027bb0da560c6a52c86a456fe4ab2e4.html">MainMenu</a></li><li class="navelem"><a class="el" href="_main_menu_8hpp.html">MainMenu.hpp</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
