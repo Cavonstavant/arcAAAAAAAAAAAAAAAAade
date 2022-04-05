@@ -9,6 +9,7 @@
 #define IENTITY_HPP_
 
 #include <string>
+#include "Color.hpp"
 
 /// \brief represents a generic entity within the game
 class IEntity {
@@ -29,7 +30,16 @@ class IEntity {
         /// \param std::string texturePath represents the path to find the texture
         virtual void setTexturePath(std::string texturePath) = 0;
         /// \brief Get the texturePAth of the Entity
+        /// \return the path to the texture
         virtual std::string getTexturePath(void) const = 0;
+        /// \brief Set the entity char and color to replace textures for terminal graphical libraries
+        /// \param char c the char to replace the texture
+        /// \param Color::TermColors fg the foreground color of the char
+        /// \param Color::TermColors bg the background color of the char
+        virtual void setTermTexture(char c, Color::TermColors fg, Color::TermColors bg) = 0;
+        /// \brief Get the entity char and color to replace textures for terminal graphical libraries
+        /// \return the char and colors of the entity for the terminal graphical libraries
+        virtual std::pair<char, std::pair<Color::TermColors, Color::TermColors>> getTermTexture(void) const = 0;
 };
 
 #endif /* !IENTITY_HPP_ */
