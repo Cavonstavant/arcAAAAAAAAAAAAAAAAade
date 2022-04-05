@@ -10,7 +10,7 @@
 AEntity::AEntity()
 {
     _pos = std::make_pair(0, 0);
-    _size = std::make_pair(0, 0);
+    _size = std::make_pair(32, 32);
     _isMoving = false;
     _texturePath = "";
 }
