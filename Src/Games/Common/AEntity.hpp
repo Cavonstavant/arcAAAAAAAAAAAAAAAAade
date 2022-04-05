@@ -36,11 +36,11 @@ class AEntity : public IEntity {
         void setSize(std::pair<int, int> size) override;
 
         /// \brief Set the Entity boolean isMoving
-        virtual void setIsMoving(bool isMoving);
+        virtual void setIsMoving(bool isMoving) = 0;
 
         /// \brief Get the Entity boolean isMoving
         /// \return bool isMoving;
-        virtual bool getIsMoving() const;
+        virtual bool getIsMoving() const = 0;
 
         /// \brief Set the texturePath of the entity
         /// \param std::string texturePath represents the path to find the texture

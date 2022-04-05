@@ -23,4 +23,4 @@ add_library(${TARGET_LIB_NAME} ${SRC})
 set_target_properties(${TARGET_LIB_NAME} PROPERTIES LINKER_LANGUAGE CXX)
 
 target_link_libraries(${TARGET_LIB_NAME} ArcadeCommonInterface)
-target_include_directories(${TARGET_LIB_NAME} PRIVATE ${PROJECT_SOURCE_DIR}/Src/Core/Entity)
+target_include_directories(${TARGET_LIB_NAME} PRIVATE ${PROJECT_SOURCE_DIR}/Src/Games/Common)

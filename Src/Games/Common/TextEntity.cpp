@@ -69,3 +69,13 @@ void TextEntity::setOutlineColor(const Color &outlineColor)
 {
     _outlineColor = outlineColor;
 }
+
+void TextEntity::setIsMoving(bool isMoving)
+{
+    _isMoving = isMoving;
+}
+
+bool TextEntity::getIsMoving() const
+{
+    return _isMoving;
+}
