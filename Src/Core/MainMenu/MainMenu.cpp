@@ -14,22 +14,51 @@
 #include <filesystem>
 #include <stack>
 
-void closeGameCallback()
+static void closeGameCallback()
 {
     throw ButtonCloseGameEX("Close game button clicked", Logger::NONE);
+}
+
+static void changeGraphicalLibCallback()
+{
+    throw NotImplementedEX("Change graphical lib button clicked", Logger::NONE);
+}
+
+static void changeGameLibCallback()
+{
+    throw NotImplementedEX("Change graphical lib button clicked", Logger::NONE);
 }
 
 MainMenu::MainMenu(std::vector<std::shared_ptr<IEntity>> &entities)
 {
     getAllLibraries();
+
     _gameState = GameState::LOADED;
-    Button startGameButton;
+    Button startGameButton(&closeGameCallback);
     std::shared_ptr<Button> startGameButtonPtr = std::make_shared<Button>(startGameButton);
 
-    startGameButton.callback = &closeGameCallback;
     entities.push_back(std::make_shared<TextEntity>("Arcade"));
     _buttons.push_back(startGameButtonPtr);
     entities.push_back(startGameButtonPtr);
+
+    int y = 100;
+    for (auto &&graphLib : _graphicalLibraries)
+    {
+        Button button(&changeGraphicalLibCallback, graphLib);
+        button.setPos(std::make_pair(200, y));
+        std::shared_ptr<Button> buttonPtr = std::make_shared<Button>(button);
+        entities.push_back(buttonPtr);
+        _buttons.push_back(buttonPtr);
+    }
+    y = 100;
+    for (auto &&gameLib : _gameLibraries)
+    {
+        Button button(&changeGameLibCallback, gameLib);
+        button.setPos(std::make_pair(500, y));
+        std::shared_ptr<Button> buttonPtr = std::make_shared<Button>(button);
+        entities.push_back(buttonPtr);
+        _buttons.push_back(buttonPtr);
+    }
 }
 
 MainMenu::~MainMenu()
