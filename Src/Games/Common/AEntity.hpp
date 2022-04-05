@@ -47,13 +47,25 @@ class AEntity : public IEntity {
         void setTexturePath(std::string texturePath) override;
 
         /// \brief Get the texturePAth of the Entity
+        /// \return the path to the texture
         std::string getTexturePath(void) const override;
+
+        /// \brief Set the entity char and color to replace textures for terminal graphical libraries
+        /// \param char c the char to replace the texture
+        /// \param Color::TermColors fg the foreground color of the char
+        /// \param Color::TermColors bg the background color of the char
+        void setTermTexture(char c, Color::TermColors fg, Color::TermColors bg) override;
+
+        /// \brief Get the entity char and color to replace textures for terminal graphical libraries
+        /// \return the char and colors of the entity for the terminal graphical libraries
+        std::pair<char, std::pair<Color::TermColors, Color::TermColors>> getTermTexture(void) const override;
 
     protected:
         std::pair<int, int> _pos;
         std::pair<int, int> _size;
         bool _isMoving;
         std::string _texturePath;
+        std::pair<char, std::pair<Color::TermColors, Color::TermColors>> _termTexture;
 
     private:
 };
