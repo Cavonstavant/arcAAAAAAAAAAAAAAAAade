@@ -16,10 +16,9 @@ var searchData=
   ['getsize_353',['getSize',['../class_i_entity.html#a4644cf0bd8a130b0dabd59bd9bda96f5',1,'IEntity::getSize()'],['../class_a_entity.html#a7abaa12bfaaf56be209e9f10a29425e9',1,'AEntity::getSize()']]],
   ['getspeed_354',['getSpeed',['../class_enemy.html#ac1cc1be96a8fa6e280836afa7d6b24dd',1,'Enemy']]],
   ['getstate_355',['getState',['../class_i_game.html#a44de7e08e7ee294be051445a84306299',1,'IGame::getState()'],['../class_main_menu.html#aae6fc744adbe076dc07356ae6e1a322d',1,'MainMenu::getState()']]],
-  ['getsymbol_356',['getSymbol',['../class_lib_manager.html#af2d40fbabff1f28403f5ca307f542856',1,'LibManager::getSymbol(void *libHandle, std::string &amp;symbolName)'],['../class_lib_manager.html#a7e37cce48f9d3db0492106d5b6f704c2',1,'LibManager::getSymbol(std::string &amp;libPath, std::string &amp;symbolName)']]],
-  ['gettermtexture_357',['getTermTexture',['../class_i_entity.html#abfc6494376db6995f4fca94200373929',1,'IEntity::getTermTexture()'],['../class_a_entity.html#a40a9154987c93cf5d3bb3f1a816c6233',1,'AEntity::getTermTexture()']]],
-  ['gettext_358',['getText',['../class_text_entity.html#a807bfe079348318a09ca9dd800ebd5c6',1,'TextEntity']]],
-  ['gettexturepath_359',['getTexturePath',['../class_i_entity.html#a061d23192c062383f400f3789e189369',1,'IEntity::getTexturePath()'],['../class_a_entity.html#ac3902823bc709147731d44eeb78fccc6',1,'AEntity::getTexturePath()']]],
-  ['gettype_360',['getType',['../class_object.html#a6e1b7be2121dabb2aa54ed539fc7c6c7',1,'Object']]],
-  ['graphexception_361',['GraphException',['../class_graph_exception.html#a41cd93feccd4202812f434ec3243a0a8',1,'GraphException']]]
+  ['gettermtexture_356',['getTermTexture',['../class_i_entity.html#abfc6494376db6995f4fca94200373929',1,'IEntity::getTermTexture()'],['../class_a_entity.html#a40a9154987c93cf5d3bb3f1a816c6233',1,'AEntity::getTermTexture()']]],
+  ['gettext_357',['getText',['../class_text_entity.html#a807bfe079348318a09ca9dd800ebd5c6',1,'TextEntity']]],
+  ['gettexturepath_358',['getTexturePath',['../class_i_entity.html#a061d23192c062383f400f3789e189369',1,'IEntity::getTexturePath()'],['../class_a_entity.html#ac3902823bc709147731d44eeb78fccc6',1,'AEntity::getTexturePath()']]],
+  ['gettype_359',['getType',['../class_object.html#a6e1b7be2121dabb2aa54ed539fc7c6c7',1,'Object']]],
+  ['graphexception_360',['GraphException',['../class_graph_exception.html#a41cd93feccd4202812f434ec3243a0a8',1,'GraphException']]]
 ];

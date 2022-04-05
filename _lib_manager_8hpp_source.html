@@ -98,48 +98,55 @@ $(document).ready(function(){initNavTree('_lib_manager_8hpp_source.html',''); in
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define ARCADE_LIBMANAGER_HPP</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_exception_8hpp.html">Exception.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_lib_manager.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_lib_manager.html">LibManager</a> {</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="class_lib_manager.html#ac248790f47a4c0a83b9754b1d8f1b0ab">LibManager</a>() = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <a class="code" href="class_lib_manager.html#ac248790f47a4c0a83b9754b1d8f1b0ab">LibManager</a>(std::string &amp;libPath);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <a class="code" href="class_lib_manager.html#ac248790f47a4c0a83b9754b1d8f1b0ab">LibManager</a>(std::vector&lt;std::string&gt; libPaths);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <a class="code" href="class_lib_manager.html#ac248790f47a4c0a83b9754b1d8f1b0ab">LibManager</a>(<span class="keyword">const</span> <a class="code" href="class_lib_manager.html">LibManager</a> &amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <a class="code" href="class_lib_manager.html">LibManager</a> &amp;<a class="code" href="class_lib_manager.html#a84e8bc50673b4de646710eda756d7641">operator=</a>(<span class="keyword">const</span> <a class="code" href="class_lib_manager.html">LibManager</a> &amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="class_lib_manager.html#ade5e45886e1d82e8f0c968de7eb59f04">~LibManager</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordtype">void</span> *<a class="code" href="class_lib_manager.html#a8fa91abc61c857427eae0a70c367ea7d">openLib</a>(std::string &amp;libPath);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_lib_manager.html#afbf91c5c2fc723758b7f747c34a66d15">closeLib</a>(std::string &amp;libPath);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordtype">void</span> *<a class="code" href="class_lib_manager.html#af2d40fbabff1f28403f5ca307f542856">getSymbol</a>(<span class="keywordtype">void</span> *libHandle, std::string &amp;symbolName);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordtype">void</span> *<a class="code" href="class_lib_manager.html#af2d40fbabff1f28403f5ca307f542856">getSymbol</a>(std::string &amp;libPath, std::string &amp;symbolName);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        std::map&lt;std::string, void *&gt; _libsHandle;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;};</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#endif//ARCADE_LIBMANAGER_HPP</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_i_game_8hpp.html">IGame.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_i_graph_8hpp.html">IGraph.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_lib_manager.html">   21</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_lib_manager.html">LibManager</a> {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <a class="code" href="class_lib_manager.html#ac248790f47a4c0a83b9754b1d8f1b0ab">LibManager</a>() = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="class_lib_manager.html#ac248790f47a4c0a83b9754b1d8f1b0ab">LibManager</a>(std::string libPath);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <a class="code" href="class_lib_manager.html#ac248790f47a4c0a83b9754b1d8f1b0ab">LibManager</a>(std::vector&lt;std::string&gt; libPaths);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <a class="code" href="class_lib_manager.html#ac248790f47a4c0a83b9754b1d8f1b0ab">LibManager</a>(<span class="keyword">const</span> <a class="code" href="class_lib_manager.html">LibManager</a> &amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="class_lib_manager.html">LibManager</a> &amp;<a class="code" href="class_lib_manager.html#a84e8bc50673b4de646710eda756d7641">operator=</a>(<span class="keyword">const</span> <a class="code" href="class_lib_manager.html">LibManager</a> &amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="class_lib_manager.html#ade5e45886e1d82e8f0c968de7eb59f04">~LibManager</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="class_i_game.html">IGame</a> *<a class="code" href="class_lib_manager.html#ae3fdbdf930a4a92f708209643565faee">openGame</a>(std::string libPath);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <a class="code" href="class_i_graph.html">IGraph&lt;T&gt;</a> *<a class="code" href="class_lib_manager.html#af4ea704c81e886995ed16397d6de3760">openGraph</a>(std::string libPath);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_lib_manager.html#a865c737aed091f4532fe1179d86f7c04">closeLib</a>(std::string libPath);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        std::map&lt;std::string, void *&gt; _libsHandle;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordtype">void</span> *openLib(std::string libPath);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;};</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#endif//ARCADE_LIBMANAGER_HPP</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclass_lib_manager_html_ade5e45886e1d82e8f0c968de7eb59f04"><div class="ttname"><a href="class_lib_manager.html#ade5e45886e1d82e8f0c968de7eb59f04">LibManager::~LibManager</a></div><div class="ttdeci">~LibManager()=default</div><div class="ttdoc">Destructor.</div></div>
+<div class="ttc" id="a_i_game_8hpp_html"><div class="ttname"><a href="_i_game_8hpp.html">IGame.hpp</a></div></div>
 <div class="ttc" id="a_exception_8hpp_html"><div class="ttname"><a href="_exception_8hpp.html">Exception.hpp</a></div></div>
-<div class="ttc" id="aclass_lib_manager_html_afbf91c5c2fc723758b7f747c34a66d15"><div class="ttname"><a href="class_lib_manager.html#afbf91c5c2fc723758b7f747c34a66d15">LibManager::closeLib</a></div><div class="ttdeci">void closeLib(std::string &amp;libPath)</div><div class="ttdoc">Closes a shared library.</div><div class="ttdef"><b>Definition:</b> <a href="_lib_manager_8cpp_source.html#l00041">LibManager.cpp:41</a></div></div>
+<div class="ttc" id="aclass_i_graph_html"><div class="ttname"><a href="class_i_graph.html">IGraph</a></div><div class="ttdoc">Using template to make functions generics.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graph_8hpp_source.html#l00019">IGraph.hpp:19</a></div></div>
 <div class="ttc" id="aclass_lib_manager_html_a84e8bc50673b4de646710eda756d7641"><div class="ttname"><a href="class_lib_manager.html#a84e8bc50673b4de646710eda756d7641">LibManager::operator=</a></div><div class="ttdeci">LibManager &amp; operator=(const LibManager &amp;)=delete</div><div class="ttdoc">A factory should not be able to be assigned.</div></div>
-<div class="ttc" id="aclass_lib_manager_html"><div class="ttname"><a href="class_lib_manager.html">LibManager</a></div><div class="ttdoc">Wrapper around the dynamic library CRUD operations.</div><div class="ttdef"><b>Definition:</b> <a href="_lib_manager_8hpp_source.html#l00019">LibManager.hpp:19</a></div></div>
-<div class="ttc" id="aclass_lib_manager_html_af2d40fbabff1f28403f5ca307f542856"><div class="ttname"><a href="class_lib_manager.html#af2d40fbabff1f28403f5ca307f542856">LibManager::getSymbol</a></div><div class="ttdeci">void * getSymbol(void *libHandle, std::string &amp;symbolName)</div><div class="ttdoc">Loads a symbol from a shared library.</div><div class="ttdef"><b>Definition:</b> <a href="_lib_manager_8cpp_source.html#l00054">LibManager.cpp:54</a></div></div>
+<div class="ttc" id="aclass_i_game_html"><div class="ttname"><a href="class_i_game.html">IGame</a></div><div class="ttdoc">Game instance.</div><div class="ttdef"><b>Definition:</b> <a href="_i_game_8hpp_source.html#l00020">IGame.hpp:20</a></div></div>
+<div class="ttc" id="aclass_lib_manager_html"><div class="ttname"><a href="class_lib_manager.html">LibManager</a></div><div class="ttdoc">Wrapper around the dynamic library CRUD operations.</div><div class="ttdef"><b>Definition:</b> <a href="_lib_manager_8hpp_source.html#l00021">LibManager.hpp:21</a></div></div>
 <div class="ttc" id="aclass_lib_manager_html_ac248790f47a4c0a83b9754b1d8f1b0ab"><div class="ttname"><a href="class_lib_manager.html#ac248790f47a4c0a83b9754b1d8f1b0ab">LibManager::LibManager</a></div><div class="ttdeci">LibManager()=delete</div><div class="ttdoc">Creating a factory without at least a path to a library should be impossible.</div></div>
-<div class="ttc" id="aclass_lib_manager_html_a8fa91abc61c857427eae0a70c367ea7d"><div class="ttname"><a href="class_lib_manager.html#a8fa91abc61c857427eae0a70c367ea7d">LibManager::openLib</a></div><div class="ttdeci">void * openLib(std::string &amp;libPath)</div><div class="ttdoc">Opens a shared library and returns a pointer to the handle.</div><div class="ttdef"><b>Definition:</b> <a href="_lib_manager_8cpp_source.html#l00026">LibManager.cpp:26</a></div></div>
+<div class="ttc" id="aclass_lib_manager_html_af4ea704c81e886995ed16397d6de3760"><div class="ttname"><a href="class_lib_manager.html#af4ea704c81e886995ed16397d6de3760">LibManager::openGraph</a></div><div class="ttdeci">IGraph&lt; T &gt; * openGraph(std::string libPath)</div><div class="ttdoc">Opens a shared library, calls it's lib entrypoint and returns a pointer to a graph instance.</div><div class="ttdef"><b>Definition:</b> <a href="_lib_manager_8cpp_source.html#l00051">LibManager.cpp:51</a></div></div>
+<div class="ttc" id="aclass_lib_manager_html_ae3fdbdf930a4a92f708209643565faee"><div class="ttname"><a href="class_lib_manager.html#ae3fdbdf930a4a92f708209643565faee">LibManager::openGame</a></div><div class="ttdeci">IGame * openGame(std::string libPath)</div><div class="ttdoc">Opens a shared library, calls it's lib entrypoint and returns a pointer to a game instance.</div><div class="ttdef"><b>Definition:</b> <a href="_lib_manager_8cpp_source.html#l00041">LibManager.cpp:41</a></div></div>
+<div class="ttc" id="aclass_lib_manager_html_a865c737aed091f4532fe1179d86f7c04"><div class="ttname"><a href="class_lib_manager.html#a865c737aed091f4532fe1179d86f7c04">LibManager::closeLib</a></div><div class="ttdeci">void closeLib(std::string libPath)</div><div class="ttdoc">Closes a shared library.</div><div class="ttdef"><b>Definition:</b> <a href="_lib_manager_8cpp_source.html#l00060">LibManager.cpp:60</a></div></div>
+<div class="ttc" id="a_i_graph_8hpp_html"><div class="ttname"><a href="_i_graph_8hpp.html">IGraph.hpp</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

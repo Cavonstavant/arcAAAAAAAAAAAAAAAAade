@@ -1,6 +1,5 @@
 var NAVTREEINDEX1 =
 {
-"class_sfml_library.html#a467d926355b36d9b5db474d3b95df478":[3,0,26,4],
 "class_sfml_library.html#a7bb07952336683a7baba6be49d588624":[3,0,26,5],
 "class_sfml_library.html#a84d358d5385f0b498925e431c56b7ef5":[3,0,26,1],
 "class_sfml_library.html#a9b6ca4f8bcf9efac1a68bbfe45749e59":[3,0,26,6],
@@ -80,8 +79,8 @@ var NAVTREEINDEX1 =
 "index.html#autotoc_md3":[0,1,0],
 "index.html#autotoc_md4":[0,1,1],
 "index.html#autotoc_md5":[0,2],
-"namespace_arcade.html":[3,0,0],
 "namespace_arcade.html":[2,0,0],
+"namespace_arcade.html":[3,0,0],
 "namespaces.html":[2,0],
 "pages.html":[],
 "struct_arcade_1_1_evt.html":[3,0,0,0],

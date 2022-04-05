@@ -99,7 +99,7 @@ $(document).ready(function(){initNavTree('_lib_manager_8cpp_source.html',''); in
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;dlfcn.h&gt;</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;}</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_lib_manager.html#add88b40b7940bfeb4589cad94394b4ed">   14</a></span>&#160;<a class="code" href="class_lib_manager.html#ac248790f47a4c0a83b9754b1d8f1b0ab">LibManager::LibManager</a>(std::string &amp;libPath)</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_lib_manager.html#a592d53e6faa372050ed95e6340b06cb4">   14</a></span>&#160;<a class="code" href="class_lib_manager.html#ac248790f47a4c0a83b9754b1d8f1b0ab">LibManager::LibManager</a>(std::string libPath)</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    _libsHandle.emplace(libPath, <span class="keyword">nullptr</span>);</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
@@ -111,7 +111,7 @@ $(document).ready(function(){initNavTree('_lib_manager_8cpp_source.html',''); in
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    }</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_lib_manager.html#a8fa91abc61c857427eae0a70c367ea7d">   26</a></span>&#160;<span class="keywordtype">void</span> *<a class="code" href="class_lib_manager.html#a8fa91abc61c857427eae0a70c367ea7d">LibManager::openLib</a>(std::string &amp;libPath)</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keywordtype">void</span> *LibManager::openLib(std::string libPath)</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">auto</span> it = _libsHandle.find(libPath);</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
@@ -126,43 +126,46 @@ $(document).ready(function(){initNavTree('_lib_manager_8cpp_source.html',''); in
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">return</span> (it-&gt;second);</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_lib_manager.html#afbf91c5c2fc723758b7f747c34a66d15">   41</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_lib_manager.html#afbf91c5c2fc723758b7f747c34a66d15">LibManager::closeLib</a>(std::string &amp;libPath)</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_lib_manager.html#ae3fdbdf930a4a92f708209643565faee">   41</a></span>&#160;<a class="code" href="class_i_game.html">IGame</a> *<a class="code" href="class_lib_manager.html#ae3fdbdf930a4a92f708209643565faee">LibManager::openGame</a>(std::string libPath)</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">auto</span> it = _libsHandle.find(libPath);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">if</span> (it == _libsHandle.end())</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="_exception_8hpp.html#ad866a3c89725abeb494e0332171152af">LibraryEX</a>(<span class="stringliteral">&quot;Library not found&quot;</span>, <a class="code" href="class_logger.html#acc36409db358f1c0dc363ee4469a212f">Logger::CRITICAL</a>);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">if</span> (it-&gt;second != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        dlclose(it-&gt;second);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        it-&gt;second = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    } <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="_exception_8hpp.html#ad866a3c89725abeb494e0332171152af">LibraryEX</a>(<span class="stringliteral">&quot;Library already closed&quot;</span>, <a class="code" href="class_logger.html#acc36409db358f1c0dc363ee4469a212f">Logger::CRITICAL</a>);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="class_lib_manager.html#af2d40fbabff1f28403f5ca307f542856">   54</a></span>&#160;<span class="keywordtype">void</span> *<a class="code" href="class_lib_manager.html#af2d40fbabff1f28403f5ca307f542856">LibManager::getSymbol</a>(<span class="keywordtype">void</span> *libHandle, std::string &amp;symbolName)</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;{</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">void</span> *symbol = dlsym(libHandle, symbolName.c_str());</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">if</span> (symbol == <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="_exception_8hpp.html#ad866a3c89725abeb494e0332171152af">LibraryEX</a>(dlerror(), <a class="code" href="class_logger.html#acc36409db358f1c0dc363ee4469a212f">Logger::CRITICAL</a>);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">return</span> (symbol);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="class_lib_manager.html#a7e37cce48f9d3db0492106d5b6f704c2">   63</a></span>&#160;<span class="keywordtype">void</span> *<a class="code" href="class_lib_manager.html#af2d40fbabff1f28403f5ca307f542856">LibManager::getSymbol</a>(std::string &amp;libPath, std::string &amp;symbolName)</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;{</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">auto</span> it = _libsHandle.find(libPath);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">if</span> (it == _libsHandle.end())</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="_exception_8hpp.html#ad866a3c89725abeb494e0332171152af">LibraryEX</a>(<span class="stringliteral">&quot;Library not found&quot;</span>, <a class="code" href="class_logger.html#acc36409db358f1c0dc363ee4469a212f">Logger::CRITICAL</a>);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">return</span> (<a class="code" href="class_lib_manager.html#af2d40fbabff1f28403f5ca307f542856">getSymbol</a>(it-&gt;second, symbolName));</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> *libHandle = openLib(libPath);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="class_i_game.html">IGame</a> *(*createGame)();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    createGame = (<a class="code" href="class_i_game.html">IGame</a> * (*) (void) ) dlsym(libHandle, <span class="stringliteral">&quot;createGame&quot;</span>);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">return</span> (createGame());</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="class_lib_manager.html#af4ea704c81e886995ed16397d6de3760">   51</a></span>&#160;<a class="code" href="class_i_graph.html">IGraph&lt;T&gt;</a> *<a class="code" href="class_lib_manager.html#af4ea704c81e886995ed16397d6de3760">LibManager::openGraph</a>(std::string libPath)</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;{</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> *libHandle = openLib(libPath);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="class_i_graph.html">IGraph&lt;T&gt;</a> *(*createGraph)();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    createGraph = (<a class="code" href="class_i_graph.html">IGraph&lt;T&gt;</a> * (*) (void) ) dlsym(libHandle, <span class="stringliteral">&quot;createGraph&quot;</span>);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">return</span> (createGraph());</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="class_lib_manager.html#a865c737aed091f4532fe1179d86f7c04">   60</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_lib_manager.html#a865c737aed091f4532fe1179d86f7c04">LibManager::closeLib</a>(std::string libPath)</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;{</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keyword">auto</span> it = _libsHandle.find(libPath);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">if</span> (it == _libsHandle.end())</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="_exception_8hpp.html#ad866a3c89725abeb494e0332171152af">LibraryEX</a>(<span class="stringliteral">&quot;Library not found&quot;</span>, <a class="code" href="class_logger.html#acc36409db358f1c0dc363ee4469a212f">Logger::CRITICAL</a>);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">if</span> (it-&gt;second != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        dlclose(it-&gt;second);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        it-&gt;second = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    } <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="_exception_8hpp.html#ad866a3c89725abeb494e0332171152af">LibraryEX</a>(<span class="stringliteral">&quot;Library already closed&quot;</span>, <a class="code" href="class_logger.html#acc36409db358f1c0dc363ee4469a212f">Logger::CRITICAL</a>);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="a_exception_8hpp_html"><div class="ttname"><a href="_exception_8hpp.html">Exception.hpp</a></div></div>
-<div class="ttc" id="aclass_lib_manager_html_afbf91c5c2fc723758b7f747c34a66d15"><div class="ttname"><a href="class_lib_manager.html#afbf91c5c2fc723758b7f747c34a66d15">LibManager::closeLib</a></div><div class="ttdeci">void closeLib(std::string &amp;libPath)</div><div class="ttdoc">Closes a shared library.</div><div class="ttdef"><b>Definition:</b> <a href="_lib_manager_8cpp_source.html#l00041">LibManager.cpp:41</a></div></div>
-<div class="ttc" id="aclass_lib_manager_html_af2d40fbabff1f28403f5ca307f542856"><div class="ttname"><a href="class_lib_manager.html#af2d40fbabff1f28403f5ca307f542856">LibManager::getSymbol</a></div><div class="ttdeci">void * getSymbol(void *libHandle, std::string &amp;symbolName)</div><div class="ttdoc">Loads a symbol from a shared library.</div><div class="ttdef"><b>Definition:</b> <a href="_lib_manager_8cpp_source.html#l00054">LibManager.cpp:54</a></div></div>
+<div class="ttc" id="aclass_i_graph_html"><div class="ttname"><a href="class_i_graph.html">IGraph</a></div><div class="ttdoc">Using template to make functions generics.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graph_8hpp_source.html#l00019">IGraph.hpp:19</a></div></div>
+<div class="ttc" id="aclass_i_game_html"><div class="ttname"><a href="class_i_game.html">IGame</a></div><div class="ttdoc">Game instance.</div><div class="ttdef"><b>Definition:</b> <a href="_i_game_8hpp_source.html#l00020">IGame.hpp:20</a></div></div>
 <div class="ttc" id="aclass_lib_manager_html_ac248790f47a4c0a83b9754b1d8f1b0ab"><div class="ttname"><a href="class_lib_manager.html#ac248790f47a4c0a83b9754b1d8f1b0ab">LibManager::LibManager</a></div><div class="ttdeci">LibManager()=delete</div><div class="ttdoc">Creating a factory without at least a path to a library should be impossible.</div></div>
-<div class="ttc" id="aclass_lib_manager_html_a8fa91abc61c857427eae0a70c367ea7d"><div class="ttname"><a href="class_lib_manager.html#a8fa91abc61c857427eae0a70c367ea7d">LibManager::openLib</a></div><div class="ttdeci">void * openLib(std::string &amp;libPath)</div><div class="ttdoc">Opens a shared library and returns a pointer to the handle.</div><div class="ttdef"><b>Definition:</b> <a href="_lib_manager_8cpp_source.html#l00026">LibManager.cpp:26</a></div></div>
+<div class="ttc" id="aclass_lib_manager_html_af4ea704c81e886995ed16397d6de3760"><div class="ttname"><a href="class_lib_manager.html#af4ea704c81e886995ed16397d6de3760">LibManager::openGraph</a></div><div class="ttdeci">IGraph&lt; T &gt; * openGraph(std::string libPath)</div><div class="ttdoc">Opens a shared library, calls it's lib entrypoint and returns a pointer to a graph instance.</div><div class="ttdef"><b>Definition:</b> <a href="_lib_manager_8cpp_source.html#l00051">LibManager.cpp:51</a></div></div>
+<div class="ttc" id="aclass_lib_manager_html_ae3fdbdf930a4a92f708209643565faee"><div class="ttname"><a href="class_lib_manager.html#ae3fdbdf930a4a92f708209643565faee">LibManager::openGame</a></div><div class="ttdeci">IGame * openGame(std::string libPath)</div><div class="ttdoc">Opens a shared library, calls it's lib entrypoint and returns a pointer to a game instance.</div><div class="ttdef"><b>Definition:</b> <a href="_lib_manager_8cpp_source.html#l00041">LibManager.cpp:41</a></div></div>
+<div class="ttc" id="aclass_lib_manager_html_a865c737aed091f4532fe1179d86f7c04"><div class="ttname"><a href="class_lib_manager.html#a865c737aed091f4532fe1179d86f7c04">LibManager::closeLib</a></div><div class="ttdeci">void closeLib(std::string libPath)</div><div class="ttdoc">Closes a shared library.</div><div class="ttdef"><b>Definition:</b> <a href="_lib_manager_8cpp_source.html#l00060">LibManager.cpp:60</a></div></div>
 <div class="ttc" id="a_exception_8hpp_html_ad866a3c89725abeb494e0332171152af"><div class="ttname"><a href="_exception_8hpp.html#ad866a3c89725abeb494e0332171152af">LibraryEX</a></div><div class="ttdeci">#define LibraryEX(what, severity)</div><div class="ttdef"><b>Definition:</b> <a href="_exception_8hpp_source.html#l00029">Exception.hpp:29</a></div></div>
 <div class="ttc" id="a_lib_manager_8hpp_html"><div class="ttname"><a href="_lib_manager_8hpp.html">LibManager.hpp</a></div></div>
 <div class="ttc" id="aclass_logger_html_acc36409db358f1c0dc363ee4469a212f"><div class="ttname"><a href="class_logger.html#acc36409db358f1c0dc363ee4469a212f">Logger::CRITICAL</a></div><div class="ttdeci">static Severity CRITICAL()</div><div class="ttdoc">pass this function to the macros and they will log the exception with a critical severity</div><div class="ttdef"><b>Definition:</b> <a href="_logger_8cpp_source.html#l00096">Logger.cpp:96</a></div></div>
