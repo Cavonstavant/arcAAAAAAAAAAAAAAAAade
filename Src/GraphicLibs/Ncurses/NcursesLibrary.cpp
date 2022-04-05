@@ -20,12 +20,12 @@ NcursesLibrary::~NcursesLibrary()
 bool NcursesLibrary::clearWindow()
 {
     clear();
+    refresh();
     return true;
 }
 
 bool NcursesLibrary::displayWindow()
 {
-    refresh();
     return true;
 }
 
