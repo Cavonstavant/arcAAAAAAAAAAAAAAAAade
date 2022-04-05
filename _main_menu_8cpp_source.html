@@ -122,103 +122,106 @@ $(document).ready(function(){initNavTree('_main_menu_8cpp_source.html',''); init
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    getAllLibraries();</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    _gameState = <a class="code" href="class_i_game.html#a4a7309d86599d6e581f764233085c7ddab638272ceeff54912f043465e9a28c9b">GameState::LOADED</a>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="class_button.html">Button</a> startGameButton(&amp;closeGameCallback);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    std::shared_ptr&lt;Button&gt; startGameButtonPtr = std::make_shared&lt;Button&gt;(startGameButton);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="class_text_entity.html">TextEntity</a> titleText(<span class="stringliteral">&quot;Arcade&quot;</span>);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    titleText.<a class="code" href="class_a_entity.html#a4de390d62596a386c52a0ac1e28ae03e">setPos</a>(std::make_pair(0, 0));</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    std::shared_ptr&lt;TextEntity&gt; titleTextPtr = std::make_shared&lt;TextEntity&gt;(titleText);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    entities.push_back(titleTextPtr);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    _buttons.push_back(startGameButtonPtr);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    entities.push_back(startGameButtonPtr);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">int</span> y = 1;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;&amp;graphLib: _graphicalLibraries) {</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <a class="code" href="class_button.html">Button</a> button(&amp;changeGraphicalLibCallback, graphLib);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        button.<a class="code" href="class_a_entity.html#a4de390d62596a386c52a0ac1e28ae03e">setPos</a>(std::make_pair(4, y));</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        std::shared_ptr&lt;Button&gt; buttonPtr = std::make_shared&lt;Button&gt;(button);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        entities.push_back(buttonPtr);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        _buttons.push_back(buttonPtr);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        y += 2;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    y = 1;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;&amp;gameLib: _gameLibraries) {</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <a class="code" href="class_button.html">Button</a> button(&amp;changeGameLibCallback, gameLib);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        button.<a class="code" href="class_a_entity.html#a4de390d62596a386c52a0ac1e28ae03e">setPos</a>(std::make_pair(6, y));</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        std::shared_ptr&lt;Button&gt; buttonPtr = std::make_shared&lt;Button&gt;(button);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        entities.push_back(buttonPtr);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        _buttons.push_back(buttonPtr);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        y += 2;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    }</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="class_main_menu.html#a0a19ddba3ac52bf39c09b579171c98f2">   67</a></span>&#160;<a class="code" href="class_main_menu.html#a0a19ddba3ac52bf39c09b579171c98f2">MainMenu::~MainMenu</a>()</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;{</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keywordtype">void</span> MainMenu::manageClickEvent(<a class="code" href="struct_arcade_1_1_evt.html">Arcade::Evt</a> &amp;event, std::vector&lt;std::shared_ptr&lt;IEntity&gt;&gt; &amp;entities)</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;{</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;button: _buttons) {</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordflow">if</span> (button-&gt;isClicked(event.<a class="code" href="struct_arcade_1_1_evt.html#a1bb5f218bd1f929c8ad2e5bdf9c77cf5">mouse</a>.<a class="code" href="struct_arcade_1_1_evt_1_1_mouse_evt.html#a2b7605ae103a7d8175a669ca534c562f">x</a>, event.<a class="code" href="struct_arcade_1_1_evt.html#a1bb5f218bd1f929c8ad2e5bdf9c77cf5">mouse</a>.<a class="code" href="struct_arcade_1_1_evt_1_1_mouse_evt.html#af35e4995a898face079a20e9bbcdaa46">y</a>)) {</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            button-&gt;callback();</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        }</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keywordtype">void</span> MainMenu::manageKeyEvent(<a class="code" href="struct_arcade_1_1_evt.html">Arcade::Evt</a> &amp;event, std::vector&lt;std::shared_ptr&lt;IEntity&gt;&gt; &amp;entities)</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;{</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">throw</span> <a class="code" href="_exception_8hpp.html#a07b51301b1d8611a35b7f211d7f4bdcc">NotImplementedEX</a>(<span class="stringliteral">&quot;Key event not implemented&quot;</span>, <a class="code" href="class_logger.html#abb157b6b8da36ba0bed016d56ec1101a">Logger::HIGH</a>);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;}</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keywordtype">void</span> MainMenu::manageEvent(<a class="code" href="struct_arcade_1_1_evt.html">Arcade::Evt</a> &amp;event, std::vector&lt;std::shared_ptr&lt;IEntity&gt;&gt; &amp;entities)</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;{</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">if</span> (event.<a class="code" href="struct_arcade_1_1_evt.html#a4ba7514d4153a08a310541d0806745b3">evt_type</a> == Arcade::Evt::EvtType::MOUSE_CLICK)</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        manageClickEvent(event, entities);</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (event.<a class="code" href="struct_arcade_1_1_evt.html#a4ba7514d4153a08a310541d0806745b3">evt_type</a> == Arcade::Evt::EvtType::KEY)</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        manageKeyEvent(event, entities);</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="class_main_menu.html#a119181be29b1e19051e50fbd855c9217">   93</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_main_menu.html#a119181be29b1e19051e50fbd855c9217">MainMenu::update</a>(std::vector&lt;std::shared_ptr&lt;IEntity&gt;&gt; &amp;entities, std::stack&lt;Arcade::Evt&gt; &amp;events)</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;{</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordflow">while</span> (events.size() &gt; 0) {</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        manageEvent(events.top(), entities);</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        events.pop();</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    }</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;}</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
-<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="class_main_menu.html#af13a5defbd470cb18edc59d14668aaf4">  101</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_main_menu.html#af13a5defbd470cb18edc59d14668aaf4">MainMenu::start</a>()</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;{</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    _gameState = <a class="code" href="class_i_game.html#a4a7309d86599d6e581f764233085c7dda43491564ebcfd38568918efbd6e840fd">GameState::RUNNING</a>;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;}</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="keywordtype">void</span> MainMenu::getAllLibraries()</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;{</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    std::string path = <span class="stringliteral">&quot;../../../lib&quot;</span>;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;entry: std::filesystem::directory_iterator(path)) {</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="keywordflow">try</span> {</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            <span class="keywordtype">void</span> *handle = dlopen(entry.path().c_str(), RTLD_LAZY);</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            <span class="keywordflow">if</span> (!handle)</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            <span class="keywordflow">if</span> (dlsym(handle, <span class="stringliteral">&quot;getGraphInstance&quot;</span>)) {</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                _graphicalLibraries.push_back(entry.path());</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (dlsym(handle, <span class="stringliteral">&quot;getGameInstance&quot;</span>)) {</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                _gameLibraries.push_back(entry.path());</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            }</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            dlclose(handle);</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        } <span class="keywordflow">catch</span> (std::exception &amp;e) {</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            <span class="keywordflow">throw</span> <a class="code" href="_exception_8hpp.html#ad866a3c89725abeb494e0332171152af">LibraryEX</a>(e.what(), <a class="code" href="class_logger.html#a8db5fb65e82f81fb04eb4e21a931a1d6">Logger::MEDIUM</a>);</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        }</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    }</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;}</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="class_button.html">Button</a> closeGameButton(&amp;closeGameCallback);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    closeGameButton.<a class="code" href="class_a_entity.html#a4de390d62596a386c52a0ac1e28ae03e">setPos</a>(std::make_pair(30, 15));</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    closeGameButton.<a class="code" href="class_a_entity.html#aff3c2aaf5ec9fe750878c8d8d805fc14">setSize</a>(std::make_pair(1, 2));</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    std::shared_ptr&lt;Button&gt; closeGameButtonPtr = std::make_shared&lt;Button&gt;(closeGameButton);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="class_text_entity.html">TextEntity</a> titleText(<span class="stringliteral">&quot;Arcade&quot;</span>);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    titleText.<a class="code" href="class_a_entity.html#a4de390d62596a386c52a0ac1e28ae03e">setPos</a>(std::make_pair(0, 0));</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    std::shared_ptr&lt;TextEntity&gt; titleTextPtr = std::make_shared&lt;TextEntity&gt;(titleText);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    entities.push_back(titleTextPtr);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    _buttons.push_back(closeGameButtonPtr);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    entities.push_back(closeGameButtonPtr);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">int</span> y = 1;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;&amp;graphLib: _graphicalLibraries) {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <a class="code" href="class_button.html">Button</a> button(&amp;changeGraphicalLibCallback, graphLib);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        button.<a class="code" href="class_a_entity.html#a4de390d62596a386c52a0ac1e28ae03e">setPos</a>(std::make_pair(4, y));</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        std::shared_ptr&lt;Button&gt; buttonPtr = std::make_shared&lt;Button&gt;(button);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        entities.push_back(buttonPtr);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        _buttons.push_back(buttonPtr);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        y += 2;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    y = 1;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;&amp;gameLib: _gameLibraries) {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <a class="code" href="class_button.html">Button</a> button(&amp;changeGameLibCallback, gameLib);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        button.<a class="code" href="class_a_entity.html#a4de390d62596a386c52a0ac1e28ae03e">setPos</a>(std::make_pair(6, y));</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        std::shared_ptr&lt;Button&gt; buttonPtr = std::make_shared&lt;Button&gt;(button);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        entities.push_back(buttonPtr);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        _buttons.push_back(buttonPtr);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        y += 2;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="class_main_menu.html#a0a19ddba3ac52bf39c09b579171c98f2">   69</a></span>&#160;<a class="code" href="class_main_menu.html#a0a19ddba3ac52bf39c09b579171c98f2">MainMenu::~MainMenu</a>()</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;{</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keywordtype">void</span> MainMenu::manageClickEvent(<a class="code" href="struct_arcade_1_1_evt.html">Arcade::Evt</a> &amp;event, std::vector&lt;std::shared_ptr&lt;IEntity&gt;&gt; &amp;entities)</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;{</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;button: _buttons) {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordflow">if</span> (button-&gt;isClicked(event.<a class="code" href="struct_arcade_1_1_evt.html#a1bb5f218bd1f929c8ad2e5bdf9c77cf5">mouse</a>.<a class="code" href="struct_arcade_1_1_evt_1_1_mouse_evt.html#a2b7605ae103a7d8175a669ca534c562f">x</a>, event.<a class="code" href="struct_arcade_1_1_evt.html#a1bb5f218bd1f929c8ad2e5bdf9c77cf5">mouse</a>.<a class="code" href="struct_arcade_1_1_evt_1_1_mouse_evt.html#af35e4995a898face079a20e9bbcdaa46">y</a>)) {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            button-&gt;callback();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keywordtype">void</span> MainMenu::manageKeyEvent(<a class="code" href="struct_arcade_1_1_evt.html">Arcade::Evt</a> &amp;event, std::vector&lt;std::shared_ptr&lt;IEntity&gt;&gt; &amp;entities)</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;{</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordflow">throw</span> <a class="code" href="_exception_8hpp.html#a07b51301b1d8611a35b7f211d7f4bdcc">NotImplementedEX</a>(<span class="stringliteral">&quot;Key event not implemented&quot;</span>, <a class="code" href="class_logger.html#abb157b6b8da36ba0bed016d56ec1101a">Logger::HIGH</a>);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keywordtype">void</span> MainMenu::manageEvent(<a class="code" href="struct_arcade_1_1_evt.html">Arcade::Evt</a> &amp;event, std::vector&lt;std::shared_ptr&lt;IEntity&gt;&gt; &amp;entities)</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;{</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">if</span> (event.<a class="code" href="struct_arcade_1_1_evt.html#a4ba7514d4153a08a310541d0806745b3">evt_type</a> == Arcade::Evt::EvtType::MOUSE_CLICK)</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        manageClickEvent(event, entities);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (event.<a class="code" href="struct_arcade_1_1_evt.html#a4ba7514d4153a08a310541d0806745b3">evt_type</a> == Arcade::Evt::EvtType::KEY)</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        manageKeyEvent(event, entities);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="class_main_menu.html#a119181be29b1e19051e50fbd855c9217">   95</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_main_menu.html#a119181be29b1e19051e50fbd855c9217">MainMenu::update</a>(std::vector&lt;std::shared_ptr&lt;IEntity&gt;&gt; &amp;entities, std::stack&lt;Arcade::Evt&gt; &amp;events)</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;{</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">while</span> (events.size() &gt; 0) {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        manageEvent(events.top(), entities);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        events.pop();</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="class_main_menu.html#af13a5defbd470cb18edc59d14668aaf4">  103</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_main_menu.html#af13a5defbd470cb18edc59d14668aaf4">MainMenu::start</a>()</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;{</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    _gameState = <a class="code" href="class_i_game.html#a4a7309d86599d6e581f764233085c7dda43491564ebcfd38568918efbd6e840fd">GameState::RUNNING</a>;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="keywordtype">void</span> MainMenu::getAllLibraries()</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;{</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    std::string path = <span class="stringliteral">&quot;../../../lib&quot;</span>;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;entry: std::filesystem::directory_iterator(path)) {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keywordflow">try</span> {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            <span class="keywordtype">void</span> *handle = dlopen(entry.path().c_str(), RTLD_LAZY);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            <span class="keywordflow">if</span> (!handle)</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            <span class="keywordflow">if</span> (dlsym(handle, <span class="stringliteral">&quot;getGraphInstance&quot;</span>)) {</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                _graphicalLibraries.push_back(entry.path());</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (dlsym(handle, <span class="stringliteral">&quot;getGameInstance&quot;</span>)) {</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                _gameLibraries.push_back(entry.path());</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            }</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            dlclose(handle);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        } <span class="keywordflow">catch</span> (std::exception &amp;e) {</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            <span class="keywordflow">throw</span> <a class="code" href="_exception_8hpp.html#ad866a3c89725abeb494e0332171152af">LibraryEX</a>(e.what(), <a class="code" href="class_logger.html#a8db5fb65e82f81fb04eb4e21a931a1d6">Logger::MEDIUM</a>);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        }</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    }</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="astruct_arcade_1_1_evt_html_a1bb5f218bd1f929c8ad2e5bdf9c77cf5"><div class="ttname"><a href="struct_arcade_1_1_evt.html#a1bb5f218bd1f929c8ad2e5bdf9c77cf5">Arcade::Evt::mouse</a></div><div class="ttdeci">MouseEvt&lt; float &gt; mouse</div><div class="ttdoc">mouse event data, see MouseEvt</div><div class="ttdef"><b>Definition:</b> <a href="_event_8hpp_source.html#l00099">Event.hpp:99</a></div></div>
 <div class="ttc" id="a_main_menu_8hpp_html"><div class="ttname"><a href="_main_menu_8hpp.html">MainMenu.hpp</a></div><div class="ttdoc">MainMenu class.</div></div>
 <div class="ttc" id="astruct_arcade_1_1_evt_1_1_mouse_evt_html_af35e4995a898face079a20e9bbcdaa46"><div class="ttname"><a href="struct_arcade_1_1_evt_1_1_mouse_evt.html#af35e4995a898face079a20e9bbcdaa46">Arcade::Evt::MouseEvt::y</a></div><div class="ttdeci">T y</div><div class="ttdef"><b>Definition:</b> <a href="_event_8hpp_source.html#l00052">Event.hpp:52</a></div></div>
+<div class="ttc" id="aclass_a_entity_html_aff3c2aaf5ec9fe750878c8d8d805fc14"><div class="ttname"><a href="class_a_entity.html#aff3c2aaf5ec9fe750878c8d8d805fc14">AEntity::setSize</a></div><div class="ttdeci">void setSize(std::pair&lt; int, int &gt; size) override</div><div class="ttdoc">Set the entity size.</div><div class="ttdef"><b>Definition:</b> <a href="_a_entity_8cpp_source.html#l00034">AEntity.cpp:34</a></div></div>
 <div class="ttc" id="aclass_logger_html_a8db5fb65e82f81fb04eb4e21a931a1d6"><div class="ttname"><a href="class_logger.html#a8db5fb65e82f81fb04eb4e21a931a1d6">Logger::MEDIUM</a></div><div class="ttdeci">static Severity MEDIUM()</div><div class="ttdoc">pass this function to the macros and they will log the exception with a medium severity</div><div class="ttdef"><b>Definition:</b> <a href="_logger_8cpp_source.html#l00086">Logger.cpp:86</a></div></div>
 <div class="ttc" id="aclass_logger_html_abb157b6b8da36ba0bed016d56ec1101a"><div class="ttname"><a href="class_logger.html#abb157b6b8da36ba0bed016d56ec1101a">Logger::HIGH</a></div><div class="ttdeci">static Severity HIGH()</div><div class="ttdoc">pass this function to the macros and they will log the exception with a high severity</div><div class="ttdef"><b>Definition:</b> <a href="_logger_8cpp_source.html#l00091">Logger.cpp:91</a></div></div>
 <div class="ttc" id="aclass_text_entity_html"><div class="ttname"><a href="class_text_entity.html">TextEntity</a></div><div class="ttdoc">TextEntity class inherits from AEntity.</div><div class="ttdef"><b>Definition:</b> <a href="_text_entity_8hpp_source.html#l00017">TextEntity.hpp:17</a></div></div>
-<div class="ttc" id="aclass_main_menu_html_a0a19ddba3ac52bf39c09b579171c98f2"><div class="ttname"><a href="class_main_menu.html#a0a19ddba3ac52bf39c09b579171c98f2">MainMenu::~MainMenu</a></div><div class="ttdeci">~MainMenu()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition:</b> <a href="_main_menu_8cpp_source.html#l00067">MainMenu.cpp:67</a></div></div>
+<div class="ttc" id="aclass_main_menu_html_a0a19ddba3ac52bf39c09b579171c98f2"><div class="ttname"><a href="class_main_menu.html#a0a19ddba3ac52bf39c09b579171c98f2">MainMenu::~MainMenu</a></div><div class="ttdeci">~MainMenu()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition:</b> <a href="_main_menu_8cpp_source.html#l00069">MainMenu.cpp:69</a></div></div>
 <div class="ttc" id="aclass_i_game_html_a4a7309d86599d6e581f764233085c7ddab638272ceeff54912f043465e9a28c9b"><div class="ttname"><a href="class_i_game.html#a4a7309d86599d6e581f764233085c7ddab638272ceeff54912f043465e9a28c9b">IGame::GameState::LOADED</a></div><div class="ttdeci">@ LOADED</div><div class="ttdoc">Represents the game at it's initial state.</div></div>
 <div class="ttc" id="aclass_logger_html_a1d61a808908f837373dcd89f52fa0c2a"><div class="ttname"><a href="class_logger.html#a1d61a808908f837373dcd89f52fa0c2a">Logger::NONE</a></div><div class="ttdeci">static Severity NONE()</div><div class="ttdoc">pass this function to the macros and they will not log the exception</div><div class="ttdef"><b>Definition:</b> <a href="_logger_8cpp_source.html#l00076">Logger.cpp:76</a></div></div>
 <div class="ttc" id="a_event_8hpp_html"><div class="ttname"><a href="_event_8hpp.html">Event.hpp</a></div></div>
@@ -230,9 +233,9 @@ $(document).ready(function(){initNavTree('_main_menu_8cpp_source.html',''); init
 <div class="ttc" id="aclass_main_menu_html_a450d8cd78c43b582c22747cb9dbe1b19"><div class="ttname"><a href="class_main_menu.html#a450d8cd78c43b582c22747cb9dbe1b19">MainMenu::MainMenu</a></div><div class="ttdeci">MainMenu(std::vector&lt; std::shared_ptr&lt; IEntity &gt;&gt; &amp;entities)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> <a href="_main_menu_8cpp_source.html#l00032">MainMenu.cpp:32</a></div></div>
 <div class="ttc" id="aclass_i_game_html_a4a7309d86599d6e581f764233085c7dda43491564ebcfd38568918efbd6e840fd"><div class="ttname"><a href="class_i_game.html#a4a7309d86599d6e581f764233085c7dda43491564ebcfd38568918efbd6e840fd">IGame::GameState::RUNNING</a></div><div class="ttdeci">@ RUNNING</div><div class="ttdoc">Represents the game when running.</div></div>
 <div class="ttc" id="a_exception_8hpp_html_a917530aa9d17a25247ddd1d5522fb810"><div class="ttname"><a href="_exception_8hpp.html#a917530aa9d17a25247ddd1d5522fb810">ButtonCloseGameEX</a></div><div class="ttdeci">#define ButtonCloseGameEX(what, severity)</div><div class="ttdef"><b>Definition:</b> <a href="_exception_8hpp_source.html#l00035">Exception.hpp:35</a></div></div>
-<div class="ttc" id="aclass_main_menu_html_a119181be29b1e19051e50fbd855c9217"><div class="ttname"><a href="class_main_menu.html#a119181be29b1e19051e50fbd855c9217">MainMenu::update</a></div><div class="ttdeci">void update(std::vector&lt; std::shared_ptr&lt; IEntity &gt;&gt; &amp;entities, std::stack&lt; Arcade::Evt &gt; &amp;events) override</div><div class="ttdoc">Update the game's entities.</div><div class="ttdef"><b>Definition:</b> <a href="_main_menu_8cpp_source.html#l00093">MainMenu.cpp:93</a></div></div>
+<div class="ttc" id="aclass_main_menu_html_a119181be29b1e19051e50fbd855c9217"><div class="ttname"><a href="class_main_menu.html#a119181be29b1e19051e50fbd855c9217">MainMenu::update</a></div><div class="ttdeci">void update(std::vector&lt; std::shared_ptr&lt; IEntity &gt;&gt; &amp;entities, std::stack&lt; Arcade::Evt &gt; &amp;events) override</div><div class="ttdoc">Update the game's entities.</div><div class="ttdef"><b>Definition:</b> <a href="_main_menu_8cpp_source.html#l00095">MainMenu.cpp:95</a></div></div>
 <div class="ttc" id="a_exception_8hpp_html_a07b51301b1d8611a35b7f211d7f4bdcc"><div class="ttname"><a href="_exception_8hpp.html#a07b51301b1d8611a35b7f211d7f4bdcc">NotImplementedEX</a></div><div class="ttdeci">#define NotImplementedEX(what, severity)</div><div class="ttdef"><b>Definition:</b> <a href="_exception_8hpp_source.html#l00036">Exception.hpp:36</a></div></div>
-<div class="ttc" id="aclass_main_menu_html_af13a5defbd470cb18edc59d14668aaf4"><div class="ttname"><a href="class_main_menu.html#af13a5defbd470cb18edc59d14668aaf4">MainMenu::start</a></div><div class="ttdeci">void start()</div><div class="ttdoc">starts the game</div><div class="ttdef"><b>Definition:</b> <a href="_main_menu_8cpp_source.html#l00101">MainMenu.cpp:101</a></div></div>
+<div class="ttc" id="aclass_main_menu_html_af13a5defbd470cb18edc59d14668aaf4"><div class="ttname"><a href="class_main_menu.html#af13a5defbd470cb18edc59d14668aaf4">MainMenu::start</a></div><div class="ttdeci">void start()</div><div class="ttdoc">starts the game</div><div class="ttdef"><b>Definition:</b> <a href="_main_menu_8cpp_source.html#l00103">MainMenu.cpp:103</a></div></div>
 <div class="ttc" id="aclass_a_entity_html_a4de390d62596a386c52a0ac1e28ae03e"><div class="ttname"><a href="class_a_entity.html#a4de390d62596a386c52a0ac1e28ae03e">AEntity::setPos</a></div><div class="ttdeci">void setPos(std::pair&lt; int, int &gt; pos) override</div><div class="ttdoc">Set the entity position.</div><div class="ttdef"><b>Definition:</b> <a href="_a_entity_8cpp_source.html#l00024">AEntity.cpp:24</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
