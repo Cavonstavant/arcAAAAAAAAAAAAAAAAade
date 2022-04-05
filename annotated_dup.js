@@ -26,6 +26,7 @@ var annotated_dup =
     [ "NotImplementedException", "class_not_implemented_exception.html", "class_not_implemented_exception" ],
     [ "Object", "class_object.html", "class_object" ],
     [ "Player", "class_player.html", "class_player" ],
+    [ "SdlLibrary", "class_sdl_library.html", "class_sdl_library" ],
     [ "SfmlLibrary", "class_sfml_library.html", "class_sfml_library" ],
     [ "TextEntity", "class_text_entity.html", "class_text_entity" ],
     [ "VeryStupidUserException", "class_very_stupid_user_exception.html", "class_very_stupid_user_exception" ]

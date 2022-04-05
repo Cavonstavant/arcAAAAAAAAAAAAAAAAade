@@ -62,7 +62,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_a_entity_8cpp.html",
-"class_sfml_library.html#a467d926355b36d9b5db474d3b95df478"
+"class_player.html#a749d2c00e1fe0f5c2746f7505a58c062"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
