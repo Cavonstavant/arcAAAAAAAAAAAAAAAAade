@@ -3,6 +3,8 @@ set(SRC_ROOT ${PROJECT_SOURCE_DIR}/Src/GraphicLibs/Ncurses)
 
 set(SRC
     ${SRC_ROOT}/entrypoint.cpp
+    ${SRC_ROOT}/NcursesLibrary.cpp
+    ${SRC_ROOT}/NcursesLibrary.hpp
 )
 
 set(INCLUDE_DIRS ${INCLUDE_ROOT})
