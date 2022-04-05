@@ -18,3 +18,10 @@ On Linux:
     cmake . --build
     cd ../
 ```
+
+## Misc
+Other group leader: henri.chauvet@epitech.eu
+
+Epitech repository: https://github.com/EpitechPromo2025/B-OOP-400-NAN-4-1-arcade-constant.vigneron
+
+Mirror repository: https://github.com/Cavonstavant/arcAAAAAAAAAAAAAAAAade

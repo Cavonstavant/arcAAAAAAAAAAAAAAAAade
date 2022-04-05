@@ -11,6 +11,8 @@
 #define ARCADE_LIBMANAGER_HPP
 
 #include "Exception.hpp"
+#include "IGame.hpp"
+#include "IGraph.hpp"
 #include <map>
 #include <string>
 #include <vector>
@@ -23,7 +25,7 @@ class LibManager {
 
         /// \brief Creating a factory with a path to a library
         /// \param path Path to the game library
-        LibManager(std::string &libPath);
+        LibManager(std::string libPath);
 
         /// \brief Creating a factory with multiple paths to libraries
         /// \param libPaths Paths to the game libraries
@@ -38,35 +40,35 @@ class LibManager {
         /// \brief Destructor
         ~LibManager() = default;
 
-        /// \brief Opens a shared library and returns a pointer to the handle
+        /// \brief Opens a shared library, calls it's lib entrypoint and returns a pointer to a game instance
         /// \param libPath Path to the library
-        /// \return A pointer to the handle
-        /// \note The handle is not closed by the destructor
-        /// \warning Not closing the handle will lead to <b>Undefined Behaviour</b>
-        /// \throw LibraryException if the library cannot be opened
-        void *openLib(std::string &libPath);
+        /// \return A pointer to a game instance
+        IGame *openGame(std::string libPath);
+
+        /// \brief Opens a shared library, calls it's lib entrypoint and returns a pointer to a graph instance
+        /// \param libPath Path to the library
+        /// \return A pointer to a graph instance
+        template<typename T>
+        IGraph<T> *openGraph(std::string libPath);
 
         /// \brief Closes a shared library
         /// \param libPath Path to the library
         /// \warning Not using this method after opening a library will lead to <b>Undefined Behaviour</b>
         /// \warning Using this method before opening a library will lead to <b>Undefined Behaviour</b>
         /// \throw LibraryException if the library cannot be closed
-        void closeLib(std::string &libPath);
-
-        /// \brief Loads a symbol from a shared library
-        /// \param libHandle A pointer to the handle
-        /// \param symbolName Name of the symbol to load
-        /// \return A pointer to the symbol
-        /// \warning Using this method before opening a library will lead to <b>Undefined Behaviour</b>
-        /// \throw LibraryException if the symbol cannot be loaded
-        void *getSymbol(void *libHandle, std::string &symbolName);
-
-        /// \overload void *getSymbol(void *libHandle, std::string &symbolName)
-        void *getSymbol(std::string &libPath, std::string &symbolName);
+        void closeLib(std::string libPath);
 
     private:
         ///\note Map of the libraries' handles represented like so {libPath, libHandle}
         std::map<std::string, void *> _libsHandle;
+
+        /// \brief Opens a shared library and returns a pointer to the handle
+        /// \param libPath Path to the library
+        /// \return A pointer to the handle
+        /// \note The handle is not closed by the destructor
+        /// \warning Not closing the handle will lead to <b>Undefined Behaviour</b>
+        /// \throw LibraryException if the library cannot be opened
+        void *openLib(std::string libPath);
 };
 
 
