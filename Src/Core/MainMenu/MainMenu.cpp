@@ -89,5 +89,4 @@ void MainMenu::getAllLibraries()
             throw LibraryEX(e.what(), Logger::MEDIUM);
         }
     }
-    throw NotImplementedEX("Graphical libraries not implemented", Logger::HIGH);
 }
