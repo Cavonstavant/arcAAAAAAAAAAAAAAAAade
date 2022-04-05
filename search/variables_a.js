@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['r_437',['R',['../struct_color.html#aed083afcc2c689243df7fbc3da5203d3',1,'Color']]],
-  ['resize_438',['resize',['../struct_arcade_1_1_evt.html#a4916ddea73053cb29a077679d749ea16',1,'Arcade::Evt']]]
+  ['r_438',['R',['../struct_color.html#aed083afcc2c689243df7fbc3da5203d3',1,'Color']]],
+  ['resize_439',['resize',['../struct_arcade_1_1_evt.html#a4916ddea73053cb29a077679d749ea16',1,'Arcade::Evt']]]
 ];
