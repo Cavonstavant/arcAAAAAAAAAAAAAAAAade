@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include "../../Games/Common/Button.hpp"
+#include "Button.hpp"
 #include "IGame.hpp"
 #include <vector>
 
@@ -26,9 +26,11 @@ class MainMenu : public IGame {
         void update(std::vector<std::shared_ptr<IEntity>> &entities, std::stack<Arcade::Evt> &events) override;
         /// \brief Get the game's status
         /// \return the game's status
-        GameState getState() const;
+        GameState getState() const { return _gameState; }
         /// \brief starts the game
         void start();
+        /// \brief Get the menu's name
+        inline std::string getName() const override final { return "MainMenu"; }
 
     protected:
     private:

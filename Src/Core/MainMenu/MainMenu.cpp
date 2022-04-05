@@ -6,11 +6,13 @@
 */
 
 #include "MainMenu.hpp"
-#include "../../Games/Common/Button.hpp"
-#include "../../Games/Common/TextEntity.hpp"
+#include "Button.hpp"
+#include "TextEntity.hpp"
 #include "../Exception.hpp"
 #include "Event.hpp"
-#include <dlfcn.h>
+extern "C" {
+    #include <dlfcn.h>
+}
 #include <filesystem>
 #include <stack>
 
@@ -105,7 +107,7 @@ void MainMenu::start()
 
 void MainMenu::getAllLibraries()
 {
-    std::string path = "../../../lib";
+    std::string path = "./lib";
     for (const auto &entry: std::filesystem::directory_iterator(path)) {
         try {
             void *handle = dlopen(entry.path().c_str(), RTLD_LAZY);
