@@ -15,18 +15,18 @@
 
 class Core {
     public:
-        Core();
-        ~Core();
-        void addEntity(IEntity *entity);
-        void removeEntity(IEntity *entity);
+        Core() = default;
+        ~Core() = default;
+        Core(Core const &) = delete;
+        Core& operator=(Core const &) = delete;
+        void addEntity(std::shared_ptr<IEntity> entity);
+        void removeEntity(std::shared_ptr<IEntity> entity);
+        std::vector<std::shared_ptr<IEntity>>& getEntities();
         void update();
         void draw();
     private:
-        std::vector<IEntity *> _entities;
+        std::vector<std::shared_ptr<IEntity>> _entities;
         IGame *_game;
-        template<typename T>
-        IGraph<T>* _graph;
-
-}
+};
 
 #endif//ARCAAAAAAAAAAAAAAAAADE_CORE_HPP
