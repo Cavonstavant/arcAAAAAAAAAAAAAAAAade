@@ -1,5 +1,7 @@
 Other group leader: henri.chauvet@epitech.eu
+
 Epitech repository: https://github.com/EpitechPromo2025/B-OOP-400-NAN-4-1-arcade-constant.vigneron
+
 Mirror repository: https://github.com/Cavonstavant/arcAAAAAAAAAAAAAAAAade
 
 # arcAAAAAAAAAAAAAAAAade [![Build](https://github.com/Cavonstavant/arcAAAAAAAAAAAAAAAAade/actions/workflows/cmake.yml/badge.svg)](https://github.com/Cavonstavant/arcAAAAAAAAAAAAAAAAade/actions/workflows/cmake.yml) [![GH Pages deployment](https://github.com/Cavonstavant/arcAAAAAAAAAAAAAAAAade/actions/workflows/doc_build.yml/badge.svg)](https://github.com/Cavonstavant/arcAAAAAAAAAAAAAAAAade/actions/workflows/doc_build.yml) [![Mirroring](https://github.com/Cavonstavant/arcAAAAAAAAAAAAAAAAade/actions/workflows/mirroring.yml/badge.svg)](https://github.com/Cavonstavant/arcAAAAAAAAAAAAAAAAade/actions/workflows/mirroring.yml)
