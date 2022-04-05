@@ -35,7 +35,7 @@ class SfmlLibrary : public IGraph<float> {
                         std::pair<float, float> pos) override;
 
     private:
-        /// \brief window member using to display every entities
+        /// \brief window member used to display every entities
         sf::RenderWindow _window;
 
         /// \brief Defines Width, Height, and BitsPerPixels of the window
