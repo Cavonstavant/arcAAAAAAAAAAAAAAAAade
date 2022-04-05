@@ -10,6 +10,7 @@
 #include "../../Games/Common/Button.hpp"
 #include "../../Games/Common/TextEntity.hpp"
 #include "Event.hpp"
+#include <dlfcn.h>
 #include <filesystem>
 #include <stack>
 
@@ -70,12 +71,23 @@ void MainMenu::start()
     _gameState = GameState::RUNNING;
 }
 
-#include <iostream>
-
 void MainMenu::getAllLibraries()
 {
     std::string path = "../../../lib";
-    for (const auto & entry : std::filesystem::directory_iterator(path))
-        std::cout << entry.path() << std::endl;
+    for (const auto & entry : std::filesystem::directory_iterator(path)) {
+        try {
+            void *handle = dlopen(entry.path().c_str(), RTLD_LAZY);
+            if (!handle)
+                continue;
+            if (dlsym(handle, "getGraphInstance")) {
+                _graphicalLibraries.push_back(entry.path());
+            } else if (dlsym(handle, "getGameInstance")) {
+                _gameLibraries.push_back(entry.path());
+            }
+            dlclose(handle);
+        } catch (std::exception &e) {
+            throw LibraryEX(e.what(), Logger::MEDIUM);
+        }
+    }
     throw NotImplementedEX("Graphical libraries not implemented", Logger::HIGH);
 }
