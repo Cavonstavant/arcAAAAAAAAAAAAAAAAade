@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['wheel_423',['wheel',['../struct_arcade_1_1_evt_1_1_mouse_evt.html#acc8d5e9db627a24d7685ea560da63df4',1,'Arcade::Evt::MouseEvt']]]
+  ['tb_440',['TB',['../struct_color.html#ae2d0279be936ea12370cfc0145d5797f',1,'Color']]],
+  ['tf_441',['TF',['../struct_color.html#ae7adcfd535708e81846c35df728c5af0',1,'Color']]]
 ];

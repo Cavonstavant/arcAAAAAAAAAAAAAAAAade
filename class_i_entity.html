@@ -131,11 +131,17 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a061d23192c062383f400f3789e189369"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_entity.html#a061d23192c062383f400f3789e189369">getTexturePath</a> (void) const =0</td></tr>
 <tr class="memdesc:a061d23192c062383f400f3789e189369"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the texturePAth of the Entity.  <a href="class_i_entity.html#a061d23192c062383f400f3789e189369">More...</a><br /></td></tr>
 <tr class="separator:a061d23192c062383f400f3789e189369"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34bea9adcc42c97d3e5ad7661a2ac707"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_entity.html#a34bea9adcc42c97d3e5ad7661a2ac707">setTermTexture</a> (char c, <a class="el" href="struct_color.html#a2791cd4d5e92d50bb609f7fea3283aeb">Color::TermColors</a> fg, <a class="el" href="struct_color.html#a2791cd4d5e92d50bb609f7fea3283aeb">Color::TermColors</a> bg)=0</td></tr>
+<tr class="memdesc:a34bea9adcc42c97d3e5ad7661a2ac707"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the entity char and color to replace textures for terminal graphical libraries.  <a href="class_i_entity.html#a34bea9adcc42c97d3e5ad7661a2ac707">More...</a><br /></td></tr>
+<tr class="separator:a34bea9adcc42c97d3e5ad7661a2ac707"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfc6494376db6995f4fca94200373929"><td class="memItemLeft" align="right" valign="top">virtual std::pair&lt; char, std::pair&lt; <a class="el" href="struct_color.html#a2791cd4d5e92d50bb609f7fea3283aeb">Color::TermColors</a>, <a class="el" href="struct_color.html#a2791cd4d5e92d50bb609f7fea3283aeb">Color::TermColors</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_entity.html#abfc6494376db6995f4fca94200373929">getTermTexture</a> (void) const =0</td></tr>
+<tr class="memdesc:abfc6494376db6995f4fca94200373929"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the entity char and color to replace textures for terminal graphical libraries.  <a href="class_i_entity.html#abfc6494376db6995f4fca94200373929">More...</a><br /></td></tr>
+<tr class="separator:abfc6494376db6995f4fca94200373929"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>represents a generic entity within the game </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_entity_8hpp_source.html#l00014">14</a> of file <a class="el" href="_i_entity_8hpp_source.html">IEntity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_entity_8hpp_source.html#l00015">15</a> of file <a class="el" href="_i_entity_8hpp_source.html">IEntity.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="acfe7cc7def33fa1cc8a2a56dc39d29e3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acfe7cc7def33fa1cc8a2a56dc39d29e3">&#9670;&nbsp;</a></span>~IEntity()</h2>
@@ -222,6 +228,37 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="abfc6494376db6995f4fca94200373929"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfc6494376db6995f4fca94200373929">&#9670;&nbsp;</a></span>getTermTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::pair&lt;char, std::pair&lt;<a class="el" href="struct_color.html#a2791cd4d5e92d50bb609f7fea3283aeb">Color::TermColors</a>, <a class="el" href="struct_color.html#a2791cd4d5e92d50bb609f7fea3283aeb">Color::TermColors</a>&gt; &gt; IEntity::getTermTexture </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the entity char and color to replace textures for terminal graphical libraries. </p>
+<dl class="section return"><dt>Returns</dt><dd>the char and colors of the entity for the terminal graphical libraries </dd></dl>
+
+<p>Implemented in <a class="el" href="class_a_entity.html#a40a9154987c93cf5d3bb3f1a816c6233">AEntity</a>.</p>
+
+</div>
+</div>
 <a id="a061d23192c062383f400f3789e189369"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a061d23192c062383f400f3789e189369">&#9670;&nbsp;</a></span>getTexturePath()</h2>
 
@@ -247,6 +284,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get the texturePAth of the Entity. </p>
+<dl class="section return"><dt>Returns</dt><dd>the path to the texture </dd></dl>
 
 <p>Implemented in <a class="el" href="class_a_entity.html#ac3902823bc709147731d44eeb78fccc6">AEntity</a>.</p>
 
@@ -321,6 +359,60 @@ Public Member Functions</h2></td></tr>
 </dl>
 
 <p>Implemented in <a class="el" href="class_a_entity.html#aff3c2aaf5ec9fe750878c8d8d805fc14">AEntity</a>.</p>
+
+</div>
+</div>
+<a id="a34bea9adcc42c97d3e5ad7661a2ac707"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34bea9adcc42c97d3e5ad7661a2ac707">&#9670;&nbsp;</a></span>setTermTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IEntity::setTermTexture </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_color.html#a2791cd4d5e92d50bb609f7fea3283aeb">Color::TermColors</a>&#160;</td>
+          <td class="paramname"><em>fg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_color.html#a2791cd4d5e92d50bb609f7fea3283aeb">Color::TermColors</a>&#160;</td>
+          <td class="paramname"><em>bg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the entity char and color to replace textures for terminal graphical libraries. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">char</td><td>c the char to replace the texture </td></tr>
+    <tr><td class="paramname"><a class="el" href="struct_color.html#a2791cd4d5e92d50bb609f7fea3283aeb" title="Enum for the terminal colors.">Color::TermColors</a></td><td>fg the foreground color of the char </td></tr>
+    <tr><td class="paramname"><a class="el" href="struct_color.html#a2791cd4d5e92d50bb609f7fea3283aeb" title="Enum for the terminal colors.">Color::TermColors</a></td><td>bg the background color of the char </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="class_a_entity.html#a4150c9d56ce22e79c9d979392ab7ffec">AEntity</a>.</p>
 
 </div>
 </div>

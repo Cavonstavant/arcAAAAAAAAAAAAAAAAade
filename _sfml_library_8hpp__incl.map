@@ -1,10 +1,10 @@
 <map id="Src/GraphicLibs/SFML/SfmlLibrary.hpp" name="Src/GraphicLibs/SFML/SfmlLibrary.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="338,5,499,47"/>
-<area shape="rect" id="node2" href="$_i_graph_8hpp.html" title=" " alt="" coords="76,95,239,136"/>
-<area shape="rect" id="node6" title=" " alt="" coords="263,102,409,129"/>
-<area shape="rect" id="node7" title=" " alt="" coords="433,102,572,129"/>
-<area shape="rect" id="node8" title=" " alt="" coords="597,102,737,129"/>
-<area shape="rect" id="node3" href="$_color_8hpp.html" title=" " alt="" coords="5,184,88,211"/>
-<area shape="rect" id="node4" href="$_i_entity_8hpp.html" title=" " alt="" coords="112,184,203,211"/>
-<area shape="rect" id="node5" title=" " alt="" coords="169,259,228,285"/>
+<area shape="rect" id="node1" title=" " alt="" coords="275,5,437,47"/>
+<area shape="rect" id="node2" href="$_i_graph_8hpp.html" title=" " alt="" coords="13,95,176,136"/>
+<area shape="rect" id="node6" title=" " alt="" coords="200,102,347,129"/>
+<area shape="rect" id="node7" title=" " alt="" coords="371,102,509,129"/>
+<area shape="rect" id="node8" title=" " alt="" coords="534,102,674,129"/>
+<area shape="rect" id="node3" href="$_color_8hpp.html" title=" " alt="" coords="5,259,88,285"/>
+<area shape="rect" id="node4" href="$_i_entity_8hpp.html" title=" " alt="" coords="49,184,140,211"/>
+<area shape="rect" id="node5" title=" " alt="" coords="129,259,188,285"/>
 </map>

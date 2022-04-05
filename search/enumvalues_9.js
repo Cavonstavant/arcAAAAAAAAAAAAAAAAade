@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['up_465',['UP',['../struct_arcade_1_1_evt.html#aab25912fafe9cf68e8d6648e99574b21ae0c3a107df126fefcb21392d62d7fe38',1,'Arcade::Evt']]]
+  ['paused_478',['PAUSED',['../class_i_game.html#a4a7309d86599d6e581f764233085c7dda99b2439e63f73ad515f7ab2447a80673',1,'IGame']]],
+  ['points_479',['POINTS',['../class_object.html#aaaf3106c96ab4387c5ada5d22074c0ffa911644c0e5cf0c4828ad5410db73286c',1,'Object']]]
 ];

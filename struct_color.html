@@ -83,6 +83,7 @@ $(document).ready(function(){initNavTree('struct_color.html',''); initResizable(
 
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="struct_color-members.html">List of all members</a>  </div>
@@ -96,14 +97,31 @@ $(document).ready(function(){initNavTree('struct_color.html',''); initResizable(
 
 <p><code>#include &lt;<a class="el" href="_color_8hpp_source.html">Color.hpp</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a2791cd4d5e92d50bb609f7fea3283aeb"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_color.html#a2791cd4d5e92d50bb609f7fea3283aeb">TermColors</a> { <br />
+&#160;&#160;<a class="el" href="struct_color.html#a2791cd4d5e92d50bb609f7fea3283aebaaf7a0babe4fc76cad45bddd193bbbc6c">BLACK</a> = 0, 
+<a class="el" href="struct_color.html#a2791cd4d5e92d50bb609f7fea3283aeba83fd16c22eacbb2418be16d077ae4ec9">RED</a> = 1, 
+<a class="el" href="struct_color.html#a2791cd4d5e92d50bb609f7fea3283aeba08c2af9e860f4aac479bb85f9f0bf336">GREEN</a> = 2, 
+<a class="el" href="struct_color.html#a2791cd4d5e92d50bb609f7fea3283aebabfe87a6ce7a4878150168e97f9ffa550">YELLOW</a> = 3, 
+<br />
+&#160;&#160;<a class="el" href="struct_color.html#a2791cd4d5e92d50bb609f7fea3283aeba7d7d2c53cd46c64ffcef1f5dbe71ccba">BLUE</a> = 4, 
+<a class="el" href="struct_color.html#a2791cd4d5e92d50bb609f7fea3283aebafae015718e75d2ee476784fb500d5166">MAGENTA</a> = 5, 
+<a class="el" href="struct_color.html#a2791cd4d5e92d50bb609f7fea3283aeba9c01682f8e1860db7050b5618369729b">CYAN</a> = 6, 
+<a class="el" href="struct_color.html#a2791cd4d5e92d50bb609f7fea3283aeba523c4a74d174943a6216bd194664049c">WHITE</a> = 7
+<br />
+ }</td></tr>
+<tr class="memdesc:a2791cd4d5e92d50bb609f7fea3283aeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum for the terminal colors.  <a href="struct_color.html#a2791cd4d5e92d50bb609f7fea3283aeb">More...</a><br /></td></tr>
+<tr class="separator:a2791cd4d5e92d50bb609f7fea3283aeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a6fae8aa8b75d27cb134234e75b41caf2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_color.html#a6fae8aa8b75d27cb134234e75b41caf2">Color</a> ()=default</td></tr>
 <tr class="memdesc:a6fae8aa8b75d27cb134234e75b41caf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default Constructor.  <a href="struct_color.html#a6fae8aa8b75d27cb134234e75b41caf2">More...</a><br /></td></tr>
 <tr class="separator:a6fae8aa8b75d27cb134234e75b41caf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63ed7a9b9001c892f901e32c2cae03aa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_color.html#a63ed7a9b9001c892f901e32c2cae03aa">Color</a> (int r, int g, int b, int a)</td></tr>
-<tr class="memdesc:a63ed7a9b9001c892f901e32c2cae03aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor with R, G, B, A params.  <a href="struct_color.html#a63ed7a9b9001c892f901e32c2cae03aa">More...</a><br /></td></tr>
-<tr class="separator:a63ed7a9b9001c892f901e32c2cae03aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a229e5aa5eaeb287df490a5f0a65213c6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_color.html#a229e5aa5eaeb287df490a5f0a65213c6">Color</a> (int r, int g, int b, int a, <a class="el" href="struct_color.html#a2791cd4d5e92d50bb609f7fea3283aeb">TermColors</a> tf=TermColors::WHITE, <a class="el" href="struct_color.html#a2791cd4d5e92d50bb609f7fea3283aeb">TermColors</a> tb=TermColors::BLACK)</td></tr>
+<tr class="memdesc:a229e5aa5eaeb287df490a5f0a65213c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor with R, G, B, A params.  <a href="struct_color.html#a229e5aa5eaeb287df490a5f0a65213c6">More...</a><br /></td></tr>
+<tr class="separator:a229e5aa5eaeb287df490a5f0a65213c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a84d3b91f2999a11b6728a4b8f85ae4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_color.html#a2a84d3b91f2999a11b6728a4b8f85ae4">~Color</a> ()=default</td></tr>
 <tr class="memdesc:a2a84d3b91f2999a11b6728a4b8f85ae4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default Destructor.  <a href="struct_color.html#a2a84d3b91f2999a11b6728a4b8f85ae4">More...</a><br /></td></tr>
 <tr class="separator:a2a84d3b91f2999a11b6728a4b8f85ae4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -122,12 +140,47 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a13db704e48f5e851817f9e9fd67ec76d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_color.html#a13db704e48f5e851817f9e9fd67ec76d">A</a></td></tr>
 <tr class="memdesc:a13db704e48f5e851817f9e9fd67ec76d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alpha amount on a scale of 0 to 255.  <a href="struct_color.html#a13db704e48f5e851817f9e9fd67ec76d">More...</a><br /></td></tr>
 <tr class="separator:a13db704e48f5e851817f9e9fd67ec76d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7adcfd535708e81846c35df728c5af0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_color.html#a2791cd4d5e92d50bb609f7fea3283aeb">TermColors</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_color.html#ae7adcfd535708e81846c35df728c5af0">TF</a></td></tr>
+<tr class="memdesc:ae7adcfd535708e81846c35df728c5af0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Foreground color for terminal graphical libraries.  <a href="struct_color.html#ae7adcfd535708e81846c35df728c5af0">More...</a><br /></td></tr>
+<tr class="separator:ae7adcfd535708e81846c35df728c5af0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2d0279be936ea12370cfc0145d5797f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_color.html#a2791cd4d5e92d50bb609f7fea3283aeb">TermColors</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_color.html#ae2d0279be936ea12370cfc0145d5797f">TB</a></td></tr>
+<tr class="memdesc:ae2d0279be936ea12370cfc0145d5797f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Background color for terminal graphical libraries.  <a href="struct_color.html#ae2d0279be936ea12370cfc0145d5797f">More...</a><br /></td></tr>
+<tr class="separator:ae2d0279be936ea12370cfc0145d5797f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="struct_color.html" title="Color structure.">Color</a> structure. </p>
 
 <p class="definition">Definition at line <a class="el" href="_color_8hpp_source.html#l00012">12</a> of file <a class="el" href="_color_8hpp_source.html">Color.hpp</a>.</p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="a2791cd4d5e92d50bb609f7fea3283aeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2791cd4d5e92d50bb609f7fea3283aeb">&#9670;&nbsp;</a></span>TermColors</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="struct_color.html#a2791cd4d5e92d50bb609f7fea3283aeb">Color::TermColors</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enum for the terminal colors. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a2791cd4d5e92d50bb609f7fea3283aebaaf7a0babe4fc76cad45bddd193bbbc6c"></a>BLACK&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2791cd4d5e92d50bb609f7fea3283aeba83fd16c22eacbb2418be16d077ae4ec9"></a>RED&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2791cd4d5e92d50bb609f7fea3283aeba08c2af9e860f4aac479bb85f9f0bf336"></a>GREEN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2791cd4d5e92d50bb609f7fea3283aebabfe87a6ce7a4878150168e97f9ffa550"></a>YELLOW&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2791cd4d5e92d50bb609f7fea3283aeba7d7d2c53cd46c64ffcef1f5dbe71ccba"></a>BLUE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2791cd4d5e92d50bb609f7fea3283aebafae015718e75d2ee476784fb500d5166"></a>MAGENTA&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2791cd4d5e92d50bb609f7fea3283aeba9c01682f8e1860db7050b5618369729b"></a>CYAN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2791cd4d5e92d50bb609f7fea3283aeba523c4a74d174943a6216bd194664049c"></a>WHITE&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="_color_8hpp_source.html#l00014">14</a> of file <a class="el" href="_color_8hpp_source.html">Color.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a6fae8aa8b75d27cb134234e75b41caf2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6fae8aa8b75d27cb134234e75b41caf2">&#9670;&nbsp;</a></span>Color() <span class="overload">[1/2]</span></h2>
 
@@ -155,8 +208,8 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a63ed7a9b9001c892f901e32c2cae03aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a63ed7a9b9001c892f901e32c2cae03aa">&#9670;&nbsp;</a></span>Color() <span class="overload">[2/2]</span></h2>
+<a id="a229e5aa5eaeb287df490a5f0a65213c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a229e5aa5eaeb287df490a5f0a65213c6">&#9670;&nbsp;</a></span>Color() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -186,7 +239,19 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>a</em>&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_color.html#a2791cd4d5e92d50bb609f7fea3283aeb">TermColors</a>&#160;</td>
+          <td class="paramname"><em>tf</em> = <code>TermColors::WHITE</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_color.html#a2791cd4d5e92d50bb609f7fea3283aeb">TermColors</a>&#160;</td>
+          <td class="paramname"><em>tb</em> = <code>TermColors::BLACK</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -208,11 +273,13 @@ Public Attributes</h2></td></tr>
     <tr><td class="paramname">G</td><td>Amount of Green on a scale of 0 to 255 </td></tr>
     <tr><td class="paramname">B</td><td>Amount of Blue on a scale of 0 to 255 </td></tr>
     <tr><td class="paramname">A</td><td>Amount of Alpha of the color on a scale of 0 to 255. It represents the opacity of the color </td></tr>
+    <tr><td class="paramname">TF</td><td>The foreground color for terminal graphical libraries </td></tr>
+    <tr><td class="paramname">TB</td><td>The background color for terminal graphical libraries </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_color_8hpp_source.html#l00022">22</a> of file <a class="el" href="_color_8hpp_source.html">Color.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_color_8hpp_source.html#l00035">35</a> of file <a class="el" href="_color_8hpp_source.html">Color.hpp</a>.</p>
 
 </div>
 </div>
@@ -258,7 +325,7 @@ Public Attributes</h2></td></tr>
 
 <p>Alpha amount on a scale of 0 to 255. </p>
 
-<p class="definition">Definition at line <a class="el" href="_color_8hpp_source.html#l00034">34</a> of file <a class="el" href="_color_8hpp_source.html">Color.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_color_8hpp_source.html#l00047">47</a> of file <a class="el" href="_color_8hpp_source.html">Color.hpp</a>.</p>
 
 </div>
 </div>
@@ -276,7 +343,7 @@ Public Attributes</h2></td></tr>
 
 <p>Blue amount on a scale of 0 to 255. </p>
 
-<p class="definition">Definition at line <a class="el" href="_color_8hpp_source.html#l00032">32</a> of file <a class="el" href="_color_8hpp_source.html">Color.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_color_8hpp_source.html#l00045">45</a> of file <a class="el" href="_color_8hpp_source.html">Color.hpp</a>.</p>
 
 </div>
 </div>
@@ -294,7 +361,7 @@ Public Attributes</h2></td></tr>
 
 <p>Green amount on a scale of 0 to 255. </p>
 
-<p class="definition">Definition at line <a class="el" href="_color_8hpp_source.html#l00030">30</a> of file <a class="el" href="_color_8hpp_source.html">Color.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_color_8hpp_source.html#l00043">43</a> of file <a class="el" href="_color_8hpp_source.html">Color.hpp</a>.</p>
 
 </div>
 </div>
@@ -312,7 +379,43 @@ Public Attributes</h2></td></tr>
 
 <p>Red amount on a scale of 0 to 255. </p>
 
-<p class="definition">Definition at line <a class="el" href="_color_8hpp_source.html#l00028">28</a> of file <a class="el" href="_color_8hpp_source.html">Color.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_color_8hpp_source.html#l00041">41</a> of file <a class="el" href="_color_8hpp_source.html">Color.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ae2d0279be936ea12370cfc0145d5797f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2d0279be936ea12370cfc0145d5797f">&#9670;&nbsp;</a></span>TB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_color.html#a2791cd4d5e92d50bb609f7fea3283aeb">TermColors</a> Color::TB</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Background color for terminal graphical libraries. </p>
+
+<p class="definition">Definition at line <a class="el" href="_color_8hpp_source.html#l00051">51</a> of file <a class="el" href="_color_8hpp_source.html">Color.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ae7adcfd535708e81846c35df728c5af0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7adcfd535708e81846c35df728c5af0">&#9670;&nbsp;</a></span>TF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_color.html#a2791cd4d5e92d50bb609f7fea3283aeb">TermColors</a> Color::TF</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Foreground color for terminal graphical libraries. </p>
+
+<p class="definition">Definition at line <a class="el" href="_color_8hpp_source.html#l00049">49</a> of file <a class="el" href="_color_8hpp_source.html">Color.hpp</a>.</p>
 
 </div>
 </div>

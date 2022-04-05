@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['wall_466',['WALL',['../class_object.html#aaaf3106c96ab4387c5ada5d22074c0ffa82cc7ae0bdf831bf50486aefb75623c2',1,'Object']]],
-  ['win_5fclose_467',['WIN_CLOSE',['../struct_arcade_1_1_evt.html#aa27a273a8c2158b5a41ae12019813ea3adff6972ae880475575afa4bd28a4c9af',1,'Arcade::Evt']]],
-  ['win_5fresize_468',['WIN_RESIZE',['../struct_arcade_1_1_evt.html#aa27a273a8c2158b5a41ae12019813ea3aac180205e819eeba81df63706fc584f3',1,'Arcade::Evt']]]
+  ['red_480',['RED',['../struct_color.html#a2791cd4d5e92d50bb609f7fea3283aeba83fd16c22eacbb2418be16d077ae4ec9',1,'Color']]],
+  ['right_481',['RIGHT',['../struct_arcade_1_1_evt.html#ae249af493a4b25cc0ae0bd96b858f299a477b7448cfb9db2a066e4717263e4a06',1,'Arcade::Evt']]],
+  ['running_482',['RUNNING',['../class_i_game.html#a4a7309d86599d6e581f764233085c7dda43491564ebcfd38568918efbd6e840fd',1,'IGame']]]
 ];

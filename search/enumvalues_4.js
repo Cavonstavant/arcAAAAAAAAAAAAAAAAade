@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['left_445',['LEFT',['../struct_arcade_1_1_evt.html#ae249af493a4b25cc0ae0bd96b858f299ada211721480f0d74d653feeb1b816846',1,'Arcade::Evt']]],
-  ['loaded_446',['LOADED',['../class_i_game.html#a4a7309d86599d6e581f764233085c7ddab638272ceeff54912f043465e9a28c9b',1,'IGame']]]
+  ['fruits_461',['FRUITS',['../class_object.html#aaaf3106c96ab4387c5ada5d22074c0ffa143c4a1baa18dd9bcc3a378a1fbe3142',1,'Object']]]
 ];

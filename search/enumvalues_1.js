@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['enum_5fsize_436',['ENUM_SIZE',['../class_object.html#aaaf3106c96ab4387c5ada5d22074c0ffae8729d74edf0acc04e84ddbbeb68cb4e',1,'Object']]],
-  ['evt_5ftype_5fsize_437',['EVT_TYPE_SIZE',['../struct_arcade_1_1_evt.html#aa27a273a8c2158b5a41ae12019813ea3a5866875119155e36e2fe2534a1d881d6',1,'Arcade::Evt']]]
+  ['cyan_457',['CYAN',['../struct_color.html#a2791cd4d5e92d50bb609f7fea3283aeba9c01682f8e1860db7050b5618369729b',1,'Color']]]
 ];

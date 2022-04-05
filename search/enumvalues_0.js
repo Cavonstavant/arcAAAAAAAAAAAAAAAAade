@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['down_435',['DOWN',['../struct_arcade_1_1_evt.html#aab25912fafe9cf68e8d6648e99574b21a2f2d690fe67ddaa05b6515f95e0603b5',1,'Arcade::Evt']]]
+  ['black_455',['BLACK',['../struct_color.html#a2791cd4d5e92d50bb609f7fea3283aebaaf7a0babe4fc76cad45bddd193bbbc6c',1,'Color']]],
+  ['blue_456',['BLUE',['../struct_color.html#a2791cd4d5e92d50bb609f7fea3283aeba7d7d2c53cd46c64ffcef1f5dbe71ccba',1,'Color']]]
 ];
