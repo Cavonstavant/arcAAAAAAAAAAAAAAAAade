@@ -11,7 +11,7 @@ extern "C" {
 #include <dlfcn.h>
 }
 
-LibManager::LibManager(std::string &libPath)
+LibManager::LibManager(std::string libPath)
 {
     _libsHandle.emplace(libPath, nullptr);
 }
@@ -23,7 +23,7 @@ LibManager::LibManager(std::vector<std::string> libPaths)
     }
 }
 
-void *LibManager::openLib(std::string &libPath)
+void *LibManager::openLib(std::string libPath)
 {
     auto it = _libsHandle.find(libPath);
 
@@ -38,7 +38,26 @@ void *LibManager::openLib(std::string &libPath)
     return (it->second);
 }
 
-void LibManager::closeLib(std::string &libPath)
+IGame *LibManager::openGame(std::string libPath)
+{
+    void *libHandle = openLib(libPath);
+    IGame *(*createGame)();
+
+    createGame = (IGame * (*) (void) ) dlsym(libHandle, "createGame");
+    return (createGame());
+}
+
+template<typename T>
+IGraph<T> *LibManager::openGraph(std::string libPath)
+{
+    void *libHandle = openLib(libPath);
+    IGraph<T> *(*createGraph)();
+
+    createGraph = (IGraph<T> * (*) (void) ) dlsym(libHandle, "createGraph");
+    return (createGraph());
+}
+
+void LibManager::closeLib(std::string libPath)
 {
     auto it = _libsHandle.find(libPath);
 
@@ -49,22 +68,4 @@ void LibManager::closeLib(std::string &libPath)
         it->second = nullptr;
     } else
         throw LibraryEX("Library already closed", Logger::CRITICAL);
-}
-
-void *LibManager::getSymbol(void *libHandle, std::string &symbolName)
-{
-    void *symbol = dlsym(libHandle, symbolName.c_str());
-
-    if (symbol == nullptr)
-        throw LibraryEX(dlerror(), Logger::CRITICAL);
-    return (symbol);
-}
-
-void *LibManager::getSymbol(std::string &libPath, std::string &symbolName)
-{
-    auto it = _libsHandle.find(libPath);
-
-    if (it == _libsHandle.end())
-        throw LibraryEX("Library not found", Logger::CRITICAL);
-    return (getSymbol(it->second, symbolName));
 }
