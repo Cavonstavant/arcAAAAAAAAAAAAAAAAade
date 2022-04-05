@@ -32,6 +32,8 @@
 #define EntityEX(what, severity) ExceptionTernary(EntityException, what, severity)
 #define EventEX(what, severity) ExceptionTernary(EventException, what, severity)
 #define VeryStupidUserEX(what, severity) ExceptionTernary(VeryStupidUserException, what, severity)
+#define ButtonCloseGameEX(what, severity) ExceptionTernary(ButtonCloseGameException, what, severity)
+#define NotImplementedEX(what, severity) ExceptionTernary(NotImplementedException, what, severity)
 
 /// \Defines the color codes to print the exceptions in color
 #define LOGGER_COLOR_RESET "\x1B[0m"
@@ -163,6 +165,14 @@ class EventException : public ArcadeException {
             _name = "EventException";
         };
 };
+/// \brief Exception class to throw when something is not implemented
+class NotImplementedException : public ArcadeException {
+    public:
+        NotImplementedException(std::string const &what, std::string const &func, int const &line, std::string const &file) : ArcadeException(what, func, line, file)
+        {
+            _name = "NotImplementedException";
+        };
+};
 /// \brief Exception class when a user is very stupid and we can't do what anything for them
 class VeryStupidUserException : public ArcadeException {
     public:
@@ -173,6 +183,15 @@ class VeryStupidUserException : public ArcadeException {
             (void) func;
             (void) line;
             (void) file;
+        };
+};
+
+/// \brief Exception throw when the "close game" button is pressed on the main menu
+class ButtonCloseGameException : public EventException {
+    public:
+        ButtonCloseGameException(std::string const &what, std::string const &func, int const &line, std::string const &file) : EventException(what, func, line, file)
+        {
+            _name = "ButtonCloseGameException";
         };
 };
 

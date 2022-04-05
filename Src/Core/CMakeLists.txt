@@ -5,8 +5,6 @@ set(TARGET_LIB_NAME libarcade_core)
 set(TARGET_EXEC_NAME arcade)
 
 set(SRC
-        ${INCLUDE_ROOT}/Entity/AEntity.hpp
-        ${INCLUDE_ROOT}/Entity/AEntity.cpp
         ${INCLUDE_ROOT}/Core.hpp
         ${INCLUDE_ROOT}/Core.cpp
         ${INCLUDE_ROOT}/Exception.cpp
