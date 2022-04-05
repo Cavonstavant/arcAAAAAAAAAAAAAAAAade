@@ -43,17 +43,17 @@ IGame *LibManager::openGame(std::string libPath)
     void *libHandle = openLib(libPath);
     IGame *(*createGame)();
 
-    createGame = (IGame *(*)(void))dlsym(libHandle, "createGame");
+    createGame = (IGame * (*) (void) ) dlsym(libHandle, "createGame");
     return (createGame());
 }
 
-template <typename T>
+template<typename T>
 IGraph<T> *LibManager::openGraph(std::string libPath)
 {
     void *libHandle = openLib(libPath);
     IGraph<T> *(*createGraph)();
 
-    createGraph = (IGraph<T> *(*)(void))dlsym(libHandle, "createGraph");
+    createGraph = (IGraph<T> * (*) (void) ) dlsym(libHandle, "createGraph");
     return (createGraph());
 }
 
