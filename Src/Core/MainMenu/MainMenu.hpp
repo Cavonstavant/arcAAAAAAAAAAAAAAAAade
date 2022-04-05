@@ -11,6 +11,8 @@
 #include "IGame.hpp"
 #include <vector>
 
+/// \file MainMenu.hpp
+/// \brief MainMenu class
 class MainMenu : public IGame {
     public:
         /// \brief Constructor
@@ -30,9 +32,13 @@ class MainMenu : public IGame {
 
     protected:
     private:
+        /// \brief Vector of all the buttons
         std::vector<std::shared_ptr<Button>> _buttons;
+        /// \brief The game's state
         GameState _gameState;
+        /// \brief Vector of the graphical libraries
         std::vector<std::string> _graphicalLibraries;
+        /// \brief Vector of the game libraries
         std::vector<std::string> _gameLibraries;
 
         /// \brief Manage the events
