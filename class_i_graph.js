@@ -6,5 +6,6 @@ var class_i_graph =
     [ "drawCircle", "class_i_graph.html#a408e82cec3770897b45ac60a178d844b", null ],
     [ "drawEntity", "class_i_graph.html#a8d0017caa8afeffeb8ae5ef9d932afd8", null ],
     [ "drawRect", "class_i_graph.html#ae175c4f41741562b24ca0fdcd0bf9ced", null ],
-    [ "drawText", "class_i_graph.html#a746bc1ba8e89f25de481e7fa0a109ba7", null ]
+    [ "drawText", "class_i_graph.html#a746bc1ba8e89f25de481e7fa0a109ba7", null ],
+    [ "getName", "class_i_graph.html#afcb7d0c88d27e1928182fdd86d363f74", null ]
 ];

@@ -118,6 +118,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aaf5c58c4d40020a4ea7061e28460bbfc"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graph.html#aaf5c58c4d40020a4ea7061e28460bbfc">displayWindow</a> ()=0</td></tr>
 <tr class="memdesc:aaf5c58c4d40020a4ea7061e28460bbfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">display the window  <a href="class_i_graph.html#aaf5c58c4d40020a4ea7061e28460bbfc">More...</a><br /></td></tr>
 <tr class="separator:aaf5c58c4d40020a4ea7061e28460bbfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcb7d0c88d27e1928182fdd86d363f74"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graph.html#afcb7d0c88d27e1928182fdd86d363f74">getName</a> () const =0</td></tr>
+<tr class="memdesc:afcb7d0c88d27e1928182fdd86d363f74"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the graphical lib  <a href="class_i_graph.html#afcb7d0c88d27e1928182fdd86d363f74">More...</a><br /></td></tr>
+<tr class="separator:afcb7d0c88d27e1928182fdd86d363f74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename T&gt;<br />
@@ -273,8 +276,8 @@ template&lt;typename T &gt; </div>
 <p>Create a circle, set position, set radius, then display it on the window. After all destroy the Circle. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pos</td><td>the std::pair&lt;T, T&gt; position </td></tr>
-    <tr><td class="paramname">radius</td><td>represents the radius of the circle </td></tr>
+    <tr><td class="paramname">pos</td><td>the std::pair&lt;T, T&gt; position</td></tr>
+    <tr><td class="paramname">radius</td><td>represents the radius of the circle</td></tr>
     <tr><td class="paramname">represents</td><td>the struct color (r, g, b, a) of the Circle </td></tr>
   </table>
   </dd>
@@ -324,7 +327,7 @@ template&lt;typename T &gt; </div>
 <p>Create an Entity, set position, then display it on the window. After all destroy the Entity. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname"><a class="el" href="class_i_entity.html" title="represents a generic entity within the game">IEntity</a></td><td>representing the entity with its own properties </td></tr>
+    <tr><td class="paramname"><a class="el" href="class_i_entity.html" title="represents a generic entity within the game">IEntity</a></td><td>representing the entity with its own properties</td></tr>
     <tr><td class="paramname">std::pair&lt;T,T&gt;</td><td>pos to know where to display the entity in the window </td></tr>
   </table>
   </dd>
@@ -386,7 +389,7 @@ template&lt;typename T &gt; </div>
 <p>Create a Rectangle, set position, set width &amp; height, then display it on the window. After all destroy the Rectangle. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pos</td><td>the std::pair&lt;T, T&gt; position </td></tr>
+    <tr><td class="paramname">pos</td><td>the std::pair&lt;T, T&gt; position</td></tr>
     <tr><td class="paramname">height</td><td>for the height of the rectangle </td></tr>
     <tr><td class="paramname">width</td><td>for the width of the rectangle </td></tr>
     <tr><td class="paramname">represents</td><td>the struct color (r, g, b, a) of the Rectangle </td></tr>
@@ -438,7 +441,7 @@ template&lt;typename T &gt; </div>
 <p>Create a text, set position, set content, set font, then display it on the window. After all destroy the Text. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pos</td><td>the std::pair&lt;int, int&gt; position </td></tr>
+    <tr><td class="paramname">pos</td><td>the std::pair&lt;int, int&gt; position</td></tr>
     <tr><td class="paramname">content</td><td>the std::string content </td></tr>
   </table>
   </dd>
@@ -446,6 +449,35 @@ template&lt;typename T &gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>true if the text is successfully draw </dd></dl>
 
 <p>Implemented in <a class="el" href="class_sfml_library.html#ab217db0d6daf0e73f5b15a082d667398">SfmlLibrary</a>.</p>
+
+</div>
+</div>
+<a id="afcb7d0c88d27e1928182fdd86d363f74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcb7d0c88d27e1928182fdd86d363f74">&#9670;&nbsp;</a></span>getName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string <a class="el" href="class_i_graph.html">IGraph</a>&lt; T &gt;::getName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>get the graphical lib </p>
 
 </div>
 </div>

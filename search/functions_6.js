@@ -10,7 +10,7 @@ var searchData=
   ['getfunc_345',['getFunc',['../class_arcade_exception.html#a70ef303c6a9e1644fe32c8f387094f85',1,'ArcadeException']]],
   ['getismoving_346',['getIsMoving',['../class_a_entity.html#ae71fa931609b2226a0e437fe04ab40ef',1,'AEntity::getIsMoving()'],['../class_enemy.html#af3ad00f5db4e91c220d367196364ee55',1,'Enemy::getIsMoving()'],['../class_object.html#a6675c531600779a9e2c1fe35947eb86a',1,'Object::getIsMoving()'],['../class_player.html#a858b0644480fbc9f4e473c58b7c82b5c',1,'Player::getIsMoving()']]],
   ['getline_347',['getLine',['../class_arcade_exception.html#acc880a3f60746397a83ac453eb8b5181',1,'ArcadeException']]],
-  ['getname_348',['getName',['../class_arcade_exception.html#a0c949dff6638c08c2534f0550c2db89e',1,'ArcadeException']]],
+  ['getname_348',['getName',['../class_i_game.html#aa69690645ce61b4214a53cc4e27a463c',1,'IGame::getName()'],['../class_i_graph.html#afcb7d0c88d27e1928182fdd86d363f74',1,'IGraph::getName()'],['../class_arcade_exception.html#a0c949dff6638c08c2534f0550c2db89e',1,'ArcadeException::getName()']]],
   ['getoutlinecolor_349',['getOutlineColor',['../class_text_entity.html#a29a1d5c1a32d80b4b7ead0770e08a094',1,'TextEntity']]],
   ['getpos_350',['getPos',['../class_i_entity.html#ab3209bdc669cf1a5812d7a8353f1e402',1,'IEntity::getPos()'],['../class_a_entity.html#a459a2389a632852a381ff81227ed2222',1,'AEntity::getPos()']]],
   ['getsize_351',['getSize',['../class_i_entity.html#a4644cf0bd8a130b0dabd59bd9bda96f5',1,'IEntity::getSize()'],['../class_a_entity.html#a7abaa12bfaaf56be209e9f10a29425e9',1,'AEntity::getSize()']]],

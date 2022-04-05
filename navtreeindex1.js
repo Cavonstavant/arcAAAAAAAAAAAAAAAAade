@@ -1,5 +1,7 @@
 var NAVTREEINDEX1 =
 {
+"class_sfml_library.html#a467d926355b36d9b5db474d3b95df478":[3,0,26,4],
+"class_sfml_library.html#a7bb07952336683a7baba6be49d588624":[3,0,26,5],
 "class_sfml_library.html#a84d358d5385f0b498925e431c56b7ef5":[3,0,26,1],
 "class_sfml_library.html#a9b6ca4f8bcf9efac1a68bbfe45749e59":[3,0,26,6],
 "class_sfml_library.html#ab217db0d6daf0e73f5b15a082d667398":[3,0,26,7],
@@ -71,8 +73,8 @@ var NAVTREEINDEX1 =
 "globals_defs.html":[4,1,2],
 "globals_func.html":[4,1,1],
 "hierarchy.html":[3,2],
-"index.html":[0],
 "index.html":[],
+"index.html":[0],
 "index.html#autotoc_md1":[0,0],
 "index.html#autotoc_md2":[0,1],
 "index.html#autotoc_md3":[0,1,0],

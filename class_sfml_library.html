@@ -143,6 +143,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4d0222e5b7d69deb8ab57e2a4cf91b2a inherit pub_methods_class_i_graph"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graph.html#a4d0222e5b7d69deb8ab57e2a4cf91b2a">~IGraph</a> ()=default</td></tr>
 <tr class="memdesc:a4d0222e5b7d69deb8ab57e2a4cf91b2a inherit pub_methods_class_i_graph"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="class_i_graph.html#a4d0222e5b7d69deb8ab57e2a4cf91b2a">More...</a><br /></td></tr>
 <tr class="separator:a4d0222e5b7d69deb8ab57e2a4cf91b2a inherit pub_methods_class_i_graph"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcb7d0c88d27e1928182fdd86d363f74 inherit pub_methods_class_i_graph"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graph.html#afcb7d0c88d27e1928182fdd86d363f74">getName</a> () const=0</td></tr>
+<tr class="memdesc:afcb7d0c88d27e1928182fdd86d363f74 inherit pub_methods_class_i_graph"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the graphical lib  <a href="class_i_graph.html#afcb7d0c88d27e1928182fdd86d363f74">More...</a><br /></td></tr>
+<tr class="separator:afcb7d0c88d27e1928182fdd86d363f74 inherit pub_methods_class_i_graph"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>SFML library using float as template value from <a class="el" href="class_i_graph.html" title="Using template to make functions generics.">IGraph</a>. </p>
@@ -305,8 +308,8 @@ Public Member Functions</h2></td></tr>
 <p>Create a circle, set position, set radius, then display it on the window. After all destroy the Circle. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pos</td><td>the std::pair&lt;T, T&gt; position </td></tr>
-    <tr><td class="paramname">radius</td><td>represents the radius of the circle </td></tr>
+    <tr><td class="paramname">pos</td><td>the std::pair&lt;T, T&gt; position</td></tr>
+    <tr><td class="paramname">radius</td><td>represents the radius of the circle</td></tr>
     <tr><td class="paramname">represents</td><td>the struct color (r, g, b, a) of the Circle </td></tr>
   </table>
   </dd>
@@ -356,7 +359,7 @@ Public Member Functions</h2></td></tr>
 <p>Create an Entity, set position, then display it on the window. After all destroy the Entity. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname"><a class="el" href="class_i_entity.html" title="represents a generic entity within the game">IEntity</a></td><td>representing the entity with its own properties </td></tr>
+    <tr><td class="paramname"><a class="el" href="class_i_entity.html" title="represents a generic entity within the game">IEntity</a></td><td>representing the entity with its own properties</td></tr>
     <tr><td class="paramname">std::pair&lt;T,T&gt;</td><td>pos to know where to display the entity in the window </td></tr>
   </table>
   </dd>
@@ -418,7 +421,7 @@ Public Member Functions</h2></td></tr>
 <p>Create a Rectangle, set position, set width &amp; height, then display it on the window. After all destroy the Rectangle. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pos</td><td>the std::pair&lt;T, T&gt; position </td></tr>
+    <tr><td class="paramname">pos</td><td>the std::pair&lt;T, T&gt; position</td></tr>
     <tr><td class="paramname">height</td><td>for the height of the rectangle </td></tr>
     <tr><td class="paramname">width</td><td>for the width of the rectangle </td></tr>
     <tr><td class="paramname">represents</td><td>the struct color (r, g, b, a) of the Rectangle </td></tr>
@@ -470,7 +473,7 @@ Public Member Functions</h2></td></tr>
 <p>Create a text, set position, set content, set font, then display it on the window. After all destroy the Text. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pos</td><td>the std::pair&lt;int, int&gt; position </td></tr>
+    <tr><td class="paramname">pos</td><td>the std::pair&lt;int, int&gt; position</td></tr>
     <tr><td class="paramname">content</td><td>the std::string content </td></tr>
   </table>
   </dd>
