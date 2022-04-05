@@ -8,8 +8,8 @@
 #ifndef IENTITY_HPP_
 #define IENTITY_HPP_
 
-#include <string>
 #include "Color.hpp"
+#include <string>
 
 /// \brief represents a generic entity within the game
 class IEntity {

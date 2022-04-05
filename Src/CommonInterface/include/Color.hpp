@@ -31,7 +31,7 @@ struct Color {
         /// \param A Amount of Alpha of the color on a scale of 0 to 255. It represents the opacity of the color
         /// \param TF The foreground color for terminal graphical libraries
         /// \param TB The background color for terminal graphical libraries
-        Color(int r, int g, int b, int a, TermColors tf = TermColors::WHITE, TermColors tb = TermColors::BLACK) : R(r), G(g), B(b), A(a), TF(tf), TB(tb) {};
+        Color(int r, int g, int b, int a, TermColors tf = TermColors::WHITE, TermColors tb = TermColors::BLACK) : R(r), G(g), B(b), A(a), TF(tf), TB(tb){};
 
         /// \brief Default Destructor
         ~Color() = default;
