@@ -6,7 +6,7 @@
 */
 
 #include "MainMenu.hpp"
-#include "../../Core/Exception.hpp"
+#include "../Exception.hpp"
 #include "../../Games/Common/Button.hpp"
 #include "../../Games/Common/TextEntity.hpp"
 #include "Event.hpp"
@@ -48,6 +48,7 @@ MainMenu::MainMenu(std::vector<std::shared_ptr<IEntity>> &entities)
         std::shared_ptr<Button> buttonPtr = std::make_shared<Button>(button);
         entities.push_back(buttonPtr);
         _buttons.push_back(buttonPtr);
+        y += (button.getSize().second * 4 / 3);
     }
     y = 100;
     for (auto &&gameLib: _gameLibraries) {
@@ -56,6 +57,7 @@ MainMenu::MainMenu(std::vector<std::shared_ptr<IEntity>> &entities)
         std::shared_ptr<Button> buttonPtr = std::make_shared<Button>(button);
         entities.push_back(buttonPtr);
         _buttons.push_back(buttonPtr);
+        y += (button.getSize().second * 4 / 3);
     }
 }
 
