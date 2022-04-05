@@ -6,9 +6,9 @@
 */
 
 #include "MainMenu.hpp"
-#include "../Exception.hpp"
 #include "../../Games/Common/Button.hpp"
 #include "../../Games/Common/TextEntity.hpp"
+#include "../Exception.hpp"
 #include "Event.hpp"
 #include <dlfcn.h>
 #include <filesystem>
