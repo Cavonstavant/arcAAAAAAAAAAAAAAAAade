@@ -42,8 +42,7 @@ MainMenu::MainMenu(std::vector<std::shared_ptr<IEntity>> &entities)
     entities.push_back(startGameButtonPtr);
 
     int y = 100;
-    for (auto &&graphLib : _graphicalLibraries)
-    {
+    for (auto &&graphLib: _graphicalLibraries) {
         Button button(&changeGraphicalLibCallback, graphLib);
         button.setPos(std::make_pair(200, y));
         std::shared_ptr<Button> buttonPtr = std::make_shared<Button>(button);
@@ -51,8 +50,7 @@ MainMenu::MainMenu(std::vector<std::shared_ptr<IEntity>> &entities)
         _buttons.push_back(buttonPtr);
     }
     y = 100;
-    for (auto &&gameLib : _gameLibraries)
-    {
+    for (auto &&gameLib: _gameLibraries) {
         Button button(&changeGameLibCallback, gameLib);
         button.setPos(std::make_pair(500, y));
         std::shared_ptr<Button> buttonPtr = std::make_shared<Button>(button);
@@ -103,7 +101,7 @@ void MainMenu::start()
 void MainMenu::getAllLibraries()
 {
     std::string path = "../../../lib";
-    for (const auto & entry : std::filesystem::directory_iterator(path)) {
+    for (const auto &entry: std::filesystem::directory_iterator(path)) {
         try {
             void *handle = dlopen(entry.path().c_str(), RTLD_LAZY);
             if (!handle)
