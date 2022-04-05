@@ -36,28 +36,31 @@ MainMenu::MainMenu(std::vector<std::shared_ptr<IEntity>> &entities)
     _gameState = GameState::LOADED;
     Button startGameButton(&closeGameCallback);
     std::shared_ptr<Button> startGameButtonPtr = std::make_shared<Button>(startGameButton);
+    TextEntity titleText("Arcade");
+    titleText.setPos(std::make_pair(0, 0));
+    std::shared_ptr<TextEntity> titleTextPtr = std::make_shared<TextEntity>(titleText);
 
-    entities.push_back(std::make_shared<TextEntity>("Arcade"));
+    entities.push_back(titleTextPtr);
     _buttons.push_back(startGameButtonPtr);
     entities.push_back(startGameButtonPtr);
 
-    int y = 100;
+    int y = 1;
     for (auto &&graphLib: _graphicalLibraries) {
         Button button(&changeGraphicalLibCallback, graphLib);
-        button.setPos(std::make_pair(200, y));
+        button.setPos(std::make_pair(4, y));
         std::shared_ptr<Button> buttonPtr = std::make_shared<Button>(button);
         entities.push_back(buttonPtr);
         _buttons.push_back(buttonPtr);
-        y += (button.getSize().second * 4 / 3);
+        y += 2;
     }
-    y = 100;
+    y = 1;
     for (auto &&gameLib: _gameLibraries) {
         Button button(&changeGameLibCallback, gameLib);
-        button.setPos(std::make_pair(500, y));
+        button.setPos(std::make_pair(6, y));
         std::shared_ptr<Button> buttonPtr = std::make_shared<Button>(button);
         entities.push_back(buttonPtr);
         _buttons.push_back(buttonPtr);
-        y += (button.getSize().second * 4 / 3);
+        y += 2;
     }
 }
 
