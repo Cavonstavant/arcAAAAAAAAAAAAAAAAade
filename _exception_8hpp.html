@@ -108,11 +108,12 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="_exception_8hpp__dep__incl.png" border="0" usemap="#_src_2_core_2_exception_8hppdep" alt=""/></div>
 <map name="_src_2_core_2_exception_8hppdep" id="_src_2_core_2_exception_8hppdep">
-<area shape="rect" title=" " alt="" coords="270,5,442,32"/>
-<area shape="rect" href="_exception_8cpp.html" title=" " alt="" coords="5,80,176,107"/>
-<area shape="rect" href="_lib_manager_8hpp.html" title=" " alt="" coords="201,80,383,107"/>
-<area shape="rect" href="_lib_manager_8cpp.html" title=" " alt="" coords="265,155,447,181"/>
-<area shape="rect" href="_logger_8cpp.html" title=" " alt="" coords="459,80,610,107"/>
+<area shape="rect" title=" " alt="" coords="335,5,507,32"/>
+<area shape="rect" href="_exception_8cpp.html" title=" " alt="" coords="5,87,176,114"/>
+<area shape="rect" href="_lib_manager_8hpp.html" title=" " alt="" coords="201,87,383,114"/>
+<area shape="rect" href="_lib_manager_8cpp.html" title=" " alt="" coords="265,169,447,196"/>
+<area shape="rect" href="_logger_8cpp.html" title=" " alt="" coords="459,87,610,114"/>
+<area shape="rect" href="_main_menu_8cpp.html" title=" " alt="" coords="634,80,798,121"/>
 </map>
 </div>
 </div>
@@ -152,8 +153,14 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_exception.html">EventException</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exception class for the events.  <a href="class_event_exception.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_not_implemented_exception.html">NotImplementedException</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exception class to throw when something is not implemented.  <a href="class_not_implemented_exception.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_very_stupid_user_exception.html">VeryStupidUserException</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exception class when a user is very stupid and we can't do what anything for them.  <a href="class_very_stupid_user_exception.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_button_close_game_exception.html">ButtonCloseGameException</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exception throw when the "close game" button is pressed on the main menu.  <a href="class_button_close_game_exception.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
@@ -188,6 +195,10 @@ Macros</h2></td></tr>
 <tr class="separator:aae84ad551a8690bf278696cf4d24b6e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ae399b5939ece8c60638d855d9db3c0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_exception_8hpp.html#a0ae399b5939ece8c60638d855d9db3c0">VeryStupidUserEX</a>(what,  severity)&#160;&#160;&#160;<a class="el" href="_exception_8hpp.html#a0191574963a1216d901dceaf960f43a2">ExceptionTernary</a>(<a class="el" href="class_very_stupid_user_exception.html">VeryStupidUserException</a>, what, severity)</td></tr>
 <tr class="separator:a0ae399b5939ece8c60638d855d9db3c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a917530aa9d17a25247ddd1d5522fb810"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_exception_8hpp.html#a917530aa9d17a25247ddd1d5522fb810">ButtonCloseGameEX</a>(what,  severity)&#160;&#160;&#160;<a class="el" href="_exception_8hpp.html#a0191574963a1216d901dceaf960f43a2">ExceptionTernary</a>(<a class="el" href="class_button_close_game_exception.html">ButtonCloseGameException</a>, what, severity)</td></tr>
+<tr class="separator:a917530aa9d17a25247ddd1d5522fb810"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07b51301b1d8611a35b7f211d7f4bdcc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_exception_8hpp.html#a07b51301b1d8611a35b7f211d7f4bdcc">NotImplementedEX</a>(what,  severity)&#160;&#160;&#160;<a class="el" href="_exception_8hpp.html#a0191574963a1216d901dceaf960f43a2">ExceptionTernary</a>(<a class="el" href="class_not_implemented_exception.html">NotImplementedException</a>, what, severity)</td></tr>
+<tr class="separator:a07b51301b1d8611a35b7f211d7f4bdcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a011fa8043c2689f76dad72c2c6eb31b6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_exception_8hpp.html#a011fa8043c2689f76dad72c2c6eb31b6">LOGGER_COLOR_RESET</a>&#160;&#160;&#160;&quot;\x1B[0m&quot;</td></tr>
 <tr class="memdesc:a011fa8043c2689f76dad72c2c6eb31b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">\Defines the color codes to print the exceptions in color  <a href="_exception_8hpp.html#a011fa8043c2689f76dad72c2c6eb31b6">More...</a><br /></td></tr>
 <tr class="separator:a011fa8043c2689f76dad72c2c6eb31b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -239,6 +250,36 @@ Macros</h2></td></tr>
 <p>\These defines makes possible to specify the function, the file and the line where the exception is thrown \You MUST NOT throw the classical *Exceptions (ex: <a class="el" href="class_arcade_exception.html">ArcadeException</a>) but use the macros below </p>
 
 <p class="definition">Definition at line <a class="el" href="_exception_8hpp_source.html#l00023">23</a> of file <a class="el" href="_exception_8hpp_source.html">Exception.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a917530aa9d17a25247ddd1d5522fb810"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a917530aa9d17a25247ddd1d5522fb810">&#9670;&nbsp;</a></span>ButtonCloseGameEX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ButtonCloseGameEX</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">what, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">severity&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="_exception_8hpp.html#a0191574963a1216d901dceaf960f43a2">ExceptionTernary</a>(<a class="el" href="class_button_close_game_exception.html">ButtonCloseGameException</a>, what, severity)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_exception_8hpp_source.html#l00035">35</a> of file <a class="el" href="_exception_8hpp_source.html">Exception.hpp</a>.</p>
 
 </div>
 </div>
@@ -610,7 +651,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_exception_8hpp_source.html#l00038">38</a> of file <a class="el" href="_exception_8hpp_source.html">Exception.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_exception_8hpp_source.html#l00040">40</a> of file <a class="el" href="_exception_8hpp_source.html">Exception.hpp</a>.</p>
 
 </div>
 </div>
@@ -626,7 +667,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_exception_8hpp_source.html#l00042">42</a> of file <a class="el" href="_exception_8hpp_source.html">Exception.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_exception_8hpp_source.html#l00044">44</a> of file <a class="el" href="_exception_8hpp_source.html">Exception.hpp</a>.</p>
 
 </div>
 </div>
@@ -642,7 +683,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_exception_8hpp_source.html#l00046">46</a> of file <a class="el" href="_exception_8hpp_source.html">Exception.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_exception_8hpp_source.html#l00048">48</a> of file <a class="el" href="_exception_8hpp_source.html">Exception.hpp</a>.</p>
 
 </div>
 </div>
@@ -658,7 +699,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_exception_8hpp_source.html#l00044">44</a> of file <a class="el" href="_exception_8hpp_source.html">Exception.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_exception_8hpp_source.html#l00046">46</a> of file <a class="el" href="_exception_8hpp_source.html">Exception.hpp</a>.</p>
 
 </div>
 </div>
@@ -674,7 +715,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_exception_8hpp_source.html#l00040">40</a> of file <a class="el" href="_exception_8hpp_source.html">Exception.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_exception_8hpp_source.html#l00042">42</a> of file <a class="el" href="_exception_8hpp_source.html">Exception.hpp</a>.</p>
 
 </div>
 </div>
@@ -690,7 +731,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_exception_8hpp_source.html#l00043">43</a> of file <a class="el" href="_exception_8hpp_source.html">Exception.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_exception_8hpp_source.html#l00045">45</a> of file <a class="el" href="_exception_8hpp_source.html">Exception.hpp</a>.</p>
 
 </div>
 </div>
@@ -706,7 +747,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_exception_8hpp_source.html#l00039">39</a> of file <a class="el" href="_exception_8hpp_source.html">Exception.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_exception_8hpp_source.html#l00041">41</a> of file <a class="el" href="_exception_8hpp_source.html">Exception.hpp</a>.</p>
 
 </div>
 </div>
@@ -724,7 +765,7 @@ Macros</h2></td></tr>
 
 <p>\Defines the color codes to print the exceptions in color </p>
 
-<p class="definition">Definition at line <a class="el" href="_exception_8hpp_source.html#l00037">37</a> of file <a class="el" href="_exception_8hpp_source.html">Exception.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_exception_8hpp_source.html#l00039">39</a> of file <a class="el" href="_exception_8hpp_source.html">Exception.hpp</a>.</p>
 
 </div>
 </div>
@@ -740,7 +781,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_exception_8hpp_source.html#l00045">45</a> of file <a class="el" href="_exception_8hpp_source.html">Exception.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_exception_8hpp_source.html#l00047">47</a> of file <a class="el" href="_exception_8hpp_source.html">Exception.hpp</a>.</p>
 
 </div>
 </div>
@@ -756,7 +797,37 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_exception_8hpp_source.html#l00041">41</a> of file <a class="el" href="_exception_8hpp_source.html">Exception.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_exception_8hpp_source.html#l00043">43</a> of file <a class="el" href="_exception_8hpp_source.html">Exception.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a07b51301b1d8611a35b7f211d7f4bdcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07b51301b1d8611a35b7f211d7f4bdcc">&#9670;&nbsp;</a></span>NotImplementedEX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NotImplementedEX</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">what, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">severity&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="_exception_8hpp.html#a0191574963a1216d901dceaf960f43a2">ExceptionTernary</a>(<a class="el" href="class_not_implemented_exception.html">NotImplementedException</a>, what, severity)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_exception_8hpp_source.html#l00036">36</a> of file <a class="el" href="_exception_8hpp_source.html">Exception.hpp</a>.</p>
 
 </div>
 </div>

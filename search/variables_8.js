@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['newsize_369',['newSize',['../structarcade_1_1_evt_1_1_resize_evt.html#a41ebaf31669fb5bc432bc85638aca27b',1,'arcade::Evt::ResizeEvt']]]
+  ['newsize_419',['newSize',['../struct_arcade_1_1_evt_1_1_resize_evt.html#a397939a1f89d042b02d5f07eaad70148',1,'Arcade::Evt::ResizeEvt']]]
 ];

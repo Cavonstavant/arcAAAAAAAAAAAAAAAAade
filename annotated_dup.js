@@ -1,8 +1,10 @@
 var annotated_dup =
 [
-    [ "arcade", "namespacearcade.html", "namespacearcade" ],
+    [ "Arcade", "namespace_arcade.html", "namespace_arcade" ],
     [ "AEntity", "class_a_entity.html", "class_a_entity" ],
     [ "ArcadeException", "class_arcade_exception.html", "class_arcade_exception" ],
+    [ "Button", "class_button.html", "class_button" ],
+    [ "ButtonCloseGameException", "class_button_close_game_exception.html", "class_button_close_game_exception" ],
     [ "Color", "struct_color.html", "struct_color" ],
     [ "Enemy", "class_enemy.html", "class_enemy" ],
     [ "EntityException", "class_entity_exception.html", "class_entity_exception" ],
@@ -20,8 +22,11 @@ var annotated_dup =
     [ "LibManager", "class_lib_manager.html", "class_lib_manager" ],
     [ "LibraryException", "class_library_exception.html", "class_library_exception" ],
     [ "Logger", "class_logger.html", "class_logger" ],
+    [ "MainMenu", "class_main_menu.html", "class_main_menu" ],
+    [ "NotImplementedException", "class_not_implemented_exception.html", "class_not_implemented_exception" ],
     [ "Object", "class_object.html", "class_object" ],
     [ "Player", "class_player.html", "class_player" ],
     [ "SfmlLibrary", "class_sfml_library.html", "class_sfml_library" ],
+    [ "TextEntity", "class_text_entity.html", "class_text_entity" ],
     [ "VeryStupidUserException", "class_very_stupid_user_exception.html", "class_very_stupid_user_exception" ]
 ];

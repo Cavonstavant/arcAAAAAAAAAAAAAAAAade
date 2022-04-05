@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['verystupiduserexception_241',['VeryStupidUserException',['../class_very_stupid_user_exception.html',1,'']]]
+  ['resizeevt_266',['ResizeEvt',['../struct_arcade_1_1_evt_1_1_resize_evt.html',1,'Arcade::Evt']]],
+  ['resizeevt_3c_20float_20_3e_267',['ResizeEvt&lt; float &gt;',['../struct_arcade_1_1_evt_1_1_resize_evt.html',1,'Arcade::Evt']]]
 ];

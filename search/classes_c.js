@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['sfmllibrary_240',['SfmlLibrary',['../class_sfml_library.html',1,'']]]
+  ['player_265',['Player',['../class_player.html',1,'']]]
 ];

@@ -1,0 +1,4 @@
+<map id="IGame" name="IGame">
+<area shape="rect" id="node1" title="Game instance." alt="" coords="18,5,83,32"/>
+<area shape="rect" id="node2" href="$class_main_menu.html" title=" " alt="" coords="5,80,96,107"/>
+</map>

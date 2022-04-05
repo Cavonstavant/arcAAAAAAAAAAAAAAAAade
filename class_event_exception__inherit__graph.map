@@ -1,5 +1,6 @@
 <map id="EventException" name="EventException">
-<area shape="rect" id="node1" title="Exception class for the events." alt="" coords="9,155,132,181"/>
-<area shape="rect" id="node2" href="$class_arcade_exception.html" title=" " alt="" coords="5,80,136,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="13,5,128,32"/>
+<area shape="rect" id="node1" title="Exception class for the events." alt="" coords="46,155,169,181"/>
+<area shape="rect" id="node4" href="$class_button_close_game_exception.html" title="Exception throw when the &quot;close game&quot; button is pressed on the main menu." alt="" coords="5,229,209,256"/>
+<area shape="rect" id="node2" href="$class_arcade_exception.html" title=" " alt="" coords="42,80,173,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="50,5,165,32"/>
 </map>

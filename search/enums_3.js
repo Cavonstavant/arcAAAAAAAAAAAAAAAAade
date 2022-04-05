@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['mouseclick_382',['MouseClick',['../structarcade_1_1_evt.html#affbcb5b311c30f0e677fe3623f416c8d',1,'arcade::Evt']]],
-  ['mousewheel_383',['MouseWheel',['../structarcade_1_1_evt.html#a1a823088ed73dbb47fab3f3b22b53d05',1,'arcade::Evt']]]
+  ['mouseclick_432',['MouseClick',['../struct_arcade_1_1_evt.html#ae249af493a4b25cc0ae0bd96b858f299',1,'Arcade::Evt']]],
+  ['mousewheel_433',['MouseWheel',['../struct_arcade_1_1_evt.html#aab25912fafe9cf68e8d6648e99574b21',1,'Arcade::Evt']]]
 ];

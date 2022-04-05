@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['pacman_322',['pacman',['../_pacman_8cpp.html#a78a9e699835b9f1072f407dbbe4acf91',1,'Pacman.cpp']]],
-  ['player_323',['Player',['../class_player.html#affe0cc3cb714f6deb4e62f0c0d3f1fd8',1,'Player']]]
+  ['object_362',['Object',['../class_object.html#a40860402e64d8008fb42329df7097cdb',1,'Object']]],
+  ['openlib_363',['openLib',['../class_lib_manager.html#a8fa91abc61c857427eae0a70c367ea7d',1,'LibManager']]],
+  ['operator_3d_364',['operator=',['../class_lib_manager.html#a84e8bc50673b4de646710eda756d7641',1,'LibManager']]]
 ];

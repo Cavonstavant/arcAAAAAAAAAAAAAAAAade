@@ -4,11 +4,11 @@ var dir_65cbf28349e5fe4342ed339b8328dba6 =
       [ "Color", "struct_color.html", "struct_color" ]
     ] ],
     [ "Event.hpp", "_event_8hpp.html", [
-      [ "Evt", "structarcade_1_1_evt.html", "structarcade_1_1_evt" ],
-      [ "MouseMove", "structarcade_1_1_evt_1_1_mouse_move.html", "structarcade_1_1_evt_1_1_mouse_move" ],
-      [ "MouseEvt", "structarcade_1_1_evt_1_1_mouse_evt.html", "structarcade_1_1_evt_1_1_mouse_evt" ],
-      [ "KeyEvt", "structarcade_1_1_evt_1_1_key_evt.html", "structarcade_1_1_evt_1_1_key_evt" ],
-      [ "ResizeEvt", "structarcade_1_1_evt_1_1_resize_evt.html", "structarcade_1_1_evt_1_1_resize_evt" ]
+      [ "Evt", "struct_arcade_1_1_evt.html", "struct_arcade_1_1_evt" ],
+      [ "MouseMove", "struct_arcade_1_1_evt_1_1_mouse_move.html", "struct_arcade_1_1_evt_1_1_mouse_move" ],
+      [ "MouseEvt", "struct_arcade_1_1_evt_1_1_mouse_evt.html", "struct_arcade_1_1_evt_1_1_mouse_evt" ],
+      [ "KeyEvt", "struct_arcade_1_1_evt_1_1_key_evt.html", "struct_arcade_1_1_evt_1_1_key_evt" ],
+      [ "ResizeEvt", "struct_arcade_1_1_evt_1_1_resize_evt.html", "struct_arcade_1_1_evt_1_1_resize_evt" ]
     ] ],
     [ "IEntity.hpp", "_i_entity_8hpp.html", [
       [ "IEntity", "class_i_entity.html", "class_i_entity" ]

@@ -11,8 +11,11 @@ var _exception_8hpp =
     [ "GraphException", "class_graph_exception.html", "class_graph_exception" ],
     [ "EntityException", "class_entity_exception.html", "class_entity_exception" ],
     [ "EventException", "class_event_exception.html", "class_event_exception" ],
+    [ "NotImplementedException", "class_not_implemented_exception.html", "class_not_implemented_exception" ],
     [ "VeryStupidUserException", "class_very_stupid_user_exception.html", "class_very_stupid_user_exception" ],
+    [ "ButtonCloseGameException", "class_button_close_game_exception.html", "class_button_close_game_exception" ],
     [ "ArcadeEX", "_exception_8hpp.html#a7b3deaa642cc474ad5eb24c1f52ab723", null ],
+    [ "ButtonCloseGameEX", "_exception_8hpp.html#a917530aa9d17a25247ddd1d5522fb810", null ],
     [ "EntityEX", "_exception_8hpp.html#ad8bc3f0a6eb4348a010994ce46704600", null ],
     [ "EventEX", "_exception_8hpp.html#aae84ad551a8690bf278696cf4d24b6e6", null ],
     [ "EX_PARAMS", "_exception_8hpp.html#af38aa357f9209e6ac8ac9a64b2c71bbe", null ],
@@ -35,5 +38,6 @@ var _exception_8hpp =
     [ "LOGGER_COLOR_RESET", "_exception_8hpp.html#a011fa8043c2689f76dad72c2c6eb31b6", null ],
     [ "LOGGER_COLOR_WHITE", "_exception_8hpp.html#a9a1d0bfc50d3760c6ec27e30aa74eff9", null ],
     [ "LOGGER_COLOR_YELLOW", "_exception_8hpp.html#a98277d3446d2917e7cb647b4d9fa15e7", null ],
+    [ "NotImplementedEX", "_exception_8hpp.html#a07b51301b1d8611a35b7f211d7f4bdcc", null ],
     [ "VeryStupidUserEX", "_exception_8hpp.html#a0ae399b5939ece8c60638d855d9db3c0", null ]
 ];

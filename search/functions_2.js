@@ -1,9 +1,8 @@
 var searchData=
 [
-  ['destroy_276',['destroy',['../class_i_game.html#a16b2d3d1d41a37043ad22e6dd509ef87',1,'IGame']]],
-  ['displaywindow_277',['displayWindow',['../class_i_graph.html#aaf5c58c4d40020a4ea7061e28460bbfc',1,'IGraph::displayWindow()'],['../class_sfml_library.html#afc30d8097e774b481dc16fd9062619ed',1,'SfmlLibrary::displayWindow()']]],
-  ['drawcircle_278',['drawCircle',['../class_i_graph.html#a408e82cec3770897b45ac60a178d844b',1,'IGraph::drawCircle()'],['../class_sfml_library.html#a467d926355b36d9b5db474d3b95df478',1,'SfmlLibrary::drawCircle()']]],
-  ['drawentity_279',['drawEntity',['../class_i_graph.html#a8d0017caa8afeffeb8ae5ef9d932afd8',1,'IGraph::drawEntity()'],['../class_sfml_library.html#a7bb07952336683a7baba6be49d588624',1,'SfmlLibrary::drawEntity()']]],
-  ['drawrect_280',['drawRect',['../class_i_graph.html#ae175c4f41741562b24ca0fdcd0bf9ced',1,'IGraph::drawRect()'],['../class_sfml_library.html#a9b6ca4f8bcf9efac1a68bbfe45749e59',1,'SfmlLibrary::drawRect()']]],
-  ['drawtext_281',['drawText',['../class_i_graph.html#a746bc1ba8e89f25de481e7fa0a109ba7',1,'IGraph::drawText()'],['../class_sfml_library.html#ab217db0d6daf0e73f5b15a082d667398',1,'SfmlLibrary::drawText()']]]
+  ['clearwindow_309',['clearWindow',['../class_i_graph.html#aea58cf7420416b15cd313048bd5e235a',1,'IGraph::clearWindow()'],['../class_sfml_library.html#ae80664835f474f6f812d5678d96c6939',1,'SfmlLibrary::clearWindow()']]],
+  ['closegamecallback_310',['closeGameCallback',['../_main_menu_8cpp.html#ad006637c705bf1b149abca54277adf48',1,'MainMenu.cpp']]],
+  ['closelib_311',['closeLib',['../class_lib_manager.html#afbf91c5c2fc723758b7f747c34a66d15',1,'LibManager']]],
+  ['color_312',['Color',['../struct_color.html#a6fae8aa8b75d27cb134234e75b41caf2',1,'Color::Color()=default'],['../struct_color.html#a63ed7a9b9001c892f901e32c2cae03aa',1,'Color::Color(int r, int g, int b, int a)']]],
+  ['critical_313',['CRITICAL',['../class_logger.html#acc36409db358f1c0dc363ee4469a212f',1,'Logger']]]
 ];

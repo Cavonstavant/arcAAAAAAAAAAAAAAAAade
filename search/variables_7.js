@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['modifier_367',['modifier',['../structarcade_1_1_evt_1_1_key_evt.html#ad1fa8a332d727d783903aa5cd0445604',1,'arcade::Evt::KeyEvt']]],
-  ['mouse_368',['mouse',['../structarcade_1_1_evt.html#a229f0c2b359db23dedd147b74d029e32',1,'arcade::Evt']]]
+  ['modifier_417',['modifier',['../struct_arcade_1_1_evt_1_1_key_evt.html#ab452f5845339fca8f453e7de69ed50e8',1,'Arcade::Evt::KeyEvt']]],
+  ['mouse_418',['mouse',['../struct_arcade_1_1_evt.html#a1bb5f218bd1f929c8ad2e5bdf9c77cf5',1,'Arcade::Evt']]]
 ];

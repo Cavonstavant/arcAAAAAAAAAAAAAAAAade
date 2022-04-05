@@ -95,6 +95,15 @@ $(document).ready(function(){initNavTree('class_i_game.html',''); initResizable(
  <a href="class_i_game.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_i_game_8hpp_source.html">IGame.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for IGame:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_game__inherit__graph.png" border="0" usemap="#_i_game_inherit__map" alt="Inheritance graph"/></div>
+<map name="_i_game_inherit__map" id="_i_game_inherit__map">
+<area shape="rect" title="Game instance." alt="" coords="18,5,83,32"/>
+<area shape="rect" href="class_main_menu.html" title=" " alt="" coords="5,80,96,107"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -108,33 +117,22 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad800d719140d57a75cc285bfb452cc48"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_game.html#ad800d719140d57a75cc285bfb452cc48">IGame</a> ()=default</td></tr>
-<tr class="separator:ad800d719140d57a75cc285bfb452cc48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91b14c1b6019364120d5c5e4d4c64414"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_game.html#a91b14c1b6019364120d5c5e4d4c64414">~IGame</a> ()=default</td></tr>
 <tr class="separator:a91b14c1b6019364120d5c5e4d4c64414"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79f62f576a5cf86a8c2c0f25fd75b885"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_game.html#a79f62f576a5cf86a8c2c0f25fd75b885">setup</a> (<a class="el" href="class_i_graph.html">IGraph</a> &amp;display)=0</td></tr>
-<tr class="memdesc:a79f62f576a5cf86a8c2c0f25fd75b885"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize a game instance.  <a href="class_i_game.html#a79f62f576a5cf86a8c2c0f25fd75b885">More...</a><br /></td></tr>
-<tr class="separator:a79f62f576a5cf86a8c2c0f25fd75b885"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16b2d3d1d41a37043ad22e6dd509ef87"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_game.html#a16b2d3d1d41a37043ad22e6dd509ef87">destroy</a> ()=0</td></tr>
-<tr class="memdesc:a16b2d3d1d41a37043ad22e6dd509ef87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy a game instance.  <a href="class_i_game.html#a16b2d3d1d41a37043ad22e6dd509ef87">More...</a><br /></td></tr>
-<tr class="separator:a16b2d3d1d41a37043ad22e6dd509ef87"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15327ab5de7c3c3d3ea7fc48dc6fdf26"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_game.html#a15327ab5de7c3c3d3ea7fc48dc6fdf26">setDisplay</a> (<a class="el" href="class_i_graph.html">IGraph</a> &amp;display)=0</td></tr>
-<tr class="memdesc:a15327ab5de7c3c3d3ea7fc48dc6fdf26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the game's display.  <a href="class_i_game.html#a15327ab5de7c3c3d3ea7fc48dc6fdf26">More...</a><br /></td></tr>
-<tr class="separator:a15327ab5de7c3c3d3ea7fc48dc6fdf26"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8069181438736ca6924cd0930c5bdfe"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_game.html#af8069181438736ca6924cd0930c5bdfe">update</a> (<a class="el" href="class_i_game.html#a4a7309d86599d6e581f764233085c7dd">GameState</a> state)=0</td></tr>
-<tr class="memdesc:af8069181438736ca6924cd0930c5bdfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the game's status.  <a href="class_i_game.html#af8069181438736ca6924cd0930c5bdfe">More...</a><br /></td></tr>
-<tr class="separator:af8069181438736ca6924cd0930c5bdfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a025e62ee4c27e2e9f83ebae85dea9e9c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_game.html#a025e62ee4c27e2e9f83ebae85dea9e9c">update</a> (std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_i_entity.html">IEntity</a> &gt;&gt; &amp;entities, std::stack&lt; <a class="el" href="struct_arcade_1_1_evt.html">Arcade::Evt</a> &gt; &amp;events)=0</td></tr>
+<tr class="memdesc:a025e62ee4c27e2e9f83ebae85dea9e9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the game's status.  <a href="class_i_game.html#a025e62ee4c27e2e9f83ebae85dea9e9c">More...</a><br /></td></tr>
+<tr class="separator:a025e62ee4c27e2e9f83ebae85dea9e9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a44de7e08e7ee294be051445a84306299"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_i_game.html#a4a7309d86599d6e581f764233085c7dd">GameState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_game.html#a44de7e08e7ee294be051445a84306299">getState</a> () const =0</td></tr>
 <tr class="memdesc:a44de7e08e7ee294be051445a84306299"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the game's status.  <a href="class_i_game.html#a44de7e08e7ee294be051445a84306299">More...</a><br /></td></tr>
 <tr class="separator:a44de7e08e7ee294be051445a84306299"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1054f8839203aff00de286e06dfb0788"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_game.html#a1054f8839203aff00de286e06dfb0788">start</a> ()=0</td></tr>
-<tr class="memdesc:a1054f8839203aff00de286e06dfb0788"><td class="mdescLeft">&#160;</td><td class="mdescRight">starts the game  <a href="class_i_game.html#a1054f8839203aff00de286e06dfb0788">More...</a><br /></td></tr>
-<tr class="separator:a1054f8839203aff00de286e06dfb0788"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdc3543ee754cecb7eb156f05ce5869d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_game.html#abdc3543ee754cecb7eb156f05ce5869d">start</a> ()=0</td></tr>
+<tr class="memdesc:abdc3543ee754cecb7eb156f05ce5869d"><td class="mdescLeft">&#160;</td><td class="mdescRight">starts the game  <a href="class_i_game.html#abdc3543ee754cecb7eb156f05ce5869d">More...</a><br /></td></tr>
+<tr class="separator:abdc3543ee754cecb7eb156f05ce5869d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Game instance. </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_game_8hpp_source.html#l00016">16</a> of file <a class="el" href="_i_game_8hpp_source.html">IGame.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_game_8hpp_source.html#l00020">20</a> of file <a class="el" href="_i_game_8hpp_source.html">IGame.hpp</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="a4a7309d86599d6e581f764233085c7dd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4a7309d86599d6e581f764233085c7dd">&#9670;&nbsp;</a></span>GameState</h2>
@@ -168,36 +166,11 @@ Public Member Functions</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="_i_game_8hpp_source.html#l00019">19</a> of file <a class="el" href="_i_game_8hpp_source.html">IGame.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_game_8hpp_source.html#l00023">23</a> of file <a class="el" href="_i_game_8hpp_source.html">IGame.hpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ad800d719140d57a75cc285bfb452cc48"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad800d719140d57a75cc285bfb452cc48">&#9670;&nbsp;</a></span>IGame()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">IGame::IGame </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a91b14c1b6019364120d5c5e4d4c64414"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a91b14c1b6019364120d5c5e4d4c64414">&#9670;&nbsp;</a></span>~IGame()</h2>
 
@@ -224,35 +197,6 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a16b2d3d1d41a37043ad22e6dd509ef87"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a16b2d3d1d41a37043ad22e6dd509ef87">&#9670;&nbsp;</a></span>destroy()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool IGame::destroy </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Destroy a game instance. </p>
-<dl class="section return"><dt>Returns</dt><dd>true if the game was successfully destroyed </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>Calling this method twice without calling <a class="el" href="class_i_game.html#a79f62f576a5cf86a8c2c0f25fd75b885" title="Initialize a game instance.">IGame::setup()</a> beforehand will result in <b>undefined behavior</b> </dd></dl>
-
-</div>
-</div>
 <a id="a44de7e08e7ee294be051445a84306299"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a44de7e08e7ee294be051445a84306299">&#9670;&nbsp;</a></span>getState()</h2>
 
@@ -278,12 +222,13 @@ Public Member Functions</h2></td></tr>
 
 <p>Get the game's status. </p>
 <dl class="section return"><dt>Returns</dt><dd>the game's status </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>Calling this method without calling <a class="el" href="class_i_game.html#a79f62f576a5cf86a8c2c0f25fd75b885" title="Initialize a game instance.">IGame::setup()</a> beforehand will result in <b>undefined behavior</b> </dd></dl>
+
+<p>Implemented in <a class="el" href="class_main_menu.html#aae6fc744adbe076dc07356ae6e1a322d">MainMenu</a>.</p>
 
 </div>
 </div>
-<a id="a15327ab5de7c3c3d3ea7fc48dc6fdf26"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a15327ab5de7c3c3d3ea7fc48dc6fdf26">&#9670;&nbsp;</a></span>setDisplay()</h2>
+<a id="abdc3543ee754cecb7eb156f05ce5869d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdc3543ee754cecb7eb156f05ce5869d">&#9670;&nbsp;</a></span>start()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -292,74 +237,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool IGame::setDisplay </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_i_graph.html">IGraph</a> &amp;&#160;</td>
-          <td class="paramname"><em>display</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Update the game's display. </p>
-<dl class="section return"><dt>Returns</dt><dd>true if the game was successfully updated </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>Calling this method without calling <a class="el" href="class_i_game.html#a79f62f576a5cf86a8c2c0f25fd75b885" title="Initialize a game instance.">IGame::setup()</a> beforehand will result in <b>undefined behavior</b> </dd></dl>
-
-</div>
-</div>
-<a id="a79f62f576a5cf86a8c2c0f25fd75b885"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a79f62f576a5cf86a8c2c0f25fd75b885">&#9670;&nbsp;</a></span>setup()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool IGame::setup </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_i_graph.html">IGraph</a> &amp;&#160;</td>
-          <td class="paramname"><em>display</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Initialize a game instance. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">display</td><td>a display instance to use </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true if the game was successfully initialized </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>Each call to the method must be followed by a call to <a class="el" href="class_i_game.html#a16b2d3d1d41a37043ad22e6dd509ef87" title="Destroy a game instance.">IGame::destroy()</a> </dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>Calling this method twice without calling <a class="el" href="class_i_game.html#a16b2d3d1d41a37043ad22e6dd509ef87" title="Destroy a game instance.">IGame::destroy()</a> beforehand will result in <b>undefined behavior</b> </dd></dl>
-
-</div>
-</div>
-<a id="a1054f8839203aff00de286e06dfb0788"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1054f8839203aff00de286e06dfb0788">&#9670;&nbsp;</a></span>start()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool IGame::start </td>
+          <td class="memname">virtual void IGame::start </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -373,13 +251,13 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>starts the game </p>
-<dl class="section return"><dt>Returns</dt><dd>true if the game was successfully started </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>Calling this method without calling <a class="el" href="class_i_game.html#a79f62f576a5cf86a8c2c0f25fd75b885" title="Initialize a game instance.">IGame::setup()</a> beforehand will result in <b>undefined behavior</b> </dd></dl>
+
+<p>Implemented in <a class="el" href="class_main_menu.html#af13a5defbd470cb18edc59d14668aaf4">MainMenu</a>.</p>
 
 </div>
 </div>
-<a id="af8069181438736ca6924cd0930c5bdfe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af8069181438736ca6924cd0930c5bdfe">&#9670;&nbsp;</a></span>update()</h2>
+<a id="a025e62ee4c27e2e9f83ebae85dea9e9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a025e62ee4c27e2e9f83ebae85dea9e9c">&#9670;&nbsp;</a></span>update()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -388,11 +266,21 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool IGame::update </td>
+          <td class="memname">virtual void IGame::update </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_i_game.html#a4a7309d86599d6e581f764233085c7dd">GameState</a>&#160;</td>
-          <td class="paramname"><em>state</em></td><td>)</td>
+          <td class="paramtype">std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_i_entity.html">IEntity</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>entities</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">std::stack&lt; <a class="el" href="struct_arcade_1_1_evt.html">Arcade::Evt</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>events</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -405,12 +293,13 @@ Public Member Functions</h2></td></tr>
 <p>Update the game's status. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">state</td><td>the new game's status </td></tr>
+    <tr><td class="paramname">entities</td><td>The entity vector of the game </td></tr>
+    <tr><td class="paramname">events</td><td>The event stack of the game </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true if the game was successfully updated </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>Calling this method without calling <a class="el" href="class_i_game.html#a79f62f576a5cf86a8c2c0f25fd75b885" title="Initialize a game instance.">IGame::setup()</a> beforehand will result in <b>undefined behavior</b> </dd></dl>
+
+<p>Implemented in <a class="el" href="class_main_menu.html#a119181be29b1e19051e50fbd855c9217">MainMenu</a>.</p>
 
 </div>
 </div>

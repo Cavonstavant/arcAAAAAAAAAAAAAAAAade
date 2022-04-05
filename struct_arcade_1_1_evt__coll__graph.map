@@ -1,0 +1,6 @@
+<map id="Arcade::Evt" name="Arcade::Evt">
+<area shape="rect" id="node1" title="Represents a generic event interface this interface is shared across all the graphical libraries." alt="" coords="215,109,311,136"/>
+<area shape="rect" id="node2" href="$struct_arcade_1_1_evt_1_1_key_evt.html" title="represents a key event parameters" alt="" coords="5,13,155,39"/>
+<area shape="rect" id="node3" href="$struct_arcade_1_1_evt_1_1_mouse_evt.html" title=" " alt="" coords="179,5,347,47"/>
+<area shape="rect" id="node4" href="$struct_arcade_1_1_evt_1_1_resize_evt.html" title=" " alt="" coords="371,5,539,47"/>
+</map>
