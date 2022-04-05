@@ -10,7 +10,7 @@
 AEntity::AEntity()
 {
     _pos = std::make_pair(0, 0);
-    _size = std::make_pair(32, 32);
+    _size = std::make_pair(1, 1);
     _isMoving = false;
     _texturePath = "";
     _termTexture = std::make_pair('x', std::make_pair(Color::TermColors::WHITE, Color::TermColors::BLACK));
