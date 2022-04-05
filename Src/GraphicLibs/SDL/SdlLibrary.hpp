@@ -34,6 +34,7 @@ class SdlLibrary : public IGraph<int> {
                       const std::string &content) override;
         bool drawEntity(IEntity &entity,
                         std::pair<int, int> pos) override;
+
     private:
         /// \brief SDL window using to display every entities. Centered Window by default
         SDL_Window *_window;
@@ -43,4 +44,4 @@ class SdlLibrary : public IGraph<int> {
 };
 
 
-#endif //ARCADE_SDLLIBRARY_HPP
+#endif//ARCADE_SDLLIBRARY_HPP
