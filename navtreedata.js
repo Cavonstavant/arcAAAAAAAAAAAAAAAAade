@@ -23,7 +23,7 @@ for the JavaScript code in this file
 var NAVTREE =
 [
   [ "arcAAAAAAAAAAAAAAAAade", "index.html", [
-    [ "arcAAAAAAAAAAAAAAAAade <a href=\"https://github.com/Cavonstavant/arcAAAAAAAAAAAAAAAAade/actions/workflows/cmake.yml\"><img src=\"https://github.com/Cavonstavant/arcAAAAAAAAAAAAAAAAade/actions/workflows/cmake.yml/badge.svg\" alt=\"Build\"/></a> <a href=\"https://github.com/Cavonstavant/arcAAAAAAAAAAAAAAAAade/actions/workflows/doc_build.yml\"><img src=\"https://github.com/Cavonstavant/arcAAAAAAAAAAAAAAAAade/actions/workflows/doc_build.yml/badge.svg\" alt=\"GH Pages deployment\"/></a> <a href=\"https://github.com/Cavonstavant/arcAAAAAAAAAAAAAAAAade/actions/workflows/mirroring.yml\"><img src=\"https://github.com/Cavonstavant/arcAAAAAAAAAAAAAAAAade/actions/workflows/mirroring.yml/badge.svg\" alt=\"Mirroring\"/></a>", "index.html", [
+    [ "arcAAAAAAAAAAAAAAAAade <a href=\"https://github.com/Cavonstavant/arcAAAAAAAAAAAAAAAAade/actions/workflows/cmake.yml\"><img src=\"https://github.com/Cavonstavant/arcAAAAAAAAAAAAAAAAade/actions/workflows/cmake.yml/badge.svg\" alt=\"Build\"/></a> <a href=\"https://github.com/Cavonstavant/arcAAAAAAAAAAAAAAAAade/actions/workflows/doc_build.yml\"><img src=\"https://github.com/Cavonstavant/arcAAAAAAAAAAAAAAAAade/actions/workflows/doc_build.yml/badge.svg\" alt=\"GH Pages deployment\"/></a> <a href=\"https://github.com/Cavonstavant/arcAAAAAAAAAAAAAAAAade/actions/workflows/mirroring.yml\"><img src=\"https://github.com/Cavonstavant/arcAAAAAAAAAAAAAAAAade/actions/workflows/mirroring.yml/badge.svg\" alt=\"Mirroring\"/></a>", "index.html#autotoc_md0", [
       [ "Documentation", "index.html#autotoc_md1", null ],
       [ "Build", "index.html#autotoc_md2", [
         [ "Tools", "index.html#autotoc_md3", null ],
