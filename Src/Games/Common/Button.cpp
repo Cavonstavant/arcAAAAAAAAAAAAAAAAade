@@ -7,8 +7,10 @@
 
 #include "Button.hpp"
 
-Button::Button()
+Button::Button(std::function<void()> callbackParam, std::string actionString)
 {
+    callback = callbackParam;
+    _actionString = actionString;
 }
 
 Button::~Button()
