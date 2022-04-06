@@ -28,7 +28,7 @@ bool SfmlLibrary::displayWindow()
     return true;
 }
 
-bool SfmlLibrary::drawCircle(std::pair<float, float> pos, float radius, Color color)
+bool SfmlLibrary::drawCircle(std::pair<int, int> pos, int radius, Color color)
 {
     sf::CircleShape circleShape;
     sf::Color circleColor;
@@ -44,7 +44,7 @@ bool SfmlLibrary::drawCircle(std::pair<float, float> pos, float radius, Color co
     return true;
 }
 
-bool SfmlLibrary::drawRect(std::pair<float, float> pos, float width, float height, Color color)
+bool SfmlLibrary::drawRect(std::pair<int, int> pos, int width, int height, Color color)
 {
     sf::RectangleShape rectangleShape;
     sf::Color rectangleColor;
@@ -60,7 +60,7 @@ bool SfmlLibrary::drawRect(std::pair<float, float> pos, float width, float heigh
     return true;
 }
 
-bool SfmlLibrary::drawText(std::pair<float, float> pos, const std::string &content)
+bool SfmlLibrary::drawText(std::pair<int, int> pos, const std::string &content)
 {
     sf::Text text;
 
@@ -72,7 +72,7 @@ bool SfmlLibrary::drawText(std::pair<float, float> pos, const std::string &conte
     return true;
 }
 
-bool SfmlLibrary::drawEntity(IEntity &entity, std::pair<float, float> pos)
+bool SfmlLibrary::drawEntity(IEntity &entity, std::pair<int, int> pos)
 {
     sf::Texture texture;
     sf::Sprite sprite;
