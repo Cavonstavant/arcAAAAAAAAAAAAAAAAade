@@ -10,6 +10,7 @@
 
 #include "Color.hpp"
 #include "Grid.hpp"
+#include "Event.hpp"
 #include "IEntity.hpp"
 #include <string>
 
@@ -57,8 +58,13 @@ class IGraph {
         /// \return true if the window is successfully displayed
         virtual bool displayWindow() = 0;
 
-        /// \brief get the graphical lib
-        virtual std::string getName() const = 0;
+        /// \brief get input from Graphic Library to send it to the Core
+        /// \return Arcade::Evt representing the keyboard pressed of the event triggered
+        virtual Arcade::Evt getInput() const = 0;
+
+        /// \brief get name of the library currently used
+        /// \return std::string libraryName
+        virtual std::string getLibraryName() const = 0;
 
     protected:
     private:

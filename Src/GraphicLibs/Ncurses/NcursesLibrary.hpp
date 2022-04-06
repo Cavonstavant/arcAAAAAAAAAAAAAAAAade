@@ -9,6 +9,7 @@
 #define ARCADE_NCURSESLIBRARY_HPP
 
 #include "../../CommonInterface/include/IGraph.hpp"
+#include "Event.hpp"
 #include <ncurses.h>
 
 /// \brief NCURSES library using int as template value from IGraph
@@ -32,8 +33,10 @@ class NcursesLibrary : public IGraph {
         bool drawEntity(IEntity &entity,
                         std::pair<int, int> pos) override;
 
+        std::string getLibraryName() const override final;
+        Arcade::Evt getInput() const;
+
     private:
 };
-
 
 #endif//ARCADE_NCURSESLIBRARY_HPP
