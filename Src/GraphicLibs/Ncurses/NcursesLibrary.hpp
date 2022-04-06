@@ -33,7 +33,7 @@ class NcursesLibrary : public IGraph {
         bool drawEntity(IEntity &entity,
                         std::pair<int, int> pos) override;
 
-        std::string getName() const override final;
+        std::string getLibraryName() const override final;
         Arcade::Evt getInput();
 
     private:

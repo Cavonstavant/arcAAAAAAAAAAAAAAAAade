@@ -81,7 +81,7 @@ bool NcursesLibrary::drawEntity(IEntity &entity, std::pair<int, int> pos)
     return true;
 }
 
-std::string NcursesLibrary::getName() const
+std::string NcursesLibrary::getLibraryName() const
 {
     return "Ncurses";
 }
