@@ -12,6 +12,14 @@
 #include "IEntity.hpp"
 #include <string>
 
+#ifndef DEFAULT_WINDOW_WIDTH
+    #define DEFAULT_WINDOW_WIDTH 1024
+#endif
+
+#ifndef DEFAULT_WINDOW_HEIGHT
+    #define DEFAULT_WINDOW_HEIGHT 1024
+#endif
+
 #ifndef GRID_INT
     #define GRID_INT(x) x * 32
 #endif
