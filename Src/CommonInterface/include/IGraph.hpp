@@ -12,6 +12,9 @@
 #include "IEntity.hpp"
 #include <string>
 
+#define GRID_INT(x) x * 32
+#define GRID_PAIR(x) std::make_pair(GRID_INT(x.first), GRID_INT(x.second))
+
 /// \brief represents a generic graphical library
 class IGraph {
 

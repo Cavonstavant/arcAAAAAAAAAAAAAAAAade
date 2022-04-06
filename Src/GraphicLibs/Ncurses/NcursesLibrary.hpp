@@ -12,7 +12,7 @@
 #include <ncurses.h>
 
 /// \brief NCURSES library using int as template value from IGraph
-class NcursesLibrary : public IGraph<int> {
+class NcursesLibrary : public IGraph {
     public:
         /// \brief Constructor
         NcursesLibrary();

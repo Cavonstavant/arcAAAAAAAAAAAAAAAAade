@@ -14,7 +14,7 @@
 #include <SFML/Window.hpp>
 
 /// \brief SFML library using float as template value from IGraph
-class SfmlLibrary : public IGraph<float> {
+class SfmlLibrary : public IGraph {
     public:
         /// \brief Default Constructor
         SfmlLibrary();
