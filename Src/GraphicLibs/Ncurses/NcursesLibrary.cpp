@@ -85,3 +85,25 @@ std::string NcursesLibrary::getName() const
 {
     return "Ncurses";
 }
+
+Arcade::Evt getInput()
+{
+    Arcade::Evt evt;
+    int ch = getch();
+
+    switch (ch) {
+        case KEY_UP:
+            evt.key.key = Arcade::Evt::UP;
+            break;
+        case KEY_DOWN:
+            evt.key.key = Arcade::Evt::DOWN;
+            break;
+        case KEY_LEFT:
+            evt.key.key = Arcade::Evt::LEFT;
+            break;
+        case KEY_RIGHT:
+            evt.key.key = Arcade::Evt::RIGHT;
+            break;
+    }
+    return evt;
+}
