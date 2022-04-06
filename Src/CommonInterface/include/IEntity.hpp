@@ -52,7 +52,6 @@ class IEntity {
         /// \brief Set the Entity direction
         /// \param direction the direction of the entity
         virtual void setDirection(Direction direction) = 0;
-
 };
 
 #endif /* !IENTITY_HPP_ */
