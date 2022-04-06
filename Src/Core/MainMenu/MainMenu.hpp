@@ -16,9 +16,12 @@
 class MainMenu : public IGame {
     public:
         /// \brief Constructor
-        MainMenu(std::vector<std::shared_ptr<IEntity>> &entities);
+        MainMenu();
         /// \brief Destructor
         ~MainMenu();
+
+        /// \brief Initialize the menu
+        void init(std::vector<std::shared_ptr<IEntity>> &entities) override;
 
         /// \brief Update the game's entities
         /// \param entities The entity vector of the game
@@ -29,8 +32,9 @@ class MainMenu : public IGame {
         GameState getState() const { return _gameState; }
         /// \brief starts the game
         void start();
-        /// \brief Get the menu's name
-        inline std::string getName() const override final { return "MainMenu"; }
+        /// \brief get the library name
+        /// \return the library name
+        std::string getLibraryName() const;
 
     protected:
     private:

@@ -34,6 +34,9 @@ class IGame {
 
         virtual ~IGame() = default;
 
+        /// Initialize the game
+        virtual void init(std::vector<std::shared_ptr<IEntity>> &entities) = 0;
+
         /// \brief Update the game's status
         /// \param entities The entity vector of the game
         /// \param events The event stack of the game

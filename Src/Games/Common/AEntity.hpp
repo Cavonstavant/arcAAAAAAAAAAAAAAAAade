@@ -60,12 +60,21 @@ class AEntity : public IEntity {
         /// \return the char and colors of the entity for the terminal graphical libraries
         std::pair<char, std::pair<Color::TermColors, Color::TermColors>> getTermTexture(void) const override;
 
+        /// \brief Get the Entity direction
+        /// \return the direction of the entity
+        Direction getDirection() const override;
+
+        /// \brief Set the Entity direction
+        /// \param direction the direction of the entity
+        void setDirection(Direction direction) override;
+
     protected:
         std::pair<int, int> _pos;
         std::pair<int, int> _size;
         bool _isMoving;
         std::string _texturePath;
         std::pair<char, std::pair<Color::TermColors, Color::TermColors>> _termTexture;
+        Direction _direction;
 
     private:
 };
