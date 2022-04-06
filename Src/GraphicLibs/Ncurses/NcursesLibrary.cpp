@@ -80,3 +80,8 @@ bool NcursesLibrary::drawEntity(IEntity &entity, std::pair<int, int> pos)
     reset_color_pairs();
     return true;
 }
+
+std::string NcursesLibrary::getName() const
+{
+    return "Ncurses";
+}
