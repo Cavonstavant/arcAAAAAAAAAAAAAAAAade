@@ -7,5 +7,6 @@ var class_i_graph =
     [ "drawEntity", "class_i_graph.html#a86710ad76190aafbdf76941ce89a34f3", null ],
     [ "drawRect", "class_i_graph.html#a7963d277bd33308a52c3029214e875a0", null ],
     [ "drawText", "class_i_graph.html#a33dcccbd047be436bf9ace4347071f56", null ],
-    [ "getName", "class_i_graph.html#a5e10cd40988838195e997e5e50eeca0d", null ]
+    [ "getInput", "class_i_graph.html#ae5503da735e8b53775b3db3acaaddb35", null ],
+    [ "getLibraryName", "class_i_graph.html#a0fe3553730537498ece20183673d7cbb", null ]
 ];

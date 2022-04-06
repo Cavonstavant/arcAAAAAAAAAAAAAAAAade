@@ -129,14 +129,17 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a703f8faaae8cb3b339b8686e5f442f81"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graph.html#a703f8faaae8cb3b339b8686e5f442f81">displayWindow</a> ()=0</td></tr>
 <tr class="memdesc:a703f8faaae8cb3b339b8686e5f442f81"><td class="mdescLeft">&#160;</td><td class="mdescRight">display the window  <a href="class_i_graph.html#a703f8faaae8cb3b339b8686e5f442f81">More...</a><br /></td></tr>
 <tr class="separator:a703f8faaae8cb3b339b8686e5f442f81"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e10cd40988838195e997e5e50eeca0d"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graph.html#a5e10cd40988838195e997e5e50eeca0d">getName</a> () const =0</td></tr>
-<tr class="memdesc:a5e10cd40988838195e997e5e50eeca0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the graphical lib  <a href="class_i_graph.html#a5e10cd40988838195e997e5e50eeca0d">More...</a><br /></td></tr>
-<tr class="separator:a5e10cd40988838195e997e5e50eeca0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5503da735e8b53775b3db3acaaddb35"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="struct_arcade_1_1_evt.html">Arcade::Evt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graph.html#ae5503da735e8b53775b3db3acaaddb35">getInput</a> ()=0</td></tr>
+<tr class="memdesc:ae5503da735e8b53775b3db3acaaddb35"><td class="mdescLeft">&#160;</td><td class="mdescRight">get input from Graphic Library to send it to the Core  <a href="class_i_graph.html#ae5503da735e8b53775b3db3acaaddb35">More...</a><br /></td></tr>
+<tr class="separator:ae5503da735e8b53775b3db3acaaddb35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fe3553730537498ece20183673d7cbb"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graph.html#a0fe3553730537498ece20183673d7cbb">getLibraryName</a> ()=0</td></tr>
+<tr class="memdesc:a0fe3553730537498ece20183673d7cbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">get name of the library currently used  <a href="class_i_graph.html#a0fe3553730537498ece20183673d7cbb">More...</a><br /></td></tr>
+<tr class="separator:a0fe3553730537498ece20183673d7cbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>represents a generic graphical library </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_graph_8hpp_source.html#l00023">23</a> of file <a class="el" href="_i_graph_8hpp_source.html">IGraph.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graph_8hpp_source.html#l00024">24</a> of file <a class="el" href="_i_graph_8hpp_source.html">IGraph.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a12f681e7abc397a40abd4abae7b8104c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a12f681e7abc397a40abd4abae7b8104c">&#9670;&nbsp;</a></span>~IGraph()</h2>
@@ -439,8 +442,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a5e10cd40988838195e997e5e50eeca0d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e10cd40988838195e997e5e50eeca0d">&#9670;&nbsp;</a></span>getName()</h2>
+<a id="ae5503da735e8b53775b3db3acaaddb35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5503da735e8b53775b3db3acaaddb35">&#9670;&nbsp;</a></span>getInput()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -449,10 +452,10 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual std::string IGraph::getName </td>
+          <td class="memname">virtual <a class="el" href="struct_arcade_1_1_evt.html">Arcade::Evt</a> IGraph::getInput </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td></td>
         </tr>
       </table>
   </td>
@@ -462,7 +465,36 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>get the graphical lib </p>
+<p>get input from Graphic Library to send it to the Core </p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="struct_arcade_1_1_evt.html" title="Represents a generic event interface this interface is shared across all the graphical libraries.">Arcade::Evt</a> representing the keyboard pressed of the event triggered </dd></dl>
+
+</div>
+</div>
+<a id="a0fe3553730537498ece20183673d7cbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fe3553730537498ece20183673d7cbb">&#9670;&nbsp;</a></span>getLibraryName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string IGraph::getLibraryName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>get name of the library currently used </p>
+<dl class="section return"><dt>Returns</dt><dd>std::string libraryName </dd></dl>
 
 </div>
 </div>

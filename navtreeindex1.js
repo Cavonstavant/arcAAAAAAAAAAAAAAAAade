@@ -1,5 +1,6 @@
 var NAVTREEINDEX1 =
 {
+"class_not_implemented_exception.html":[3,0,24],
 "class_not_implemented_exception.html#aa64759e5effb1f917f668b5f00754d78":[3,0,24,0],
 "class_object.html":[3,0,25],
 "class_object.html#a2c4b4b2dd6d8ea29c71006a35d007912":[3,0,25,8],
@@ -105,8 +106,8 @@ var NAVTREEINDEX1 =
 "globals_defs.html":[4,1,2],
 "globals_func.html":[4,1,1],
 "hierarchy.html":[3,2],
-"index.html":[],
 "index.html":[0],
+"index.html":[],
 "index.html#autotoc_md1":[0,0],
 "index.html#autotoc_md2":[0,1],
 "index.html#autotoc_md3":[0,1,0],

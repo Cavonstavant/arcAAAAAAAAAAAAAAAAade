@@ -1,6 +1,7 @@
 <map id="Src/CommonInterface/include/IGraph.hpp" name="Src/CommonInterface/include/IGraph.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="31,5,193,47"/>
-<area shape="rect" id="node2" href="$_color_8hpp.html" title=" " alt="" coords="5,169,88,196"/>
-<area shape="rect" id="node3" href="$_i_entity_8hpp.html" title=" " alt="" coords="67,95,157,121"/>
-<area shape="rect" id="node4" title=" " alt="" coords="147,169,205,196"/>
+<area shape="rect" id="node1" title=" " alt="" coords="41,5,203,47"/>
+<area shape="rect" id="node2" href="$_color_8hpp.html" title=" " alt="" coords="35,169,118,196"/>
+<area shape="rect" id="node3" href="$_event_8hpp.html" title=" " alt="" coords="23,95,109,121"/>
+<area shape="rect" id="node4" href="$_i_entity_8hpp.html" title=" " alt="" coords="134,95,225,121"/>
+<area shape="rect" id="node5" title=" " alt="" coords="191,169,250,196"/>
 </map>

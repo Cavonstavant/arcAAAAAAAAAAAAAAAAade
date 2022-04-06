@@ -202,14 +202,15 @@ var NAVTREEINDEX0 =
 "class_i_game.html#aa69690645ce61b4214a53cc4e27a463c":[3,0,16,2],
 "class_i_game.html#abdc3543ee754cecb7eb156f05ce5869d":[3,0,16,4],
 "class_i_graph.html":[3,0,17],
+"class_i_graph.html#a0fe3553730537498ece20183673d7cbb":[3,0,17,8],
 "class_i_graph.html#a12f681e7abc397a40abd4abae7b8104c":[3,0,17,0],
 "class_i_graph.html#a33dcccbd047be436bf9ace4347071f56":[3,0,17,6],
-"class_i_graph.html#a5e10cd40988838195e997e5e50eeca0d":[3,0,17,7],
 "class_i_graph.html#a703f8faaae8cb3b339b8686e5f442f81":[3,0,17,2],
 "class_i_graph.html#a7963d277bd33308a52c3029214e875a0":[3,0,17,5],
 "class_i_graph.html#a86710ad76190aafbdf76941ce89a34f3":[3,0,17,4],
 "class_i_graph.html#ac3a39c636d2e479e9f7dd90a6a5a7f17":[3,0,17,3],
 "class_i_graph.html#ad093f704c4f0c13bc42ca4e494b76d20":[3,0,17,1],
+"class_i_graph.html#ae5503da735e8b53775b3db3acaaddb35":[3,0,17,7],
 "class_invalid_file_exception.html":[3,0,18],
 "class_invalid_file_exception.html#a57aea782c01c5297ffae058b27f33bde":[3,0,18,0],
 "class_lib_manager.html":[3,0,19],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "class_ncurses_library.html#a93bf71e09ac11a04b06fd14325d52d8b":[3,0,23,2],
 "class_ncurses_library.html#ac0a48a9ee57aee1650f9ba16c02e6b99":[3,0,23,5],
 "class_ncurses_library.html#ac9ce386c4a4e02e7aa467bbfe2e92999":[3,0,23,3],
-"class_ncurses_library.html#aeb2f2b3deaffaf2648d9de8e8895c1ac":[3,0,23,4],
-"class_not_implemented_exception.html":[3,0,24]
+"class_ncurses_library.html#aeb2f2b3deaffaf2648d9de8e8895c1ac":[3,0,23,4]
 };
