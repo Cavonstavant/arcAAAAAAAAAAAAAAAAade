@@ -14,10 +14,10 @@
 /// \brief NCURSES library using int as template value from IGraph
 class NcursesLibrary : public IGraph {
     public:
-        /// \brief Constructor
+        /// \brief Constructor (calls initscr)
         NcursesLibrary();
 
-        /// \brief Destructor
+        /// \brief Destructor (calls endscr)
         ~NcursesLibrary();
 
         bool clearWindow() override;

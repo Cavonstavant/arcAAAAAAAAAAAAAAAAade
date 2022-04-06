@@ -31,7 +31,10 @@ bool NcursesLibrary::displayWindow()
 
 bool NcursesLibrary::drawCircle(std::pair<int, int> pos, int radius, Color color)
 {
-    return false;
+    std::pair<int, int> topLeftCorner = pos;
+    topLeftCorner.first -= (radius / 2);
+    topLeftCorner.second -= (radius / 2);
+    return drawRect(topLeftCorner, radius * 2, radius * 2, color);
 }
 
 bool NcursesLibrary::drawRect(std::pair<int, int> pos, int width, int height, Color color)
