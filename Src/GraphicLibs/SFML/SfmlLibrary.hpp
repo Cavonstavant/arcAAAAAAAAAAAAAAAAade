@@ -8,7 +8,8 @@
 #ifndef ARCADE_SFMLLIBRARY_HPP
 #define ARCADE_SFMLLIBRARY_HPP
 
-#include "../../CommonInterface/include/IGraph.hpp"
+#include "Event.hpp"
+#include "IGraph.hpp"
 #include <SFML/Graphics.hpp>
 #include <SFML/System.hpp>
 #include <SFML/Window.hpp>
@@ -17,10 +18,13 @@
 class SfmlLibrary : public IGraph {
     public:
         /// \brief Default Constructor
+        /// Creating & Initializing the window
+        /// Loading the member _font for Resources. ARCADE_N.TTF as default font
         SfmlLibrary();
 
         /// \brief Default destructor
-        ~SfmlLibrary() = default;
+        /// Closing window previously opened in constructor
+        ~SfmlLibrary();
 
         bool clearWindow() override;
         bool displayWindow() override;
@@ -33,7 +37,8 @@ class SfmlLibrary : public IGraph {
                       const std::string &content) override;
         bool drawEntity(IEntity &entity,
                         std::pair<int, int> pos) override;
-        inline std::string getName() const override final { return _name;}
+        Arcade::Evt getInput() const override;
+        std::string getLibraryName() const override;
 
     private:
         /// \brief window member used to display every entities

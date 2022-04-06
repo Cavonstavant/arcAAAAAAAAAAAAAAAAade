@@ -11,17 +11,11 @@
 #define ARCADE_IGAME_HPP
 
 #include "Event.hpp"
+#include "Grid.hpp"
 #include "IEntity.hpp"
 #include <memory>
 #include <stack>
 #include <vector>
-
-#ifndef GRID_INT
-    #define GRID_INT(x) x * 32
-#endif
-#ifndef GRID_PAIR
-    #define GRID_PAIR(x) std::make_pair(GRID_INT(x.first), GRID_INT(x.second))
-#endif
 
 /// Game instance
 class IGame {
@@ -51,7 +45,7 @@ class IGame {
         virtual GameState getState() const = 0;
 
         /// \brief Get the game's name
-        virtual std::string getName() const = 0;
+        virtual std::string getLibraryName() const = 0;
 
         /// \brief starts the game
         virtual void start() = 0;

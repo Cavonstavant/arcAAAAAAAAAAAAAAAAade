@@ -26,6 +26,7 @@ bool NcursesLibrary::clearWindow()
 
 bool NcursesLibrary::displayWindow()
 {
+    refresh();
     return true;
 }
 
@@ -79,4 +80,31 @@ bool NcursesLibrary::drawEntity(IEntity &entity, std::pair<int, int> pos)
     attroff(COLOR_PAIR(1));
     reset_color_pairs();
     return true;
+}
+
+std::string NcursesLibrary::getLibraryName() const
+{
+    return "Ncurses";
+}
+
+Arcade::Evt NcursesLibrary::getInput() const
+{
+    Arcade::Evt evt;
+    int ch = getch();
+
+    switch (ch) {
+        case KEY_UP:
+            evt.key.key = Arcade::Evt::UP;
+            break;
+        case KEY_DOWN:
+            evt.key.key = Arcade::Evt::DOWN;
+            break;
+        case KEY_LEFT:
+            evt.key.key = Arcade::Evt::LEFT;
+            break;
+        case KEY_RIGHT:
+            evt.key.key = Arcade::Evt::RIGHT;
+            break;
+    }
+    return evt;
 }
