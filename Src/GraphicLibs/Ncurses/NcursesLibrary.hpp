@@ -35,5 +35,4 @@ class NcursesLibrary : public IGraph {
     private:
 };
 
-
 #endif//ARCADE_NCURSESLIBRARY_HPP
