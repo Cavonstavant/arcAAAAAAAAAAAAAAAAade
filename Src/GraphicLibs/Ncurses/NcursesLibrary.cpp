@@ -86,7 +86,7 @@ std::string NcursesLibrary::getLibraryName() const
     return "Ncurses";
 }
 
-Arcade::Evt getInput()
+Arcade::Evt NcursesLibrary::getInput() const
 {
     Arcade::Evt evt;
     int ch = getch();

@@ -34,7 +34,7 @@ class NcursesLibrary : public IGraph {
                         std::pair<int, int> pos) override;
 
         std::string getLibraryName() const override final;
-        Arcade::Evt getInput();
+        Arcade::Evt getInput() const;
 
     private:
 };
