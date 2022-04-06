@@ -14,6 +14,12 @@
 /// \brief represents a generic entity within the game
 class IEntity {
     public:
+        enum Direction {
+            UP,
+            DOWN,
+            LEFT,
+            RIGHT
+        };
         /// \brief Destructor
         ~IEntity() = default;
         virtual std::pair<int, int> getPos() const = 0;
@@ -40,6 +46,13 @@ class IEntity {
         /// \brief Get the entity char and color to replace textures for terminal graphical libraries
         /// \return the char and colors of the entity for the terminal graphical libraries
         virtual std::pair<char, std::pair<Color::TermColors, Color::TermColors>> getTermTexture(void) const = 0;
+        /// \brief Get the Entity direction
+        /// \return the direction of the entity
+        virtual Direction getDirection() const = 0;
+        /// \brief Set the Entity direction
+        /// \param direction the direction of the entity
+        virtual void setDirection(Direction direction) = 0;
+
 };
 
 #endif /* !IENTITY_HPP_ */
