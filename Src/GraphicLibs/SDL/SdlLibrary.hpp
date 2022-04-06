@@ -43,7 +43,7 @@ class SdlLibrary : public IGraph {
         std::string getLibraryName() const override;
 
     private:
-        /// \brief SDL window using to display every entities. Centered Window by default, with a size of 1200(width) x 800(height) by default.
+        /// \brief SDL window using to display every entities. Centered Window by default, with a size of DEFAULT_WINDOW_WIDTH(width) x DEFAULT_WINDOW_HEIGHT(height) by default.
         SDL_Window *_window;
 
         /// \brief SDL renderer using to render to the window what to display
