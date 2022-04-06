@@ -8,20 +8,25 @@
 #ifndef ARCADE_SDLLIBRARY_HPP
 #define ARCADE_SDLLIBRARY_HPP
 
-#include "../../CommonInterface/include/IGraph.hpp"
+#include "IGraph.hpp"
+#include "Event.hpp"
 #include <SDL2/SDL.h>
+#include <SDL2/SDL_ttf.h>
+#include <SDL2/SDL_image.h>
 
-#define WINDOW_WIDTH 1200
-#define WINDOW_HEIGHT 800
-
-/// \brief SDL Library using int as template value from IGraph
+/// \brief SDL Library
 class SdlLibrary : public IGraph {
     public:
         /// \brief Default Constructor
+        /// SDL_INIT_EVERYTHING | Initialize every feature like video, audio, events...
+        /// Creating & Initializing Window & Renderer
+        /// Loading member _font (ARCADE_N.TTF as default font)
         SdlLibrary();
 
         /// \brief Default Destructor
-        ~SdlLibrary() noexcept;
+        /// Destroying Window & Renderer
+        /// SDL_Quit() to close every features previously opened in the constructor
+        ~SdlLibrary() noexcept override;
 
         bool clearWindow() override;
         bool displayWindow() override;
@@ -34,14 +39,19 @@ class SdlLibrary : public IGraph {
                       const std::string &content) override;
         bool drawEntity(IEntity &entity,
                         std::pair<int, int> pos) override;
+        Arcade::Evt getInput() const override;
+        std::string getLibraryName() const override;
 
     private:
-        /// \brief SDL window using to display every entities. Centered Window by default
+        /// \brief SDL window using to display every entities. Centered Window by default, with a size of 1200(width) x 800(height) by default.
         SDL_Window *_window;
 
         /// \brief SDL renderer using to render to the window what to display
         SDL_Renderer *_renderer;
+
+        /// \brief SDL font represents default font for the library
+        TTF_Font *_font;
+
 };
 
-
-#endif//ARCADE_SDLLIBRARY_HPP
+#endif //ARCADE_SDLLIBRARY_HPP
