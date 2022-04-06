@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['window_5fheight_554',['WINDOW_HEIGHT',['../_sdl_library_8hpp.html#a5473cf64fa979b48335079c99532e243',1,'SdlLibrary.hpp']]],
-  ['window_5fwidth_555',['WINDOW_WIDTH',['../_sdl_library_8hpp.html#a498d9f026138406895e9a34b504ac6a6',1,'SdlLibrary.hpp']]]
+  ['notimplementedex_568',['NotImplementedEX',['../_exception_8hpp.html#a07b51301b1d8611a35b7f211d7f4bdcc',1,'Exception.hpp']]]
 ];

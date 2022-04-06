@@ -83,13 +83,13 @@ $(document).ready(function(){initNavTree('_i_graph_8hpp.html',''); initResizable
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#define-members">Macros</a>  </div>
+<a href="#nested-classes">Classes</a>  </div>
   <div class="headertitle">
 <div class="title">IGraph.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="_color_8hpp_source.html">Color.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_grid_8hpp_source.html">Grid.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_event_8hpp_source.html">Event.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_i_entity_8hpp_source.html">IEntity.hpp</a>&quot;</code><br />
 <code>#include &lt;string&gt;</code><br />
@@ -98,11 +98,12 @@ Include dependency graph for IGraph.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="_i_graph_8hpp__incl.png" border="0" usemap="#_src_2_common_interface_2include_2_i_graph_8hpp" alt=""/></div>
 <map name="_src_2_common_interface_2include_2_i_graph_8hpp" id="_src_2_common_interface_2include_2_i_graph_8hpp">
-<area shape="rect" title=" " alt="" coords="41,5,203,47"/>
-<area shape="rect" href="_color_8hpp.html" title=" " alt="" coords="35,169,118,196"/>
-<area shape="rect" href="_event_8hpp.html" title=" " alt="" coords="23,95,109,121"/>
-<area shape="rect" href="_i_entity_8hpp.html" title=" " alt="" coords="134,95,225,121"/>
-<area shape="rect" title=" " alt="" coords="191,169,250,196"/>
+<area shape="rect" title=" " alt="" coords="87,5,250,47"/>
+<area shape="rect" href="_color_8hpp.html" title=" " alt="" coords="87,169,170,196"/>
+<area shape="rect" href="_grid_8hpp.html" title=" " alt="" coords="23,95,100,121"/>
+<area shape="rect" href="_event_8hpp.html" title=" " alt="" coords="125,95,212,121"/>
+<area shape="rect" href="_i_entity_8hpp.html" title=" " alt="" coords="236,95,327,121"/>
+<area shape="rect" title=" " alt="" coords="294,169,352,196"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -131,55 +132,7 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graph.html">IGraph</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">represents a generic graphical library  <a href="class_i_graph.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:af318a3f0d59a81a20c99794619783061"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i_graph_8hpp.html#af318a3f0d59a81a20c99794619783061">GRID_INT</a>(x)&#160;&#160;&#160;x * 32</td></tr>
-<tr class="separator:af318a3f0d59a81a20c99794619783061"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5daf3bcc83f834645310cd1dbe83d4fd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i_graph_8hpp.html#a5daf3bcc83f834645310cd1dbe83d4fd">GRID_PAIR</a>(x)&#160;&#160;&#160;std::make_pair(<a class="el" href="_i_graph_8hpp.html#af318a3f0d59a81a20c99794619783061">GRID_INT</a>(x.first), <a class="el" href="_i_graph_8hpp.html#af318a3f0d59a81a20c99794619783061">GRID_INT</a>(x.second))</td></tr>
-<tr class="separator:a5daf3bcc83f834645310cd1dbe83d4fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="af318a3f0d59a81a20c99794619783061"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af318a3f0d59a81a20c99794619783061">&#9670;&nbsp;</a></span>GRID_INT</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define GRID_INT</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">x</td><td>)</td>
-          <td>&#160;&#160;&#160;x * 32</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_i_graph_8hpp_source.html#l00017">17</a> of file <a class="el" href="_i_graph_8hpp_source.html">IGraph.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a5daf3bcc83f834645310cd1dbe83d4fd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5daf3bcc83f834645310cd1dbe83d4fd">&#9670;&nbsp;</a></span>GRID_PAIR</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define GRID_PAIR</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">x</td><td>)</td>
-          <td>&#160;&#160;&#160;std::make_pair(<a class="el" href="_i_graph_8hpp.html#af318a3f0d59a81a20c99794619783061">GRID_INT</a>(x.first), <a class="el" href="_i_graph_8hpp.html#af318a3f0d59a81a20c99794619783061">GRID_INT</a>(x.second))</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_i_graph_8hpp_source.html#l00020">20</a> of file <a class="el" href="_i_graph_8hpp_source.html">IGraph.hpp</a>.</p>
-
-</div>
-</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

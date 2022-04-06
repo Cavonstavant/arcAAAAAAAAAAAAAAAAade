@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['object_2ecpp_327',['Object.cpp',['../_object_8cpp.html',1,'']]],
-  ['object_2ehpp_328',['Object.hpp',['../_object_8hpp.html',1,'']]]
+  ['ncurseslibrary_2ecpp_333',['NcursesLibrary.cpp',['../_ncurses_library_8cpp.html',1,'']]],
+  ['ncurseslibrary_2ehpp_334',['NcursesLibrary.hpp',['../_ncurses_library_8hpp.html',1,'']]],
+  ['nibbler_2ecpp_335',['Nibbler.cpp',['../_nibbler_8cpp.html',1,'']]]
 ];

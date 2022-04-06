@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['libmanager_2ecpp_318',['LibManager.cpp',['../_lib_manager_8cpp.html',1,'']]],
-  ['libmanager_2ehpp_319',['LibManager.hpp',['../_lib_manager_8hpp.html',1,'']]],
-  ['logger_2ecpp_320',['Logger.cpp',['../_logger_8cpp.html',1,'']]],
-  ['logger_2ehpp_321',['Logger.hpp',['../_logger_8hpp.html',1,'']]]
+  ['ientity_2ehpp_324',['IEntity.hpp',['../_i_entity_8hpp.html',1,'']]],
+  ['igame_2ehpp_325',['IGame.hpp',['../_i_game_8hpp.html',1,'']]],
+  ['igraph_2ehpp_326',['IGraph.hpp',['../_i_graph_8hpp.html',1,'']]]
 ];
