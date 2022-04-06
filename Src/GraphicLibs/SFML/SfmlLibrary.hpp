@@ -8,8 +8,8 @@
 #ifndef ARCADE_SFMLLIBRARY_HPP
 #define ARCADE_SFMLLIBRARY_HPP
 
-#include "IGraph.hpp"
 #include "Event.hpp"
+#include "IGraph.hpp"
 #include <SFML/Graphics.hpp>
 #include <SFML/System.hpp>
 #include <SFML/Window.hpp>
