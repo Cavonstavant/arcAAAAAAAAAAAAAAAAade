@@ -4,22 +4,22 @@
 
 namespace Arcade
 {
-    static IGraph *GRAPH_INSTANCE = nullptr;
+static IGraph *GRAPH_INSTANCE = nullptr;
 
-    extern "C" IGraph *getGraphInstance()
-    {
-        return GRAPH_INSTANCE;
-    }
+extern "C" IGraph *getGraphInstance()
+{
+    return GRAPH_INSTANCE;
+}
 
-    [[gnu::constructor]] void libConstruct()
-    {
-        GRAPH_INSTANCE = new NcursesLibrary();
-        std::cout << "sfml lib loaded" << std::endl;
-    }
+[[gnu::constructor]] void libConstruct()
+{
+    GRAPH_INSTANCE = new NcursesLibrary();
+    std::cout << "sfml lib loaded" << std::endl;
+}
 
-    [[gnu::destructor]] void libDestruct()
-    {
-        delete GRAPH_INSTANCE;
-        std::cout << "sfml lib unloaded" << std::endl;
-    }
+[[gnu::destructor]] void libDestruct()
+{
+    delete GRAPH_INSTANCE;
+    std::cout << "sfml lib unloaded" << std::endl;
+}
 }
