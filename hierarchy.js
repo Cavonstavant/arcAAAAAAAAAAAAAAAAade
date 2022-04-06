@@ -35,12 +35,10 @@ var hierarchy =
     [ "IGame", "class_i_game.html", [
       [ "MainMenu", "class_main_menu.html", null ]
     ] ],
-    [ "IGraph", "class_i_graph.html", null ],
-    [ "IGraph< float >", "class_i_graph.html", [
+    [ "IGraph", "class_i_graph.html", [
+      [ "NcursesLibrary", "class_ncurses_library.html", null ],
+      [ "SdlLibrary", "class_sdl_library.html", null ],
       [ "SfmlLibrary", "class_sfml_library.html", null ]
-    ] ],
-    [ "IGraph< int >", "class_i_graph.html", [
-      [ "SdlLibrary", "class_sdl_library.html", null ]
     ] ],
     [ "Arcade::Evt::KeyEvt", "struct_arcade_1_1_evt_1_1_key_evt.html", null ],
     [ "LibManager", "class_lib_manager.html", null ],

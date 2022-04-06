@@ -98,47 +98,50 @@ $(document).ready(function(){initNavTree('_i_game_8hpp_source.html',''); initRes
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define ARCADE_IGAME_HPP</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_event_8hpp.html">Event.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_i_graph_8hpp.html">IGraph.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_i_entity_8hpp.html">IEntity.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;stack&gt;</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_i_game.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_i_game.html">IGame</a> {</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_i_game.html#a4a7309d86599d6e581f764233085c7dd">   23</a></span>&#160;  <span class="keyword">enum class</span> <a class="code" href="class_i_game.html#a4a7309d86599d6e581f764233085c7dd">GameState</a> {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="class_i_game.html#a4a7309d86599d6e581f764233085c7ddab638272ceeff54912f043465e9a28c9b">LOADED</a>,</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="class_i_game.html#a4a7309d86599d6e581f764233085c7dda43491564ebcfd38568918efbd6e840fd">RUNNING</a>,</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="class_i_game.html#a4a7309d86599d6e581f764233085c7dda99b2439e63f73ad515f7ab2447a80673">PAUSED</a>,</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="class_i_game.html#a4a7309d86599d6e581f764233085c7dda09d4d696b4e935115b9313e3c412509a">STOPPED</a>,</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  };</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="class_i_game.html#a91b14c1b6019364120d5c5e4d4c64414">~IGame</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_i_game.html#a025e62ee4c27e2e9f83ebae85dea9e9c">update</a>(std::vector&lt;std::shared_ptr&lt;IEntity&gt;&gt; &amp;entities,</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                      std::stack&lt;Arcade::Evt&gt; &amp;events) = 0;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="class_i_game.html#a4a7309d86599d6e581f764233085c7dd">GameState</a> <a class="code" href="class_i_game.html#a44de7e08e7ee294be051445a84306299">getState</a>() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keyword">virtual</span> std::string <a class="code" href="class_i_game.html#aa69690645ce61b4214a53cc4e27a463c">getName</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="_i_game_8hpp.html#af318a3f0d59a81a20c99794619783061">   19</a></span>&#160;<span class="preprocessor">#define GRID_INT(x) x * 32</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="_i_game_8hpp.html#a5daf3bcc83f834645310cd1dbe83d4fd">   20</a></span>&#160;<span class="preprocessor">#define GRID_PAIR(x) std::make_pair(GRID_INT(x.first), GRID_INT(x.second))</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_i_game.html">   23</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_i_game.html">IGame</a> {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_i_game.html#a4a7309d86599d6e581f764233085c7dd">   26</a></span>&#160;        <span class="keyword">enum class</span> <a class="code" href="class_i_game.html#a4a7309d86599d6e581f764233085c7dd">GameState</a> {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <a class="code" href="class_i_game.html#a4a7309d86599d6e581f764233085c7ddab638272ceeff54912f043465e9a28c9b">LOADED</a>,</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <a class="code" href="class_i_game.html#a4a7309d86599d6e581f764233085c7dda43491564ebcfd38568918efbd6e840fd">RUNNING</a>,</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <a class="code" href="class_i_game.html#a4a7309d86599d6e581f764233085c7dda99b2439e63f73ad515f7ab2447a80673">PAUSED</a>,</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <a class="code" href="class_i_game.html#a4a7309d86599d6e581f764233085c7dda09d4d696b4e935115b9313e3c412509a">STOPPED</a>,</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        };</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="class_i_game.html#a91b14c1b6019364120d5c5e4d4c64414">~IGame</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_i_game.html#a025e62ee4c27e2e9f83ebae85dea9e9c">update</a>(std::vector&lt;std::shared_ptr&lt;IEntity&gt;&gt; &amp;entities,</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                            std::stack&lt;Arcade::Evt&gt; &amp;events) = 0;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="class_i_game.html#a4a7309d86599d6e581f764233085c7dd">GameState</a> <a class="code" href="class_i_game.html#a44de7e08e7ee294be051445a84306299">getState</a>() <span class="keyword">const</span> = 0;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_i_game.html#abdc3543ee754cecb7eb156f05ce5869d">start</a>() = 0;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;};</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#endif // ARCADE_IGAME_HPP</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keyword">virtual</span> std::string <a class="code" href="class_i_game.html#aa69690645ce61b4214a53cc4e27a463c">getName</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_i_game.html#abdc3543ee754cecb7eb156f05ce5869d">start</a>() = 0;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;};</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#endif// ARCADE_IGAME_HPP</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclass_i_game_html_a91b14c1b6019364120d5c5e4d4c64414"><div class="ttname"><a href="class_i_game.html#a91b14c1b6019364120d5c5e4d4c64414">IGame::~IGame</a></div><div class="ttdeci">virtual ~IGame()=default</div></div>
 <div class="ttc" id="aclass_i_game_html_abdc3543ee754cecb7eb156f05ce5869d"><div class="ttname"><a href="class_i_game.html#abdc3543ee754cecb7eb156f05ce5869d">IGame::start</a></div><div class="ttdeci">virtual void start()=0</div><div class="ttdoc">starts the game</div></div>
 <div class="ttc" id="aclass_i_game_html_a4a7309d86599d6e581f764233085c7dda09d4d696b4e935115b9313e3c412509a"><div class="ttname"><a href="class_i_game.html#a4a7309d86599d6e581f764233085c7dda09d4d696b4e935115b9313e3c412509a">IGame::GameState::STOPPED</a></div><div class="ttdeci">@ STOPPED</div><div class="ttdoc">Represents the game over.</div></div>
-<div class="ttc" id="aclass_i_game_html"><div class="ttname"><a href="class_i_game.html">IGame</a></div><div class="ttdoc">Game instance.</div><div class="ttdef"><b>Definition:</b> <a href="_i_game_8hpp_source.html#l00020">IGame.hpp:20</a></div></div>
+<div class="ttc" id="a_i_entity_8hpp_html"><div class="ttname"><a href="_i_entity_8hpp.html">IEntity.hpp</a></div></div>
+<div class="ttc" id="aclass_i_game_html"><div class="ttname"><a href="class_i_game.html">IGame</a></div><div class="ttdoc">Game instance.</div><div class="ttdef"><b>Definition:</b> <a href="_i_game_8hpp_source.html#l00023">IGame.hpp:23</a></div></div>
 <div class="ttc" id="aclass_i_game_html_a4a7309d86599d6e581f764233085c7ddab638272ceeff54912f043465e9a28c9b"><div class="ttname"><a href="class_i_game.html#a4a7309d86599d6e581f764233085c7ddab638272ceeff54912f043465e9a28c9b">IGame::GameState::LOADED</a></div><div class="ttdeci">@ LOADED</div><div class="ttdoc">Represents the game at it's initial state.</div></div>
 <div class="ttc" id="a_event_8hpp_html"><div class="ttname"><a href="_event_8hpp.html">Event.hpp</a></div></div>
 <div class="ttc" id="aclass_i_game_html_a44de7e08e7ee294be051445a84306299"><div class="ttname"><a href="class_i_game.html#a44de7e08e7ee294be051445a84306299">IGame::getState</a></div><div class="ttdeci">virtual GameState getState() const =0</div><div class="ttdoc">Get the game's status.</div></div>
 <div class="ttc" id="aclass_i_game_html_a4a7309d86599d6e581f764233085c7dda43491564ebcfd38568918efbd6e840fd"><div class="ttname"><a href="class_i_game.html#a4a7309d86599d6e581f764233085c7dda43491564ebcfd38568918efbd6e840fd">IGame::GameState::RUNNING</a></div><div class="ttdeci">@ RUNNING</div><div class="ttdoc">Represents the game when running.</div></div>
-<div class="ttc" id="a_i_graph_8hpp_html"><div class="ttname"><a href="_i_graph_8hpp.html">IGraph.hpp</a></div></div>
 <div class="ttc" id="aclass_i_game_html_a4a7309d86599d6e581f764233085c7dda99b2439e63f73ad515f7ab2447a80673"><div class="ttname"><a href="class_i_game.html#a4a7309d86599d6e581f764233085c7dda99b2439e63f73ad515f7ab2447a80673">IGame::GameState::PAUSED</a></div><div class="ttdeci">@ PAUSED</div><div class="ttdoc">Represents the previously running game is paused.</div></div>
 <div class="ttc" id="aclass_i_game_html_aa69690645ce61b4214a53cc4e27a463c"><div class="ttname"><a href="class_i_game.html#aa69690645ce61b4214a53cc4e27a463c">IGame::getName</a></div><div class="ttdeci">virtual std::string getName() const =0</div><div class="ttdoc">Get the game's name.</div></div>
-<div class="ttc" id="aclass_i_game_html_a4a7309d86599d6e581f764233085c7dd"><div class="ttname"><a href="class_i_game.html#a4a7309d86599d6e581f764233085c7dd">IGame::GameState</a></div><div class="ttdeci">GameState</div><div class="ttdoc">Represents the game's status.</div><div class="ttdef"><b>Definition:</b> <a href="_i_game_8hpp_source.html#l00023">IGame.hpp:23</a></div></div>
+<div class="ttc" id="aclass_i_game_html_a4a7309d86599d6e581f764233085c7dd"><div class="ttname"><a href="class_i_game.html#a4a7309d86599d6e581f764233085c7dd">IGame::GameState</a></div><div class="ttdeci">GameState</div><div class="ttdoc">Represents the game's status.</div><div class="ttdef"><b>Definition:</b> <a href="_i_game_8hpp_source.html#l00026">IGame.hpp:26</a></div></div>
 <div class="ttc" id="aclass_i_game_html_a025e62ee4c27e2e9f83ebae85dea9e9c"><div class="ttname"><a href="class_i_game.html#a025e62ee4c27e2e9f83ebae85dea9e9c">IGame::update</a></div><div class="ttdeci">virtual void update(std::vector&lt; std::shared_ptr&lt; IEntity &gt;&gt; &amp;entities, std::stack&lt; Arcade::Evt &gt; &amp;events)=0</div><div class="ttdoc">Update the game's status.</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

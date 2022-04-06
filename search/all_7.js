@@ -25,5 +25,7 @@ var searchData=
   ['gettype_92',['getType',['../class_object.html#a6e1b7be2121dabb2aa54ed539fc7c6c7',1,'Object']]],
   ['graphex_93',['GraphEX',['../_exception_8hpp.html#a83e490a00784747fa096b3a4e894636e',1,'Exception.hpp']]],
   ['graphexception_94',['GraphException',['../class_graph_exception.html',1,'GraphException'],['../class_graph_exception.html#a41cd93feccd4202812f434ec3243a0a8',1,'GraphException::GraphException()']]],
-  ['green_95',['GREEN',['../struct_color.html#a2791cd4d5e92d50bb609f7fea3283aeba08c2af9e860f4aac479bb85f9f0bf336',1,'Color']]]
+  ['green_95',['GREEN',['../struct_color.html#a2791cd4d5e92d50bb609f7fea3283aeba08c2af9e860f4aac479bb85f9f0bf336',1,'Color']]],
+  ['grid_5fint_96',['GRID_INT',['../_i_game_8hpp.html#af318a3f0d59a81a20c99794619783061',1,'GRID_INT():&#160;IGame.hpp'],['../_i_graph_8hpp.html#af318a3f0d59a81a20c99794619783061',1,'GRID_INT():&#160;IGraph.hpp']]],
+  ['grid_5fpair_97',['GRID_PAIR',['../_i_game_8hpp.html#a5daf3bcc83f834645310cd1dbe83d4fd',1,'GRID_PAIR():&#160;IGame.hpp'],['../_i_graph_8hpp.html#a5daf3bcc83f834645310cd1dbe83d4fd',1,'GRID_PAIR():&#160;IGraph.hpp']]]
 ];

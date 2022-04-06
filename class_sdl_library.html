@@ -99,8 +99,8 @@ Inheritance diagram for SdlLibrary:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_sdl_library__inherit__graph.png" border="0" usemap="#_sdl_library_inherit__map" alt="Inheritance graph"/></div>
 <map name="_sdl_library_inherit__map" id="_sdl_library_inherit__map">
-<area shape="rect" title="SDL Library using int as template value from IGraph." alt="" coords="18,80,105,107"/>
-<area shape="rect" href="class_i_graph.html" title=" " alt="" coords="5,5,117,32"/>
+<area shape="rect" title="SDL Library using int as template value from IGraph." alt="" coords="5,80,92,107"/>
+<area shape="rect" href="class_i_graph.html" title="represents a generic graphical library" alt="" coords="16,5,81,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -108,8 +108,8 @@ Collaboration diagram for SdlLibrary:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_sdl_library__coll__graph.png" border="0" usemap="#_sdl_library_coll__map" alt="Collaboration graph"/></div>
 <map name="_sdl_library_coll__map" id="_sdl_library_coll__map">
-<area shape="rect" title="SDL Library using int as template value from IGraph." alt="" coords="18,80,105,107"/>
-<area shape="rect" href="class_i_graph.html" title=" " alt="" coords="5,5,117,32"/>
+<area shape="rect" title="SDL Library using int as template value from IGraph." alt="" coords="5,80,92,107"/>
+<area shape="rect" href="class_i_graph.html" title="represents a generic graphical library" alt="" coords="16,5,81,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -139,11 +139,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a906e0b9da52caef24f36a9e4b5a128e5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sdl_library.html#a906e0b9da52caef24f36a9e4b5a128e5">drawEntity</a> (<a class="el" href="class_i_entity.html">IEntity</a> &amp;entity, std::pair&lt; int, int &gt; pos) override</td></tr>
 <tr class="memdesc:a906e0b9da52caef24f36a9e4b5a128e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an Entity, set position, then display it on the window. After all destroy the Entity.  <a href="class_sdl_library.html#a906e0b9da52caef24f36a9e4b5a128e5">More...</a><br /></td></tr>
 <tr class="separator:a906e0b9da52caef24f36a9e4b5a128e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_class_i_graph"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_i_graph')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_i_graph.html">IGraph&lt; int &gt;</a></td></tr>
+<tr class="inherit_header pub_methods_class_i_graph"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_i_graph')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_i_graph.html">IGraph</a></td></tr>
 <tr class="memitem:a12f681e7abc397a40abd4abae7b8104c inherit pub_methods_class_i_graph"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graph.html#a12f681e7abc397a40abd4abae7b8104c">~IGraph</a> ()=default</td></tr>
 <tr class="memdesc:a12f681e7abc397a40abd4abae7b8104c inherit pub_methods_class_i_graph"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="class_i_graph.html#a12f681e7abc397a40abd4abae7b8104c">More...</a><br /></td></tr>
 <tr class="separator:a12f681e7abc397a40abd4abae7b8104c inherit pub_methods_class_i_graph"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e10cd40988838195e997e5e50eeca0d inherit pub_methods_class_i_graph"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graph.html#a5e10cd40988838195e997e5e50eeca0d">getName</a> () const=0</td></tr>
+<tr class="memitem:a5e10cd40988838195e997e5e50eeca0d inherit pub_methods_class_i_graph"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graph.html#a5e10cd40988838195e997e5e50eeca0d">getName</a> () const =0</td></tr>
 <tr class="memdesc:a5e10cd40988838195e997e5e50eeca0d inherit pub_methods_class_i_graph"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the graphical lib  <a href="class_i_graph.html#a5e10cd40988838195e997e5e50eeca0d">More...</a><br /></td></tr>
 <tr class="separator:a5e10cd40988838195e997e5e50eeca0d inherit pub_methods_class_i_graph"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -229,7 +229,7 @@ Public Member Functions</h2></td></tr>
 <p>clear the window </p>
 <dl class="section return"><dt>Returns</dt><dd>true if the window is successfully cleared </dd></dl>
 
-<p>Implements <a class="el" href="class_i_graph.html#ad093f704c4f0c13bc42ca4e494b76d20">IGraph&lt; int &gt;</a>.</p>
+<p>Implements <a class="el" href="class_i_graph.html#ad093f704c4f0c13bc42ca4e494b76d20">IGraph</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_sdl_library_8cpp_source.html#l00029">29</a> of file <a class="el" href="_sdl_library_8cpp_source.html">SdlLibrary.cpp</a>.</p>
 
@@ -261,7 +261,7 @@ Public Member Functions</h2></td></tr>
 <p>display the window </p>
 <dl class="section return"><dt>Returns</dt><dd>true if the window is successfully displayed </dd></dl>
 
-<p>Implements <a class="el" href="class_i_graph.html#a703f8faaae8cb3b339b8686e5f442f81">IGraph&lt; int &gt;</a>.</p>
+<p>Implements <a class="el" href="class_i_graph.html#a703f8faaae8cb3b339b8686e5f442f81">IGraph</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_sdl_library_8cpp_source.html#l00035">35</a> of file <a class="el" href="_sdl_library_8cpp_source.html">SdlLibrary.cpp</a>.</p>
 
@@ -318,7 +318,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if the circle is successfully draw </dd></dl>
 
-<p>Implements <a class="el" href="class_i_graph.html#ac3a39c636d2e479e9f7dd90a6a5a7f17">IGraph&lt; int &gt;</a>.</p>
+<p>Implements <a class="el" href="class_i_graph.html#ac3a39c636d2e479e9f7dd90a6a5a7f17">IGraph</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_sdl_library_8cpp_source.html#l00043">43</a> of file <a class="el" href="_sdl_library_8cpp_source.html">SdlLibrary.cpp</a>.</p>
 
@@ -368,7 +368,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if the entity is successfully draw </dd></dl>
 
-<p>Implements <a class="el" href="class_i_graph.html#a86710ad76190aafbdf76941ce89a34f3">IGraph&lt; int &gt;</a>.</p>
+<p>Implements <a class="el" href="class_i_graph.html#a86710ad76190aafbdf76941ce89a34f3">IGraph</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_sdl_library_8cpp_source.html#l00058">58</a> of file <a class="el" href="_sdl_library_8cpp_source.html">SdlLibrary.cpp</a>.</p>
 
@@ -432,7 +432,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if the rectangle is successfully draw </dd></dl>
 
-<p>Implements <a class="el" href="class_i_graph.html#a7963d277bd33308a52c3029214e875a0">IGraph&lt; int &gt;</a>.</p>
+<p>Implements <a class="el" href="class_i_graph.html#a7963d277bd33308a52c3029214e875a0">IGraph</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_sdl_library_8cpp_source.html#l00048">48</a> of file <a class="el" href="_sdl_library_8cpp_source.html">SdlLibrary.cpp</a>.</p>
 
@@ -482,7 +482,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if the text is successfully draw </dd></dl>
 
-<p>Implements <a class="el" href="class_i_graph.html#a33dcccbd047be436bf9ace4347071f56">IGraph&lt; int &gt;</a>.</p>
+<p>Implements <a class="el" href="class_i_graph.html#a33dcccbd047be436bf9ace4347071f56">IGraph</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_sdl_library_8cpp_source.html#l00053">53</a> of file <a class="el" href="_sdl_library_8cpp_source.html">SdlLibrary.cpp</a>.</p>
 

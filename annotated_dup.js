@@ -23,6 +23,7 @@ var annotated_dup =
     [ "LibraryException", "class_library_exception.html", "class_library_exception" ],
     [ "Logger", "class_logger.html", "class_logger" ],
     [ "MainMenu", "class_main_menu.html", "class_main_menu" ],
+    [ "NcursesLibrary", "class_ncurses_library.html", "class_ncurses_library" ],
     [ "NotImplementedException", "class_not_implemented_exception.html", "class_not_implemented_exception" ],
     [ "Object", "class_object.html", "class_object" ],
     [ "Player", "class_player.html", "class_player" ],

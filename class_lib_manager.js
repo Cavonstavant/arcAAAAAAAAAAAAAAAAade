@@ -7,6 +7,6 @@ var class_lib_manager =
     [ "~LibManager", "class_lib_manager.html#ade5e45886e1d82e8f0c968de7eb59f04", null ],
     [ "closeLib", "class_lib_manager.html#a865c737aed091f4532fe1179d86f7c04", null ],
     [ "openGame", "class_lib_manager.html#ae3fdbdf930a4a92f708209643565faee", null ],
-    [ "openGraph", "class_lib_manager.html#af4ea704c81e886995ed16397d6de3760", null ],
+    [ "openGraph", "class_lib_manager.html#a7efd66332c2af93c434552edc6a4ab86", null ],
     [ "operator=", "class_lib_manager.html#a84e8bc50673b4de646710eda756d7641", null ]
 ];
