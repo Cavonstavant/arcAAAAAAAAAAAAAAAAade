@@ -7,9 +7,10 @@
 
 #pragma once
 
-#include "../../Games/Common/Button.hpp"
+#include "../../Games/Common/Object.hpp"
 #include "../../Games/Common/Player.hpp"
 #include "IGame.hpp"
+#include <chrono>
 #include <list>
 #include <vector>
 
@@ -42,8 +43,21 @@ class Nibbler : public IGame {
         /// \brief The game's state
         GameState _gameState;
         /// \brief The snake (list of all its parts)
-        std::list<Player> _snake;
+        std::list<std::shared_ptr<Player>> _snake;
+        /// \brief The game clock
+        std::chrono::high_resolution_clock::time_point _clock;
+        /// \brief The fruit
+        std::shared_ptr<Object> _fruit;
+        /// \brief The last tail's last direction
+        IEntity::Direction _lastTailDir;
+        /// \brief The last tails's last position
+        std::pair<int, int> _lastTailPos;
 
+        /// \brief Get the elapsed time since the last update in milliseconds
+        /// \return the elapsed time since the last update in milliseconds
+        int getClockTimeMS();
+        /// \brief Restarts the clock
+        void resetClock();
         /// \brief Manage the events
         /// \param events The event stack of the game
         /// \param entities The entity vector of the game
@@ -56,4 +70,10 @@ class Nibbler : public IGame {
         /// \param event The event stack of the game
         /// \param entities The entity vector of the game
         void manageKeyEvent(Arcade::Evt &event, std::vector<std::shared_ptr<IEntity>> &entities);
+        /// \brief Move the snake
+        void moveSnake();
+        /// \brief Check if the snake is on a fruit
+        /// \param entities The entity vector of the game
+        /// \return true if the snake is on a fruit, false otherwise
+        bool snakeIsOnAFruit(std::vector<std::shared_ptr<IEntity>> &entities);
 };

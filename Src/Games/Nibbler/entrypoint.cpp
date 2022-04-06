@@ -14,7 +14,7 @@ namespace Arcade
 
     [[gnu::constructor]] void libConstruct()
     {
-        GAME_INSTANCE = new Nibbler;
+        GAME_INSTANCE = new Nibbler();
         std::cout << "lib loaded" << std::endl;
     }
 
