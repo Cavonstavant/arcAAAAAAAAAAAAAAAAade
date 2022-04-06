@@ -47,13 +47,12 @@ IGame *LibManager::openGame(std::string libPath)
     return (createGame());
 }
 
-template<typename T>
-IGraph<T> *LibManager::openGraph(std::string libPath)
+IGraph *LibManager::openGraph(std::string libPath)
 {
     void *libHandle = openLib(libPath);
-    IGraph<T> *(*createGraph)();
+    IGraph *(*createGraph)();
 
-    createGraph = (IGraph<T> * (*) (void) ) dlsym(libHandle, "createGraph");
+    createGraph = (IGraph * (*) (void) ) dlsym(libHandle, "createGraph");
     return (createGraph());
 }
 

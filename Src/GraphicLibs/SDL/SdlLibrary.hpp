@@ -15,7 +15,7 @@
 #define WINDOW_HEIGHT 800
 
 /// \brief SDL Library using int as template value from IGraph
-class SdlLibrary : public IGraph<int> {
+class SdlLibrary : public IGraph {
     public:
         /// \brief Default Constructor
         SdlLibrary();
