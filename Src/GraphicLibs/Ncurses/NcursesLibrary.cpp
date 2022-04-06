@@ -26,6 +26,7 @@ bool NcursesLibrary::clearWindow()
 
 bool NcursesLibrary::displayWindow()
 {
+    refresh();
     return true;
 }
 
