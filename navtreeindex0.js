@@ -54,6 +54,9 @@ var NAVTREEINDEX0 =
 "_exception_8hpp.html#afed90c757c8f3263de91c616966271af":[4,0,0,1,5,30],
 "_exception_8hpp_source.html":[4,0,0,1,5],
 "_graphic_libs_2_ncurses_2_entry_point_8cpp.html":[4,0,0,3,0,0],
+"_graphic_libs_2_ncurses_2_entry_point_8cpp.html#a845ad281586d107c4c5baf5485fba3a4":[4,0,0,3,0,0,2],
+"_graphic_libs_2_ncurses_2_entry_point_8cpp.html#a96c089960390d3d20cebac7a1ddaaef3":[4,0,0,3,0,0,0],
+"_graphic_libs_2_ncurses_2_entry_point_8cpp.html#ad87e24468d19c08ceff1e079301dded4":[4,0,0,3,0,0,1],
 "_graphic_libs_2_ncurses_2_entry_point_8cpp_source.html":[4,0,0,3,0,0],
 "_graphic_libs_2_s_d_l_2_entry_point_8cpp.html":[4,0,0,3,1,0],
 "_graphic_libs_2_s_d_l_2_entry_point_8cpp_source.html":[4,0,0,3,1,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX0 =
 "class_ncurses_library.html#a53bb58469b8bf5e966609e8acb403f26":[3,0,23,6],
 "class_ncurses_library.html#a5c897abdd82f3ffd8c46bbd391c5b9ea":[3,0,23,1],
 "class_ncurses_library.html#a6d6d2cf2fdd191e5b671111eb1972355":[3,0,23,0],
-"class_ncurses_library.html#a93bf71e09ac11a04b06fd14325d52d8b":[3,0,23,2],
-"class_ncurses_library.html#ac0a48a9ee57aee1650f9ba16c02e6b99":[3,0,23,5],
-"class_ncurses_library.html#ac9ce386c4a4e02e7aa467bbfe2e92999":[3,0,23,3],
-"class_ncurses_library.html#aeb2f2b3deaffaf2648d9de8e8895c1ac":[3,0,23,4]
+"class_ncurses_library.html#a93bf71e09ac11a04b06fd14325d52d8b":[3,0,23,2]
 };

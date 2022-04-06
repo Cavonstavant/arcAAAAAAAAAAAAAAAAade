@@ -139,21 +139,21 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac0a48a9ee57aee1650f9ba16c02e6b99"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ncurses_library.html#ac0a48a9ee57aee1650f9ba16c02e6b99">drawEntity</a> (<a class="el" href="class_i_entity.html">IEntity</a> &amp;entity, std::pair&lt; int, int &gt; pos) override</td></tr>
 <tr class="memdesc:ac0a48a9ee57aee1650f9ba16c02e6b99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an Entity, set position, then display it on the window. After all destroy the Entity.  <a href="class_ncurses_library.html#ac0a48a9ee57aee1650f9ba16c02e6b99">More...</a><br /></td></tr>
 <tr class="separator:ac0a48a9ee57aee1650f9ba16c02e6b99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac70fe60ad51e85be3d262b93c2b77a99"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ncurses_library.html#ac70fe60ad51e85be3d262b93c2b77a99">getLibraryName</a> () const override final</td></tr>
+<tr class="memdesc:ac70fe60ad51e85be3d262b93c2b77a99"><td class="mdescLeft">&#160;</td><td class="mdescRight">get name of the library currently used  <a href="class_ncurses_library.html#ac70fe60ad51e85be3d262b93c2b77a99">More...</a><br /></td></tr>
+<tr class="separator:ac70fe60ad51e85be3d262b93c2b77a99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b804de7787f5214acf7587884a7b1fc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_arcade_1_1_evt.html">Arcade::Evt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ncurses_library.html#a9b804de7787f5214acf7587884a7b1fc">getInput</a> () const</td></tr>
+<tr class="memdesc:a9b804de7787f5214acf7587884a7b1fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">get input from Graphic Library to send it to the Core  <a href="class_ncurses_library.html#a9b804de7787f5214acf7587884a7b1fc">More...</a><br /></td></tr>
+<tr class="separator:a9b804de7787f5214acf7587884a7b1fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_i_graph"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_i_graph')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_i_graph.html">IGraph</a></td></tr>
 <tr class="memitem:a12f681e7abc397a40abd4abae7b8104c inherit pub_methods_class_i_graph"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graph.html#a12f681e7abc397a40abd4abae7b8104c">~IGraph</a> ()=default</td></tr>
 <tr class="memdesc:a12f681e7abc397a40abd4abae7b8104c inherit pub_methods_class_i_graph"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="class_i_graph.html#a12f681e7abc397a40abd4abae7b8104c">More...</a><br /></td></tr>
 <tr class="separator:a12f681e7abc397a40abd4abae7b8104c inherit pub_methods_class_i_graph"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3276be081a766d713c150d087ec28e98 inherit pub_methods_class_i_graph"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="struct_arcade_1_1_evt.html">Arcade::Evt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graph.html#a3276be081a766d713c150d087ec28e98">getInput</a> () const =0</td></tr>
-<tr class="memdesc:a3276be081a766d713c150d087ec28e98 inherit pub_methods_class_i_graph"><td class="mdescLeft">&#160;</td><td class="mdescRight">get input from Graphic Library to send it to the Core  <a href="class_i_graph.html#a3276be081a766d713c150d087ec28e98">More...</a><br /></td></tr>
-<tr class="separator:a3276be081a766d713c150d087ec28e98 inherit pub_methods_class_i_graph"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37b6f2993125bbbb12007714668eb026 inherit pub_methods_class_i_graph"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graph.html#a37b6f2993125bbbb12007714668eb026">getLibraryName</a> () const =0</td></tr>
-<tr class="memdesc:a37b6f2993125bbbb12007714668eb026 inherit pub_methods_class_i_graph"><td class="mdescLeft">&#160;</td><td class="mdescRight">get name of the library currently used  <a href="class_i_graph.html#a37b6f2993125bbbb12007714668eb026">More...</a><br /></td></tr>
-<tr class="separator:a37b6f2993125bbbb12007714668eb026 inherit pub_methods_class_i_graph"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>NCURSES library using int as template value from <a class="el" href="class_i_graph.html" title="represents a generic graphical library">IGraph</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="_ncurses_library_8hpp_source.html#l00015">15</a> of file <a class="el" href="_ncurses_library_8hpp_source.html">NcursesLibrary.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_ncurses_library_8hpp_source.html#l00016">16</a> of file <a class="el" href="_ncurses_library_8hpp_source.html">NcursesLibrary.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a6d6d2cf2fdd191e5b671111eb1972355"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6d6d2cf2fdd191e5b671111eb1972355">&#9670;&nbsp;</a></span>NcursesLibrary()</h2>
@@ -480,6 +480,70 @@ Public Member Functions</h2></td></tr>
 <p>Implements <a class="el" href="class_i_graph.html#a33dcccbd047be436bf9ace4347071f56">IGraph</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_ncurses_library_8cpp_source.html#l00058">58</a> of file <a class="el" href="_ncurses_library_8cpp_source.html">NcursesLibrary.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a9b804de7787f5214acf7587884a7b1fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b804de7787f5214acf7587884a7b1fc">&#9670;&nbsp;</a></span>getInput()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_arcade_1_1_evt.html">Arcade::Evt</a> NcursesLibrary::getInput </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>get input from Graphic Library to send it to the Core </p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="struct_arcade_1_1_evt.html" title="Represents a generic event interface this interface is shared across all the graphical libraries.">Arcade::Evt</a> representing the keyboard pressed of the event triggered </dd></dl>
+
+<p>Implements <a class="el" href="class_i_graph.html#a3276be081a766d713c150d087ec28e98">IGraph</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_ncurses_library_8cpp_source.html#l00089">89</a> of file <a class="el" href="_ncurses_library_8cpp_source.html">NcursesLibrary.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac70fe60ad51e85be3d262b93c2b77a99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac70fe60ad51e85be3d262b93c2b77a99">&#9670;&nbsp;</a></span>getLibraryName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string NcursesLibrary::getLibraryName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>get name of the library currently used </p>
+<dl class="section return"><dt>Returns</dt><dd>std::string libraryName </dd></dl>
+
+<p>Implements <a class="el" href="class_i_graph.html#a37b6f2993125bbbb12007714668eb026">IGraph</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_ncurses_library_8cpp_source.html#l00084">84</a> of file <a class="el" href="_ncurses_library_8cpp_source.html">NcursesLibrary.cpp</a>.</p>
 
 </div>
 </div>
