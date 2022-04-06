@@ -9,8 +9,8 @@
 #define ARCADE_IDISPLAY_HPP
 
 #include "Color.hpp"
-#include "IEntity.hpp"
 #include "Event.hpp"
+#include "IEntity.hpp"
 #include <string>
 
 #ifndef GRID_INT
