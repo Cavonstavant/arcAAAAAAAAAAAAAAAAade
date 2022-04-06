@@ -35,7 +35,7 @@ var hierarchy =
     [ "IGame", "class_i_game.html", [
       [ "MainMenu", "class_main_menu.html", null ]
     ] ],
-    [ "IGraph< T >", "class_i_graph.html", null ],
+    [ "IGraph", "class_i_graph.html", null ],
     [ "IGraph< float >", "class_i_graph.html", [
       [ "SfmlLibrary", "class_sfml_library.html", null ]
     ] ],

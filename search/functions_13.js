@@ -6,7 +6,7 @@ var searchData=
   ['_7eenemy_416',['~Enemy',['../class_enemy.html#ac0eec4755e28c02688065f9657150ac3',1,'Enemy']]],
   ['_7eientity_417',['~IEntity',['../class_i_entity.html#acfe7cc7def33fa1cc8a2a56dc39d29e3',1,'IEntity']]],
   ['_7eigame_418',['~IGame',['../class_i_game.html#a91b14c1b6019364120d5c5e4d4c64414',1,'IGame']]],
-  ['_7eigraph_419',['~IGraph',['../class_i_graph.html#a4d0222e5b7d69deb8ab57e2a4cf91b2a',1,'IGraph']]],
+  ['_7eigraph_419',['~IGraph',['../class_i_graph.html#a12f681e7abc397a40abd4abae7b8104c',1,'IGraph']]],
   ['_7elibmanager_420',['~LibManager',['../class_lib_manager.html#ade5e45886e1d82e8f0c968de7eb59f04',1,'LibManager']]],
   ['_7emainmenu_421',['~MainMenu',['../class_main_menu.html#a0a19ddba3ac52bf39c09b579171c98f2',1,'MainMenu']]],
   ['_7eobject_422',['~Object',['../class_object.html#ae8f5483f459e46687bd01e6f9977afd3',1,'Object']]],
