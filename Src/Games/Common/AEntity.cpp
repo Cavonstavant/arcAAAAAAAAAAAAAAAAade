@@ -55,3 +55,13 @@ std::pair<char, std::pair<Color::TermColors, Color::TermColors>> AEntity::getTer
 {
     return _termTexture;
 }
+
+AEntity::Direction AEntity::getDirection() const
+{
+    return _direction;
+}
+
+void AEntity::setDirection(AEntity::Direction direction)
+{
+    _direction = direction;
+}
