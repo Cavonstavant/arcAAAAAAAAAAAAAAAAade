@@ -29,6 +29,6 @@ var searchData=
   ['sfmllibrary_2ecpp_228',['SfmlLibrary.cpp',['../_sfml_library_8cpp.html',1,'']]],
   ['sfmllibrary_2ehpp_229',['SfmlLibrary.hpp',['../_sfml_library_8hpp.html',1,'']]],
   ['start_230',['start',['../class_i_game.html#abdc3543ee754cecb7eb156f05ce5869d',1,'IGame::start()'],['../class_main_menu.html#af13a5defbd470cb18edc59d14668aaf4',1,'MainMenu::start()']]],
-  ['state_231',['State',['../struct_arcade_1_1_evt.html#a4a807167a98f0b8b6df67ebabee49e56',1,'Arcade::Evt::State()'],['../struct_arcade_1_1_evt_1_1_mouse_evt.html#add27b1b140db978ab9f34578c93949ce',1,'Arcade::Evt::MouseEvt::state()'],['../struct_arcade_1_1_evt_1_1_key_evt.html#a7d84273d41cad700d7673e4b87a6af3f',1,'Arcade::Evt::KeyEvt::state()']]],
+  ['state_231',['state',['../struct_arcade_1_1_evt_1_1_mouse_evt.html#add27b1b140db978ab9f34578c93949ce',1,'Arcade::Evt::MouseEvt::state()'],['../struct_arcade_1_1_evt_1_1_key_evt.html#a7d84273d41cad700d7673e4b87a6af3f',1,'Arcade::Evt::KeyEvt::state()'],['../struct_arcade_1_1_evt.html#a4a807167a98f0b8b6df67ebabee49e56',1,'Arcade::Evt::State()']]],
   ['stopped_232',['STOPPED',['../class_i_game.html#a4a7309d86599d6e581f764233085c7dda09d4d696b4e935115b9313e3c412509a',1,'IGame']]]
 ];
