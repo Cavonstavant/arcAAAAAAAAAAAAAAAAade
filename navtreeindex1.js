@@ -1,5 +1,18 @@
 var NAVTREEINDEX1 =
 {
+"class_logger.html#a4cc16315b37eb0265c2d199880464a15abfe181f20efaf6d412dae251c056b0ef":[3,0,21,0,1],
+"class_logger.html#a4cc16315b37eb0265c2d199880464a15acbeef5b21ec10a69188ac3d4cfa3a62b":[3,0,21,0,4],
+"class_logger.html#a4cc16315b37eb0265c2d199880464a15afe05cfd16d0acc2a1a1e9bf898e1a048":[3,0,21,0,3],
+"class_logger.html#aefffc02e0c6c0ab09ec1f77fe35f6439":[3,0,21,1],
+"class_main_menu.html":[3,0,22],
+"class_main_menu.html#a0a19ddba3ac52bf39c09b579171c98f2":[3,0,22,1],
+"class_main_menu.html#a119181be29b1e19051e50fbd855c9217":[3,0,22,6],
+"class_main_menu.html#a1f2a0ab6540cf2f6023565feb24be3a6":[3,0,22,4],
+"class_main_menu.html#a2a1ff38880d4dab3e41b203aeabf2a81":[3,0,22,2],
+"class_main_menu.html#a53eecf9d5ffd094f54ac4193e7e57eaf":[3,0,22,0],
+"class_main_menu.html#aae6fc744adbe076dc07356ae6e1a322d":[3,0,22,3],
+"class_main_menu.html#af13a5defbd470cb18edc59d14668aaf4":[3,0,22,5],
+"class_ncurses_library.html":[3,0,23],
 "class_ncurses_library.html#a2f48cc458d7d3d8f562da1ba8b76c574":[3,0,23,7],
 "class_ncurses_library.html#a53bb58469b8bf5e966609e8acb403f26":[3,0,23,6],
 "class_ncurses_library.html#a5c897abdd82f3ffd8c46bbd391c5b9ea":[3,0,23,1],

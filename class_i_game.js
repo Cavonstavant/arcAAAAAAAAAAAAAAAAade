@@ -9,6 +9,7 @@ var class_i_game =
     [ "~IGame", "class_i_game.html#a91b14c1b6019364120d5c5e4d4c64414", null ],
     [ "getLibraryName", "class_i_game.html#ad4b0a0f5cf6be7c2692485907dc0f6ac", null ],
     [ "getState", "class_i_game.html#a44de7e08e7ee294be051445a84306299", null ],
+    [ "init", "class_i_game.html#a7cd2c70ae9eb419516d263363eb2b3d2", null ],
     [ "start", "class_i_game.html#abdc3543ee754cecb7eb156f05ce5869d", null ],
     [ "update", "class_i_game.html#a025e62ee4c27e2e9f83ebae85dea9e9c", null ]
 ];

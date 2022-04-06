@@ -119,6 +119,9 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a91b14c1b6019364120d5c5e4d4c64414"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_game.html#a91b14c1b6019364120d5c5e4d4c64414">~IGame</a> ()=default</td></tr>
 <tr class="separator:a91b14c1b6019364120d5c5e4d4c64414"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cd2c70ae9eb419516d263363eb2b3d2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_game.html#a7cd2c70ae9eb419516d263363eb2b3d2">init</a> (std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_i_entity.html">IEntity</a> &gt;&gt; &amp;entities)=0</td></tr>
+<tr class="memdesc:a7cd2c70ae9eb419516d263363eb2b3d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the game.  <a href="class_i_game.html#a7cd2c70ae9eb419516d263363eb2b3d2">More...</a><br /></td></tr>
+<tr class="separator:a7cd2c70ae9eb419516d263363eb2b3d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a025e62ee4c27e2e9f83ebae85dea9e9c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_game.html#a025e62ee4c27e2e9f83ebae85dea9e9c">update</a> (std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_i_entity.html">IEntity</a> &gt;&gt; &amp;entities, std::stack&lt; <a class="el" href="struct_arcade_1_1_evt.html">Arcade::Evt</a> &gt; &amp;events)=0</td></tr>
 <tr class="memdesc:a025e62ee4c27e2e9f83ebae85dea9e9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the game's status.  <a href="class_i_game.html#a025e62ee4c27e2e9f83ebae85dea9e9c">More...</a><br /></td></tr>
 <tr class="separator:a025e62ee4c27e2e9f83ebae85dea9e9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -225,6 +228,8 @@ Public Member Functions</h2></td></tr>
 
 <p>Get the game's name. </p>
 
+<p>Implemented in <a class="el" href="class_main_menu.html#a2a1ff38880d4dab3e41b203aeabf2a81">MainMenu</a>.</p>
+
 </div>
 </div>
 <a id="a44de7e08e7ee294be051445a84306299"></a>
@@ -254,6 +259,36 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>the game's status </dd></dl>
 
 <p>Implemented in <a class="el" href="class_main_menu.html#aae6fc744adbe076dc07356ae6e1a322d">MainMenu</a>.</p>
+
+</div>
+</div>
+<a id="a7cd2c70ae9eb419516d263363eb2b3d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cd2c70ae9eb419516d263363eb2b3d2">&#9670;&nbsp;</a></span>init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IGame::init </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_i_entity.html">IEntity</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>entities</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initialize the game. </p>
+
+<p>Implemented in <a class="el" href="class_main_menu.html#a1f2a0ab6540cf2f6023565feb24be3a6">MainMenu</a>.</p>
 
 </div>
 </div>
