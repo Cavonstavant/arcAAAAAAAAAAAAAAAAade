@@ -26,7 +26,7 @@
 #define MINIMUM_TERM_HEIGHT (GRID_HEIGHT)
 
 /// \brief Gets a position in a window from a position in the grid
-#define GRID_INT(x) x * GRID_CELL_SIZE
+#define GRID_INT(x) x *GRID_CELL_SIZE
 /// \brief Gets a pair of positions in a window from a pair of positions in the grid
 #define GRID_PAIR(x) std::make_pair(GRID_INT(x.first), GRID_INT(x.second))
 
