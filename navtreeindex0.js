@@ -112,8 +112,6 @@ var NAVTREEINDEX0 =
 "_sdl_library_8cpp.html":[4,0,0,3,1,1],
 "_sdl_library_8cpp_source.html":[4,0,0,3,1,1],
 "_sdl_library_8hpp.html":[4,0,0,3,1,2],
-"_sdl_library_8hpp.html#a498d9f026138406895e9a34b504ac6a6":[4,0,0,3,1,2,2],
-"_sdl_library_8hpp.html#a5473cf64fa979b48335079c99532e243":[4,0,0,3,1,2,1],
 "_sdl_library_8hpp_source.html":[4,0,0,3,1,2],
 "_sfml_library_8cpp.html":[4,0,0,3,2,1],
 "_sfml_library_8cpp_source.html":[4,0,0,3,2,1],
@@ -249,5 +247,7 @@ var NAVTREEINDEX0 =
 "class_main_menu.html#a0a19ddba3ac52bf39c09b579171c98f2":[3,0,22,1],
 "class_main_menu.html#a119181be29b1e19051e50fbd855c9217":[3,0,22,4],
 "class_main_menu.html#a450d8cd78c43b582c22747cb9dbe1b19":[3,0,22,0],
-"class_main_menu.html#aae6fc744adbe076dc07356ae6e1a322d":[3,0,22,2]
+"class_main_menu.html#aae6fc744adbe076dc07356ae6e1a322d":[3,0,22,2],
+"class_main_menu.html#af13a5defbd470cb18edc59d14668aaf4":[3,0,22,3],
+"class_ncurses_library.html":[3,0,23]
 };

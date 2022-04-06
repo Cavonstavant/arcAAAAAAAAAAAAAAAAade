@@ -90,7 +90,7 @@ $(document).ready(function(){initNavTree('class_sdl_library.html',''); initResiz
 </div><!--header-->
 <div class="contents">
 
-<p>SDL Library using int as template value from <a class="el" href="class_i_graph.html" title="represents a generic graphical library">IGraph</a>.  
+<p>SDL Library.  
  <a href="class_sdl_library.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_sdl_library_8hpp_source.html">SdlLibrary.hpp</a>&gt;</code></p>
@@ -99,7 +99,7 @@ Inheritance diagram for SdlLibrary:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_sdl_library__inherit__graph.png" border="0" usemap="#_sdl_library_inherit__map" alt="Inheritance graph"/></div>
 <map name="_sdl_library_inherit__map" id="_sdl_library_inherit__map">
-<area shape="rect" title="SDL Library using int as template value from IGraph." alt="" coords="5,80,92,107"/>
+<area shape="rect" title="SDL Library." alt="" coords="5,80,92,107"/>
 <area shape="rect" href="class_i_graph.html" title="represents a generic graphical library" alt="" coords="16,5,81,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
@@ -108,7 +108,7 @@ Collaboration diagram for SdlLibrary:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_sdl_library__coll__graph.png" border="0" usemap="#_sdl_library_coll__map" alt="Collaboration graph"/></div>
 <map name="_sdl_library_coll__map" id="_sdl_library_coll__map">
-<area shape="rect" title="SDL Library using int as template value from IGraph." alt="" coords="5,80,92,107"/>
+<area shape="rect" title="SDL Library." alt="" coords="5,80,92,107"/>
 <area shape="rect" href="class_i_graph.html" title="represents a generic graphical library" alt="" coords="16,5,81,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
@@ -116,11 +116,11 @@ Collaboration diagram for SdlLibrary:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a8efdf0a033b3a56e8c5c9bb28b4b4ce7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sdl_library.html#a8efdf0a033b3a56e8c5c9bb28b4b4ce7">SdlLibrary</a> ()</td></tr>
-<tr class="memdesc:a8efdf0a033b3a56e8c5c9bb28b4b4ce7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default Constructor.  <a href="class_sdl_library.html#a8efdf0a033b3a56e8c5c9bb28b4b4ce7">More...</a><br /></td></tr>
+<tr class="memdesc:a8efdf0a033b3a56e8c5c9bb28b4b4ce7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default Constructor SDL_INIT_EVERYTHING | Initialize every feature like video, audio, events... Creating &amp; Initializing Window &amp; Renderer Loading member _font (ARCADE_N.TTF as default font)  <a href="class_sdl_library.html#a8efdf0a033b3a56e8c5c9bb28b4b4ce7">More...</a><br /></td></tr>
 <tr class="separator:a8efdf0a033b3a56e8c5c9bb28b4b4ce7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a834c7f5dd4369f576770881869edc5e5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sdl_library.html#a834c7f5dd4369f576770881869edc5e5">~SdlLibrary</a> () noexcept</td></tr>
-<tr class="memdesc:a834c7f5dd4369f576770881869edc5e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default Destructor.  <a href="class_sdl_library.html#a834c7f5dd4369f576770881869edc5e5">More...</a><br /></td></tr>
-<tr class="separator:a834c7f5dd4369f576770881869edc5e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b2e797c001308fbdd540b8e89e49b7f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sdl_library.html#a1b2e797c001308fbdd540b8e89e49b7f">~SdlLibrary</a> () noexcept override</td></tr>
+<tr class="memdesc:a1b2e797c001308fbdd540b8e89e49b7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default Destructor Destroying Window &amp; Renderer SDL_Quit() to close every features previously opened in the constructor.  <a href="class_sdl_library.html#a1b2e797c001308fbdd540b8e89e49b7f">More...</a><br /></td></tr>
+<tr class="separator:a1b2e797c001308fbdd540b8e89e49b7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7761041f048d86628264f86cddd1583d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sdl_library.html#a7761041f048d86628264f86cddd1583d">clearWindow</a> () override</td></tr>
 <tr class="memdesc:a7761041f048d86628264f86cddd1583d"><td class="mdescLeft">&#160;</td><td class="mdescRight">clear the window  <a href="class_sdl_library.html#a7761041f048d86628264f86cddd1583d">More...</a><br /></td></tr>
 <tr class="separator:a7761041f048d86628264f86cddd1583d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -139,19 +139,19 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a906e0b9da52caef24f36a9e4b5a128e5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sdl_library.html#a906e0b9da52caef24f36a9e4b5a128e5">drawEntity</a> (<a class="el" href="class_i_entity.html">IEntity</a> &amp;entity, std::pair&lt; int, int &gt; pos) override</td></tr>
 <tr class="memdesc:a906e0b9da52caef24f36a9e4b5a128e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an Entity, set position, then display it on the window. After all destroy the Entity.  <a href="class_sdl_library.html#a906e0b9da52caef24f36a9e4b5a128e5">More...</a><br /></td></tr>
 <tr class="separator:a906e0b9da52caef24f36a9e4b5a128e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a247738402108cde02c99fac253072f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_arcade_1_1_evt.html">Arcade::Evt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sdl_library.html#a3a247738402108cde02c99fac253072f">getInput</a> () const override</td></tr>
+<tr class="memdesc:a3a247738402108cde02c99fac253072f"><td class="mdescLeft">&#160;</td><td class="mdescRight">get input from Graphic Library to send it to the Core  <a href="class_sdl_library.html#a3a247738402108cde02c99fac253072f">More...</a><br /></td></tr>
+<tr class="separator:a3a247738402108cde02c99fac253072f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaaaad183fbed74c5219cbc1a5047ae7f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sdl_library.html#aaaaad183fbed74c5219cbc1a5047ae7f">getLibraryName</a> () const override</td></tr>
+<tr class="memdesc:aaaaad183fbed74c5219cbc1a5047ae7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">get name of the library currently used  <a href="class_sdl_library.html#aaaaad183fbed74c5219cbc1a5047ae7f">More...</a><br /></td></tr>
+<tr class="separator:aaaaad183fbed74c5219cbc1a5047ae7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_i_graph"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_i_graph')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_i_graph.html">IGraph</a></td></tr>
 <tr class="memitem:a12f681e7abc397a40abd4abae7b8104c inherit pub_methods_class_i_graph"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graph.html#a12f681e7abc397a40abd4abae7b8104c">~IGraph</a> ()=default</td></tr>
 <tr class="memdesc:a12f681e7abc397a40abd4abae7b8104c inherit pub_methods_class_i_graph"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="class_i_graph.html#a12f681e7abc397a40abd4abae7b8104c">More...</a><br /></td></tr>
 <tr class="separator:a12f681e7abc397a40abd4abae7b8104c inherit pub_methods_class_i_graph"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3276be081a766d713c150d087ec28e98 inherit pub_methods_class_i_graph"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="struct_arcade_1_1_evt.html">Arcade::Evt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graph.html#a3276be081a766d713c150d087ec28e98">getInput</a> () const =0</td></tr>
-<tr class="memdesc:a3276be081a766d713c150d087ec28e98 inherit pub_methods_class_i_graph"><td class="mdescLeft">&#160;</td><td class="mdescRight">get input from Graphic Library to send it to the Core  <a href="class_i_graph.html#a3276be081a766d713c150d087ec28e98">More...</a><br /></td></tr>
-<tr class="separator:a3276be081a766d713c150d087ec28e98 inherit pub_methods_class_i_graph"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37b6f2993125bbbb12007714668eb026 inherit pub_methods_class_i_graph"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graph.html#a37b6f2993125bbbb12007714668eb026">getLibraryName</a> () const =0</td></tr>
-<tr class="memdesc:a37b6f2993125bbbb12007714668eb026 inherit pub_methods_class_i_graph"><td class="mdescLeft">&#160;</td><td class="mdescRight">get name of the library currently used  <a href="class_i_graph.html#a37b6f2993125bbbb12007714668eb026">More...</a><br /></td></tr>
-<tr class="separator:a37b6f2993125bbbb12007714668eb026 inherit pub_methods_class_i_graph"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>SDL Library using int as template value from <a class="el" href="class_i_graph.html" title="represents a generic graphical library">IGraph</a>. </p>
+<div class="textblock"><p>SDL Library. </p>
 
 <p class="definition">Definition at line <a class="el" href="_sdl_library_8hpp_source.html#l00018">18</a> of file <a class="el" href="_sdl_library_8hpp_source.html">SdlLibrary.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -170,14 +170,14 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Default Constructor. </p>
+<p>Default Constructor SDL_INIT_EVERYTHING | Initialize every feature like video, audio, events... Creating &amp; Initializing Window &amp; Renderer Loading member _font (ARCADE_N.TTF as default font) </p>
 
 <p class="definition">Definition at line <a class="el" href="_sdl_library_8cpp_source.html#l00010">10</a> of file <a class="el" href="_sdl_library_8cpp_source.html">SdlLibrary.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a834c7f5dd4369f576770881869edc5e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a834c7f5dd4369f576770881869edc5e5">&#9670;&nbsp;</a></span>~SdlLibrary()</h2>
+<a id="a1b2e797c001308fbdd540b8e89e49b7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b2e797c001308fbdd540b8e89e49b7f">&#9670;&nbsp;</a></span>~SdlLibrary()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -194,14 +194,14 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Default Destructor. </p>
+<p>Default Destructor Destroying Window &amp; Renderer SDL_Quit() to close every features previously opened in the constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="_sdl_library_8cpp_source.html#l00022">22</a> of file <a class="el" href="_sdl_library_8cpp_source.html">SdlLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_sdl_library_8cpp_source.html#l00023">23</a> of file <a class="el" href="_sdl_library_8cpp_source.html">SdlLibrary.cpp</a>.</p>
 
 </div>
 </div>
@@ -234,7 +234,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_graph.html#ad093f704c4f0c13bc42ca4e494b76d20">IGraph</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_sdl_library_8cpp_source.html#l00029">29</a> of file <a class="el" href="_sdl_library_8cpp_source.html">SdlLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_sdl_library_8cpp_source.html#l00030">30</a> of file <a class="el" href="_sdl_library_8cpp_source.html">SdlLibrary.cpp</a>.</p>
 
 </div>
 </div>
@@ -323,7 +323,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_graph.html#ac3a39c636d2e479e9f7dd90a6a5a7f17">IGraph</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_sdl_library_8cpp_source.html#l00043">43</a> of file <a class="el" href="_sdl_library_8cpp_source.html">SdlLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_sdl_library_8cpp_source.html#l00042">42</a> of file <a class="el" href="_sdl_library_8cpp_source.html">SdlLibrary.cpp</a>.</p>
 
 </div>
 </div>
@@ -373,7 +373,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_graph.html#a86710ad76190aafbdf76941ce89a34f3">IGraph</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_sdl_library_8cpp_source.html#l00058">58</a> of file <a class="el" href="_sdl_library_8cpp_source.html">SdlLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_sdl_library_8cpp_source.html#l00079">79</a> of file <a class="el" href="_sdl_library_8cpp_source.html">SdlLibrary.cpp</a>.</p>
 
 </div>
 </div>
@@ -437,7 +437,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_graph.html#a7963d277bd33308a52c3029214e875a0">IGraph</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_sdl_library_8cpp_source.html#l00048">48</a> of file <a class="el" href="_sdl_library_8cpp_source.html">SdlLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_sdl_library_8cpp_source.html#l00047">47</a> of file <a class="el" href="_sdl_library_8cpp_source.html">SdlLibrary.cpp</a>.</p>
 
 </div>
 </div>
@@ -487,7 +487,71 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_graph.html#a33dcccbd047be436bf9ace4347071f56">IGraph</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_sdl_library_8cpp_source.html#l00053">53</a> of file <a class="el" href="_sdl_library_8cpp_source.html">SdlLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_sdl_library_8cpp_source.html#l00061">61</a> of file <a class="el" href="_sdl_library_8cpp_source.html">SdlLibrary.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a3a247738402108cde02c99fac253072f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a247738402108cde02c99fac253072f">&#9670;&nbsp;</a></span>getInput()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_arcade_1_1_evt.html">Arcade::Evt</a> SdlLibrary::getInput </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>get input from Graphic Library to send it to the Core </p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="struct_arcade_1_1_evt.html" title="Represents a generic event interface this interface is shared across all the graphical libraries.">Arcade::Evt</a> representing the keyboard pressed of the event triggered </dd></dl>
+
+<p>Implements <a class="el" href="class_i_graph.html#a3276be081a766d713c150d087ec28e98">IGraph</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_sdl_library_8cpp_source.html#l00100">100</a> of file <a class="el" href="_sdl_library_8cpp_source.html">SdlLibrary.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aaaaad183fbed74c5219cbc1a5047ae7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaaaad183fbed74c5219cbc1a5047ae7f">&#9670;&nbsp;</a></span>getLibraryName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string SdlLibrary::getLibraryName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>get name of the library currently used </p>
+<dl class="section return"><dt>Returns</dt><dd>std::string libraryName </dd></dl>
+
+<p>Implements <a class="el" href="class_i_graph.html#a37b6f2993125bbbb12007714668eb026">IGraph</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_sdl_library_8cpp_source.html#l00095">95</a> of file <a class="el" href="_sdl_library_8cpp_source.html">SdlLibrary.cpp</a>.</p>
 
 </div>
 </div>

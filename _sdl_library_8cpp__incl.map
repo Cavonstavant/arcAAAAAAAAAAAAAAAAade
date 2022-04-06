@@ -1,11 +1,13 @@
 <map id="Src/GraphicLibs/SDL/SdlLibrary.cpp" name="Src/GraphicLibs/SDL/SdlLibrary.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="169,5,320,47"/>
-<area shape="rect" id="node2" href="$_sdl_library_8hpp.html" title=" " alt="" coords="188,95,301,121"/>
-<area shape="rect" id="node3" href="$_i_graph_8hpp.html" title=" " alt="" coords="87,169,250,211"/>
-<area shape="rect" id="node9" title=" " alt="" coords="274,177,370,203"/>
-<area shape="rect" id="node4" href="$_color_8hpp.html" title=" " alt="" coords="87,333,170,360"/>
-<area shape="rect" id="node5" href="$_grid_8hpp.html" title=" " alt="" coords="23,259,100,285"/>
-<area shape="rect" id="node6" href="$_event_8hpp.html" title=" " alt="" coords="125,259,212,285"/>
-<area shape="rect" id="node7" href="$_i_entity_8hpp.html" title=" " alt="" coords="236,259,327,285"/>
-<area shape="rect" id="node8" title=" " alt="" coords="294,333,352,360"/>
+<area shape="rect" id="node1" title=" " alt="" coords="231,5,381,47"/>
+<area shape="rect" id="node2" href="$_sdl_library_8hpp.html" title=" " alt="" coords="249,95,363,121"/>
+<area shape="rect" id="node3" href="$_event_8hpp.html" title=" " alt="" coords="5,244,92,271"/>
+<area shape="rect" id="node4" href="$_i_graph_8hpp.html" title=" " alt="" coords="141,169,234,196"/>
+<area shape="rect" id="node9" title=" " alt="" coords="258,169,354,196"/>
+<area shape="rect" id="node10" title=" " alt="" coords="378,169,522,196"/>
+<area shape="rect" id="node11" title=" " alt="" coords="546,169,663,196"/>
+<area shape="rect" id="node5" href="$_color_8hpp.html" title=" " alt="" coords="175,319,258,345"/>
+<area shape="rect" id="node6" href="$_grid_8hpp.html" title=" " alt="" coords="167,244,245,271"/>
+<area shape="rect" id="node7" href="$_i_entity_8hpp.html" title=" " alt="" coords="269,244,359,271"/>
+<area shape="rect" id="node8" title=" " alt="" coords="326,319,385,345"/>
 </map>
