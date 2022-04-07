@@ -124,144 +124,144 @@ Arcade::Evt SfmlLibrary::getInput() const
         keyEvt.state = true;
         keyEvt.modifier = Arcade::Evt::KEY_MODIFIER_NONE;
         switch (event.key.code) {
-            case sf::Keyboard::Left:
-                keyEvt.key = 'Q';
-                evt.key = keyEvt;
-                break;
-            case sf::Keyboard::Right:
-                keyEvt.key = 'D';
-                evt.key = keyEvt;
-                break;
-            case sf::Keyboard::Down:
-                keyEvt.key = 'S';
-                evt.key = keyEvt;
-                break;
-            case sf::Keyboard::Up:
-                keyEvt.key = 'Z';
-                evt.key = keyEvt;
-                break;
-            case sf::Keyboard::Space:
-                keyEvt.key = ' ';
-                evt.key = keyEvt;
-                break;
-            case sf::Keyboard::BackSpace:
-                keyEvt.key = '\b';
-                evt.key = keyEvt;
-                break;
-            case sf::Keyboard::Enter:
-                keyEvt.key = '\n';
-                evt.key = keyEvt;
-                break;
-            case sf::Keyboard::Escape:
-                keyEvt.key = 27;
-                evt.key = keyEvt;
-                break;
-            case sf::Keyboard::A:
-                keyEvt.key = 'a';
-                evt.key = keyEvt;
-                break;
-            case sf::Keyboard::B:
-                keyEvt.key = 'b';
-                evt.key = keyEvt;
-                break;
-            case sf::Keyboard::C:
-                keyEvt.key = 'c';
-                evt.key = keyEvt;
-                break;
-            case sf::Keyboard::D:
-                keyEvt.key = 'd';
-                evt.key = keyEvt;
-                break;
-            case sf::Keyboard::E:
-                keyEvt.key = 'e';
-                evt.key = keyEvt;
-                break;
-            case sf::Keyboard::F:
-                keyEvt.key = 'f';
-                evt.key = keyEvt;
-                break;
-            case sf::Keyboard::G:
-                keyEvt.key = 'g';
-                evt.key = keyEvt;
-                break;
-            case sf::Keyboard::H:
-                keyEvt.key = 'h';
-                evt.key = keyEvt;
-                break;
-            case sf::Keyboard::I:
-                keyEvt.key = 'i';
-                evt.key = keyEvt;
-                break;
-            case sf::Keyboard::J:
-                keyEvt.key = 'j';
-                evt.key = keyEvt;
-                break;
-            case sf::Keyboard::K:
-                keyEvt.key = 'k';
-                evt.key = keyEvt;
-                break;
-            case sf::Keyboard::L:
-                keyEvt.key = 'l';
-                evt.key = keyEvt;
-                break;
-            case sf::Keyboard::M:
-                keyEvt.key = 'm';
-                evt.key = keyEvt;
-                break;
-            case sf::Keyboard::N:
-                keyEvt.key = 'N';
-                evt.key = keyEvt;
-                break;
-            case sf::Keyboard::O:
-                keyEvt.key = 'o';
-                evt.key = keyEvt;
-                break;
-            case sf::Keyboard::P:
-                keyEvt.key = 'p';
-                evt.key = keyEvt;
-                break;
-            case sf::Keyboard::Q:
-                keyEvt.key = 'q';
-                evt.key = keyEvt;
-                break;
-            case sf::Keyboard::R:
-                keyEvt.key = 'r';
-                evt.key = keyEvt;
-                break;
-            case sf::Keyboard::S:
-                keyEvt.key = 's';
-                evt.key = keyEvt;
-                break;
-            case sf::Keyboard::T:
-                keyEvt.key = 't';
-                evt.key = keyEvt;
-                break;
-            case sf::Keyboard::U:
-                keyEvt.key = 'u';
-                evt.key = keyEvt;
-                break;
-            case sf::Keyboard::V:
-                keyEvt.key = 'v';
-                evt.key = keyEvt;
-                break;
-            case sf::Keyboard::W:
-                keyEvt.key = 'w';
-                evt.key = keyEvt;
-                break;
-            case sf::Keyboard::X:
-                keyEvt.key = 'x';
-                evt.key = keyEvt;
-                break;
-            case sf::Keyboard::Y:
-                keyEvt.key = 'y';
-                evt.key = keyEvt;
-                break;
-            case sf::Keyboard::Z:
-                keyEvt.key = 'z';
-                evt.key = keyEvt;
-                break;
-            default:
-                break;
+        case sf::Keyboard::Left:
+            keyEvt.key = 'Q';
+            evt.key = keyEvt;
+            break;
+        case sf::Keyboard::Right:
+            keyEvt.key = 'D';
+            evt.key = keyEvt;
+            break;
+        case sf::Keyboard::Down:
+            keyEvt.key = 'S';
+            evt.key = keyEvt;
+            break;
+        case sf::Keyboard::Up:
+            keyEvt.key = 'Z';
+            evt.key = keyEvt;
+            break;
+        case sf::Keyboard::Space:
+            keyEvt.key = ' ';
+            evt.key = keyEvt;
+            break;
+        case sf::Keyboard::BackSpace:
+            keyEvt.key = '\b';
+            evt.key = keyEvt;
+            break;
+        case sf::Keyboard::Enter:
+            keyEvt.key = '\n';
+            evt.key = keyEvt;
+            break;
+        case sf::Keyboard::Escape:
+            keyEvt.key = 27;
+            evt.key = keyEvt;
+            break;
+        case sf::Keyboard::A:
+            keyEvt.key = 'a';
+            evt.key = keyEvt;
+            break;
+        case sf::Keyboard::B:
+            keyEvt.key = 'b';
+            evt.key = keyEvt;
+            break;
+        case sf::Keyboard::C:
+            keyEvt.key = 'c';
+            evt.key = keyEvt;
+            break;
+        case sf::Keyboard::D:
+            keyEvt.key = 'd';
+            evt.key = keyEvt;
+            break;
+        case sf::Keyboard::E:
+            keyEvt.key = 'e';
+            evt.key = keyEvt;
+            break;
+        case sf::Keyboard::F:
+            keyEvt.key = 'f';
+            evt.key = keyEvt;
+            break;
+        case sf::Keyboard::G:
+            keyEvt.key = 'g';
+            evt.key = keyEvt;
+            break;
+        case sf::Keyboard::H:
+            keyEvt.key = 'h';
+            evt.key = keyEvt;
+            break;
+        case sf::Keyboard::I:
+            keyEvt.key = 'i';
+            evt.key = keyEvt;
+            break;
+        case sf::Keyboard::J:
+            keyEvt.key = 'j';
+            evt.key = keyEvt;
+            break;
+        case sf::Keyboard::K:
+            keyEvt.key = 'k';
+            evt.key = keyEvt;
+            break;
+        case sf::Keyboard::L:
+            keyEvt.key = 'l';
+            evt.key = keyEvt;
+            break;
+        case sf::Keyboard::M:
+            keyEvt.key = 'm';
+            evt.key = keyEvt;
+            break;
+        case sf::Keyboard::N:
+            keyEvt.key = 'N';
+            evt.key = keyEvt;
+            break;
+        case sf::Keyboard::O:
+            keyEvt.key = 'o';
+            evt.key = keyEvt;
+            break;
+        case sf::Keyboard::P:
+            keyEvt.key = 'p';
+            evt.key = keyEvt;
+            break;
+        case sf::Keyboard::Q:
+            keyEvt.key = 'q';
+            evt.key = keyEvt;
+            break;
+        case sf::Keyboard::R:
+            keyEvt.key = 'r';
+            evt.key = keyEvt;
+            break;
+        case sf::Keyboard::S:
+            keyEvt.key = 's';
+            evt.key = keyEvt;
+            break;
+        case sf::Keyboard::T:
+            keyEvt.key = 't';
+            evt.key = keyEvt;
+            break;
+        case sf::Keyboard::U:
+            keyEvt.key = 'u';
+            evt.key = keyEvt;
+            break;
+        case sf::Keyboard::V:
+            keyEvt.key = 'v';
+            evt.key = keyEvt;
+            break;
+        case sf::Keyboard::W:
+            keyEvt.key = 'w';
+            evt.key = keyEvt;
+            break;
+        case sf::Keyboard::X:
+            keyEvt.key = 'x';
+            evt.key = keyEvt;
+            break;
+        case sf::Keyboard::Y:
+            keyEvt.key = 'y';
+            evt.key = keyEvt;
+            break;
+        case sf::Keyboard::Z:
+            keyEvt.key = 'z';
+            evt.key = keyEvt;
+            break;
+        default:
+            break;
         }
     }
     return evt;
