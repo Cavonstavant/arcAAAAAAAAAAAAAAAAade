@@ -1,15 +1,52 @@
 /*
 ** EPITECH PROJECT, 2022
-** arcade
+** Pacman.cpp.cc
 ** File description:
-** Pacman
+** Created by hjulien,
 */
 
-#include <iostream>
+#include "Pacman.hpp"
 
-extern "C" {
-void pacman(void)
-{
-    std::cout << "Hello from Pacman" << std::endl;
+Pacman::Pacman() {
+
 }
+
+std::string Pacman::getName() const
+{
+    return "Pacman";
+}
+
+void Pacman::update(std::vector<std::shared_ptr<IEntity>> &entities, std::stack<Arcade::Evt> &events)
+{
+
+}
+
+IGame::GameState Pacman::getState() const
+{
+    return IGame::GameState::PAUSED;
+}
+
+void Pacman::start()
+{
+
+}
+
+bool Pacman::moveUp(Arcade::Evt input)
+{
+    return false;
+}
+
+bool Pacman::moveDown(Arcade::Evt input)
+{
+    return false;
+}
+
+bool Pacman::moveRight(Arcade::Evt input)
+{
+    return false;
+}
+
+bool Pacman::moveLeft(Arcade::Evt input)
+{
+    return false;
 }
