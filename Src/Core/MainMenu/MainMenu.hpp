@@ -32,9 +32,8 @@ class MainMenu : public IGame {
         GameState getState() const { return _gameState; }
         /// \brief starts the game
         void start();
-        /// \brief get the library name
-        /// \return the library name
-        std::string getLibraryName() const;
+        /// \brief Get the menu's name
+        std::string getLibraryName() const override final;
 
     protected:
     private:
