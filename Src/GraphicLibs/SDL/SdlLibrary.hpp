@@ -28,6 +28,11 @@ class SdlLibrary : public IGraph {
         /// SDL_Quit() to close every features previously opened in the constructor
         ~SdlLibrary() noexcept override;
 
+        /// \brief Initialize the library
+        void init() override;
+        /// \brief Closes the library
+        void close() override;
+
         bool clearWindow() override;
         bool displayWindow() override;
 

@@ -21,6 +21,11 @@ class NcursesLibrary : public IGraph {
         /// \brief Destructor (calls endscr)
         ~NcursesLibrary();
 
+        /// \brief Initialize the library
+        void init() override;
+        /// \brief Closes the library
+        void close() override;
+
         bool clearWindow() override;
         bool displayWindow() override;
 

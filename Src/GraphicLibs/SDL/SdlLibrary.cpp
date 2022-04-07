@@ -9,6 +9,14 @@
 
 SdlLibrary::SdlLibrary()
 {
+}
+
+SdlLibrary::~SdlLibrary() noexcept
+{
+}
+
+void SdlLibrary::init()
+{
     SDL_Init(SDL_INIT_EVERYTHING);
     _window = SDL_CreateWindow("Window",
                                SDL_WINDOWPOS_CENTERED,
@@ -20,8 +28,9 @@ SdlLibrary::SdlLibrary()
     _font = TTF_OpenFont("../Resources/Font/ARCADE_N.TTF", 200);
 }
 
-SdlLibrary::~SdlLibrary() noexcept
+void SdlLibrary::close()
 {
+    TTF_CloseFont(_font);
     SDL_DestroyWindow(_window);
     SDL_DestroyRenderer(_renderer);
     SDL_Quit();
