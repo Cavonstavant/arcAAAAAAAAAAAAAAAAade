@@ -121,6 +121,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2d942a4d6d554e01631ec79d47831d24"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sfml_library.html#a2d942a4d6d554e01631ec79d47831d24">~SfmlLibrary</a> ()</td></tr>
 <tr class="memdesc:a2d942a4d6d554e01631ec79d47831d24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default destructor Closing window previously opened in constructor.  <a href="class_sfml_library.html#a2d942a4d6d554e01631ec79d47831d24">More...</a><br /></td></tr>
 <tr class="separator:a2d942a4d6d554e01631ec79d47831d24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fd0f5b3409b8c6974be461a2a0301da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sfml_library.html#a3fd0f5b3409b8c6974be461a2a0301da">init</a> () override</td></tr>
+<tr class="memdesc:a3fd0f5b3409b8c6974be461a2a0301da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the library.  <a href="class_sfml_library.html#a3fd0f5b3409b8c6974be461a2a0301da">More...</a><br /></td></tr>
+<tr class="separator:a3fd0f5b3409b8c6974be461a2a0301da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4296f759f4bc34e5d9dbed2cf3fdea8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sfml_library.html#af4296f759f4bc34e5d9dbed2cf3fdea8">close</a> () override</td></tr>
+<tr class="memdesc:af4296f759f4bc34e5d9dbed2cf3fdea8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the library.  <a href="class_sfml_library.html#af4296f759f4bc34e5d9dbed2cf3fdea8">More...</a><br /></td></tr>
+<tr class="separator:af4296f759f4bc34e5d9dbed2cf3fdea8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae80664835f474f6f812d5678d96c6939"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sfml_library.html#ae80664835f474f6f812d5678d96c6939">clearWindow</a> () override</td></tr>
 <tr class="memdesc:ae80664835f474f6f812d5678d96c6939"><td class="mdescLeft">&#160;</td><td class="mdescRight">clear the window  <a href="class_sfml_library.html#ae80664835f474f6f812d5678d96c6939">More...</a><br /></td></tr>
 <tr class="separator:ae80664835f474f6f812d5678d96c6939"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -193,7 +199,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Default destructor Closing window previously opened in constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="_sfml_library_8cpp_source.html#l00019">19</a> of file <a class="el" href="_sfml_library_8cpp_source.html">SfmlLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_sfml_library_8cpp_source.html#l00014">14</a> of file <a class="el" href="_sfml_library_8cpp_source.html">SfmlLibrary.cpp</a>.</p>
 
 </div>
 </div>
@@ -226,7 +232,38 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_graph.html#ad093f704c4f0c13bc42ca4e494b76d20">IGraph</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_sfml_library_8cpp_source.html#l00024">24</a> of file <a class="el" href="_sfml_library_8cpp_source.html">SfmlLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_sfml_library_8cpp_source.html#l00034">34</a> of file <a class="el" href="_sfml_library_8cpp_source.html">SfmlLibrary.cpp</a>.</p>
+
+</div>
+</div>
+<a id="af4296f759f4bc34e5d9dbed2cf3fdea8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4296f759f4bc34e5d9dbed2cf3fdea8">&#9670;&nbsp;</a></span>close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SfmlLibrary::close </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Closes the library. </p>
+
+<p>Implements <a class="el" href="class_i_graph.html#ab4877a54bbdbd2663e94309d260e064b">IGraph</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_sfml_library_8cpp_source.html#l00029">29</a> of file <a class="el" href="_sfml_library_8cpp_source.html">SfmlLibrary.cpp</a>.</p>
 
 </div>
 </div>
@@ -258,7 +295,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_graph.html#a703f8faaae8cb3b339b8686e5f442f81">IGraph</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_sfml_library_8cpp_source.html#l00030">30</a> of file <a class="el" href="_sfml_library_8cpp_source.html">SfmlLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_sfml_library_8cpp_source.html#l00040">40</a> of file <a class="el" href="_sfml_library_8cpp_source.html">SfmlLibrary.cpp</a>.</p>
 
 </div>
 </div>
@@ -315,7 +352,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_graph.html#ac3a39c636d2e479e9f7dd90a6a5a7f17">IGraph</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_sfml_library_8cpp_source.html#l00036">36</a> of file <a class="el" href="_sfml_library_8cpp_source.html">SfmlLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_sfml_library_8cpp_source.html#l00046">46</a> of file <a class="el" href="_sfml_library_8cpp_source.html">SfmlLibrary.cpp</a>.</p>
 
 </div>
 </div>
@@ -365,7 +402,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_graph.html#a86710ad76190aafbdf76941ce89a34f3">IGraph</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_sfml_library_8cpp_source.html#l00080">80</a> of file <a class="el" href="_sfml_library_8cpp_source.html">SfmlLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_sfml_library_8cpp_source.html#l00090">90</a> of file <a class="el" href="_sfml_library_8cpp_source.html">SfmlLibrary.cpp</a>.</p>
 
 </div>
 </div>
@@ -429,7 +466,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_graph.html#a7963d277bd33308a52c3029214e875a0">IGraph</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_sfml_library_8cpp_source.html#l00052">52</a> of file <a class="el" href="_sfml_library_8cpp_source.html">SfmlLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_sfml_library_8cpp_source.html#l00062">62</a> of file <a class="el" href="_sfml_library_8cpp_source.html">SfmlLibrary.cpp</a>.</p>
 
 </div>
 </div>
@@ -479,7 +516,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_graph.html#a33dcccbd047be436bf9ace4347071f56">IGraph</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_sfml_library_8cpp_source.html#l00068">68</a> of file <a class="el" href="_sfml_library_8cpp_source.html">SfmlLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_sfml_library_8cpp_source.html#l00078">78</a> of file <a class="el" href="_sfml_library_8cpp_source.html">SfmlLibrary.cpp</a>.</p>
 
 </div>
 </div>
@@ -511,7 +548,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_graph.html#a3276be081a766d713c150d087ec28e98">IGraph</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_sfml_library_8cpp_source.html#l00105">105</a> of file <a class="el" href="_sfml_library_8cpp_source.html">SfmlLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_sfml_library_8cpp_source.html#l00115">115</a> of file <a class="el" href="_sfml_library_8cpp_source.html">SfmlLibrary.cpp</a>.</p>
 
 </div>
 </div>
@@ -543,7 +580,38 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_graph.html#a37b6f2993125bbbb12007714668eb026">IGraph</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_sfml_library_8cpp_source.html#l00100">100</a> of file <a class="el" href="_sfml_library_8cpp_source.html">SfmlLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_sfml_library_8cpp_source.html#l00110">110</a> of file <a class="el" href="_sfml_library_8cpp_source.html">SfmlLibrary.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a3fd0f5b3409b8c6974be461a2a0301da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fd0f5b3409b8c6974be461a2a0301da">&#9670;&nbsp;</a></span>init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SfmlLibrary::init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initialize the library. </p>
+
+<p>Implements <a class="el" href="class_i_graph.html#a047bb5222ba4ac156f057b65ff36ef1c">IGraph</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_sfml_library_8cpp_source.html#l00019">19</a> of file <a class="el" href="_sfml_library_8cpp_source.html">SfmlLibrary.cpp</a>.</p>
 
 </div>
 </div>

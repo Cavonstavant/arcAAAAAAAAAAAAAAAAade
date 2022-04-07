@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['b_472',['B',['../struct_color.html#a0460664d0d091fbe42cf4307744dcaca',1,'Color']]]
+  ['b_474',['B',['../struct_color.html#a0460664d0d091fbe42cf4307744dcaca',1,'Color']]]
 ];

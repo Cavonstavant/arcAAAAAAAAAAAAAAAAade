@@ -2,6 +2,7 @@ var class_main_menu =
 [
     [ "MainMenu", "class_main_menu.html#a53eecf9d5ffd094f54ac4193e7e57eaf", null ],
     [ "~MainMenu", "class_main_menu.html#a0a19ddba3ac52bf39c09b579171c98f2", null ],
+    [ "close", "class_main_menu.html#a27996a4ace0811fa102a5b509d707155", null ],
     [ "getLibraryName", "class_main_menu.html#a2a1ff38880d4dab3e41b203aeabf2a81", null ],
     [ "getState", "class_main_menu.html#aae6fc744adbe076dc07356ae6e1a322d", null ],
     [ "init", "class_main_menu.html#a1f2a0ab6540cf2f6023565feb24be3a6", null ],

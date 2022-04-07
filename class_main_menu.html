@@ -121,6 +121,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1f2a0ab6540cf2f6023565feb24be3a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_menu.html#a1f2a0ab6540cf2f6023565feb24be3a6">init</a> (std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_i_entity.html">IEntity</a> &gt;&gt; &amp;entities) override</td></tr>
 <tr class="memdesc:a1f2a0ab6540cf2f6023565feb24be3a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the menu.  <a href="class_main_menu.html#a1f2a0ab6540cf2f6023565feb24be3a6">More...</a><br /></td></tr>
 <tr class="separator:a1f2a0ab6540cf2f6023565feb24be3a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27996a4ace0811fa102a5b509d707155"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_menu.html#a27996a4ace0811fa102a5b509d707155">close</a> (std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_i_entity.html">IEntity</a> &gt;&gt; &amp;entities) override</td></tr>
+<tr class="memdesc:a27996a4ace0811fa102a5b509d707155"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close the menu.  <a href="class_main_menu.html#a27996a4ace0811fa102a5b509d707155">More...</a><br /></td></tr>
+<tr class="separator:a27996a4ace0811fa102a5b509d707155"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a119181be29b1e19051e50fbd855c9217"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_menu.html#a119181be29b1e19051e50fbd855c9217">update</a> (std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_i_entity.html">IEntity</a> &gt;&gt; &amp;entities, std::stack&lt; <a class="el" href="struct_arcade_1_1_evt.html">Arcade::Evt</a> &gt; &amp;events) override</td></tr>
 <tr class="memdesc:a119181be29b1e19051e50fbd855c9217"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the game's entities.  <a href="class_main_menu.html#a119181be29b1e19051e50fbd855c9217">More...</a><br /></td></tr>
 <tr class="separator:a119181be29b1e19051e50fbd855c9217"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -195,6 +198,38 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a27996a4ace0811fa102a5b509d707155"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27996a4ace0811fa102a5b509d707155">&#9670;&nbsp;</a></span>close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainMenu::close </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_i_entity.html">IEntity</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>entities</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Close the menu. </p>
+
+<p>Implements <a class="el" href="class_i_game.html#a674650861ce38c0c6337db9974079be5">IGame</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_main_menu_8cpp_source.html#l00077">77</a> of file <a class="el" href="_main_menu_8cpp_source.html">MainMenu.cpp</a>.</p>
+
+</div>
+</div>
 <a id="a2a1ff38880d4dab3e41b203aeabf2a81"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2a1ff38880d4dab3e41b203aeabf2a81">&#9670;&nbsp;</a></span>getLibraryName()</h2>
 
@@ -223,7 +258,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_game.html#ad4b0a0f5cf6be7c2692485907dc0f6ac">IGame</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_main_menu_8cpp_source.html#l00132">132</a> of file <a class="el" href="_main_menu_8cpp_source.html">MainMenu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_main_menu_8cpp_source.html#l00138">138</a> of file <a class="el" href="_main_menu_8cpp_source.html">MainMenu.cpp</a>.</p>
 
 </div>
 </div>
@@ -316,7 +351,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_game.html#abdc3543ee754cecb7eb156f05ce5869d">IGame</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_main_menu_8cpp_source.html#l00107">107</a> of file <a class="el" href="_main_menu_8cpp_source.html">MainMenu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_main_menu_8cpp_source.html#l00113">113</a> of file <a class="el" href="_main_menu_8cpp_source.html">MainMenu.cpp</a>.</p>
 
 </div>
 </div>
@@ -365,7 +400,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_game.html#a025e62ee4c27e2e9f83ebae85dea9e9c">IGame</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_main_menu_8cpp_source.html#l00099">99</a> of file <a class="el" href="_main_menu_8cpp_source.html">MainMenu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_main_menu_8cpp_source.html#l00105">105</a> of file <a class="el" href="_main_menu_8cpp_source.html">MainMenu.cpp</a>.</p>
 
 </div>
 </div>

@@ -111,6 +111,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a12f681e7abc397a40abd4abae7b8104c"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graph.html#a12f681e7abc397a40abd4abae7b8104c">~IGraph</a> ()=default</td></tr>
 <tr class="memdesc:a12f681e7abc397a40abd4abae7b8104c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="class_i_graph.html#a12f681e7abc397a40abd4abae7b8104c">More...</a><br /></td></tr>
 <tr class="separator:a12f681e7abc397a40abd4abae7b8104c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a047bb5222ba4ac156f057b65ff36ef1c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graph.html#a047bb5222ba4ac156f057b65ff36ef1c">init</a> ()=0</td></tr>
+<tr class="memdesc:a047bb5222ba4ac156f057b65ff36ef1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the library.  <a href="class_i_graph.html#a047bb5222ba4ac156f057b65ff36ef1c">More...</a><br /></td></tr>
+<tr class="separator:a047bb5222ba4ac156f057b65ff36ef1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4877a54bbdbd2663e94309d260e064b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graph.html#ab4877a54bbdbd2663e94309d260e064b">close</a> ()=0</td></tr>
+<tr class="memdesc:ab4877a54bbdbd2663e94309d260e064b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the library.  <a href="class_i_graph.html#ab4877a54bbdbd2663e94309d260e064b">More...</a><br /></td></tr>
+<tr class="separator:ab4877a54bbdbd2663e94309d260e064b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3a39c636d2e479e9f7dd90a6a5a7f17"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graph.html#ac3a39c636d2e479e9f7dd90a6a5a7f17">drawCircle</a> (std::pair&lt; int, int &gt; pos, int radius, <a class="el" href="struct_color.html">Color</a> color)=0</td></tr>
 <tr class="memdesc:ac3a39c636d2e479e9f7dd90a6a5a7f17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a circle, set position, set radius, then display it on the window. After all destroy the Circle.  <a href="class_i_graph.html#ac3a39c636d2e479e9f7dd90a6a5a7f17">More...</a><br /></td></tr>
 <tr class="separator:ac3a39c636d2e479e9f7dd90a6a5a7f17"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -139,7 +145,7 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>represents a generic graphical library </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_graph_8hpp_source.html#l00018">18</a> of file <a class="el" href="_i_graph_8hpp_source.html">IGraph.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graph_8hpp_source.html#l00020">20</a> of file <a class="el" href="_i_graph_8hpp_source.html">IGraph.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a12f681e7abc397a40abd4abae7b8104c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a12f681e7abc397a40abd4abae7b8104c">&#9670;&nbsp;</a></span>~IGraph()</h2>
@@ -196,6 +202,35 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>true if the window is successfully cleared </dd></dl>
 
 <p>Implemented in <a class="el" href="class_sdl_library.html#a7761041f048d86628264f86cddd1583d">SdlLibrary</a>, <a class="el" href="class_sfml_library.html#ae80664835f474f6f812d5678d96c6939">SfmlLibrary</a>, and <a class="el" href="class_ncurses_library.html#a93bf71e09ac11a04b06fd14325d52d8b">NcursesLibrary</a>.</p>
+
+</div>
+</div>
+<a id="ab4877a54bbdbd2663e94309d260e064b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4877a54bbdbd2663e94309d260e064b">&#9670;&nbsp;</a></span>close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IGraph::close </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Closes the library. </p>
+
+<p>Implemented in <a class="el" href="class_sdl_library.html#a88a46f4994a97eb99d72a2de5a7b31e7">SdlLibrary</a>, <a class="el" href="class_sfml_library.html#af4296f759f4bc34e5d9dbed2cf3fdea8">SfmlLibrary</a>, and <a class="el" href="class_ncurses_library.html#a2d077df5f86d24ab07e4b7066a75e405">NcursesLibrary</a>.</p>
 
 </div>
 </div>
@@ -499,6 +534,35 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>std::string libraryName </dd></dl>
 
 <p>Implemented in <a class="el" href="class_ncurses_library.html#ac70fe60ad51e85be3d262b93c2b77a99">NcursesLibrary</a>, <a class="el" href="class_sdl_library.html#aaaaad183fbed74c5219cbc1a5047ae7f">SdlLibrary</a>, and <a class="el" href="class_sfml_library.html#ad3cb2d9d7ace442fa6af21e3f6407924">SfmlLibrary</a>.</p>
+
+</div>
+</div>
+<a id="a047bb5222ba4ac156f057b65ff36ef1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a047bb5222ba4ac156f057b65ff36ef1c">&#9670;&nbsp;</a></span>init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IGraph::init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initialize the library. </p>
+
+<p>Implemented in <a class="el" href="class_sdl_library.html#a974697cc4836b42f912d1454c3d19cf9">SdlLibrary</a>, <a class="el" href="class_sfml_library.html#a3fd0f5b3409b8c6974be461a2a0301da">SfmlLibrary</a>, and <a class="el" href="class_ncurses_library.html#a7f70de1325c567778f69f64fd3e1247a">NcursesLibrary</a>.</p>
 
 </div>
 </div>
