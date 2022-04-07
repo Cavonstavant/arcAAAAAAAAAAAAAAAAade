@@ -7,21 +7,25 @@
 
 #include <iostream>
 #include "Core.hpp"
-#include "LibManager.hpp"
-#include "MainMenu/MainMenu.hpp"
+
 
 int main(int ac, char **av)
 {
-    Core core;
-    std::vector<std::shared_ptr<IEntity>> entities;
+    std::vector<std::string> libsPath;
+    std::vector<std::shared_ptr<IEntity>> menuEntities;
 
     if (ac != 2) {
-        std::cout << "Usage: ./arcade <graphical_lib> [<game_lib>, ...]" << std::endl;
+        std::cout << "Usage: ./arcade <graphical_lib> [<garphical_lib>, ...]" << std::endl;
         return (84);
     }
+    libsPath.reserve(ac - 1);
+    for (int i = 1; i < ac; i++)
+        libsPath.push_back(av[i]);
     try {
-        MainMenu mainMenu(entities);
-        LibManager libManager(av[1]);
+        Core core(libsPath);
+        // LibManager libManager(libsPath);
+        // IGraph *graph = libManager.openGraph(libsPath.begin()->c_str());
+
     } catch (...) {
         return (84);
     }
