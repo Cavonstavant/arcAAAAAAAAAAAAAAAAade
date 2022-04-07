@@ -9,12 +9,12 @@
 #define ARCADE_IDISPLAY_HPP
 
 #include "Color.hpp"
-#include "Grid.hpp"
 #include "Event.hpp"
+#include "Grid.hpp"
 #include "IEntity.hpp"
+#include <memory>
 #include <string>
 #include <vector>
-#include <memory>
 
 /// \brief represents a generic graphical library
 class IGraph {
