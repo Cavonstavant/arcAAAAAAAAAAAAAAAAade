@@ -32,7 +32,7 @@ IGame *LibManager::openGame(const std::string& libPath)
 {
     if (_libsHandle.find(std::filesystem::absolute(std::filesystem::path(libPath))) == _libsHandle.end())
         throw ArcadeEX(libPath + " not found", Logger::HIGH);
-    void *libHandle = dlopen(libPath.c_str(), RTLD_LAZY);
+    void *libHandle = dlopen(libPath.c_str(), RTLD_GLOBAL);
     if (!libHandle)
         throw LibraryEX(dlerror(), Logger::CRITICAL);
     if (_libsHandle[libPath])
@@ -47,7 +47,7 @@ IGraph *LibManager::openGraph(const std::string& libPath)
 {
     if (_libsHandle.find(std::filesystem::absolute(std::filesystem::path(libPath))) == _libsHandle.end())
         throw ArcadeEX(libPath + " not found", Logger::HIGH);
-    void *libHandle = dlopen(libPath.c_str(), RTLD_LAZY);
+    void *libHandle = dlopen(libPath.c_str(), RTLD_GLOBAL);
     if (libHandle == nullptr)
         throw LibraryEX(dlerror(), Logger::CRITICAL);
     if (_libsHandle[libPath])
