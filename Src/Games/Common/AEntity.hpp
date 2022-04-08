@@ -14,6 +14,14 @@
 /// \brief Entity Abstract class
 class AEntity : public IEntity {
     public:
+        enum ENTITY_TYPE {
+            WALL = 0,
+            ENEMY = 1,
+            PLAYER = 2,
+            BONUS = 3,
+            POINT = 4,
+            ENTITY_TYPE_SIZE = 5
+        };
         /// \brief Default Constructor
         AEntity();
         /// \brief Destructor
