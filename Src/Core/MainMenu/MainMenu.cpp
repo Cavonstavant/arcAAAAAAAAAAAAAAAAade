@@ -29,7 +29,15 @@ static void changeGameLibCallback()
     throw NotImplementedEX("Change graphical lib button clicked", Logger::NONE);
 }
 
-MainMenu::MainMenu(std::vector<std::shared_ptr<IEntity>> &entities)
+MainMenu::MainMenu()
+{
+}
+
+MainMenu::~MainMenu()
+{
+}
+
+void MainMenu::init(std::vector<std::shared_ptr<IEntity>> &entities)
 {
     getAllLibraries();
 
@@ -66,8 +74,10 @@ MainMenu::MainMenu(std::vector<std::shared_ptr<IEntity>> &entities)
     }
 }
 
-MainMenu::~MainMenu()
+void MainMenu::close(std::vector<std::shared_ptr<IEntity>> &entities)
 {
+    while (!entities.empty())
+        entities.pop_back();
 }
 
 void MainMenu::manageClickEvent(Arcade::Evt &event, std::vector<std::shared_ptr<IEntity>> &entities)
@@ -123,4 +133,9 @@ void MainMenu::getAllLibraries()
             throw LibraryEX(e.what(), Logger::MEDIUM);
         }
     }
+}
+
+std::string MainMenu::getLibraryName() const
+{
+    return "Main Menu";
 }

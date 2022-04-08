@@ -34,6 +34,11 @@ class IGame {
 
         virtual ~IGame() = default;
 
+        /// \brief Initialize the game
+        virtual void init(std::vector<std::shared_ptr<IEntity>> &entities) = 0;
+        /// \brief Closes the library
+        virtual void close(std::vector<std::shared_ptr<IEntity>> &entities) = 0;
+
         /// \brief Update the game's status
         /// \param entities The entity vector of the game
         /// \param events The event stack of the game
@@ -45,7 +50,7 @@ class IGame {
         virtual GameState getState() const = 0;
 
         /// \brief Get the game's name
-        virtual std::string getName() const = 0;
+        virtual std::string getLibraryName() const = 0;
 
         /// \brief starts the game
         virtual void start() = 0;

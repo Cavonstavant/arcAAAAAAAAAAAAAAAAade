@@ -26,6 +26,11 @@ class SfmlLibrary : public IGraph {
         /// Closing window previously opened in constructor
         ~SfmlLibrary();
 
+        /// \brief Initialize the library
+        void init() override;
+        /// \brief Closes the library
+        void close() override;
+
         bool clearWindow() override;
         bool displayWindow() override;
 
