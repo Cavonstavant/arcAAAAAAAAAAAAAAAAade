@@ -40,7 +40,7 @@ class LibManager {
         /// \param libPath Path to the library
         /// \throw FileNotFoundException if the library cannot be found
         /// \throw LibraryException if the library cannot be opened
-        void addLib(std::string libPath);
+        void addLibs(std::vector<std::string> &libPaths);
 
         /// \brief Opens a shared library, calls it's lib entrypoint and returns a pointer to a game instance
         /// \param libPath Path to the library
@@ -52,10 +52,6 @@ class LibManager {
         /// \return A pointer to a graph instance
         IGraph *openGraph(const std::string& libPath);
 
-        /// \brief Add a lib to be managed by the library manager
-        /// \param libPaths Paths to the libraries
-        void addLib(const std::vector<std::string>& libPaths);
-
         /// \brief Closes a shared library
         /// \param libPath Path to the library
         /// \warning Not using this method after opening a library will lead to <b>Undefined Behaviour</b>
@@ -63,10 +59,10 @@ class LibManager {
         /// \throw LibraryException if the library cannot be closed
         void closeLib(const std::string& libPath);
 
+        /// \brief Loads all of the libraries present inside the lib.conf file inside the _libsHandle span
+        /// \note This method will read inside the lib.conf file at root and will seek for lib_path = (default value: "./lib")
+
     private:
-        /// \brief Loads all of the game libraries present inside the lib.conf file inside the _libsHandle span
-        /// \note This method will read inside the lib.conf file at root and will seek for [libPath] (default value: "./lib")
-        void loadGameLibs(void);
 
         ///\note Map of the libraries' handles represented like so {libPath, libHandle}
         std::map<std::string, void *> _libsHandle;

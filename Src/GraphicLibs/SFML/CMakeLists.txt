@@ -11,7 +11,7 @@ set(SRC
 #[[set(INCLUDE_DIRS ${INCLUDE_ROOT})]]
 
 create_arcade_graph_lib(
-    GRAPH_LIB_NAME SFML
+    GRAPH_LIB_NAME arcade_sfml
     SRC ${SRC}
     INCLUDE_DIRS ${SRC_ROOT} ${INCLUDE_ROOT}
     DEPS ${SFML_LIBRARIES}

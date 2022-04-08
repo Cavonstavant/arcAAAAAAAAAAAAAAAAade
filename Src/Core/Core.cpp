@@ -13,7 +13,7 @@
 Core::Core(std::vector<std::string> libsPath)
 {
     _mainMenu.init(_entities);
-    _libManager.addLib(libsPath);
+    _libManager.addLibs(libsPath);
     _game = &_mainMenu;
     _graph = _libManager.openGraph(*libsPath.begin());
     _mainMenu.start();
@@ -35,6 +35,16 @@ void Core::removeEntity(const std::shared_ptr<IEntity>& entity)
     }
 }
 
-Arcade::Evt Core::pollEvent() const {
-    return {};
+void Core::update() {
+    if (_state == State::MAIN_MENU) {
+        _mainMenu.update(_entities, _event);
+    } else if (_state == State::GAME) {
+        _game->update(_entities, _event);
+    }
+}
+
+void Core::draw() {
+    for (auto& entity : _entities) {
+        _graph->drawEntity(*entity, entity->getPos());
+    }
 }

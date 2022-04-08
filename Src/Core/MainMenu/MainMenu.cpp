@@ -131,7 +131,7 @@ void MainMenu::getAllLibraries()
             throw LibraryEX(e.what(), Logger::MEDIUM);
         }
     }
-    ArcadeEX(std::string("successfully load all libraries from") + std::filesystem::absolute(path).string(), Logger::INFO);
+    ArcadeEX(std::string("successfully load all libraries in: ") + std::filesystem::absolute(path).string(), Logger::INFO);
 }
 
 std::string MainMenu::getLibraryName() const

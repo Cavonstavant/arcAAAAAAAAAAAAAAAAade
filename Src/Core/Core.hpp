@@ -50,7 +50,7 @@ class Core {
         /// \param entity The entity to add
         void addEntity(const std::shared_ptr<IEntity>& entity);
 
-        /// \brief Remove an entity to the entites collection
+        /// \brief Remove an entity to the entities collection
         /// \param entity The entity collection to remove
         void removeEntity(const std::shared_ptr<IEntity>& entity);
 
@@ -78,19 +78,19 @@ class Core {
         /// \param graph The new graphical display of the core
         inline void setGraph(IGraph* graph) { _graph = graph; }
 
-        /// \brief Poll the last event produced by the graphical display
-        /// \return The last event produced by the graphical display
-        [[nodiscard]] inline Arcade::Evt pollEvent() const;
-
         /// \brief Get the current event
         /// \return The current event
-        [[nodiscard]] inline Arcade::Evt getEvent() const { return _event; }
+        [[nodiscard]] inline Arcade::Evt getLastEvent() const { return _event.top(); }
+
+        /// \brief Pop the last event on the stack
+        /// \warning Not setting up any graphical display before polling any event will result in an <b>undefined behavior</b>
+        inline void popEvent() { return _event.pop(); }
 
         /// \brief Set the the current event
         /// \param event The new last event produced by the graphical display
         /// \note if the event is of type <b>WINDOW_CLOSE</b> while the core is in the <b>GAME</b>, the core will be set to <b>MENU</b> state
         /// \note if the event is of type <b>WINDOW_CLOSE</b>, the core will be set to <b>EXIT</b> state
-        inline void setEvent(Arcade::Evt event) { _event = event; }
+        inline void setEvent(Arcade::Evt event) { _event.push(event); }
 
         /// \brief Update the data of all entities by passing them to the game
         void update();
@@ -115,7 +115,7 @@ class Core {
         IGraph *_graph;
 
         /// \brief The current event to be processed
-        Arcade::Evt _event;
+        std::stack<Arcade::Evt> _event;
 
         /// \brief The current state of the core
         State _state;

@@ -14,7 +14,7 @@ set(SRC
 set(INCLUDE_DIRS ${INCLUDE_ROOT})
 
 create_arcade_graph_lib(
-    GRAPH_LIB_NAME ncurses
+    GRAPH_LIB_NAME arcade_ncurses
     INCLUDE_DIRS ${SRC_ROOT} ${INCLUDE_ROOT}
     SRC ${SRC}
     DEPS ${CURSES_LIBRARY}

@@ -27,7 +27,6 @@ int main(int ac, char **av)
     try {
         Core core(libsPath);
         while (core.getState() != Core::State::EXIT) {
-            core.setEvent(core.pollEvent());
             core.update();
             core.draw();
         }

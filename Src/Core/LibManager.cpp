@@ -10,6 +10,7 @@
 #include <fstream>
 #include <sstream>
 #include <string>
+#include <filesystem>
 
 extern "C" {
 #include <dlfcn.h>
@@ -17,35 +18,25 @@ extern "C" {
 
 LibManager::LibManager()
 {
-    loadGameLibs();
 }
 
 LibManager::LibManager(const std::vector<std::string>& libPaths)
 {
-    loadGameLibs();
+    addLibs(const_cast<std::vector<std::string>&>(libPaths));
     for (auto &libPath: libPaths) {
         _libsHandle.emplace(libPath, nullptr);
     }
 }
 
-void *LibManager::openLib(const std::string& libPath)
-{
-    auto it = _libsHandle.find(libPath);
-
-    if (it == _libsHandle.end())
-        throw LibraryEX("Library not found", Logger::CRITICAL);
-    if (it->second == nullptr) {
-        it->second = dlopen(libPath.c_str(), RTLD_LAZY);
-        if (it->second == nullptr)
-            throw LibraryEX(dlerror(), Logger::CRITICAL);
-    } else
-        throw LibraryEX("Library already opened", Logger::CRITICAL);
-    return (it->second);
-}
-
 IGame *LibManager::openGame(const std::string& libPath)
 {
-    void *libHandle = openLib(libPath);
+    if (_libsHandle.find(std::filesystem::absolute(std::filesystem::path(libPath))) == _libsHandle.end())
+        throw ArcadeEX(libPath + " not found", Logger::HIGH);
+    void *libHandle = dlopen(libPath.c_str(), RTLD_LAZY);
+    if (!libHandle)
+        throw LibraryEX(dlerror(), Logger::CRITICAL);
+    if (_libsHandle[libPath])
+        throw ArcadeEX(libPath + "is already opened", Logger::HIGH);
     auto *gameInstance = static_cast<IGame *>(dlsym(libHandle, "getGameInstance"));
     if (gameInstance == nullptr)
         throw LibraryEX(dlerror(), Logger::CRITICAL);
@@ -54,7 +45,13 @@ IGame *LibManager::openGame(const std::string& libPath)
 
 IGraph *LibManager::openGraph(const std::string& libPath)
 {
-    void *libHandle = openLib(libPath);
+    if (_libsHandle.find(std::filesystem::absolute(std::filesystem::path(libPath))) == _libsHandle.end())
+        throw ArcadeEX(libPath + " not found", Logger::HIGH);
+    void *libHandle = dlopen(libPath.c_str(), RTLD_LAZY);
+    if (libHandle == nullptr)
+        throw LibraryEX(dlerror(), Logger::CRITICAL);
+    if (_libsHandle[libPath])
+        throw ArcadeEX(libPath + "is already opened", Logger::HIGH);
     auto *graphInstance = static_cast<IGraph*>(dlsym(libHandle, "getGraphInstance"));
     if (graphInstance == nullptr)
         throw LibraryEX(dlerror(), Logger::CRITICAL);
@@ -74,31 +71,33 @@ void LibManager::closeLib(const std::string& libPath)
         throw LibraryEX("Library already closed", Logger::CRITICAL);
 }
 
-void LibManager::loadGameLibs()
-{
+void LibManager::addLibs(std::vector<std::string> &libPaths) {
     std::ifstream libConf("lib.conf");
-    std::string libPath = "./lib";
+    std::string line;
+    std::stringstream ss;
 
     if (libConf.is_open()) {
-        std::string line;
-        std::stringstream ss;
-
         while (std::getline(libConf, line)) {
             ss.clear();
             ss.str(line);
-            if (line == "[libPath]"){
-                ss >> libPath;
-                _libsHandle.emplace(libPath, nullptr);
+            if (line.starts_with("lib_path")) {
+                ss >> line;
+                ss >> line;
+                break;
             }
         }
         libConf.close();
     } else
         LibraryEX("lib.conf not found at root", Logger::INFO);
-}
-
-void LibManager::addLib(const std::vector<std::string>& libPaths)
-{
-    for (auto &libPath: libPaths) {
-        _libsHandle.emplace(libPath, nullptr);
+    std::filesystem::path libDir(line.empty() ? "lib" : line);
+    for (auto &lib: std::filesystem::directory_iterator(std::filesystem::absolute(libDir))) {
+        if (lib.path().extension() == ".so") {
+            ArcadeEX("Found library: " + lib.path().filename().string(), Logger::INFO);
+            _libsHandle.emplace((lib.path().filename().string(), lib.path().string()), nullptr);
+        }
     }
+    ArcadeEX(std::to_string(_libsHandle.size()) + std::string(" Libraries found"), Logger::INFO);
+    std::for_each(libPaths.begin(), libPaths.end(), [this](std::string &libPath) {
+        _libsHandle.emplace(std::filesystem::absolute(std::filesystem::path(libPath)), nullptr);
+    });
 }
