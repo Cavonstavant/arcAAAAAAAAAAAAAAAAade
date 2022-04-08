@@ -9,6 +9,15 @@
 
 SfmlLibrary::SfmlLibrary()
 {
+}
+
+SfmlLibrary::~SfmlLibrary()
+{
+    _window.close();
+}
+
+void SfmlLibrary::init()
+{
     const std::string font = "../Resources/Font/ARCADE_N.TTF";
 
     _videoMode = sf::VideoMode(DEFAULT_WINDOW_WIDTH, DEFAULT_WINDOW_HEIGHT, 32);
@@ -17,7 +26,7 @@ SfmlLibrary::SfmlLibrary()
     _name = "SFML";
 }
 
-SfmlLibrary::~SfmlLibrary()
+void SfmlLibrary::close()
 {
     _window.close();
 }
