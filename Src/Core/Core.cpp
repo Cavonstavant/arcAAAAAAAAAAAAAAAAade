@@ -12,21 +12,29 @@
 
 Core::Core(std::vector<std::string> libsPath)
 {
-    std::vector<std::shared_ptr<IEntity>> _ett; //< Test vector of entities
-    _mainMenu.init(_ett);
-    std::cout << "Lib size: " << libsPath.size() << std::endl;
+    _mainMenu.init(_entities);
     _libManager.addLib(libsPath);
     _game = &_mainMenu;
-    _graph = _libManager.openGraph(libsPath.begin()->c_str());
+    _graph = _libManager.openGraph(*libsPath.begin());
     _mainMenu.start();
+    _state = State::MAIN_MENU;
 }
 
-void Core::addEntity(std::shared_ptr<IEntity> entity)
+void Core::addEntity(const std::shared_ptr<IEntity>& entity)
 {
     _entities.push_back(entity);
 }
 
-void Core::removeEntity(std::shared_ptr<IEntity> entity)
+void Core::removeEntity(const std::shared_ptr<IEntity>& entity)
 {
-    _entities.erase(std::remove(_entities.begin(), _entities.end(), entity), _entities.end());
+    for (auto it = _entities.begin(); it != _entities.end(); ++it) {
+        if (*it == entity) {
+            _entities.erase(it);
+            return;
+        }
+    }
+}
+
+Arcade::Evt Core::pollEvent() const {
+    return {};
 }

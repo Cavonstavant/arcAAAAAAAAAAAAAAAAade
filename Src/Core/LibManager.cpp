@@ -20,7 +20,7 @@ LibManager::LibManager()
     loadGameLibs();
 }
 
-LibManager::LibManager(std::vector<std::string> libPaths)
+LibManager::LibManager(const std::vector<std::string>& libPaths)
 {
     loadGameLibs();
     for (auto &libPath: libPaths) {
@@ -28,7 +28,7 @@ LibManager::LibManager(std::vector<std::string> libPaths)
     }
 }
 
-void *LibManager::openLib(std::string libPath)
+void *LibManager::openLib(const std::string& libPath)
 {
     auto it = _libsHandle.find(libPath);
 
@@ -43,29 +43,25 @@ void *LibManager::openLib(std::string libPath)
     return (it->second);
 }
 
-IGame *LibManager::openGame(std::string libPath)
+IGame *LibManager::openGame(const std::string& libPath)
 {
     void *libHandle = openLib(libPath);
-    IGame *(*createGame)();
-
-    createGame = (IGame * (*) (void) ) dlsym(libHandle, "createGame");
-    if (createGame == nullptr)
+    auto *gameInstance = static_cast<IGame *>(dlsym(libHandle, "getGameInstance"));
+    if (gameInstance == nullptr)
         throw LibraryEX(dlerror(), Logger::CRITICAL);
-    return (createGame());
+    return (gameInstance);
 }
 
-IGraph *LibManager::openGraph(std::string libPath)
+IGraph *LibManager::openGraph(const std::string& libPath)
 {
     void *libHandle = openLib(libPath);
-    IGraph *(*createGraph)();
-
-    createGraph = (IGraph * (*) (void) ) dlsym(libHandle, "createGraph");
-    if (createGraph == nullptr)
+    auto *graphInstance = static_cast<IGraph*>(dlsym(libHandle, "getGraphInstance"));
+    if (graphInstance == nullptr)
         throw LibraryEX(dlerror(), Logger::CRITICAL);
-    return (createGraph());
+    return (graphInstance);
 }
 
-void LibManager::closeLib(std::string libPath)
+void LibManager::closeLib(const std::string& libPath)
 {
     auto it = _libsHandle.find(libPath);
 
@@ -100,7 +96,7 @@ void LibManager::loadGameLibs()
         LibraryEX("lib.conf not found at root", Logger::INFO);
 }
 
-void LibManager::addLib(std::vector<std::string> libPaths)
+void LibManager::addLib(const std::vector<std::string>& libPaths)
 {
     for (auto &libPath: libPaths) {
         _libsHandle.emplace(libPath, nullptr);

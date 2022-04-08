@@ -17,5 +17,5 @@ create_arcade_graph_lib(
     GRAPH_LIB_NAME ncurses
     INCLUDE_DIRS ${SRC_ROOT} ${INCLUDE_ROOT}
     SRC ${SRC}
-    DEPS ${NCURSES_LIBRARY}
+    DEPS ${CURSES_LIBRARY}
 )

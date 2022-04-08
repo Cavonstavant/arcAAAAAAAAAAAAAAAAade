@@ -7,6 +7,9 @@
 
 #include <iostream>
 #include "Core.hpp"
+extern "C" {
+    #include <dlfcn.h>
+}
 
 
 int main(int ac, char **av)
@@ -20,12 +23,14 @@ int main(int ac, char **av)
     }
     libsPath.reserve(ac - 1);
     for (int i = 1; i < ac; i++)
-        libsPath.push_back(av[i]);
+        libsPath.emplace_back(av[i]);
     try {
         Core core(libsPath);
-        // LibManager libManager(libsPath);
-        // IGraph *graph = libManager.openGraph(libsPath.begin()->c_str());
-
+        while (core.getState() != Core::State::EXIT) {
+            core.setEvent(core.pollEvent());
+            core.update();
+            core.draw();
+        }
     } catch (...) {
         return (84);
     }
