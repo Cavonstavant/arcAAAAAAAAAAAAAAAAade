@@ -125,7 +125,7 @@ void MainMenu::getAllLibraries()
     void *gameLibEntrypoint;
     for (const auto &entry: std::filesystem::directory_iterator{std::filesystem::absolute(path)}) {
         try {
-            void *handle = dlopen(entry.path().c_str(), RTLD_LAZY);
+            void *handle = dlopen(entry.path().c_str(), RTLD_GLOBAL);
             if (!handle)
                 continue;
             if ((graphLibEntrypoint = dlsym(handle, "getGraphInstance"))) {
