@@ -32,7 +32,6 @@ class Player : public AEntity {
 
     protected:
     private:
-        int _speed;
         bool _boosted;
 };
 
