@@ -32,14 +32,14 @@ IGame *LibManager::openGame(const std::string& libPath)
 {
     if (_libsHandle.find(std::filesystem::absolute(std::filesystem::path(libPath))) == _libsHandle.end())
         throw ArcadeEX(libPath + " not found", Logger::HIGH);
-    void *libHandle = dlopen(libPath.c_str(), RTLD_GLOBAL);
+    void *libHandle = dlopen(libPath.c_str(), RTLD_LAZY);
     if (!libHandle)
-        throw LibraryEX(dlerror(), Logger::CRITICAL);
+        throw LibraryEX(dlerror(), Logger::NONE);
     if (_libsHandle[libPath])
-        throw ArcadeEX(libPath + "is already opened", Logger::HIGH);
+        throw ArcadeEX(libPath + "is already opened", Logger::NONE);
     auto *gameInstance = static_cast<IGame *>(dlsym(libHandle, "getGameInstance"));
     if (gameInstance == nullptr)
-        throw LibraryEX(dlerror(), Logger::CRITICAL);
+        throw LibraryEX(dlerror(), Logger::NONE);
     return (gameInstance);
 }
 
@@ -47,7 +47,7 @@ IGraph *LibManager::openGraph(const std::string& libPath)
 {
     if (_libsHandle.find(std::filesystem::absolute(std::filesystem::path(libPath))) == _libsHandle.end())
         throw ArcadeEX(libPath + " not found", Logger::HIGH);
-    void *libHandle = dlopen(libPath.c_str(), RTLD_GLOBAL);
+    void *libHandle = dlopen(libPath.c_str(), RTLD_LAZY);
     if (libHandle == nullptr)
         throw LibraryEX(dlerror(), Logger::CRITICAL);
     if (_libsHandle[libPath])
