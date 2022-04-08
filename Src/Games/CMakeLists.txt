@@ -22,5 +22,5 @@ function(create_arcade_game)
 endfunction()
 
 add_subdirectory(Common)
-add_subdirectory(Nibbler)
-add_subdirectory(Pacman)
+#add_subdirectory(Nibbler)
+#add_subdirectory(Pacman)
