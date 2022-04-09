@@ -65,3 +65,8 @@ void AEntity::setDirection(AEntity::Direction direction)
 {
     _direction = direction;
 }
+
+void AEntity::setType(IEntity::ENTITY_TYPE type)
+{
+    _type = type;
+}

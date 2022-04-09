@@ -20,6 +20,16 @@ class IEntity {
             LEFT,
             RIGHT
         };
+
+        enum ENTITY_TYPE {
+            WALL = 0,
+            ENEMY = 1,
+            PLAYER = 2,
+            BONUS = 3,
+            POINT = 4,
+            UNDEFINED = 5,
+            ENTITY_TYPE_SIZE = 6
+        };
         /// \brief Destructor
         ~IEntity() = default;
         virtual std::pair<int, int> getPos() const = 0;
@@ -52,6 +62,10 @@ class IEntity {
         /// \brief Set the Entity direction
         /// \param direction the direction of the entity
         virtual void setDirection(Direction direction) = 0;
+        /// \brief Set the type of the entity
+        virtual void setType(ENTITY_TYPE type) = 0;
+        /// \brief Get the entity type
+        [[nodiscard]] virtual ENTITY_TYPE getType() const = 0;
 };
 
 #endif /* !IENTITY_HPP_ */
