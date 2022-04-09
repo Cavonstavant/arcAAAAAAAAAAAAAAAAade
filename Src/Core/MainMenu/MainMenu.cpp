@@ -157,34 +157,6 @@ void MainMenu::start()
     _gameState = GameState::RUNNING;
 }
 
-// void MainMenu::getAllLibraries()
-// {
-//     const std::filesystem::path path{"./lib"};
-//     std::string libName;
-//     void *libNameFct;
-
-//     for (const auto &entry: std::filesystem::directory_iterator{path}) {
-//         // std::string libPath = std::filesystem::absolute(entry.path()).string();
-//         // std::cout << libPath << std::endl;
-//         try {
-//             try {
-//                 IGame *game = _libManager.openGame(entry.path());
-//                 _gameLibraries.push_back(game->getLibraryName());
-//             } catch (...) {
-//                 try {
-//                     IGraph *graph = _libManager.openGraph(entry.path());
-//                     _graphicalLibraries.push_back(graph->getLibraryName());
-//                 } catch (...) {
-//                     LibraryEX(entry.path().string() + " is invalid", Logger::LOW);
-//                 }
-//             }
-//         } catch (std::exception &e) {
-//             throw LibraryEX(e.what(), Logger::MEDIUM);
-//         }
-//     }
-//     ArcadeEX(std::string("successfully load all libraries in: ") + std::filesystem::absolute(path).string(), Logger::INFO);
-// }
-
 void MainMenu::getAllLibraries()
 {
     const std::filesystem::path path{"./lib/"};
