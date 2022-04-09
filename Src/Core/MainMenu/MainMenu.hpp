@@ -43,8 +43,6 @@ class MainMenu : public IGame {
 
     protected:
     private:
-        /// \brief The Library Manager
-        LibManager _libManager;
         /// \brief Vector of all the buttons
         std::vector<std::shared_ptr<Button>> _buttons;
         /// \brief The game's state
