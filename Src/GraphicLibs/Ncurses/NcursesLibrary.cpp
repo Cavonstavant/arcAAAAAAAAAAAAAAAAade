@@ -18,18 +18,17 @@ NcursesLibrary::~NcursesLibrary()
 void NcursesLibrary::init()
 {
     initscr();
-    curs_set(0);
 }
 
 void NcursesLibrary::close()
 {
-    curs_set(1);
     endwin();
 }
 
 bool NcursesLibrary::clearWindow()
 {
     clear();
+    refresh();
     return true;
 }
 
@@ -42,7 +41,6 @@ bool NcursesLibrary::displayWindow()
 bool NcursesLibrary::drawCircle(std::pair<int, int> pos, int radius, Color color)
 {
     std::pair<int, int> topLeftCorner = pos;
-
     topLeftCorner.first -= (radius / 2);
     topLeftCorner.second -= (radius / 2);
     return drawRect(topLeftCorner, radius * 2, radius * 2, color);
@@ -53,12 +51,12 @@ bool NcursesLibrary::drawRect(std::pair<int, int> pos, int width, int height, Co
     init_pair(1, color.TB, color.TF);
     attron(COLOR_PAIR(1));
 
-    move(UNGRID_INT(pos.first), UNGRID_INT(pos.second));
-    for (int i = 0; i < UNGRID_INT(width); i++) {
-        for (int j = 0; j < UNGRID_INT(height); j++) {
+    move(pos.first, pos.second);
+    for (int i = 0; i < width; i++) {
+        for (int j = 0; j < height; j++) {
             addch(' ');
         }
-        move(UNGRID_INT(pos.first), UNGRID_INT(pos.second) + i);
+        move(pos.first, pos.second + i);
     }
 
     attroff(COLOR_PAIR(1));
@@ -68,7 +66,7 @@ bool NcursesLibrary::drawRect(std::pair<int, int> pos, int width, int height, Co
 
 bool NcursesLibrary::drawText(std::pair<int, int> pos, const std::string &content)
 {
-    move(UNGRID_INT(pos.first), UNGRID_INT(pos.second));
+    move(pos.first, pos.second);
     printw(content.c_str());
     return true;
 }
@@ -79,12 +77,12 @@ bool NcursesLibrary::drawEntity(IEntity &entity, std::pair<int, int> pos)
     init_pair(1, entity.getTermTexture().second.first, entity.getTermTexture().second.second);
     attron(COLOR_PAIR(1));
 
-    move(UNGRID_INT(pos.first), UNGRID_INT(pos.second));
-    for (int i = 0; i < UNGRID_INT(entity.getSize().first); i++) {
-        for (int j = 0; j < UNGRID_INT(entity.getSize().second); j++) {
+    move(pos.first, pos.second);
+    for (int i = 0; i < entity.getSize().first; i++) {
+        for (int j = 0; j < entity.getSize().second; j++) {
             addch(texture);
         }
-        move(UNGRID_INT(pos.first), UNGRID_INT(pos.second) + i);
+        move(pos.first, pos.second + i);
     }
 
     attroff(COLOR_PAIR(1));

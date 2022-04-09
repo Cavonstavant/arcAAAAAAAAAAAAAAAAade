@@ -8,8 +8,6 @@
 #ifndef ARCADE_GRID_HPP
 #define ARCADE_GRID_HPP
 
-#include <cmath>
-
 /// \brief The number of pixels in a grid cell
 #define GRID_CELL_SIZE 32
 /// \brief The number of horizontal cells in the grid
@@ -31,10 +29,5 @@
 #define GRID_INT(x) x * GRID_CELL_SIZE
 /// \brief Gets a pair of positions in a window from a pair of positions in the grid
 #define GRID_PAIR(x) std::make_pair(GRID_INT(x.first), GRID_INT(x.second))
-
-/// \brief Gets a position in a window from a position in the grid
-#define UNGRID_INT(x) (int)std::round(x / GRID_CELL_SIZE)
-/// \brief Gets a pair of positions in a window from a pair of positions in the grid
-#define UNGRID_PAIR(x) std::make_pair(UNGRID_INT(x.first), UNGRID_INT(x.second))
 
 #endif
