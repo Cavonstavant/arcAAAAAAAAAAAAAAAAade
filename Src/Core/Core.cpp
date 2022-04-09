@@ -54,7 +54,7 @@ void Core::update()
             break;
         }
         else if (evt.evt_type == Arcade::Evt::EvtType::KEY)
-            _event.push(_graph->getInput());
+            _event.push(evt);
     }
     if (_state == State::MAIN_MENU) {
         _mainMenu.update(_entities, _event);
