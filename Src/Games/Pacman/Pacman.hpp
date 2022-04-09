@@ -106,7 +106,7 @@ class Pacman : public IGame {
         /// \brief Used at the initialization to create all the entities
         /// \param Char symbol represents one char of the _map, as a symbol, it represents an Entity type
         /// \return std::shared_ptr<IEntity>> represents the different type of Entity just created
-        std::shared_ptr<IEntity> createEntity(char symbol);
+        void createEntity(char symbol, std::vector<std::shared_ptr<IEntity>> &entities, int i, int j);
 
 };
 
