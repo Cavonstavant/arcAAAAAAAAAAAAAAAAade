@@ -82,6 +82,8 @@ void Core::draw() {
 }
 
 void Core::processEvents() {
+    if (_event.empty())
+        return;
     if (_event.top().evt_type == Arcade::Evt::WIN_CLOSE) {
         if (_state == State::MAIN_MENU) {
             _mainMenu.close(_entities);
