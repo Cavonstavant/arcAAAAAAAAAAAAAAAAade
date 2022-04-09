@@ -39,7 +39,7 @@ class Core {
         explicit Core(std::vector<std::string> libsPath);
 
         /// \brief Dtor
-        ~Core() = default;
+        inline ~Core() { _libManager.closeAllLibs(); }
 
         /// \brief Construct a core with an other core should not be possible
         Core(Core const &) = delete;
