@@ -44,7 +44,18 @@ void Core::removeEntity(const std::shared_ptr<IEntity>& entity)
     }
 }
 
-void Core::update() {
+void Core::update()
+{
+    Arcade::Evt evt{};
+
+    evt = _graph->getInput();
+    if (evt.evt_type == Arcade::Evt::EvtType::WIN_CLOSE) {
+        _graph->close();
+        _game->close(_entities);
+        _state = State::EXIT;
+    }
+    else if (evt.evt_type == Arcade::Evt::EvtType::KEY)
+        _event.push(_graph->getInput());
     if (_state == State::MAIN_MENU) {
         _mainMenu.update(_entities, _event);
     } else if (_state == State::GAME) {
@@ -58,7 +69,7 @@ void Core::draw() {
     for (unsigned long i = 0; i < _entities.size(); i++) {
         if (dynamic_cast<TextEntity*>(_entities[i].get())) {
             auto *text = dynamic_cast<TextEntity*>(_entities[i].get());
-            _graph->drawText(text->getPos(), text->getText());
+            _graph->drawText(text->getPos(), text->getText(), text->getColor());
         }
         if (dynamic_cast<Button*>(_entities[i].get())) {
             auto *button = dynamic_cast<Button*>(_entities[i].get());
@@ -76,6 +87,10 @@ void Core::draw() {
         if (dynamic_cast<Player*>(_entities[i].get())) {
             auto *player = dynamic_cast<Player*>(_entities[i].get());
             _graph->drawEntity(*_entities[i], player->getPos());
+        }
+        if (dynamic_cast<Enemy*>(_entities[i].get())) {
+            auto *enemy = dynamic_cast<Enemy*>(_entities[i].get());
+            _graph->drawEntity(*_entities[i], enemy->getPos());
         }
     }
     _graph->displayWindow();

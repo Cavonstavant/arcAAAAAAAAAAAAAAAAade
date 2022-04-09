@@ -79,6 +79,7 @@ namespace Arcade {
             };
             /// \brief represents each type of event handled by the core
             enum EvtType {
+                NONE,       //< Default undefined value
                 WIN_CLOSE,  //< window close event, no data
                 WIN_RESIZE, //< window resize event, data in ResizeEvt
                 KEY,        //< key event, data in KeyEvt

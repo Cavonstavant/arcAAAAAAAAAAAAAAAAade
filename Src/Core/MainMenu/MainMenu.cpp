@@ -62,6 +62,15 @@ static void createBox(std::vector<std::shared_ptr<IEntity>> &entities, int x, in
     entities.push_back(boxPtr);
 }
 
+static void createText(std::vector<std::shared_ptr<IEntity>> &entities, std::string text, int x, int y, Color color)
+{
+    TextEntity textEntity(text);
+    textEntity.setPos(std::make_pair(x, y));
+    textEntity.setColor(color);
+    std::shared_ptr<TextEntity> textEntityPtr = std::make_shared<TextEntity>(textEntity);
+    entities.push_back(textEntityPtr);
+}
+
 void MainMenu::init(std::vector<std::shared_ptr<IEntity>> &entities)
 {
     _graphicalLibraries.clear();
@@ -87,10 +96,13 @@ void MainMenu::init(std::vector<std::shared_ptr<IEntity>> &entities)
     entities.push_back(closeGameButtonPtr);
     entities.push_back(titleTextPtr);
 
+    createText(entities, "1", 11, 2, {0, 0, 0, 255, Color::TermColors::BLACK, Color::TermColors::WHITE});
+
     createVerticalText(entities, "Close", 12, 2);
 
     int x = 2;
     int y = 7;
+    char c = 'a';
     for (auto &&graphLib: _graphicalLibraries) {
         Button button(&changeGraphicalLibCallback, graphLib);
         std::string libName = graphLib;
@@ -111,6 +123,10 @@ void MainMenu::init(std::vector<std::shared_ptr<IEntity>> &entities)
         entities.push_back(textPtr);
 
         _buttons.push_back(buttonPtr);
+
+        std::string buttonKeyString(&c, 1);
+        createText(entities, buttonKeyString, x, y, {0, 0, 0, 255, Color::TermColors::BLACK, Color::TermColors::WHITE});
+        c++;
 
         x += 2;
     }
@@ -136,6 +152,11 @@ void MainMenu::init(std::vector<std::shared_ptr<IEntity>> &entities)
         entities.push_back(textPtr);
 
         _buttons.push_back(buttonPtr);
+
+
+        std::string buttonKeyString(&c, 1);
+        createText(entities, buttonKeyString, x, y, {0, 0, 0, 255, Color::TermColors::BLACK, Color::TermColors::WHITE});
+        c++;
 
         x += 2;
     }

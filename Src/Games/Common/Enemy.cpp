@@ -14,11 +14,7 @@ Enemy::Enemy() : AEntity()
     _color.B = 0;
     _color.G = 0;
     _color.A = 255;
-    _enrage = false;
-}
-
-Enemy::~Enemy()
-{
+    _enrage = true;
 }
 
 void Enemy::setSpeed(int speed)
@@ -53,8 +49,6 @@ bool Enemy::getEnrage() const
 {
     return _enrage;
 }
-
-
 
 void Enemy::setIsMoving(bool isMoving)
 {

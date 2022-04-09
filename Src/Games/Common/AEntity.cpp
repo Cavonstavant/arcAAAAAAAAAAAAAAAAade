@@ -9,6 +9,7 @@
 
 AEntity::AEntity()
 {
+    _direction = UP;
     _pos = std::make_pair(0, 0);
     _size = std::make_pair(1, 1);
     _isMoving = false;
