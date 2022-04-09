@@ -53,7 +53,7 @@ class Pacman : public IGame {
 
     private:
         /// \brief IEntity Player representing the pacman Player
-        Player _player;
+        std::shared_ptr<Player> _player;
 
         /// \brief _map is represented by the map in Resources, we load it here to use it easier
         std::string _map[MAP_HEIGHT];
