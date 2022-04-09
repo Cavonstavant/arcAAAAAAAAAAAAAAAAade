@@ -89,6 +89,7 @@ bool SfmlLibrary::drawEntity(IEntity &entity, std::pair<int, int> pos)
     if (texture.loadFromFile(entity.getTexturePath())) {
         sprite.setTexture(texture);
         sprite.setScale(0.7, 0.7);
+        sprite.setOrigin(5, 5);
         sprite.setPosition(GRID_INT(pos.second), GRID_INT(pos.first));
         _window.draw(sprite);
         return true;
