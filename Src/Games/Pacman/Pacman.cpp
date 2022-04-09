@@ -9,7 +9,9 @@
 #include "../Common/Object.hpp"
 #include "../Common/AEntity.hpp"
 #include "../Common/Enemy.hpp"
+#include <filesystem>
 #include <fstream>
+#include <iostream>
 
 void Pacman::init(std::vector<std::shared_ptr<IEntity>> &entities)
 {
@@ -18,30 +20,47 @@ void Pacman::init(std::vector<std::shared_ptr<IEntity>> &entities)
     _gameState = GameState::LOADED;
     _score = 0;
     _direction = Player::Direction::RIGHT;
+    int cpt = 0;
     for (auto & i : _map) {
-        for (int j = 0; j < MAP_WIDTH; j++) {
-            entities.push_back(createEntity(i[j]));
-        }
+        for (int j = 0; j < MAP_WIDTH; j++)
+            createEntity(i[j], entities, cpt, j);
+        cpt++;
     }
 }
 
-std::shared_ptr<IEntity> Pacman::createEntity(char symbol)
+void Pacman::createEntity(char symbol, std::vector<std::shared_ptr<IEntity>> &entities, int i, int j)
 {
-    if (symbol == 'W')
-        return std::make_shared<Object>(AEntity::ENTITY_TYPE::WALL);
-    else if (symbol == 'G')
-        return std::shared_ptr<Enemy>();
+    const std::string texturePath = "Src/Games/Pacman/Resources/textures/pacman.png";
+
+    if (symbol == 'W') {
+         std::shared_ptr<Object> obj = std::make_shared<Object>(AEntity::ENTITY_TYPE::WALL);
+         obj->setPos(std::pair<int, int>{i, j});
+         entities.push_back(obj);
+    }
+    else if (symbol == 'G') {
+        std::shared_ptr<Enemy> enemy = std::make_shared<Enemy>();
+        enemy->setPos(std::pair<int, int>{i, j});
+        entities.push_back(enemy);
+    }
     else if (symbol == 'P') {
         Player pacman;
         pacman.setIsMoving(false);
         pacman.setBoosted(false);
-        pacman.setTexturePath("Resources/textures/pacman.png");
+        pacman.setTexturePath(std::filesystem::absolute(std::filesystem::path(texturePath)).string());
         _player = std::make_shared<Player>(pacman);
-        return _player;
+        _player->setPos(std::pair<int, int>{i, j});
+        entities.push_back(_player);
     }
-    else if (symbol == '.')
-        return std::make_shared<Object>(AEntity::ENTITY_TYPE::POINT);
-    return nullptr;
+    else if (symbol == '.') {
+        std::shared_ptr<Object> point = std::make_shared<Object>(AEntity::ENTITY_TYPE::POINT);
+        point->setPos(std::pair<int, int>{i, j});
+        entities.push_back(point);
+    }
+    else if (symbol == 'B') {
+        std::shared_ptr<Object> point = std::make_shared<Object>(AEntity::ENTITY_TYPE::BONUS);
+        point->setPos(std::pair<int, int>{i, j});
+        entities.push_back(point);
+    }
 }
 
 void Pacman::start()
@@ -66,20 +85,20 @@ void Pacman::updatePlayerPos()
     std::pair<int, int> pos;
 
     if (_player->getDirection() == Player::Direction::UP) {
-        pos.first = _player->getPos().first;
-        pos.second = _player->getPos().second - 1;
+        pos.first = _player->getPos().first -1;
+        pos.second = _player->getPos().second;
         _player->setPos(pos);
     } else if (_player->getDirection() == Player::Direction::DOWN) {
-        pos.first = _player->getPos().first;
-        pos.second = _player->getPos().second + 1;
+        pos.first = _player->getPos().first +1;
+        pos.second = _player->getPos().second;
         _player->setPos(pos);
     } else if (_player->getDirection() == Player::Direction::LEFT) {
-        pos.first = _player->getPos().first - 1;
-        pos.second = _player->getPos().second;
+        pos.first = _player->getPos().first;
+        pos.second = _player->getPos().second -1;
         _player->setPos(pos);
     } else if (_player->getDirection() == Player::Direction::RIGHT) {
-        pos.first = _player->getPos().first + 1;
-        pos.second = _player->getPos().second;
+        pos.first = _player->getPos().first;
+        pos.second = _player->getPos().second +1;
         _player->setPos(pos);
     }
 }
@@ -87,6 +106,7 @@ void Pacman::updatePlayerPos()
 void Pacman::update(std::vector<std::shared_ptr<IEntity>> &entities, std::stack<Arcade::Evt> &events)
 {
     while (!events.empty()) {
+        std::cout << "Bonjour" << std::endl;
         setPlayerDirection(events.top());
         events.pop();
         if (!isThereAWallOnDirection(_player->getDirection())
@@ -95,8 +115,9 @@ void Pacman::update(std::vector<std::shared_ptr<IEntity>> &entities, std::stack<
             _clock = std::chrono::high_resolution_clock::now();
         }
     }
-    for (const auto& i : entities) {
-        if (i->getPos() == _player->getPos() && i->getType() == IEntity::POINT) {
+    for (auto i = entities.begin(); i != entities.end(); i++) {
+        if (i->get()->getPos() == _player->getPos() && i->get()->getType() == IEntity::POINT) {
+            entities.erase(i);
             _score += 100;
         }
     }
@@ -169,11 +190,12 @@ bool Pacman::isThereAWallOnDirection(Player::Direction direction)
 void Pacman::loadMap()
 {
     std::string line;
-    std::ifstream file("Resources/map");
+    std::ifstream file("Src/Games/Pacman/Resources/map");
 
     if (file.is_open()) {
         for (auto & i : _map) {
             getline(file, line);
+            std::cout << line << std::endl;
             i = line;
         }
     }
