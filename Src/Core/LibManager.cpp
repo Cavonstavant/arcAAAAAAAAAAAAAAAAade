@@ -34,12 +34,12 @@ IGame *LibManager::openGame(const std::string& libPath)
         throw ArcadeEX(libPath + " not found", Logger::HIGH);
     void *libHandle = dlopen(libPath.c_str(), RTLD_LAZY);
     if (!libHandle)
-        throw LibraryEX(dlerror(), Logger::CRITICAL);
+        throw LibraryEX(dlerror(), Logger::NONE);
     if (_libsHandle[libPath])
-        throw ArcadeEX(libPath + "is already opened", Logger::HIGH);
+        throw ArcadeEX(libPath + "is already opened", Logger::NONE);
     auto *gameInstance = static_cast<IGame *>(dlsym(libHandle, "getGameInstance"));
     if (gameInstance == nullptr)
-        throw LibraryEX(dlerror(), Logger::CRITICAL);
+        throw LibraryEX(dlerror(), Logger::NONE);
     return (gameInstance);
 }
 
@@ -89,12 +89,16 @@ void LibManager::addLibs(std::vector<std::string> &libPaths) {
         libConf.close();
     } else
         LibraryEX("lib.conf not found at root", Logger::INFO);
-    std::filesystem::path libDir(line.empty() ? "lib" : line);
-    for (auto &lib: std::filesystem::directory_iterator(std::filesystem::absolute(libDir))) {
-        if (lib.path().extension() == ".so") {
-            ArcadeEX("Found library: " + lib.path().filename().string(), Logger::INFO);
-            _libsHandle.emplace((lib.path().filename().string(), lib.path().string()), nullptr);
+    try {
+        std::filesystem::path libDir({line.empty() ? "./lib/" : line});
+        for (auto &lib: std::filesystem::directory_iterator(std::filesystem::absolute(libDir))) {
+            if (lib.path().extension() == ".so") {
+                ArcadeEX("Found library: " + lib.path().filename().string(), Logger::INFO);
+                _libsHandle.emplace((lib.path().filename().string(), lib.path().string()), nullptr);
+            }
         }
+    } catch (std::exception &e) {
+        throw LibraryEX(e.what(), Logger::CRITICAL);
     }
     ArcadeEX(std::to_string(_libsHandle.size()) + std::string(" Libraries found"), Logger::INFO);
     std::for_each(libPaths.begin(), libPaths.end(), [this](std::string &libPath) {

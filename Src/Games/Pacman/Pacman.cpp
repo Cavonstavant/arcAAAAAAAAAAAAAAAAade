@@ -8,8 +8,7 @@
 #include <iostream>
 
 extern "C" {
-void pacman(void)
-{
+void pacman(void) {
     std::cout << "Hello from Pacman" << std::endl;
 }
 }
