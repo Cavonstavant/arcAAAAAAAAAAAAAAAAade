@@ -183,9 +183,20 @@ void Nibbler::moveSnake()
             dirPrev = dirBuffer;
             if (it->getPos().first < 0 || it->getPos().first >= GRID_WIDTH || it->getPos().second < 0 || it->getPos().second >= GRID_HEIGHT) {
                 _gameState = GameState::STOPPED;
+            } else if (snakeIsOnItself()) {
+                _gameState = GameState::STOPPED;
             }
         }
     }
+}
+
+bool Nibbler::snakeIsOnItself()
+{
+    for (auto &it: _snake) {
+        if (it != _snake.front() && it->getPos() == _snake.front()->getPos())
+            return true;
+    }
+    return false;
 }
 
 bool Nibbler::snakeIsOnAFruit(std::vector<std::shared_ptr<IEntity>> &entities)

@@ -97,4 +97,7 @@ class Nibbler : public IGame {
         /// \brief Create new fruit
         /// \param entities The entity vector of the game
         Object createNewFruit(int x, int y);
+        /// \brief Check if the snake is on itself
+        /// \return true if the snake is on itself, false otherwise
+        bool snakeIsOnItself();
 };
