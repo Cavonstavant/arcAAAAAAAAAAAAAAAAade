@@ -6,11 +6,13 @@
 */
 
 #include "MainMenu.hpp"
-#include "../../Games/Common/Button.hpp"
-#include "../../Games/Common/TextEntity.hpp"
+#include "Button.hpp"
+#include "TextEntity.hpp"
 #include "../Exception.hpp"
 #include "Event.hpp"
-#include <dlfcn.h>
+extern "C" {
+    #include <dlfcn.h>
+}
 #include <filesystem>
 #include <stack>
 
@@ -31,6 +33,7 @@ static void changeGameLibCallback()
 
 MainMenu::MainMenu()
 {
+    _gameState = GameState::LOADED;
 }
 
 MainMenu::~MainMenu()
@@ -104,7 +107,7 @@ void MainMenu::manageEvent(Arcade::Evt &event, std::vector<std::shared_ptr<IEnti
 
 void MainMenu::update(std::vector<std::shared_ptr<IEntity>> &entities, std::stack<Arcade::Evt> &events)
 {
-    while (events.size() > 0) {
+    while (!events.empty()) {
         manageEvent(events.top(), entities);
         events.pop();
     }
@@ -117,8 +120,9 @@ void MainMenu::start()
 
 void MainMenu::getAllLibraries()
 {
-    std::string path = "../../../lib";
-    for (const auto &entry: std::filesystem::directory_iterator(path)) {
+    const std::filesystem::path path{"./lib/"};
+
+    for (const auto &entry: std::filesystem::directory_iterator{path}) {
         try {
             void *handle = dlopen(entry.path().c_str(), RTLD_LAZY);
             if (!handle)
@@ -133,6 +137,7 @@ void MainMenu::getAllLibraries()
             throw LibraryEX(e.what(), Logger::MEDIUM);
         }
     }
+    ArcadeEX(std::string("successfully load all libraries in: ") + std::filesystem::absolute(path).string(), Logger::INFO);
 }
 
 std::string MainMenu::getLibraryName() const

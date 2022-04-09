@@ -6,7 +6,7 @@ set(INCLUDE_ROOT ${PROJECT_SOURCE_DIR}/Src/GraphicLibs/SDL)
 set(SRC_ROOT ${PROJECT_SOURCE_DIR}/Src/GraphicLibs/SDL)
 
 set(SRC
-    ${SRC_ROOT}/entrypoint.cpp
+    ${SRC_ROOT}/EntryPoint.cpp
     ${SRC_ROOT}/SdlLibrary.cpp
     ${SRC_ROOT}/SdlLibrary.hpp
 )
@@ -14,7 +14,7 @@ set(SRC
 set(INCLUDE_DIRS ${INCLUDE_ROOT})
 
 create_arcade_graph_lib(
-    GRAPH_LIB_NAME SDL
+    GRAPH_LIB_NAME arcade_sdl2
     INCLUDE_DIRS ${SRC_ROOT} ${INCLUDE_ROOT}
     SRC ${SRC}
     DEPS SDL2::Main SDL2::Image SDL2::TTF

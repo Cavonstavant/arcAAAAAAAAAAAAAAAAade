@@ -25,3 +25,13 @@ bool Button::isClicked(int x, int y)
             y >= getPos().second &&
             y <= getPos().second + getSize().second);
 }
+
+void Button::setIsMoving(bool isMoving)
+{
+    _isMoving = isMoving;
+}
+
+bool Button::getIsMoving() const
+{
+    return _isMoving;
+}

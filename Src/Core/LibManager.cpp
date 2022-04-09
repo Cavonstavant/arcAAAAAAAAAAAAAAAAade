@@ -7,56 +7,59 @@
 
 #include "LibManager.hpp"
 #include "Exception.hpp"
+#include <fstream>
+#include <string>
+#include <filesystem>
+
 extern "C" {
 #include <dlfcn.h>
 }
 
-LibManager::LibManager(std::string libPath)
+LibManager::LibManager()
 {
-    _libsHandle.emplace(libPath, nullptr);
 }
 
-LibManager::LibManager(std::vector<std::string> libPaths)
+LibManager::LibManager(const std::vector<std::string>& libPaths)
 {
+    addLibs(const_cast<std::vector<std::string>&>(libPaths));
     for (auto &libPath: libPaths) {
         _libsHandle.emplace(libPath, nullptr);
     }
 }
 
-void *LibManager::openLib(std::string libPath)
+IGame *LibManager::openGame(const std::string& libPath)
 {
-    auto it = _libsHandle.find(libPath);
-
-    if (it == _libsHandle.end())
-        throw LibraryEX("Library not found", Logger::CRITICAL);
-    if (it->second == nullptr) {
-        it->second = dlopen(libPath.c_str(), RTLD_LAZY);
-        if (it->second == nullptr)
-            throw LibraryEX(dlerror(), Logger::CRITICAL);
-    } else
-        throw LibraryEX("Library already opened", Logger::CRITICAL);
-    return (it->second);
+    if (_libsHandle.find(std::filesystem::absolute(std::filesystem::path(libPath))) == _libsHandle.end())
+        throw ArcadeEX(libPath + " not found", Logger::HIGH);
+    void *libHandle = dlopen(libPath.c_str(), RTLD_NOW);
+    if (!libHandle)
+        throw LibraryEX(dlerror(), Logger::CRITICAL);
+    if (_libsHandle[libPath])
+        throw ArcadeEX(libPath + "is already opened", Logger::NONE);
+    _libsHandle[libPath] = libHandle;
+    IGame *gameInstance = reinterpret_cast<IGame *>(dlsym(libHandle, "getGameInstance"));
+    if (gameInstance == nullptr)
+        throw LibraryEX(dlerror(), Logger::CRITICAL);
+    return (gameInstance);
 }
 
-IGame *LibManager::openGame(std::string libPath)
+IGraph *LibManager::openGraph(const std::string& libPath)
 {
-    void *libHandle = openLib(libPath);
-    IGame *(*createGame)();
-
-    createGame = (IGame * (*) (void) ) dlsym(libHandle, "createGame");
-    return (createGame());
+    if (_libsHandle.find(std::filesystem::absolute(std::filesystem::path(libPath))) == _libsHandle.end())
+        throw ArcadeEX(libPath + " not found", Logger::HIGH);
+    void *libHandle = dlopen(libPath.c_str(), RTLD_NOW);
+    if (libHandle == nullptr)
+        throw LibraryEX(dlerror(), Logger::CRITICAL);
+    if (_libsHandle[libPath])
+        throw ArcadeEX(libPath + "is already opened", Logger::HIGH);
+    _libsHandle[libPath] = libHandle;
+    IGraph *graphInstance = reinterpret_cast<IGraph*>(dlsym(libHandle, "getGraphInstance"));
+    if (graphInstance == nullptr)
+        throw LibraryEX(dlerror(), Logger::CRITICAL);
+    return (graphInstance);
 }
 
-IGraph *LibManager::openGraph(std::string libPath)
-{
-    void *libHandle = openLib(libPath);
-    IGraph *(*createGraph)();
-
-    createGraph = (IGraph * (*) (void) ) dlsym(libHandle, "createGraph");
-    return (createGraph());
-}
-
-void LibManager::closeLib(std::string libPath)
+void LibManager::closeLib(const std::string& libPath)
 {
     auto it = _libsHandle.find(libPath);
 
@@ -67,4 +70,35 @@ void LibManager::closeLib(std::string libPath)
         it->second = nullptr;
     } else
         throw LibraryEX("Library already closed", Logger::CRITICAL);
+}
+
+void LibManager::addLibs(std::vector<std::string> &libPaths) {
+    std::ifstream libConf("lib.conf");
+    std::string line;
+    std::stringstream ss;
+
+    if (libConf.is_open()) {
+        while (std::getline(libConf, line)) {
+            ss.clear();
+            ss.str(line);
+            if (line.starts_with("lib_path")) {
+                ss >> line;
+                ss >> line;
+                break;
+            }
+        }
+        libConf.close();
+    } else
+        LibraryEX("lib.conf not found at root", Logger::INFO);
+    std::filesystem::path libDir(line.empty() ? "lib" : line);
+    for (auto &lib: std::filesystem::directory_iterator(std::filesystem::absolute(libDir))) {
+        if (lib.path().extension() == ".so") {
+            ArcadeEX("Found library: " + lib.path().filename().string(), Logger::INFO);
+            _libsHandle.emplace((lib.path().filename().string(), lib.path().string()), nullptr);
+        }
+    }
+    ArcadeEX(std::to_string(_libsHandle.size()) + std::string(" Libraries found"), Logger::INFO);
+    std::for_each(libPaths.begin(), libPaths.end(), [this](std::string &libPath) {
+        _libsHandle.emplace(std::filesystem::absolute(std::filesystem::path(libPath)), nullptr);
+    });
 }

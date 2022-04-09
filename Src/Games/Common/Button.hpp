@@ -22,6 +22,8 @@ class Button : public AEntity {
         /// \brief Check if the button is clicked
         bool isClicked(int x, int y);
 
+        void setIsMoving(bool isMoving) override final;
+        bool getIsMoving() const override final;
     protected:
     private:
         std::string _actionString;

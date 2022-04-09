@@ -7,15 +7,6 @@
 
 #include "SfmlLibrary.hpp"
 
-SfmlLibrary::SfmlLibrary()
-{
-}
-
-SfmlLibrary::~SfmlLibrary()
-{
-    _window.close();
-}
-
 void SfmlLibrary::init()
 {
     const std::string font = "../Resources/Font/ARCADE_N.TTF";

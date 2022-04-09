@@ -61,6 +61,8 @@ class TextEntity : public AEntity {
         /// \return the outline color
         Color getOutlineColor() const;
 
+        void setIsMoving(bool isMoving) override;
+        bool getIsMoving() const override;
     protected:
     private:
         std::string _text;
