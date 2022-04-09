@@ -17,16 +17,14 @@
 
 Core::Core(std::vector<std::string> libsPath)
 {
+    _entities.reserve(1000);
     _mainMenu.init(_entities);
     _libManager.addLibs(libsPath);
-   _game = &_mainMenu;
-    // _game = _libManager.openGame("lib/arcade_nibbler.so");
-    // _game->init(_entities);
+    _game = &_mainMenu;
     _graph = _libManager.openGraph(*libsPath.begin());
     _graph->init();
     _game->start();
-    /*_mainMenu.start();*/
-    // _state = State::GAME;
+    _state = State::MAIN_MENU;
 }
 
 void Core::addEntity(const std::shared_ptr<IEntity>& entity)
