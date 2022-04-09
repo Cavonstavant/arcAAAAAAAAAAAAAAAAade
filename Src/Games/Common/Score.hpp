@@ -12,19 +12,19 @@
 
 /// \class Score class
 class Score : public AEntity {
-    public:
-        /// \brief Constructor
-        Score();
-        /// \brief Destructor
-        ~Score();
-        /// \brief Score getter
-        /// \return The score
-        unsigned int getScore() const;
-        /// \brief Score setter
-        /// \param score The new score
-        void setScore(unsigned int score);
+public:
+    /// \brief Constructor
+    Score();
+    /// \brief Destructor
+    ~Score();
+    /// \brief Score getter
+    /// \return The score
+    unsigned int getScore() const;
+    /// \brief Score setter
+    /// \param score The new score
+    void setScore(unsigned int score);
 
-    protected:
-    private:
-        unsigned int _score;
+protected:
+private:
+    unsigned int _score;
 };
