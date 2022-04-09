@@ -7,9 +7,8 @@
 
 #include "Score.hpp"
 
-Score::Score() : Object(ENTITY_TYPE::SCORE)
+Score::Score() : Object(ENTITY_TYPE::SCORE), _score(0)
 {
-    _score = 0;
 }
 
 Score::~Score()

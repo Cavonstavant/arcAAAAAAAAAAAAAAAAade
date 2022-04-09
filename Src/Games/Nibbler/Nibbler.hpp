@@ -62,7 +62,7 @@ class Nibbler : public IGame {
         /// \brief The last tails's last position
         std::pair<int, int> _lastTailPos;
         /// \brief The game's speed multiplier
-        float _speed;
+        float _speed{};
         /// \brief The game's score
         std::shared_ptr<Score> _score;
 

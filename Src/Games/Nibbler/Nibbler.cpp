@@ -12,13 +12,11 @@
 #include <random>
 #include <stack>
 
-Nibbler::Nibbler()
-{
-}
+Nibbler::Nibbler() :  _gameState(IGame::GameState::STOPPED), _lastTailDir(IEntity::Direction::RIGHT) ,_lastTailPos(std::make_pair(0, 0)), _score(std::make_shared<Score>())
+    {}
 
-Nibbler::~Nibbler()
-{
-}
+Nibbler::~Nibbler() = default;
+
 
 void Nibbler::init(std::vector<std::shared_ptr<IEntity>> &entities)
 {
@@ -27,8 +25,6 @@ void Nibbler::init(std::vector<std::shared_ptr<IEntity>> &entities)
     _lastTailDir = IEntity::Direction::RIGHT;
     _lastTailPos = std::make_pair(0, 0);
     _speed = 1;
-    Score score;
-    _score = std::make_shared<Score>(score);
     Object fruit = createNewFruit(rand() % GRID_WIDTH, rand() % GRID_HEIGHT);
     _fruit = std::make_shared<Object>(fruit);
 
@@ -47,7 +43,7 @@ Player Nibbler::createNewHead(int x, int y)
     Player head;
 
     head.setPos(std::make_pair(x, y));
-    head.setTexturePath(std::filesystem::absolute(std::filesystem::path("Resources/Snake/SnakeHead.png")).string());
+    head.setTexturePath(std::filesystem::absolute(std::filesystem::path("Src/Games/Nibbler/Resources/Textures/Snake/SnakeHead.png")).string());
     head.setTermTexture('o', Color::TermColors::RED, Color::TermColors::BLACK);
     return head;
 }
@@ -57,7 +53,7 @@ Player Nibbler::createNewTail(int x, int y)
     Player tail;
 
     tail.setPos(std::make_pair(x, y));
-    tail.setTexturePath(std::filesystem::absolute(std::filesystem::path("Resources/Snake/SnakeTail.png")).string());
+    tail.setTexturePath(std::filesystem::absolute(std::filesystem::path("Src/Games/Nibbler/Resources/Textures/Snake/SnakeTail.png")).string());
     tail.setTermTexture('.', Color::TermColors::GREEN, Color::TermColors::BLACK);
     return tail;
 }
