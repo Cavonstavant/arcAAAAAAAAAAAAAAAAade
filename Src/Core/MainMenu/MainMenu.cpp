@@ -45,15 +45,22 @@ void MainMenu::init(std::vector<std::shared_ptr<IEntity>> &entities)
     getAllLibraries();
 
     _gameState = GameState::LOADED;
-    Button closeGameButton(&closeGameCallback);
-    closeGameButton.setPos(std::make_pair(30, 15));
-    closeGameButton.setSize(std::make_pair(1, 2));
-    std::shared_ptr<Button> closeGameButtonPtr = std::make_shared<Button>(closeGameButton);
+
     TextEntity titleText("Arcade");
     titleText.setPos(std::make_pair(0, 0));
     std::shared_ptr<TextEntity> titleTextPtr = std::make_shared<TextEntity>(titleText);
 
+    Button closeGameButton(&closeGameCallback);
+    closeGameButton.setPos(std::make_pair(14, 28));
+    closeGameButton.setSize(std::make_pair(4, 2));
+    std::shared_ptr<Button> closeGameButtonPtr = std::make_shared<Button>(closeGameButton);
+
+    TextEntity closeText("Close");
+    closeText.setPos(std::make_pair(15, 29));
+    std::shared_ptr<TextEntity> closeTextPtr = std::make_shared<TextEntity>(closeText);
+
     entities.push_back(titleTextPtr);
+    entities.push_back(closeTextPtr);
     _buttons.push_back(closeGameButtonPtr);
     entities.push_back(closeGameButtonPtr);
 
