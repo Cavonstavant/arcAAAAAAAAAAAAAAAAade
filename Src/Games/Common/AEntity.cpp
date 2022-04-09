@@ -70,3 +70,8 @@ void AEntity::setType(IEntity::ENTITY_TYPE type)
 {
     _type = type;
 }
+
+IEntity::ENTITY_TYPE AEntity::getType() const
+{
+    return _type;
+}
