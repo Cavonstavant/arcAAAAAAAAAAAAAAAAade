@@ -29,11 +29,13 @@ var hierarchy =
         [ "Enemy", "class_enemy.html", null ],
         [ "Object", "class_object.html", null ],
         [ "Player", "class_player.html", null ],
+        [ "Score", "class_score.html", null ],
         [ "TextEntity", "class_text_entity.html", null ]
       ] ]
     ] ],
     [ "IGame", "class_i_game.html", [
-      [ "MainMenu", "class_main_menu.html", null ]
+      [ "MainMenu", "class_main_menu.html", null ],
+      [ "Nibbler", "class_nibbler.html", null ]
     ] ],
     [ "IGraph", "class_i_graph.html", [
       [ "NcursesLibrary", "class_ncurses_library.html", null ],

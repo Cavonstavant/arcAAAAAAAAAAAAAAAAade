@@ -5,7 +5,7 @@ var searchData=
   ['enemy_2ehpp_50',['Enemy.hpp',['../_enemy_8hpp.html',1,'']]],
   ['entityex_51',['EntityEX',['../_exception_8hpp.html#ad8bc3f0a6eb4348a010994ce46704600',1,'Exception.hpp']]],
   ['entityexception_52',['EntityException',['../class_entity_exception.html',1,'EntityException'],['../class_entity_exception.html#abfe0c09acf40a1fe3f86cf54a720795f',1,'EntityException::EntityException()']]],
-  ['entrypoint_2ecpp_53',['EntryPoint.cpp',['../_core_2_entry_point_8cpp.html',1,'(Global Namespace)'],['../_graphic_libs_2_ncurses_2_entry_point_8cpp.html',1,'(Global Namespace)'],['../_graphic_libs_2_s_d_l_2_entry_point_8cpp.html',1,'(Global Namespace)'],['../_graphic_libs_2_s_f_m_l_2_entry_point_8cpp.html',1,'(Global Namespace)']]],
+  ['entrypoint_2ecpp_53',['EntryPoint.cpp',['../_core_2_entry_point_8cpp.html',1,'(Global Namespace)'],['../_games_2_nibbler_2_entry_point_8cpp.html',1,'(Global Namespace)'],['../_graphic_libs_2_ncurses_2_entry_point_8cpp.html',1,'(Global Namespace)'],['../_graphic_libs_2_s_d_l_2_entry_point_8cpp.html',1,'(Global Namespace)'],['../_graphic_libs_2_s_f_m_l_2_entry_point_8cpp.html',1,'(Global Namespace)']]],
   ['enum_5fsize_54',['ENUM_SIZE',['../class_object.html#aaaf3106c96ab4387c5ada5d22074c0ffae8729d74edf0acc04e84ddbbeb68cb4e',1,'Object']]],
   ['event_2ehpp_55',['Event.hpp',['../_event_8hpp.html',1,'']]],
   ['eventex_56',['EventEX',['../_exception_8hpp.html#aae84ad551a8690bf278696cf4d24b6e6',1,'Exception.hpp']]],

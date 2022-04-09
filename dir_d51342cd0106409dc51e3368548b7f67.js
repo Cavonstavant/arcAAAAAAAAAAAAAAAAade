@@ -20,6 +20,10 @@ var dir_d51342cd0106409dc51e3368548b7f67 =
     [ "Player.hpp", "_player_8hpp.html", [
       [ "Player", "class_player.html", "class_player" ]
     ] ],
+    [ "Score.cpp", "_score_8cpp.html", null ],
+    [ "Score.hpp", "_score_8hpp.html", [
+      [ "Score", "class_score.html", "class_score" ]
+    ] ],
     [ "TextEntity.cpp", "_text_entity_8cpp.html", null ],
     [ "TextEntity.hpp", "_text_entity_8hpp.html", [
       [ "TextEntity", "class_text_entity.html", "class_text_entity" ]
