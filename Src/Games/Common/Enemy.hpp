@@ -39,16 +39,16 @@ class Enemy : public AEntity {
         /// \return Bool Enrage
         bool getEnrage() const;
         /// \brief Set the isMoving boolean of the Enemy Entity
-        void setIsMoving(bool isMoving);
+        void setIsMoving(bool isMoving) override;
         /// \brief Get the isMoving boolean of the Enemy Entity
-        bool getIsMoving() const;
+        bool getIsMoving() const override;
 
     protected:
     private:
         /// \brief Movement Speed of the Enemy Entity
         int _speed;
         /// \brief Color of the Enemy Entity. Color interface used by different Graphics Library
-        Color _color;
+        Color _color{};
         /// \brief Defines if the Enemy Entity is enrage or not
         bool _enrage;
 };

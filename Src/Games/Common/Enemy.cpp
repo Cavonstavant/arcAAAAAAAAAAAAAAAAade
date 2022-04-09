@@ -54,7 +54,14 @@ bool Enemy::getEnrage() const
     return _enrage;
 }
 
+
+
 void Enemy::setIsMoving(bool isMoving)
 {
     _isMoving = isMoving;
+}
+
+bool Enemy::getIsMoving() const
+{
+    return _isMoving;
 }
