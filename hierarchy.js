@@ -27,9 +27,10 @@ var hierarchy =
       [ "AEntity", "class_a_entity.html", [
         [ "Button", "class_button.html", null ],
         [ "Enemy", "class_enemy.html", null ],
-        [ "Object", "class_object.html", null ],
+        [ "Object", "class_object.html", [
+          [ "Score", "class_score.html", null ]
+        ] ],
         [ "Player", "class_player.html", null ],
-        [ "Score", "class_score.html", null ],
         [ "TextEntity", "class_text_entity.html", null ]
       ] ]
     ] ],
