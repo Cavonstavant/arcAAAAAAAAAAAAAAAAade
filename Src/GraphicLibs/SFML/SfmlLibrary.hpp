@@ -21,7 +21,7 @@ class SfmlLibrary : public IGraph {
         SfmlLibrary() = default;
 
         /// \brief Default destructor
-        ~SfmlLibrary() override;
+        ~SfmlLibrary() override = default;
 
         /// \brief Initialize the library
         /// Creating & Initializing the window

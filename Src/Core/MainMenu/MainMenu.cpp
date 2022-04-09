@@ -132,7 +132,7 @@ void MainMenu::getAllLibraries()
             } else if (dlsym(handle, "getGameInstance")) {
                 _gameLibraries.push_back(entry.path());
             }
-            dlclose(handle);
+//            dlclose(handle);
         } catch (std::exception &e) {
             throw LibraryEX(e.what(), Logger::MEDIUM);
         }
