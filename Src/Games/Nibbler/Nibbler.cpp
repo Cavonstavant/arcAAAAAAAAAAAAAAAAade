@@ -26,13 +26,19 @@ void Nibbler::init(std::vector<std::shared_ptr<IEntity>> &entities)
     _lastTailDir = IEntity::Direction::RIGHT;
     _lastTailPos = std::make_pair(0, 0);
     _speed = 1;
+    Score score;
+    _score = std::make_shared<Score>(score);
 
+    initEntities(entities);
+}
+
+void Nibbler::initEntities(std::vector<std::shared_ptr<IEntity>> &entities)
+{
     Player head;
     Player tail1;
     Player tail2;
     Player tail3;
     Object fruit;
-    Score score;
 
     head.setPos(std::make_pair(GRID_WIDTH / 2 + 1, GRID_HEIGHT / 2));
     tail1.setPos(std::make_pair(GRID_WIDTH / 2, GRID_HEIGHT / 2));
@@ -46,10 +52,8 @@ void Nibbler::init(std::vector<std::shared_ptr<IEntity>> &entities)
     std::shared_ptr<Player> tail2Ptr = std::make_shared<Player>(tail2);
     std::shared_ptr<Player> tail3Ptr = std::make_shared<Player>(tail3);
     std::shared_ptr<Object> fruitPtr = std::make_shared<Object>(fruit);
-    std::shared_ptr<Score> scorePtr = std::make_shared<Score>(score);
 
     _fruit = fruitPtr;
-    _score = scorePtr;
 
     _snake.push_back(headPtr);
     _snake.push_back(tail1Ptr);
@@ -61,7 +65,7 @@ void Nibbler::init(std::vector<std::shared_ptr<IEntity>> &entities)
     entities.push_back(tail2Ptr);
     entities.push_back(tail3Ptr);
     entities.push_back(fruitPtr);
-    entities.push_back(scorePtr);
+    entities.push_back(_score);
 }
 
 int Nibbler::getClockTimeMS()
@@ -113,6 +117,9 @@ void Nibbler::update(std::vector<std::shared_ptr<IEntity>> &entities, std::stack
         moveSnake();
         snakeIsOnAFruit(entities);
     }
+
+    if (_snake.size() == GRID_HEIGHT * GRID_WIDTH)
+        nextLevel(entities);
 }
 
 static std::pair<int, int> getNextPos(std::pair<int, int> pos, int dir)
@@ -165,6 +172,19 @@ bool Nibbler::snakeIsOnAFruit(std::vector<std::shared_ptr<IEntity>> &entities)
         return true;
     }
     return false;
+}
+
+void Nibbler::nextLevel(std::vector<std::shared_ptr<IEntity>> &entities)
+{
+    _speed *= 1.5;
+
+    while (!_snake.empty()) {
+        _snake.pop_back();
+    }
+    while (!entities.empty()) {
+        entities.pop_back();
+    }
+    initEntities(entities);
 }
 
 void Nibbler::start()

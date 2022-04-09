@@ -81,4 +81,9 @@ class Nibbler : public IGame {
         /// \param entities The entity vector of the game
         /// \return true if the snake is on a fruit, false otherwise
         bool snakeIsOnAFruit(std::vector<std::shared_ptr<IEntity>> &entities);
+        /// \brief Go to the next level
+        void nextLevel(std::vector<std::shared_ptr<IEntity>> &entities);
+        /// \brief Init entities
+        /// \param entities The entity vector of the game
+        void initEntities(std::vector<std::shared_ptr<IEntity>> &entities);
 };
