@@ -7,8 +7,9 @@
 
 #pragma once
 
-#include "../../Games/Common/Object.hpp"
-#include "../../Games/Common/Player.hpp"
+#include "../Common/Object.hpp"
+#include "../Common/Player.hpp"
+#include "../Common/Score.hpp"
 #include "IGame.hpp"
 #include <chrono>
 #include <list>
@@ -52,6 +53,10 @@ class Nibbler : public IGame {
         IEntity::Direction _lastTailDir;
         /// \brief The last tails's last position
         std::pair<int, int> _lastTailPos;
+        /// \brief The game's speed multiplier
+        float _speed;
+        /// \brief The game's score
+        std::shared_ptr<Score> _score;
 
         /// \brief Get the elapsed time since the last update in milliseconds
         /// \return the elapsed time since the last update in milliseconds
