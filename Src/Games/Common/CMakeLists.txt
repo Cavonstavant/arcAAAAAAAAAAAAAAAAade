@@ -1,7 +1,7 @@
 set (INCLUDE_ROOT ${PROJECT_SOURCE_DIR}/Src/Games/Common/)
 set (SRC_ROOT ${PROJECT_SOURCE_DIR}/Src/Games/Common/)
 
-set(TARGET_LIB_NAME graphic_lib_common)
+set(TARGET_LIB_NAME game_lib_common)
 
 set(SRC
     ${INCLUDE_ROOT}/AEntity.hpp
@@ -22,5 +22,6 @@ add_library(${TARGET_LIB_NAME} ${SRC})
 
 set_target_properties(${TARGET_LIB_NAME} PROPERTIES LINKER_LANGUAGE CXX)
 
-target_link_libraries(${TARGET_LIB_NAME} ArcadeCommonInterface)
+target_link_libraries(${TARGET_LIB_NAME} PUBLIC ArcadeCommonInterface)
 target_include_directories(${TARGET_LIB_NAME} PRIVATE ${PROJECT_SOURCE_DIR}/Src/Games/Common)
+target_include_directories(${TARGET_LIB_NAME} PRIVATE ${PROJECT_SOURCE_DIR}/Src/CommonInterface/include)
