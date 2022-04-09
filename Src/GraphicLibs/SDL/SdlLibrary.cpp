@@ -90,8 +90,8 @@ bool SdlLibrary::drawEntity(IEntity &entity, std::pair<int, int> pos)
     SDL_Texture *texture = IMG_LoadTexture(_renderer, entity.getTexturePath().c_str());
     SDL_Rect rect;
 
-    rect.x = GRID_INT(entity.getPos().first);
-    rect.y = GRID_INT(entity.getPos().second);
+    rect.x = entity.getPos().first;
+    rect.y = entity.getPos().second;
     rect.w = entity.getSize().first;
     rect.h = entity.getSize().second;
 
