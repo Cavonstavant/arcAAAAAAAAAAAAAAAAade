@@ -7,11 +7,11 @@
 
 #pragma once
 
-#include "AEntity.hpp"
+#include "Object.hpp"
 #include <functional>
 
 /// \class Button class
-class Button : public AEntity {
+class Button : public Object {
     public:
         /// \brief Constructor
         Button(std::function<void()> callback, std::string actionString = "");
@@ -22,8 +22,6 @@ class Button : public AEntity {
         /// \brief Check if the button is clicked
         bool isClicked(int x, int y);
 
-        void setIsMoving(bool isMoving) override final;
-        bool getIsMoving() const override final;
     protected:
     private:
         std::string _actionString;
