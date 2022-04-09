@@ -27,7 +27,16 @@ int main(int ac, char **av)
     try {
         Core core(libsPath);
         while (core.getState() != Core::State::EXIT) {
-            core.update();
+            try {
+                core.update();
+            } catch (SwitchLibException &e) {
+                std::string libInfo = std::string(e.what());
+                std::string libPath = libInfo.substr(libInfo.find(';') + 1);
+                if (libInfo.substr(0, libInfo.find(';')) == "Graph")
+                    core.setGraph(libPath);
+                else
+                    core.setGame(libPath);
+            }
             core.draw();
             core.processEvents();
         }

@@ -17,6 +17,7 @@
 #include <vector>
 
 /// \brief represents a generic graphical library
+/// \interface IGraph
 class IGraph {
 
     public:

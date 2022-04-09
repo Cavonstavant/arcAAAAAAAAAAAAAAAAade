@@ -16,6 +16,7 @@
 #include "Event.hpp"
 #include "MainMenu/MainMenu.hpp"
 #include "LibManager.hpp"
+#include "Exception.hpp"
 #include <vector>
 
 /// \brief Core class that the transfer of data between games and displays
@@ -70,6 +71,8 @@ class Core {
         /// \param game The new game of the core
         inline void setGame(IGame* game) { _game = game; }
 
+        inline void setGame(const std::string& libPath) { _game = _libManager.openGame(libPath); }
+
         /// \brief Get the current graphical display of the core
         /// \return The current graphical display of the core
         [[nodiscard]] inline IGraph* getGraph() const { return _graph; }
@@ -77,6 +80,8 @@ class Core {
         /// \brief Set the current graphical display of the core
         /// \param graph The new graphical display of the core
         inline void setGraph(IGraph* graph) { _graph = graph; }
+
+        inline void setGraph(const std::string& libPath) { _graph = _libManager.openGraph(libPath); }
 
         /// \brief Get the current event
         /// \return The current event
@@ -127,5 +132,10 @@ class Core {
         /// \brief The current state of the core
         State _state;
 };
+
+/// \file CoreEvents.cpp
+
+void manageCoreKeyEvents(std::string &key, IGame *game, IGraph *graph,
+                         LibManager *lib);
 
 #endif//ARCAAAAAAAAAAAAAAAAADE_CORE_HPP

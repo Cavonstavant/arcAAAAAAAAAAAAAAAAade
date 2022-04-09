@@ -18,6 +18,7 @@
 #include <vector>
 
 /// Game instance
+/// \interface IGame
 class IGame {
     public:
         /// Represents the game's status

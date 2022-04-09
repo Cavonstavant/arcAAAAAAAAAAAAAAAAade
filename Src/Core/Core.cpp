@@ -81,8 +81,7 @@ void Core::draw() {
     _graph->displayWindow();
 }
 
-void Core::processEvents()
-{
+void Core::processEvents() {
     if (_event.top().evt_type == Arcade::Evt::WIN_CLOSE) {
         if (_state == State::MAIN_MENU) {
             _mainMenu.close(_entities);
@@ -121,9 +120,12 @@ void Core::processEvents()
             _event.pop();
             return;
         }
-        if (_event.top().key.key == 'k' || _event.top().key.key == 'K') {
+        if (_event.top().key.key == 'p' || _event.top().key.key == 'P') {
+            _state = State::GAME;
+            _game->setState(IGame::GameState::PAUSED);
             _event.pop();
             return;
         }
+        manageCoreKeyEvents(reinterpret_cast<std::string &>(_event.top().key.key), _game, _graph, &_libManager);
     }
 }

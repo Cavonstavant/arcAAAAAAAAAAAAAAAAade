@@ -12,6 +12,7 @@
 #include <string>
 
 /// \brief represents a generic entity within the game
+/// \interface IEntity
 class IEntity {
     public:
         enum Direction {

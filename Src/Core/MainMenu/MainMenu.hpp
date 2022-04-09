@@ -33,6 +33,9 @@ class MainMenu : public IGame {
         /// \brief Get the game's status
         /// \return the game's status
         [[nodiscard]] GameState getState() const override { return _gameState; }
+
+        void setState(GameState state) override { _gameState = state; }
+
         /// \brief starts the game
         void start() override;
         /// \brief Get the menu's name
