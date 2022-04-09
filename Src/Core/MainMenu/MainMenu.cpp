@@ -40,8 +40,32 @@ MainMenu::~MainMenu()
 {
 }
 
+static void createVerticalText(std::vector<std::shared_ptr<IEntity>> &entities, const std::string &text, int x, int y)
+{
+    for (auto &c : text) {
+        std::string chString(1, c);
+        TextEntity textChar(chString);
+        textChar.setPos(std::make_pair(x, y));
+        std::shared_ptr<TextEntity> textCharPtr = std::make_shared<TextEntity>(textChar);
+        entities.push_back(textCharPtr);
+        x += 1;
+    }
+}
+
+static void createBox(std::vector<std::shared_ptr<IEntity>> &entities, int x, int y, int width, int height)
+{
+    Object box(Object::ENTITY_TYPE::WALL);
+    box.setPos(std::make_pair(x, y));
+    box.setSize(std::make_pair(width, height));
+    box.setColor({0, 255, 255, 255, Color::TermColors::CYAN});
+    std::shared_ptr<Object> boxPtr = std::make_shared<Object>(box);
+    entities.push_back(boxPtr);
+}
+
 void MainMenu::init(std::vector<std::shared_ptr<IEntity>> &entities)
 {
+    _graphicalLibraries.clear();
+    _gameLibraries.clear();
     getAllLibraries();
 
     _gameState = GameState::LOADED;
@@ -51,21 +75,22 @@ void MainMenu::init(std::vector<std::shared_ptr<IEntity>> &entities)
     std::shared_ptr<TextEntity> titleTextPtr = std::make_shared<TextEntity>(titleText);
 
     Button closeGameButton(&closeGameCallback);
-    closeGameButton.setPos(std::make_pair(14, 28));
-    closeGameButton.setSize(std::make_pair(4, 2));
+    closeGameButton.setPos(std::make_pair(11, 2));
+    closeGameButton.setSize(std::make_pair(1, 1));
     std::shared_ptr<Button> closeGameButtonPtr = std::make_shared<Button>(closeGameButton);
 
-    TextEntity closeText("Close");
-    closeText.setPos(std::make_pair(15, 29));
-    std::shared_ptr<TextEntity> closeTextPtr = std::make_shared<TextEntity>(closeText);
+    createBox(entities, 1, 1, GRID_INT(1) / 8, GRID_HEIGHT - 1);
+    createBox(entities, 1, GRID_INT(1) / 8 + 2, GRID_INT(1) / 3 + 3, GRID_HEIGHT - 1);
+    createBox(entities, 1, GRID_INT(1) / 8 + 2 + GRID_INT(1) / 3 + 3 + 1, GRID_INT(1) / 3 + 3, GRID_HEIGHT - 1);
 
-    entities.push_back(titleTextPtr);
-    entities.push_back(closeTextPtr);
     _buttons.push_back(closeGameButtonPtr);
     entities.push_back(closeGameButtonPtr);
+    entities.push_back(titleTextPtr);
 
-    int y = 1;
-    int x = 4;
+    createVerticalText(entities, "Close", 12, 2);
+
+    int x = 2;
+    int y = 7;
     for (auto &&graphLib: _graphicalLibraries) {
         Button button(&changeGraphicalLibCallback, graphLib);
         std::string libName = graphLib;
@@ -77,7 +102,7 @@ void MainMenu::init(std::vector<std::shared_ptr<IEntity>> &entities)
         TextEntity text(libName);
 
         button.setPos(std::make_pair(x, y));
-        text.setPos(std::make_pair(x + 2, y));
+        text.setPos(std::make_pair(x, y + 2));
 
         std::shared_ptr<Button> buttonPtr = std::make_shared<Button>(button);
         std::shared_ptr<TextEntity> textPtr = std::make_shared<TextEntity>(text);
@@ -87,10 +112,10 @@ void MainMenu::init(std::vector<std::shared_ptr<IEntity>> &entities)
 
         _buttons.push_back(buttonPtr);
 
-        y += 2;
+        x += 2;
     }
-    y = 1;
-    x = 10;
+    x = 2;
+    y = 21;
     for (auto &&gameLib: _gameLibraries) {
         Button button(&changeGameLibCallback, gameLib);
         std::string libName = gameLib;
@@ -99,10 +124,10 @@ void MainMenu::init(std::vector<std::shared_ptr<IEntity>> &entities)
             libName = libName.substr(libName.find_first_not_of("arcade_"));
             libName = libName.substr(0, libName.find_last_of("."));
         } catch (...) {}
-        TextEntity text(gameLib);
+        TextEntity text(libName);
 
         button.setPos(std::make_pair(x, y));
-        text.setPos(std::make_pair(x + 2, y));
+        text.setPos(std::make_pair(x, y + 2));
 
         std::shared_ptr<Button> buttonPtr = std::make_shared<Button>(button);
         std::shared_ptr<TextEntity> textPtr = std::make_shared<TextEntity>(text);
@@ -112,7 +137,7 @@ void MainMenu::init(std::vector<std::shared_ptr<IEntity>> &entities)
 
         _buttons.push_back(buttonPtr);
 
-        y += 2;
+        x += 2;
     }
 }
 
