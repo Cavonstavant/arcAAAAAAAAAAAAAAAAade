@@ -68,13 +68,15 @@ bool SfmlLibrary::drawRect(std::pair<int, int> pos, int width, int height, Color
     return true;
 }
 
-bool SfmlLibrary::drawText(std::pair<int, int> pos, const std::string &content)
+bool SfmlLibrary::drawText(std::pair<int, int> pos, const std::string &content, Color color)
 {
     sf::Text text;
+    sf::Color sfColor(color.R, color.G, color.B, color.A);
 
     text.setFont(_font);
     text.setPosition(GRID_INT(pos.second), GRID_INT(pos.first));
     text.setString(content);
+    text.setFillColor(sfColor);
 
     _window.draw(text);
     return true;

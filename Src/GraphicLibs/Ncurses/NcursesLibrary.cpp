@@ -65,7 +65,7 @@ bool NcursesLibrary::drawRect(std::pair<int, int> pos, int width, int height, Co
     return true;
 }
 
-bool NcursesLibrary::drawText(std::pair<int, int> pos, const std::string &content)
+bool NcursesLibrary::drawText(std::pair<int, int> pos, const std::string &content, Color color)
 {
     move(pos.first, pos.second);
     printw(content.c_str());

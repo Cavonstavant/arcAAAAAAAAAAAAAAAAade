@@ -58,7 +58,7 @@ void Core::draw() {
     for (unsigned long i = 0; i < _entities.size(); i++) {
         if (dynamic_cast<TextEntity*>(_entities[i].get())) {
             auto *text = dynamic_cast<TextEntity*>(_entities[i].get());
-            _graph->drawText(text->getPos(), text->getText());
+            _graph->drawText(text->getPos(), text->getText(), text->getColor());
         }
         if (dynamic_cast<Button*>(_entities[i].get())) {
             auto *button = dynamic_cast<Button*>(_entities[i].get());
