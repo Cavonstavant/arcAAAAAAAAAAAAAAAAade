@@ -8,9 +8,9 @@
 #include "Nibbler.hpp"
 #include "Event.hpp"
 #include <ctime>
+#include <filesystem>
 #include <random>
 #include <stack>
-#include <filesystem>
 
 Nibbler::Nibbler()
 {
