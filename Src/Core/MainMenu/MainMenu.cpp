@@ -123,6 +123,8 @@ void MainMenu::getAllLibraries()
     const std::filesystem::path path{"./lib/"};
 
     for (const auto &entry: std::filesystem::directory_iterator{path}) {
+        if (entry.path().extension() != ".so")
+            continue;
         try {
             void *handle = dlopen(entry.path().c_str(), RTLD_LAZY);
             if (!handle)
