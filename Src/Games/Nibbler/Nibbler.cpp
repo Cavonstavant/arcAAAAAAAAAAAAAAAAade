@@ -10,6 +10,7 @@
 #include <ctime>
 #include <random>
 #include <stack>
+#include <filesystem>
 
 Nibbler::Nibbler()
 {
@@ -32,20 +33,43 @@ void Nibbler::init(std::vector<std::shared_ptr<IEntity>> &entities)
     initEntities(entities);
 }
 
-void Nibbler::initEntities(std::vector<std::shared_ptr<IEntity>> &entities)
+static Player newHead(int x, int y)
 {
     Player head;
-    Player tail1;
-    Player tail2;
-    Player tail3;
+
+    head.setPos(std::make_pair(x, y));
+    head.setTexturePath(std::filesystem::absolute(std::filesystem::path("Resources/Snake/SnakeHead.png")).string());
+    head.setTermTexture('o', Color::TermColors::RED, Color::TermColors::BLACK);
+    return head;
+}
+
+static Player newTail(int x, int y)
+{
+    Player tail;
+
+    tail.setPos(std::make_pair(x, y));
+    tail.setTexturePath(std::filesystem::absolute(std::filesystem::path("Resources/Snake/SnakeTail.png")).string());
+    tail.setTermTexture('.', Color::TermColors::GREEN, Color::TermColors::BLACK);
+    return tail;
+}
+
+static Object newFruit(int x, int y)
+{
     Object fruit;
 
-    head.setPos(std::make_pair(GRID_WIDTH / 2 + 1, GRID_HEIGHT / 2));
-    tail1.setPos(std::make_pair(GRID_WIDTH / 2, GRID_HEIGHT / 2));
-    tail2.setPos(std::make_pair(GRID_WIDTH / 2 - 1, GRID_HEIGHT / 2));
-    tail3.setPos(std::make_pair(GRID_WIDTH / 2 - 2, GRID_HEIGHT / 2));
-    fruit.setPos(std::make_pair(rand() % GRID_WIDTH, rand() % GRID_HEIGHT));
     fruit.setType(Object::TYPE_E::FRUITS);
+    fruit.setPos(std::make_pair(x, y));
+    fruit.setTermTexture('*', Color::TermColors::YELLOW, Color::TermColors::BLACK);
+    return fruit;
+}
+
+void Nibbler::initEntities(std::vector<std::shared_ptr<IEntity>> &entities)
+{
+    Player head = newHead(GRID_WIDTH / 2 + 1, GRID_HEIGHT / 2);
+    Player tail1 = newTail(GRID_WIDTH / 2, GRID_HEIGHT / 2);
+    Player tail2 = newTail(GRID_WIDTH / 2 - 1, GRID_HEIGHT / 2);
+    Player tail3 = newTail(GRID_WIDTH / 2 - 2, GRID_HEIGHT / 2);
+    Object fruit = newFruit(rand() % GRID_WIDTH, rand() % GRID_HEIGHT);
 
     std::shared_ptr<Player> headPtr = std::make_shared<Player>(head);
     std::shared_ptr<Player> tail1Ptr = std::make_shared<Player>(tail1);
