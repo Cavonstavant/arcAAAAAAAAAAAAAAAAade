@@ -20,7 +20,7 @@ Core::Core(std::vector<std::string> libsPath)
     /*_mainMenu.init(_entities);*/
     _libManager.addLibs(libsPath);
 //    _game = &_mainMenu;
-    _game = _libManager.openGame("lib/arcade_pacman.so");
+    _game = _libManager.openGame("lib/arcade_nibbler.so");
     _game->init(_entities);
     _graph = _libManager.openGraph(*libsPath.begin());
     _graph->init();

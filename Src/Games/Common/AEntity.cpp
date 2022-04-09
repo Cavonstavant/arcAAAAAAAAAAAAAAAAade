@@ -15,6 +15,7 @@ AEntity::AEntity()
     _texturePath = "";
     _termTexture = std::make_pair('x', std::make_pair(Color::TermColors::WHITE, Color::TermColors::BLACK));
     _type = IEntity::UNDEFINED;
+    _direction = Direction::RIGHT;
 }
 
 std::pair<int, int> AEntity::getPos() const

@@ -14,6 +14,8 @@ set(SRC
     ${INCLUDE_ROOT}/Object.hpp
     ${INCLUDE_ROOT}/Player.cpp
     ${INCLUDE_ROOT}/Player.hpp
+    ${INCLUDE_ROOT}/Score.cpp
+    ${INCLUDE_ROOT}/Score.hpp
     ${INCLUDE_ROOT}/TextEntity.cpp
     ${INCLUDE_ROOT}/TextEntity.hpp
 )
