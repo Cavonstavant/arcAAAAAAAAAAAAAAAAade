@@ -46,14 +46,16 @@ void Core::update()
 {
     Arcade::Evt evt{};
 
-    evt = _graph->getInput();
-    if (evt.evt_type == Arcade::Evt::EvtType::WIN_CLOSE) {
-        _graph->close();
-        _game->close(_entities);
-        _state = State::EXIT;
+    while ((evt = _graph->getInput()).evt_type != Arcade::Evt::NONE) {
+        if (evt.evt_type == Arcade::Evt::EvtType::WIN_CLOSE) {
+            _graph->close();
+            _game->close(_entities);
+            _state = State::EXIT;
+            break;
+        }
+        else if (evt.evt_type == Arcade::Evt::EvtType::KEY)
+            _event.push(_graph->getInput());
     }
-    else if (evt.evt_type == Arcade::Evt::EvtType::KEY)
-        _event.push(_graph->getInput());
     if (_state == State::MAIN_MENU) {
         _mainMenu.update(_entities, _event);
     } else if (_state == State::GAME) {
