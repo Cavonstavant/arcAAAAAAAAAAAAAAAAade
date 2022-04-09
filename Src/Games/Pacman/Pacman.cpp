@@ -150,7 +150,7 @@ bool Pacman::moveLeft(Arcade::Evt input)
 
 void Pacman::close(std::vector<std::shared_ptr<IEntity>> &entities)
 {
-
+    entities.clear();
 }
 
 bool Pacman::isThereAWallOnDirection(Player::Direction direction)
