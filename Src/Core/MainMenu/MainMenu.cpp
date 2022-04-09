@@ -58,6 +58,7 @@ void MainMenu::init(std::vector<std::shared_ptr<IEntity>> &entities)
     entities.push_back(closeGameButtonPtr);
 
     int y = 1;
+    int x = 4;
     for (auto &&graphLib: _graphicalLibraries) {
         Button button(&changeGraphicalLibCallback, graphLib);
         std::string libName = graphLib;
@@ -68,8 +69,8 @@ void MainMenu::init(std::vector<std::shared_ptr<IEntity>> &entities)
         } catch (...) {}
         TextEntity text(libName);
 
-        button.setPos(std::make_pair(4, y));
-        text.setPos(std::make_pair(6, y));
+        button.setPos(std::make_pair(x, y));
+        text.setPos(std::make_pair(x + 2, y));
 
         std::shared_ptr<Button> buttonPtr = std::make_shared<Button>(button);
         std::shared_ptr<TextEntity> textPtr = std::make_shared<TextEntity>(text);
@@ -82,12 +83,19 @@ void MainMenu::init(std::vector<std::shared_ptr<IEntity>> &entities)
         y += 2;
     }
     y = 1;
+    x = 10;
     for (auto &&gameLib: _gameLibraries) {
         Button button(&changeGameLibCallback, gameLib);
+        std::string libName = gameLib;
+        try {
+            libName = gameLib.substr(gameLib.find_last_of("/") + 1);
+            libName = libName.substr(libName.find_first_not_of("arcade_"));
+            libName = libName.substr(0, libName.find_last_of("."));
+        } catch (...) {}
         TextEntity text(gameLib);
 
-        button.setPos(std::make_pair(10, y));
-        text.setPos(std::make_pair(12, y));
+        button.setPos(std::make_pair(x, y));
+        text.setPos(std::make_pair(x + 2, y));
 
         std::shared_ptr<Button> buttonPtr = std::make_shared<Button>(button);
         std::shared_ptr<TextEntity> textPtr = std::make_shared<TextEntity>(text);
