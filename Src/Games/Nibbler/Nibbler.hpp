@@ -26,6 +26,8 @@ class Nibbler : public IGame {
 
         /// \brief Initialize the game
         void init(std::vector<std::shared_ptr<IEntity>> &entities) override;
+        /// \brief Closes the library
+        void close(std::vector<std::shared_ptr<IEntity>> &entities) override;
         /// \brief Update the game's entities
         /// \param entities The entity vector of the game
         /// \param events The event stack of the game
@@ -86,4 +88,13 @@ class Nibbler : public IGame {
         /// \brief Init entities
         /// \param entities The entity vector of the game
         void initEntities(std::vector<std::shared_ptr<IEntity>> &entities);
+        /// \brief Create new head
+        /// \param entities The entity vector of the game
+        Player createNewHead(int x, int y);
+        /// \brief Create new tail
+        /// \param entities The entity vector of the game
+        Player createNewTail(int x, int y);
+        /// \brief Create new fruit
+        /// \param entities The entity vector of the game
+        Object createNewFruit(int x, int y);
 };

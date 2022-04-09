@@ -29,11 +29,20 @@ void Nibbler::init(std::vector<std::shared_ptr<IEntity>> &entities)
     _speed = 1;
     Score score;
     _score = std::make_shared<Score>(score);
+    Object fruit = createNewFruit(rand() % GRID_WIDTH, rand() % GRID_HEIGHT);
+    _fruit = std::make_shared<Object>(fruit);
 
     initEntities(entities);
 }
 
-static Player newHead(int x, int y)
+void Nibbler::close(std::vector<std::shared_ptr<IEntity>> &entities)
+{
+    _gameState = GameState::STOPPED;
+    _snake.clear();
+    entities.clear();
+}
+
+Player Nibbler::createNewHead(int x, int y)
 {
     Player head;
 
@@ -43,7 +52,7 @@ static Player newHead(int x, int y)
     return head;
 }
 
-static Player newTail(int x, int y)
+Player Nibbler::createNewTail(int x, int y)
 {
     Player tail;
 
@@ -53,7 +62,7 @@ static Player newTail(int x, int y)
     return tail;
 }
 
-static Object newFruit(int x, int y)
+Object Nibbler::createNewFruit(int x, int y)
 {
     Object fruit;
 
@@ -65,19 +74,16 @@ static Object newFruit(int x, int y)
 
 void Nibbler::initEntities(std::vector<std::shared_ptr<IEntity>> &entities)
 {
-    Player head = newHead(GRID_WIDTH / 2 + 1, GRID_HEIGHT / 2);
-    Player tail1 = newTail(GRID_WIDTH / 2, GRID_HEIGHT / 2);
-    Player tail2 = newTail(GRID_WIDTH / 2 - 1, GRID_HEIGHT / 2);
-    Player tail3 = newTail(GRID_WIDTH / 2 - 2, GRID_HEIGHT / 2);
-    Object fruit = newFruit(rand() % GRID_WIDTH, rand() % GRID_HEIGHT);
+    Player head = createNewHead(GRID_WIDTH / 2 + 1, GRID_HEIGHT / 2);
+    Player tail1 = createNewTail(GRID_WIDTH / 2, GRID_HEIGHT / 2);
+    Player tail2 = createNewTail(GRID_WIDTH / 2 - 1, GRID_HEIGHT / 2);
+    Player tail3 = createNewTail(GRID_WIDTH / 2 - 2, GRID_HEIGHT / 2);
 
     std::shared_ptr<Player> headPtr = std::make_shared<Player>(head);
     std::shared_ptr<Player> tail1Ptr = std::make_shared<Player>(tail1);
     std::shared_ptr<Player> tail2Ptr = std::make_shared<Player>(tail2);
     std::shared_ptr<Player> tail3Ptr = std::make_shared<Player>(tail3);
-    std::shared_ptr<Object> fruitPtr = std::make_shared<Object>(fruit);
 
-    _fruit = fruitPtr;
 
     _snake.push_back(headPtr);
     _snake.push_back(tail1Ptr);
@@ -88,8 +94,8 @@ void Nibbler::initEntities(std::vector<std::shared_ptr<IEntity>> &entities)
     entities.push_back(tail1Ptr);
     entities.push_back(tail2Ptr);
     entities.push_back(tail3Ptr);
-    entities.push_back(fruitPtr);
     entities.push_back(_score);
+    entities.push_back(_fruit);
 }
 
 int Nibbler::getClockTimeMS()
@@ -202,12 +208,8 @@ void Nibbler::nextLevel(std::vector<std::shared_ptr<IEntity>> &entities)
 {
     _speed *= 1.5;
 
-    while (!_snake.empty()) {
-        _snake.pop_back();
-    }
-    while (!entities.empty()) {
-        entities.pop_back();
-    }
+    _snake.clear();
+    entities.clear();
     initEntities(entities);
 }
 
