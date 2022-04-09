@@ -12,7 +12,7 @@ endif()
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake ${CMAKE_CURRENT_SOURCE_DIR}/cmake/sdl2-cmake-modules)
 
 add_compile_options(
-        "-Wall" "-Wextra" "-Wshadow" "-pedantic" "-Wpointer-arith"
+        "-Wall" "-Wextra" "-Wshadow" "-pedantic" "-Wpointer-arith" "-fno-gnu-unique"
 )
 
 
