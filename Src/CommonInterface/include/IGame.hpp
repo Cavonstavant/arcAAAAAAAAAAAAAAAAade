@@ -34,8 +34,10 @@ class IGame {
 
         virtual ~IGame() = default;
 
-        /// Initialize the game
+        /// \brief Initialize the game
         virtual void init(std::vector<std::shared_ptr<IEntity>> &entities) = 0;
+        /// \brief Closes the library
+        virtual void close(std::vector<std::shared_ptr<IEntity>> &entities) = 0;
 
         /// \brief Update the game's status
         /// \param entities The entity vector of the game

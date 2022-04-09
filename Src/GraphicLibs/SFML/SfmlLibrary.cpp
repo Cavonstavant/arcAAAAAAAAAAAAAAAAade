@@ -9,14 +9,24 @@
 
 SfmlLibrary::SfmlLibrary()
 {
+}
+
+SfmlLibrary::~SfmlLibrary()
+{
+    _window.close();
+}
+
+void SfmlLibrary::init()
+{
     const std::string font = "../Resources/Font/ARCADE_N.TTF";
 
     _videoMode = sf::VideoMode(DEFAULT_WINDOW_WIDTH, DEFAULT_WINDOW_HEIGHT, 32);
     _font.loadFromFile(font);
     _window.create(_videoMode, "Window");
+    _window.setFramerateLimit(32);
 }
 
-SfmlLibrary::~SfmlLibrary()
+void SfmlLibrary::close()
 {
     _window.close();
 }
