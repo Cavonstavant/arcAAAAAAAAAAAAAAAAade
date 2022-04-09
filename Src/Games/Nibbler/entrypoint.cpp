@@ -3,9 +3,8 @@
 #include <iostream>
 #include <vector>
 
-namespace Arcade
-{
-    static IGame* GAME_INSTANCE = nullptr;
+namespace Arcade {
+    static IGame *GAME_INSTANCE = nullptr;
 
     extern "C" IGame *getGameInstance()
     {
@@ -23,4 +22,4 @@ namespace Arcade
         delete GAME_INSTANCE;
         std::cout << " lib unloaded" << std::endl;
     }
-}
+}// namespace Arcade

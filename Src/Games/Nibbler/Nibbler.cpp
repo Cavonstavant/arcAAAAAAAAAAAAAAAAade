@@ -7,9 +7,9 @@
 
 #include "Nibbler.hpp"
 #include "Event.hpp"
-#include <stack>
-#include <random>
 #include <ctime>
+#include <random>
+#include <stack>
 
 Nibbler::Nibbler()
 {
@@ -21,7 +21,7 @@ Nibbler::~Nibbler()
 
 void Nibbler::init(std::vector<std::shared_ptr<IEntity>> &entities)
 {
-    srand((unsigned)time(NULL));
+    srand((unsigned) time(NULL));
     _gameState = GameState::LOADED;
     _lastTailDir = IEntity::Direction::RIGHT;
     _lastTailPos = std::make_pair(0, 0);
@@ -146,7 +146,7 @@ void Nibbler::moveSnake()
         IEntity::Direction dirBuffer;
         _lastTailDir = _snake.back()->getDirection();
         _lastTailPos = _snake.back()->getPos();
-        for (auto &it : _snake) {
+        for (auto &it: _snake) {
             dirBuffer = it->getDirection();
             it->setPos(getNextPos(it->getPos(), dirBuffer));
             it->setDirection(dirPrev);
