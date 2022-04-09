@@ -67,13 +67,6 @@ class LibManager {
         ///\note Map of the libraries' handles represented like so {libPath, libHandle}
         std::map<std::string, void *> _libsHandle;
 
-        /// \brief Opens a shared library and returns a pointer to the handle
-        /// \param libPath Path to the library
-        /// \return A pointer to the handle
-        /// \note The handle is not closed by the destructor
-        /// \warning Not closing the handle will lead to <b>Undefined Behaviour</b>
-        /// \throw LibraryException if the library cannot be opened
-        void *openLib(const std::string& libPath);
 };
 
 

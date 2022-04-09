@@ -16,6 +16,7 @@ Core::Core(std::vector<std::string> libsPath)
     _libManager.addLibs(libsPath);
     _game = &_mainMenu;
     _graph = _libManager.openGraph(*libsPath.begin());
+    _graph->init();
     _mainMenu.start();
     _state = State::MAIN_MENU;
 }
@@ -43,8 +44,14 @@ void Core::update() {
     }
 }
 
+#include <iostream>
+
 void Core::draw() {
-    for (auto& entity : _entities) {
-        _graph->drawEntity(*entity, entity->getPos());
+    for (unsigned long i = 0; i < _entities.size(); i++) {
+        std::cout <<
+        _graph->drawEntity(*_entities[i], _entities[i]->getPos());
     }
+//    for (auto& entity : _entities) {
+//        _graph->drawEntity(reinterpret_cast<IEntity &>(entity), entity->getPos());
+//    }
 }
