@@ -60,19 +60,43 @@ void MainMenu::init(std::vector<std::shared_ptr<IEntity>> &entities)
     int y = 1;
     for (auto &&graphLib: _graphicalLibraries) {
         Button button(&changeGraphicalLibCallback, graphLib);
+        std::string libName = graphLib;
+        try {
+            libName = graphLib.substr(graphLib.find_last_of("/") + 1);
+            libName = libName.substr(libName.find_first_not_of("arcade_"));
+            libName = libName.substr(0, libName.find_last_of("."));
+        } catch (...) {}
+        TextEntity text(libName);
+
         button.setPos(std::make_pair(4, y));
+        text.setPos(std::make_pair(6, y));
+
         std::shared_ptr<Button> buttonPtr = std::make_shared<Button>(button);
+        std::shared_ptr<TextEntity> textPtr = std::make_shared<TextEntity>(text);
+
         entities.push_back(buttonPtr);
+        entities.push_back(textPtr);
+
         _buttons.push_back(buttonPtr);
+
         y += 2;
     }
     y = 1;
     for (auto &&gameLib: _gameLibraries) {
         Button button(&changeGameLibCallback, gameLib);
-        button.setPos(std::make_pair(6, y));
+        TextEntity text(gameLib);
+
+        button.setPos(std::make_pair(10, y));
+        text.setPos(std::make_pair(12, y));
+
         std::shared_ptr<Button> buttonPtr = std::make_shared<Button>(button);
+        std::shared_ptr<TextEntity> textPtr = std::make_shared<TextEntity>(text);
+
         entities.push_back(buttonPtr);
+        entities.push_back(textPtr);
+
         _buttons.push_back(buttonPtr);
+
         y += 2;
     }
 }
@@ -118,9 +142,39 @@ void MainMenu::start()
     _gameState = GameState::RUNNING;
 }
 
+// void MainMenu::getAllLibraries()
+// {
+//     const std::filesystem::path path{"./lib"};
+//     std::string libName;
+//     void *libNameFct;
+
+//     for (const auto &entry: std::filesystem::directory_iterator{path}) {
+//         // std::string libPath = std::filesystem::absolute(entry.path()).string();
+//         // std::cout << libPath << std::endl;
+//         try {
+//             try {
+//                 IGame *game = _libManager.openGame(entry.path());
+//                 _gameLibraries.push_back(game->getLibraryName());
+//             } catch (...) {
+//                 try {
+//                     IGraph *graph = _libManager.openGraph(entry.path());
+//                     _graphicalLibraries.push_back(graph->getLibraryName());
+//                 } catch (...) {
+//                     LibraryEX(entry.path().string() + " is invalid", Logger::LOW);
+//                 }
+//             }
+//         } catch (std::exception &e) {
+//             throw LibraryEX(e.what(), Logger::MEDIUM);
+//         }
+//     }
+//     ArcadeEX(std::string("successfully load all libraries in: ") + std::filesystem::absolute(path).string(), Logger::INFO);
+// }
+
 void MainMenu::getAllLibraries()
 {
     const std::filesystem::path path{"./lib/"};
+    std::string libName;
+    void *libNameFct;
 
     for (const auto &entry: std::filesystem::directory_iterator{path}) {
         try {
@@ -128,9 +182,17 @@ void MainMenu::getAllLibraries()
             if (!handle)
                 continue;
             if (dlsym(handle, "getGraphInstance")) {
-                _graphicalLibraries.push_back(entry.path());
+                libNameFct = dlsym(handle, "getLibraryName");
+                if (!libNameFct)
+                    _graphicalLibraries.push_back(entry.path());
+                else
+                    _graphicalLibraries.push_back(reinterpret_cast<std::string(*)()>(libNameFct)());
             } else if (dlsym(handle, "getGameInstance")) {
-                _gameLibraries.push_back(entry.path());
+                libNameFct = dlsym(handle, "getLibraryName");
+                if (!libNameFct)
+                    _gameLibraries.push_back(entry.path());
+                else
+                    _gameLibraries.push_back(reinterpret_cast<std::string(*)()>(libNameFct)());
             }
 //            dlclose(handle);
         } catch (std::exception &e) {
