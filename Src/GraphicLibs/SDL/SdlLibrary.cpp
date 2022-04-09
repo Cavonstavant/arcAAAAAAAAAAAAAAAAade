@@ -50,7 +50,11 @@ bool SdlLibrary::displayWindow()
 
 bool SdlLibrary::drawCircle(std::pair<int, int> pos, int radius, Color color)
 {
-    return true;
+    std::pair<int, int> topLeftCorner = pos;
+
+    topLeftCorner.first -= (radius / 2);
+    topLeftCorner.second -= (radius / 2);
+    return drawRect(topLeftCorner, radius * 2, radius * 2, color);
 }
 
 bool SdlLibrary::drawRect(std::pair<int, int> pos, int width, int height, Color color)
