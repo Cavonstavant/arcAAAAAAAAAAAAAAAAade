@@ -7,7 +7,7 @@
 
 #include "Object.hpp"
 
-Object::Object(AEntity::ENTITY_TYPE type)
+Object::Object(AEntity::ENTITY_TYPE type) : AEntity()
 {
     _type = type;
     if (_type == POINT || _type == BONUS) {
@@ -22,6 +22,11 @@ Object::Object(AEntity::ENTITY_TYPE type)
         _color.B = 255;
         _color.A = 255;
         _termTexture = std::make_pair('X', std::make_pair(Color::TermColors::BLUE, Color::TermColors::WHITE));
+    } else {
+        _color.R = 255;
+        _color.G = 255;
+        _color.B = 255;
+        _color.A = 255;
     }
 }
 

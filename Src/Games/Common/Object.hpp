@@ -38,7 +38,7 @@ class Object : public AEntity {
         [[nodiscard]] ENTITY_TYPE getType() const;
 
     private:
-        Color _color;
+        Color _color{};
         ENTITY_TYPE _type;
 };
 
