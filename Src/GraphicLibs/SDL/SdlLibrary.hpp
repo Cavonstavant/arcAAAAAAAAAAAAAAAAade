@@ -44,7 +44,7 @@ class SdlLibrary : public IGraph {
                       const std::string &content) override;
         bool drawEntity(IEntity &entity,
                         std::pair<int, int> pos) override;
-        Arcade::Evt getInput() const override;
+        Arcade::Evt getInput() override;
         std::string getLibraryName() const override;
 
     private:

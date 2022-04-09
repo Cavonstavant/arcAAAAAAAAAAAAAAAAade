@@ -106,7 +106,7 @@ std::string SdlLibrary::getLibraryName() const
     return "SDL";
 }
 
-Arcade::Evt SdlLibrary::getInput() const
+Arcade::Evt SdlLibrary::getInput()
 {
     SDL_Event event;
     Arcade::Evt evt{};
