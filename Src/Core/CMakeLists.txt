@@ -35,6 +35,7 @@ set(SRC
         ${COMMON_GAME_SOURCES}
         ${CORE_EVENT_SRC}/CoreEvents.cpp
 )
+    ${CORE_EVENT_SRC}/CoreEvents.cpp
 
 set_target_properties(${TARGET_LIBNAME} PROPERTIES LINKER_LANGUAGE CXX)
 

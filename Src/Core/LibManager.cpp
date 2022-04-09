@@ -105,7 +105,12 @@ void LibManager::addLibs(std::vector<std::string> &libPaths) {
 
 void LibManager::closeAllLibs()
 {
-
+    for (auto &lib: _libsHandle) {
+        if (lib.second != nullptr) {
+            dlclose(lib.second);
+            lib.second = nullptr;
+        }
+    }
 }
 
 IGame *LibManager::cycleGameLibs(std::string &currentLib, bool direction)
