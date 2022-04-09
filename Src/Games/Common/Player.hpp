@@ -32,7 +32,7 @@ class Player : public AEntity {
 
     protected:
     private:
-        bool _boosted;
+        bool _boosted{};
 };
 
 
