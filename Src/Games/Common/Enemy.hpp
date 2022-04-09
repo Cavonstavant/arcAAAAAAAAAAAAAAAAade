@@ -8,8 +8,9 @@
 #ifndef ARCADE_ENEMY_HPP
 #define ARCADE_ENEMY_HPP
 
-#include "../../CommonInterface/include/Color.hpp"
+#include "Color.hpp"
 #include "AEntity.hpp"
+#include "Player.hpp"
 
 /// \brief Enemy class inherits from AEntity
 class Enemy : public AEntity {
@@ -20,7 +21,7 @@ class Enemy : public AEntity {
         /// Default _enrage = false
         Enemy();
         /// \brief Destructor override AEntity
-        ~Enemy();
+        ~Enemy() = default;
 
         /// \brief Getters & setters
         /// Set the speed of the Enemy Entity
@@ -51,6 +52,8 @@ class Enemy : public AEntity {
         Color _color{};
         /// \brief Defines if the Enemy Entity is enrage or not
         bool _enrage;
+        /// \brief Represents the current direction of enemy with enum type (UP, DOWN, RIGHT,LEFT)
+        Player::Direction _direction;
 };
 
 #endif//ARCADE_ENEMY_HPP

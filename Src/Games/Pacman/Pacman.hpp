@@ -11,6 +11,7 @@
 #include "IGame.hpp"
 #include "Event.hpp"
 #include "../Common/Player.hpp"
+#include "../Common/Enemy.hpp"
 #include <chrono>
 
 #define MAP_HEIGHT 21
@@ -43,6 +44,7 @@ class Pacman : public IGame {
 
         /// \brief used to know the state of the game
         [[nodiscard]] GameState getState() const override;
+        void setState(GameState state);
 
         /// \brief Just turn the gameState to RUNNING
         void start() override;
@@ -55,11 +57,16 @@ class Pacman : public IGame {
         /// \brief IEntity Player representing the pacman Player
         std::shared_ptr<Player> _player;
 
+        std::shared_ptr<Enemy> _enemies[3];
+
         /// \brief _map is represented by the map in Resources, we load it here to use it easier
         std::string _map[MAP_HEIGHT];
 
         /// \brief simple clock to anime and move entities
         std::chrono::high_resolution_clock::time_point _clock;
+
+        /// \brief simple IAClock to anime and move Enemies Entities
+        std::chrono::high_resolution_clock::time_point _iaClock;
 
         /// \brief The score of the game the player is currently playing
         unsigned int _score{};
@@ -67,7 +74,7 @@ class Pacman : public IGame {
         Arcade::Evt _currentInput{};
 
         /// \brief The actual direction of the player
-        Player::Direction _direction;
+        Enemy::Direction _direction;
 
         /// \brief Represents as enum GameState the actual gameState
         GameState _gameState;
@@ -99,7 +106,7 @@ class Pacman : public IGame {
         static bool moveLeft(Arcade::Evt input);
 
         /// \brief Used to know if the _player is able to go on the direction passed as parameter
-        /// \return False if there is a Wall
+        /// \return False if there is no wall
         /// \param Player::Direction direction to know where the _player want to move
         bool isThereAWallOnDirection(Player::Direction direction);
 
@@ -108,7 +115,15 @@ class Pacman : public IGame {
         /// \return std::shared_ptr<IEntity>> represents the different type of Entity just created
         void createEntity(char symbol, std::vector<std::shared_ptr<IEntity>> &entities, int i, int j);
 
-};
+        /// \brief Used to update the Enemy position according to his direction
+        /// \param The index from 0 to 3 of the enemy to update
+        void updateEnemyPos(int index);
 
+        /// \brief Used to know if the enemy is next to a wall according to the direction as parameter
+        /// \param Player::Direction direction to know where the enemy want to move
+        /// \param Index of the enemy from 0 to 3
+        /// \return False if there is no wall
+        bool nextToTheWall(Player::Direction direction, int index);
+};
 
 #endif //ARCADE_PACMAN_HPP
