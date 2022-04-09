@@ -97,6 +97,13 @@ class Core {
 
         /// \brief Update the graphical interface by passing all the entities to the graph
         void draw();
+
+        /// \brief Process the events retrieved inside the graphical display
+        /// \note This function is called after the graphical display has been updated
+        /// \note Events can be retrieved by using <b>getLastEvent()</b>, <b>popEvent()</b> and <b>setEvent(Arcade::Evt)</b>
+        /// \warning Not setting up any graphical display before polling any event will result in an <b>undefined behavior</b>
+        void processEvents();
+
     private:
         /// \brief The library manager containing all the libraries
         LibManager _libManager;

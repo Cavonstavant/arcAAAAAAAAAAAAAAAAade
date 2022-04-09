@@ -18,7 +18,7 @@ int main(int ac, char **av)
     std::vector<std::shared_ptr<IEntity>> menuEntities;
 
     if (ac != 2) {
-        std::cout << "Usage: ./arcade <graphical_lib> [<garphical_lib>, ...]" << std::endl;
+        std::cout << "Usage: ./arcade <graphical_lib>" << std::endl;
         return (84);
     }
     libsPath.reserve(ac - 1);
@@ -29,6 +29,7 @@ int main(int ac, char **av)
         while (core.getState() != Core::State::EXIT) {
             core.update();
             core.draw();
+            core.processEvents();
         }
     } catch (...) {
         return (84);

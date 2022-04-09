@@ -59,7 +59,51 @@ void Core::draw() {
         }
     }
     _graph->displayWindow();
-//    for (auto& entity : _entities) {
-//        _graph->drawEntity(reinterpret_cast<IEntity &>(entity), entity->getPos());
-//    }
+}
+
+void Core::processEvents()
+{
+    if (_event.top().evt_type == Arcade::Evt::WIN_CLOSE) {
+        if (_state == State::MAIN_MENU) {
+            _mainMenu.close(_entities);
+            _state = State::EXIT;
+            _event.pop();
+            return;
+        }
+        if (_state == State::GAME) {
+            _game->setState(IGame::GameState::STOPPED);
+            _state = State::MAIN_MENU;
+            _game = &_mainMenu;
+            _event.pop();
+            return;
+        }
+    }
+    if (_game->getState() == IGame::GameState::STOPPED) {
+        _state = State::MAIN_MENU;
+        _game = &_mainMenu;
+        _event.pop();
+        return;
+    }
+    if (_event.top().evt_type == Arcade::Evt::KEY) {
+        if (_event.top().key.key == 'r' || _event.top().key.key == 'R') {
+            try {
+                std::string currentGameName = _game->getLibraryName();
+                _libManager.closeLib(currentGameName);
+                _game = _libManager.openGame(currentGameName);
+            } catch (...) {
+                _event.pop();
+                return;
+            }
+        }
+        if (_event.top().key.key == 'm' || _event.top().key.key == 'M') {
+            _state = State::MAIN_MENU;
+            _game = &_mainMenu;
+            _event.pop();
+            return;
+        }
+        if (_event.top().key.key == 'k' || _event.top().key.key == 'K') {
+            _event.pop();
+            return;
+        }
+    }
 }

@@ -59,11 +59,34 @@ class LibManager {
         /// \throw LibraryException if the library cannot be closed
         void closeLib(const std::string& libPath);
 
-        /// \brief Loads all of the libraries present inside the lib.conf file inside the _libsHandle span
-        /// \note This method will read inside the lib.conf file at root and will seek for lib_path = (default value: "./lib")
+        /// \brief Closes all shared libraries
+        void closeAllLibs();
+
+        /// \brief Cycle through available game libraries in the library manager and return the next/previous one
+        /// (ordered by the order of the libPaths vector)
+        /// \param currentLib The current game library path
+        /// \param direction The direction to cycle through the game libraries. <b>true</b> for next, <b>false</b> for previous
+        /// \return A pointer to a game new instance
+        /// \note This closes the previous library and opens the next one
+        /// \throw LibraryException if the library cannot be opened
+        IGame *cycleGameLibs(std::string &currentLib, bool direction = true);
+
+        /// \brief Cycle through available graph libraries in the library manager and return the next/previous one
+        /// (ordered by the order of the libPaths vector)
+        /// \param currentLib The current graph library path
+        /// \param direction The direction to cycle through the graph libraries. <b>true</b> for next, <b>false</b> for previous
+        /// \return A pointer to a game new instance
+        /// \note This closes the previous library and opens the next one
+        /// \throw LibraryException if the library cannot be opened
+        IGraph *cycleGraphLibs(std::string &currentLib, bool direction = true);
 
     private:
-
+        /// \brief private enum to represent the type of the library type
+        /// Used internally
+        enum class libType{
+            GAME,
+            GRAPH
+        };
         ///\note Map of the libraries' handles represented like so {libPath, libHandle}
         std::map<std::string, void *> _libsHandle;
 

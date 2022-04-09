@@ -102,3 +102,18 @@ void LibManager::addLibs(std::vector<std::string> &libPaths) {
         _libsHandle.emplace(std::filesystem::absolute(std::filesystem::path(libPath)), nullptr);
     });
 }
+
+void LibManager::closeAllLibs()
+{
+
+}
+
+IGame *LibManager::cycleGameLibs(std::string &currentLib, bool direction)
+{
+    return nullptr;
+}
+
+IGraph *LibManager::cycleGraphLibs(std::string &currentLib, bool direction)
+{
+    return nullptr;
+}

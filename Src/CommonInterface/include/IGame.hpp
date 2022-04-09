@@ -47,7 +47,11 @@ class IGame {
 
         /// \brief Get the game's status
         /// \return the game's status
-        virtual GameState getState() const = 0;
+        [[nodiscard]] virtual GameState getState() const = 0;
+
+        /// \brief Set the game's status
+        /// \param state The new game's status
+        virtual void setState(GameState state) = 0;
 
         /// \brief Get the game's name
         virtual std::string getLibraryName() const = 0;
