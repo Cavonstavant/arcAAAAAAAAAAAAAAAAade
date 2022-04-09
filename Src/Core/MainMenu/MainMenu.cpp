@@ -158,7 +158,21 @@ void MainMenu::manageClickEvent(Arcade::Evt &event, std::vector<std::shared_ptr<
 
 void MainMenu::manageKeyEvent(Arcade::Evt &event, std::vector<std::shared_ptr<IEntity>> &entities)
 {
-    throw NotImplementedEX("Key event not implemented", Logger::HIGH);
+    char c = 'a';
+    for (auto &graph: _graphicalLibraries) {
+        if (c >= 'z')
+            break;
+        if (event.key.key == c)
+            throw SwitchLibEX("Graph;" + graph, Logger::NONE);
+        c++;
+    }
+    for (auto &game: _gameLibraries) {
+        if (c >= 'z')
+            break;
+        if (event.key.key == c)
+            throw SwitchLibEX("Game;" + game, Logger::NONE);
+        c++;
+    }
 }
 
 void MainMenu::manageEvent(Arcade::Evt &event, std::vector<std::shared_ptr<IEntity>> &entities)
