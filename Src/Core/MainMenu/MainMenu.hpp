@@ -9,6 +9,7 @@
 
 #include "Button.hpp"
 #include "IGame.hpp"
+#include "../LibManager.hpp"
 #include <vector>
 
 /// \file MainMenu.hpp
@@ -39,7 +40,8 @@ class MainMenu : public IGame {
 
     protected:
     private:
-
+        /// \brief The Library Manager
+        LibManager _libManager;
         /// \brief Vector of all the buttons
         std::vector<std::shared_ptr<Button>> _buttons;
         /// \brief The game's state
