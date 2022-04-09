@@ -116,6 +116,9 @@ Arcade::Evt SdlLibrary::getInput() const
     Arcade::Evt evt{};
     Arcade::Evt::KeyEvt keyEvt{};
 
+    if (!SDL_PollEvent(&event))
+        return evt;
+
     if (event.type == SDL_QUIT)
         evt.evt_type = Arcade::Evt::WIN_CLOSE;
     if (event.type == SDL_KEYDOWN) {
@@ -260,4 +263,5 @@ Arcade::Evt SdlLibrary::getInput() const
                 break;
         }
     }
+    return evt;
 }
