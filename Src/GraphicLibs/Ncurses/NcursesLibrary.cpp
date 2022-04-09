@@ -18,17 +18,18 @@ NcursesLibrary::~NcursesLibrary()
 void NcursesLibrary::init()
 {
     initscr();
+    curs_set(0);
 }
 
 void NcursesLibrary::close()
 {
+    curs_set(1);
     endwin();
 }
 
 bool NcursesLibrary::clearWindow()
 {
     clear();
-    refresh();
     return true;
 }
 

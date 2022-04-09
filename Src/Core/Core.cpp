@@ -10,17 +10,23 @@
 #include "Core.hpp"
 #include "TextEntity.hpp"
 #include "Button.hpp"
+#include "Player.hpp"
+#include "Object.hpp"
+#include "Enemy.hpp"
 #include <iostream>
 
 Core::Core(std::vector<std::string> libsPath)
 {
     _mainMenu.init(_entities);
     _libManager.addLibs(libsPath);
-    _game = &_mainMenu;
+   _game = &_mainMenu;
+    // _game = _libManager.openGame("lib/arcade_nibbler.so");
+    // _game->init(_entities);
     _graph = _libManager.openGraph(*libsPath.begin());
     _graph->init();
-    _mainMenu.start();
-    _state = State::MAIN_MENU;
+    _game->start();
+    /*_mainMenu.start();*/
+    // _state = State::GAME;
 }
 
 void Core::addEntity(const std::shared_ptr<IEntity>& entity)
@@ -43,7 +49,8 @@ void Core::update() {
         _mainMenu.update(_entities, _event);
     } else if (_state == State::GAME) {
         _game->update(_entities, _event);
-    }
+    } else
+        _game->close(_entities);
 }
 
 void Core::draw() {
@@ -56,6 +63,19 @@ void Core::draw() {
         if (dynamic_cast<Button*>(_entities[i].get())) {
             auto *button = dynamic_cast<Button*>(_entities[i].get());
             _graph->drawRect(button->getPos(), button->getSize().first, button->getSize().second, Color(255, 255, 255, 255));
+        }
+        if (dynamic_cast<Object*>(_entities[i].get())) {
+            auto *wall = dynamic_cast<Object*>(_entities[i].get());
+            if (wall->getType() == IEntity::POINT)
+                _graph->drawCircle(wall->getPos(), 3, Color(255, 255, 0, 255));
+            else if (wall->getType() == IEntity::WALL)
+                _graph->drawRect(wall->getPos(), wall->getSize().first, wall->getSize().second, Color(0, 0, 255, 255));
+            else
+                _graph->drawCircle(wall->getPos(), 8, Color(255, 255, 0, 255));
+        }
+        if (dynamic_cast<Player*>(_entities[i].get())) {
+            auto *player = dynamic_cast<Player*>(_entities[i].get());
+            _graph->drawEntity(*_entities[i], player->getPos());
         }
     }
     _graph->displayWindow();

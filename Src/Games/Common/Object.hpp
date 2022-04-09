@@ -14,14 +14,10 @@
 /// \brief Object class represents all the Entity not moving. Like walls, fruits.
 class Object : public AEntity {
     public:
-        enum TYPE_E {
-            WALL,
-            FRUITS,
-            POINTS,
-            ENUM_SIZE
-        };
-        /// \brief Constructor
-        Object();
+        /// \brief Deleted constructor, you must inform the type of object
+        Object() = delete;
+        /// \brief Constructor with the type of the object you want to create
+        explicit Object(ENTITY_TYPE type);
         /// \brief Destructor
         ~Object();
 
@@ -29,21 +25,21 @@ class Object : public AEntity {
         void setIsMoving(bool isMoving) override;
         /// \brief Get the Entity boolean _isMoving
         /// \return false in any case;
-        bool getIsMoving() const override;
+        [[nodiscard]] bool getIsMoving() const override;
         /// \brief Set the Color of the Enemy Entity
         void setColor(Color color);
         /// \brief Get the color of the Enemy Entity
         /// \return IColor color
-        Color getColor() const;
+        [[nodiscard]] Color getColor() const;
         /// \brief Set the _type
-        void setType(const TYPE_E type);
+        void setType(ENTITY_TYPE type);
         /// \brief Get the _type
         /// \return The TYPE_E _type of the Object
-        TYPE_E getType() const;
+        [[nodiscard]] ENTITY_TYPE getType() const;
 
     private:
-        Color _color;
-        TYPE_E _type;
+        Color _color{};
+        ENTITY_TYPE _type;
 };
 
 

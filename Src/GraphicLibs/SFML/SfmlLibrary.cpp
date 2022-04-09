@@ -44,8 +44,8 @@ bool SfmlLibrary::drawCircle(std::pair<int, int> pos, int radius, Color color)
     circleColor.g = color.G;
     circleColor.b = color.B;
     circleColor.a = color.A;
-    circleShape.setPosition(GRID_INT(pos.first), GRID_INT(pos.second));
-    circleShape.setRadius((float) GRID_INT(radius));
+    circleShape.setPosition(GRID_INT(pos.second), GRID_INT(pos.first));
+    circleShape.setRadius((float)radius);
     circleShape.setFillColor(circleColor);
     _window.draw(circleShape);
     return true;
@@ -60,7 +60,8 @@ bool SfmlLibrary::drawRect(std::pair<int, int> pos, int width, int height, Color
     rectangleColor.g = color.G;
     rectangleColor.b = color.B;
     rectangleColor.a = color.A;
-    rectangleShape.setPosition(GRID_INT(pos.first), GRID_INT(pos.second));
+    rectangleShape.setOrigin(10, 10);
+    rectangleShape.setPosition(GRID_INT(pos.second), GRID_INT(pos.first));
     rectangleShape.setSize(sf::Vector2f(GRID_INT(width), GRID_INT(height)));
     rectangleShape.setFillColor(rectangleColor);
     _window.draw(rectangleShape);
@@ -72,7 +73,7 @@ bool SfmlLibrary::drawText(std::pair<int, int> pos, const std::string &content)
     sf::Text text;
 
     text.setFont(_font);
-    text.setPosition(GRID_INT(pos.first), GRID_INT(pos.second));
+    text.setPosition(GRID_INT(pos.second), GRID_INT(pos.first));
     text.setString(content);
 
     _window.draw(text);
@@ -87,13 +88,14 @@ bool SfmlLibrary::drawEntity(IEntity &entity, std::pair<int, int> pos)
 
     if (texture.loadFromFile(entity.getTexturePath())) {
         sprite.setTexture(texture);
-        sprite.setPosition(GRID_INT(pos.first), GRID_INT(pos.second));
+        sprite.setScale(0.7, 0.7);
+        sprite.setPosition(GRID_INT(pos.second), GRID_INT(pos.first));
         _window.draw(sprite);
         return true;
     } else {
-        defaultTextureRect.setSize(sf::Vector2f{(float) (int) entity.getSize().first, (float) (int) entity.getSize().second});
+        defaultTextureRect.setSize(sf::Vector2f{(float)entity.getSize().first, (float)entity.getSize().second});
         defaultTextureRect.setFillColor(sf::Color::Yellow);
-        defaultTextureRect.setPosition(GRID_INT(entity.getPos().first), GRID_INT(entity.getPos().second));
+        defaultTextureRect.setPosition(GRID_INT(entity.getPos().second), GRID_INT(entity.getPos().first));
         _window.draw(defaultTextureRect);
     }
     return false;

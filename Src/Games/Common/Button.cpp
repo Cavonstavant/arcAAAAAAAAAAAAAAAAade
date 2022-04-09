@@ -7,7 +7,7 @@
 
 #include "Button.hpp"
 
-Button::Button(std::function<void()> callbackParam, std::string actionString)
+Button::Button(std::function<void()> callbackParam, std::string actionString) : Object(ENTITY_TYPE::BUTTON)
 {
     callback = callbackParam;
     _actionString = actionString;
