@@ -21,7 +21,7 @@ set_target_properties(${TARGET_LIBNAME} PROPERTIES LINKER_LANGUAGE CXX)
 
 add_library(${TARGET_LIB_NAME} ${SRC})
 
-target_link_libraries(${TARGET_LIB_NAME} PRIVATE ArcadeCommonInterface ${CMAKE_DL_LIBS} graphic_lib_common)
+target_link_libraries(${TARGET_LIB_NAME} PRIVATE ArcadeCommonInterface dl graphic_lib_common)
 
 target_include_directories(${TARGET_LIB_NAME} PRIVATE ${SRC_ROOT})
 

@@ -12,7 +12,6 @@
 
 Core::Core(std::vector<std::string> libsPath)
 {
-    _entities.reserve(100);
     _mainMenu.init(_entities);
     _libManager.addLibs(libsPath);
     _game = &_mainMenu;

@@ -30,8 +30,7 @@ int main(int ac, char **av)
             core.update();
             core.draw();
         }
-    } catch (std::exception &e) {
-        ArcadeEX(e.what(), Logger::HIGH);
+    } catch (...) {
         return (84);
     }
     return (0);

@@ -120,22 +120,18 @@ void MainMenu::start()
 
 void MainMenu::getAllLibraries()
 {
-    const std::filesystem::path path{"lib"};
-    void *graphLibEntrypoint;
-    void *gameLibEntrypoint;
-    for (const auto &entry: std::filesystem::directory_iterator{std::filesystem::absolute(path)}) {
+    const std::filesystem::path path{"./lib/"};
+
+    for (const auto &entry: std::filesystem::directory_iterator{path}) {
         try {
-            void *handle = dlopen(entry.path().c_str(), RTLD_GLOBAL);
+            void *handle = dlopen(entry.path().c_str(), RTLD_LAZY);
             if (!handle)
                 continue;
-            if ((graphLibEntrypoint = dlsym(handle, "getGraphInstance"))) {
+            if (dlsym(handle, "getGraphInstance")) {
                 _graphicalLibraries.push_back(entry.path());
-            }
-            if ((gameLibEntrypoint = dlsym(handle, "getGameInstance"))) {
+            } else if (dlsym(handle, "getGameInstance")) {
                 _gameLibraries.push_back(entry.path());
             }
-            if (gameLibEntrypoint == nullptr && graphLibEntrypoint == nullptr)
-                throw FileCorruptedEX(entry.path().string() + " library corrupted", Logger::NONE);
             dlclose(handle);
         } catch (std::exception &e) {
             throw LibraryEX(e.what(), Logger::MEDIUM);
