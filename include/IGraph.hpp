@@ -9,10 +9,12 @@
 #define ARCADE_IDISPLAY_HPP
 
 #include "Color.hpp"
-#include "Grid.hpp"
 #include "Event.hpp"
+#include "Grid.hpp"
 #include "IEntity.hpp"
+#include <memory>
 #include <string>
+#include <vector>
 
 /// \brief represents a generic graphical library
 class IGraph {
@@ -20,6 +22,11 @@ class IGraph {
     public:
         /// \brief Destructor
         virtual ~IGraph() = default;
+
+        /// \brief Initialize the library
+        virtual void init() = 0;
+        /// \brief Closes the library
+        virtual void close() = 0;
 
         /// \brief Create a circle, set position, set radius, then display it on the
         /// window. After all destroy the Circle \param pos the std::pair<int,int>
