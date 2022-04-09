@@ -7,11 +7,11 @@
 
 #pragma once
 
-#include "AEntity.hpp"
+#include "Object.hpp"
 #include <functional>
 
 /// \class Score class
-class Score : public AEntity {
+class Score : public Object {
     public:
         /// \brief Constructor
         Score();
