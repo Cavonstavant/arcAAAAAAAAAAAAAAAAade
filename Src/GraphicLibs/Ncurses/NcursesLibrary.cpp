@@ -9,10 +9,18 @@
 
 NcursesLibrary::NcursesLibrary()
 {
-    initscr();
 }
 
 NcursesLibrary::~NcursesLibrary()
+{
+}
+
+void NcursesLibrary::init()
+{
+    initscr();
+}
+
+void NcursesLibrary::close()
 {
     endwin();
 }

@@ -77,6 +77,12 @@ void MainMenu::init(std::vector<std::shared_ptr<IEntity>> &entities)
     }
 }
 
+void MainMenu::close(std::vector<std::shared_ptr<IEntity>> &entities)
+{
+    while (!entities.empty())
+        entities.pop_back();
+}
+
 void MainMenu::manageClickEvent(Arcade::Evt &event, std::vector<std::shared_ptr<IEntity>> &entities)
 {
     for (auto &button: _buttons) {

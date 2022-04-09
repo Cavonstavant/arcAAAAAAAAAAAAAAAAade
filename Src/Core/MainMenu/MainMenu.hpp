@@ -22,6 +22,8 @@ class MainMenu : public IGame {
 
         /// \brief Initialize the menu
         void init(std::vector<std::shared_ptr<IEntity>> &entities) override;
+        /// \brief Close the menu
+        void close(std::vector<std::shared_ptr<IEntity>> &entities) override;
 
         /// \brief Update the game's entities
         /// \param entities The entity vector of the game

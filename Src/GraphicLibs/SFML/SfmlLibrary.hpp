@@ -18,13 +18,17 @@
 class SfmlLibrary : public IGraph {
     public:
         /// \brief Default Constructor
-        /// Creating & Initializing the window
-        /// Loading the member _font for Resources. ARCADE_N.TTF as default font
-        SfmlLibrary();
+        SfmlLibrary() = default;
 
         /// \brief Default destructor
-        /// Closing window previously opened in constructor
-        ~SfmlLibrary();
+        ~SfmlLibrary() = default;
+
+        /// \brief Initialize the library
+        /// Creating & Initializing the window
+        /// Loading the member _font for Resources. ARCADE_N.TTF as default font
+        void init() override;
+        /// \brief Closes the library
+        void close() override;
 
         bool clearWindow() override;
         bool displayWindow() override;
@@ -49,9 +53,6 @@ class SfmlLibrary : public IGraph {
 
         /// \brief Default font for every sf::Text in the SfmlLibrary
         sf::Font _font;
-
-        /// \brief Graphic library name
-        std::string _name;
 };
 
 
