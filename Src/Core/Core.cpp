@@ -8,6 +8,8 @@
 #include <vector>
 #include <string>
 #include "Core.hpp"
+#include "TextEntity.hpp"
+#include "Button.hpp"
 #include <iostream>
 
 Core::Core(std::vector<std::string> libsPath)
@@ -44,13 +46,19 @@ void Core::update() {
     }
 }
 
-#include <iostream>
-
 void Core::draw() {
+    _graph->clearWindow();
     for (unsigned long i = 0; i < _entities.size(); i++) {
-        std::cout <<
-        _graph->drawEntity(*_entities[i], _entities[i]->getPos());
+        if (dynamic_cast<TextEntity*>(_entities[i].get())) {
+            auto *text = dynamic_cast<TextEntity*>(_entities[i].get());
+            _graph->drawText(text->getPos(), text->getText());
+        }
+        if (dynamic_cast<Button*>(_entities[i].get())) {
+            auto *button = dynamic_cast<Button*>(_entities[i].get());
+            _graph->drawRect(button->getPos(), button->getSize().first, button->getSize().second, Color(255, 255, 255, 255));
+        }
     }
+    _graph->displayWindow();
 //    for (auto& entity : _entities) {
 //        _graph->drawEntity(reinterpret_cast<IEntity &>(entity), entity->getPos());
 //    }

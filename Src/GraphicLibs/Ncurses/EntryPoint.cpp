@@ -13,12 +13,10 @@ namespace Arcade {
     [[gnu::constructor]] void libConstruct()
     {
         GRAPH_INSTANCE = new NcursesLibrary();
-        std::cout << "NcursesLibrary loaded" << std::endl;
     }
 
     [[gnu::destructor]] void libDestruct()
     {
         delete GRAPH_INSTANCE;
-        std::cout << "NcursesLibrary unloaded" << std::endl;
     }
 }// namespace Arcade

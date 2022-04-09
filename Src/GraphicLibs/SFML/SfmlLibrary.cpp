@@ -6,13 +6,14 @@
 */
 
 #include "SfmlLibrary.hpp"
+#include <filesystem>
 
 void SfmlLibrary::init()
 {
-    const std::string font = "../Resources/Font/ARCADE_N.TTF";
+    const std::string font = "Src/GraphicLibs/Resources/Font/ARCADE_N.TTF";
 
     _videoMode = sf::VideoMode(DEFAULT_WINDOW_WIDTH, DEFAULT_WINDOW_HEIGHT, 32);
-    _font.loadFromFile(font);
+    _font.loadFromFile(std::filesystem::absolute(std::filesystem::path(font)).string());
     _window.create(_videoMode, "Window");
     _window.setFramerateLimit(32);
 }
@@ -44,7 +45,7 @@ bool SfmlLibrary::drawCircle(std::pair<int, int> pos, int radius, Color color)
     circleColor.b = color.B;
     circleColor.a = color.A;
     circleShape.setPosition(GRID_INT(pos.first), GRID_INT(pos.second));
-    circleShape.setRadius((float) radius);
+    circleShape.setRadius((float) GRID_INT(radius));
     circleShape.setFillColor(circleColor);
     _window.draw(circleShape);
     return true;
@@ -60,7 +61,7 @@ bool SfmlLibrary::drawRect(std::pair<int, int> pos, int width, int height, Color
     rectangleColor.b = color.B;
     rectangleColor.a = color.A;
     rectangleShape.setPosition(GRID_INT(pos.first), GRID_INT(pos.second));
-    rectangleShape.setSize(sf::Vector2f(width, height));
+    rectangleShape.setSize(sf::Vector2f(GRID_INT(width), GRID_INT(height)));
     rectangleShape.setFillColor(rectangleColor);
     _window.draw(rectangleShape);
     return true;

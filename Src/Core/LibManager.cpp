@@ -10,6 +10,7 @@
 #include <fstream>
 #include <string>
 #include <filesystem>
+#include <functional>
 
 extern "C" {
 #include <dlfcn.h>
@@ -19,16 +20,14 @@ LibManager::LibManager()
 {
 }
 
-LibManager::LibManager(const std::vector<std::string>& libPaths)
-{
-    addLibs(const_cast<std::vector<std::string>&>(libPaths));
+LibManager::LibManager(const std::vector<std::string>& libPaths) {
+    addLibs(const_cast<std::vector<std::string> &>(libPaths));
     for (auto &libPath: libPaths) {
         _libsHandle.emplace(libPath, nullptr);
     }
 }
 
-IGame *LibManager::openGame(const std::string& libPath)
-{
+IGame *LibManager::openGame(const std::string &libPath) {
     if (_libsHandle.find(std::filesystem::absolute(std::filesystem::path(libPath))) == _libsHandle.end())
         throw ArcadeEX(libPath + " not found", Logger::HIGH);
     void *libHandle = dlopen(libPath.c_str(), RTLD_NOW);
@@ -37,14 +36,14 @@ IGame *LibManager::openGame(const std::string& libPath)
     if (_libsHandle[libPath])
         throw ArcadeEX(libPath + "is already opened", Logger::NONE);
     _libsHandle[libPath] = libHandle;
-    IGame *gameInstance = reinterpret_cast<IGame *>(dlsym(libHandle, "getGameInstance"));
-    if (gameInstance == nullptr)
+    void *(*getInstance)();
+    getInstance = (void *(*)()) dlsym(libHandle, "getGameInstance");
+    if (getInstance == nullptr)
         throw LibraryEX(dlerror(), Logger::CRITICAL);
-    return (gameInstance);
+    return ((IGame *)getInstance());
 }
 
-IGraph *LibManager::openGraph(const std::string& libPath)
-{
+IGraph *LibManager::openGraph(const std::string &libPath) {
     if (_libsHandle.find(std::filesystem::absolute(std::filesystem::path(libPath))) == _libsHandle.end())
         throw ArcadeEX(libPath + " not found", Logger::HIGH);
     void *libHandle = dlopen(libPath.c_str(), RTLD_NOW);
@@ -53,10 +52,11 @@ IGraph *LibManager::openGraph(const std::string& libPath)
     if (_libsHandle[libPath])
         throw ArcadeEX(libPath + "is already opened", Logger::HIGH);
     _libsHandle[libPath] = libHandle;
-    IGraph *graphInstance = reinterpret_cast<IGraph*>(dlsym(libHandle, "getGraphInstance"));
-    if (graphInstance == nullptr)
+    void *(*getInstance)();
+    getInstance = (void *(*)()) dlsym(libHandle, "getGraphInstance");
+    if (getInstance == nullptr)
         throw LibraryEX(dlerror(), Logger::CRITICAL);
-    return (graphInstance);
+    return ((IGraph*)getInstance());
 }
 
 void LibManager::closeLib(const std::string& libPath)
