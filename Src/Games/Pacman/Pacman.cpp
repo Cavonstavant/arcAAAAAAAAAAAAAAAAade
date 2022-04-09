@@ -95,6 +95,11 @@ void Pacman::update(std::vector<std::shared_ptr<IEntity>> &entities, std::stack<
             _clock = std::chrono::high_resolution_clock::now();
         }
     }
+    for (const auto& i : entities) {
+        if (i->getPos() == _player->getPos() && i->getType() == IEntity::POINT) {
+            _score += 100;
+        }
+    }
 }
 
 std::string Pacman::getLibraryName() const
