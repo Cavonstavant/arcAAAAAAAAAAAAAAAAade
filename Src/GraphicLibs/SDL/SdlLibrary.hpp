@@ -21,12 +21,12 @@ class SdlLibrary : public IGraph {
         /// SDL_INIT_EVERYTHING | Initialize every feature like video, audio, events...
         /// Creating & Initializing Window & Renderer
         /// Loading member _font (ARCADE_N.TTF as default font)
-        SdlLibrary();
+        SdlLibrary() = default;
 
         /// \brief Default Destructor
         /// Destroying Window & Renderer
         /// SDL_Quit() to close every features previously opened in the constructor
-        ~SdlLibrary() noexcept override;
+        ~SdlLibrary() override = default;
 
         /// \brief Initialize the library
         void init() override;
