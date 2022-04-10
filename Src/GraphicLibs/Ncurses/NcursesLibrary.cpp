@@ -28,15 +28,12 @@ void NcursesLibrary::init()
     if (has_colors())
         start_color();
     nodelay(stdscr, TRUE);
-    // cbreak();
     _colors = 0;
 }
 
 void NcursesLibrary::close()
 {
-
     clear();
-    // curs_set(1);
     endwin();
 }
 
@@ -87,15 +84,6 @@ bool NcursesLibrary::drawRect(std::pair<int, int> pos, int width, int height, Co
         }
     }
 
-    // if (width == 1 && height == 1)
-    //     mvaddch(pos.first, pos.second, 'X');
-    // else
-    //     for (int i = pos.first; i < pos.first + height; i++) {
-    //         for (int j = pos.second; j < pos.second + width; j++) {
-    //             mvaddch(i, j, '.');
-    //         }
-    //     }
-
     attroff(COLOR_PAIR(_colors));
     _colors++;
     return true;
@@ -140,7 +128,6 @@ Arcade::Evt NcursesLibrary::getInput()
 {
     Arcade::Evt evt{};
     Arcade::Evt::KeyEvt keyEvt{};
-    // timeout(0);
     int key = getch();
 
     if (key == ERR) {
@@ -150,164 +137,198 @@ Arcade::Evt NcursesLibrary::getInput()
 
     switch (key) {
         case KEY_LEFT:
+            evt.evt_type = Arcade::Evt::KEY;
             keyEvt.key = 'Q';
             evt.key = keyEvt;
             break;
         case KEY_RIGHT:
+            evt.evt_type = Arcade::Evt::KEY;
             keyEvt.key = 'D';
             evt.key = keyEvt;
             break;
         case KEY_DOWN:
+            evt.evt_type = Arcade::Evt::KEY;
             keyEvt.key = 'S';
             evt.key = keyEvt;
             break;
         case KEY_UP:
+            evt.evt_type = Arcade::Evt::KEY;
             keyEvt.key = 'Z';
             evt.key = keyEvt;
             break;
         case ' ':
+            evt.evt_type = Arcade::Evt::KEY;
             keyEvt.key = ' ';
             evt.key = keyEvt;
             break;
         case KEY_BACKSPACE:
+            evt.evt_type = Arcade::Evt::KEY;
             keyEvt.key = '\b';
             evt.key = keyEvt;
             break;
         case KEY_ENTER:
+            evt.evt_type = Arcade::Evt::KEY;
             keyEvt.key = '\n';
             evt.key = keyEvt;
             break;
         case 27:
+            evt.evt_type = Arcade::Evt::KEY;
             keyEvt.key = 27;
             evt.key = keyEvt;
             break;
         case 'A':
         case 'a':
+            evt.evt_type = Arcade::Evt::KEY;
             keyEvt.key = 'a';
             evt.key = keyEvt;
             break;
         case 'B':
         case 'b':
+            evt.evt_type = Arcade::Evt::KEY;
             keyEvt.key = 'b';
             evt.key = keyEvt;
             break;
         case 'C':
         case 'c':
+            evt.evt_type = Arcade::Evt::KEY;
             keyEvt.key = 'c';
             evt.key = keyEvt;
             break;
         case 'D':
         case 'd':
+            evt.evt_type = Arcade::Evt::KEY;
             keyEvt.key = 'd';
             evt.key = keyEvt;
             break;
         case 'E':
         case 'e':
+            evt.evt_type = Arcade::Evt::KEY;
             keyEvt.key = 'e';
             evt.key = keyEvt;
             break;
         case 'F':
         case 'f':
+            evt.evt_type = Arcade::Evt::KEY;
             keyEvt.key = 'f';
             evt.key = keyEvt;
             break;
         case 'G':
         case 'g':
+            evt.evt_type = Arcade::Evt::KEY;
             keyEvt.key = 'g';
             evt.key = keyEvt;
             break;
         case 'H':
         case 'h':
+            evt.evt_type = Arcade::Evt::KEY;
             keyEvt.key = 'h';
             evt.key = keyEvt;
             break;
         case 'I':
         case 'i':
+            evt.evt_type = Arcade::Evt::KEY;
             keyEvt.key = 'i';
             evt.key = keyEvt;
             break;
         case 'J':
         case 'j':
+            evt.evt_type = Arcade::Evt::KEY;
             keyEvt.key = 'j';
             evt.key = keyEvt;
             break;
         case 'K':
         case 'k':
+            evt.evt_type = Arcade::Evt::KEY;
             keyEvt.key = 'k';
             evt.key = keyEvt;
             break;
         case 'L':
         case 'l':
+            evt.evt_type = Arcade::Evt::KEY;
             keyEvt.key = 'l';
             evt.key = keyEvt;
             break;
         case 'M':
         case 'm':
+            evt.evt_type = Arcade::Evt::KEY;
             keyEvt.key = 'm';
             evt.key = keyEvt;
             break;
         case 'N':
         case 'n':
+            evt.evt_type = Arcade::Evt::KEY;
             keyEvt.key = 'N';
             evt.key = keyEvt;
             break;
         case 'O':
         case 'o':
+            evt.evt_type = Arcade::Evt::KEY;
             keyEvt.key = 'o';
             evt.key = keyEvt;
             break;
         case 'P':
         case 'p':
+            evt.evt_type = Arcade::Evt::KEY;
             keyEvt.key = 'p';
             evt.key = keyEvt;
             break;
         case 'Q':
         case 'q':
+            evt.evt_type = Arcade::Evt::KEY;
             keyEvt.key = 'q';
             evt.key = keyEvt;
             break;
         case 'R':
         case 'r':
+            evt.evt_type = Arcade::Evt::KEY;
             keyEvt.key = 'r';
             evt.key = keyEvt;
             break;
         case 'S':
         case 's':
+            evt.evt_type = Arcade::Evt::KEY;
             keyEvt.key = 's';
             evt.key = keyEvt;
             break;
         case 'T':
         case 't':
+            evt.evt_type = Arcade::Evt::KEY;
             keyEvt.key = 't';
             evt.key = keyEvt;
             break;
         case 'U':
         case 'u':
+            evt.evt_type = Arcade::Evt::KEY;
             keyEvt.key = 'u';
             evt.key = keyEvt;
             break;
         case 'V':
         case 'v':
+            evt.evt_type = Arcade::Evt::KEY;
             keyEvt.key = 'v';
             evt.key = keyEvt;
             break;
         case 'W':
         case 'w':
+            evt.evt_type = Arcade::Evt::KEY;
             keyEvt.key = 'w';
             evt.key = keyEvt;
             break;
         case 'X':
         case 'x':
+            evt.evt_type = Arcade::Evt::KEY;
             keyEvt.key = 'x';
             evt.key = keyEvt;
             break;
         case 'Y':
         case 'y':
+            evt.evt_type = Arcade::Evt::KEY;
             keyEvt.key = 'y';
             evt.key = keyEvt;
             break;
         case 'Z':
         case 'z':
+            evt.evt_type = Arcade::Evt::KEY;
             keyEvt.key = 'z';
             evt.key = keyEvt;
             break;
