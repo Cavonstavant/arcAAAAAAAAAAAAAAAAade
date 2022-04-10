@@ -29,16 +29,23 @@ int main(int ac, char **av)
         while (core.getState() != Core::State::EXIT) {
             try {
                 core.update();
-            } catch (SwitchLibException &e) {
+            } catch (ArcadeException &e) {
                 std::string libInfo = std::string(e.what());
                 std::string libPath = libInfo.substr(libInfo.find(';') + 1);
                 if (libInfo.substr(0, libInfo.find(';')) == "Graph")
-                    core.setGraph(libPath);
+                    core.setFutureGraph(libPath);
                 else
                     core.setGame(libPath);
+                core.popEvent();
             }
-            core.draw();
-            core.processEvents();
+            if (core.getGame() == nullptr && core.getGraph() == nullptr && !core.getFutureGraph().empty() && !core.getFutureGame().empty()) {
+                core.setGame(core.getFutureGame());
+                core.setGraph(core.getFutureGraph());
+            }
+            if (core.getGraph() != nullptr || core.getGame() != nullptr)
+                core.draw();
+            if (core.getGraph() != nullptr || core.getGame() != nullptr)
+                core.processEvents();
         }
     } catch (...) {
         return (84);
