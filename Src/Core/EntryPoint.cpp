@@ -22,8 +22,11 @@ int main(int ac, char **av)
         return (84);
     }
     libsPath.reserve(ac - 1);
-    for (int i = 1; i < ac; i++)
-        libsPath.emplace_back(av[i]);
+    for (int i = 1; i < ac; i++) {
+        while (av[i][0] == '.' || av[i][0] == '/')
+            av[i]++;
+        libsPath.emplace_back(std::filesystem::absolute(std::filesystem::path(av[i])));
+    }
     try {
         Core core(libsPath);
         while (core.getState() != Core::State::EXIT) {
@@ -36,6 +39,7 @@ int main(int ac, char **av)
                     core.setFutureGraph(libPath);
                 else
                     core.setGame(libPath);
+                std::cout << libInfo.substr(0, libInfo.find(';')) << " " << libPath << std::endl;
                 core.popEvent();
             }
             if (core.getGame() == nullptr && core.getGraph() == nullptr && !core.getFutureGraph().empty() && !core.getFutureGame().empty()) {
