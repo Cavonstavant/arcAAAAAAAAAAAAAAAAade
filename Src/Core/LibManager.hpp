@@ -25,7 +25,7 @@ class LibManager {
 
         /// \brief Creating a library manager with multiple paths to libraries
         /// \param libPaths Paths to the game libraries
-        LibManager(const std::vector<std::string>& libPaths);
+        LibManager(const std::vector<std::string> &libPaths);
 
         /// \brief A library manager should be able to be copied
         LibManager(const LibManager &) = delete;
@@ -45,19 +45,19 @@ class LibManager {
         /// \brief Opens a shared library, calls it's lib entrypoint and returns a pointer to a game instance
         /// \param libPath Path to the library
         /// \return A pointer to a game instance
-        IGame *openGame(const std::string& libPath);
+        IGame *openGame(const std::string &libPath);
 
         /// \brief Opens a shared library, calls it's lib entrypoint and returns a pointer to a graph instance
         /// \param libPath Path to the library
         /// \return A pointer to a graph instance
-        IGraph *openGraph(const std::string& libPath);
+        IGraph *openGraph(const std::string &libPath);
 
         /// \brief Closes a shared library
         /// \param libPath Path to the library
         /// \warning Not using this method after opening a library will lead to <b>Undefined Behaviour</b>
         /// \warning Using this method before opening a library will lead to <b>Undefined Behaviour</b>
         /// \throw LibraryException if the library cannot be closed
-        void closeLib(const std::string& libPath);
+        void closeLib(const std::string &libPath);
 
         /// \brief Closes all shared libraries
         void closeAllLibs();
@@ -83,13 +83,12 @@ class LibManager {
     private:
         /// \brief private enum to represent the type of the library type
         /// Used internally
-        enum class libType{
+        enum class libType {
             GAME,
             GRAPH
         };
         ///\note Map of the libraries' handles represented like so {libPath, libHandle}
         std::map<std::string, void *> _libsHandle;
-
 };
 
 

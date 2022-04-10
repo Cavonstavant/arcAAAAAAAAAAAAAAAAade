@@ -9,12 +9,12 @@
 #include "Event.hpp"
 #include <ctime>
 #include <filesystem>
+#include <iostream>
 #include <random>
 #include <stack>
-#include <iostream>
 
-Nibbler::Nibbler() : _gameState(IGame::GameState::STOPPED), _lastTailDir(IEntity::Direction::RIGHT) ,_lastTailPos(std::make_pair(0, 0)), _score(0)
-    {}
+Nibbler::Nibbler() : _gameState(IGame::GameState::STOPPED), _lastTailDir(IEntity::Direction::RIGHT), _lastTailPos(std::make_pair(0, 0)), _score(0)
+{}
 
 Nibbler::~Nibbler() = default;
 
@@ -28,7 +28,7 @@ void Nibbler::init(std::vector<std::shared_ptr<IEntity>> &entities)
     _lastTailPos = std::make_pair(0, 0);
     _speed = 1;
     Object fruit = createNewFruit(rand() % (GRID_WIDTH - (GRID_WIDTH / 4)), rand() % (GRID_HEIGHT));
-    fruit.setPos(std::make_pair((rand() % ((GRID_WIDTH - (GRID_WIDTH / 4)) - 2)) + 1, (rand() % ((GRID_HEIGHT) - 2)) + 1));
+    fruit.setPos(std::make_pair((rand() % ((GRID_WIDTH - (GRID_WIDTH / 4)) - 2)) + 1, (rand() % ((GRID_HEIGHT) -2)) + 1));
     fruit.setTermTexture('*', Color::TermColors::YELLOW, Color::TermColors::BLACK);
     _fruit = std::make_shared<Object>(fruit);
 
@@ -231,7 +231,7 @@ bool Nibbler::snakeIsOnAFruit(std::vector<std::shared_ptr<IEntity>> &entities)
         _snake.push_back(tailPtr);
         entities.push_back(tailPtr);
         _score += 2;
-        _fruit->setPos(std::make_pair((rand() % ((GRID_WIDTH - (GRID_WIDTH / 4)) - 2)) + 1, (rand() % ((GRID_HEIGHT) - 2)) + 1));
+        _fruit->setPos(std::make_pair((rand() % ((GRID_WIDTH - (GRID_WIDTH / 4)) - 2)) + 1, (rand() % ((GRID_HEIGHT) -2)) + 1));
         return true;
     }
     return false;
