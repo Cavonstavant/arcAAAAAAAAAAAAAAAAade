@@ -16,6 +16,14 @@ extern "C" {
 #include <dlfcn.h>
 }
 
+LibManager::LibManager(const std::vector<std::string> &libPaths)
+{
+    addLibs(const_cast<std::vector<std::string> &>(libPaths));
+    for (auto &libPath: libPaths) {
+        _libsHandle.emplace(libPath, nullptr);
+    }
+}
+
 IGame *LibManager::openGame(const std::string &libPath)
 {
     if (_libsHandle.find(std::filesystem::absolute(std::filesystem::path(libPath))) == _libsHandle.end())

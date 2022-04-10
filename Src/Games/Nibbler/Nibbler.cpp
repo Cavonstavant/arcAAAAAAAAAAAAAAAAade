@@ -9,10 +9,11 @@
 #include "Event.hpp"
 #include <ctime>
 #include <filesystem>
+#include <iostream>
 #include <random>
 #include <stack>
 
-Nibbler::Nibbler() : _gameState(IGame::GameState::STOPPED), _lastTailDir(IEntity::Direction::RIGHT), _lastTailPos(std::make_pair(0, 0)), _score(std::make_shared<Score>())
+Nibbler::Nibbler() : _gameState(IGame::GameState::STOPPED), _lastTailDir(IEntity::Direction::RIGHT), _lastTailPos(std::make_pair(0, 0)), _score(0)
 {}
 
 Nibbler::~Nibbler() = default;
@@ -22,10 +23,13 @@ void Nibbler::init(std::vector<std::shared_ptr<IEntity>> &entities)
 {
     srand((unsigned) time(NULL));
     _gameState = GameState::LOADED;
+    _lastDir = IEntity::Direction::RIGHT;
     _lastTailDir = IEntity::Direction::RIGHT;
     _lastTailPos = std::make_pair(0, 0);
     _speed = 1;
-    Object fruit = createNewFruit(rand() % GRID_WIDTH, rand() % GRID_HEIGHT);
+    Object fruit = createNewFruit(rand() % (GRID_WIDTH - (GRID_WIDTH / 4)), rand() % (GRID_HEIGHT));
+    fruit.setPos(std::make_pair((rand() % ((GRID_WIDTH - (GRID_WIDTH / 4)) - 2)) + 1, (rand() % ((GRID_HEIGHT) -2)) + 1));
+    fruit.setTermTexture('*', Color::TermColors::YELLOW, Color::TermColors::BLACK);
     _fruit = std::make_shared<Object>(fruit);
 
     initEntities(entities);
@@ -60,19 +64,38 @@ Player Nibbler::createNewTail(int x, int y)
 
 Object Nibbler::createNewFruit(int x, int y)
 {
-    Object fruit(Object::ENTITY_TYPE::POINT);
+    Object fruit(Object::ENTITY_TYPE::BONUS);
 
     fruit.setPos(std::make_pair(x, y));
     fruit.setTermTexture('*', Color::TermColors::YELLOW, Color::TermColors::BLACK);
     return fruit;
 }
 
+Object Nibbler::createNewWall(int x, int y)
+{
+    Object wall(Object::ENTITY_TYPE::WALL);
+
+    wall.setPos(std::make_pair(x, y));
+    wall.setTermTexture(' ', Color::TermColors::BLACK, Color::TermColors::WHITE);
+    return wall;
+}
+
 void Nibbler::initEntities(std::vector<std::shared_ptr<IEntity>> &entities)
 {
-    Player head = createNewHead(GRID_WIDTH / 2 + 1, GRID_HEIGHT / 2);
+    for (int i = 0; i < GRID_HEIGHT; i++) {
+        for (int j = 0; j < (GRID_WIDTH - (GRID_WIDTH / 4)); j++) {
+            if (i == 0 || i == GRID_HEIGHT - 1 || j == 0 || j == (GRID_WIDTH - (GRID_WIDTH / 4)) - 1) {
+                std::shared_ptr<Object> wall = std::make_shared<Object>(createNewWall(j, i));
+                entities.push_back(wall);
+                _walls.push_back(wall);
+            }
+        }
+    }
+
+    Player head = createNewHead(GRID_WIDTH / 2, GRID_HEIGHT / 2 + 1);
     Player tail1 = createNewTail(GRID_WIDTH / 2, GRID_HEIGHT / 2);
-    Player tail2 = createNewTail(GRID_WIDTH / 2 - 1, GRID_HEIGHT / 2);
-    Player tail3 = createNewTail(GRID_WIDTH / 2 - 2, GRID_HEIGHT / 2);
+    Player tail2 = createNewTail(GRID_WIDTH / 2, GRID_HEIGHT / 2 - 1);
+    Player tail3 = createNewTail(GRID_WIDTH / 2, GRID_HEIGHT / 2 - 2);
 
     std::shared_ptr<Player> headPtr = std::make_shared<Player>(head);
     std::shared_ptr<Player> tail1Ptr = std::make_shared<Player>(tail1);
@@ -89,7 +112,6 @@ void Nibbler::initEntities(std::vector<std::shared_ptr<IEntity>> &entities)
     entities.push_back(tail1Ptr);
     entities.push_back(tail2Ptr);
     entities.push_back(tail3Ptr);
-    entities.push_back(_score);
     entities.push_back(_fruit);
 }
 
@@ -107,19 +129,19 @@ void Nibbler::manageKeyEvent(Arcade::Evt &event, std::vector<std::shared_ptr<IEn
 {
     switch (event.key.key) {
         case 'Z':
-            if (_snake.front()->getDirection() != IEntity::Direction::DOWN)
+            if (_lastDir != IEntity::Direction::DOWN)
                 _snake.front()->setDirection(IEntity::Direction::UP);
             break;
         case 'Q':
-            if (_snake.front()->getDirection() != IEntity::Direction::RIGHT)
+            if (_lastDir != IEntity::Direction::RIGHT)
                 _snake.front()->setDirection(IEntity::Direction::LEFT);
             break;
         case 'S':
-            if (_snake.front()->getDirection() != IEntity::Direction::UP)
+            if (_lastDir != IEntity::Direction::UP)
                 _snake.front()->setDirection(IEntity::Direction::DOWN);
             break;
         case 'D':
-            if (_snake.front()->getDirection() != IEntity::Direction::LEFT)
+            if (_lastDir != IEntity::Direction::LEFT)
                 _snake.front()->setDirection(IEntity::Direction::RIGHT);
             break;
     }
@@ -143,21 +165,24 @@ void Nibbler::update(std::vector<std::shared_ptr<IEntity>> &entities, std::stack
         snakeIsOnAFruit(entities);
     }
 
+    if (snakeIsDeadCollision())
+        _gameState = GameState::STOPPED;
+
     if (_snake.size() == GRID_HEIGHT * GRID_WIDTH)
         nextLevel(entities);
 }
 
-static std::pair<int, int> getNextPos(std::pair<int, int> pos, int dir)
+std::pair<int, int> Nibbler::getNextPos(std::pair<int, int> pos, IEntity::Direction dir)
 {
     switch (dir) {
         case IEntity::Direction::UP:
-            return std::make_pair(pos.first, pos.second - 1);
-        case IEntity::Direction::DOWN:
-            return std::make_pair(pos.first, pos.second + 1);
-        case IEntity::Direction::LEFT:
             return std::make_pair(pos.first - 1, pos.second);
-        case IEntity::Direction::RIGHT:
+        case IEntity::Direction::DOWN:
             return std::make_pair(pos.first + 1, pos.second);
+        case IEntity::Direction::LEFT:
+            return std::make_pair(pos.first, pos.second - 1);
+        case IEntity::Direction::RIGHT:
+            return std::make_pair(pos.first, pos.second + 1);
         default:
             return pos;
     }
@@ -165,30 +190,33 @@ static std::pair<int, int> getNextPos(std::pair<int, int> pos, int dir)
 
 void Nibbler::moveSnake()
 {
-    if (getClockTimeMS() * _speed > 500) {
+    if (getClockTimeMS() * _speed > 200) {
         resetClock();
         IEntity::Direction dirPrev = _snake.front()->getDirection();
         IEntity::Direction dirBuffer;
         _lastTailDir = _snake.back()->getDirection();
         _lastTailPos = _snake.back()->getPos();
+        _lastDir = _snake.front()->getDirection();
         for (auto &it: _snake) {
             dirBuffer = it->getDirection();
             it->setPos(getNextPos(it->getPos(), dirBuffer));
             it->setDirection(dirPrev);
             dirPrev = dirBuffer;
-            if (it->getPos().first < 0 || it->getPos().first >= GRID_WIDTH || it->getPos().second < 0 || it->getPos().second >= GRID_HEIGHT) {
-                _gameState = GameState::STOPPED;
-            } else if (snakeIsOnItself()) {
+            if (it->getPos().first < 0 || it->getPos().first > GRID_WIDTH || it->getPos().second < 0 || it->getPos().second > GRID_HEIGHT) {
                 _gameState = GameState::STOPPED;
             }
         }
     }
 }
 
-bool Nibbler::snakeIsOnItself()
+bool Nibbler::snakeIsDeadCollision()
 {
     for (auto &it: _snake) {
         if (it != _snake.front() && it->getPos() == _snake.front()->getPos())
+            return true;
+    }
+    for (auto &it: _walls) {
+        if (_snake.front()->getPos() == it->getPos())
             return true;
     }
     return false;
@@ -197,14 +225,13 @@ bool Nibbler::snakeIsOnItself()
 bool Nibbler::snakeIsOnAFruit(std::vector<std::shared_ptr<IEntity>> &entities)
 {
     if (_snake.front()->getPos() == _fruit->getPos()) {
-        Player tail;
-        tail.setPos(_lastTailPos);
+        Player tail = createNewTail(_lastTailPos.first, _lastTailPos.second);
         tail.setDirection(_lastTailDir);
         std::shared_ptr<Player> tailPtr = std::make_shared<Player>(tail);
         _snake.push_back(tailPtr);
         entities.push_back(tailPtr);
-        _fruit->setPos(std::make_pair(rand() % GRID_WIDTH, rand() % GRID_HEIGHT));
-        _score->setScore(_score->getScore() + 100);
+        _score += 2;
+        _fruit->setPos(std::make_pair((rand() % ((GRID_WIDTH - (GRID_WIDTH / 4)) - 2)) + 1, (rand() % ((GRID_HEIGHT) -2)) + 1));
         return true;
     }
     return false;
@@ -239,7 +266,12 @@ void Nibbler::setState(GameState state)
     _gameState = state;
 }
 
-std::shared_ptr<IEntity> Nibbler::getScore()
+int Nibbler::getScore() const
 {
     return _score;
+}
+
+bool Nibbler::getIsGameOver()
+{
+    return _gameState == GameState::STOPPED;
 }

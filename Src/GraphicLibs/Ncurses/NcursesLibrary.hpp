@@ -43,6 +43,7 @@ class NcursesLibrary : public IGraph {
         Arcade::Evt getInput();
 
     private:
+        int _colors;
 };
 
 #endif//ARCADE_NCURSESLIBRARY_HPP
