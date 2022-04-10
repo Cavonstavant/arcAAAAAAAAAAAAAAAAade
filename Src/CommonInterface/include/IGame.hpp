@@ -54,6 +54,13 @@ class IGame {
 
         /// \brief starts the game
         virtual void start() = 0;
+
+        /// \brief Getter for _isGameOver
+        /// \return Boolean _isGameOver
+        virtual bool getIsGameOver() = 0;
+
+        /// \brief Getter for score of the current Game
+        virtual int getScore() const = 0;
 };
 
 #endif// ARCADE_IGAME_HPP
