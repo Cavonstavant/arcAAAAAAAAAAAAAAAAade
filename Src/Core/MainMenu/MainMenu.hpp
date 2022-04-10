@@ -12,7 +12,7 @@
 #include "IGame.hpp"
 #include <vector>
 
-/// \file MainMenu.hpp
+/// \file Src/Core/MainMenu/MainMenu.hpp
 /// \brief MainMenu class
 class MainMenu : public IGame {
     public:
@@ -21,9 +21,11 @@ class MainMenu : public IGame {
         /// \brief Destructor
         ~MainMenu() override;
 
-        /// \brief Initialize the menu
+        /// \brief Initialize the menu & initialize
+        /// \param std::vector<std::shared_ptr<IEntity>> &entities Vector of current entities
         void init(std::vector<std::shared_ptr<IEntity>> &entities) override;
-        /// \brief Close the menu
+        /// \brief Close the menu & clear vector of entities
+        /// \param std::vector<std::shared_ptr<IEntity>> &entities Vector of current entities
         void close(std::vector<std::shared_ptr<IEntity>> &entities) override;
 
         /// \brief Update the game's entities
@@ -36,7 +38,7 @@ class MainMenu : public IGame {
         {
             return _gameState;
         }
-
+        /// \brief Setter to _gameState member
         void setState(GameState state) override
         {
             _gameState = state;
@@ -46,7 +48,11 @@ class MainMenu : public IGame {
         void start() override;
         /// \brief Get the menu's name
         [[nodiscard]] std::string getLibraryName() const final;
+        /// \brief Getter used to know if the game is over
+        /// \return boolean
         bool getIsGameOver() override;
+        /// \brief Getter used to get the score of the player in the game
+        /// \return The score as an Integer
         int getScore() const override;
 
     protected:

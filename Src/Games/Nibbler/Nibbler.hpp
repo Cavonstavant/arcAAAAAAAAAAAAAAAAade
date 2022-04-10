@@ -15,7 +15,7 @@
 #include <list>
 #include <vector>
 
-/// \file Nibbler.hpp
+/// \file Src/Games/Nibbler/Nibbler.hpp
 /// \brief Nibbler class
 class Nibbler : public IGame {
     public:
@@ -25,8 +25,10 @@ class Nibbler : public IGame {
         ~Nibbler();
 
         /// \brief Initialize the game
+        /// \param std::vector<std::shared_ptr<IEntity>> &entities vector of current entities
         void init(std::vector<std::shared_ptr<IEntity>> &entities) override;
         /// \brief Closes the library
+        /// \param std::vector<std::shared_ptr<IEntity>> &entities vector of current entities
         void close(std::vector<std::shared_ptr<IEntity>> &entities) override;
         /// \brief Update the game's entities
         /// \param entities The entity vector of the game
@@ -89,6 +91,7 @@ class Nibbler : public IGame {
         /// \brief Manage the click events
         /// \param event The event stack of the game
         /// \param entities The entity vector of the game
+        /// \warning Not implemented at the moment
         void manageClickEvent(Arcade::Evt &event, std::vector<std::shared_ptr<IEntity>> &entities);
         /// \brief Manage the key events
         /// \param event The event stack of the game
