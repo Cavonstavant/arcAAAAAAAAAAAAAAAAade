@@ -39,14 +39,27 @@ void Pacman::createEntity(char symbol, std::vector<std::shared_ptr<IEntity>> &en
          obj->setPos(std::pair<int, int>{i, j});
          entities.push_back(obj);
     }
+    else if (symbol == '.') {
+        std::shared_ptr<Object> point = std::make_shared<Object>(AEntity::ENTITY_TYPE::POINT);
+        point->setPos(std::pair<int, int>{i, j});
+        entities.push_back(point);
+    }
+    else if (symbol == 'B') {
+        std::shared_ptr<Object> point = std::make_shared<Object>(AEntity::ENTITY_TYPE::BONUS);
+        point->setPos(std::pair<int, int>{i, j});
+        entities.push_back(point);
+    }
     else if (symbol == 'G') {
         Enemy enemy1;
         Enemy enemy2;
         Enemy enemy3;
 
         enemy1.setTexturePath(std::filesystem::absolute(std::filesystem::path(enemyTexturePath).string()));
+        enemy1.setTermTexture('G', Color::TermColors::RED, Color::TermColors::BLACK);
         enemy2.setTexturePath(std::filesystem::absolute(std::filesystem::path(enemyTexturePath).string()));
+        enemy2.setTermTexture('G', Color::TermColors::RED, Color::TermColors::BLACK);
         enemy3.setTexturePath(std::filesystem::absolute(std::filesystem::path(enemyTexturePath).string()));
+        enemy3.setTermTexture('G', Color::TermColors::RED, Color::TermColors::BLACK);
         _enemies[0] = std::make_shared<Enemy>(enemy1);
         _enemies[1] = std::make_shared<Enemy>(enemy2);
         _enemies[2] = std::make_shared<Enemy>(enemy3);
@@ -62,19 +75,10 @@ void Pacman::createEntity(char symbol, std::vector<std::shared_ptr<IEntity>> &en
         pacman.setIsMoving(false);
         pacman.setBoosted(false);
         pacman.setTexturePath(std::filesystem::absolute(std::filesystem::path(texturePath)).string());
+        pacman.setTermTexture('<', Color::TermColors::GREEN, Color::TermColors::BLACK);
         _player = std::make_shared<Player>(pacman);
         _player->setPos(std::pair<int, int>{i, j});
         entities.push_back(_player);
-    }
-    else if (symbol == '.') {
-        std::shared_ptr<Object> point = std::make_shared<Object>(AEntity::ENTITY_TYPE::POINT);
-        point->setPos(std::pair<int, int>{i, j});
-        entities.push_back(point);
-    }
-    else if (symbol == 'B') {
-        std::shared_ptr<Object> point = std::make_shared<Object>(AEntity::ENTITY_TYPE::BONUS);
-        point->setPos(std::pair<int, int>{i, j});
-        entities.push_back(point);
     }
 }
 
@@ -133,10 +137,13 @@ void Pacman::update(std::vector<std::shared_ptr<IEntity>> &entities, std::stack<
     if (std::chrono::duration_cast<std::chrono::seconds>(std::chrono::high_resolution_clock::now() - _bonusClock).count() > 10) {
         _enemies[0]->setEnrage(true);
         _enemies[0]->setTexturePath(std::filesystem::absolute(std::filesystem::path(EnemyTexturePath).string()));
+        _enemies[0]->setTermTexture('G', Color::TermColors::BLUE, Color::TermColors::BLACK);
         _enemies[1]->setEnrage(true);
         _enemies[1]->setTexturePath(std::filesystem::absolute(std::filesystem::path(EnemyTexturePath).string()));
+        _enemies[1]->setTermTexture('G', Color::TermColors::BLUE, Color::TermColors::BLACK);
         _enemies[2]->setEnrage(true);
         _enemies[2]->setTexturePath(std::filesystem::absolute(std::filesystem::path(EnemyTexturePath).string()));
+        _enemies[2]->setTermTexture('G', Color::TermColors::BLUE, Color::TermColors::BLACK);
         _bonusClock = std::chrono::high_resolution_clock::now();
     }
     if (std::chrono::duration_cast<std::chrono::seconds>(std::chrono::high_resolution_clock::now() - _iaClock).count() > 10 && !(_enemies[0]->getIsMoving())) {
@@ -180,10 +187,13 @@ void Pacman::update(std::vector<std::shared_ptr<IEntity>> &entities, std::stack<
         if (i->get()->getPos() == _player->getPos() && i->get()->getType() == IEntity::BONUS) {
             _enemies[0]->setEnrage(false);
             _enemies[0]->setTexturePath(std::filesystem::absolute(std::filesystem::path(sickEnemyTexturePath).string()));
+            _enemies[0]->setTermTexture('g', Color::TermColors::BLUE, Color::TermColors::BLACK);
             _enemies[1]->setEnrage(false);
             _enemies[1]->setTexturePath(std::filesystem::absolute(std::filesystem::path(sickEnemyTexturePath).string()));
+            _enemies[1]->setTermTexture('g', Color::TermColors::BLUE, Color::TermColors::BLACK);
             _enemies[2]->setEnrage(false);
             _enemies[2]->setTexturePath(std::filesystem::absolute(std::filesystem::path(sickEnemyTexturePath).string()));
+            _enemies[2]->setTermTexture('g', Color::TermColors::BLUE, Color::TermColors::BLACK);
             _bonusClock = std::chrono::high_resolution_clock::now();
             entities.erase(i);
         }

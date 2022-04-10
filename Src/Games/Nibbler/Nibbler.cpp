@@ -27,8 +27,9 @@ void Nibbler::init(std::vector<std::shared_ptr<IEntity>> &entities)
     _lastTailDir = IEntity::Direction::RIGHT;
     _lastTailPos = std::make_pair(0, 0);
     _speed = 1;
-    Object fruit = createNewFruit(rand() % GRID_WIDTH, rand() % GRID_HEIGHT);
-    fruit.setPos(std::make_pair((rand() % (GRID_WIDTH - 2)) + 1, (rand() % (GRID_HEIGHT - 2)) + 1));
+    Object fruit = createNewFruit(rand() % (GRID_WIDTH - (GRID_WIDTH / 4)), rand() % (GRID_HEIGHT));
+    fruit.setPos(std::make_pair((rand() % ((GRID_WIDTH - (GRID_WIDTH / 4)) - 2)) + 1, (rand() % ((GRID_HEIGHT) - 2)) + 1));
+    fruit.setTermTexture('*', Color::TermColors::YELLOW, Color::TermColors::BLACK);
     _fruit = std::make_shared<Object>(fruit);
 
     initEntities(entities);
@@ -82,8 +83,8 @@ Object Nibbler::createNewWall(int x, int y)
 void Nibbler::initEntities(std::vector<std::shared_ptr<IEntity>> &entities)
 {
     for (int i = 0; i < GRID_HEIGHT; i++) {
-        for (int j = 0; j < GRID_WIDTH; j++) {
-            if (i == 0 || i == GRID_HEIGHT - 1 || j == 0 || j == GRID_WIDTH - 1) {
+        for (int j = 0; j < (GRID_WIDTH - (GRID_WIDTH / 4)); j++) {
+            if (i == 0 || i == GRID_HEIGHT - 1 || j == 0 || j == (GRID_WIDTH - (GRID_WIDTH / 4)) - 1) {
                 std::shared_ptr<Object> wall = std::make_shared<Object>(createNewWall(j, i));
                 entities.push_back(wall);
                 _walls.push_back(wall);
@@ -230,7 +231,7 @@ bool Nibbler::snakeIsOnAFruit(std::vector<std::shared_ptr<IEntity>> &entities)
         _snake.push_back(tailPtr);
         entities.push_back(tailPtr);
         _score += 2;
-        _fruit->setPos(std::make_pair((rand() % (GRID_WIDTH - 2)) + 1, (rand() % (GRID_HEIGHT - 2)) + 1));
+        _fruit->setPos(std::make_pair((rand() % ((GRID_WIDTH - (GRID_WIDTH / 4)) - 2)) + 1, (rand() % ((GRID_HEIGHT) - 2)) + 1));
         return true;
     }
     return false;
