@@ -22,7 +22,6 @@ class Logger {
             SEVERITY_HIGH,
             SEVERITY_CRITICAL,
             SEVERITY_INFO,
-
             SEVERITY_ENUM_SIZE
         };
         /// \brief Deleted Constructor, this class must not be instantiated.
