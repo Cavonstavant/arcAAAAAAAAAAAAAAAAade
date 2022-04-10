@@ -47,24 +47,34 @@ void Core::removeEntity(const std::shared_ptr<IEntity> &entity)
 void Core::update()
 {
     Arcade::Evt evt{};
+    std::stack<Arcade::Evt> eventBuffer;
+    std::stack<Arcade::Evt> eventStack;
 
     if (_entities.empty())
         return;
     while ((evt = _graph->getInput()).evt_type != Arcade::Evt::NONE) {
-        if (evt.evt_type == Arcade::Evt::EvtType::WIN_CLOSE) {
+        if (evt.evt_type == Arcade::Evt::EvtType::WIN_CLOSE ||
+            (evt.evt_type == Arcade::Evt::EvtType::KEY &&
+             evt.key.key == '1' /* && _state == State::MAIN_MENU*/)) {
             _graph->close();
             _game->close(_entities);
             _state = State::EXIT;
             break;
-        } else if (evt.evt_type == Arcade::Evt::EvtType::KEY)
+        } else if (evt.evt_type == Arcade::Evt::EvtType::KEY) {
             _event.push(evt);
+            eventBuffer.push(evt);
+        }
+    }
+    while (!eventBuffer.empty()) {
+        eventStack.push(eventBuffer.top());
+        eventBuffer.pop();
     }
     if (_game->getIsGameOver())
         _state = State::MAIN_MENU;
     if (_state == State::MAIN_MENU) {
-        _mainMenu.update(_entities, _event);
+        _mainMenu.update(_entities, eventStack);
     } else if (_state == State::GAME) {
-        _game->update(_entities, _event);
+        _game->update(_entities, eventStack);
     } else
         _game->close(_entities);
 }
@@ -92,6 +102,8 @@ void Core::draw()
             else
                 _graph->drawCircle(wall->getPos(), 8, Color(255, 255, 0, 255));
         }
+    }
+    for (unsigned long i = 0; i < _entities.size(); i++) {
         if (dynamic_cast<Player *>(_entities[i].get())) {
             auto *player = dynamic_cast<Player *>(_entities[i].get());
             _graph->drawEntity(*_entities[i], player->getPos());
@@ -102,7 +114,7 @@ void Core::draw()
         }
     }
     if (_game->getScore() >= 0)
-        _graph->drawText(std::pair<int, int>{21, 1}, "Score : " + std::to_string(_game->getScore()) + "00", Color(255, 255, 255, 255));
+        _graph->drawText(std::pair<int, int>{24, 1}, "Score : " + std::to_string(_game->getScore()) + "00", Color(255, 255, 255, 255));
     _graph->displayWindow();
 }
 

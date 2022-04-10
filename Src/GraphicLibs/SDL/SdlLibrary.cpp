@@ -48,7 +48,7 @@ bool SdlLibrary::displayWindow()
 bool SdlLibrary::drawCircle(std::pair<int, int> pos, int radius, Color color)
 {
     int diameter = (radius * 2);
-    int x = radius - 1;
+    int x = radius;
     int y = 0;
     int tx = 1;
     int ty = 1;
@@ -75,6 +75,7 @@ bool SdlLibrary::drawCircle(std::pair<int, int> pos, int radius, Color color)
         }
         SDL_SetRenderDrawColor(_renderer, color.R, color.G, color.B, color.A);
     }
+    return true;
 }
 
 bool SdlLibrary::drawRect(std::pair<int, int> pos, int width, int height, Color color)
@@ -93,7 +94,7 @@ bool SdlLibrary::drawRect(std::pair<int, int> pos, int width, int height, Color 
 
 bool SdlLibrary::drawText(std::pair<int, int> pos, const std::string &content, Color color)
 {
-    SDL_Color textColor = {255, 255, 255, 255};
+    SDL_Color textColor = {(Uint8) color.R, (Uint8) color.G, (Uint8) color.B, (Uint8) color.A};
     SDL_Surface *textSurface = TTF_RenderText_Blended(_font, content.c_str(), textColor);
     SDL_Texture *textTexture = SDL_CreateTextureFromSurface(_renderer, textSurface);
     SDL_Rect rect;
@@ -113,8 +114,8 @@ bool SdlLibrary::drawEntity(IEntity &entity, std::pair<int, int> pos)
     SDL_Texture *texture = IMG_LoadTexture(_renderer, entity.getTexturePath().c_str());
     SDL_Rect rect;
 
-    rect.x = GRID_INT(entity.getPos().second);
-    rect.y = GRID_INT(entity.getPos().first);
+    rect.x = GRID_INT(pos.second);
+    rect.y = GRID_INT(pos.first);
     rect.w = GRID_INT(entity.getSize().first);
     rect.h = GRID_INT(entity.getSize().second);
 
@@ -311,6 +312,66 @@ Arcade::Evt SdlLibrary::getInput()
                     keyEvt.key = 'z';
                     evt.key = keyEvt;
                     evt.evt_type = Arcade::Evt::KEY;
+                    break;
+                case SDLK_KP_0:
+                case SDLK_0:
+                    keyEvt.key = '0';
+                    evt.key = keyEvt;
+                    evt.evt_type = Arcade::Evt::KEY;
+                    break;
+                case SDLK_KP_1:
+                case SDLK_1:
+                    keyEvt.key = '1';
+                    evt.key = keyEvt;
+                    evt.evt_type = Arcade::Evt::KEY;
+                    break;
+                case SDLK_KP_2:
+                case SDLK_2:
+                    evt.evt_type = Arcade::Evt::KEY;
+                    keyEvt.key = '2';
+                    evt.key = keyEvt;
+                    break;
+                case SDLK_KP_3:
+                case SDLK_3:
+                    evt.evt_type = Arcade::Evt::KEY;
+                    keyEvt.key = '3';
+                    evt.key = keyEvt;
+                    break;
+                case SDLK_KP_4:
+                case SDLK_4:
+                    evt.evt_type = Arcade::Evt::KEY;
+                    keyEvt.key = '4';
+                    evt.key = keyEvt;
+                    break;
+                case SDLK_KP_5:
+                case SDLK_5:
+                    evt.evt_type = Arcade::Evt::KEY;
+                    keyEvt.key = '5';
+                    evt.key = keyEvt;
+                    break;
+                case SDLK_KP_6:
+                case SDLK_6:
+                    evt.evt_type = Arcade::Evt::KEY;
+                    keyEvt.key = '6';
+                    evt.key = keyEvt;
+                    break;
+                case SDLK_KP_7:
+                case SDLK_7:
+                    evt.evt_type = Arcade::Evt::KEY;
+                    keyEvt.key = '7';
+                    evt.key = keyEvt;
+                    break;
+                case SDLK_KP_8:
+                case SDLK_8:
+                    evt.evt_type = Arcade::Evt::KEY;
+                    keyEvt.key = '8';
+                    evt.key = keyEvt;
+                    break;
+                case SDLK_KP_9:
+                case SDLK_9:
+                    evt.evt_type = Arcade::Evt::KEY;
+                    keyEvt.key = '9';
+                    evt.key = keyEvt;
                     break;
                 default:
                     break;

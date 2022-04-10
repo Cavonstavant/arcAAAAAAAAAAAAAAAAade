@@ -57,6 +57,7 @@ class Pacman : public IGame {
         /// \brief IEntity Player representing the pacman Player
         std::shared_ptr<Player> _player;
 
+        /// \brief Array of shared pointer enemies representing ghosts in pacman
         std::shared_ptr<Enemy> _enemies[3];
 
         /// \brief _map is represented by the map in Resources, we load it here to use it easier
@@ -71,8 +72,11 @@ class Pacman : public IGame {
         /// \brief Simple bonusClock to know the
         std::chrono::high_resolution_clock::time_point _bonusClock;
 
+        /// \brief represents the number of points on the map
+        int _points;
+
         /// \brief The score of the game the player is currently playing
-        unsigned int _score{};
+        int _score{};
 
         /// \brief Boolean to know if the player lose or not
         bool _isGameOver;
@@ -137,7 +141,7 @@ class Pacman : public IGame {
         bool getIsGameOver() override;
 
         /// \brief Getter for the score inGame
-        int getScore() const override;
+        [[nodiscard]] int getScore() const override;
 };
 
 #endif//ARCADE_PACMAN_HPP
