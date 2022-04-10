@@ -5,6 +5,8 @@
 ** Created by hjulien,
 */
 
+/// \file Src/GraphicLibs/SFML/SfmlLibrary.hpp
+
 #ifndef ARCADE_SFMLLIBRARY_HPP
 #define ARCADE_SFMLLIBRARY_HPP
 

@@ -5,6 +5,8 @@
 ** NcursesLibrary
 */
 
+/// \file Src/GraphicLibs/Ncurses/NcursesLibrary.hpp
+
 #ifndef ARCADE_NCURSESLIBRARY_HPP
 #define ARCADE_NCURSESLIBRARY_HPP
 

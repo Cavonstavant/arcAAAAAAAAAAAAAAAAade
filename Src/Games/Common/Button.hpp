@@ -5,12 +5,15 @@
 ** Button
 */
 
+/// \file Src/Games/Common/Button.hpp
+
 #pragma once
 
 #include "Object.hpp"
 #include <functional>
 
 /// \class Button class
+/// \brief Represents a button object
 class Button : public Object {
     public:
         /// \brief Constructor

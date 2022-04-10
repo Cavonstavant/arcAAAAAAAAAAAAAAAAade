@@ -5,6 +5,8 @@
 ** AEntity
 */
 
+/// \file Src/Games/Common/AEntity.hpp
+
 #ifndef AENTITY_HPP_
 #define AENTITY_HPP_
 

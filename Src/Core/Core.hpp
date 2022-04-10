@@ -5,10 +5,10 @@
 ** core
 */
 
+/// \file Src/Core/Core.hpp
+
 #ifndef ARCAAAAAAAAAAAAAAAAADE_CORE_HPP
 #define ARCAAAAAAAAAAAAAAAAADE_CORE_HPP
-
-/// \file Core.hpp
 
 #include "Event.hpp"
 #include "Exception.hpp"

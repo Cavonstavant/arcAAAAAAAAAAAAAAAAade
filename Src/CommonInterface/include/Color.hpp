@@ -5,6 +5,8 @@
 ** Created by hjulien,
 */
 
+/// \file Src/CommonInterface/include/Color.hpp
+
 #ifndef ARCADE_COLOR_HPP
 #define ARCADE_COLOR_HPP
 

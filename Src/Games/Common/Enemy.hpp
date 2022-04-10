@@ -5,6 +5,8 @@
 ** Created by hjulien,
 */
 
+/// \file Src/Game/Common/Enemy.hpp
+
 #ifndef ARCADE_ENEMY_HPP
 #define ARCADE_ENEMY_HPP
 

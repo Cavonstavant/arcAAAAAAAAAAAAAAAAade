@@ -17,6 +17,8 @@
 #define MAP_HEIGHT 21
 #define MAP_WIDTH 32
 
+/// \file Src/Games/Pacman/Pacman.hpp
+/// \brief Pacman Class inherits from IGame
 class Pacman : public IGame {
     public:
         /// \brief Default constructor
@@ -134,6 +136,7 @@ class Pacman : public IGame {
         bool nextToTheWall(Player::Direction direction, int index);
 
         /// \brief Setter for _isGameOver
+        /// \param isGameOver boolean
         void setIsGameOver(bool isGameOver);
 
         /// \brief Getter for _isGameOver

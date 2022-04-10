@@ -5,6 +5,8 @@
 ** Grid
 */
 
+/// \file Src/CommonInterface/include/Grid.hpp
+
 #ifndef ARCADE_GRID_HPP
 #define ARCADE_GRID_HPP
 

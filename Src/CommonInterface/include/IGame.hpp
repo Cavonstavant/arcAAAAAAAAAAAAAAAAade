@@ -5,7 +5,7 @@
 ** IGame
 */
 
-/// \file IGame.hpp
+/// \file Src/CommonInterface/include/IGame.hpp
 
 #ifndef ARCADE_IGAME_HPP
 #define ARCADE_IGAME_HPP
@@ -17,7 +17,7 @@
 #include <stack>
 #include <vector>
 
-/// Game instance
+/// \brief represents a Game instance (pacman, nibbler, ...)
 /// \interface IGame
 class IGame {
     public:

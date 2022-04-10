@@ -5,6 +5,8 @@
 ** Created by hjulien,
 */
 
+///  \file Src/GraphicLibs/SDL/SdlLibrary.hpp
+
 #ifndef ARCADE_SDLLIBRARY_HPP
 #define ARCADE_SDLLIBRARY_HPP
 
