@@ -98,8 +98,11 @@ $(document).ready(function(){initNavTree('class_lib_manager.html',''); initResiz
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a0ab63df7fa3122f596602d530f951d69"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lib_manager.html#a0ab63df7fa3122f596602d530f951d69">LibManager</a> ()=default</td></tr>
-<tr class="memdesc:a0ab63df7fa3122f596602d530f951d69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creating a library manager without at least a path to a library should be impossible.  <a href="class_lib_manager.html#a0ab63df7fa3122f596602d530f951d69">More...</a><br /></td></tr>
+<tr class="memdesc:a0ab63df7fa3122f596602d530f951d69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creating a library manager without at least a path to a library should be possible.  <a href="class_lib_manager.html#a0ab63df7fa3122f596602d530f951d69">More...</a><br /></td></tr>
 <tr class="separator:a0ab63df7fa3122f596602d530f951d69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7035793224809c4d754915c4ccb5fb6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lib_manager.html#ab7035793224809c4d754915c4ccb5fb6">LibManager</a> (const std::vector&lt; std::string &gt; &amp;libPaths)</td></tr>
+<tr class="memdesc:ab7035793224809c4d754915c4ccb5fb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creating a library manager with multiple paths to libraries.  <a href="class_lib_manager.html#ab7035793224809c4d754915c4ccb5fb6">More...</a><br /></td></tr>
+<tr class="separator:ab7035793224809c4d754915c4ccb5fb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af2fc5ec05d460e07291f03d5c6662c25"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lib_manager.html#af2fc5ec05d460e07291f03d5c6662c25">LibManager</a> (const <a class="el" href="class_lib_manager.html">LibManager</a> &amp;)=delete</td></tr>
 <tr class="memdesc:af2fc5ec05d460e07291f03d5c6662c25"><td class="mdescLeft">&#160;</td><td class="mdescRight">A library manager should be able to be copied.  <a href="class_lib_manager.html#af2fc5ec05d460e07291f03d5c6662c25">More...</a><br /></td></tr>
 <tr class="separator:af2fc5ec05d460e07291f03d5c6662c25"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -143,7 +146,7 @@ Public Member Functions</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="_lib_manager_8hpp_source.html#l00021">21</a> of file <a class="el" href="_lib_manager_8hpp_source.html">LibManager.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a0ab63df7fa3122f596602d530f951d69"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0ab63df7fa3122f596602d530f951d69">&#9670;&nbsp;</a></span>LibManager() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ab63df7fa3122f596602d530f951d69">&#9670;&nbsp;</a></span>LibManager() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -165,12 +168,40 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Creating a library manager without at least a path to a library should be impossible. </p>
+<p>Creating a library manager without at least a path to a library should be possible. </p>
+
+</div>
+</div>
+<a id="ab7035793224809c4d754915c4ccb5fb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7035793224809c4d754915c4ccb5fb6">&#9670;&nbsp;</a></span>LibManager() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LibManager::LibManager </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>libPaths</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creating a library manager with multiple paths to libraries. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">libPaths</td><td>Paths to the game libraries </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_lib_manager_8cpp_source.html#l00019">19</a> of file <a class="el" href="_lib_manager_8cpp_source.html">LibManager.cpp</a>.</p>
 
 </div>
 </div>
 <a id="af2fc5ec05d460e07291f03d5c6662c25"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af2fc5ec05d460e07291f03d5c6662c25">&#9670;&nbsp;</a></span>LibManager() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af2fc5ec05d460e07291f03d5c6662c25">&#9670;&nbsp;</a></span>LibManager() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -259,7 +290,7 @@ Public Member Functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>This method is only used to differentiate between games and graph libraries, it does not actually add the game to the lib manager </dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Using this method without using <a class="el" href="class_lib_manager.html#aa77bc5043b5310692f96bf7134735028" title="Add a lib to be managed by the library manager.">addLibs()</a> will lead to <b>Undefined Behaviour</b> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_lib_manager_8hpp_source.html#l00083">83</a> of file <a class="el" href="_lib_manager_8hpp_source.html">LibManager.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_lib_manager_8hpp_source.html#l00087">87</a> of file <a class="el" href="_lib_manager_8hpp_source.html">LibManager.hpp</a>.</p>
 
 </div>
 </div>
@@ -297,7 +328,7 @@ Public Member Functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>This method is only used to differentiate between games and graph libraries, it does not actually add the graph to the lib manager </dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Using this method without using <a class="el" href="class_lib_manager.html#aa77bc5043b5310692f96bf7134735028" title="Add a lib to be managed by the library manager.">addLibs()</a> will lead to <b>Undefined Behaviour</b> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_lib_manager_8hpp_source.html#l00092">92</a> of file <a class="el" href="_lib_manager_8hpp_source.html">LibManager.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_lib_manager_8hpp_source.html#l00096">96</a> of file <a class="el" href="_lib_manager_8hpp_source.html">LibManager.hpp</a>.</p>
 
 </div>
 </div>
@@ -332,7 +363,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_lib_manager_8cpp_source.html#l00066">66</a> of file <a class="el" href="_lib_manager_8cpp_source.html">LibManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_lib_manager_8cpp_source.html#l00074">74</a> of file <a class="el" href="_lib_manager_8cpp_source.html">LibManager.cpp</a>.</p>
 
 </div>
 </div>
@@ -353,7 +384,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Closes all shared libraries. </p>
 
-<p class="definition">Definition at line <a class="el" href="_lib_manager_8cpp_source.html#l00111">111</a> of file <a class="el" href="_lib_manager_8cpp_source.html">LibManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_lib_manager_8cpp_source.html#l00119">119</a> of file <a class="el" href="_lib_manager_8cpp_source.html">LibManager.cpp</a>.</p>
 
 </div>
 </div>
@@ -390,7 +421,7 @@ Using this method before opening a library will lead to <b>Undefined Behaviour</
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_lib_manager_8cpp_source.html#l00053">53</a> of file <a class="el" href="_lib_manager_8cpp_source.html">LibManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_lib_manager_8cpp_source.html#l00061">61</a> of file <a class="el" href="_lib_manager_8cpp_source.html">LibManager.cpp</a>.</p>
 
 </div>
 </div>
@@ -437,7 +468,7 @@ Using this method before opening a library will lead to <b>Undefined Behaviour</
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_lib_manager_8cpp_source.html#l00121">121</a> of file <a class="el" href="_lib_manager_8cpp_source.html">LibManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_lib_manager_8cpp_source.html#l00129">129</a> of file <a class="el" href="_lib_manager_8cpp_source.html">LibManager.cpp</a>.</p>
 
 </div>
 </div>
@@ -484,7 +515,7 @@ Using this method before opening a library will lead to <b>Undefined Behaviour</
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_lib_manager_8cpp_source.html#l00144">144</a> of file <a class="el" href="_lib_manager_8cpp_source.html">LibManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_lib_manager_8cpp_source.html#l00152">152</a> of file <a class="el" href="_lib_manager_8cpp_source.html">LibManager.cpp</a>.</p>
 
 </div>
 </div>
@@ -513,7 +544,7 @@ Using this method before opening a library will lead to <b>Undefined Behaviour</
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A pointer to a game instance </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_lib_manager_8cpp_source.html#l00019">19</a> of file <a class="el" href="_lib_manager_8cpp_source.html">LibManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_lib_manager_8cpp_source.html#l00027">27</a> of file <a class="el" href="_lib_manager_8cpp_source.html">LibManager.cpp</a>.</p>
 
 </div>
 </div>
@@ -542,7 +573,7 @@ Using this method before opening a library will lead to <b>Undefined Behaviour</
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A pointer to a graph instance </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_lib_manager_8cpp_source.html#l00036">36</a> of file <a class="el" href="_lib_manager_8cpp_source.html">LibManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_lib_manager_8cpp_source.html#l00044">44</a> of file <a class="el" href="_lib_manager_8cpp_source.html">LibManager.cpp</a>.</p>
 
 </div>
 </div>

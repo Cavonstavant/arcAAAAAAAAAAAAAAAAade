@@ -1,6 +1,7 @@
 var class_lib_manager =
 [
     [ "LibManager", "class_lib_manager.html#a0ab63df7fa3122f596602d530f951d69", null ],
+    [ "LibManager", "class_lib_manager.html#ab7035793224809c4d754915c4ccb5fb6", null ],
     [ "LibManager", "class_lib_manager.html#af2fc5ec05d460e07291f03d5c6662c25", null ],
     [ "~LibManager", "class_lib_manager.html#ade5e45886e1d82e8f0c968de7eb59f04", null ],
     [ "addGame", "class_lib_manager.html#a4028b35e97af73798b90eb55aa5a7196", null ],

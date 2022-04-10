@@ -115,12 +115,12 @@ Collaboration diagram for SdlLibrary:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a8efdf0a033b3a56e8c5c9bb28b4b4ce7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sdl_library.html#a8efdf0a033b3a56e8c5c9bb28b4b4ce7">SdlLibrary</a> ()</td></tr>
-<tr class="memdesc:a8efdf0a033b3a56e8c5c9bb28b4b4ce7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default Constructor SDL_INIT_EVERYTHING | Initialize every feature like video, audio, events... Creating &amp; Initializing Window &amp; Renderer Loading member _font (ARCADE_N.TTF as default font)  <a href="class_sdl_library.html#a8efdf0a033b3a56e8c5c9bb28b4b4ce7">More...</a><br /></td></tr>
-<tr class="separator:a8efdf0a033b3a56e8c5c9bb28b4b4ce7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b2e797c001308fbdd540b8e89e49b7f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sdl_library.html#a1b2e797c001308fbdd540b8e89e49b7f">~SdlLibrary</a> () noexcept override</td></tr>
-<tr class="memdesc:a1b2e797c001308fbdd540b8e89e49b7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default Destructor Destroying Window &amp; Renderer SDL_Quit() to close every features previously opened in the constructor.  <a href="class_sdl_library.html#a1b2e797c001308fbdd540b8e89e49b7f">More...</a><br /></td></tr>
-<tr class="separator:a1b2e797c001308fbdd540b8e89e49b7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c415d97fe92581474c3e1493f0b32bb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sdl_library.html#a3c415d97fe92581474c3e1493f0b32bb">SdlLibrary</a> ()=default</td></tr>
+<tr class="memdesc:a3c415d97fe92581474c3e1493f0b32bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default Constructor SDL_INIT_EVERYTHING | Initialize every feature like video, audio, events... Creating &amp; Initializing Window &amp; Renderer Loading member _font (ARCADE_N.TTF as default font)  <a href="class_sdl_library.html#a3c415d97fe92581474c3e1493f0b32bb">More...</a><br /></td></tr>
+<tr class="separator:a3c415d97fe92581474c3e1493f0b32bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f0a7e025ee55528e6042f07c76c7aca"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sdl_library.html#a3f0a7e025ee55528e6042f07c76c7aca">~SdlLibrary</a> () override=default</td></tr>
+<tr class="memdesc:a3f0a7e025ee55528e6042f07c76c7aca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default Destructor Destroying Window &amp; Renderer SDL_Quit() to close every features previously opened in the constructor.  <a href="class_sdl_library.html#a3f0a7e025ee55528e6042f07c76c7aca">More...</a><br /></td></tr>
+<tr class="separator:a3f0a7e025ee55528e6042f07c76c7aca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a974697cc4836b42f912d1454c3d19cf9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sdl_library.html#a974697cc4836b42f912d1454c3d19cf9">init</a> () override</td></tr>
 <tr class="memdesc:a974697cc4836b42f912d1454c3d19cf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the library.  <a href="class_sdl_library.html#a974697cc4836b42f912d1454c3d19cf9">More...</a><br /></td></tr>
 <tr class="separator:a974697cc4836b42f912d1454c3d19cf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -161,11 +161,14 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_sdl_library_8hpp_source.html#l00018">18</a> of file <a class="el" href="_sdl_library_8hpp_source.html">SdlLibrary.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a8efdf0a033b3a56e8c5c9bb28b4b4ce7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8efdf0a033b3a56e8c5c9bb28b4b4ce7">&#9670;&nbsp;</a></span>SdlLibrary()</h2>
+<a id="a3c415d97fe92581474c3e1493f0b32bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c415d97fe92581474c3e1493f0b32bb">&#9670;&nbsp;</a></span>SdlLibrary()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">SdlLibrary::SdlLibrary </td>
@@ -174,16 +177,19 @@ Public Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Default Constructor SDL_INIT_EVERYTHING | Initialize every feature like video, audio, events... Creating &amp; Initializing Window &amp; Renderer Loading member _font (ARCADE_N.TTF as default font) </p>
 
-<p class="definition">Definition at line <a class="el" href="_sdl_library_8cpp_source.html#l00010">10</a> of file <a class="el" href="_sdl_library_8cpp_source.html">SdlLibrary.cpp</a>.</p>
-
 </div>
 </div>
-<a id="a1b2e797c001308fbdd540b8e89e49b7f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1b2e797c001308fbdd540b8e89e49b7f">&#9670;&nbsp;</a></span>~SdlLibrary()</h2>
+<a id="a3f0a7e025ee55528e6042f07c76c7aca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f0a7e025ee55528e6042f07c76c7aca">&#9670;&nbsp;</a></span>~SdlLibrary()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -200,14 +206,12 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">default</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Default Destructor Destroying Window &amp; Renderer SDL_Quit() to close every features previously opened in the constructor. </p>
-
-<p class="definition">Definition at line <a class="el" href="_sdl_library_8cpp_source.html#l00014">14</a> of file <a class="el" href="_sdl_library_8cpp_source.html">SdlLibrary.cpp</a>.</p>
 
 </div>
 </div>
@@ -240,7 +244,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_graph.html#ad093f704c4f0c13bc42ca4e494b76d20">IGraph</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_sdl_library_8cpp_source.html#l00039">39</a> of file <a class="el" href="_sdl_library_8cpp_source.html">SdlLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_sdl_library_8cpp_source.html#l00035">35</a> of file <a class="el" href="_sdl_library_8cpp_source.html">SdlLibrary.cpp</a>.</p>
 
 </div>
 </div>
@@ -271,7 +275,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_graph.html#ab4877a54bbdbd2663e94309d260e064b">IGraph</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_sdl_library_8cpp_source.html#l00031">31</a> of file <a class="el" href="_sdl_library_8cpp_source.html">SdlLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_sdl_library_8cpp_source.html#l00026">26</a> of file <a class="el" href="_sdl_library_8cpp_source.html">SdlLibrary.cpp</a>.</p>
 
 </div>
 </div>
@@ -303,7 +307,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_graph.html#a703f8faaae8cb3b339b8686e5f442f81">IGraph</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_sdl_library_8cpp_source.html#l00044">44</a> of file <a class="el" href="_sdl_library_8cpp_source.html">SdlLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_sdl_library_8cpp_source.html#l00042">42</a> of file <a class="el" href="_sdl_library_8cpp_source.html">SdlLibrary.cpp</a>.</p>
 
 </div>
 </div>
@@ -360,7 +364,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_graph.html#ac3a39c636d2e479e9f7dd90a6a5a7f17">IGraph</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_sdl_library_8cpp_source.html#l00051">51</a> of file <a class="el" href="_sdl_library_8cpp_source.html">SdlLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_sdl_library_8cpp_source.html#l00048">48</a> of file <a class="el" href="_sdl_library_8cpp_source.html">SdlLibrary.cpp</a>.</p>
 
 </div>
 </div>
@@ -410,7 +414,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_graph.html#a86710ad76190aafbdf76941ce89a34f3">IGraph</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_sdl_library_8cpp_source.html#l00092">92</a> of file <a class="el" href="_sdl_library_8cpp_source.html">SdlLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_sdl_library_8cpp_source.html#l00111">111</a> of file <a class="el" href="_sdl_library_8cpp_source.html">SdlLibrary.cpp</a>.</p>
 
 </div>
 </div>
@@ -474,7 +478,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_graph.html#a7963d277bd33308a52c3029214e875a0">IGraph</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_sdl_library_8cpp_source.html#l00060">60</a> of file <a class="el" href="_sdl_library_8cpp_source.html">SdlLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_sdl_library_8cpp_source.html#l00080">80</a> of file <a class="el" href="_sdl_library_8cpp_source.html">SdlLibrary.cpp</a>.</p>
 
 </div>
 </div>
@@ -530,7 +534,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_graph.html#adc313588d862964034f9dc7256ef0e8a">IGraph</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_sdl_library_8cpp_source.html#l00074">74</a> of file <a class="el" href="_sdl_library_8cpp_source.html">SdlLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_sdl_library_8cpp_source.html#l00094">94</a> of file <a class="el" href="_sdl_library_8cpp_source.html">SdlLibrary.cpp</a>.</p>
 
 </div>
 </div>
@@ -562,7 +566,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_graph.html#ae5503da735e8b53775b3db3acaaddb35">IGraph</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_sdl_library_8cpp_source.html#l00113">113</a> of file <a class="el" href="_sdl_library_8cpp_source.html">SdlLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_sdl_library_8cpp_source.html#l00132">132</a> of file <a class="el" href="_sdl_library_8cpp_source.html">SdlLibrary.cpp</a>.</p>
 
 </div>
 </div>
@@ -594,7 +598,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_graph.html#a37b6f2993125bbbb12007714668eb026">IGraph</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_sdl_library_8cpp_source.html#l00108">108</a> of file <a class="el" href="_sdl_library_8cpp_source.html">SdlLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_sdl_library_8cpp_source.html#l00127">127</a> of file <a class="el" href="_sdl_library_8cpp_source.html">SdlLibrary.cpp</a>.</p>
 
 </div>
 </div>
@@ -625,7 +629,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_graph.html#a047bb5222ba4ac156f057b65ff36ef1c">IGraph</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_sdl_library_8cpp_source.html#l00018">18</a> of file <a class="el" href="_sdl_library_8cpp_source.html">SdlLibrary.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_sdl_library_8cpp_source.html#l00011">11</a> of file <a class="el" href="_sdl_library_8cpp_source.html">SdlLibrary.cpp</a>.</p>
 
 </div>
 </div>

@@ -1,7 +1,7 @@
 var class_sdl_library =
 [
-    [ "SdlLibrary", "class_sdl_library.html#a8efdf0a033b3a56e8c5c9bb28b4b4ce7", null ],
-    [ "~SdlLibrary", "class_sdl_library.html#a1b2e797c001308fbdd540b8e89e49b7f", null ],
+    [ "SdlLibrary", "class_sdl_library.html#a3c415d97fe92581474c3e1493f0b32bb", null ],
+    [ "~SdlLibrary", "class_sdl_library.html#a3f0a7e025ee55528e6042f07c76c7aca", null ],
     [ "clearWindow", "class_sdl_library.html#a7761041f048d86628264f86cddd1583d", null ],
     [ "close", "class_sdl_library.html#a88a46f4994a97eb99d72a2de5a7b31e7", null ],
     [ "displayWindow", "class_sdl_library.html#abe06067f84c9a63449a1e2f8ab531f1c", null ],

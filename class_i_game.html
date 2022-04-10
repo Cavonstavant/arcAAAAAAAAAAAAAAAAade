@@ -139,6 +139,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abdc3543ee754cecb7eb156f05ce5869d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_game.html#abdc3543ee754cecb7eb156f05ce5869d">start</a> ()=0</td></tr>
 <tr class="memdesc:abdc3543ee754cecb7eb156f05ce5869d"><td class="mdescLeft">&#160;</td><td class="mdescRight">starts the game  <a href="class_i_game.html#abdc3543ee754cecb7eb156f05ce5869d">More...</a><br /></td></tr>
 <tr class="separator:abdc3543ee754cecb7eb156f05ce5869d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe8e58b2e0a3f52c4c532d74f6bf7852"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_game.html#afe8e58b2e0a3f52c4c532d74f6bf7852">getIsGameOver</a> ()=0</td></tr>
+<tr class="memdesc:afe8e58b2e0a3f52c4c532d74f6bf7852"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for _isGameOver.  <a href="class_i_game.html#afe8e58b2e0a3f52c4c532d74f6bf7852">More...</a><br /></td></tr>
+<tr class="separator:afe8e58b2e0a3f52c4c532d74f6bf7852"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9840d5dbf736c48685119790eb941bfe"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_game.html#a9840d5dbf736c48685119790eb941bfe">getScore</a> () const =0</td></tr>
+<tr class="memdesc:a9840d5dbf736c48685119790eb941bfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for score of the current Game.  <a href="class_i_game.html#a9840d5dbf736c48685119790eb941bfe">More...</a><br /></td></tr>
+<tr class="separator:a9840d5dbf736c48685119790eb941bfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Game instance </p>
@@ -238,6 +244,36 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="afe8e58b2e0a3f52c4c532d74f6bf7852"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe8e58b2e0a3f52c4c532d74f6bf7852">&#9670;&nbsp;</a></span>getIsGameOver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool IGame::getIsGameOver </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Getter for _isGameOver. </p>
+<dl class="section return"><dt>Returns</dt><dd>Boolean _isGameOver </dd></dl>
+
+<p>Implemented in <a class="el" href="class_nibbler.html#abff00d59bbeecdd263ec2dcf711a805b">Nibbler</a>, and <a class="el" href="class_main_menu.html#a10dc7f2a7dc724085941a715898f0781">MainMenu</a>.</p>
+
+</div>
+</div>
 <a id="ad4b0a0f5cf6be7c2692485907dc0f6ac"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad4b0a0f5cf6be7c2692485907dc0f6ac">&#9670;&nbsp;</a></span>getLibraryName()</h2>
 
@@ -264,6 +300,35 @@ Public Member Functions</h2></td></tr>
 <p>Get the game's name. </p>
 
 <p>Implemented in <a class="el" href="class_pacman.html#a1166f419d4f812fe12d86b3eaf98cffa">Pacman</a>, <a class="el" href="class_main_menu.html#ae768fe510df90b6c011168c7fcc3c8b4">MainMenu</a>, and <a class="el" href="class_nibbler.html#a2ba7dcedc156367a534047a1e7912185">Nibbler</a>.</p>
+
+</div>
+</div>
+<a id="a9840d5dbf736c48685119790eb941bfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9840d5dbf736c48685119790eb941bfe">&#9670;&nbsp;</a></span>getScore()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int IGame::getScore </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Getter for score of the current Game. </p>
+
+<p>Implemented in <a class="el" href="class_nibbler.html#a4791bec92f2832b16ed9699028e25c9b">Nibbler</a>, and <a class="el" href="class_main_menu.html#ac661da9aa13a49fa0e33ca8465e6d844">MainMenu</a>.</p>
 
 </div>
 </div>

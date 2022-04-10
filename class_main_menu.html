@@ -139,6 +139,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae768fe510df90b6c011168c7fcc3c8b4"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_menu.html#ae768fe510df90b6c011168c7fcc3c8b4">getLibraryName</a> () const final</td></tr>
 <tr class="memdesc:ae768fe510df90b6c011168c7fcc3c8b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the menu's name.  <a href="class_main_menu.html#ae768fe510df90b6c011168c7fcc3c8b4">More...</a><br /></td></tr>
 <tr class="separator:ae768fe510df90b6c011168c7fcc3c8b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10dc7f2a7dc724085941a715898f0781"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_menu.html#a10dc7f2a7dc724085941a715898f0781">getIsGameOver</a> () override</td></tr>
+<tr class="memdesc:a10dc7f2a7dc724085941a715898f0781"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for _isGameOver.  <a href="class_main_menu.html#a10dc7f2a7dc724085941a715898f0781">More...</a><br /></td></tr>
+<tr class="separator:a10dc7f2a7dc724085941a715898f0781"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac661da9aa13a49fa0e33ca8465e6d844"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_menu.html#ac661da9aa13a49fa0e33ca8465e6d844">getScore</a> () const override</td></tr>
+<tr class="memdesc:ac661da9aa13a49fa0e33ca8465e6d844"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for score of the current Game.  <a href="class_main_menu.html#ac661da9aa13a49fa0e33ca8465e6d844">More...</a><br /></td></tr>
+<tr class="separator:ac661da9aa13a49fa0e33ca8465e6d844"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_i_game"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_i_game')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_i_game.html">IGame</a></td></tr>
 <tr class="memitem:a91b14c1b6019364120d5c5e4d4c64414 inherit pub_methods_class_i_game"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_game.html#a91b14c1b6019364120d5c5e4d4c64414">~IGame</a> ()=default</td></tr>
 <tr class="separator:a91b14c1b6019364120d5c5e4d4c64414 inherit pub_methods_class_i_game"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -241,6 +247,38 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a10dc7f2a7dc724085941a715898f0781"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10dc7f2a7dc724085941a715898f0781">&#9670;&nbsp;</a></span>getIsGameOver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MainMenu::getIsGameOver </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Getter for _isGameOver. </p>
+<dl class="section return"><dt>Returns</dt><dd>Boolean _isGameOver </dd></dl>
+
+<p>Implements <a class="el" href="class_i_game.html#afe8e58b2e0a3f52c4c532d74f6bf7852">IGame</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_main_menu_8cpp_source.html#l00252">252</a> of file <a class="el" href="_main_menu_8cpp_source.html">MainMenu.cpp</a>.</p>
+
+</div>
+</div>
 <a id="ae768fe510df90b6c011168c7fcc3c8b4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae768fe510df90b6c011168c7fcc3c8b4">&#9670;&nbsp;</a></span>getLibraryName()</h2>
 
@@ -268,7 +306,38 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_game.html#ad4b0a0f5cf6be7c2692485907dc0f6ac">IGame</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_main_menu_8cpp_source.html#l00248">248</a> of file <a class="el" href="_main_menu_8cpp_source.html">MainMenu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_main_menu_8cpp_source.html#l00247">247</a> of file <a class="el" href="_main_menu_8cpp_source.html">MainMenu.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac661da9aa13a49fa0e33ca8465e6d844"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac661da9aa13a49fa0e33ca8465e6d844">&#9670;&nbsp;</a></span>getScore()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MainMenu::getScore </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Getter for score of the current Game. </p>
+
+<p>Implements <a class="el" href="class_i_game.html#a9840d5dbf736c48685119790eb941bfe">IGame</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_main_menu_8cpp_source.html#l00257">257</a> of file <a class="el" href="_main_menu_8cpp_source.html">MainMenu.cpp</a>.</p>
 
 </div>
 </div>

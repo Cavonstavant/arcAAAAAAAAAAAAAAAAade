@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['arcade_365',['Arcade',['../namespace_arcade.html',1,'']]]
+  ['arcade_366',['Arcade',['../namespace_arcade.html',1,'']]]
 ];
