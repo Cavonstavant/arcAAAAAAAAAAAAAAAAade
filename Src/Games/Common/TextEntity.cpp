@@ -7,7 +7,7 @@
 
 #include "TextEntity.hpp"
 
-TextEntity::TextEntity(const std::string &text, const std::string &font, const int &fontSize, const Color &color, const Color &outlineColor) : AEntity()
+TextEntity::TextEntity(const std::string &text, const std::string &font, const int &fontSize, const Color color, const Color &outlineColor) : AEntity()
 {
     _text = text;
     _fontPath = font;
@@ -55,7 +55,7 @@ Color TextEntity::getColor() const
     return _color;
 }
 
-void TextEntity::setColor(const Color &color)
+void TextEntity::setColor(const Color color)
 {
     _color = color;
 }

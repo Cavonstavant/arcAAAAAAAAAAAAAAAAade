@@ -17,6 +17,7 @@
 #include <vector>
 
 /// \brief represents a generic graphical library
+/// \interface IGraph
 class IGraph {
 
     public:
@@ -49,7 +50,8 @@ class IGraph {
         /// int> position \param content the std::string content \return true if the
         /// text is successfully draw
         virtual bool drawText(std::pair<int, int> pos,
-                              const std::string &content) = 0;
+                              const std::string &content,
+                              Color color) = 0;
 
         /// \brief Create an Entity, set position, then display it on the window.
         /// After all destroy the Entity \param IEntity representing the entity with
@@ -67,7 +69,7 @@ class IGraph {
 
         /// \brief get input from Graphic Library to send it to the Core
         /// \return Arcade::Evt representing the keyboard pressed of the event triggered
-        virtual Arcade::Evt getInput() const = 0;
+        virtual Arcade::Evt getInput() = 0;
 
         /// \brief get name of the library currently used
         /// \return std::string libraryName

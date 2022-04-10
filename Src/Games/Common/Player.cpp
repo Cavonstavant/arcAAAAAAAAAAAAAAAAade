@@ -9,7 +9,6 @@
 
 Player::Player() : AEntity()
 {
-    _speed = 0;
 }
 
 Player::~Player()

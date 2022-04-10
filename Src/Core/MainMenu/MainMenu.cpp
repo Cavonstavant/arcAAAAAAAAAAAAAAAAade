@@ -6,12 +6,12 @@
 */
 
 #include "MainMenu.hpp"
-#include "Button.hpp"
-#include "TextEntity.hpp"
 #include "../Exception.hpp"
+#include "Button.hpp"
 #include "Event.hpp"
+#include "TextEntity.hpp"
 extern "C" {
-    #include <dlfcn.h>
+#include <dlfcn.h>
 }
 #include <filesystem>
 #include <stack>
@@ -40,8 +40,41 @@ MainMenu::~MainMenu()
 {
 }
 
+static void createVerticalText(std::vector<std::shared_ptr<IEntity>> &entities, const std::string &text, int x, int y)
+{
+    for (auto &c: text) {
+        std::string chString(1, c);
+        TextEntity textChar(chString);
+        textChar.setPos(std::make_pair(x, y));
+        std::shared_ptr<TextEntity> textCharPtr = std::make_shared<TextEntity>(textChar);
+        entities.push_back(textCharPtr);
+        x += 1;
+    }
+}
+
+static void createBox(std::vector<std::shared_ptr<IEntity>> &entities, int x, int y, int width, int height)
+{
+    Object box(Object::ENTITY_TYPE::WALL);
+    box.setPos(std::make_pair(x, y));
+    box.setSize(std::make_pair(width, height));
+    box.setColor({0, 255, 255, 255, Color::TermColors::CYAN});
+    std::shared_ptr<Object> boxPtr = std::make_shared<Object>(box);
+    entities.push_back(boxPtr);
+}
+
+static void createText(std::vector<std::shared_ptr<IEntity>> &entities, std::string text, int x, int y, Color color)
+{
+    TextEntity textEntity(text);
+    textEntity.setPos(std::make_pair(x, y));
+    textEntity.setColor(color);
+    std::shared_ptr<TextEntity> textEntityPtr = std::make_shared<TextEntity>(textEntity);
+    entities.push_back(textEntityPtr);
+}
+
 void MainMenu::init(std::vector<std::shared_ptr<IEntity>> &entities)
 {
+    _graphicalLibraries.clear();
+    _gameLibraries.clear();
     getAllLibraries();
 
     _gameState = GameState::LOADED;
@@ -51,21 +84,25 @@ void MainMenu::init(std::vector<std::shared_ptr<IEntity>> &entities)
     std::shared_ptr<TextEntity> titleTextPtr = std::make_shared<TextEntity>(titleText);
 
     Button closeGameButton(&closeGameCallback);
-    closeGameButton.setPos(std::make_pair(14, 28));
-    closeGameButton.setSize(std::make_pair(4, 2));
+    closeGameButton.setPos(std::make_pair(11, 2));
+    closeGameButton.setSize(std::make_pair(1, 1));
     std::shared_ptr<Button> closeGameButtonPtr = std::make_shared<Button>(closeGameButton);
 
-    TextEntity closeText("Close");
-    closeText.setPos(std::make_pair(15, 29));
-    std::shared_ptr<TextEntity> closeTextPtr = std::make_shared<TextEntity>(closeText);
+    createBox(entities, 1, 1, GRID_INT(1) / 8, GRID_HEIGHT - 1);
+    createBox(entities, 1, GRID_INT(1) / 8 + 2, GRID_INT(1) / 3 + 3, GRID_HEIGHT - 1);
+    createBox(entities, 1, GRID_INT(1) / 8 + 2 + GRID_INT(1) / 3 + 3 + 1, GRID_INT(1) / 3 + 3, GRID_HEIGHT - 1);
 
-    entities.push_back(titleTextPtr);
-    entities.push_back(closeTextPtr);
     _buttons.push_back(closeGameButtonPtr);
     entities.push_back(closeGameButtonPtr);
+    entities.push_back(titleTextPtr);
 
-    int y = 1;
-    int x = 4;
+    createText(entities, "1", 11, 2, {0, 0, 0, 255, Color::TermColors::BLACK, Color::TermColors::WHITE});
+
+    createVerticalText(entities, "Close", 12, 2);
+
+    int x = 2;
+    int y = 7;
+    char c = 'a';
     for (auto &&graphLib: _graphicalLibraries) {
         Button button(&changeGraphicalLibCallback, graphLib);
         std::string libName = graphLib;
@@ -73,11 +110,12 @@ void MainMenu::init(std::vector<std::shared_ptr<IEntity>> &entities)
             libName = graphLib.substr(graphLib.find_last_of("/") + 1);
             libName = libName.substr(libName.find_first_not_of("arcade_"));
             libName = libName.substr(0, libName.find_last_of("."));
-        } catch (...) {}
+        } catch (...) {
+        }
         TextEntity text(libName);
 
         button.setPos(std::make_pair(x, y));
-        text.setPos(std::make_pair(x + 2, y));
+        text.setPos(std::make_pair(x, y + 2));
 
         std::shared_ptr<Button> buttonPtr = std::make_shared<Button>(button);
         std::shared_ptr<TextEntity> textPtr = std::make_shared<TextEntity>(text);
@@ -87,10 +125,14 @@ void MainMenu::init(std::vector<std::shared_ptr<IEntity>> &entities)
 
         _buttons.push_back(buttonPtr);
 
-        y += 2;
+        std::string buttonKeyString(&c, 1);
+        createText(entities, buttonKeyString, x, y, {0, 0, 0, 255, Color::TermColors::BLACK, Color::TermColors::WHITE});
+        c++;
+
+        x += 2;
     }
-    y = 1;
-    x = 10;
+    x = 2;
+    y = 21;
     for (auto &&gameLib: _gameLibraries) {
         Button button(&changeGameLibCallback, gameLib);
         std::string libName = gameLib;
@@ -98,11 +140,12 @@ void MainMenu::init(std::vector<std::shared_ptr<IEntity>> &entities)
             libName = gameLib.substr(gameLib.find_last_of("/") + 1);
             libName = libName.substr(libName.find_first_not_of("arcade_"));
             libName = libName.substr(0, libName.find_last_of("."));
-        } catch (...) {}
-        TextEntity text(gameLib);
+        } catch (...) {
+        }
+        TextEntity text(libName);
 
         button.setPos(std::make_pair(x, y));
-        text.setPos(std::make_pair(x + 2, y));
+        text.setPos(std::make_pair(x, y + 2));
 
         std::shared_ptr<Button> buttonPtr = std::make_shared<Button>(button);
         std::shared_ptr<TextEntity> textPtr = std::make_shared<TextEntity>(text);
@@ -112,7 +155,12 @@ void MainMenu::init(std::vector<std::shared_ptr<IEntity>> &entities)
 
         _buttons.push_back(buttonPtr);
 
-        y += 2;
+
+        std::string buttonKeyString(&c, 1);
+        createText(entities, buttonKeyString, x, y, {0, 0, 0, 255, Color::TermColors::BLACK, Color::TermColors::WHITE});
+        c++;
+
+        x += 2;
     }
 }
 
@@ -133,7 +181,21 @@ void MainMenu::manageClickEvent(Arcade::Evt &event, std::vector<std::shared_ptr<
 
 void MainMenu::manageKeyEvent(Arcade::Evt &event, std::vector<std::shared_ptr<IEntity>> &entities)
 {
-    throw NotImplementedEX("Key event not implemented", Logger::HIGH);
+    char c = 'a';
+    for (auto &graph: _graphicalLibraries) {
+        if (c >= 'z')
+            break;
+        if (event.key.key == c)
+            throw SwitchLibEX("Graph;" + graph, Logger::NONE);
+        c++;
+    }
+    for (auto &game: _gameLibraries) {
+        if (c >= 'z')
+            break;
+        if (event.key.key == c)
+            throw SwitchLibEX("Game;" + game, Logger::NONE);
+        c++;
+    }
 }
 
 void MainMenu::manageEvent(Arcade::Evt &event, std::vector<std::shared_ptr<IEntity>> &entities)
@@ -157,37 +219,9 @@ void MainMenu::start()
     _gameState = GameState::RUNNING;
 }
 
-// void MainMenu::getAllLibraries()
-// {
-//     const std::filesystem::path path{"./lib"};
-//     std::string libName;
-//     void *libNameFct;
-
-//     for (const auto &entry: std::filesystem::directory_iterator{path}) {
-//         // std::string libPath = std::filesystem::absolute(entry.path()).string();
-//         // std::cout << libPath << std::endl;
-//         try {
-//             try {
-//                 IGame *game = _libManager.openGame(entry.path());
-//                 _gameLibraries.push_back(game->getLibraryName());
-//             } catch (...) {
-//                 try {
-//                     IGraph *graph = _libManager.openGraph(entry.path());
-//                     _graphicalLibraries.push_back(graph->getLibraryName());
-//                 } catch (...) {
-//                     LibraryEX(entry.path().string() + " is invalid", Logger::LOW);
-//                 }
-//             }
-//         } catch (std::exception &e) {
-//             throw LibraryEX(e.what(), Logger::MEDIUM);
-//         }
-//     }
-//     ArcadeEX(std::string("successfully load all libraries in: ") + std::filesystem::absolute(path).string(), Logger::INFO);
-// }
-
 void MainMenu::getAllLibraries()
 {
-    const std::filesystem::path path{"./lib/"};
+    const std::filesystem::path path{"lib/"};
     std::string libName;
     void *libNameFct;
 
@@ -199,19 +233,11 @@ void MainMenu::getAllLibraries()
             if (!handle)
                 continue;
             if (dlsym(handle, "getGraphInstance")) {
-                libNameFct = dlsym(handle, "getLibraryName");
-                if (!libNameFct)
-                    _graphicalLibraries.push_back(entry.path());
-                else
-                    _graphicalLibraries.push_back(reinterpret_cast<std::string(*)()>(libNameFct)());
+                _graphicalLibraries.push_back(entry.path());
             } else if (dlsym(handle, "getGameInstance")) {
-                libNameFct = dlsym(handle, "getLibraryName");
-                if (!libNameFct)
-                    _gameLibraries.push_back(entry.path());
-                else
-                    _gameLibraries.push_back(reinterpret_cast<std::string(*)()>(libNameFct)());
+                _gameLibraries.push_back(entry.path());
             }
-//            dlclose(handle);
+            //            dlclose(handle);
         } catch (std::exception &e) {
             throw LibraryEX(e.what(), Logger::MEDIUM);
         }

@@ -34,6 +34,7 @@
 #define VeryStupidUserEX(what, severity) ExceptionTernary(VeryStupidUserException, what, severity)
 #define ButtonCloseGameEX(what, severity) ExceptionTernary(ButtonCloseGameException, what, severity)
 #define NotImplementedEX(what, severity) ExceptionTernary(NotImplementedException, what, severity)
+#define SwitchLibEX(what, severity) ExceptionTernary(SwitchLibException, what, severity)
 
 /// \Defines the color codes to print the exceptions in color
 #define LOGGER_COLOR_RESET "\x1B[0m"
@@ -192,6 +193,14 @@ class ButtonCloseGameException : public EventException {
         ButtonCloseGameException(std::string const &what, std::string const &func, int const &line, std::string const &file) : EventException(what, func, line, file)
         {
             _name = "ButtonCloseGameException";
+        };
+};
+/// \brief Exception when the core must switch a lib
+class SwitchLibException : public EventException {
+    public:
+        SwitchLibException(std::string const &what, std::string const &func, int const &line, std::string const &file) : EventException(what, func, line, file)
+        {
+            _name = "SwitchLibException";
         };
 };
 
