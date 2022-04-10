@@ -223,7 +223,6 @@ void MainMenu::getAllLibraries()
 {
     const std::filesystem::path path{"lib/"};
     std::string libName;
-    void *libNameFct;
 
     for (const auto &entry: std::filesystem::directory_iterator{path}) {
         if (entry.path().extension() != ".so")
@@ -248,4 +247,14 @@ void MainMenu::getAllLibraries()
 std::string MainMenu::getLibraryName() const
 {
     return "Main Menu";
+}
+
+bool MainMenu::getIsGameOver()
+{
+    return false;
+}
+
+int MainMenu::getScore() const
+{
+    return -1;
 }

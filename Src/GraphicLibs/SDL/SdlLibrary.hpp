@@ -21,12 +21,12 @@ class SdlLibrary : public IGraph {
         /// SDL_INIT_EVERYTHING | Initialize every feature like video, audio, events...
         /// Creating & Initializing Window & Renderer
         /// Loading member _font (ARCADE_N.TTF as default font)
-        SdlLibrary();
+        SdlLibrary() = default;
 
         /// \brief Default Destructor
         /// Destroying Window & Renderer
         /// SDL_Quit() to close every features previously opened in the constructor
-        ~SdlLibrary() noexcept override;
+        ~SdlLibrary() override = default;
 
         /// \brief Initialize the library
         void init() override;
@@ -41,8 +41,7 @@ class SdlLibrary : public IGraph {
         bool drawRect(std::pair<int, int> pos, int width, int height,
                       Color color) override;
         bool drawText(std::pair<int, int> pos,
-                      const std::string &content,
-                      Color color) override;
+                      const std::string &content, Color color) override;
         bool drawEntity(IEntity &entity,
                         std::pair<int, int> pos) override;
         Arcade::Evt getInput() override;

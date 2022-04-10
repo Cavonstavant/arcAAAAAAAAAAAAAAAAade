@@ -20,8 +20,12 @@
 /// \brief Wrapper around the dynamic library CRUD operations
 class LibManager {
     public:
-        /// \brief Creating a library manager without at least a path to a library should be impossible
+        /// \brief Creating a library manager without at least a path to a library should be possible
         LibManager() = default;
+
+        /// \brief Creating a library manager with multiple paths to libraries
+        /// \param libPaths Paths to the game libraries
+        LibManager(const std::vector<std::string> &libPaths);
 
         /// \brief A library manager should be able to be copied
         LibManager(const LibManager &) = delete;
