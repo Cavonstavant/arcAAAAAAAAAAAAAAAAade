@@ -96,7 +96,7 @@ void MainMenu::init(std::vector<std::shared_ptr<IEntity>> &entities)
     entities.push_back(closeGameButtonPtr);
     entities.push_back(titleTextPtr);
 
-    createText(entities, "1", 5, 3, {0, 0, 0, 255, Color::TermColors::BLACK, Color::TermColors::WHITE});
+    createText(entities, "9", 5, 3, {0, 0, 0, 255, Color::TermColors::BLACK, Color::TermColors::WHITE});
 
     createVerticalText(entities, "Close", 6, 3);
 
