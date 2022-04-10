@@ -13,7 +13,7 @@
 #include <stack>
 #include <iostream>
 
-Nibbler::Nibbler() :  _gameState(IGame::GameState::STOPPED), _lastTailDir(IEntity::Direction::RIGHT) ,_lastTailPos(std::make_pair(0, 0)), _score(std::make_shared<Score>())
+Nibbler::Nibbler() : _gameState(IGame::GameState::STOPPED), _lastTailDir(IEntity::Direction::RIGHT) ,_lastTailPos(std::make_pair(0, 0)), _score(0)
     {}
 
 Nibbler::~Nibbler() = default;
@@ -110,7 +110,6 @@ void Nibbler::initEntities(std::vector<std::shared_ptr<IEntity>> &entities)
     entities.push_back(tail1Ptr);
     entities.push_back(tail2Ptr);
     entities.push_back(tail3Ptr);
-    entities.push_back(_score);
     entities.push_back(_fruit);
 }
 
@@ -229,7 +228,7 @@ bool Nibbler::snakeIsOnAFruit(std::vector<std::shared_ptr<IEntity>> &entities)
         std::shared_ptr<Player> tailPtr = std::make_shared<Player>(tail);
         _snake.push_back(tailPtr);
         entities.push_back(tailPtr);
-        _score->setScore(_score->getScore() + 100);
+        _score += 100;
         _fruit->setPos(std::make_pair((rand() % (GRID_WIDTH - 2)) + 1, (rand() % (GRID_HEIGHT - 2)) + 1));
         return true;
     }
@@ -265,7 +264,12 @@ void Nibbler::setState(GameState state)
     _gameState = state;
 }
 
-std::shared_ptr<IEntity> Nibbler::getScore()
+int Nibbler::getScore() const
 {
     return _score;
+}
+
+bool Nibbler::getIsGameOver()
+{
+    return _gameState == GameState::STOPPED;
 }

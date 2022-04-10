@@ -68,10 +68,14 @@ class Pacman : public IGame {
         /// \brief simple IAClock to anime and move Enemies Entities
         std::chrono::high_resolution_clock::time_point _iaClock;
 
+        /// \brief Simple bonusClock to know the
+        std::chrono::high_resolution_clock::time_point _bonusClock;
+
         /// \brief The score of the game the player is currently playing
         unsigned int _score{};
 
-        Arcade::Evt _currentInput{};
+        /// \brief Boolean to know if the player lose or not
+        bool _isGameOver;
 
         /// \brief The actual direction of the player
         Enemy::Direction _direction;
@@ -124,6 +128,16 @@ class Pacman : public IGame {
         /// \param Index of the enemy from 0 to 3
         /// \return False if there is no wall
         bool nextToTheWall(Player::Direction direction, int index);
+
+        /// \brief Setter for _isGameOver
+        void setIsGameOver(bool isGameOver);
+
+        /// \brief Getter for _isGameOver
+        /// \return Boolean _isGameOver
+        bool getIsGameOver() override;
+
+        /// \brief Getter for the score inGame
+        int getScore() const override;
 };
 
 #endif //ARCADE_PACMAN_HPP

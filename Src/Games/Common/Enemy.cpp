@@ -15,6 +15,7 @@ Enemy::Enemy() : AEntity()
     _color.G = 0;
     _color.A = 255;
     _enrage = true;
+    _type = ENEMY;
 }
 
 void Enemy::setSpeed(int speed)

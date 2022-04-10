@@ -60,12 +60,15 @@ void Core::update()
         else if (evt.evt_type == Arcade::Evt::EvtType::KEY)
             _event.push(evt);
     }
+    if (_game->getIsGameOver())
+        _state = State::MAIN_MENU;
     if (_state == State::MAIN_MENU) {
         _mainMenu.update(_entities, _event);
     } else if (_state == State::GAME) {
         _game->update(_entities, _event);
     } else
         _game->close(_entities);
+
 }
 
 void Core::draw() {
@@ -97,6 +100,8 @@ void Core::draw() {
             _graph->drawEntity(*_entities[i], enemy->getPos());
         }
     }
+    if (_game->getScore() >= 0)
+        _graph->drawText(std::pair<int, int>{25, 10}, "Score : " + std::to_string(_game->getScore())+ "00", Color(255, 255, 255, 255));
     _graph->displayWindow();
 }
 

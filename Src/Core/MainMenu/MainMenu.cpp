@@ -255,3 +255,13 @@ std::string MainMenu::getLibraryName() const
 {
     return "Main Menu";
 }
+
+bool MainMenu::getIsGameOver()
+{
+    return false;
+}
+
+int MainMenu::getScore() const
+{
+    return -1;
+}

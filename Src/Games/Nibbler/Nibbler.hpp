@@ -46,6 +46,13 @@ class Nibbler : public IGame {
         /// \brief get the library name
         /// \return the library name
         std::string getLibraryName() const;
+        /// \brief Get the game's score
+        /// \return the game's score
+        int getScore() const override;
+        /// \brief Get if the game is over
+        /// \return if the game is over
+        bool getIsGameOver() override;
+
 
     protected:
     private:
@@ -66,9 +73,9 @@ class Nibbler : public IGame {
         /// \brief The last tails's last position
         std::pair<int, int> _lastTailPos;
         /// \brief The game's speed multiplier
-        float _speed{};
+        float _speed;
         /// \brief The game's score
-        std::shared_ptr<Score> _score;
+        unsigned int _score;
 
         /// \brief Get the elapsed time since the last update in milliseconds
         /// \return the elapsed time since the last update in milliseconds
