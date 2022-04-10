@@ -88,6 +88,8 @@ void Core::draw()
             else
                 _graph->drawCircle(wall->getPos(), 8, Color(255, 255, 0, 255));
         }
+    }
+    for (unsigned long i = 0; i < _entities.size(); i++) {
         if (dynamic_cast<Player *>(_entities[i].get())) {
             auto *player = dynamic_cast<Player *>(_entities[i].get());
             _graph->drawEntity(*_entities[i], player->getPos());
