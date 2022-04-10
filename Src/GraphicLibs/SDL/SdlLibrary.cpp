@@ -94,7 +94,7 @@ bool SdlLibrary::drawRect(std::pair<int, int> pos, int width, int height, Color 
 
 bool SdlLibrary::drawText(std::pair<int, int> pos, const std::string &content, Color color)
 {
-    SDL_Color textColor = {color.R, color.G, color.B, color.A};
+    SDL_Color textColor = {(Uint8)color.R, (Uint8)color.G, (Uint8)color.B, (Uint8)color.A};
     SDL_Surface *textSurface = TTF_RenderText_Blended(_font, content.c_str(), textColor);
     SDL_Texture *textTexture = SDL_CreateTextureFromSurface(_renderer, textSurface);
     SDL_Rect rect;
@@ -114,8 +114,8 @@ bool SdlLibrary::drawEntity(IEntity &entity, std::pair<int, int> pos)
     SDL_Texture *texture = IMG_LoadTexture(_renderer, entity.getTexturePath().c_str());
     SDL_Rect rect;
 
-    rect.x = GRID_INT(entity.getPos().second);
-    rect.y = GRID_INT(entity.getPos().first);
+    rect.x = GRID_INT(pos.second);
+    rect.y = GRID_INT(pos.first);
     rect.w = GRID_INT(entity.getSize().first);
     rect.h = GRID_INT(entity.getSize().second);
 
