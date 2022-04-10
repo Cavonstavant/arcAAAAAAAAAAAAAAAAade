@@ -6,7 +6,6 @@
 */
 
 #include "SdlLibrary.hpp"
-#include <iostream>
 #include <filesystem>
 
 void SdlLibrary::init()
