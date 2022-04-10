@@ -28,7 +28,7 @@ jobs:
 
     - name: Create dependency graphs
       run: |
-        mkdir graph && cd graph
+        cd graph
         cmake .. --graphviz=deps.dot
         dot -Tpng deps.dot > deps.png
 
