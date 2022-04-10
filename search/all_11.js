@@ -36,7 +36,7 @@ var searchData=
   ['severity_5flow_271',['SEVERITY_LOW',['../class_logger.html#a4cc16315b37eb0265c2d199880464a15abfe181f20efaf6d412dae251c056b0ef',1,'Logger']]],
   ['severity_5fmedium_272',['SEVERITY_MEDIUM',['../class_logger.html#a4cc16315b37eb0265c2d199880464a15a5a5df8f74f95025d3feede9c40a37d82',1,'Logger']]],
   ['severity_5fnone_273',['SEVERITY_NONE',['../class_logger.html#a4cc16315b37eb0265c2d199880464a15a3383eee663677570496f546789529e78',1,'Logger']]],
-  ['sfmllibrary_274',['SfmlLibrary',['../class_sfml_library.html',1,'SfmlLibrary'],['../class_sfml_library.html#a9982b5a65d04f937270353cfa211745d',1,'SfmlLibrary::SfmlLibrary()']]],
+  ['sfmllibrary_274',['SfmlLibrary',['../class_sfml_library.html',1,'SfmlLibrary'],['../class_sfml_library.html#aecabbf8ac17ffd89d3333a3946a841ff',1,'SfmlLibrary::SfmlLibrary()']]],
   ['sfmllibrary_2ecpp_275',['SfmlLibrary.cpp',['../_sfml_library_8cpp.html',1,'']]],
   ['sfmllibrary_2ehpp_276',['SfmlLibrary.hpp',['../_sfml_library_8hpp.html',1,'']]],
   ['start_277',['start',['../class_i_game.html#abdc3543ee754cecb7eb156f05ce5869d',1,'IGame::start()'],['../class_main_menu.html#a71418e58bdc1cd32c56ad9b55f1242a5',1,'MainMenu::start()'],['../class_nibbler.html#a084962c2ead391b992c4eb122ecdb95b',1,'Nibbler::start()'],['../class_pacman.html#a5f35bc7c57052922b65460bf2baa8738',1,'Pacman::start()']]],

@@ -1,6 +1,6 @@
 var class_sfml_library =
 [
-    [ "SfmlLibrary", "class_sfml_library.html#a9982b5a65d04f937270353cfa211745d", null ],
+    [ "SfmlLibrary", "class_sfml_library.html#aecabbf8ac17ffd89d3333a3946a841ff", null ],
     [ "~SfmlLibrary", "class_sfml_library.html#ab3e773fe9864d623d3126ed8a101ffd8", null ],
     [ "clearWindow", "class_sfml_library.html#ae80664835f474f6f812d5678d96c6939", null ],
     [ "close", "class_sfml_library.html#af4296f759f4bc34e5d9dbed2cf3fdea8", null ],
