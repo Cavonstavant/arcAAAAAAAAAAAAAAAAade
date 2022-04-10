@@ -256,7 +256,7 @@ $(document).ready(function(){initNavTree('_nibbler_8cpp_source.html',''); initRe
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="keywordflow">if</span> (snakeIsDeadCollision())</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        _gameState = <a class="code" href="class_i_game.html#a4a7309d86599d6e581f764233085c7dda09d4d696b4e935115b9313e3c412509a">GameState::STOPPED</a>;</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keywordflow">if</span> (_snake.size() == <a class="code" href="_grid_8hpp.html#a8bd9f95c4e7d0ae683aaa0434a72dca9">GRID_HEIGHT</a> * <a class="code" href="_grid_8hpp.html#a804eeb9892adae7306540eb33f2326eb">GRID_WIDTH</a>)</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keywordflow">if</span> (_snake.size() == (<a class="code" href="_grid_8hpp.html#a8bd9f95c4e7d0ae683aaa0434a72dca9">GRID_HEIGHT</a> - 2) * (<a class="code" href="_grid_8hpp.html#a804eeb9892adae7306540eb33f2326eb">GRID_WIDTH</a> - (<a class="code" href="_grid_8hpp.html#a804eeb9892adae7306540eb33f2326eb">GRID_WIDTH</a> / 4) - 2))</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        nextLevel(entities);</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;}</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
