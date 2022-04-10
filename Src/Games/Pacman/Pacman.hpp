@@ -137,7 +137,7 @@ class Pacman : public IGame {
         bool getIsGameOver() override;
 
         /// \brief Getter for the score inGame
-        int getScore() const override;
+        [[nodiscard]] int getScore() const override;
 };
 
 #endif//ARCADE_PACMAN_HPP
