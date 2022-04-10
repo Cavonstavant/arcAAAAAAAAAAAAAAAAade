@@ -31,6 +31,9 @@ jobs:
         cd graph
         cmake .. --graphviz=deps.dot
         dot -Tpng deps.dot > deps.png
+        cd ../
+        mkdir doc/build/html/graph
+        cp graph/deps.png doc/build/html/graph/deps.png
 
     - name: Deploy documentation
       uses: JamesIves/github-pages-deploy-action@v4.2.5
