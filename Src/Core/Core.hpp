@@ -18,6 +18,7 @@
 #include "LibManager.hpp"
 #include "Exception.hpp"
 #include <vector>
+#include <filesystem>
 
 /// \brief Core class that the transfer of data between games and displays
 class Core {

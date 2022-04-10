@@ -44,7 +44,7 @@ class Pacman : public IGame {
 
         /// \brief used to know the state of the game
         [[nodiscard]] GameState getState() const override;
-        void setState(GameState state);
+        void setState(GameState state) override;
 
         /// \brief Just turn the gameState to RUNNING
         void start() override;
