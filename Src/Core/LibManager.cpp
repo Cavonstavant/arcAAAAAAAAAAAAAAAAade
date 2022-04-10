@@ -7,6 +7,7 @@
 
 #include "LibManager.hpp"
 #include "Exception.hpp"
+#include <algorithm>
 #include <filesystem>
 #include <fstream>
 #include <functional>
@@ -32,7 +33,7 @@ IGame *LibManager::openGame(const std::string &libPath)
     if (!libHandle)
         throw LibraryEX(dlerror(), Logger::CRITICAL);
     if (_libsHandle[libPath])
-        throw ArcadeEX(libPath + "is already opened", Logger::NONE);
+        throw ArcadeEX(libPath + " is already opened", Logger::NONE);
     _libsHandle[libPath] = libHandle;
     void *(*getInstance)();
     getInstance = (void *(*) ()) dlsym(libHandle, "getGameInstance");
@@ -49,7 +50,7 @@ IGraph *LibManager::openGraph(const std::string &libPath)
     if (libHandle == nullptr)
         throw LibraryEX(dlerror(), Logger::CRITICAL);
     if (_libsHandle[libPath])
-        throw ArcadeEX(libPath + "is already opened", Logger::HIGH);
+        throw ArcadeEX(libPath + " is already opened", Logger::HIGH);
     _libsHandle[libPath] = libHandle;
     void *(*getInstance)();
     getInstance = (void *(*) ()) dlsym(libHandle, "getGraphInstance");
@@ -68,7 +69,7 @@ void LibManager::closeLib(const std::string &libPath)
         dlclose(it->second);
         it->second = nullptr;
     } else
-        throw LibraryEX("Library already closed", Logger::CRITICAL);
+        throw LibraryEX(libPath + ": Library already closed", Logger::CRITICAL);
 }
 
 void LibManager::addLibs(std::vector<std::string> &libPaths)
@@ -170,4 +171,16 @@ IGraph *LibManager::cycleGraphLibs(std::string &currentLib, bool direction)
             return ((IGraph *) openGraph(_graphLibsName.back()));
         return openGraph(*(libNameIt + 1));
     }
+}
+
+std::string LibManager::fetchLibPath(std::string name)
+{
+    std::transform(name.begin(), name.end(), name.begin(), ::tolower);
+    for (auto &gameLib: _gameLibsName)
+        if (gameLib.find(name) != std::string::npos)
+            return gameLib;
+    for (auto &graphLib: _graphLibsName)
+        if (graphLib.find(name) != std::string::npos)
+            return graphLib;
+    return "";
 }

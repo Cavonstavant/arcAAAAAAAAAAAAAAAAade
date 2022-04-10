@@ -50,6 +50,8 @@ void Core::update()
     std::stack<Arcade::Evt> eventBuffer;
     std::stack<Arcade::Evt> eventStack;
 
+    if (_entities.empty())
+        return;
     while ((evt = _graph->getInput()).evt_type != Arcade::Evt::NONE) {
         if (evt.evt_type == Arcade::Evt::EvtType::WIN_CLOSE ||
             (evt.evt_type == Arcade::Evt::EvtType::KEY &&
@@ -79,6 +81,8 @@ void Core::update()
 
 void Core::draw()
 {
+    if (_entities.empty())
+        return;
     _graph->clearWindow();
     for (unsigned long i = 0; i < _entities.size(); i++) {
         if (dynamic_cast<TextEntity *>(_entities[i].get())) {
@@ -169,17 +173,26 @@ void Core::processEvents()
     }
 }
 
-void Core::setGame(const std::string &libPath)
+void Core::setGame(const std::string &lib)
 {
-    //    if (_game)
-    //        _libManager.closeLib(libPath);
-    _game = _libManager.openGame(libPath);
-    _entities.clear();
+    if (!_game->getLibraryName().empty() && _state == State::GAME) {
+        _game->close(_entities);
+        _libManager.closeLib(_libManager.fetchLibPath(_game->getLibraryName()));
+    }
+    _game = _libManager.openGame(lib);
+    if (!_futureGraph.empty())
+        _entities.clear();
+    _game->init(_entities);
 }
 
-void Core::setGraph(const std::string &libPath)
+void Core::setGraph(const std::string &lib)
 {
-    //    if (_graph)
-    //        _libManager.closeLib(libPath);
-    _graph = _libManager.openGraph(libPath);
+    if (_graph) {
+        _graph->close();
+        _libManager.closeLib(_libManager.fetchLibPath(_graph->getLibraryName()));
+    }
+    _graph = _libManager.openGraph(lib);
+    _graph->init();
+    _graph->clearWindow();
+    _graph->displayWindow();
 }

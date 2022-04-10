@@ -98,6 +98,12 @@ class LibManager {
             _graphLibsName.push_back(graphPath);
         }
 
+        /// \brief will fetch the lib path given it's name
+        /// \param libName the name of the lib
+        /// \return the lib path
+        ///  \note This is used to translate getLibraryName() to the stored lib path
+        [[nodiscard]] std::string fetchLibPath(std::string name);
+
     private:
         /// \brief private enum to represent the type of the library type
         /// Used internally
