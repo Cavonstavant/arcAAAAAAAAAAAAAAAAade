@@ -54,6 +54,7 @@ int main(int ac, char **av)
                 std::string newFutureGraph;
                 core.setFutureGame(newFutureGame);
                 core.setFutureGraph(newFutureGraph);
+                core.setState(Core::State::GAME);
             }
             if (core.getGraph() != nullptr && core.getGame() != nullptr)
                 core.draw();
