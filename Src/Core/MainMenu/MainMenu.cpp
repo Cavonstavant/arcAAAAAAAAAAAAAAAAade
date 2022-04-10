@@ -6,10 +6,10 @@
 */
 
 #include "MainMenu.hpp"
-#include "Button.hpp"
-#include "TextEntity.hpp"
 #include "../Exception.hpp"
+#include "Button.hpp"
 #include "Event.hpp"
+#include "TextEntity.hpp"
 extern "C" {
 #include <dlfcn.h>
 }
@@ -42,7 +42,7 @@ MainMenu::~MainMenu()
 
 static void createVerticalText(std::vector<std::shared_ptr<IEntity>> &entities, const std::string &text, int x, int y)
 {
-    for (auto &c : text) {
+    for (auto &c: text) {
         std::string chString(1, c);
         TextEntity textChar(chString);
         textChar.setPos(std::make_pair(x, y));
@@ -110,7 +110,8 @@ void MainMenu::init(std::vector<std::shared_ptr<IEntity>> &entities)
             libName = graphLib.substr(graphLib.find_last_of("/") + 1);
             libName = libName.substr(libName.find_first_not_of("arcade_"));
             libName = libName.substr(0, libName.find_last_of("."));
-        } catch (...) {}
+        } catch (...) {
+        }
         TextEntity text(libName);
 
         button.setPos(std::make_pair(x, y));
@@ -139,7 +140,8 @@ void MainMenu::init(std::vector<std::shared_ptr<IEntity>> &entities)
             libName = gameLib.substr(gameLib.find_last_of("/") + 1);
             libName = libName.substr(libName.find_first_not_of("arcade_"));
             libName = libName.substr(0, libName.find_last_of("."));
-        } catch (...) {}
+        } catch (...) {
+        }
         TextEntity text(libName);
 
         button.setPos(std::make_pair(x, y));
@@ -235,15 +237,15 @@ void MainMenu::getAllLibraries()
                 if (!libNameFct)
                     _graphicalLibraries.push_back(entry.path());
                 else
-                    _graphicalLibraries.push_back(reinterpret_cast<std::string(*)()>(libNameFct)());
+                    _graphicalLibraries.push_back(reinterpret_cast<std::string (*)()>(libNameFct)());
             } else if (dlsym(handle, "getGameInstance")) {
                 libNameFct = dlsym(handle, "getLibraryName");
                 if (!libNameFct)
                     _gameLibraries.push_back(entry.path());
                 else
-                    _gameLibraries.push_back(reinterpret_cast<std::string(*)()>(libNameFct)());
+                    _gameLibraries.push_back(reinterpret_cast<std::string (*)()>(libNameFct)());
             }
-//            dlclose(handle);
+            //            dlclose(handle);
         } catch (std::exception &e) {
             throw LibraryEX(e.what(), Logger::MEDIUM);
         }
