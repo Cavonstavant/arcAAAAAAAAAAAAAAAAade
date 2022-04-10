@@ -72,8 +72,9 @@ bool SfmlLibrary::drawText(std::pair<int, int> pos, const std::string &content, 
 {
     sf::Text text;
     sf::Color sfColor(color.R, color.G, color.B, color.A);
+    sf::Font newFont(_font);
 
-    text.setFont(_font);
+    text.setFont(newFont);
     text.setPosition(GRID_INT(pos.second), GRID_INT(pos.first));
     text.setString(content);
     text.setFillColor(sfColor);
