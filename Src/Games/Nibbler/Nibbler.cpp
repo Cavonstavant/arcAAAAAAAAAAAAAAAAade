@@ -110,6 +110,7 @@ void Nibbler::resetClock()
 
 void Nibbler::manageKeyEvent(Arcade::Evt &event, std::vector<std::shared_ptr<IEntity>> &entities)
 {
+    (void) entities;
     switch (event.key.key) {
         case 'Z':
             if (_snake.front()->getDirection() != IEntity::Direction::DOWN)
