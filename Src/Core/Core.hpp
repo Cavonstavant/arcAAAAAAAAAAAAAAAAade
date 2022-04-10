@@ -87,7 +87,7 @@ class Core {
             _game = game;
         }
 
-        void setGame(const std::string &libPath);
+        void setGame(const std::string &lib);
 
         /// \brief Get the current graphical display of the core
         /// \return The current graphical display of the core
@@ -103,7 +103,7 @@ class Core {
             _graph = graph;
         }
 
-        void setGraph(const std::string &libPath);
+        void setGraph(const std::string &lib);
 
         /// \brief Get the current event
         /// \return The current event

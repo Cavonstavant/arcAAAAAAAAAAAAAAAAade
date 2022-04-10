@@ -7,6 +7,8 @@
 
 #include "Core.hpp"
 #include <iostream>
+#include <cctype>
+#include <algorithm>
 extern "C" {
 #include <dlfcn.h>
 }
@@ -38,20 +40,28 @@ int main(int ac, char **av)
                 if (libInfo.substr(0, libInfo.find(';')) == "Graph")
                     core.setFutureGraph(libPath);
                 else
-                    core.setGame(libPath);
-                std::cout << libInfo.substr(0, libInfo.find(';')) << " " << libPath << std::endl;
+                    core.setFutureGame(libPath);
                 core.popEvent();
             }
-            if (core.getGame() == nullptr && core.getGraph() == nullptr && !core.getFutureGraph().empty() && !core.getFutureGame().empty()) {
+            if (!core.getFutureGame().empty() && !core.getFutureGraph().empty()) {
+                std::string currentGraph = core.getGraph()->getLibraryName();
+                std::transform(currentGraph.begin(), currentGraph.end(), currentGraph.begin(), ::tolower);
+                if (currentGraph.find(core.getFutureGraph()) == std::string::npos) {
+                    core.setGraph(core.getFutureGraph());
+                }
                 core.setGame(core.getFutureGame());
-                core.setGraph(core.getFutureGraph());
+                std::string newFutureGame;
+                std::string newFutureGraph;
+                core.setFutureGame(newFutureGame);
+                core.setFutureGraph(newFutureGraph);
             }
-            if (core.getGraph() != nullptr || core.getGame() != nullptr)
+            if (core.getGraph() != nullptr && core.getGame() != nullptr)
                 core.draw();
-            if (core.getGraph() != nullptr || core.getGame() != nullptr)
+            if (core.getGraph() != nullptr && core.getGame() != nullptr)
                 core.processEvents();
         }
-    } catch (...) {
+    } catch (std::exception &e) {
+        ArcadeEX(e.what(), Logger::CRITICAL);
         return (84);
     }
     return (0);
