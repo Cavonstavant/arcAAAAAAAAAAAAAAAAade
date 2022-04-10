@@ -57,6 +57,7 @@ class Pacman : public IGame {
         /// \brief IEntity Player representing the pacman Player
         std::shared_ptr<Player> _player;
 
+        /// \brief Array of shared pointer enemies representing ghosts in pacman
         std::shared_ptr<Enemy> _enemies[3];
 
         /// \brief _map is represented by the map in Resources, we load it here to use it easier
