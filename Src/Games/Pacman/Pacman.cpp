@@ -177,7 +177,7 @@ void Pacman::update(std::vector<std::shared_ptr<IEntity>> &entities, std::stack<
     for (auto i = entities.begin(); i != entities.end(); i++) {
         if (i->get()->getPos() == _player->getPos() && (i->get()->getType() == IEntity::POINT)) {
             entities.erase(i);
-            _score += 10;
+            _score += 1;
         }
         if (i->get()->getPos() == _player->getPos() && i->get()->getType() == IEntity::BONUS) {
             _enemies[0]->setEnrage(false);
@@ -195,7 +195,7 @@ void Pacman::update(std::vector<std::shared_ptr<IEntity>> &entities, std::stack<
         if (dynamic_cast<Enemy *>(i->get()))
             if (i->get()->getPos() == _player->getPos() && i->get()->getType() == IEntity::ENEMY) {
                 if (!dynamic_cast<Enemy *>(i->get())->getEnrage()) {
-                    _score += 20;
+                    _score += 2;
                     i->get()->setPos(std::pair<int, int>{9, 16});
                 } else {
                     _isGameOver = true;
@@ -245,6 +245,7 @@ bool Pacman::moveLeft(Arcade::Evt input)
 
 void Pacman::close(std::vector<std::shared_ptr<IEntity>> &entities)
 {
+    _gameState = IGame::GameState::STOPPED;
     entities.clear();
 }
 
