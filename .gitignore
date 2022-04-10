@@ -54,4 +54,5 @@ arcade.log
 # Documentation
 latex
 html
-graph/
+graph/*
+!graph/deps.png
