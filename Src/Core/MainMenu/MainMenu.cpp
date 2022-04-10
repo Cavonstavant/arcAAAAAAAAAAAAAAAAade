@@ -219,7 +219,7 @@ void MainMenu::start()
 
 void MainMenu::getAllLibraries()
 {
-    const std::filesystem::path path{"./lib/"};
+    const std::filesystem::path path{"lib/"};
     std::string libName;
     void *libNameFct;
 
