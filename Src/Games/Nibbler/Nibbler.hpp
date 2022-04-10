@@ -75,7 +75,7 @@ class Nibbler : public IGame {
         /// \brief The game's speed multiplier
         float _speed;
         /// \brief The game's score
-        unsigned int _score;
+        int _score;
 
         /// \brief Get the elapsed time since the last update in milliseconds
         /// \return the elapsed time since the last update in milliseconds
