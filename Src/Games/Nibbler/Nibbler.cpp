@@ -127,6 +127,7 @@ void Nibbler::resetClock()
 
 void Nibbler::manageKeyEvent(Arcade::Evt &event, std::vector<std::shared_ptr<IEntity>> &entities)
 {
+    (void) entities;
     switch (event.key.key) {
         case 'Z':
             if (_lastDir != IEntity::Direction::DOWN)
