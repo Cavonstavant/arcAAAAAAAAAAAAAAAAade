@@ -195,11 +195,11 @@ class Core {
         /// \brief The current state of the core
         State _state;
 
-        void coreEventSwitchGame(const std::string &key);
+        void coreEventSwitchGame();
 
-        void coreEventSwitchGraph(const std::string &key);
+        void coreEventSwitchGraph();
 
-        void manageCoreKeyEvents(std::string &key);
+        void manageCoreKeyEvents();
 };
 
 #endif//ARCAAAAAAAAAAAAAAAAADE_CORE_HPP
