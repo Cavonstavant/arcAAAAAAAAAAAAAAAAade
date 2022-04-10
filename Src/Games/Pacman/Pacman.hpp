@@ -8,10 +8,10 @@
 #ifndef ARCADE_PACMAN_HPP
 #define ARCADE_PACMAN_HPP
 
-#include "IGame.hpp"
-#include "Event.hpp"
-#include "../Common/Player.hpp"
 #include "../Common/Enemy.hpp"
+#include "../Common/Player.hpp"
+#include "Event.hpp"
+#include "IGame.hpp"
 #include <chrono>
 
 #define MAP_HEIGHT 21
@@ -44,7 +44,7 @@ class Pacman : public IGame {
 
         /// \brief used to know the state of the game
         [[nodiscard]] GameState getState() const override;
-        void setState(GameState state);
+        void setState(GameState state) override;
 
         /// \brief Just turn the gameState to RUNNING
         void start() override;
@@ -140,4 +140,4 @@ class Pacman : public IGame {
         int getScore() const override;
 };
 
-#endif //ARCADE_PACMAN_HPP
+#endif//ARCADE_PACMAN_HPP

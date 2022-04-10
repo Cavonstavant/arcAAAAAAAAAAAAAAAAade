@@ -17,6 +17,7 @@
 #include "IGraph.hpp"
 #include "LibManager.hpp"
 #include "MainMenu/MainMenu.hpp"
+#include <filesystem>
 #include <vector>
 
 /// \brief Core class that the transfer of data between games and displays

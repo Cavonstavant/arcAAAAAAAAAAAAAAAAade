@@ -161,13 +161,15 @@ void Core::processEvents()
 
 void Core::setGame(const std::string &libPath)
 {
-    _libManager.closeLib(libPath);
+    //    if (_game)
+    //        _libManager.closeLib(libPath);
     _game = _libManager.openGame(libPath);
     _entities.clear();
 }
 
 void Core::setGraph(const std::string &libPath)
 {
-    _libManager.closeLib(libPath);
+    //    if (_graph)
+    //        _libManager.closeLib(libPath);
     _graph = _libManager.openGraph(libPath);
 }

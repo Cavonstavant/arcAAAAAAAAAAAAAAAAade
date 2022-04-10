@@ -38,14 +38,6 @@ void Pacman::createEntity(char symbol, std::vector<std::shared_ptr<IEntity>> &en
         std::shared_ptr<Object> obj = std::make_shared<Object>(AEntity::ENTITY_TYPE::WALL);
         obj->setPos(std::pair<int, int>{i, j});
         entities.push_back(obj);
-    } else if (symbol == '.') {
-        std::shared_ptr<Object> point = std::make_shared<Object>(AEntity::ENTITY_TYPE::POINT);
-        point->setPos(std::pair<int, int>{i, j});
-        entities.push_back(point);
-    } else if (symbol == 'B') {
-        std::shared_ptr<Object> point = std::make_shared<Object>(AEntity::ENTITY_TYPE::BONUS);
-        point->setPos(std::pair<int, int>{i, j});
-        entities.push_back(point);
     } else if (symbol == 'G') {
         Enemy enemy1;
         Enemy enemy2;
@@ -75,6 +67,14 @@ void Pacman::createEntity(char symbol, std::vector<std::shared_ptr<IEntity>> &en
         _player = std::make_shared<Player>(pacman);
         _player->setPos(std::pair<int, int>{i, j});
         entities.push_back(_player);
+    } else if (symbol == '.') {
+        std::shared_ptr<Object> point = std::make_shared<Object>(AEntity::ENTITY_TYPE::POINT);
+        point->setPos(std::pair<int, int>{i, j});
+        entities.push_back(point);
+    } else if (symbol == 'B') {
+        std::shared_ptr<Object> point = std::make_shared<Object>(AEntity::ENTITY_TYPE::BONUS);
+        point->setPos(std::pair<int, int>{i, j});
+        entities.push_back(point);
     }
 }
 
