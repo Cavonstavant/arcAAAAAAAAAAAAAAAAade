@@ -7,11 +7,11 @@
 
 #include "LibManager.hpp"
 #include "Exception.hpp"
+#include <algorithm>
 #include <filesystem>
 #include <fstream>
 #include <functional>
 #include <string>
-#include <algorithm>
 
 extern "C" {
 #include <dlfcn.h>
@@ -173,7 +173,8 @@ IGraph *LibManager::cycleGraphLibs(std::string &currentLib, bool direction)
     }
 }
 
-std::string LibManager::fetchLibPath(std::string name) {
+std::string LibManager::fetchLibPath(std::string name)
+{
     std::transform(name.begin(), name.end(), name.begin(), ::tolower);
     for (auto &gameLib: _gameLibsName)
         if (gameLib.find(name) != std::string::npos)

@@ -6,9 +6,9 @@
 */
 
 #include "Core.hpp"
-#include <iostream>
-#include <cctype>
 #include <algorithm>
+#include <cctype>
+#include <iostream>
 extern "C" {
 #include <dlfcn.h>
 }
