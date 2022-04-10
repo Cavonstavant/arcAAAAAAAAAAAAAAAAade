@@ -13,7 +13,6 @@ extern "C" {
 #include <dlfcn.h>
 }
 
-
 int main(int ac, char **av)
 {
     std::vector<std::string> libsPath;
