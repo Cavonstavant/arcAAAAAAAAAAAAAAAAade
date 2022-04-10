@@ -271,19 +271,20 @@ $(document).ready(function(){initNavTree('_core_8cpp_source.html',''); initResiz
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="keywordflow">if</span> (!_futureGraph.empty())</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        _entities.clear();</div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    _game-&gt;<a class="code" href="class_i_game.html#a7cd2c70ae9eb419516d263363eb2b3d2">init</a>(_entities);</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;}</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
-<div class="line"><a name="l00188"></a><span class="lineno"><a class="line" href="class_core.html#aaf3f3be3f9d1cfb2a895d6350b629809">  188</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_core.html#affbb83953ccca049ff375a18995dab7b">Core::setGraph</a>(<span class="keyword">const</span> std::string &amp;lib)</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;{</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keywordflow">if</span> (_graph) {</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        _graph-&gt;<a class="code" href="class_i_graph.html#ab4877a54bbdbd2663e94309d260e064b">close</a>();</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        _libManager.<a class="code" href="class_lib_manager.html#a3d89f7b1518d47cdd8a0bf786b8dec44">closeLib</a>(_libManager.<a class="code" href="class_lib_manager.html#acdbf2b5396f6cc619a11c26f7bb401d2">fetchLibPath</a>(_graph-&gt;<a class="code" href="class_i_graph.html#a37b6f2993125bbbb12007714668eb026">getLibraryName</a>()));</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    }</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    _graph = _libManager.<a class="code" href="class_lib_manager.html#aed05c82bbedace1a4997fcd232124188">openGraph</a>(lib);</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    _graph-&gt;<a class="code" href="class_i_graph.html#a047bb5222ba4ac156f057b65ff36ef1c">init</a>();</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    _graph-&gt;<a class="code" href="class_i_graph.html#ad093f704c4f0c13bc42ca4e494b76d20">clearWindow</a>();</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    _graph-&gt;<a class="code" href="class_i_graph.html#a703f8faaae8cb3b339b8686e5f442f81">displayWindow</a>();</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;}</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    _game-&gt;<a class="code" href="class_i_game.html#abdc3543ee754cecb7eb156f05ce5869d">start</a>();</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;}</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160; </div>
+<div class="line"><a name="l00189"></a><span class="lineno"><a class="line" href="class_core.html#aaf3f3be3f9d1cfb2a895d6350b629809">  189</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_core.html#affbb83953ccca049ff375a18995dab7b">Core::setGraph</a>(<span class="keyword">const</span> std::string &amp;lib)</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;{</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="keywordflow">if</span> (_graph) {</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        _graph-&gt;<a class="code" href="class_i_graph.html#ab4877a54bbdbd2663e94309d260e064b">close</a>();</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        _libManager.<a class="code" href="class_lib_manager.html#a3d89f7b1518d47cdd8a0bf786b8dec44">closeLib</a>(_libManager.<a class="code" href="class_lib_manager.html#acdbf2b5396f6cc619a11c26f7bb401d2">fetchLibPath</a>(_graph-&gt;<a class="code" href="class_i_graph.html#a37b6f2993125bbbb12007714668eb026">getLibraryName</a>()));</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    }</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    _graph = _libManager.<a class="code" href="class_lib_manager.html#aed05c82bbedace1a4997fcd232124188">openGraph</a>(lib);</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    _graph-&gt;<a class="code" href="class_i_graph.html#a047bb5222ba4ac156f057b65ff36ef1c">init</a>();</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    _graph-&gt;<a class="code" href="class_i_graph.html#ad093f704c4f0c13bc42ca4e494b76d20">clearWindow</a>();</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    _graph-&gt;<a class="code" href="class_i_graph.html#a703f8faaae8cb3b339b8686e5f442f81">displayWindow</a>();</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclass_lib_manager_html_a3d89f7b1518d47cdd8a0bf786b8dec44"><div class="ttname"><a href="class_lib_manager.html#a3d89f7b1518d47cdd8a0bf786b8dec44">LibManager::closeLib</a></div><div class="ttdeci">void closeLib(const std::string &amp;libPath)</div><div class="ttdoc">Closes a shared library.</div><div class="ttdef"><b>Definition:</b> <a href="_lib_manager_8cpp_source.html#l00062">LibManager.cpp:62</a></div></div>
