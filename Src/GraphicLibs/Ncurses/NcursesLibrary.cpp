@@ -18,6 +18,7 @@ NcursesLibrary::~NcursesLibrary()
 void NcursesLibrary::init()
 {
     initscr();
+    start_color();
     curs_set(0);
 }
 
@@ -67,8 +68,14 @@ bool NcursesLibrary::drawRect(std::pair<int, int> pos, int width, int height, Co
 
 bool NcursesLibrary::drawText(std::pair<int, int> pos, const std::string &content, Color color)
 {
+    init_pair(1, color.TF, color.TB);
+    attron(COLOR_PAIR(1));
+
     move(pos.first, pos.second);
     printw(content.c_str());
+
+    attroff(COLOR_PAIR(1));
+    reset_color_pairs();
     return true;
 }
 
