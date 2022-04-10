@@ -23,6 +23,14 @@ for the JavaScript code in this file
 var NAVTREE =
 [
   [ "arcAAAAAAAAAAAAAAAAade", "index.html", [
+    [ "Documentation", "index.html#autotoc_md1", null ],
+    [ "Build", "index.html#autotoc_md2", [
+      [ "Tools", "index.html#autotoc_md3", null ],
+      [ "Building", "index.html#autotoc_md4", null ]
+    ] ],
+    [ "Misc", "index.html#autotoc_md5", [
+      [ "Graphs", "index.html#autotoc_md6", null ]
+    ] ],
     [ "Deprecated List", "deprecated.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
