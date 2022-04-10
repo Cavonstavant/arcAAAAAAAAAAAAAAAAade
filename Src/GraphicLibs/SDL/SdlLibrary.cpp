@@ -143,238 +143,238 @@ Arcade::Evt SdlLibrary::getInput()
             keyEvt.state = true;
             keyEvt.modifier = Arcade::Evt::KEY_MODIFIER_NONE;
             switch (event.key.keysym.sym) {
-                case SDLK_LEFT:
-                    keyEvt.key = 'Q';
-                    evt.key = keyEvt;
-                    evt.evt_type = Arcade::Evt::KEY;
-                    break;
-                case SDLK_RIGHT:
-                    keyEvt.key = 'D';
-                    evt.key = keyEvt;
-                    evt.evt_type = Arcade::Evt::KEY;
-                    break;
-                case SDLK_DOWN:
-                    keyEvt.key = 'S';
-                    evt.key = keyEvt;
-                    evt.evt_type = Arcade::Evt::KEY;
-                    break;
-                case SDLK_UP:
-                    keyEvt.key = 'Z';
-                    evt.key = keyEvt;
-                    evt.evt_type = Arcade::Evt::KEY;
-                    break;
-                case SDLK_SPACE:
-                    keyEvt.key = ' ';
-                    evt.key = keyEvt;
-                    evt.evt_type = Arcade::Evt::KEY;
-                    break;
-                case SDLK_BACKSPACE:
-                    keyEvt.key = '\b';
-                    evt.key = keyEvt;
-                    evt.evt_type = Arcade::Evt::KEY;
-                    break;
-                case SDLK_RETURN:
-                    keyEvt.key = '\n';
-                    evt.key = keyEvt;
-                    evt.evt_type = Arcade::Evt::KEY;
-                    break;
-                case SDLK_ESCAPE:
-                    keyEvt.key = 27;
-                    evt.key = keyEvt;
-                    evt.evt_type = Arcade::Evt::KEY;
-                    break;
-                case SDLK_a:
-                    keyEvt.key = 'a';
-                    evt.key = keyEvt;
-                    evt.evt_type = Arcade::Evt::KEY;
-                    break;
-                case SDLK_b:
-                    keyEvt.key = 'b';
-                    evt.key = keyEvt;
-                    evt.evt_type = Arcade::Evt::KEY;
-                    break;
-                case SDLK_c:
-                    keyEvt.key = 'c';
-                    evt.key = keyEvt;
-                    evt.evt_type = Arcade::Evt::KEY;
-                    break;
-                case SDLK_d:
-                    keyEvt.key = 'd';
-                    evt.key = keyEvt;
-                    evt.evt_type = Arcade::Evt::KEY;
-                    break;
-                case SDLK_e:
-                    keyEvt.key = 'e';
-                    evt.key = keyEvt;
-                    evt.evt_type = Arcade::Evt::KEY;
-                    break;
-                case SDLK_f:
-                    keyEvt.key = 'f';
-                    evt.key = keyEvt;
-                    evt.evt_type = Arcade::Evt::KEY;
-                    break;
-                case SDLK_g:
-                    keyEvt.key = 'g';
-                    evt.key = keyEvt;
-                    evt.evt_type = Arcade::Evt::KEY;
-                    break;
-                case SDLK_h:
-                    keyEvt.key = 'h';
-                    evt.key = keyEvt;
-                    evt.evt_type = Arcade::Evt::KEY;
-                    break;
-                case SDLK_i:
-                    keyEvt.key = 'i';
-                    evt.key = keyEvt;
-                    evt.evt_type = Arcade::Evt::KEY;
-                    break;
-                case SDLK_j:
-                    keyEvt.key = 'j';
-                    evt.key = keyEvt;
-                    evt.evt_type = Arcade::Evt::KEY;
-                    break;
-                case SDLK_k:
-                    keyEvt.key = 'k';
-                    evt.key = keyEvt;
-                    evt.evt_type = Arcade::Evt::KEY;
-                    break;
-                case SDLK_l:
-                    keyEvt.key = 'l';
-                    evt.key = keyEvt;
-                    evt.evt_type = Arcade::Evt::KEY;
-                    break;
-                case SDLK_m:
-                    keyEvt.key = 'm';
-                    evt.key = keyEvt;
-                    evt.evt_type = Arcade::Evt::KEY;
-                    break;
-                case SDLK_n:
-                    keyEvt.key = 'N';
-                    evt.key = keyEvt;
-                    evt.evt_type = Arcade::Evt::KEY;
-                    break;
-                case SDLK_o:
-                    keyEvt.key = 'o';
-                    evt.key = keyEvt;
-                    evt.evt_type = Arcade::Evt::KEY;
-                    break;
-                case SDLK_p:
-                    keyEvt.key = 'p';
-                    evt.key = keyEvt;
-                    evt.evt_type = Arcade::Evt::KEY;
-                    break;
-                case SDLK_q:
-                    keyEvt.key = 'q';
-                    evt.key = keyEvt;
-                    evt.evt_type = Arcade::Evt::KEY;
-                    break;
-                case SDLK_r:
-                    keyEvt.key = 'r';
-                    evt.key = keyEvt;
-                    evt.evt_type = Arcade::Evt::KEY;
-                    break;
-                case SDLK_s:
-                    keyEvt.key = 's';
-                    evt.key = keyEvt;
-                    evt.evt_type = Arcade::Evt::KEY;
-                    break;
-                case SDLK_t:
-                    keyEvt.key = 't';
-                    evt.key = keyEvt;
-                    evt.evt_type = Arcade::Evt::KEY;
-                    break;
-                case SDLK_u:
-                    keyEvt.key = 'u';
-                    evt.key = keyEvt;
-                    evt.evt_type = Arcade::Evt::KEY;
-                    break;
-                case SDLK_v:
-                    keyEvt.key = 'v';
-                    evt.key = keyEvt;
-                    evt.evt_type = Arcade::Evt::KEY;
-                    break;
-                case SDLK_w:
-                    keyEvt.key = 'w';
-                    evt.key = keyEvt;
-                    evt.evt_type = Arcade::Evt::KEY;
-                    break;
-                case SDLK_x:
-                    keyEvt.key = 'x';
-                    evt.key = keyEvt;
-                    evt.evt_type = Arcade::Evt::KEY;
-                    break;
-                case SDLK_y:
-                    keyEvt.key = 'y';
-                    evt.key = keyEvt;
-                    evt.evt_type = Arcade::Evt::KEY;
-                    break;
-                case SDLK_z:
-                    keyEvt.key = 'z';
-                    evt.key = keyEvt;
-                    evt.evt_type = Arcade::Evt::KEY;
-                    break;
-                case SDLK_KP_0:
-                case SDLK_0:
-                    keyEvt.key = '0';
-                    evt.key = keyEvt;
-                    evt.evt_type = Arcade::Evt::KEY;
-                    break;
-                case SDLK_KP_1:
-                case SDLK_1:
-                    keyEvt.key = '1';
-                    evt.key = keyEvt;
-                    evt.evt_type = Arcade::Evt::KEY;
-                    break;
-                case SDLK_KP_2:
-                case SDLK_2:
-                    evt.evt_type = Arcade::Evt::KEY;
-                    keyEvt.key = '2';
-                    evt.key = keyEvt;
-                    break;
-                case SDLK_KP_3:
-                case SDLK_3:
-                    evt.evt_type = Arcade::Evt::KEY;
-                    keyEvt.key = '3';
-                    evt.key = keyEvt;
-                    break;
-                case SDLK_KP_4:
-                case SDLK_4:
-                    evt.evt_type = Arcade::Evt::KEY;
-                    keyEvt.key = '4';
-                    evt.key = keyEvt;
-                    break;
-                case SDLK_KP_5:
-                case SDLK_5:
-                    evt.evt_type = Arcade::Evt::KEY;
-                    keyEvt.key = '5';
-                    evt.key = keyEvt;
-                    break;
-                case SDLK_KP_6:
-                case SDLK_6:
-                    evt.evt_type = Arcade::Evt::KEY;
-                    keyEvt.key = '6';
-                    evt.key = keyEvt;
-                    break;
-                case SDLK_KP_7:
-                case SDLK_7:
-                    evt.evt_type = Arcade::Evt::KEY;
-                    keyEvt.key = '7';
-                    evt.key = keyEvt;
-                    break;
-                case SDLK_KP_8:
-                case SDLK_8:
-                    evt.evt_type = Arcade::Evt::KEY;
-                    keyEvt.key = '8';
-                    evt.key = keyEvt;
-                    break;
-                case SDLK_KP_9:
-                case SDLK_9:
-                    evt.evt_type = Arcade::Evt::KEY;
-                    keyEvt.key = '9';
-                    evt.key = keyEvt;
-                    break;
-                default:
-                    break;
+            case SDLK_LEFT:
+                keyEvt.key = 'Q';
+                evt.key = keyEvt;
+                evt.evt_type = Arcade::Evt::KEY;
+                break;
+            case SDLK_RIGHT:
+                keyEvt.key = 'D';
+                evt.key = keyEvt;
+                evt.evt_type = Arcade::Evt::KEY;
+                break;
+            case SDLK_DOWN:
+                keyEvt.key = 'S';
+                evt.key = keyEvt;
+                evt.evt_type = Arcade::Evt::KEY;
+                break;
+            case SDLK_UP:
+                keyEvt.key = 'Z';
+                evt.key = keyEvt;
+                evt.evt_type = Arcade::Evt::KEY;
+                break;
+            case SDLK_SPACE:
+                keyEvt.key = ' ';
+                evt.key = keyEvt;
+                evt.evt_type = Arcade::Evt::KEY;
+                break;
+            case SDLK_BACKSPACE:
+                keyEvt.key = '\b';
+                evt.key = keyEvt;
+                evt.evt_type = Arcade::Evt::KEY;
+                break;
+            case SDLK_RETURN:
+                keyEvt.key = '\n';
+                evt.key = keyEvt;
+                evt.evt_type = Arcade::Evt::KEY;
+                break;
+            case SDLK_ESCAPE:
+                keyEvt.key = 27;
+                evt.key = keyEvt;
+                evt.evt_type = Arcade::Evt::KEY;
+                break;
+            case SDLK_a:
+                keyEvt.key = 'a';
+                evt.key = keyEvt;
+                evt.evt_type = Arcade::Evt::KEY;
+                break;
+            case SDLK_b:
+                keyEvt.key = 'b';
+                evt.key = keyEvt;
+                evt.evt_type = Arcade::Evt::KEY;
+                break;
+            case SDLK_c:
+                keyEvt.key = 'c';
+                evt.key = keyEvt;
+                evt.evt_type = Arcade::Evt::KEY;
+                break;
+            case SDLK_d:
+                keyEvt.key = 'd';
+                evt.key = keyEvt;
+                evt.evt_type = Arcade::Evt::KEY;
+                break;
+            case SDLK_e:
+                keyEvt.key = 'e';
+                evt.key = keyEvt;
+                evt.evt_type = Arcade::Evt::KEY;
+                break;
+            case SDLK_f:
+                keyEvt.key = 'f';
+                evt.key = keyEvt;
+                evt.evt_type = Arcade::Evt::KEY;
+                break;
+            case SDLK_g:
+                keyEvt.key = 'g';
+                evt.key = keyEvt;
+                evt.evt_type = Arcade::Evt::KEY;
+                break;
+            case SDLK_h:
+                keyEvt.key = 'h';
+                evt.key = keyEvt;
+                evt.evt_type = Arcade::Evt::KEY;
+                break;
+            case SDLK_i:
+                keyEvt.key = 'i';
+                evt.key = keyEvt;
+                evt.evt_type = Arcade::Evt::KEY;
+                break;
+            case SDLK_j:
+                keyEvt.key = 'j';
+                evt.key = keyEvt;
+                evt.evt_type = Arcade::Evt::KEY;
+                break;
+            case SDLK_k:
+                keyEvt.key = 'k';
+                evt.key = keyEvt;
+                evt.evt_type = Arcade::Evt::KEY;
+                break;
+            case SDLK_l:
+                keyEvt.key = 'l';
+                evt.key = keyEvt;
+                evt.evt_type = Arcade::Evt::KEY;
+                break;
+            case SDLK_m:
+                keyEvt.key = 'm';
+                evt.key = keyEvt;
+                evt.evt_type = Arcade::Evt::KEY;
+                break;
+            case SDLK_n:
+                keyEvt.key = 'N';
+                evt.key = keyEvt;
+                evt.evt_type = Arcade::Evt::KEY;
+                break;
+            case SDLK_o:
+                keyEvt.key = 'o';
+                evt.key = keyEvt;
+                evt.evt_type = Arcade::Evt::KEY;
+                break;
+            case SDLK_p:
+                keyEvt.key = 'p';
+                evt.key = keyEvt;
+                evt.evt_type = Arcade::Evt::KEY;
+                break;
+            case SDLK_q:
+                keyEvt.key = 'q';
+                evt.key = keyEvt;
+                evt.evt_type = Arcade::Evt::KEY;
+                break;
+            case SDLK_r:
+                keyEvt.key = 'r';
+                evt.key = keyEvt;
+                evt.evt_type = Arcade::Evt::KEY;
+                break;
+            case SDLK_s:
+                keyEvt.key = 's';
+                evt.key = keyEvt;
+                evt.evt_type = Arcade::Evt::KEY;
+                break;
+            case SDLK_t:
+                keyEvt.key = 't';
+                evt.key = keyEvt;
+                evt.evt_type = Arcade::Evt::KEY;
+                break;
+            case SDLK_u:
+                keyEvt.key = 'u';
+                evt.key = keyEvt;
+                evt.evt_type = Arcade::Evt::KEY;
+                break;
+            case SDLK_v:
+                keyEvt.key = 'v';
+                evt.key = keyEvt;
+                evt.evt_type = Arcade::Evt::KEY;
+                break;
+            case SDLK_w:
+                keyEvt.key = 'w';
+                evt.key = keyEvt;
+                evt.evt_type = Arcade::Evt::KEY;
+                break;
+            case SDLK_x:
+                keyEvt.key = 'x';
+                evt.key = keyEvt;
+                evt.evt_type = Arcade::Evt::KEY;
+                break;
+            case SDLK_y:
+                keyEvt.key = 'y';
+                evt.key = keyEvt;
+                evt.evt_type = Arcade::Evt::KEY;
+                break;
+            case SDLK_z:
+                keyEvt.key = 'z';
+                evt.key = keyEvt;
+                evt.evt_type = Arcade::Evt::KEY;
+                break;
+            case SDLK_KP_0:
+            case SDLK_0:
+                keyEvt.key = '0';
+                evt.key = keyEvt;
+                evt.evt_type = Arcade::Evt::KEY;
+                break;
+            case SDLK_KP_1:
+            case SDLK_1:
+                keyEvt.key = '1';
+                evt.key = keyEvt;
+                evt.evt_type = Arcade::Evt::KEY;
+                break;
+            case SDLK_KP_2:
+            case SDLK_2:
+                evt.evt_type = Arcade::Evt::KEY;
+                keyEvt.key = '2';
+                evt.key = keyEvt;
+                break;
+            case SDLK_KP_3:
+            case SDLK_3:
+                evt.evt_type = Arcade::Evt::KEY;
+                keyEvt.key = '3';
+                evt.key = keyEvt;
+                break;
+            case SDLK_KP_4:
+            case SDLK_4:
+                evt.evt_type = Arcade::Evt::KEY;
+                keyEvt.key = '4';
+                evt.key = keyEvt;
+                break;
+            case SDLK_KP_5:
+            case SDLK_5:
+                evt.evt_type = Arcade::Evt::KEY;
+                keyEvt.key = '5';
+                evt.key = keyEvt;
+                break;
+            case SDLK_KP_6:
+            case SDLK_6:
+                evt.evt_type = Arcade::Evt::KEY;
+                keyEvt.key = '6';
+                evt.key = keyEvt;
+                break;
+            case SDLK_KP_7:
+            case SDLK_7:
+                evt.evt_type = Arcade::Evt::KEY;
+                keyEvt.key = '7';
+                evt.key = keyEvt;
+                break;
+            case SDLK_KP_8:
+            case SDLK_8:
+                evt.evt_type = Arcade::Evt::KEY;
+                keyEvt.key = '8';
+                evt.key = keyEvt;
+                break;
+            case SDLK_KP_9:
+            case SDLK_9:
+                evt.evt_type = Arcade::Evt::KEY;
+                keyEvt.key = '9';
+                evt.key = keyEvt;
+                break;
+            default:
+                break;
             }
         }
     }
