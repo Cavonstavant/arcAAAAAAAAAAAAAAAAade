@@ -25,6 +25,8 @@ Core::Core(std::vector<std::string> libsPath)
     _graph->init();
     _game->start();
     _state = State::MAIN_MENU;
+    _futureGame = "";
+    _futureGraph = "";
 }
 
 void Core::addEntity(const std::shared_ptr<IEntity>& entity)
@@ -99,6 +101,8 @@ void Core::draw() {
 void Core::processEvents() {
     if (_event.empty())
         return;
+    if (!_event.empty() && _event.top().evt_type == Arcade::Evt::EvtType::KEY)
+        return;
     if (_event.top().evt_type == Arcade::Evt::WIN_CLOSE) {
         if (_state == State::MAIN_MENU) {
             _mainMenu.close(_entities);
@@ -143,6 +147,18 @@ void Core::processEvents() {
             _event.pop();
             return;
         }
-        manageCoreKeyEvents(reinterpret_cast<std::string &>(_event.top().key.key), _game, _graph, &_libManager);
+        manageCoreKeyEvents(reinterpret_cast<std::string &>(_event.top().key.key));
+        _event.pop();
     }
+}
+
+void Core::setGame(const std::string &libPath) {
+    _libManager.closeLib(libPath);
+    _game = _libManager.openGame(libPath);
+    _entities.clear();
+}
+
+void Core::setGraph(const std::string &libPath) {
+    _libManager.closeLib(libPath);
+    _graph = _libManager.openGraph(libPath);
 }
