@@ -73,7 +73,7 @@ class Pacman : public IGame {
         std::chrono::high_resolution_clock::time_point _bonusClock;
 
         /// \brief The score of the game the player is currently playing
-        unsigned int _score{};
+        int _score{};
 
         /// \brief Boolean to know if the player lose or not
         bool _isGameOver;
