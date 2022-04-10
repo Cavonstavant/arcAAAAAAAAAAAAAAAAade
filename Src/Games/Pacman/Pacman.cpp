@@ -16,6 +16,7 @@
 void Pacman::init(std::vector<std::shared_ptr<IEntity>> &entities)
 {
     loadMap();
+    entities.clear();
     _clock = std::chrono::high_resolution_clock::now();
     _iaClock = std::chrono::high_resolution_clock::now();
     _gameState = GameState::LOADED;
@@ -129,6 +130,7 @@ void Pacman::update(std::vector<std::shared_ptr<IEntity>> &entities, std::stack<
     std::uniform_int_distribution<std::mt19937::result_type> dist4(0, 3);
     const std::string sickEnemyTexturePath = "Src/Games/Pacman/Resources/textures/enemySick.png";
     const std::string EnemyTexturePath = "Src/Games/Pacman/Resources/textures/enemy.png";
+    bool victory = true;
 
     if (std::chrono::duration_cast<std::chrono::seconds>(std::chrono::high_resolution_clock::now() - _bonusClock).count() > 10) {
         _enemies[0]->setEnrage(true);
@@ -178,6 +180,7 @@ void Pacman::update(std::vector<std::shared_ptr<IEntity>> &entities, std::stack<
         if (i->get()->getPos() == _player->getPos() && (i->get()->getType() == IEntity::POINT)) {
             entities.erase(i);
             _score += 1;
+            victory = false;
         }
         if (i->get()->getPos() == _player->getPos() && i->get()->getType() == IEntity::BONUS) {
             _enemies[0]->setEnrage(false);
@@ -191,6 +194,7 @@ void Pacman::update(std::vector<std::shared_ptr<IEntity>> &entities, std::stack<
             _enemies[2]->setTermTexture('g', Color::TermColors::BLUE, Color::TermColors::BLACK);
             _bonusClock = std::chrono::high_resolution_clock::now();
             entities.erase(i);
+            victory = false;
         }
         if (dynamic_cast<Enemy *>(i->get()))
             if (i->get()->getPos() == _player->getPos() && i->get()->getType() == IEntity::ENEMY) {
@@ -203,6 +207,8 @@ void Pacman::update(std::vector<std::shared_ptr<IEntity>> &entities, std::stack<
                 }
             }
     }
+    if (victory)
+        init(entities);
 }
 
 std::string Pacman::getLibraryName() const
@@ -245,7 +251,6 @@ bool Pacman::moveLeft(Arcade::Evt input)
 
 void Pacman::close(std::vector<std::shared_ptr<IEntity>> &entities)
 {
-    _gameState = IGame::GameState::STOPPED;
     entities.clear();
 }
 
@@ -323,6 +328,7 @@ bool Pacman::nextToTheWall(Player::Direction direction, int index)
 
 void Pacman::setIsGameOver(bool isGameOver)
 {
+    _gameState = IGame::GameState::STOPPED;
     _isGameOver = isGameOver;
 }
 
