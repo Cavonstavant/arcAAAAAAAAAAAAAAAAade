@@ -36,6 +36,8 @@ class MainMenu : public IGame {
         void start() override;
         /// \brief Get the menu's name
         [[nodiscard]] std::string getLibraryName() const final;
+        bool getIsGameOver() override;
+        int getScore() const override;
 
     protected:
     private:
