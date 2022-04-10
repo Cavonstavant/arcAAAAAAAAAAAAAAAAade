@@ -28,6 +28,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">arcAAAAAAAAAAAAAAAAade
    </div>
+   <div id="projectbrief">An arcade emulator that manage games and graphical display separatly</div>
   </td>
  </tr>
  </tbody>
@@ -93,39 +94,41 @@ $(document).ready(function(){initNavTree('_player_8hpp_source.html',''); initRes
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">** Created by hjulien,</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">*/</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef ARCADE_PLAYER_HPP</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define ARCADE_PLAYER_HPP</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_a_entity_8hpp.html">AEntity.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifndef ARCADE_PLAYER_HPP</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define ARCADE_PLAYER_HPP</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_player.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_player.html">Player</a> : <span class="keyword">public</span> <a class="code" href="class_a_entity.html">AEntity</a> {</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <a class="code" href="class_player.html#affe0cc3cb714f6deb4e62f0c0d3f1fd8">Player</a>();</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <a class="code" href="class_player.html#a749d2c00e1fe0f5c2746f7505a58c062">~Player</a>();</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_player.html#a362d0e74f9cd4daf84faee36be1fffd8">setIsMoving</a>(<span class="keywordtype">bool</span> isMoving) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_player.html#a858b0644480fbc9f4e473c58b7c82b5c">getIsMoving</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_player.html#ab2d62dec653793f9ef33073f73050b60">setBoosted</a>(<span class="keyword">const</span> <span class="keywordtype">bool</span> boosted);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_player.html#ab8a6fa5f22f2fbfc5f24201dd5915e46">getBoosted</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordtype">bool</span> _boosted{};</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;};</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#endif//ARCADE_PLAYER_HPP</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_a_entity_8hpp.html">AEntity.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_player.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_player.html">Player</a> : <span class="keyword">public</span> <a class="code" href="class_a_entity.html">AEntity</a> {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <a class="code" href="class_player.html#affe0cc3cb714f6deb4e62f0c0d3f1fd8">Player</a>();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="class_player.html#a749d2c00e1fe0f5c2746f7505a58c062">~Player</a>();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_player.html#a362d0e74f9cd4daf84faee36be1fffd8">setIsMoving</a>(<span class="keywordtype">bool</span> isMoving) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_player.html#a858b0644480fbc9f4e473c58b7c82b5c">getIsMoving</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_player.html#ab2d62dec653793f9ef33073f73050b60">setBoosted</a>(<span class="keyword">const</span> <span class="keywordtype">bool</span> boosted);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_player.html#ab8a6fa5f22f2fbfc5f24201dd5915e46">getBoosted</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_player.html#a796f51664afc8bba919c4bcb16a1f430">   37</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_player.html#a796f51664afc8bba919c4bcb16a1f430">_boosted</a>{};</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;};</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#endif//ARCADE_PLAYER_HPP</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclass_a_entity_html"><div class="ttname"><a href="class_a_entity.html">AEntity</a></div><div class="ttdoc">Entity Abstract class.</div><div class="ttdef"><b>Definition:</b> <a href="_a_entity_8hpp_source.html#l00015">AEntity.hpp:15</a></div></div>
+<div class="ttc" id="aclass_a_entity_html"><div class="ttname"><a href="class_a_entity.html">AEntity</a></div><div class="ttdoc">Entity Abstract class.</div><div class="ttdef"><b>Definition:</b> <a href="_a_entity_8hpp_source.html#l00017">AEntity.hpp:17</a></div></div>
 <div class="ttc" id="aclass_player_html_affe0cc3cb714f6deb4e62f0c0d3f1fd8"><div class="ttname"><a href="class_player.html#affe0cc3cb714f6deb4e62f0c0d3f1fd8">Player::Player</a></div><div class="ttdeci">Player()</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> <a href="_player_8cpp_source.html#l00010">Player.cpp:10</a></div></div>
 <div class="ttc" id="aclass_player_html_a858b0644480fbc9f4e473c58b7c82b5c"><div class="ttname"><a href="class_player.html#a858b0644480fbc9f4e473c58b7c82b5c">Player::getIsMoving</a></div><div class="ttdeci">bool getIsMoving() const override</div><div class="ttdoc">Get the Entity boolean _isMoving.</div><div class="ttdef"><b>Definition:</b> <a href="_player_8cpp_source.html#l00023">Player.cpp:23</a></div></div>
 <div class="ttc" id="aclass_player_html_ab2d62dec653793f9ef33073f73050b60"><div class="ttname"><a href="class_player.html#ab2d62dec653793f9ef33073f73050b60">Player::setBoosted</a></div><div class="ttdeci">void setBoosted(const bool boosted)</div><div class="ttdoc">Set the Entity boolean _boosted.</div><div class="ttdef"><b>Definition:</b> <a href="_player_8cpp_source.html#l00028">Player.cpp:28</a></div></div>
 <div class="ttc" id="a_a_entity_8hpp_html"><div class="ttname"><a href="_a_entity_8hpp.html">AEntity.hpp</a></div></div>
+<div class="ttc" id="aclass_player_html_a796f51664afc8bba919c4bcb16a1f430"><div class="ttname"><a href="class_player.html#a796f51664afc8bba919c4bcb16a1f430">Player::_boosted</a></div><div class="ttdeci">bool _boosted</div><div class="ttdef"><b>Definition:</b> <a href="_player_8hpp_source.html#l00037">Player.hpp:37</a></div></div>
 <div class="ttc" id="aclass_player_html_a362d0e74f9cd4daf84faee36be1fffd8"><div class="ttname"><a href="class_player.html#a362d0e74f9cd4daf84faee36be1fffd8">Player::setIsMoving</a></div><div class="ttdeci">void setIsMoving(bool isMoving) override</div><div class="ttdoc">Set the Entity boolean _isMoving.</div><div class="ttdef"><b>Definition:</b> <a href="_player_8cpp_source.html#l00018">Player.cpp:18</a></div></div>
 <div class="ttc" id="aclass_player_html_ab8a6fa5f22f2fbfc5f24201dd5915e46"><div class="ttname"><a href="class_player.html#ab8a6fa5f22f2fbfc5f24201dd5915e46">Player::getBoosted</a></div><div class="ttdeci">bool getBoosted() const</div><div class="ttdoc">Get the Entity boolean _boosted.</div><div class="ttdef"><b>Definition:</b> <a href="_player_8cpp_source.html#l00033">Player.cpp:33</a></div></div>
 <div class="ttc" id="aclass_player_html_a749d2c00e1fe0f5c2746f7505a58c062"><div class="ttname"><a href="class_player.html#a749d2c00e1fe0f5c2746f7505a58c062">Player::~Player</a></div><div class="ttdeci">~Player()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition:</b> <a href="_player_8cpp_source.html#l00014">Player.cpp:14</a></div></div>
-<div class="ttc" id="aclass_player_html"><div class="ttname"><a href="class_player.html">Player</a></div><div class="ttdoc">Player class inherits from AEntity.</div><div class="ttdef"><b>Definition:</b> <a href="_player_8hpp_source.html#l00015">Player.hpp:15</a></div></div>
+<div class="ttc" id="aclass_player_html"><div class="ttname"><a href="class_player.html">Player</a></div><div class="ttdoc">Player class inherits from AEntity.</div><div class="ttdef"><b>Definition:</b> <a href="_player_8hpp_source.html#l00017">Player.hpp:17</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

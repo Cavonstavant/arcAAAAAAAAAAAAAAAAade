@@ -13,5 +13,10 @@ var class_text_entity =
     [ "setFontSize", "class_text_entity.html#aa17fd9c1d39e70866cf5f86aa00f0468", null ],
     [ "setIsMoving", "class_text_entity.html#afe7c6a2b4bd322552dda5a1941600c90", null ],
     [ "setOutlineColor", "class_text_entity.html#a60f98740b789eb137e433539e50bbfac", null ],
-    [ "setText", "class_text_entity.html#a2795b78254841d900aacab01fa3b6ee5", null ]
+    [ "setText", "class_text_entity.html#a2795b78254841d900aacab01fa3b6ee5", null ],
+    [ "_color", "class_text_entity.html#a876a616c6a1f2d22dddb7ea5ae9384e8", null ],
+    [ "_fontPath", "class_text_entity.html#a459096f971fe072712a24fd0fb1e6dc0", null ],
+    [ "_fontSize", "class_text_entity.html#a19ae0354a135f30d0da512edbcc880a8", null ],
+    [ "_outlineColor", "class_text_entity.html#aac7b7e47497e8d7cf2bf49a12c9ff1c0", null ],
+    [ "_text", "class_text_entity.html#acdd1f28e6998cda8ba6d00048d87b648", null ]
 ];

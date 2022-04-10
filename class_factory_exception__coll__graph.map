@@ -1,5 +1,5 @@
 <map id="FactoryException" name="FactoryException">
 <area shape="rect" id="node1" title="Exception class for the factory." alt="" coords="5,155,139,181"/>
-<area shape="rect" id="node2" href="$class_arcade_exception.html" title=" " alt="" coords="7,80,137,107"/>
+<area shape="rect" id="node2" href="$class_arcade_exception.html" title="Base exception class for all exceptions in the project." alt="" coords="7,80,137,107"/>
 <area shape="rect" id="node3" title=" " alt="" coords="15,5,129,32"/>
 </map>

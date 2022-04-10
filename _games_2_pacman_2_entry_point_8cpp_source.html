@@ -28,6 +28,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">arcAAAAAAAAAAAAAAAAade
    </div>
+   <div id="projectbrief">An arcade emulator that manage games and graphical display separatly</div>
   </td>
  </tr>
  </tbody>
@@ -99,22 +100,22 @@ $(document).ready(function(){initNavTree('_games_2_pacman_2_entry_point_8cpp_sou
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_arcade.html">Arcade</a> {</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">static</span> <a class="code" href="class_i_game.html">IGame</a> *GAME_INSTANCE = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="namespace_arcade.html#a0d207e1b255986cbb9dde6b192e0dcc2">   14</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="class_i_game.html">IGame</a> *<a class="code" href="namespace_arcade.html#a0d207e1b255986cbb9dde6b192e0dcc2">GAME_INSTANCE</a> = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> <a class="code" href="class_i_game.html">IGame</a> *<a class="code" href="namespace_arcade.html#a1204ecdd24dfbe24d33792dd060cb2ec">getGameInstance</a>()</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    {</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keywordflow">return</span> GAME_INSTANCE;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="namespace_arcade.html#a0d207e1b255986cbb9dde6b192e0dcc2">GAME_INSTANCE</a>;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    }</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    [[gnu::constructor]] <span class="keywordtype">void</span> <a class="code" href="namespace_arcade.html#ad87e24468d19c08ceff1e079301dded4">libConstruct</a>()</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    {</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        GAME_INSTANCE = <span class="keyword">new</span> <a class="code" href="class_pacman.html">Pacman</a>();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <a class="code" href="namespace_arcade.html#a0d207e1b255986cbb9dde6b192e0dcc2">GAME_INSTANCE</a> = <span class="keyword">new</span> <a class="code" href="class_pacman.html">Pacman</a>();</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;lib loaded&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    [[gnu::destructor]] <span class="keywordtype">void</span> <a class="code" href="namespace_arcade.html#a845ad281586d107c4c5baf5485fba3a4">libDestruct</a>()</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keyword">delete</span> GAME_INSTANCE;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keyword">delete</span> <a class="code" href="namespace_arcade.html#a0d207e1b255986cbb9dde6b192e0dcc2">GAME_INSTANCE</a>;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot; lib unloaded&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    }</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}<span class="comment">// namespace Arcade</span></div>
@@ -122,12 +123,13 @@ $(document).ready(function(){initNavTree('_games_2_pacman_2_entry_point_8cpp_sou
 </div><!-- doc-content -->
 <div class="ttc" id="anamespace_arcade_html_ad87e24468d19c08ceff1e079301dded4"><div class="ttname"><a href="namespace_arcade.html#ad87e24468d19c08ceff1e079301dded4">Arcade::libConstruct</a></div><div class="ttdeci">void libConstruct()</div><div class="ttdef"><b>Definition:</b> <a href="_games_2_nibbler_2_entry_point_8cpp_source.html#l00014">entrypoint.cpp:14</a></div></div>
 <div class="ttc" id="a_i_game_8hpp_html"><div class="ttname"><a href="_i_game_8hpp.html">IGame.hpp</a></div></div>
-<div class="ttc" id="a_pacman_8hpp_html"><div class="ttname"><a href="_pacman_8hpp.html">Pacman.hpp</a></div></div>
-<div class="ttc" id="aclass_i_game_html"><div class="ttname"><a href="class_i_game.html">IGame</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_game_8hpp_source.html#l00022">IGame.hpp:22</a></div></div>
-<div class="ttc" id="anamespace_arcade_html"><div class="ttname"><a href="namespace_arcade.html">Arcade</a></div><div class="ttdef"><b>Definition:</b> <a href="_event_8hpp_source.html#l00013">Event.hpp:13</a></div></div>
-<div class="ttc" id="aclass_pacman_html"><div class="ttname"><a href="class_pacman.html">Pacman</a></div><div class="ttdef"><b>Definition:</b> <a href="_pacman_8hpp_source.html#l00020">Pacman.hpp:20</a></div></div>
+<div class="ttc" id="a_pacman_8hpp_html"><div class="ttname"><a href="_pacman_8hpp.html">Pacman.hpp</a></div><div class="ttdoc">Pacman Class inherits from IGame.</div></div>
+<div class="ttc" id="aclass_i_game_html"><div class="ttname"><a href="class_i_game.html">IGame</a></div><div class="ttdoc">represents a Game instance (pacman, nibbler, ...)</div><div class="ttdef"><b>Definition:</b> <a href="_i_game_8hpp_source.html#l00022">IGame.hpp:22</a></div></div>
+<div class="ttc" id="anamespace_arcade_html"><div class="ttname"><a href="namespace_arcade.html">Arcade</a></div><div class="ttdoc">Namespace for the Arcade project, used only by Evt and libraries entrypoints to avoid type collision.</div></div>
+<div class="ttc" id="aclass_pacman_html"><div class="ttname"><a href="class_pacman.html">Pacman</a></div><div class="ttdef"><b>Definition:</b> <a href="_pacman_8hpp_source.html#l00022">Pacman.hpp:22</a></div></div>
 <div class="ttc" id="anamespace_arcade_html_a1204ecdd24dfbe24d33792dd060cb2ec"><div class="ttname"><a href="namespace_arcade.html#a1204ecdd24dfbe24d33792dd060cb2ec">Arcade::getGameInstance</a></div><div class="ttdeci">IGame * getGameInstance()</div><div class="ttdef"><b>Definition:</b> <a href="_games_2_nibbler_2_entry_point_8cpp_source.html#l00009">entrypoint.cpp:9</a></div></div>
 <div class="ttc" id="anamespace_arcade_html_a845ad281586d107c4c5baf5485fba3a4"><div class="ttname"><a href="namespace_arcade.html#a845ad281586d107c4c5baf5485fba3a4">Arcade::libDestruct</a></div><div class="ttdeci">void libDestruct()</div><div class="ttdef"><b>Definition:</b> <a href="_games_2_nibbler_2_entry_point_8cpp_source.html#l00020">entrypoint.cpp:20</a></div></div>
+<div class="ttc" id="anamespace_arcade_html_a0d207e1b255986cbb9dde6b192e0dcc2"><div class="ttname"><a href="namespace_arcade.html#a0d207e1b255986cbb9dde6b192e0dcc2">Arcade::GAME_INSTANCE</a></div><div class="ttdeci">static IGame * GAME_INSTANCE</div><div class="ttdef"><b>Definition:</b> <a href="_games_2_nibbler_2_entry_point_8cpp_source.html#l00007">entrypoint.cpp:7</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

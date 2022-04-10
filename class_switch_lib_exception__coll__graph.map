@@ -1,6 +1,6 @@
 <map id="SwitchLibException" name="SwitchLibException">
 <area shape="rect" id="node1" title="Exception when the core must switch a lib." alt="" coords="5,229,153,256"/>
 <area shape="rect" id="node2" href="$class_event_exception.html" title="Exception class for the events." alt="" coords="18,155,141,181"/>
-<area shape="rect" id="node3" href="$class_arcade_exception.html" title=" " alt="" coords="14,80,145,107"/>
+<area shape="rect" id="node3" href="$class_arcade_exception.html" title="Base exception class for all exceptions in the project." alt="" coords="14,80,145,107"/>
 <area shape="rect" id="node4" title=" " alt="" coords="22,5,137,32"/>
 </map>

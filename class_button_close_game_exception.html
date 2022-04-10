@@ -28,6 +28,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">arcAAAAAAAAAAAAAAAAade
    </div>
+   <div id="projectbrief">An arcade emulator that manage games and graphical display separatly</div>
   </td>
  </tr>
  </tbody>
@@ -101,7 +102,7 @@ Inheritance diagram for ButtonCloseGameException:</div>
 <map name="_button_close_game_exception_inherit__map" id="_button_close_game_exception_inherit__map">
 <area shape="rect" title="Exception throw when the &quot;close game&quot; button is pressed on the main menu." alt="" coords="5,229,209,256"/>
 <area shape="rect" href="class_event_exception.html" title="Exception class for the events." alt="" coords="46,155,169,181"/>
-<area shape="rect" href="class_arcade_exception.html" title=" " alt="" coords="42,80,173,107"/>
+<area shape="rect" href="class_arcade_exception.html" title="Base exception class for all exceptions in the project." alt="" coords="42,80,173,107"/>
 <area shape="rect" title=" " alt="" coords="50,5,165,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
@@ -112,7 +113,7 @@ Collaboration diagram for ButtonCloseGameException:</div>
 <map name="_button_close_game_exception_coll__map" id="_button_close_game_exception_coll__map">
 <area shape="rect" title="Exception throw when the &quot;close game&quot; button is pressed on the main menu." alt="" coords="5,229,209,256"/>
 <area shape="rect" href="class_event_exception.html" title="Exception class for the events." alt="" coords="46,155,169,181"/>
-<area shape="rect" href="class_arcade_exception.html" title=" " alt="" coords="42,80,173,107"/>
+<area shape="rect" href="class_arcade_exception.html" title="Base exception class for all exceptions in the project." alt="" coords="42,80,173,107"/>
 <area shape="rect" title=" " alt="" coords="50,5,165,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
@@ -166,7 +167,7 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Exception throw when the "close game" button is pressed on the main menu. </p>
 
-<p class="definition">Definition at line <a class="el" href="_exception_8hpp_source.html#l00191">191</a> of file <a class="el" href="_exception_8hpp_source.html">Exception.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_exception_8hpp_source.html#l00194">194</a> of file <a class="el" href="_exception_8hpp_source.html">Exception.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a54b52627d669ffdff4497618f83bae6a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a54b52627d669ffdff4497618f83bae6a">&#9670;&nbsp;</a></span>ButtonCloseGameException()</h2>
@@ -214,8 +215,12 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_exception_8hpp_source.html#l00193">193</a> of file <a class="el" href="_exception_8hpp_source.html">Exception.hpp</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="_exception_8hpp_source.html#l00196">196</a> of file <a class="el" href="_exception_8hpp_source.html">Exception.hpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;                                                                                                                       : <a class="code" href="class_event_exception.html#a59e7228c221f0626f1d617d3606a6a12">EventException</a>(<a class="code" href="class_arcade_exception.html#a337bc156e58344e8b1aa58033b1a05ae">what</a>, func, line, file)</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        {</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            <a class="code" href="class_arcade_exception.html#a5567e2b0f861e41f3a1ea37b7096328a">_name</a> = <span class="stringliteral">&quot;ButtonCloseGameException&quot;</span>;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        };</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
@@ -223,6 +228,9 @@ Additional Inherited Members</h2></td></tr>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aclass_event_exception_html_a59e7228c221f0626f1d617d3606a6a12"><div class="ttname"><a href="class_event_exception.html#a59e7228c221f0626f1d617d3606a6a12">EventException::EventException</a></div><div class="ttdeci">EventException(std::string const &amp;what, std::string const &amp;func, int const &amp;line, std::string const &amp;file)</div><div class="ttdef"><b>Definition:</b> <a href="_exception_8hpp_source.html#l00167">Exception.hpp:167</a></div></div>
+<div class="ttc" id="aclass_arcade_exception_html_a5567e2b0f861e41f3a1ea37b7096328a"><div class="ttname"><a href="class_arcade_exception.html#a5567e2b0f861e41f3a1ea37b7096328a">ArcadeException::_name</a></div><div class="ttdeci">std::string _name</div><div class="ttdef"><b>Definition:</b> <a href="_exception_8hpp_source.html#l00082">Exception.hpp:82</a></div></div>
+<div class="ttc" id="aclass_arcade_exception_html_a337bc156e58344e8b1aa58033b1a05ae"><div class="ttname"><a href="class_arcade_exception.html#a337bc156e58344e8b1aa58033b1a05ae">ArcadeException::what</a></div><div class="ttdeci">const char * what() const noexcept override</div><div class="ttdoc">returns the description of the exception</div><div class="ttdef"><b>Definition:</b> <a href="_exception_8cpp_source.html#l00025">Exception.cpp:25</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

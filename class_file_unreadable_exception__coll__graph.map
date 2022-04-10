@@ -2,6 +2,6 @@
 <area shape="rect" id="node1" title="Exception class for the factory if a file is unreadable." alt="" coords="5,304,189,331"/>
 <area shape="rect" id="node2" href="$class_invalid_file_exception.html" title="Exception class for the factory if a file is invalid." alt="" coords="21,229,174,256"/>
 <area shape="rect" id="node3" href="$class_factory_exception.html" title="Exception class for the factory." alt="" coords="31,155,164,181"/>
-<area shape="rect" id="node4" href="$class_arcade_exception.html" title=" " alt="" coords="32,80,163,107"/>
+<area shape="rect" id="node4" href="$class_arcade_exception.html" title="Base exception class for all exceptions in the project." alt="" coords="32,80,163,107"/>
 <area shape="rect" id="node5" title=" " alt="" coords="40,5,155,32"/>
 </map>

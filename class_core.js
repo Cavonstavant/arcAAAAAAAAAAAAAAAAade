@@ -10,6 +10,8 @@ var class_core =
     [ "~Core", "class_core.html#a776f8c46504b14183883c6273f93eaed", null ],
     [ "Core", "class_core.html#a4faad96f2eb0df40046690f0b1ace30a", null ],
     [ "addEntity", "class_core.html#a5b82987e2754746c3590b5ef9336dbf3", null ],
+    [ "coreEventSwitchGame", "class_core.html#aaa273bb1d1a5ebd3a8c2370be99ceb0c", null ],
+    [ "coreEventSwitchGraph", "class_core.html#a0766cfe882239abc1e4a0f2844c76e89", null ],
     [ "draw", "class_core.html#a1bcfc07efa9bf4ee3ed359fdddee8709", null ],
     [ "getFutureGame", "class_core.html#a27876ea69a01d7566663e7a36c188878", null ],
     [ "getFutureGraph", "class_core.html#ab21af25d9a8be8a043a0568e20f12ffe", null ],
@@ -17,6 +19,7 @@ var class_core =
     [ "getGraph", "class_core.html#ae7f7b88218780dea96a8daff61a9992b", null ],
     [ "getLastEvent", "class_core.html#a2e3c7c6ec75acec8b25f52a4643c8acf", null ],
     [ "getState", "class_core.html#a9939066bf3375133927528e6336029dc", null ],
+    [ "manageCoreKeyEvents", "class_core.html#a8748501c56664fa2e58085b792be449c", null ],
     [ "operator=", "class_core.html#a08c220acd671f2dfc7d40cbc472e231c", null ],
     [ "popEvent", "class_core.html#ad130c077231566daf090ae4fefefe1da", null ],
     [ "processEvents", "class_core.html#a735a297163927e6c9749f163a4223bc1", null ],
@@ -29,5 +32,14 @@ var class_core =
     [ "setGraph", "class_core.html#aaf3f3be3f9d1cfb2a895d6350b629809", null ],
     [ "setGraph", "class_core.html#affbb83953ccca049ff375a18995dab7b", null ],
     [ "setState", "class_core.html#afe619c2d034aff30644e94b953951a49", null ],
-    [ "update", "class_core.html#a90dd5da2a90e0b5ca3434bcfb05c6dff", null ]
+    [ "update", "class_core.html#a90dd5da2a90e0b5ca3434bcfb05c6dff", null ],
+    [ "_entities", "class_core.html#a327c3129b8e1382e01f95babf98389e5", null ],
+    [ "_event", "class_core.html#a62b2479eecee9b888e2d06300f718487", null ],
+    [ "_futureGame", "class_core.html#ad858916f184608421d9398d88ddb1107", null ],
+    [ "_futureGraph", "class_core.html#a9cc50e25ec1e59fc183564a0dfe582fc", null ],
+    [ "_game", "class_core.html#ae4ebc2e4af5fce922e113a17e16a39c5", null ],
+    [ "_graph", "class_core.html#a301de8f444ccc06c0672c31283410a65", null ],
+    [ "_libManager", "class_core.html#a80b27d83fad909a23693380af89042ce", null ],
+    [ "_mainMenu", "class_core.html#ab559fe8e59c50be7c8910f66dbc1ae4b", null ],
+    [ "_state", "class_core.html#a240aefab64fa9d9760691941829b556b", null ]
 ];

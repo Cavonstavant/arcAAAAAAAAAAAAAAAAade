@@ -28,6 +28,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">arcAAAAAAAAAAAAAAAAade
    </div>
+   <div id="projectbrief">An arcade emulator that manage games and graphical display separatly</div>
   </td>
  </tr>
  </tbody>
@@ -82,6 +83,8 @@ $(document).ready(function(){initNavTree('_main_menu_8cpp.html',''); initResizab
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">MainMenu.cpp File Reference</div>  </div>
 </div><!--header-->
@@ -128,8 +131,307 @@ Include dependency graph for MainMenu.cpp:</div>
 </div>
 </div>
 <p><a href="_main_menu_8cpp_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a6ce2f5fef7a854d51ea6a057419a441f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_main_menu_8cpp.html#a6ce2f5fef7a854d51ea6a057419a441f">closeGameCallback</a> ()</td></tr>
+<tr class="separator:a6ce2f5fef7a854d51ea6a057419a441f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adda2036945cb63bac0a7d18d42449ee4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_main_menu_8cpp.html#adda2036945cb63bac0a7d18d42449ee4">changeGraphicalLibCallback</a> ()</td></tr>
+<tr class="separator:adda2036945cb63bac0a7d18d42449ee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca2909fb0fdad11e2c4b0c6b7c5de20a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_main_menu_8cpp.html#aca2909fb0fdad11e2c4b0c6b7c5de20a">changeGameLibCallback</a> ()</td></tr>
+<tr class="separator:aca2909fb0fdad11e2c4b0c6b7c5de20a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe233ab6f10629db8631428f0f823102"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_main_menu_8cpp.html#abe233ab6f10629db8631428f0f823102">createVerticalText</a> (std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_i_entity.html">IEntity</a> &gt;&gt; &amp;entities, const std::string &amp;text, int x, int y)</td></tr>
+<tr class="separator:abe233ab6f10629db8631428f0f823102"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7872f06a294ad7720919f01bec03abca"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_main_menu_8cpp.html#a7872f06a294ad7720919f01bec03abca">createBox</a> (std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_i_entity.html">IEntity</a> &gt;&gt; &amp;entities, int x, int y, int width, int height)</td></tr>
+<tr class="separator:a7872f06a294ad7720919f01bec03abca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf9aa9df10354922cbd93b44025bfe38"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_main_menu_8cpp.html#adf9aa9df10354922cbd93b44025bfe38">createText</a> (std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_i_entity.html">IEntity</a> &gt;&gt; &amp;entities, std::string text, int x, int y, <a class="el" href="struct_color.html">Color</a> color)</td></tr>
+<tr class="separator:adf9aa9df10354922cbd93b44025bfe38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="aca2909fb0fdad11e2c4b0c6b7c5de20a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca2909fb0fdad11e2c4b0c6b7c5de20a">&#9670;&nbsp;</a></span>changeGameLibCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void changeGameLibCallback </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_main_menu_8cpp_source.html#l00029">29</a> of file <a class="el" href="_main_menu_8cpp_source.html">MainMenu.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">throw</span> <a class="code" href="_exception_8hpp.html#a07b51301b1d8611a35b7f211d7f4bdcc">NotImplementedEX</a>(<span class="stringliteral">&quot;Change graphical lib button clicked&quot;</span>, <a class="code" href="class_logger.html#a1d61a808908f837373dcd89f52fa0c2a">Logger::NONE</a>);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="adda2036945cb63bac0a7d18d42449ee4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adda2036945cb63bac0a7d18d42449ee4">&#9670;&nbsp;</a></span>changeGraphicalLibCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void changeGraphicalLibCallback </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_main_menu_8cpp_source.html#l00024">24</a> of file <a class="el" href="_main_menu_8cpp_source.html">MainMenu.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">throw</span> <a class="code" href="_exception_8hpp.html#a07b51301b1d8611a35b7f211d7f4bdcc">NotImplementedEX</a>(<span class="stringliteral">&quot;Change graphical lib button clicked&quot;</span>, <a class="code" href="class_logger.html#a1d61a808908f837373dcd89f52fa0c2a">Logger::NONE</a>);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a6ce2f5fef7a854d51ea6a057419a441f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ce2f5fef7a854d51ea6a057419a441f">&#9670;&nbsp;</a></span>closeGameCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void closeGameCallback </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_main_menu_8cpp_source.html#l00019">19</a> of file <a class="el" href="_main_menu_8cpp_source.html">MainMenu.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">throw</span> <a class="code" href="_exception_8hpp.html#a917530aa9d17a25247ddd1d5522fb810">ButtonCloseGameEX</a>(<span class="stringliteral">&quot;Close game button clicked&quot;</span>, <a class="code" href="class_logger.html#a1d61a808908f837373dcd89f52fa0c2a">Logger::NONE</a>);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a7872f06a294ad7720919f01bec03abca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7872f06a294ad7720919f01bec03abca">&#9670;&nbsp;</a></span>createBox()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void createBox </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_i_entity.html">IEntity</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>entities</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_main_menu_8cpp_source.html#l00055">55</a> of file <a class="el" href="_main_menu_8cpp_source.html">MainMenu.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;{</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="class_object.html">Object</a> box(Object::ENTITY_TYPE::WALL);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    box.setPos(std::make_pair(x, y));</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    box.setSize(std::make_pair(width, height));</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    box.setColor({0, 255, 255, 255, Color::TermColors::CYAN});</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    std::shared_ptr&lt;Object&gt; boxPtr = std::make_shared&lt;Object&gt;(box);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    entities.push_back(boxPtr);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="adf9aa9df10354922cbd93b44025bfe38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf9aa9df10354922cbd93b44025bfe38">&#9670;&nbsp;</a></span>createText()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void createText </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_i_entity.html">IEntity</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>entities</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_color.html">Color</a>&#160;</td>
+          <td class="paramname"><em>color</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_main_menu_8cpp_source.html#l00065">65</a> of file <a class="el" href="_main_menu_8cpp_source.html">MainMenu.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;{</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="class_text_entity.html">TextEntity</a> textEntity(text);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    textEntity.setPos(std::make_pair(x, y));</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    textEntity.setColor(color);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    std::shared_ptr&lt;TextEntity&gt; textEntityPtr = std::make_shared&lt;TextEntity&gt;(textEntity);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    entities.push_back(textEntityPtr);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="abe233ab6f10629db8631428f0f823102"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe233ab6f10629db8631428f0f823102">&#9670;&nbsp;</a></span>createVerticalText()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void createVerticalText </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_i_entity.html">IEntity</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>entities</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_main_menu_8cpp_source.html#l00043">43</a> of file <a class="el" href="_main_menu_8cpp_source.html">MainMenu.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;c: text) {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        std::string chString(1, c);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="class_text_entity.html">TextEntity</a> textChar(chString);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        textChar.setPos(std::make_pair(x, y));</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        std::shared_ptr&lt;TextEntity&gt; textCharPtr = std::make_shared&lt;TextEntity&gt;(textChar);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        entities.push_back(textCharPtr);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        x += 1;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aclass_text_entity_html"><div class="ttname"><a href="class_text_entity.html">TextEntity</a></div><div class="ttdoc">TextEntity class inherits from AEntity.</div><div class="ttdef"><b>Definition:</b> <a href="_text_entity_8hpp_source.html#l00018">TextEntity.hpp:18</a></div></div>
+<div class="ttc" id="aclass_logger_html_a1d61a808908f837373dcd89f52fa0c2a"><div class="ttname"><a href="class_logger.html#a1d61a808908f837373dcd89f52fa0c2a">Logger::NONE</a></div><div class="ttdeci">static Severity NONE()</div><div class="ttdoc">pass this function to the macros and they will not log the exception</div><div class="ttdef"><b>Definition:</b> <a href="_logger_8cpp_source.html#l00076">Logger.cpp:76</a></div></div>
+<div class="ttc" id="aclass_object_html"><div class="ttname"><a href="class_object.html">Object</a></div><div class="ttdoc">Object class represents all the Entity not moving. Like walls, fruits.</div><div class="ttdef"><b>Definition:</b> <a href="_object_8hpp_source.html#l00017">Object.hpp:17</a></div></div>
+<div class="ttc" id="a_exception_8hpp_html_a917530aa9d17a25247ddd1d5522fb810"><div class="ttname"><a href="_exception_8hpp.html#a917530aa9d17a25247ddd1d5522fb810">ButtonCloseGameEX</a></div><div class="ttdeci">#define ButtonCloseGameEX(what, severity)</div><div class="ttdef"><b>Definition:</b> <a href="_exception_8hpp_source.html#l00037">Exception.hpp:37</a></div></div>
+<div class="ttc" id="a_exception_8hpp_html_a07b51301b1d8611a35b7f211d7f4bdcc"><div class="ttname"><a href="_exception_8hpp.html#a07b51301b1d8611a35b7f211d7f4bdcc">NotImplementedEX</a></div><div class="ttdeci">#define NotImplementedEX(what, severity)</div><div class="ttdef"><b>Definition:</b> <a href="_exception_8hpp_source.html#l00038">Exception.hpp:38</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

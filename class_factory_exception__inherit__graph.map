@@ -1,7 +1,7 @@
 <map id="FactoryException" name="FactoryException">
 <area shape="rect" id="node1" title="Exception class for the factory." alt="" coords="221,155,355,181"/>
 <area shape="rect" id="node4" href="$class_invalid_file_exception.html" title="Exception class for the factory if a file is invalid." alt="" coords="211,229,365,256"/>
-<area shape="rect" id="node2" href="$class_arcade_exception.html" title=" " alt="" coords="223,80,353,107"/>
+<area shape="rect" id="node2" href="$class_arcade_exception.html" title="Base exception class for all exceptions in the project." alt="" coords="223,80,353,107"/>
 <area shape="rect" id="node3" title=" " alt="" coords="231,5,345,32"/>
 <area shape="rect" id="node5" href="$class_file_corrupted_exception.html" title="Exception class for the factory if a file is corrupted." alt="" coords="5,304,179,331"/>
 <area shape="rect" id="node6" href="$class_file_not_found_exception.html" title="Exception class for the factory if a file is not found." alt="" coords="203,304,373,331"/>

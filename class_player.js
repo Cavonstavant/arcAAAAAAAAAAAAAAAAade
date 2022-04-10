@@ -5,5 +5,6 @@ var class_player =
     [ "getBoosted", "class_player.html#ab8a6fa5f22f2fbfc5f24201dd5915e46", null ],
     [ "getIsMoving", "class_player.html#a858b0644480fbc9f4e473c58b7c82b5c", null ],
     [ "setBoosted", "class_player.html#ab2d62dec653793f9ef33073f73050b60", null ],
-    [ "setIsMoving", "class_player.html#a362d0e74f9cd4daf84faee36be1fffd8", null ]
+    [ "setIsMoving", "class_player.html#a362d0e74f9cd4daf84faee36be1fffd8", null ],
+    [ "_boosted", "class_player.html#a796f51664afc8bba919c4bcb16a1f430", null ]
 ];

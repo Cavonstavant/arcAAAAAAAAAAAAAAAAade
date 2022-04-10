@@ -28,6 +28,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">arcAAAAAAAAAAAAAAAAade
    </div>
+   <div id="projectbrief">An arcade emulator that manage games and graphical display separatly</div>
   </td>
  </tr>
  </tbody>
@@ -90,29 +91,30 @@ $(document).ready(function(){initNavTree('_graphic_libs_2_s_d_l_2_entry_point_8c
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_sdl_library_8hpp.html">SdlLibrary.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_arcade.html">Arcade</a> {</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <span class="keyword">static</span> <a class="code" href="class_i_graph.html">IGraph</a> *GRAPH_INSTANCE = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="namespace_arcade.html#abacf3a6c1a9ef1babc437ee2ee9a848f">    5</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="class_i_graph.html">IGraph</a> *<a class="code" href="namespace_arcade.html#abacf3a6c1a9ef1babc437ee2ee9a848f">GRAPH_INSTANCE</a> = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> <a class="code" href="class_i_graph.html">IGraph</a> *<a class="code" href="namespace_arcade.html#a7aa953ba81cfd3d56923c642eb8e30a1">getGraphInstance</a>()</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    {</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <span class="keywordflow">return</span> GRAPH_INSTANCE;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="namespace_arcade.html#abacf3a6c1a9ef1babc437ee2ee9a848f">GRAPH_INSTANCE</a>;</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    }</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    [[gnu::constructor]] <span class="keywordtype">void</span> <a class="code" href="namespace_arcade.html#ad87e24468d19c08ceff1e079301dded4">libConstruct</a>()</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    {</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        GRAPH_INSTANCE = <span class="keyword">new</span> <a class="code" href="class_sdl_library.html">SdlLibrary</a>();</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <a class="code" href="namespace_arcade.html#abacf3a6c1a9ef1babc437ee2ee9a848f">GRAPH_INSTANCE</a> = <span class="keyword">new</span> <a class="code" href="class_sdl_library.html">SdlLibrary</a>();</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    }</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    [[gnu::destructor]] <span class="keywordtype">void</span> <a class="code" href="namespace_arcade.html#a845ad281586d107c4c5baf5485fba3a4">libDestruct</a>()</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    {</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keyword">delete</span> GRAPH_INSTANCE;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keyword">delete</span> <a class="code" href="namespace_arcade.html#abacf3a6c1a9ef1babc437ee2ee9a848f">GRAPH_INSTANCE</a>;</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    }</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}<span class="comment">// namespace Arcade</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="anamespace_arcade_html_ad87e24468d19c08ceff1e079301dded4"><div class="ttname"><a href="namespace_arcade.html#ad87e24468d19c08ceff1e079301dded4">Arcade::libConstruct</a></div><div class="ttdeci">void libConstruct()</div><div class="ttdef"><b>Definition:</b> <a href="_games_2_nibbler_2_entry_point_8cpp_source.html#l00014">entrypoint.cpp:14</a></div></div>
-<div class="ttc" id="aclass_i_graph_html"><div class="ttname"><a href="class_i_graph.html">IGraph</a></div><div class="ttdoc">represents a generic graphical library</div><div class="ttdef"><b>Definition:</b> <a href="_i_graph_8hpp_source.html#l00021">IGraph.hpp:21</a></div></div>
-<div class="ttc" id="anamespace_arcade_html"><div class="ttname"><a href="namespace_arcade.html">Arcade</a></div><div class="ttdef"><b>Definition:</b> <a href="_event_8hpp_source.html#l00013">Event.hpp:13</a></div></div>
-<div class="ttc" id="aclass_sdl_library_html"><div class="ttname"><a href="class_sdl_library.html">SdlLibrary</a></div><div class="ttdoc">SDL Library.</div><div class="ttdef"><b>Definition:</b> <a href="_sdl_library_8hpp_source.html#l00018">SdlLibrary.hpp:18</a></div></div>
+<div class="ttc" id="anamespace_arcade_html_abacf3a6c1a9ef1babc437ee2ee9a848f"><div class="ttname"><a href="namespace_arcade.html#abacf3a6c1a9ef1babc437ee2ee9a848f">Arcade::GRAPH_INSTANCE</a></div><div class="ttdeci">static IGraph * GRAPH_INSTANCE</div><div class="ttdef"><b>Definition:</b> <a href="_graphic_libs_2_ncurses_2_entry_point_8cpp_source.html#l00006">EntryPoint.cpp:6</a></div></div>
+<div class="ttc" id="aclass_i_graph_html"><div class="ttname"><a href="class_i_graph.html">IGraph</a></div><div class="ttdoc">represents a generic graphical library</div><div class="ttdef"><b>Definition:</b> <a href="_i_graph_8hpp_source.html#l00023">IGraph.hpp:23</a></div></div>
+<div class="ttc" id="anamespace_arcade_html"><div class="ttname"><a href="namespace_arcade.html">Arcade</a></div><div class="ttdoc">Namespace for the Arcade project, used only by Evt and libraries entrypoints to avoid type collision.</div></div>
+<div class="ttc" id="aclass_sdl_library_html"><div class="ttname"><a href="class_sdl_library.html">SdlLibrary</a></div><div class="ttdoc">SDL Library.</div><div class="ttdef"><b>Definition:</b> <a href="_sdl_library_8hpp_source.html#l00020">SdlLibrary.hpp:20</a></div></div>
 <div class="ttc" id="anamespace_arcade_html_a845ad281586d107c4c5baf5485fba3a4"><div class="ttname"><a href="namespace_arcade.html#a845ad281586d107c4c5baf5485fba3a4">Arcade::libDestruct</a></div><div class="ttdeci">void libDestruct()</div><div class="ttdef"><b>Definition:</b> <a href="_games_2_nibbler_2_entry_point_8cpp_source.html#l00020">entrypoint.cpp:20</a></div></div>
 <div class="ttc" id="a_i_graph_8hpp_html"><div class="ttname"><a href="_i_graph_8hpp.html">IGraph.hpp</a></div></div>
 <div class="ttc" id="anamespace_arcade_html_a7aa953ba81cfd3d56923c642eb8e30a1"><div class="ttname"><a href="namespace_arcade.html#a7aa953ba81cfd3d56923c642eb8e30a1">Arcade::getGraphInstance</a></div><div class="ttdeci">IGraph * getGraphInstance()</div><div class="ttdef"><b>Definition:</b> <a href="_graphic_libs_2_ncurses_2_entry_point_8cpp_source.html#l00008">EntryPoint.cpp:8</a></div></div>

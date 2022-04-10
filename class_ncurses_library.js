@@ -11,5 +11,6 @@ var class_ncurses_library =
     [ "drawText", "class_ncurses_library.html#a9fcffe106eff775cbd84dd1581801131", null ],
     [ "getInput", "class_ncurses_library.html#a9ca661a5b866aec7a57f7ecedae57079", null ],
     [ "getLibraryName", "class_ncurses_library.html#ac70fe60ad51e85be3d262b93c2b77a99", null ],
-    [ "init", "class_ncurses_library.html#a7f70de1325c567778f69f64fd3e1247a", null ]
+    [ "init", "class_ncurses_library.html#a7f70de1325c567778f69f64fd3e1247a", null ],
+    [ "_colors", "class_ncurses_library.html#a00f93e85255f5ff934b98074dcd302f5", null ]
 ];

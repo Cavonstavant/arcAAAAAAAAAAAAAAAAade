@@ -5,6 +5,6 @@
 <area shape="rect" id="node7" href="$class_player.html" title="Player class inherits from AEntity." alt="" coords="185,155,247,181"/>
 <area shape="rect" id="node8" href="$class_text_entity.html" title="TextEntity class inherits from AEntity." alt="" coords="271,155,358,181"/>
 <area shape="rect" id="node2" href="$class_i_entity.html" title="represents a generic entity within the game" alt="" coords="140,5,204,32"/>
-<area shape="rect" id="node5" href="$class_button.html" title=" " alt="" coords="53,229,118,256"/>
-<area shape="rect" id="node6" href="$class_score.html" title=" " alt="" coords="143,229,201,256"/>
+<area shape="rect" id="node5" href="$class_button.html" title="Represents a button object." alt="" coords="53,229,118,256"/>
+<area shape="rect" id="node6" href="$class_score.html" title="Score object." alt="" coords="143,229,201,256"/>
 </map>

@@ -9,5 +9,9 @@ var class_enemy =
     [ "setColor", "class_enemy.html#ad07b62e241141eba58f82acf19ed8bfa", null ],
     [ "setEnrage", "class_enemy.html#aacbba95fea0f0989c972afd27abc40e5", null ],
     [ "setIsMoving", "class_enemy.html#a2283b2aabd93b7ae2548a04777bd70bc", null ],
-    [ "setSpeed", "class_enemy.html#a2eb43517359b8ea1d538f8e8d9408931", null ]
+    [ "setSpeed", "class_enemy.html#a2eb43517359b8ea1d538f8e8d9408931", null ],
+    [ "_color", "class_enemy.html#a1ca0c91f9ad51dff2cbbdbc136469c06", null ],
+    [ "_direction", "class_enemy.html#a7c48cd61f1a90123ee157e36ad8cece6", null ],
+    [ "_enrage", "class_enemy.html#a507a407b80f6f838fc61d5f347153afd", null ],
+    [ "_speed", "class_enemy.html#a04c4ad3e5f62019d4aed5dcbc60a0693", null ]
 ];

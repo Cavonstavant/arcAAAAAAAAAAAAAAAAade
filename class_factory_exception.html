@@ -28,6 +28,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">arcAAAAAAAAAAAAAAAAade
    </div>
+   <div id="projectbrief">An arcade emulator that manage games and graphical display separatly</div>
   </td>
  </tr>
  </tbody>
@@ -101,7 +102,7 @@ Inheritance diagram for FactoryException:</div>
 <map name="_factory_exception_inherit__map" id="_factory_exception_inherit__map">
 <area shape="rect" title="Exception class for the factory." alt="" coords="221,155,355,181"/>
 <area shape="rect" href="class_invalid_file_exception.html" title="Exception class for the factory if a file is invalid." alt="" coords="211,229,365,256"/>
-<area shape="rect" href="class_arcade_exception.html" title=" " alt="" coords="223,80,353,107"/>
+<area shape="rect" href="class_arcade_exception.html" title="Base exception class for all exceptions in the project." alt="" coords="223,80,353,107"/>
 <area shape="rect" title=" " alt="" coords="231,5,345,32"/>
 <area shape="rect" href="class_file_corrupted_exception.html" title="Exception class for the factory if a file is corrupted." alt="" coords="5,304,179,331"/>
 <area shape="rect" href="class_file_not_found_exception.html" title="Exception class for the factory if a file is not found." alt="" coords="203,304,373,331"/>
@@ -114,7 +115,7 @@ Collaboration diagram for FactoryException:</div>
 <div class="center"><img src="class_factory_exception__coll__graph.png" border="0" usemap="#_factory_exception_coll__map" alt="Collaboration graph"/></div>
 <map name="_factory_exception_coll__map" id="_factory_exception_coll__map">
 <area shape="rect" title="Exception class for the factory." alt="" coords="5,155,139,181"/>
-<area shape="rect" href="class_arcade_exception.html" title=" " alt="" coords="7,80,137,107"/>
+<area shape="rect" href="class_arcade_exception.html" title="Base exception class for all exceptions in the project." alt="" coords="7,80,137,107"/>
 <area shape="rect" title=" " alt="" coords="15,5,129,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
@@ -165,7 +166,7 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Exception class for the factory. </p>
 
-<p class="definition">Definition at line <a class="el" href="_exception_8hpp_source.html#l00090">90</a> of file <a class="el" href="_exception_8hpp_source.html">Exception.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_exception_8hpp_source.html#l00093">93</a> of file <a class="el" href="_exception_8hpp_source.html">Exception.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a59894a3b1c0fad85080cf3a7e5303c38"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a59894a3b1c0fad85080cf3a7e5303c38">&#9670;&nbsp;</a></span>FactoryException()</h2>
@@ -213,8 +214,12 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_exception_8hpp_source.html#l00092">92</a> of file <a class="el" href="_exception_8hpp_source.html">Exception.hpp</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="_exception_8hpp_source.html#l00095">95</a> of file <a class="el" href="_exception_8hpp_source.html">Exception.hpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                                                                                                               : <a class="code" href="class_arcade_exception.html#ae9a2fdc0b1895c43196731b3d2fe68e6">ArcadeException</a>(<a class="code" href="class_arcade_exception.html#a337bc156e58344e8b1aa58033b1a05ae">what</a>, func, line, file)</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <a class="code" href="class_arcade_exception.html#a5567e2b0f861e41f3a1ea37b7096328a">_name</a> = <span class="stringliteral">&quot;FactoryException&quot;</span>;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        };</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
@@ -222,6 +227,9 @@ Additional Inherited Members</h2></td></tr>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aclass_arcade_exception_html_ae9a2fdc0b1895c43196731b3d2fe68e6"><div class="ttname"><a href="class_arcade_exception.html#ae9a2fdc0b1895c43196731b3d2fe68e6">ArcadeException::ArcadeException</a></div><div class="ttdeci">ArcadeException(std::string const &amp;what, std::string const &amp;func, int const &amp;line, std::string const &amp;file)</div><div class="ttdoc">DO NOT USE THIS CONSTRUCTOR, PLEASE USE THE MACROS DEFINED ABOVE IN EXCEPTION.HPP (ArcadeEX,...</div><div class="ttdef"><b>Definition:</b> <a href="_exception_8cpp_source.html#l00012">Exception.cpp:12</a></div></div>
+<div class="ttc" id="aclass_arcade_exception_html_a5567e2b0f861e41f3a1ea37b7096328a"><div class="ttname"><a href="class_arcade_exception.html#a5567e2b0f861e41f3a1ea37b7096328a">ArcadeException::_name</a></div><div class="ttdeci">std::string _name</div><div class="ttdef"><b>Definition:</b> <a href="_exception_8hpp_source.html#l00082">Exception.hpp:82</a></div></div>
+<div class="ttc" id="aclass_arcade_exception_html_a337bc156e58344e8b1aa58033b1a05ae"><div class="ttname"><a href="class_arcade_exception.html#a337bc156e58344e8b1aa58033b1a05ae">ArcadeException::what</a></div><div class="ttdeci">const char * what() const noexcept override</div><div class="ttdoc">returns the description of the exception</div><div class="ttdef"><b>Definition:</b> <a href="_exception_8cpp_source.html#l00025">Exception.cpp:25</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

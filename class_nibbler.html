@@ -28,6 +28,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">arcAAAAAAAAAAAAAAAAade
    </div>
+   <div id="projectbrief">An arcade emulator that manage games and graphical display separatly</div>
   </td>
  </tr>
  </tbody>
@@ -84,6 +85,8 @@ $(document).ready(function(){initNavTree('class_nibbler.html',''); initResizable
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_nibbler-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Nibbler Class Reference</div>  </div>
@@ -97,7 +100,7 @@ Inheritance diagram for Nibbler:</div>
 <div class="center"><img src="class_nibbler__inherit__graph.png" border="0" usemap="#_nibbler_inherit__map" alt="Inheritance graph"/></div>
 <map name="_nibbler_inherit__map" id="_nibbler_inherit__map">
 <area shape="rect" title=" " alt="" coords="5,80,75,107"/>
-<area shape="rect" href="class_i_game.html" title=" " alt="" coords="7,5,73,32"/>
+<area shape="rect" href="class_i_game.html" title="represents a Game instance (pacman, nibbler, ...)" alt="" coords="7,5,73,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -106,7 +109,7 @@ Collaboration diagram for Nibbler:</div>
 <div class="center"><img src="class_nibbler__coll__graph.png" border="0" usemap="#_nibbler_coll__map" alt="Collaboration graph"/></div>
 <map name="_nibbler_coll__map" id="_nibbler_coll__map">
 <area shape="rect" title=" " alt="" coords="5,80,75,107"/>
-<area shape="rect" href="class_i_game.html" title=" " alt="" coords="7,5,73,32"/>
+<area shape="rect" href="class_i_game.html" title="represents a Game instance (pacman, nibbler, ...)" alt="" coords="7,5,73,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -152,6 +155,87 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a91b14c1b6019364120d5c5e4d4c64414 inherit pub_methods_class_i_game"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_game.html#a91b14c1b6019364120d5c5e4d4c64414">~IGame</a> ()=default</td></tr>
 <tr class="separator:a91b14c1b6019364120d5c5e4d4c64414 inherit pub_methods_class_i_game"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a0b943b6374135637bcbf06f4b594b7af"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_nibbler.html#a0b943b6374135637bcbf06f4b594b7af">getClockTimeMS</a> ()</td></tr>
+<tr class="memdesc:a0b943b6374135637bcbf06f4b594b7af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the elapsed time since the last update in milliseconds.  <a href="class_nibbler.html#a0b943b6374135637bcbf06f4b594b7af">More...</a><br /></td></tr>
+<tr class="separator:a0b943b6374135637bcbf06f4b594b7af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49b55efadf9a7926f69d88ba4bdd8a4e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_nibbler.html#a49b55efadf9a7926f69d88ba4bdd8a4e">resetClock</a> ()</td></tr>
+<tr class="memdesc:a49b55efadf9a7926f69d88ba4bdd8a4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restarts the clock.  <a href="class_nibbler.html#a49b55efadf9a7926f69d88ba4bdd8a4e">More...</a><br /></td></tr>
+<tr class="separator:a49b55efadf9a7926f69d88ba4bdd8a4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4556aa27faca9cdc2c758e801ccc2a72"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_nibbler.html#a4556aa27faca9cdc2c758e801ccc2a72">manageEvent</a> (<a class="el" href="struct_arcade_1_1_evt.html">Arcade::Evt</a> &amp;event, std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_i_entity.html">IEntity</a> &gt;&gt; &amp;entities)</td></tr>
+<tr class="memdesc:a4556aa27faca9cdc2c758e801ccc2a72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manage the events.  <a href="class_nibbler.html#a4556aa27faca9cdc2c758e801ccc2a72">More...</a><br /></td></tr>
+<tr class="separator:a4556aa27faca9cdc2c758e801ccc2a72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeaeda7304d5f1a7a3bf28eb8ba7682d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_nibbler.html#aeaeda7304d5f1a7a3bf28eb8ba7682d8">manageClickEvent</a> (<a class="el" href="struct_arcade_1_1_evt.html">Arcade::Evt</a> &amp;event, std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_i_entity.html">IEntity</a> &gt;&gt; &amp;entities)</td></tr>
+<tr class="memdesc:aeaeda7304d5f1a7a3bf28eb8ba7682d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manage the click events.  <a href="class_nibbler.html#aeaeda7304d5f1a7a3bf28eb8ba7682d8">More...</a><br /></td></tr>
+<tr class="separator:aeaeda7304d5f1a7a3bf28eb8ba7682d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a183056dd866d6865b0309a7e989a9255"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_nibbler.html#a183056dd866d6865b0309a7e989a9255">manageKeyEvent</a> (<a class="el" href="struct_arcade_1_1_evt.html">Arcade::Evt</a> &amp;event, std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_i_entity.html">IEntity</a> &gt;&gt; &amp;entities)</td></tr>
+<tr class="memdesc:a183056dd866d6865b0309a7e989a9255"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manage the key events.  <a href="class_nibbler.html#a183056dd866d6865b0309a7e989a9255">More...</a><br /></td></tr>
+<tr class="separator:a183056dd866d6865b0309a7e989a9255"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15461169b9f4cbab798a3b4c164ea0d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_nibbler.html#a15461169b9f4cbab798a3b4c164ea0d0">moveSnake</a> ()</td></tr>
+<tr class="memdesc:a15461169b9f4cbab798a3b4c164ea0d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move the snake.  <a href="class_nibbler.html#a15461169b9f4cbab798a3b4c164ea0d0">More...</a><br /></td></tr>
+<tr class="separator:a15461169b9f4cbab798a3b4c164ea0d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1436fbaf51c29161081edc8ff8d591d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_nibbler.html#af1436fbaf51c29161081edc8ff8d591d">snakeIsOnAFruit</a> (std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_i_entity.html">IEntity</a> &gt;&gt; &amp;entities)</td></tr>
+<tr class="memdesc:af1436fbaf51c29161081edc8ff8d591d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the snake is on a fruit.  <a href="class_nibbler.html#af1436fbaf51c29161081edc8ff8d591d">More...</a><br /></td></tr>
+<tr class="separator:af1436fbaf51c29161081edc8ff8d591d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd3b906f2c073a8f9e73a61d9bec1523"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_nibbler.html#afd3b906f2c073a8f9e73a61d9bec1523">nextLevel</a> (std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_i_entity.html">IEntity</a> &gt;&gt; &amp;entities)</td></tr>
+<tr class="memdesc:afd3b906f2c073a8f9e73a61d9bec1523"><td class="mdescLeft">&#160;</td><td class="mdescRight">Go to the next level.  <a href="class_nibbler.html#afd3b906f2c073a8f9e73a61d9bec1523">More...</a><br /></td></tr>
+<tr class="separator:afd3b906f2c073a8f9e73a61d9bec1523"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fe0291e57eab7f45f3b61c43057bc4a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_nibbler.html#a1fe0291e57eab7f45f3b61c43057bc4a">initEntities</a> (std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_i_entity.html">IEntity</a> &gt;&gt; &amp;entities)</td></tr>
+<tr class="memdesc:a1fe0291e57eab7f45f3b61c43057bc4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Init entities.  <a href="class_nibbler.html#a1fe0291e57eab7f45f3b61c43057bc4a">More...</a><br /></td></tr>
+<tr class="separator:a1fe0291e57eab7f45f3b61c43057bc4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a932ce5d612644f06eb6e8a67ededfa5e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_player.html">Player</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_nibbler.html#a932ce5d612644f06eb6e8a67ededfa5e">createNewHead</a> (int x, int y)</td></tr>
+<tr class="memdesc:a932ce5d612644f06eb6e8a67ededfa5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create new head.  <a href="class_nibbler.html#a932ce5d612644f06eb6e8a67ededfa5e">More...</a><br /></td></tr>
+<tr class="separator:a932ce5d612644f06eb6e8a67ededfa5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a324b5ca1d1234f8ce64d7f4064995ce8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_player.html">Player</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_nibbler.html#a324b5ca1d1234f8ce64d7f4064995ce8">createNewTail</a> (int x, int y)</td></tr>
+<tr class="memdesc:a324b5ca1d1234f8ce64d7f4064995ce8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create new tail.  <a href="class_nibbler.html#a324b5ca1d1234f8ce64d7f4064995ce8">More...</a><br /></td></tr>
+<tr class="separator:a324b5ca1d1234f8ce64d7f4064995ce8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5084afbf9f32baf29d618759c9d59cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_object.html">Object</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_nibbler.html#af5084afbf9f32baf29d618759c9d59cb">createNewFruit</a> (int x, int y)</td></tr>
+<tr class="memdesc:af5084afbf9f32baf29d618759c9d59cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create new fruit.  <a href="class_nibbler.html#af5084afbf9f32baf29d618759c9d59cb">More...</a><br /></td></tr>
+<tr class="separator:af5084afbf9f32baf29d618759c9d59cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2243ff75af4e12b7105b72b9746eca23"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_object.html">Object</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_nibbler.html#a2243ff75af4e12b7105b72b9746eca23">createNewWall</a> (int x, int y)</td></tr>
+<tr class="memdesc:a2243ff75af4e12b7105b72b9746eca23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create new wall.  <a href="class_nibbler.html#a2243ff75af4e12b7105b72b9746eca23">More...</a><br /></td></tr>
+<tr class="separator:a2243ff75af4e12b7105b72b9746eca23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af89fcbf2bb33473377c98da93aa3abbc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_nibbler.html#af89fcbf2bb33473377c98da93aa3abbc">snakeIsDeadCollision</a> ()</td></tr>
+<tr class="memdesc:af89fcbf2bb33473377c98da93aa3abbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the snake hits itself or a wall.  <a href="class_nibbler.html#af89fcbf2bb33473377c98da93aa3abbc">More...</a><br /></td></tr>
+<tr class="separator:af89fcbf2bb33473377c98da93aa3abbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1974992479ffcca9fd3d7f4563053e98"><td class="memItemLeft" align="right" valign="top">std::pair&lt; int, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_nibbler.html#a1974992479ffcca9fd3d7f4563053e98">getNextPos</a> (std::pair&lt; int, int &gt; pos, <a class="el" href="class_i_entity.html#ad9ba33013aa2da542e9fa6c6fadabef5">IEntity::Direction</a> dir)</td></tr>
+<tr class="memdesc:a1974992479ffcca9fd3d7f4563053e98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the next position of the snake's head.  <a href="class_nibbler.html#a1974992479ffcca9fd3d7f4563053e98">More...</a><br /></td></tr>
+<tr class="separator:a1974992479ffcca9fd3d7f4563053e98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:aee39fda083df1fabce39277d9e373150"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_i_entity.html#ad9ba33013aa2da542e9fa6c6fadabef5">IEntity::Direction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_nibbler.html#aee39fda083df1fabce39277d9e373150">_lastDir</a></td></tr>
+<tr class="memdesc:aee39fda083df1fabce39277d9e373150"><td class="mdescLeft">&#160;</td><td class="mdescRight">The snake's direction on its last movement.  <a href="class_nibbler.html#aee39fda083df1fabce39277d9e373150">More...</a><br /></td></tr>
+<tr class="separator:aee39fda083df1fabce39277d9e373150"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a607e93788cf4fd3848a7175d6967b4e6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_i_game.html#a4a7309d86599d6e581f764233085c7dd">GameState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_nibbler.html#a607e93788cf4fd3848a7175d6967b4e6">_gameState</a></td></tr>
+<tr class="memdesc:a607e93788cf4fd3848a7175d6967b4e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The game's state.  <a href="class_nibbler.html#a607e93788cf4fd3848a7175d6967b4e6">More...</a><br /></td></tr>
+<tr class="separator:a607e93788cf4fd3848a7175d6967b4e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f0c66327cad8e8dc338a05316606f28"><td class="memItemLeft" align="right" valign="top">std::list&lt; std::shared_ptr&lt; <a class="el" href="class_player.html">Player</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_nibbler.html#a9f0c66327cad8e8dc338a05316606f28">_snake</a></td></tr>
+<tr class="memdesc:a9f0c66327cad8e8dc338a05316606f28"><td class="mdescLeft">&#160;</td><td class="mdescRight">The snake (list of all its parts)  <a href="class_nibbler.html#a9f0c66327cad8e8dc338a05316606f28">More...</a><br /></td></tr>
+<tr class="separator:a9f0c66327cad8e8dc338a05316606f28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a213eaf9a7cd4acce376bfef5f195602b"><td class="memItemLeft" align="right" valign="top">std::list&lt; std::shared_ptr&lt; <a class="el" href="class_object.html">Object</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_nibbler.html#a213eaf9a7cd4acce376bfef5f195602b">_walls</a></td></tr>
+<tr class="memdesc:a213eaf9a7cd4acce376bfef5f195602b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The walls.  <a href="class_nibbler.html#a213eaf9a7cd4acce376bfef5f195602b">More...</a><br /></td></tr>
+<tr class="separator:a213eaf9a7cd4acce376bfef5f195602b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c69135dc4fce67ab393ef9ed7650b50"><td class="memItemLeft" align="right" valign="top">std::chrono::high_resolution_clock::time_point&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_nibbler.html#a6c69135dc4fce67ab393ef9ed7650b50">_clock</a></td></tr>
+<tr class="memdesc:a6c69135dc4fce67ab393ef9ed7650b50"><td class="mdescLeft">&#160;</td><td class="mdescRight">The game clock.  <a href="class_nibbler.html#a6c69135dc4fce67ab393ef9ed7650b50">More...</a><br /></td></tr>
+<tr class="separator:a6c69135dc4fce67ab393ef9ed7650b50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87cf4ceb8e43d03129218d33a78c6c89"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_object.html">Object</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_nibbler.html#a87cf4ceb8e43d03129218d33a78c6c89">_fruit</a></td></tr>
+<tr class="memdesc:a87cf4ceb8e43d03129218d33a78c6c89"><td class="mdescLeft">&#160;</td><td class="mdescRight">The fruit.  <a href="class_nibbler.html#a87cf4ceb8e43d03129218d33a78c6c89">More...</a><br /></td></tr>
+<tr class="separator:a87cf4ceb8e43d03129218d33a78c6c89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ab7b18a46578b66f77cc733641d3c1a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_i_entity.html#ad9ba33013aa2da542e9fa6c6fadabef5">IEntity::Direction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_nibbler.html#a4ab7b18a46578b66f77cc733641d3c1a">_lastTailDir</a></td></tr>
+<tr class="memdesc:a4ab7b18a46578b66f77cc733641d3c1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The last tail's last direction.  <a href="class_nibbler.html#a4ab7b18a46578b66f77cc733641d3c1a">More...</a><br /></td></tr>
+<tr class="separator:a4ab7b18a46578b66f77cc733641d3c1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0bcc241941912d53fc15011ffa7272a"><td class="memItemLeft" align="right" valign="top">std::pair&lt; int, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_nibbler.html#ac0bcc241941912d53fc15011ffa7272a">_lastTailPos</a></td></tr>
+<tr class="memdesc:ac0bcc241941912d53fc15011ffa7272a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The last tails's last position.  <a href="class_nibbler.html#ac0bcc241941912d53fc15011ffa7272a">More...</a><br /></td></tr>
+<tr class="separator:ac0bcc241941912d53fc15011ffa7272a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21b6c82da65625263e86ed03fad8773e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_nibbler.html#a21b6c82da65625263e86ed03fad8773e">_speed</a></td></tr>
+<tr class="memdesc:a21b6c82da65625263e86ed03fad8773e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The game's speed multiplier.  <a href="class_nibbler.html#a21b6c82da65625263e86ed03fad8773e">More...</a><br /></td></tr>
+<tr class="separator:a21b6c82da65625263e86ed03fad8773e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab64ef71833aa01c1830ecedd2d2f7c32"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_nibbler.html#ab64ef71833aa01c1830ecedd2d2f7c32">_score</a></td></tr>
+<tr class="memdesc:ab64ef71833aa01c1830ecedd2d2f7c32"><td class="mdescLeft">&#160;</td><td class="mdescRight">The game's score.  <a href="class_nibbler.html#ab64ef71833aa01c1830ecedd2d2f7c32">More...</a><br /></td></tr>
+<tr class="separator:ab64ef71833aa01c1830ecedd2d2f7c32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_types_class_i_game"><td colspan="2" onclick="javascript:toggleInherit('pub_types_class_i_game')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="class_i_game.html">IGame</a></td></tr>
@@ -185,7 +269,9 @@ Additional Inherited Members</h2></td></tr>
 <p>Constructor. </p>
 
 <p class="definition">Definition at line <a class="el" href="_nibbler_8cpp_source.html#l00016">16</a> of file <a class="el" href="_nibbler_8cpp_source.html">Nibbler.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                 : <a class="code" href="class_nibbler.html#a607e93788cf4fd3848a7175d6967b4e6">_gameState</a>(<a class="code" href="class_i_game.html#a4a7309d86599d6e581f764233085c7dda09d4d696b4e935115b9313e3c412509a">IGame::GameState::STOPPED</a>), <a class="code" href="class_nibbler.html#a4ab7b18a46578b66f77cc733641d3c1a">_lastTailDir</a>(IEntity::Direction::RIGHT), <a class="code" href="class_nibbler.html#ac0bcc241941912d53fc15011ffa7272a">_lastTailPos</a>(std::make_pair(0, 0)), <a class="code" href="class_nibbler.html#ab64ef71833aa01c1830ecedd2d2f7c32">_score</a>(0)</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a03b98f06bc1f845f57aa15f034f0467e"></a>
@@ -241,11 +327,272 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Closes the library. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">std::vector&lt;std::shared_ptr&lt;IEntity&gt;&gt;</td><td>&amp;entities vector of current entities </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implements <a class="el" href="class_i_game.html#a674650861ce38c0c6337db9974079be5">IGame</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_nibbler_8cpp_source.html#l00038">38</a> of file <a class="el" href="_nibbler_8cpp_source.html">Nibbler.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="class_nibbler.html#a9f0c66327cad8e8dc338a05316606f28">_snake</a>.clear();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    entities.clear();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af5084afbf9f32baf29d618759c9d59cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5084afbf9f32baf29d618759c9d59cb">&#9670;&nbsp;</a></span>createNewFruit()</h2>
 
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_object.html">Object</a> Nibbler::createNewFruit </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create new fruit. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entities</td><td>The entity vector of the game </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the created fruit </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_nibbler_8cpp_source.html#l00064">64</a> of file <a class="el" href="_nibbler_8cpp_source.html">Nibbler.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;{</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="class_object.html">Object</a> fruit(Object::ENTITY_TYPE::BONUS);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    fruit.setPos(std::make_pair(x, y));</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    fruit.setTermTexture(<span class="charliteral">&#39;*&#39;</span>, Color::TermColors::YELLOW, Color::TermColors::BLACK);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">return</span> fruit;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a932ce5d612644f06eb6e8a67ededfa5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a932ce5d612644f06eb6e8a67ededfa5e">&#9670;&nbsp;</a></span>createNewHead()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_player.html">Player</a> Nibbler::createNewHead </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create new head. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entities</td><td>The entity vector of the game </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the created head </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_nibbler_8cpp_source.html#l00044">44</a> of file <a class="el" href="_nibbler_8cpp_source.html">Nibbler.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="class_player.html">Player</a> head;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    head.<a class="code" href="class_a_entity.html#a4de390d62596a386c52a0ac1e28ae03e">setPos</a>(std::make_pair(x, y));</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    head.<a class="code" href="class_a_entity.html#ae46771dd1354b5c4e4350d9a8c63df45">setTexturePath</a>(std::filesystem::absolute(std::filesystem::path(<span class="stringliteral">&quot;Src/Games/Nibbler/Resources/Textures/Snake/SnakeHead.png&quot;</span>)).<span class="keywordtype">string</span>());</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    head.<a class="code" href="class_a_entity.html#a4150c9d56ce22e79c9d979392ab7ffec">setTermTexture</a>(<span class="charliteral">&#39;o&#39;</span>, Color::TermColors::RED, Color::TermColors::BLACK);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">return</span> head;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a324b5ca1d1234f8ce64d7f4064995ce8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a324b5ca1d1234f8ce64d7f4064995ce8">&#9670;&nbsp;</a></span>createNewTail()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_player.html">Player</a> Nibbler::createNewTail </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create new tail. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entities</td><td>The entity vector of the game </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the created tail </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_nibbler_8cpp_source.html#l00054">54</a> of file <a class="el" href="_nibbler_8cpp_source.html">Nibbler.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;{</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="class_player.html">Player</a> tail;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    tail.<a class="code" href="class_a_entity.html#a4de390d62596a386c52a0ac1e28ae03e">setPos</a>(std::make_pair(x, y));</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    tail.<a class="code" href="class_a_entity.html#ae46771dd1354b5c4e4350d9a8c63df45">setTexturePath</a>(std::filesystem::absolute(std::filesystem::path(<span class="stringliteral">&quot;Src/Games/Nibbler/Resources/Textures/Snake/SnakeTail.png&quot;</span>)).<span class="keywordtype">string</span>());</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    tail.<a class="code" href="class_a_entity.html#a4150c9d56ce22e79c9d979392ab7ffec">setTermTexture</a>(<span class="charliteral">&#39;.&#39;</span>, Color::TermColors::GREEN, Color::TermColors::BLACK);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">return</span> tail;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2243ff75af4e12b7105b72b9746eca23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2243ff75af4e12b7105b72b9746eca23">&#9670;&nbsp;</a></span>createNewWall()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_object.html">Object</a> Nibbler::createNewWall </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create new wall. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entities</td><td>The entity vector of the game </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the created wall </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_nibbler_8cpp_source.html#l00073">73</a> of file <a class="el" href="_nibbler_8cpp_source.html">Nibbler.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;{</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="class_object.html">Object</a> wall(Object::ENTITY_TYPE::WALL);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    wall.setPos(std::make_pair(x, y));</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    wall.setTermTexture(<span class="charliteral">&#39; &#39;</span>, Color::TermColors::BLACK, Color::TermColors::WHITE);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">return</span> wall;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a0b943b6374135637bcbf06f4b594b7af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b943b6374135637bcbf06f4b594b7af">&#9670;&nbsp;</a></span>getClockTimeMS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Nibbler::getClockTimeMS </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the elapsed time since the last update in milliseconds. </p>
+<dl class="section return"><dt>Returns</dt><dd>the elapsed time since the last update in milliseconds </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_nibbler_8cpp_source.html#l00117">117</a> of file <a class="el" href="_nibbler_8cpp_source.html">Nibbler.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;{</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordflow">return</span> std::chrono::duration_cast&lt;std::chrono::milliseconds&gt;(std::chrono::high_resolution_clock::now() - <a class="code" href="class_nibbler.html#a6c69135dc4fce67ab393ef9ed7650b50">_clock</a>).count();</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="abff00d59bbeecdd263ec2dcf711a805b"></a>
@@ -277,7 +624,10 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="class_i_game.html#afe8e58b2e0a3f52c4c532d74f6bf7852">IGame</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_nibbler_8cpp_source.html#l00274">274</a> of file <a class="el" href="_nibbler_8cpp_source.html">Nibbler.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;{</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_nibbler.html#a607e93788cf4fd3848a7175d6967b4e6">_gameState</a> == <a class="code" href="class_i_game.html#a4a7309d86599d6e581f764233085c7dda09d4d696b4e935115b9313e3c412509a">GameState::STOPPED</a>;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a2ba7dcedc156367a534047a1e7912185"></a>
@@ -309,7 +659,65 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="class_i_game.html#ad4b0a0f5cf6be7c2692485907dc0f6ac">IGame</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_nibbler_8cpp_source.html#l00254">254</a> of file <a class="el" href="_nibbler_8cpp_source.html">Nibbler.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;{</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;Nibbler&quot;</span>;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a1974992479ffcca9fd3d7f4563053e98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1974992479ffcca9fd3d7f4563053e98">&#9670;&nbsp;</a></span>getNextPos()</h2>
 
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt; int, int &gt; Nibbler::getNextPos </td>
+          <td>(</td>
+          <td class="paramtype">std::pair&lt; int, int &gt;&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_i_entity.html#ad9ba33013aa2da542e9fa6c6fadabef5">IEntity::Direction</a>&#160;</td>
+          <td class="paramname"><em>dir</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the next position of the snake's head. </p>
+<dl class="section return"><dt>Returns</dt><dd>the next position of the snake's head </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_nibbler_8cpp_source.html#l00175">175</a> of file <a class="el" href="_nibbler_8cpp_source.html">Nibbler.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;{</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keywordflow">switch</span> (dir) {</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="keywordflow">case</span> IEntity::Direction::UP:</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            <span class="keywordflow">return</span> std::make_pair(pos.first - 1, pos.second);</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <span class="keywordflow">case</span> IEntity::Direction::DOWN:</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            <span class="keywordflow">return</span> std::make_pair(pos.first + 1, pos.second);</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        <span class="keywordflow">case</span> IEntity::Direction::LEFT:</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            <span class="keywordflow">return</span> std::make_pair(pos.first, pos.second - 1);</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <span class="keywordflow">case</span> IEntity::Direction::RIGHT:</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            <span class="keywordflow">return</span> std::make_pair(pos.first, pos.second + 1);</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            <span class="keywordflow">return</span> pos;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    }</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9776bb38e2ac0c3ba430d90137b01195"></a>
@@ -331,7 +739,10 @@ Additional Inherited Members</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>the game's score </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="_nibbler_8cpp_source.html#l00269">269</a> of file <a class="el" href="_nibbler_8cpp_source.html">Nibbler.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;{</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_nibbler.html#ab64ef71833aa01c1830ecedd2d2f7c32">_score</a>;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a4791bec92f2832b16ed9699028e25c9b"></a>
@@ -393,7 +804,10 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="class_i_game.html#a44de7e08e7ee294be051445a84306299">IGame</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_nibbler_8cpp_source.html#l00259">259</a> of file <a class="el" href="_nibbler_8cpp_source.html">Nibbler.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;{</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_nibbler.html#a607e93788cf4fd3848a7175d6967b4e6">_gameState</a>;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a491d99262a9ffefd0ba88dbf98f2c858"></a>
@@ -421,11 +835,382 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Initialize the game. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">std::vector&lt;std::shared_ptr&lt;IEntity&gt;&gt;</td><td>&amp;entities vector of current entities </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implements <a class="el" href="class_i_game.html#a7cd2c70ae9eb419516d263363eb2b3d2">IGame</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_nibbler_8cpp_source.html#l00022">22</a> of file <a class="el" href="_nibbler_8cpp_source.html">Nibbler.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    srand((<span class="keywordtype">unsigned</span>) time(NULL));</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="class_nibbler.html#a607e93788cf4fd3848a7175d6967b4e6">_gameState</a> = <a class="code" href="class_i_game.html#a4a7309d86599d6e581f764233085c7ddab638272ceeff54912f043465e9a28c9b">GameState::LOADED</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="class_nibbler.html#aee39fda083df1fabce39277d9e373150">_lastDir</a> = IEntity::Direction::RIGHT;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="class_nibbler.html#a4ab7b18a46578b66f77cc733641d3c1a">_lastTailDir</a> = IEntity::Direction::RIGHT;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="class_nibbler.html#ac0bcc241941912d53fc15011ffa7272a">_lastTailPos</a> = std::make_pair(0, 0);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="class_nibbler.html#a21b6c82da65625263e86ed03fad8773e">_speed</a> = 1;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="class_object.html">Object</a> fruit = <a class="code" href="class_nibbler.html#af5084afbf9f32baf29d618759c9d59cb">createNewFruit</a>(rand() % (<a class="code" href="_grid_8hpp.html#a804eeb9892adae7306540eb33f2326eb">GRID_WIDTH</a> - (<a class="code" href="_grid_8hpp.html#a804eeb9892adae7306540eb33f2326eb">GRID_WIDTH</a> / 4)), rand() % (<a class="code" href="_grid_8hpp.html#a8bd9f95c4e7d0ae683aaa0434a72dca9">GRID_HEIGHT</a>));</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    fruit.<a class="code" href="class_a_entity.html#a4de390d62596a386c52a0ac1e28ae03e">setPos</a>(std::make_pair((rand() % ((<a class="code" href="_grid_8hpp.html#a804eeb9892adae7306540eb33f2326eb">GRID_WIDTH</a> - (<a class="code" href="_grid_8hpp.html#a804eeb9892adae7306540eb33f2326eb">GRID_WIDTH</a> / 4)) - 2)) + 1, (rand() % ((<a class="code" href="_grid_8hpp.html#a8bd9f95c4e7d0ae683aaa0434a72dca9">GRID_HEIGHT</a>) -2)) + 1));</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    fruit.<a class="code" href="class_a_entity.html#a4150c9d56ce22e79c9d979392ab7ffec">setTermTexture</a>(<span class="charliteral">&#39;*&#39;</span>, Color::TermColors::YELLOW, Color::TermColors::BLACK);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="class_nibbler.html#a87cf4ceb8e43d03129218d33a78c6c89">_fruit</a> = std::make_shared&lt;Object&gt;(fruit);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="class_nibbler.html#a1fe0291e57eab7f45f3b61c43057bc4a">initEntities</a>(entities);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a1fe0291e57eab7f45f3b61c43057bc4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fe0291e57eab7f45f3b61c43057bc4a">&#9670;&nbsp;</a></span>initEntities()</h2>
 
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Nibbler::initEntities </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_i_entity.html">IEntity</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>entities</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Init entities. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entities</td><td>The entity vector of the game </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_nibbler_8cpp_source.html#l00082">82</a> of file <a class="el" href="_nibbler_8cpp_source.html">Nibbler.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;{</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="_grid_8hpp.html#a8bd9f95c4e7d0ae683aaa0434a72dca9">GRID_HEIGHT</a>; i++) {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; (<a class="code" href="_grid_8hpp.html#a804eeb9892adae7306540eb33f2326eb">GRID_WIDTH</a> - (<a class="code" href="_grid_8hpp.html#a804eeb9892adae7306540eb33f2326eb">GRID_WIDTH</a> / 4)); j++) {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <span class="keywordflow">if</span> (i == 0 || i == <a class="code" href="_grid_8hpp.html#a8bd9f95c4e7d0ae683aaa0434a72dca9">GRID_HEIGHT</a> - 1 || j == 0 || j == (<a class="code" href="_grid_8hpp.html#a804eeb9892adae7306540eb33f2326eb">GRID_WIDTH</a> - (<a class="code" href="_grid_8hpp.html#a804eeb9892adae7306540eb33f2326eb">GRID_WIDTH</a> / 4)) - 1) {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                std::shared_ptr&lt;Object&gt; wall = std::make_shared&lt;Object&gt;(<a class="code" href="class_nibbler.html#a2243ff75af4e12b7105b72b9746eca23">createNewWall</a>(j, i));</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                entities.push_back(wall);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                <a class="code" href="class_nibbler.html#a213eaf9a7cd4acce376bfef5f195602b">_walls</a>.push_back(wall);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <a class="code" href="class_player.html">Player</a> head = <a class="code" href="class_nibbler.html#a932ce5d612644f06eb6e8a67ededfa5e">createNewHead</a>(<a class="code" href="_grid_8hpp.html#a804eeb9892adae7306540eb33f2326eb">GRID_WIDTH</a> / 2, <a class="code" href="_grid_8hpp.html#a8bd9f95c4e7d0ae683aaa0434a72dca9">GRID_HEIGHT</a> / 2 + 1);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <a class="code" href="class_player.html">Player</a> tail1 = <a class="code" href="class_nibbler.html#a324b5ca1d1234f8ce64d7f4064995ce8">createNewTail</a>(<a class="code" href="_grid_8hpp.html#a804eeb9892adae7306540eb33f2326eb">GRID_WIDTH</a> / 2, <a class="code" href="_grid_8hpp.html#a8bd9f95c4e7d0ae683aaa0434a72dca9">GRID_HEIGHT</a> / 2);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <a class="code" href="class_player.html">Player</a> tail2 = <a class="code" href="class_nibbler.html#a324b5ca1d1234f8ce64d7f4064995ce8">createNewTail</a>(<a class="code" href="_grid_8hpp.html#a804eeb9892adae7306540eb33f2326eb">GRID_WIDTH</a> / 2, <a class="code" href="_grid_8hpp.html#a8bd9f95c4e7d0ae683aaa0434a72dca9">GRID_HEIGHT</a> / 2 - 1);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <a class="code" href="class_player.html">Player</a> tail3 = <a class="code" href="class_nibbler.html#a324b5ca1d1234f8ce64d7f4064995ce8">createNewTail</a>(<a class="code" href="_grid_8hpp.html#a804eeb9892adae7306540eb33f2326eb">GRID_WIDTH</a> / 2, <a class="code" href="_grid_8hpp.html#a8bd9f95c4e7d0ae683aaa0434a72dca9">GRID_HEIGHT</a> / 2 - 2);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    std::shared_ptr&lt;Player&gt; headPtr = std::make_shared&lt;Player&gt;(head);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    std::shared_ptr&lt;Player&gt; tail1Ptr = std::make_shared&lt;Player&gt;(tail1);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    std::shared_ptr&lt;Player&gt; tail2Ptr = std::make_shared&lt;Player&gt;(tail2);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    std::shared_ptr&lt;Player&gt; tail3Ptr = std::make_shared&lt;Player&gt;(tail3);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <a class="code" href="class_nibbler.html#a9f0c66327cad8e8dc338a05316606f28">_snake</a>.push_back(headPtr);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <a class="code" href="class_nibbler.html#a9f0c66327cad8e8dc338a05316606f28">_snake</a>.push_back(tail1Ptr);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <a class="code" href="class_nibbler.html#a9f0c66327cad8e8dc338a05316606f28">_snake</a>.push_back(tail2Ptr);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <a class="code" href="class_nibbler.html#a9f0c66327cad8e8dc338a05316606f28">_snake</a>.push_back(tail3Ptr);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    entities.push_back(headPtr);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    entities.push_back(tail1Ptr);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    entities.push_back(tail2Ptr);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    entities.push_back(tail3Ptr);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    entities.push_back(<a class="code" href="class_nibbler.html#a87cf4ceb8e43d03129218d33a78c6c89">_fruit</a>);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aeaeda7304d5f1a7a3bf28eb8ba7682d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeaeda7304d5f1a7a3bf28eb8ba7682d8">&#9670;&nbsp;</a></span>manageClickEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Nibbler::manageClickEvent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_arcade_1_1_evt.html">Arcade::Evt</a> &amp;&#160;</td>
+          <td class="paramname"><em>event</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_i_entity.html">IEntity</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>entities</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Manage the click events. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">event</td><td>The event stack of the game </td></tr>
+    <tr><td class="paramname">entities</td><td>The entity vector of the game </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Warning</dt><dd>Not implemented at the moment </dd></dl>
+
+</div>
+</div>
+<a id="a4556aa27faca9cdc2c758e801ccc2a72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4556aa27faca9cdc2c758e801ccc2a72">&#9670;&nbsp;</a></span>manageEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Nibbler::manageEvent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_arcade_1_1_evt.html">Arcade::Evt</a> &amp;&#160;</td>
+          <td class="paramname"><em>event</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_i_entity.html">IEntity</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>entities</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Manage the events. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">events</td><td>The event stack of the game </td></tr>
+    <tr><td class="paramname">entities</td><td>The entity vector of the game </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_nibbler_8cpp_source.html#l00150">150</a> of file <a class="el" href="_nibbler_8cpp_source.html">Nibbler.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;{</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keywordflow">if</span> (event.<a class="code" href="struct_arcade_1_1_evt.html#a4ba7514d4153a08a310541d0806745b3">evt_type</a> == Arcade::Evt::EvtType::KEY)</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <a class="code" href="class_nibbler.html#a183056dd866d6865b0309a7e989a9255">manageKeyEvent</a>(event, entities);</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a183056dd866d6865b0309a7e989a9255"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a183056dd866d6865b0309a7e989a9255">&#9670;&nbsp;</a></span>manageKeyEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Nibbler::manageKeyEvent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_arcade_1_1_evt.html">Arcade::Evt</a> &amp;&#160;</td>
+          <td class="paramname"><em>event</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_i_entity.html">IEntity</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>entities</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Manage the key events. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">event</td><td>The event stack of the game </td></tr>
+    <tr><td class="paramname">entities</td><td>The entity vector of the game </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_nibbler_8cpp_source.html#l00127">127</a> of file <a class="el" href="_nibbler_8cpp_source.html">Nibbler.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;{</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    (void) entities;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keywordflow">switch</span> (event.<a class="code" href="struct_arcade_1_1_evt.html#a1e0216c2bf9391639cb1a34417fa8aab">key</a>.<a class="code" href="struct_arcade_1_1_evt_1_1_key_evt.html#ad3315d3165d4a76a92a222477b727918">key</a>) {</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <span class="keywordflow">case</span> <span class="charliteral">&#39;Z&#39;</span>:</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_nibbler.html#aee39fda083df1fabce39277d9e373150">_lastDir</a> != IEntity::Direction::DOWN)</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                <a class="code" href="class_nibbler.html#a9f0c66327cad8e8dc338a05316606f28">_snake</a>.front()-&gt;setDirection(IEntity::Direction::UP);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        <span class="keywordflow">case</span> <span class="charliteral">&#39;Q&#39;</span>:</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_nibbler.html#aee39fda083df1fabce39277d9e373150">_lastDir</a> != IEntity::Direction::RIGHT)</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                <a class="code" href="class_nibbler.html#a9f0c66327cad8e8dc338a05316606f28">_snake</a>.front()-&gt;setDirection(IEntity::Direction::LEFT);</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        <span class="keywordflow">case</span> <span class="charliteral">&#39;S&#39;</span>:</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_nibbler.html#aee39fda083df1fabce39277d9e373150">_lastDir</a> != IEntity::Direction::UP)</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;                <a class="code" href="class_nibbler.html#a9f0c66327cad8e8dc338a05316606f28">_snake</a>.front()-&gt;setDirection(IEntity::Direction::DOWN);</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <span class="keywordflow">case</span> <span class="charliteral">&#39;D&#39;</span>:</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_nibbler.html#aee39fda083df1fabce39277d9e373150">_lastDir</a> != IEntity::Direction::LEFT)</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                <a class="code" href="class_nibbler.html#a9f0c66327cad8e8dc338a05316606f28">_snake</a>.front()-&gt;setDirection(IEntity::Direction::RIGHT);</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    }</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a15461169b9f4cbab798a3b4c164ea0d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15461169b9f4cbab798a3b4c164ea0d0">&#9670;&nbsp;</a></span>moveSnake()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Nibbler::moveSnake </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Move the snake. </p>
+
+<p class="definition">Definition at line <a class="el" href="_nibbler_8cpp_source.html#l00191">191</a> of file <a class="el" href="_nibbler_8cpp_source.html">Nibbler.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;{</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_nibbler.html#a0b943b6374135637bcbf06f4b594b7af">getClockTimeMS</a>() * <a class="code" href="class_nibbler.html#a21b6c82da65625263e86ed03fad8773e">_speed</a> &gt; 200) {</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        <a class="code" href="class_nibbler.html#a49b55efadf9a7926f69d88ba4bdd8a4e">resetClock</a>();</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        <a class="code" href="class_i_entity.html#ad9ba33013aa2da542e9fa6c6fadabef5">IEntity::Direction</a> dirPrev = <a class="code" href="class_nibbler.html#a9f0c66327cad8e8dc338a05316606f28">_snake</a>.front()-&gt;getDirection();</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        <a class="code" href="class_i_entity.html#ad9ba33013aa2da542e9fa6c6fadabef5">IEntity::Direction</a> dirBuffer;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <a class="code" href="class_nibbler.html#a4ab7b18a46578b66f77cc733641d3c1a">_lastTailDir</a> = <a class="code" href="class_nibbler.html#a9f0c66327cad8e8dc338a05316606f28">_snake</a>.back()-&gt;getDirection();</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        <a class="code" href="class_nibbler.html#ac0bcc241941912d53fc15011ffa7272a">_lastTailPos</a> = <a class="code" href="class_nibbler.html#a9f0c66327cad8e8dc338a05316606f28">_snake</a>.back()-&gt;getPos();</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        <a class="code" href="class_nibbler.html#aee39fda083df1fabce39277d9e373150">_lastDir</a> = <a class="code" href="class_nibbler.html#a9f0c66327cad8e8dc338a05316606f28">_snake</a>.front()-&gt;getDirection();</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;it: <a class="code" href="class_nibbler.html#a9f0c66327cad8e8dc338a05316606f28">_snake</a>) {</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;            dirBuffer = it-&gt;getDirection();</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;            it-&gt;setPos(<a class="code" href="class_nibbler.html#a1974992479ffcca9fd3d7f4563053e98">getNextPos</a>(it-&gt;getPos(), dirBuffer));</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            it-&gt;setDirection(dirPrev);</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;            dirPrev = dirBuffer;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;            <span class="keywordflow">if</span> (it-&gt;getPos().first &lt; 0 || it-&gt;getPos().first &gt; <a class="code" href="_grid_8hpp.html#a804eeb9892adae7306540eb33f2326eb">GRID_WIDTH</a> || it-&gt;getPos().second &lt; 0 || it-&gt;getPos().second &gt; <a class="code" href="_grid_8hpp.html#a8bd9f95c4e7d0ae683aaa0434a72dca9">GRID_HEIGHT</a>) {</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;                <a class="code" href="class_nibbler.html#a607e93788cf4fd3848a7175d6967b4e6">_gameState</a> = <a class="code" href="class_i_game.html#a4a7309d86599d6e581f764233085c7dda09d4d696b4e935115b9313e3c412509a">GameState::STOPPED</a>;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            }</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        }</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    }</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="afd3b906f2c073a8f9e73a61d9bec1523"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd3b906f2c073a8f9e73a61d9bec1523">&#9670;&nbsp;</a></span>nextLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Nibbler::nextLevel </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_i_entity.html">IEntity</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>entities</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Go to the next level. </p>
+
+<p class="definition">Definition at line <a class="el" href="_nibbler_8cpp_source.html#l00240">240</a> of file <a class="el" href="_nibbler_8cpp_source.html">Nibbler.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;{</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <a class="code" href="class_nibbler.html#a21b6c82da65625263e86ed03fad8773e">_speed</a> *= 1.5;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160; </div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <a class="code" href="class_nibbler.html#a9f0c66327cad8e8dc338a05316606f28">_snake</a>.clear();</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    entities.clear();</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <a class="code" href="class_nibbler.html#a1fe0291e57eab7f45f3b61c43057bc4a">initEntities</a>(entities);</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a49b55efadf9a7926f69d88ba4bdd8a4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49b55efadf9a7926f69d88ba4bdd8a4e">&#9670;&nbsp;</a></span>resetClock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Nibbler::resetClock </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Restarts the clock. </p>
+
+<p class="definition">Definition at line <a class="el" href="_nibbler_8cpp_source.html#l00122">122</a> of file <a class="el" href="_nibbler_8cpp_source.html">Nibbler.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;{</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <a class="code" href="class_nibbler.html#a6c69135dc4fce67ab393ef9ed7650b50">_clock</a> = std::chrono::high_resolution_clock::now();</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="abcc4f7bafc62a1bf04668e7699ddd218"></a>
@@ -463,7 +1248,101 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="class_i_game.html#a8d7aa790c266dc79c50e815557de29ae">IGame</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_nibbler_8cpp_source.html#l00264">264</a> of file <a class="el" href="_nibbler_8cpp_source.html">Nibbler.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;{</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <a class="code" href="class_nibbler.html#a607e93788cf4fd3848a7175d6967b4e6">_gameState</a> = state;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af89fcbf2bb33473377c98da93aa3abbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af89fcbf2bb33473377c98da93aa3abbc">&#9670;&nbsp;</a></span>snakeIsDeadCollision()</h2>
 
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Nibbler::snakeIsDeadCollision </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if the snake hits itself or a wall. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if the snake hits itself or a wall, false otherwise </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_nibbler_8cpp_source.html#l00212">212</a> of file <a class="el" href="_nibbler_8cpp_source.html">Nibbler.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;{</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;it: <a class="code" href="class_nibbler.html#a9f0c66327cad8e8dc338a05316606f28">_snake</a>) {</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        <span class="keywordflow">if</span> (it != <a class="code" href="class_nibbler.html#a9f0c66327cad8e8dc338a05316606f28">_snake</a>.front() &amp;&amp; it-&gt;getPos() == <a class="code" href="class_nibbler.html#a9f0c66327cad8e8dc338a05316606f28">_snake</a>.front()-&gt;getPos())</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    }</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;it: <a class="code" href="class_nibbler.html#a213eaf9a7cd4acce376bfef5f195602b">_walls</a>) {</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_nibbler.html#a9f0c66327cad8e8dc338a05316606f28">_snake</a>.front()-&gt;getPos() == it-&gt;getPos())</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    }</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af1436fbaf51c29161081edc8ff8d591d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1436fbaf51c29161081edc8ff8d591d">&#9670;&nbsp;</a></span>snakeIsOnAFruit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Nibbler::snakeIsOnAFruit </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_i_entity.html">IEntity</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>entities</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if the snake is on a fruit. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entities</td><td>The entity vector of the game </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the snake is on a fruit, false otherwise </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_nibbler_8cpp_source.html#l00225">225</a> of file <a class="el" href="_nibbler_8cpp_source.html">Nibbler.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;{</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_nibbler.html#a9f0c66327cad8e8dc338a05316606f28">_snake</a>.front()-&gt;getPos() == <a class="code" href="class_nibbler.html#a87cf4ceb8e43d03129218d33a78c6c89">_fruit</a>-&gt;getPos()) {</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        <a class="code" href="class_player.html">Player</a> tail = <a class="code" href="class_nibbler.html#a324b5ca1d1234f8ce64d7f4064995ce8">createNewTail</a>(<a class="code" href="class_nibbler.html#ac0bcc241941912d53fc15011ffa7272a">_lastTailPos</a>.first, <a class="code" href="class_nibbler.html#ac0bcc241941912d53fc15011ffa7272a">_lastTailPos</a>.second);</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        tail.<a class="code" href="class_a_entity.html#a19ac1875464bf00f930afa1f1809ef85">setDirection</a>(<a class="code" href="class_nibbler.html#a4ab7b18a46578b66f77cc733641d3c1a">_lastTailDir</a>);</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        std::shared_ptr&lt;Player&gt; tailPtr = std::make_shared&lt;Player&gt;(tail);</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        <a class="code" href="class_nibbler.html#a9f0c66327cad8e8dc338a05316606f28">_snake</a>.push_back(tailPtr);</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        entities.push_back(tailPtr);</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        <a class="code" href="class_nibbler.html#ab64ef71833aa01c1830ecedd2d2f7c32">_score</a> += 2;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        <a class="code" href="class_nibbler.html#a87cf4ceb8e43d03129218d33a78c6c89">_fruit</a>-&gt;setPos(std::make_pair((rand() % ((<a class="code" href="_grid_8hpp.html#a804eeb9892adae7306540eb33f2326eb">GRID_WIDTH</a> - (<a class="code" href="_grid_8hpp.html#a804eeb9892adae7306540eb33f2326eb">GRID_WIDTH</a> / 4)) - 2)) + 1, (rand() % ((<a class="code" href="_grid_8hpp.html#a8bd9f95c4e7d0ae683aaa0434a72dca9">GRID_HEIGHT</a>) -2)) + 1));</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    }</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a084962c2ead391b992c4eb122ecdb95b"></a>
@@ -494,7 +1373,10 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="class_i_game.html#abdc3543ee754cecb7eb156f05ce5869d">IGame</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_nibbler_8cpp_source.html#l00249">249</a> of file <a class="el" href="_nibbler_8cpp_source.html">Nibbler.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;{</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <a class="code" href="class_nibbler.html#a607e93788cf4fd3848a7175d6967b4e6">_gameState</a> = <a class="code" href="class_i_game.html#a4a7309d86599d6e581f764233085c7dda43491564ebcfd38568918efbd6e840fd">GameState::RUNNING</a>;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9d7cf94c38d3e95bca369ab3e7a7c21a"></a>
@@ -543,6 +1425,284 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="class_i_game.html#a025e62ee4c27e2e9f83ebae85dea9e9c">IGame</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_nibbler_8cpp_source.html#l00156">156</a> of file <a class="el" href="_nibbler_8cpp_source.html">Nibbler.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;{</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordflow">while</span> (events.size() &gt; 0) {</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <a class="code" href="class_nibbler.html#a4556aa27faca9cdc2c758e801ccc2a72">manageEvent</a>(events.top(), entities);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        events.pop();</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    }</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_nibbler.html#a607e93788cf4fd3848a7175d6967b4e6">_gameState</a> == <a class="code" href="class_i_game.html#a4a7309d86599d6e581f764233085c7dda43491564ebcfd38568918efbd6e840fd">GameState::RUNNING</a>) {</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <a class="code" href="class_nibbler.html#a15461169b9f4cbab798a3b4c164ea0d0">moveSnake</a>();</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <a class="code" href="class_nibbler.html#af1436fbaf51c29161081edc8ff8d591d">snakeIsOnAFruit</a>(entities);</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    }</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_nibbler.html#af89fcbf2bb33473377c98da93aa3abbc">snakeIsDeadCollision</a>())</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        <a class="code" href="class_nibbler.html#a607e93788cf4fd3848a7175d6967b4e6">_gameState</a> = <a class="code" href="class_i_game.html#a4a7309d86599d6e581f764233085c7dda09d4d696b4e935115b9313e3c412509a">GameState::STOPPED</a>;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_nibbler.html#a9f0c66327cad8e8dc338a05316606f28">_snake</a>.size() == (<a class="code" href="_grid_8hpp.html#a8bd9f95c4e7d0ae683aaa0434a72dca9">GRID_HEIGHT</a> - 2) * (<a class="code" href="_grid_8hpp.html#a804eeb9892adae7306540eb33f2326eb">GRID_WIDTH</a> - (<a class="code" href="_grid_8hpp.html#a804eeb9892adae7306540eb33f2326eb">GRID_WIDTH</a> / 4) - 2))</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        <a class="code" href="class_nibbler.html#afd3b906f2c073a8f9e73a61d9bec1523">nextLevel</a>(entities);</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a6c69135dc4fce67ab393ef9ed7650b50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c69135dc4fce67ab393ef9ed7650b50">&#9670;&nbsp;</a></span>_clock</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::chrono::high_resolution_clock::time_point Nibbler::_clock</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The game clock. </p>
+
+<p class="definition">Definition at line <a class="el" href="_nibbler_8hpp_source.html#l00070">70</a> of file <a class="el" href="_nibbler_8hpp_source.html">Nibbler.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a87cf4ceb8e43d03129218d33a78c6c89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87cf4ceb8e43d03129218d33a78c6c89">&#9670;&nbsp;</a></span>_fruit</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="class_object.html">Object</a>&gt; Nibbler::_fruit</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The fruit. </p>
+
+<p class="definition">Definition at line <a class="el" href="_nibbler_8hpp_source.html#l00072">72</a> of file <a class="el" href="_nibbler_8hpp_source.html">Nibbler.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a607e93788cf4fd3848a7175d6967b4e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a607e93788cf4fd3848a7175d6967b4e6">&#9670;&nbsp;</a></span>_gameState</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_i_game.html#a4a7309d86599d6e581f764233085c7dd">GameState</a> Nibbler::_gameState</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The game's state. </p>
+
+<p class="definition">Definition at line <a class="el" href="_nibbler_8hpp_source.html#l00064">64</a> of file <a class="el" href="_nibbler_8hpp_source.html">Nibbler.hpp</a>.</p>
+
+</div>
+</div>
+<a id="aee39fda083df1fabce39277d9e373150"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee39fda083df1fabce39277d9e373150">&#9670;&nbsp;</a></span>_lastDir</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_i_entity.html#ad9ba33013aa2da542e9fa6c6fadabef5">IEntity::Direction</a> Nibbler::_lastDir</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The snake's direction on its last movement. </p>
+
+<p class="definition">Definition at line <a class="el" href="_nibbler_8hpp_source.html#l00062">62</a> of file <a class="el" href="_nibbler_8hpp_source.html">Nibbler.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a4ab7b18a46578b66f77cc733641d3c1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ab7b18a46578b66f77cc733641d3c1a">&#9670;&nbsp;</a></span>_lastTailDir</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_i_entity.html#ad9ba33013aa2da542e9fa6c6fadabef5">IEntity::Direction</a> Nibbler::_lastTailDir</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The last tail's last direction. </p>
+
+<p class="definition">Definition at line <a class="el" href="_nibbler_8hpp_source.html#l00074">74</a> of file <a class="el" href="_nibbler_8hpp_source.html">Nibbler.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ac0bcc241941912d53fc15011ffa7272a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0bcc241941912d53fc15011ffa7272a">&#9670;&nbsp;</a></span>_lastTailPos</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt;int, int&gt; Nibbler::_lastTailPos</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The last tails's last position. </p>
+
+<p class="definition">Definition at line <a class="el" href="_nibbler_8hpp_source.html#l00076">76</a> of file <a class="el" href="_nibbler_8hpp_source.html">Nibbler.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ab64ef71833aa01c1830ecedd2d2f7c32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab64ef71833aa01c1830ecedd2d2f7c32">&#9670;&nbsp;</a></span>_score</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Nibbler::_score</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The game's score. </p>
+
+<p class="definition">Definition at line <a class="el" href="_nibbler_8hpp_source.html#l00080">80</a> of file <a class="el" href="_nibbler_8hpp_source.html">Nibbler.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a9f0c66327cad8e8dc338a05316606f28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f0c66327cad8e8dc338a05316606f28">&#9670;&nbsp;</a></span>_snake</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::list&lt;std::shared_ptr&lt;<a class="el" href="class_player.html">Player</a>&gt; &gt; Nibbler::_snake</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The snake (list of all its parts) </p>
+
+<p class="definition">Definition at line <a class="el" href="_nibbler_8hpp_source.html#l00066">66</a> of file <a class="el" href="_nibbler_8hpp_source.html">Nibbler.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a21b6c82da65625263e86ed03fad8773e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21b6c82da65625263e86ed03fad8773e">&#9670;&nbsp;</a></span>_speed</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Nibbler::_speed</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The game's speed multiplier. </p>
+
+<p class="definition">Definition at line <a class="el" href="_nibbler_8hpp_source.html#l00078">78</a> of file <a class="el" href="_nibbler_8hpp_source.html">Nibbler.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a213eaf9a7cd4acce376bfef5f195602b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a213eaf9a7cd4acce376bfef5f195602b">&#9670;&nbsp;</a></span>_walls</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::list&lt;std::shared_ptr&lt;<a class="el" href="class_object.html">Object</a>&gt; &gt; Nibbler::_walls</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The walls. </p>
+
+<p class="definition">Definition at line <a class="el" href="_nibbler_8hpp_source.html#l00068">68</a> of file <a class="el" href="_nibbler_8hpp_source.html">Nibbler.hpp</a>.</p>
 
 </div>
 </div>
@@ -552,6 +1712,45 @@ Additional Inherited Members</h2></td></tr>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aclass_nibbler_html_af89fcbf2bb33473377c98da93aa3abbc"><div class="ttname"><a href="class_nibbler.html#af89fcbf2bb33473377c98da93aa3abbc">Nibbler::snakeIsDeadCollision</a></div><div class="ttdeci">bool snakeIsDeadCollision()</div><div class="ttdoc">Check if the snake hits itself or a wall.</div><div class="ttdef"><b>Definition:</b> <a href="_nibbler_8cpp_source.html#l00212">Nibbler.cpp:212</a></div></div>
+<div class="ttc" id="aclass_i_game_html_a4a7309d86599d6e581f764233085c7dda09d4d696b4e935115b9313e3c412509a"><div class="ttname"><a href="class_i_game.html#a4a7309d86599d6e581f764233085c7dda09d4d696b4e935115b9313e3c412509a">IGame::GameState::STOPPED</a></div><div class="ttdeci">@ STOPPED</div><div class="ttdoc">Represents the game over.</div></div>
+<div class="ttc" id="aclass_nibbler_html_a213eaf9a7cd4acce376bfef5f195602b"><div class="ttname"><a href="class_nibbler.html#a213eaf9a7cd4acce376bfef5f195602b">Nibbler::_walls</a></div><div class="ttdeci">std::list&lt; std::shared_ptr&lt; Object &gt; &gt; _walls</div><div class="ttdoc">The walls.</div><div class="ttdef"><b>Definition:</b> <a href="_nibbler_8hpp_source.html#l00068">Nibbler.hpp:68</a></div></div>
+<div class="ttc" id="aclass_a_entity_html_ae46771dd1354b5c4e4350d9a8c63df45"><div class="ttname"><a href="class_a_entity.html#ae46771dd1354b5c4e4350d9a8c63df45">AEntity::setTexturePath</a></div><div class="ttdeci">void setTexturePath(std::string texturePath) override</div><div class="ttdoc">Set the texturePath of the entity.</div><div class="ttdef"><b>Definition:</b> <a href="_a_entity_8cpp_source.html#l00042">AEntity.cpp:42</a></div></div>
+<div class="ttc" id="aclass_nibbler_html_a0b943b6374135637bcbf06f4b594b7af"><div class="ttname"><a href="class_nibbler.html#a0b943b6374135637bcbf06f4b594b7af">Nibbler::getClockTimeMS</a></div><div class="ttdeci">int getClockTimeMS()</div><div class="ttdoc">Get the elapsed time since the last update in milliseconds.</div><div class="ttdef"><b>Definition:</b> <a href="_nibbler_8cpp_source.html#l00117">Nibbler.cpp:117</a></div></div>
+<div class="ttc" id="aclass_nibbler_html_ab64ef71833aa01c1830ecedd2d2f7c32"><div class="ttname"><a href="class_nibbler.html#ab64ef71833aa01c1830ecedd2d2f7c32">Nibbler::_score</a></div><div class="ttdeci">int _score</div><div class="ttdoc">The game's score.</div><div class="ttdef"><b>Definition:</b> <a href="_nibbler_8hpp_source.html#l00080">Nibbler.hpp:80</a></div></div>
+<div class="ttc" id="astruct_arcade_1_1_evt_html_a1e0216c2bf9391639cb1a34417fa8aab"><div class="ttname"><a href="struct_arcade_1_1_evt.html#a1e0216c2bf9391639cb1a34417fa8aab">Arcade::Evt::key</a></div><div class="ttdeci">KeyEvt key</div><div class="ttdoc">key event data, see KeyEvt</div><div class="ttdef"><b>Definition:</b> <a href="_event_8hpp_source.html#l00100">Event.hpp:100</a></div></div>
+<div class="ttc" id="aclass_nibbler_html_a4ab7b18a46578b66f77cc733641d3c1a"><div class="ttname"><a href="class_nibbler.html#a4ab7b18a46578b66f77cc733641d3c1a">Nibbler::_lastTailDir</a></div><div class="ttdeci">IEntity::Direction _lastTailDir</div><div class="ttdoc">The last tail's last direction.</div><div class="ttdef"><b>Definition:</b> <a href="_nibbler_8hpp_source.html#l00074">Nibbler.hpp:74</a></div></div>
+<div class="ttc" id="aclass_nibbler_html_a6c69135dc4fce67ab393ef9ed7650b50"><div class="ttname"><a href="class_nibbler.html#a6c69135dc4fce67ab393ef9ed7650b50">Nibbler::_clock</a></div><div class="ttdeci">std::chrono::high_resolution_clock::time_point _clock</div><div class="ttdoc">The game clock.</div><div class="ttdef"><b>Definition:</b> <a href="_nibbler_8hpp_source.html#l00070">Nibbler.hpp:70</a></div></div>
+<div class="ttc" id="aclass_nibbler_html_a15461169b9f4cbab798a3b4c164ea0d0"><div class="ttname"><a href="class_nibbler.html#a15461169b9f4cbab798a3b4c164ea0d0">Nibbler::moveSnake</a></div><div class="ttdeci">void moveSnake()</div><div class="ttdoc">Move the snake.</div><div class="ttdef"><b>Definition:</b> <a href="_nibbler_8cpp_source.html#l00191">Nibbler.cpp:191</a></div></div>
+<div class="ttc" id="aclass_nibbler_html_a1974992479ffcca9fd3d7f4563053e98"><div class="ttname"><a href="class_nibbler.html#a1974992479ffcca9fd3d7f4563053e98">Nibbler::getNextPos</a></div><div class="ttdeci">std::pair&lt; int, int &gt; getNextPos(std::pair&lt; int, int &gt; pos, IEntity::Direction dir)</div><div class="ttdoc">Get the next position of the snake's head.</div><div class="ttdef"><b>Definition:</b> <a href="_nibbler_8cpp_source.html#l00175">Nibbler.cpp:175</a></div></div>
+<div class="ttc" id="aclass_nibbler_html_a183056dd866d6865b0309a7e989a9255"><div class="ttname"><a href="class_nibbler.html#a183056dd866d6865b0309a7e989a9255">Nibbler::manageKeyEvent</a></div><div class="ttdeci">void manageKeyEvent(Arcade::Evt &amp;event, std::vector&lt; std::shared_ptr&lt; IEntity &gt;&gt; &amp;entities)</div><div class="ttdoc">Manage the key events.</div><div class="ttdef"><b>Definition:</b> <a href="_nibbler_8cpp_source.html#l00127">Nibbler.cpp:127</a></div></div>
+<div class="ttc" id="aclass_nibbler_html_a9f0c66327cad8e8dc338a05316606f28"><div class="ttname"><a href="class_nibbler.html#a9f0c66327cad8e8dc338a05316606f28">Nibbler::_snake</a></div><div class="ttdeci">std::list&lt; std::shared_ptr&lt; Player &gt; &gt; _snake</div><div class="ttdoc">The snake (list of all its parts)</div><div class="ttdef"><b>Definition:</b> <a href="_nibbler_8hpp_source.html#l00066">Nibbler.hpp:66</a></div></div>
+<div class="ttc" id="aclass_nibbler_html_a932ce5d612644f06eb6e8a67ededfa5e"><div class="ttname"><a href="class_nibbler.html#a932ce5d612644f06eb6e8a67ededfa5e">Nibbler::createNewHead</a></div><div class="ttdeci">Player createNewHead(int x, int y)</div><div class="ttdoc">Create new head.</div><div class="ttdef"><b>Definition:</b> <a href="_nibbler_8cpp_source.html#l00044">Nibbler.cpp:44</a></div></div>
+<div class="ttc" id="aclass_i_game_html_a4a7309d86599d6e581f764233085c7ddab638272ceeff54912f043465e9a28c9b"><div class="ttname"><a href="class_i_game.html#a4a7309d86599d6e581f764233085c7ddab638272ceeff54912f043465e9a28c9b">IGame::GameState::LOADED</a></div><div class="ttdeci">@ LOADED</div><div class="ttdoc">Represents the game at it's initial state.</div></div>
+<div class="ttc" id="aclass_nibbler_html_a21b6c82da65625263e86ed03fad8773e"><div class="ttname"><a href="class_nibbler.html#a21b6c82da65625263e86ed03fad8773e">Nibbler::_speed</a></div><div class="ttdeci">float _speed</div><div class="ttdoc">The game's speed multiplier.</div><div class="ttdef"><b>Definition:</b> <a href="_nibbler_8hpp_source.html#l00078">Nibbler.hpp:78</a></div></div>
+<div class="ttc" id="aclass_nibbler_html_af5084afbf9f32baf29d618759c9d59cb"><div class="ttname"><a href="class_nibbler.html#af5084afbf9f32baf29d618759c9d59cb">Nibbler::createNewFruit</a></div><div class="ttdeci">Object createNewFruit(int x, int y)</div><div class="ttdoc">Create new fruit.</div><div class="ttdef"><b>Definition:</b> <a href="_nibbler_8cpp_source.html#l00064">Nibbler.cpp:64</a></div></div>
+<div class="ttc" id="aclass_a_entity_html_a19ac1875464bf00f930afa1f1809ef85"><div class="ttname"><a href="class_a_entity.html#a19ac1875464bf00f930afa1f1809ef85">AEntity::setDirection</a></div><div class="ttdeci">void setDirection(Direction direction) override</div><div class="ttdoc">Set the Entity direction.</div><div class="ttdef"><b>Definition:</b> <a href="_a_entity_8cpp_source.html#l00067">AEntity.cpp:67</a></div></div>
+<div class="ttc" id="aclass_nibbler_html_a607e93788cf4fd3848a7175d6967b4e6"><div class="ttname"><a href="class_nibbler.html#a607e93788cf4fd3848a7175d6967b4e6">Nibbler::_gameState</a></div><div class="ttdeci">GameState _gameState</div><div class="ttdoc">The game's state.</div><div class="ttdef"><b>Definition:</b> <a href="_nibbler_8hpp_source.html#l00064">Nibbler.hpp:64</a></div></div>
+<div class="ttc" id="aclass_nibbler_html_a4556aa27faca9cdc2c758e801ccc2a72"><div class="ttname"><a href="class_nibbler.html#a4556aa27faca9cdc2c758e801ccc2a72">Nibbler::manageEvent</a></div><div class="ttdeci">void manageEvent(Arcade::Evt &amp;event, std::vector&lt; std::shared_ptr&lt; IEntity &gt;&gt; &amp;entities)</div><div class="ttdoc">Manage the events.</div><div class="ttdef"><b>Definition:</b> <a href="_nibbler_8cpp_source.html#l00150">Nibbler.cpp:150</a></div></div>
+<div class="ttc" id="aclass_object_html"><div class="ttname"><a href="class_object.html">Object</a></div><div class="ttdoc">Object class represents all the Entity not moving. Like walls, fruits.</div><div class="ttdef"><b>Definition:</b> <a href="_object_8hpp_source.html#l00017">Object.hpp:17</a></div></div>
+<div class="ttc" id="a_grid_8hpp_html_a8bd9f95c4e7d0ae683aaa0434a72dca9"><div class="ttname"><a href="_grid_8hpp.html#a8bd9f95c4e7d0ae683aaa0434a72dca9">GRID_HEIGHT</a></div><div class="ttdeci">#define GRID_HEIGHT</div><div class="ttdoc">The number of vertical cells in the grid.</div><div class="ttdef"><b>Definition:</b> <a href="_grid_8hpp_source.html#l00020">Grid.hpp:20</a></div></div>
+<div class="ttc" id="aclass_nibbler_html_a49b55efadf9a7926f69d88ba4bdd8a4e"><div class="ttname"><a href="class_nibbler.html#a49b55efadf9a7926f69d88ba4bdd8a4e">Nibbler::resetClock</a></div><div class="ttdeci">void resetClock()</div><div class="ttdoc">Restarts the clock.</div><div class="ttdef"><b>Definition:</b> <a href="_nibbler_8cpp_source.html#l00122">Nibbler.cpp:122</a></div></div>
+<div class="ttc" id="aclass_nibbler_html_ac0bcc241941912d53fc15011ffa7272a"><div class="ttname"><a href="class_nibbler.html#ac0bcc241941912d53fc15011ffa7272a">Nibbler::_lastTailPos</a></div><div class="ttdeci">std::pair&lt; int, int &gt; _lastTailPos</div><div class="ttdoc">The last tails's last position.</div><div class="ttdef"><b>Definition:</b> <a href="_nibbler_8hpp_source.html#l00076">Nibbler.hpp:76</a></div></div>
+<div class="ttc" id="aclass_nibbler_html_af1436fbaf51c29161081edc8ff8d591d"><div class="ttname"><a href="class_nibbler.html#af1436fbaf51c29161081edc8ff8d591d">Nibbler::snakeIsOnAFruit</a></div><div class="ttdeci">bool snakeIsOnAFruit(std::vector&lt; std::shared_ptr&lt; IEntity &gt;&gt; &amp;entities)</div><div class="ttdoc">Check if the snake is on a fruit.</div><div class="ttdef"><b>Definition:</b> <a href="_nibbler_8cpp_source.html#l00225">Nibbler.cpp:225</a></div></div>
+<div class="ttc" id="astruct_arcade_1_1_evt_html_a4ba7514d4153a08a310541d0806745b3"><div class="ttname"><a href="struct_arcade_1_1_evt.html#a4ba7514d4153a08a310541d0806745b3">Arcade::Evt::evt_type</a></div><div class="ttdeci">EvtType evt_type</div><div class="ttdoc">event type</div><div class="ttdef"><b>Definition:</b> <a href="_event_8hpp_source.html#l00095">Event.hpp:95</a></div></div>
+<div class="ttc" id="aclass_i_game_html_a4a7309d86599d6e581f764233085c7dda43491564ebcfd38568918efbd6e840fd"><div class="ttname"><a href="class_i_game.html#a4a7309d86599d6e581f764233085c7dda43491564ebcfd38568918efbd6e840fd">IGame::GameState::RUNNING</a></div><div class="ttdeci">@ RUNNING</div><div class="ttdoc">Represents the game when running.</div></div>
+<div class="ttc" id="aclass_a_entity_html_a4150c9d56ce22e79c9d979392ab7ffec"><div class="ttname"><a href="class_a_entity.html#a4150c9d56ce22e79c9d979392ab7ffec">AEntity::setTermTexture</a></div><div class="ttdeci">void setTermTexture(char c, Color::TermColors fg, Color::TermColors bg) override</div><div class="ttdoc">Set the entity char and color to replace textures for terminal graphical libraries.</div><div class="ttdef"><b>Definition:</b> <a href="_a_entity_8cpp_source.html#l00052">AEntity.cpp:52</a></div></div>
+<div class="ttc" id="aclass_nibbler_html_afd3b906f2c073a8f9e73a61d9bec1523"><div class="ttname"><a href="class_nibbler.html#afd3b906f2c073a8f9e73a61d9bec1523">Nibbler::nextLevel</a></div><div class="ttdeci">void nextLevel(std::vector&lt; std::shared_ptr&lt; IEntity &gt;&gt; &amp;entities)</div><div class="ttdoc">Go to the next level.</div><div class="ttdef"><b>Definition:</b> <a href="_nibbler_8cpp_source.html#l00240">Nibbler.cpp:240</a></div></div>
+<div class="ttc" id="aclass_a_entity_html_a4de390d62596a386c52a0ac1e28ae03e"><div class="ttname"><a href="class_a_entity.html#a4de390d62596a386c52a0ac1e28ae03e">AEntity::setPos</a></div><div class="ttdeci">void setPos(std::pair&lt; int, int &gt; pos) override</div><div class="ttdoc">Set the entity position.</div><div class="ttdef"><b>Definition:</b> <a href="_a_entity_8cpp_source.html#l00027">AEntity.cpp:27</a></div></div>
+<div class="ttc" id="a_grid_8hpp_html_a804eeb9892adae7306540eb33f2326eb"><div class="ttname"><a href="_grid_8hpp.html#a804eeb9892adae7306540eb33f2326eb">GRID_WIDTH</a></div><div class="ttdeci">#define GRID_WIDTH</div><div class="ttdoc">The number of horizontal cells in the grid.</div><div class="ttdef"><b>Definition:</b> <a href="_grid_8hpp_source.html#l00018">Grid.hpp:18</a></div></div>
+<div class="ttc" id="aclass_nibbler_html_a1fe0291e57eab7f45f3b61c43057bc4a"><div class="ttname"><a href="class_nibbler.html#a1fe0291e57eab7f45f3b61c43057bc4a">Nibbler::initEntities</a></div><div class="ttdeci">void initEntities(std::vector&lt; std::shared_ptr&lt; IEntity &gt;&gt; &amp;entities)</div><div class="ttdoc">Init entities.</div><div class="ttdef"><b>Definition:</b> <a href="_nibbler_8cpp_source.html#l00082">Nibbler.cpp:82</a></div></div>
+<div class="ttc" id="aclass_nibbler_html_aee39fda083df1fabce39277d9e373150"><div class="ttname"><a href="class_nibbler.html#aee39fda083df1fabce39277d9e373150">Nibbler::_lastDir</a></div><div class="ttdeci">IEntity::Direction _lastDir</div><div class="ttdoc">The snake's direction on its last movement.</div><div class="ttdef"><b>Definition:</b> <a href="_nibbler_8hpp_source.html#l00062">Nibbler.hpp:62</a></div></div>
+<div class="ttc" id="aclass_nibbler_html_a324b5ca1d1234f8ce64d7f4064995ce8"><div class="ttname"><a href="class_nibbler.html#a324b5ca1d1234f8ce64d7f4064995ce8">Nibbler::createNewTail</a></div><div class="ttdeci">Player createNewTail(int x, int y)</div><div class="ttdoc">Create new tail.</div><div class="ttdef"><b>Definition:</b> <a href="_nibbler_8cpp_source.html#l00054">Nibbler.cpp:54</a></div></div>
+<div class="ttc" id="astruct_arcade_1_1_evt_1_1_key_evt_html_ad3315d3165d4a76a92a222477b727918"><div class="ttname"><a href="struct_arcade_1_1_evt_1_1_key_evt.html#ad3315d3165d4a76a92a222477b727918">Arcade::Evt::KeyEvt::key</a></div><div class="ttdeci">Key key</div><div class="ttdef"><b>Definition:</b> <a href="_event_8hpp_source.html#l00071">Event.hpp:71</a></div></div>
+<div class="ttc" id="aclass_nibbler_html_a2243ff75af4e12b7105b72b9746eca23"><div class="ttname"><a href="class_nibbler.html#a2243ff75af4e12b7105b72b9746eca23">Nibbler::createNewWall</a></div><div class="ttdeci">Object createNewWall(int x, int y)</div><div class="ttdoc">Create new wall.</div><div class="ttdef"><b>Definition:</b> <a href="_nibbler_8cpp_source.html#l00073">Nibbler.cpp:73</a></div></div>
+<div class="ttc" id="aclass_nibbler_html_a87cf4ceb8e43d03129218d33a78c6c89"><div class="ttname"><a href="class_nibbler.html#a87cf4ceb8e43d03129218d33a78c6c89">Nibbler::_fruit</a></div><div class="ttdeci">std::shared_ptr&lt; Object &gt; _fruit</div><div class="ttdoc">The fruit.</div><div class="ttdef"><b>Definition:</b> <a href="_nibbler_8hpp_source.html#l00072">Nibbler.hpp:72</a></div></div>
+<div class="ttc" id="aclass_player_html"><div class="ttname"><a href="class_player.html">Player</a></div><div class="ttdoc">Player class inherits from AEntity.</div><div class="ttdef"><b>Definition:</b> <a href="_player_8hpp_source.html#l00017">Player.hpp:17</a></div></div>
+<div class="ttc" id="aclass_i_entity_html_ad9ba33013aa2da542e9fa6c6fadabef5"><div class="ttname"><a href="class_i_entity.html#ad9ba33013aa2da542e9fa6c6fadabef5">IEntity::Direction</a></div><div class="ttdeci">Direction</div><div class="ttdef"><b>Definition:</b> <a href="_i_entity_8hpp_source.html#l00020">IEntity.hpp:20</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

@@ -28,6 +28,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">arcAAAAAAAAAAAAAAAAade
    </div>
+   <div id="projectbrief">An arcade emulator that manage games and graphical display separatly</div>
   </td>
  </tr>
  </tbody>
@@ -84,6 +85,7 @@ $(document).ready(function(){initNavTree('class_object.html',''); initResizable(
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_object-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Object Class Reference</div>  </div>
@@ -100,8 +102,8 @@ Inheritance diagram for Object:</div>
 <div class="center"><img src="class_object__inherit__graph.png" border="0" usemap="#_object_inherit__map" alt="Inheritance graph"/></div>
 <map name="_object_inherit__map" id="_object_inherit__map">
 <area shape="rect" title="Object class represents all the Entity not moving. Like walls, fruits." alt="" coords="49,155,113,181"/>
-<area shape="rect" href="class_button.html" title=" " alt="" coords="5,229,71,256"/>
-<area shape="rect" href="class_score.html" title=" " alt="" coords="95,229,154,256"/>
+<area shape="rect" href="class_button.html" title="Represents a button object." alt="" coords="5,229,71,256"/>
+<area shape="rect" href="class_score.html" title="Score object." alt="" coords="95,229,154,256"/>
 <area shape="rect" href="class_a_entity.html" title="Entity Abstract class." alt="" coords="46,80,115,107"/>
 <area shape="rect" href="class_i_entity.html" title="represents a generic entity within the game" alt="" coords="49,5,113,32"/>
 </map>
@@ -111,9 +113,10 @@ Collaboration diagram for Object:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_object__coll__graph.png" border="0" usemap="#_object_coll__map" alt="Collaboration graph"/></div>
 <map name="_object_coll__map" id="_object_coll__map">
-<area shape="rect" title="Object class represents all the Entity not moving. Like walls, fruits." alt="" coords="8,155,72,181"/>
-<area shape="rect" href="class_a_entity.html" title="Entity Abstract class." alt="" coords="5,80,75,107"/>
+<area shape="rect" title="Object class represents all the Entity not moving. Like walls, fruits." alt="" coords="72,171,136,197"/>
+<area shape="rect" href="class_a_entity.html" title="Entity Abstract class." alt="" coords="5,81,75,108"/>
 <area shape="rect" href="class_i_entity.html" title="represents a generic entity within the game" alt="" coords="8,5,72,32"/>
+<area shape="rect" href="struct_color.html" title="Color structure." alt="" coords="99,81,155,108"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -193,6 +196,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a7702202a1672a34e92311b2dacf9d858 inherit pub_methods_class_i_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the type of the entity.  <a href="class_i_entity.html#a7702202a1672a34e92311b2dacf9d858">More...</a><br /></td></tr>
 <tr class="separator:a7702202a1672a34e92311b2dacf9d858 inherit pub_methods_class_i_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a2b142f1047a8d79eaaec4309108f8e80"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_object.html#a2b142f1047a8d79eaaec4309108f8e80">_color</a> {}</td></tr>
+<tr class="separator:a2b142f1047a8d79eaaec4309108f8e80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08a20f3e6d40960cc6570465e5248ea0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_i_entity.html#a46d8922e2df0932c61ca624e05f85aa2">ENTITY_TYPE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_object.html#a08a20f3e6d40960cc6570465e5248ea0">_type</a></td></tr>
+<tr class="separator:a08a20f3e6d40960cc6570465e5248ea0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_types_class_i_entity"><td colspan="2" onclick="javascript:toggleInherit('pub_types_class_i_entity')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="class_i_entity.html">IEntity</a></td></tr>
@@ -236,7 +246,7 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_object.html" title="Object class represents all the Entity not moving. Like walls, fruits.">Object</a> class represents all the Entity not moving. Like walls, fruits. </p>
 
-<p class="definition">Definition at line <a class="el" href="_object_8hpp_source.html#l00015">15</a> of file <a class="el" href="_object_8hpp_source.html">Object.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_object_8hpp_source.html#l00017">17</a> of file <a class="el" href="_object_8hpp_source.html">Object.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a218968689a0b4e855c4de92eb6242bcb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a218968689a0b4e855c4de92eb6242bcb">&#9670;&nbsp;</a></span>Object() <span class="overload">[1/2]</span></h2>
@@ -311,7 +321,9 @@ Additional Inherited Members</h2></td></tr>
 <p>Destructor. </p>
 
 <p class="definition">Definition at line <a class="el" href="_object_8cpp_source.html#l00033">33</a> of file <a class="el" href="_object_8cpp_source.html">Object.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -334,7 +346,10 @@ Additional Inherited Members</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>IColor color </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="_object_8cpp_source.html#l00056">56</a> of file <a class="el" href="_object_8cpp_source.html">Object.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;{</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_object.html#a2b142f1047a8d79eaaec4309108f8e80">_color</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a6675c531600779a9e2c1fe35947eb86a"></a>
@@ -366,7 +381,10 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="class_a_entity.html#a88c37445cd2d7a98eb6793a5239e2834">AEntity</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_object_8cpp_source.html#l00043">43</a> of file <a class="el" href="_object_8cpp_source.html">Object.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a75da801ae056164f4d2975d6fe15ab20"></a>
@@ -398,7 +416,10 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="class_a_entity.html#a509eb75042c3169c4bfd82b1a3aaad7c">AEntity</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_object_8cpp_source.html#l00066">66</a> of file <a class="el" href="_object_8cpp_source.html">Object.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;{</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_object.html#a08a20f3e6d40960cc6570465e5248ea0">_type</a>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ace0776e0fa472c649bf88c97d7b0a16b"></a>
@@ -420,7 +441,13 @@ Additional Inherited Members</h2></td></tr>
 <p>Set the <a class="el" href="struct_color.html" title="Color structure.">Color</a> of the <a class="el" href="class_enemy.html" title="Enemy class inherits from AEntity.">Enemy</a> Entity. </p>
 
 <p class="definition">Definition at line <a class="el" href="_object_8cpp_source.html#l00048">48</a> of file <a class="el" href="_object_8cpp_source.html">Object.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;{</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="class_object.html#a2b142f1047a8d79eaaec4309108f8e80">_color</a>.<a class="code" href="struct_color.html#aed083afcc2c689243df7fbc3da5203d3">R</a> = color.<a class="code" href="struct_color.html#aed083afcc2c689243df7fbc3da5203d3">R</a>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="class_object.html#a2b142f1047a8d79eaaec4309108f8e80">_color</a>.<a class="code" href="struct_color.html#a494fcf569d0e0cdcb1f16843a59173ae">G</a> = color.<a class="code" href="struct_color.html#a494fcf569d0e0cdcb1f16843a59173ae">G</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="class_object.html#a2b142f1047a8d79eaaec4309108f8e80">_color</a>.<a class="code" href="struct_color.html#a0460664d0d091fbe42cf4307744dcaca">B</a> = color.<a class="code" href="struct_color.html#a0460664d0d091fbe42cf4307744dcaca">B</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="class_object.html#a2b142f1047a8d79eaaec4309108f8e80">_color</a>.<a class="code" href="struct_color.html#a13db704e48f5e851817f9e9fd67ec76d">A</a> = color.<a class="code" href="struct_color.html#a13db704e48f5e851817f9e9fd67ec76d">A</a>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8004c95e7571e7d8d6005ac62ef0644c"></a>
@@ -452,7 +479,11 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="class_a_entity.html#aec1fb3750e43a16f17445ad966c06b57">AEntity</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_object_8cpp_source.html#l00037">37</a> of file <a class="el" href="_object_8cpp_source.html">Object.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    (void) isMoving;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="class_a_entity.html#adb13f68060a9aa6c516f5cc82a8cd715">_isMoving</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac8c4351a73c172cb54e17a32b7c60aa9"></a>
@@ -474,6 +505,58 @@ Additional Inherited Members</h2></td></tr>
 <p>Set the _type. </p>
 
 <p class="definition">Definition at line <a class="el" href="_object_8cpp_source.html#l00061">61</a> of file <a class="el" href="_object_8cpp_source.html">Object.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;{</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="class_object.html#a08a20f3e6d40960cc6570465e5248ea0">_type</a> = type;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a2b142f1047a8d79eaaec4309108f8e80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b142f1047a8d79eaaec4309108f8e80">&#9670;&nbsp;</a></span>_color</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_color.html">Color</a> Object::_color {}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_object_8hpp_source.html#l00043">43</a> of file <a class="el" href="_object_8hpp_source.html">Object.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a08a20f3e6d40960cc6570465e5248ea0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08a20f3e6d40960cc6570465e5248ea0">&#9670;&nbsp;</a></span>_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_i_entity.html#a46d8922e2df0932c61ca624e05f85aa2">ENTITY_TYPE</a> Object::_type</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_object_8hpp_source.html#l00044">44</a> of file <a class="el" href="_object_8hpp_source.html">Object.hpp</a>.</p>
 
 </div>
 </div>
@@ -483,6 +566,13 @@ Additional Inherited Members</h2></td></tr>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aclass_object_html_a08a20f3e6d40960cc6570465e5248ea0"><div class="ttname"><a href="class_object.html#a08a20f3e6d40960cc6570465e5248ea0">Object::_type</a></div><div class="ttdeci">ENTITY_TYPE _type</div><div class="ttdef"><b>Definition:</b> <a href="_object_8hpp_source.html#l00044">Object.hpp:44</a></div></div>
+<div class="ttc" id="astruct_color_html_a0460664d0d091fbe42cf4307744dcaca"><div class="ttname"><a href="struct_color.html#a0460664d0d091fbe42cf4307744dcaca">Color::B</a></div><div class="ttdeci">int B</div><div class="ttdoc">Blue amount on a scale of 0 to 255.</div><div class="ttdef"><b>Definition:</b> <a href="_color_8hpp_source.html#l00047">Color.hpp:47</a></div></div>
+<div class="ttc" id="astruct_color_html_a13db704e48f5e851817f9e9fd67ec76d"><div class="ttname"><a href="struct_color.html#a13db704e48f5e851817f9e9fd67ec76d">Color::A</a></div><div class="ttdeci">int A</div><div class="ttdoc">Alpha amount on a scale of 0 to 255.</div><div class="ttdef"><b>Definition:</b> <a href="_color_8hpp_source.html#l00049">Color.hpp:49</a></div></div>
+<div class="ttc" id="astruct_color_html_aed083afcc2c689243df7fbc3da5203d3"><div class="ttname"><a href="struct_color.html#aed083afcc2c689243df7fbc3da5203d3">Color::R</a></div><div class="ttdeci">int R</div><div class="ttdoc">Red amount on a scale of 0 to 255.</div><div class="ttdef"><b>Definition:</b> <a href="_color_8hpp_source.html#l00043">Color.hpp:43</a></div></div>
+<div class="ttc" id="aclass_object_html_a2b142f1047a8d79eaaec4309108f8e80"><div class="ttname"><a href="class_object.html#a2b142f1047a8d79eaaec4309108f8e80">Object::_color</a></div><div class="ttdeci">Color _color</div><div class="ttdef"><b>Definition:</b> <a href="_object_8hpp_source.html#l00043">Object.hpp:43</a></div></div>
+<div class="ttc" id="astruct_color_html_a494fcf569d0e0cdcb1f16843a59173ae"><div class="ttname"><a href="struct_color.html#a494fcf569d0e0cdcb1f16843a59173ae">Color::G</a></div><div class="ttdeci">int G</div><div class="ttdoc">Green amount on a scale of 0 to 255.</div><div class="ttdef"><b>Definition:</b> <a href="_color_8hpp_source.html#l00045">Color.hpp:45</a></div></div>
+<div class="ttc" id="aclass_a_entity_html_adb13f68060a9aa6c516f5cc82a8cd715"><div class="ttname"><a href="class_a_entity.html#adb13f68060a9aa6c516f5cc82a8cd715">AEntity::_isMoving</a></div><div class="ttdeci">bool _isMoving</div><div class="ttdef"><b>Definition:</b> <a href="_a_entity_8hpp_source.html#l00079">AEntity.hpp:79</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

@@ -28,6 +28,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">arcAAAAAAAAAAAAAAAAade
    </div>
+   <div id="projectbrief">An arcade emulator that manage games and graphical display separatly</div>
   </td>
  </tr>
  </tbody>
@@ -84,6 +85,7 @@ $(document).ready(function(){initNavTree('class_text_entity.html',''); initResiz
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_text_entity-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">TextEntity Class Reference</div>  </div>
@@ -109,9 +111,10 @@ Collaboration diagram for TextEntity:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_text_entity__coll__graph.png" border="0" usemap="#_text_entity_coll__map" alt="Collaboration graph"/></div>
 <map name="_text_entity_coll__map" id="_text_entity_coll__map">
-<area shape="rect" title="TextEntity class inherits from AEntity." alt="" coords="5,155,92,181"/>
-<area shape="rect" href="class_a_entity.html" title="Entity Abstract class." alt="" coords="14,80,83,107"/>
-<area shape="rect" href="class_i_entity.html" title="represents a generic entity within the game" alt="" coords="17,5,81,32"/>
+<area shape="rect" title="TextEntity class inherits from AEntity." alt="" coords="61,185,147,212"/>
+<area shape="rect" href="class_a_entity.html" title="Entity Abstract class." alt="" coords="5,81,75,108"/>
+<area shape="rect" href="class_i_entity.html" title="represents a generic entity within the game" alt="" coords="8,5,72,32"/>
+<area shape="rect" href="struct_color.html" title="Color structure." alt="" coords="99,81,155,108"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -209,6 +212,19 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a7702202a1672a34e92311b2dacf9d858 inherit pub_methods_class_i_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the type of the entity.  <a href="class_i_entity.html#a7702202a1672a34e92311b2dacf9d858">More...</a><br /></td></tr>
 <tr class="separator:a7702202a1672a34e92311b2dacf9d858 inherit pub_methods_class_i_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:acdd1f28e6998cda8ba6d00048d87b648"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_text_entity.html#acdd1f28e6998cda8ba6d00048d87b648">_text</a></td></tr>
+<tr class="separator:acdd1f28e6998cda8ba6d00048d87b648"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a459096f971fe072712a24fd0fb1e6dc0"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_text_entity.html#a459096f971fe072712a24fd0fb1e6dc0">_fontPath</a></td></tr>
+<tr class="separator:a459096f971fe072712a24fd0fb1e6dc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19ae0354a135f30d0da512edbcc880a8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_text_entity.html#a19ae0354a135f30d0da512edbcc880a8">_fontSize</a></td></tr>
+<tr class="separator:a19ae0354a135f30d0da512edbcc880a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a876a616c6a1f2d22dddb7ea5ae9384e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_text_entity.html#a876a616c6a1f2d22dddb7ea5ae9384e8">_color</a></td></tr>
+<tr class="separator:a876a616c6a1f2d22dddb7ea5ae9384e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac7b7e47497e8d7cf2bf49a12c9ff1c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_text_entity.html#aac7b7e47497e8d7cf2bf49a12c9ff1c0">_outlineColor</a></td></tr>
+<tr class="separator:aac7b7e47497e8d7cf2bf49a12c9ff1c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_types_class_i_entity"><td colspan="2" onclick="javascript:toggleInherit('pub_types_class_i_entity')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="class_i_entity.html">IEntity</a></td></tr>
@@ -251,14 +267,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_text_entity.html" title="TextEntity class inherits from AEntity.">TextEntity</a> class inherits from <a class="el" href="class_a_entity.html" title="Entity Abstract class.">AEntity</a>. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">No</td><td>param to construct all value by default </td></tr>
-  </table>
-  </dd>
-</dl>
 
-<p class="definition">Definition at line <a class="el" href="_text_entity_8hpp_source.html#l00017">17</a> of file <a class="el" href="_text_entity_8hpp_source.html">TextEntity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_text_entity_8hpp_source.html#l00018">18</a> of file <a class="el" href="_text_entity_8hpp_source.html">TextEntity.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="acd806142304d7c5c945c3616278347c4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acd806142304d7c5c945c3616278347c4">&#9670;&nbsp;</a></span>TextEntity()</h2>
@@ -315,7 +325,15 @@ Additional Inherited Members</h2></td></tr>
 <p>Constructor. </p>
 
 <p class="definition">Definition at line <a class="el" href="_text_entity_8cpp_source.html#l00010">10</a> of file <a class="el" href="_text_entity_8cpp_source.html">TextEntity.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;                                                                                                                                      : <a class="code" href="class_a_entity.html#aa420ad119608e8fa166868154f77c0d0">AEntity</a>()</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="class_text_entity.html#acdd1f28e6998cda8ba6d00048d87b648">_text</a> = text;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="class_text_entity.html#a459096f971fe072712a24fd0fb1e6dc0">_fontPath</a> = font;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="class_text_entity.html#a19ae0354a135f30d0da512edbcc880a8">_fontSize</a> = fontSize;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="class_text_entity.html#a876a616c6a1f2d22dddb7ea5ae9384e8">_color</a> = color;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="class_text_entity.html#aac7b7e47497e8d7cf2bf49a12c9ff1c0">_outlineColor</a> = outlineColor;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab23d59f245419e3fbd3397390de5ad0b"></a>
@@ -336,7 +354,9 @@ Additional Inherited Members</h2></td></tr>
 <p>Destructor. </p>
 
 <p class="definition">Definition at line <a class="el" href="_text_entity_8cpp_source.html#l00019">19</a> of file <a class="el" href="_text_entity_8cpp_source.html">TextEntity.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -359,7 +379,10 @@ Additional Inherited Members</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>the color </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="_text_entity_8cpp_source.html#l00053">53</a> of file <a class="el" href="_text_entity_8cpp_source.html">TextEntity.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;{</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_text_entity.html#a876a616c6a1f2d22dddb7ea5ae9384e8">_color</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af51bb74cf7571e81bdc00cc4bd462ffd"></a>
@@ -381,7 +404,10 @@ Additional Inherited Members</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>the font </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="_text_entity_8cpp_source.html#l00033">33</a> of file <a class="el" href="_text_entity_8cpp_source.html">TextEntity.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_text_entity.html#a459096f971fe072712a24fd0fb1e6dc0">_fontPath</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa7109d68d40d4ad07648a336df609a74"></a>
@@ -403,7 +429,10 @@ Additional Inherited Members</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>the font size </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="_text_entity_8cpp_source.html#l00043">43</a> of file <a class="el" href="_text_entity_8cpp_source.html">TextEntity.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_text_entity.html#a19ae0354a135f30d0da512edbcc880a8">_fontSize</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9b4266e1d9af45e9ad1ba430df056fe6"></a>
@@ -435,7 +464,10 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="class_a_entity.html#a88c37445cd2d7a98eb6793a5239e2834">AEntity</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_text_entity_8cpp_source.html#l00078">78</a> of file <a class="el" href="_text_entity_8cpp_source.html">TextEntity.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;{</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_a_entity.html#adb13f68060a9aa6c516f5cc82a8cd715">_isMoving</a>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a29a1d5c1a32d80b4b7ead0770e08a094"></a>
@@ -457,7 +489,10 @@ Additional Inherited Members</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>the outline color </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="_text_entity_8cpp_source.html#l00063">63</a> of file <a class="el" href="_text_entity_8cpp_source.html">TextEntity.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;{</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_text_entity.html#aac7b7e47497e8d7cf2bf49a12c9ff1c0">_outlineColor</a>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a807bfe079348318a09ca9dd800ebd5c6"></a>
@@ -479,7 +514,10 @@ Additional Inherited Members</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>the text </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="_text_entity_8cpp_source.html#l00023">23</a> of file <a class="el" href="_text_entity_8cpp_source.html">TextEntity.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_text_entity.html#acdd1f28e6998cda8ba6d00048d87b648">_text</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a84e47aefd4fea85f5ab5af5b348137be"></a>
@@ -507,7 +545,10 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="_text_entity_8cpp_source.html#l00058">58</a> of file <a class="el" href="_text_entity_8cpp_source.html">TextEntity.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;{</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="class_text_entity.html#a876a616c6a1f2d22dddb7ea5ae9384e8">_color</a> = color;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a01ab0d225ece302aca12ba00159908da"></a>
@@ -535,7 +576,10 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="_text_entity_8cpp_source.html#l00038">38</a> of file <a class="el" href="_text_entity_8cpp_source.html">TextEntity.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="class_text_entity.html#a459096f971fe072712a24fd0fb1e6dc0">_fontPath</a> = font;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa17fd9c1d39e70866cf5f86aa00f0468"></a>
@@ -563,7 +607,10 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="_text_entity_8cpp_source.html#l00048">48</a> of file <a class="el" href="_text_entity_8cpp_source.html">TextEntity.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;{</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="class_text_entity.html#a19ae0354a135f30d0da512edbcc880a8">_fontSize</a> = fontSize;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="afe7c6a2b4bd322552dda5a1941600c90"></a>
@@ -595,7 +642,10 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="class_a_entity.html#aec1fb3750e43a16f17445ad966c06b57">AEntity</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_text_entity_8cpp_source.html#l00073">73</a> of file <a class="el" href="_text_entity_8cpp_source.html">TextEntity.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;{</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="class_a_entity.html#adb13f68060a9aa6c516f5cc82a8cd715">_isMoving</a> = isMoving;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a60f98740b789eb137e433539e50bbfac"></a>
@@ -623,7 +673,10 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="_text_entity_8cpp_source.html#l00068">68</a> of file <a class="el" href="_text_entity_8cpp_source.html">TextEntity.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;{</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <a class="code" href="class_text_entity.html#aac7b7e47497e8d7cf2bf49a12c9ff1c0">_outlineColor</a> = outlineColor;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a2795b78254841d900aacab01fa3b6ee5"></a>
@@ -651,6 +704,130 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="_text_entity_8cpp_source.html#l00028">28</a> of file <a class="el" href="_text_entity_8cpp_source.html">TextEntity.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="class_text_entity.html#acdd1f28e6998cda8ba6d00048d87b648">_text</a> = text;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a876a616c6a1f2d22dddb7ea5ae9384e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a876a616c6a1f2d22dddb7ea5ae9384e8">&#9670;&nbsp;</a></span>_color</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_color.html">Color</a> TextEntity::_color</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_text_entity_8hpp_source.html#l00073">73</a> of file <a class="el" href="_text_entity_8hpp_source.html">TextEntity.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a459096f971fe072712a24fd0fb1e6dc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a459096f971fe072712a24fd0fb1e6dc0">&#9670;&nbsp;</a></span>_fontPath</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string TextEntity::_fontPath</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_text_entity_8hpp_source.html#l00071">71</a> of file <a class="el" href="_text_entity_8hpp_source.html">TextEntity.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a19ae0354a135f30d0da512edbcc880a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19ae0354a135f30d0da512edbcc880a8">&#9670;&nbsp;</a></span>_fontSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int TextEntity::_fontSize</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_text_entity_8hpp_source.html#l00072">72</a> of file <a class="el" href="_text_entity_8hpp_source.html">TextEntity.hpp</a>.</p>
+
+</div>
+</div>
+<a id="aac7b7e47497e8d7cf2bf49a12c9ff1c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac7b7e47497e8d7cf2bf49a12c9ff1c0">&#9670;&nbsp;</a></span>_outlineColor</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_color.html">Color</a> TextEntity::_outlineColor</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_text_entity_8hpp_source.html#l00074">74</a> of file <a class="el" href="_text_entity_8hpp_source.html">TextEntity.hpp</a>.</p>
+
+</div>
+</div>
+<a id="acdd1f28e6998cda8ba6d00048d87b648"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdd1f28e6998cda8ba6d00048d87b648">&#9670;&nbsp;</a></span>_text</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string TextEntity::_text</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_text_entity_8hpp_source.html#l00070">70</a> of file <a class="el" href="_text_entity_8hpp_source.html">TextEntity.hpp</a>.</p>
 
 </div>
 </div>
@@ -660,6 +837,13 @@ Additional Inherited Members</h2></td></tr>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aclass_text_entity_html_aac7b7e47497e8d7cf2bf49a12c9ff1c0"><div class="ttname"><a href="class_text_entity.html#aac7b7e47497e8d7cf2bf49a12c9ff1c0">TextEntity::_outlineColor</a></div><div class="ttdeci">Color _outlineColor</div><div class="ttdef"><b>Definition:</b> <a href="_text_entity_8hpp_source.html#l00074">TextEntity.hpp:74</a></div></div>
+<div class="ttc" id="aclass_text_entity_html_a876a616c6a1f2d22dddb7ea5ae9384e8"><div class="ttname"><a href="class_text_entity.html#a876a616c6a1f2d22dddb7ea5ae9384e8">TextEntity::_color</a></div><div class="ttdeci">Color _color</div><div class="ttdef"><b>Definition:</b> <a href="_text_entity_8hpp_source.html#l00073">TextEntity.hpp:73</a></div></div>
+<div class="ttc" id="aclass_text_entity_html_a459096f971fe072712a24fd0fb1e6dc0"><div class="ttname"><a href="class_text_entity.html#a459096f971fe072712a24fd0fb1e6dc0">TextEntity::_fontPath</a></div><div class="ttdeci">std::string _fontPath</div><div class="ttdef"><b>Definition:</b> <a href="_text_entity_8hpp_source.html#l00071">TextEntity.hpp:71</a></div></div>
+<div class="ttc" id="aclass_a_entity_html_aa420ad119608e8fa166868154f77c0d0"><div class="ttname"><a href="class_a_entity.html#aa420ad119608e8fa166868154f77c0d0">AEntity::AEntity</a></div><div class="ttdeci">AEntity()</div><div class="ttdoc">Default Constructor.</div><div class="ttdef"><b>Definition:</b> <a href="_a_entity_8cpp_source.html#l00010">AEntity.cpp:10</a></div></div>
+<div class="ttc" id="aclass_text_entity_html_a19ae0354a135f30d0da512edbcc880a8"><div class="ttname"><a href="class_text_entity.html#a19ae0354a135f30d0da512edbcc880a8">TextEntity::_fontSize</a></div><div class="ttdeci">int _fontSize</div><div class="ttdef"><b>Definition:</b> <a href="_text_entity_8hpp_source.html#l00072">TextEntity.hpp:72</a></div></div>
+<div class="ttc" id="aclass_text_entity_html_acdd1f28e6998cda8ba6d00048d87b648"><div class="ttname"><a href="class_text_entity.html#acdd1f28e6998cda8ba6d00048d87b648">TextEntity::_text</a></div><div class="ttdeci">std::string _text</div><div class="ttdef"><b>Definition:</b> <a href="_text_entity_8hpp_source.html#l00070">TextEntity.hpp:70</a></div></div>
+<div class="ttc" id="aclass_a_entity_html_adb13f68060a9aa6c516f5cc82a8cd715"><div class="ttname"><a href="class_a_entity.html#adb13f68060a9aa6c516f5cc82a8cd715">AEntity::_isMoving</a></div><div class="ttdeci">bool _isMoving</div><div class="ttdef"><b>Definition:</b> <a href="_a_entity_8hpp_source.html#l00079">AEntity.hpp:79</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

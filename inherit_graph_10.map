@@ -5,6 +5,6 @@
 <area shape="rect" id="node4" href="$class_object.html" title="Object class represents all the Entity not moving. Like walls, fruits." alt="" coords="246,56,310,83"/>
 <area shape="rect" id="node7" href="$class_player.html" title="Player class inherits from AEntity." alt="" coords="247,107,309,133"/>
 <area shape="rect" id="node8" href="$class_text_entity.html" title="TextEntity class inherits from AEntity." alt="" coords="235,157,321,184"/>
-<area shape="rect" id="node5" href="$class_button.html" title=" " alt="" coords="369,31,435,57"/>
-<area shape="rect" id="node6" href="$class_score.html" title=" " alt="" coords="373,81,431,108"/>
+<area shape="rect" id="node5" href="$class_button.html" title="Represents a button object." alt="" coords="369,31,435,57"/>
+<area shape="rect" id="node6" href="$class_score.html" title="Score object." alt="" coords="373,81,431,108"/>
 </map>

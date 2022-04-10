@@ -11,5 +11,8 @@ var class_sfml_library =
     [ "drawText", "class_sfml_library.html#a3e18118721440aaee556dc68cb735a0d", null ],
     [ "getInput", "class_sfml_library.html#a8cc770d1efabe8d5d6f126c3390a21e0", null ],
     [ "getLibraryName", "class_sfml_library.html#ad3cb2d9d7ace442fa6af21e3f6407924", null ],
-    [ "init", "class_sfml_library.html#a3fd0f5b3409b8c6974be461a2a0301da", null ]
+    [ "init", "class_sfml_library.html#a3fd0f5b3409b8c6974be461a2a0301da", null ],
+    [ "_font", "class_sfml_library.html#a188166fdf34b888ecd8ed83846ad45c3", null ],
+    [ "_videoMode", "class_sfml_library.html#a543684e02d00eaf8ff077f0b14295779", null ],
+    [ "_window", "class_sfml_library.html#a13ac796b72d802c5c340560bac41f5c2", null ]
 ];

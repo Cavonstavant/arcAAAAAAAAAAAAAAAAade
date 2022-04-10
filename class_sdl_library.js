@@ -11,5 +11,8 @@ var class_sdl_library =
     [ "drawText", "class_sdl_library.html#a4a08e8b4fcdb3fc490f65d44ec404403", null ],
     [ "getInput", "class_sdl_library.html#afad77dba5ec015e03530a1f99dfb52a4", null ],
     [ "getLibraryName", "class_sdl_library.html#aaaaad183fbed74c5219cbc1a5047ae7f", null ],
-    [ "init", "class_sdl_library.html#a974697cc4836b42f912d1454c3d19cf9", null ]
+    [ "init", "class_sdl_library.html#a974697cc4836b42f912d1454c3d19cf9", null ],
+    [ "_font", "class_sdl_library.html#a9fb20cb1110c5dff49e3c7e3f43596d7", null ],
+    [ "_renderer", "class_sdl_library.html#afb99467734888828b291032615e12e1b", null ],
+    [ "_window", "class_sdl_library.html#a7641ffa2efa1b1ace127ae47f8941a06", null ]
 ];

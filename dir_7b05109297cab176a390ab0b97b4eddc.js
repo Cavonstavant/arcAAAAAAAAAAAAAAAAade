@@ -13,7 +13,7 @@ var dir_7b05109297cab176a390ab0b97b4eddc =
     [ "LibManager.hpp", "_lib_manager_8hpp.html", [
       [ "LibManager", "class_lib_manager.html", "class_lib_manager" ]
     ] ],
-    [ "Logger.cpp", "_logger_8cpp.html", null ],
+    [ "Logger.cpp", "_logger_8cpp.html", "_logger_8cpp" ],
     [ "Logger.hpp", "_logger_8hpp.html", [
       [ "Logger", "class_logger.html", "class_logger" ]
     ] ]

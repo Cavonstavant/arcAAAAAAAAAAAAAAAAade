@@ -28,6 +28,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">arcAAAAAAAAAAAAAAAAade
    </div>
+   <div id="projectbrief">An arcade emulator that manage games and graphical display separatly</div>
   </td>
  </tr>
  </tbody>
@@ -85,6 +86,8 @@ $(document).ready(function(){initNavTree('class_core.html',''); initResizable();
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_core-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Core Class Reference</div>  </div>
@@ -95,6 +98,18 @@ $(document).ready(function(){initNavTree('class_core.html',''); initResizable();
  <a href="class_core.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_core_8hpp_source.html">Core.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for Core:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_core__coll__graph.png" border="0" usemap="#_core_coll__map" alt="Collaboration graph"/></div>
+<map name="_core_coll__map" id="_core_coll__map">
+<area shape="rect" title="Core class that the transfer of data between games and displays." alt="" coords="173,171,225,197"/>
+<area shape="rect" href="class_lib_manager.html" title="Wrapper around the dynamic library CRUD operations." alt="" coords="5,81,104,108"/>
+<area shape="rect" href="class_main_menu.html" title=" " alt="" coords="233,81,324,108"/>
+<area shape="rect" href="class_i_game.html" title="represents a Game instance (pacman, nibbler, ...)" alt="" coords="143,5,209,32"/>
+<area shape="rect" href="class_i_graph.html" title="represents a generic graphical library" alt="" coords="349,81,414,108"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -177,6 +192,45 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a27876ea69a01d7566663e7a36c188878"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2af62c0f839f8daa0bdc21c7ecf497c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_core.html#ae2af62c0f839f8daa0bdc21c7ecf497c">setFutureGame</a> (std::string &amp;futureGame)</td></tr>
 <tr class="separator:ae2af62c0f839f8daa0bdc21c7ecf497c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:aaa273bb1d1a5ebd3a8c2370be99ceb0c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_core.html#aaa273bb1d1a5ebd3a8c2370be99ceb0c">coreEventSwitchGame</a> ()</td></tr>
+<tr class="separator:aaa273bb1d1a5ebd3a8c2370be99ceb0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0766cfe882239abc1e4a0f2844c76e89"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_core.html#a0766cfe882239abc1e4a0f2844c76e89">coreEventSwitchGraph</a> ()</td></tr>
+<tr class="separator:a0766cfe882239abc1e4a0f2844c76e89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8748501c56664fa2e58085b792be449c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_core.html#a8748501c56664fa2e58085b792be449c">manageCoreKeyEvents</a> ()</td></tr>
+<tr class="separator:a8748501c56664fa2e58085b792be449c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a80b27d83fad909a23693380af89042ce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_lib_manager.html">LibManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_core.html#a80b27d83fad909a23693380af89042ce">_libManager</a></td></tr>
+<tr class="memdesc:a80b27d83fad909a23693380af89042ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">The library manager containing all the libraries.  <a href="class_core.html#a80b27d83fad909a23693380af89042ce">More...</a><br /></td></tr>
+<tr class="separator:a80b27d83fad909a23693380af89042ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a327c3129b8e1382e01f95babf98389e5"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_i_entity.html">IEntity</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_core.html#a327c3129b8e1382e01f95babf98389e5">_entities</a></td></tr>
+<tr class="memdesc:a327c3129b8e1382e01f95babf98389e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">The entities collection.  <a href="class_core.html#a327c3129b8e1382e01f95babf98389e5">More...</a><br /></td></tr>
+<tr class="separator:a327c3129b8e1382e01f95babf98389e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab559fe8e59c50be7c8910f66dbc1ae4b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_main_menu.html">MainMenu</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_core.html#ab559fe8e59c50be7c8910f66dbc1ae4b">_mainMenu</a></td></tr>
+<tr class="memdesc:ab559fe8e59c50be7c8910f66dbc1ae4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The main menu.  <a href="class_core.html#ab559fe8e59c50be7c8910f66dbc1ae4b">More...</a><br /></td></tr>
+<tr class="separator:ab559fe8e59c50be7c8910f66dbc1ae4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4ebc2e4af5fce922e113a17e16a39c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_i_game.html">IGame</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_core.html#ae4ebc2e4af5fce922e113a17e16a39c5">_game</a></td></tr>
+<tr class="memdesc:ae4ebc2e4af5fce922e113a17e16a39c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">The game currently running.  <a href="class_core.html#ae4ebc2e4af5fce922e113a17e16a39c5">More...</a><br /></td></tr>
+<tr class="separator:ae4ebc2e4af5fce922e113a17e16a39c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad858916f184608421d9398d88ddb1107"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_core.html#ad858916f184608421d9398d88ddb1107">_futureGame</a></td></tr>
+<tr class="memdesc:ad858916f184608421d9398d88ddb1107"><td class="mdescLeft">&#160;</td><td class="mdescRight">The game future library path to be loaded, null terminated.  <a href="class_core.html#ad858916f184608421d9398d88ddb1107">More...</a><br /></td></tr>
+<tr class="separator:ad858916f184608421d9398d88ddb1107"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a301de8f444ccc06c0672c31283410a65"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_i_graph.html">IGraph</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_core.html#a301de8f444ccc06c0672c31283410a65">_graph</a></td></tr>
+<tr class="memdesc:a301de8f444ccc06c0672c31283410a65"><td class="mdescLeft">&#160;</td><td class="mdescRight">The graphical interface currently running.  <a href="class_core.html#a301de8f444ccc06c0672c31283410a65">More...</a><br /></td></tr>
+<tr class="separator:a301de8f444ccc06c0672c31283410a65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cc50e25ec1e59fc183564a0dfe582fc"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_core.html#a9cc50e25ec1e59fc183564a0dfe582fc">_futureGraph</a></td></tr>
+<tr class="memdesc:a9cc50e25ec1e59fc183564a0dfe582fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">The future graphical library path, null terminated.  <a href="class_core.html#a9cc50e25ec1e59fc183564a0dfe582fc">More...</a><br /></td></tr>
+<tr class="separator:a9cc50e25ec1e59fc183564a0dfe582fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62b2479eecee9b888e2d06300f718487"><td class="memItemLeft" align="right" valign="top">std::stack&lt; <a class="el" href="struct_arcade_1_1_evt.html">Arcade::Evt</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_core.html#a62b2479eecee9b888e2d06300f718487">_event</a></td></tr>
+<tr class="memdesc:a62b2479eecee9b888e2d06300f718487"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current event to be processed.  <a href="class_core.html#a62b2479eecee9b888e2d06300f718487">More...</a><br /></td></tr>
+<tr class="separator:a62b2479eecee9b888e2d06300f718487"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a240aefab64fa9d9760691941829b556b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_core.html#a6d8edbd01f8dcdff6a17f5ddf6b30591">State</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_core.html#a240aefab64fa9d9760691941829b556b">_state</a></td></tr>
+<tr class="memdesc:a240aefab64fa9d9760691941829b556b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current state of the core.  <a href="class_core.html#a240aefab64fa9d9760691941829b556b">More...</a><br /></td></tr>
+<tr class="separator:a240aefab64fa9d9760691941829b556b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_core.html" title="Core class that the transfer of data between games and displays.">Core</a> class that the transfer of data between games and displays. </p>
@@ -214,7 +268,12 @@ Public Member Functions</h2></td></tr>
 </table>
 
 <p class="definition">Definition at line <a class="el" href="_core_8hpp_source.html#l00027">27</a> of file <a class="el" href="_core_8hpp_source.html">Core.hpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                         {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            MAIN_MENU,</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            GAME,</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            EXIT</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        };</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -272,7 +331,19 @@ Public Member Functions</h2></td></tr>
 <p>Creating a core with a variable number of paths to libraries. </p>
 
 <p class="definition">Definition at line <a class="el" href="_core_8cpp_source.html#l00017">17</a> of file <a class="el" href="_core_8cpp_source.html">Core.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="class_core.html#a327c3129b8e1382e01f95babf98389e5">_entities</a>.reserve(1000);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="class_core.html#ab559fe8e59c50be7c8910f66dbc1ae4b">_mainMenu</a>.<a class="code" href="class_main_menu.html#a1f2a0ab6540cf2f6023565feb24be3a6">init</a>(<a class="code" href="class_core.html#a327c3129b8e1382e01f95babf98389e5">_entities</a>);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="class_core.html#a80b27d83fad909a23693380af89042ce">_libManager</a>.<a class="code" href="class_lib_manager.html#aa77bc5043b5310692f96bf7134735028">addLibs</a>(libsPath);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="class_core.html#ae4ebc2e4af5fce922e113a17e16a39c5">_game</a> = &amp;<a class="code" href="class_core.html#ab559fe8e59c50be7c8910f66dbc1ae4b">_mainMenu</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="class_core.html#a301de8f444ccc06c0672c31283410a65">_graph</a> = <a class="code" href="class_core.html#a80b27d83fad909a23693380af89042ce">_libManager</a>.<a class="code" href="class_lib_manager.html#aed05c82bbedace1a4997fcd232124188">openGraph</a>(*libsPath.begin());</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="class_core.html#a301de8f444ccc06c0672c31283410a65">_graph</a>-&gt;<a class="code" href="class_i_graph.html#a047bb5222ba4ac156f057b65ff36ef1c">init</a>();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="class_core.html#ae4ebc2e4af5fce922e113a17e16a39c5">_game</a>-&gt;<a class="code" href="class_i_game.html#abdc3543ee754cecb7eb156f05ce5869d">start</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="class_core.html#a240aefab64fa9d9760691941829b556b">_state</a> = <a class="code" href="class_core.html#a6d8edbd01f8dcdff6a17f5ddf6b30591aa16d505f03a4b6f35486f65f6a61317e">State::MAIN_MENU</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="class_core.html#ad858916f184608421d9398d88ddb1107">_futureGame</a> = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="class_core.html#a9cc50e25ec1e59fc183564a0dfe582fc">_futureGraph</a> = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a776f8c46504b14183883c6273f93eaed"></a>
@@ -301,7 +372,10 @@ Public Member Functions</h2></td></tr>
 <p>Dtor. </p>
 
 <p class="definition">Definition at line <a class="el" href="_core_8hpp_source.html#l00043">43</a> of file <a class="el" href="_core_8hpp_source.html">Core.hpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <a class="code" href="class_core.html#a80b27d83fad909a23693380af89042ce">_libManager</a>.<a class="code" href="class_lib_manager.html#a8b9e06c595680ab9852372dd67aaa0e1">closeAllLibs</a>();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a4faad96f2eb0df40046690f0b1ace30a"></a>
@@ -358,7 +432,122 @@ Public Member Functions</h2></td></tr>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="_core_8cpp_source.html#l00031">31</a> of file <a class="el" href="_core_8cpp_source.html">Core.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="class_core.html#a327c3129b8e1382e01f95babf98389e5">_entities</a>.push_back(entity);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aaa273bb1d1a5ebd3a8c2370be99ceb0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa273bb1d1a5ebd3a8c2370be99ceb0c">&#9670;&nbsp;</a></span>coreEventSwitchGame()</h2>
 
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Core::coreEventSwitchGame </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_core_events_8cpp_source.html#l00013">13</a> of file <a class="el" href="_core_events_8cpp_source.html">CoreEvents.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    std::string currentGameName = <a class="code" href="class_core.html#ae4ebc2e4af5fce922e113a17e16a39c5">_game</a>-&gt;<a class="code" href="class_i_game.html#ad4b0a0f5cf6be7c2692485907dc0f6ac">getLibraryName</a>();</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    currentGameName = <a class="code" href="class_core.html#a80b27d83fad909a23693380af89042ce">_libManager</a>.<a class="code" href="class_lib_manager.html#acdbf2b5396f6cc619a11c26f7bb401d2">fetchLibPath</a>(currentGameName);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_core.html#a62b2479eecee9b888e2d06300f718487">_event</a>.top().key.key == <span class="charliteral">&#39;h&#39;</span> || <a class="code" href="class_core.html#a62b2479eecee9b888e2d06300f718487">_event</a>.top().key.key == <span class="charliteral">&#39;H&#39;</span>) {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordflow">try</span> {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            <a class="code" href="class_core.html#a80b27d83fad909a23693380af89042ce">_libManager</a>.<a class="code" href="class_lib_manager.html#a3d89f7b1518d47cdd8a0bf786b8dec44">closeLib</a>(currentGameName);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <a class="code" href="class_core.html#ae4ebc2e4af5fce922e113a17e16a39c5">_game</a> = <a class="code" href="class_core.html#a80b27d83fad909a23693380af89042ce">_libManager</a>.<a class="code" href="class_lib_manager.html#a7527ba7e4b319a267a9dfc9e29f88f83">cycleGameLibs</a>(currentGameName, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        } <span class="keywordflow">catch</span> (...) {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <a class="code" href="_exception_8hpp.html#a7b3deaa642cc474ad5eb24c1f52ab723">ArcadeEX</a>(<span class="stringliteral">&quot;Successfully changed the game library, current game library: &quot;</span> + <a class="code" href="class_core.html#ae4ebc2e4af5fce922e113a17e16a39c5">_game</a>-&gt;<a class="code" href="class_i_game.html#ad4b0a0f5cf6be7c2692485907dc0f6ac">getLibraryName</a>(), <a class="code" href="class_logger.html#a0444040bdc1a82659a84ad918b42a61d">Logger::INFO</a>);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    }</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_core.html#a62b2479eecee9b888e2d06300f718487">_event</a>.top().key.key == <span class="charliteral">&#39;j&#39;</span> || <a class="code" href="class_core.html#a62b2479eecee9b888e2d06300f718487">_event</a>.top().key.key == <span class="charliteral">&#39;J&#39;</span>) {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordflow">try</span> {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <a class="code" href="class_core.html#a80b27d83fad909a23693380af89042ce">_libManager</a>.<a class="code" href="class_lib_manager.html#a3d89f7b1518d47cdd8a0bf786b8dec44">closeLib</a>(currentGameName);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <a class="code" href="class_core.html#ae4ebc2e4af5fce922e113a17e16a39c5">_game</a> = <a class="code" href="class_core.html#a80b27d83fad909a23693380af89042ce">_libManager</a>.<a class="code" href="class_lib_manager.html#a7527ba7e4b319a267a9dfc9e29f88f83">cycleGameLibs</a>(currentGameName, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        } <span class="keywordflow">catch</span> (...) {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <a class="code" href="_exception_8hpp.html#a7b3deaa642cc474ad5eb24c1f52ab723">ArcadeEX</a>(<span class="stringliteral">&quot;Successfully changed the game library, current game library: &quot;</span> + <a class="code" href="class_core.html#ae4ebc2e4af5fce922e113a17e16a39c5">_game</a>-&gt;<a class="code" href="class_i_game.html#ad4b0a0f5cf6be7c2692485907dc0f6ac">getLibraryName</a>(), <a class="code" href="class_logger.html#a0444040bdc1a82659a84ad918b42a61d">Logger::INFO</a>);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a0766cfe882239abc1e4a0f2844c76e89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0766cfe882239abc1e4a0f2844c76e89">&#9670;&nbsp;</a></span>coreEventSwitchGraph()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Core::coreEventSwitchGraph </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_core_events_8cpp_source.html#l00038">38</a> of file <a class="el" href="_core_events_8cpp_source.html">CoreEvents.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    std::string graphName = <a class="code" href="class_core.html#a301de8f444ccc06c0672c31283410a65">_graph</a>-&gt;<a class="code" href="class_i_graph.html#a37b6f2993125bbbb12007714668eb026">getLibraryName</a>();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    graphName = <a class="code" href="class_core.html#a80b27d83fad909a23693380af89042ce">_libManager</a>.<a class="code" href="class_lib_manager.html#acdbf2b5396f6cc619a11c26f7bb401d2">fetchLibPath</a>(graphName);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_core.html#a62b2479eecee9b888e2d06300f718487">_event</a>.top().key.key == <span class="charliteral">&#39;k&#39;</span> || <a class="code" href="class_core.html#a62b2479eecee9b888e2d06300f718487">_event</a>.top().key.key == <span class="charliteral">&#39;K&#39;</span>) {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordflow">try</span> {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <a class="code" href="class_core.html#a301de8f444ccc06c0672c31283410a65">_graph</a>-&gt;<a class="code" href="class_i_graph.html#ab4877a54bbdbd2663e94309d260e064b">close</a>();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <a class="code" href="class_core.html#a80b27d83fad909a23693380af89042ce">_libManager</a>.<a class="code" href="class_lib_manager.html#a3d89f7b1518d47cdd8a0bf786b8dec44">closeLib</a>(graphName);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <a class="code" href="class_core.html#a301de8f444ccc06c0672c31283410a65">_graph</a> = <a class="code" href="class_core.html#a80b27d83fad909a23693380af89042ce">_libManager</a>.<a class="code" href="class_lib_manager.html#a9dab81d6911e4118650466067bf83065">cycleGraphLibs</a>(graphName, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <a class="code" href="class_core.html#a301de8f444ccc06c0672c31283410a65">_graph</a>-&gt;<a class="code" href="class_i_graph.html#a047bb5222ba4ac156f057b65ff36ef1c">init</a>();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <a class="code" href="class_core.html#a62b2479eecee9b888e2d06300f718487">_event</a>.pop();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <a class="code" href="class_core.html#a62b2479eecee9b888e2d06300f718487">_event</a>.pop();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        } <span class="keywordflow">catch</span> (...) {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <a class="code" href="class_core.html#a62b2479eecee9b888e2d06300f718487">_event</a>.pop();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <a class="code" href="class_core.html#a62b2479eecee9b888e2d06300f718487">_event</a>.pop();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <a class="code" href="_exception_8hpp.html#a7b3deaa642cc474ad5eb24c1f52ab723">ArcadeEX</a>(<span class="stringliteral">&quot;Successfully changed the graph library, current graph library: &quot;</span> + <a class="code" href="class_core.html#a301de8f444ccc06c0672c31283410a65">_graph</a>-&gt;<a class="code" href="class_i_graph.html#a37b6f2993125bbbb12007714668eb026">getLibraryName</a>(), <a class="code" href="class_logger.html#a0444040bdc1a82659a84ad918b42a61d">Logger::INFO</a>);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_core.html#a62b2479eecee9b888e2d06300f718487">_event</a>.top().key.key == <span class="charliteral">&#39;l&#39;</span> || <a class="code" href="class_core.html#a62b2479eecee9b888e2d06300f718487">_event</a>.top().key.key == <span class="charliteral">&#39;L&#39;</span>) {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">try</span> {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <a class="code" href="class_core.html#a301de8f444ccc06c0672c31283410a65">_graph</a>-&gt;<a class="code" href="class_i_graph.html#ab4877a54bbdbd2663e94309d260e064b">close</a>();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <a class="code" href="class_core.html#a80b27d83fad909a23693380af89042ce">_libManager</a>.<a class="code" href="class_lib_manager.html#a3d89f7b1518d47cdd8a0bf786b8dec44">closeLib</a>(graphName);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <a class="code" href="class_core.html#a301de8f444ccc06c0672c31283410a65">_graph</a> = <a class="code" href="class_core.html#a80b27d83fad909a23693380af89042ce">_libManager</a>.<a class="code" href="class_lib_manager.html#a9dab81d6911e4118650466067bf83065">cycleGraphLibs</a>(graphName, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <a class="code" href="class_core.html#a301de8f444ccc06c0672c31283410a65">_graph</a>-&gt;<a class="code" href="class_i_graph.html#a047bb5222ba4ac156f057b65ff36ef1c">init</a>();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <a class="code" href="class_core.html#a62b2479eecee9b888e2d06300f718487">_event</a>.pop();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <a class="code" href="class_core.html#a62b2479eecee9b888e2d06300f718487">_event</a>.pop();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        } <span class="keywordflow">catch</span> (...) {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <a class="code" href="class_core.html#a62b2479eecee9b888e2d06300f718487">_event</a>.pop();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <a class="code" href="class_core.html#a62b2479eecee9b888e2d06300f718487">_event</a>.pop();</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <a class="code" href="_exception_8hpp.html#a7b3deaa642cc474ad5eb24c1f52ab723">ArcadeEX</a>(<span class="stringliteral">&quot;Successfully changed the graph library, current graph library: &quot;</span> + <a class="code" href="class_core.html#a301de8f444ccc06c0672c31283410a65">_graph</a>-&gt;<a class="code" href="class_i_graph.html#a37b6f2993125bbbb12007714668eb026">getLibraryName</a>(), <a class="code" href="class_logger.html#a0444040bdc1a82659a84ad918b42a61d">Logger::INFO</a>);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a1bcfc07efa9bf4ee3ed359fdddee8709"></a>
@@ -379,7 +568,44 @@ Public Member Functions</h2></td></tr>
 <p>Update the graphical interface by passing all the entities to the graph. </p>
 
 <p class="definition">Definition at line <a class="el" href="_core_8cpp_source.html#l00081">81</a> of file <a class="el" href="_core_8cpp_source.html">Core.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;{</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_core.html#a327c3129b8e1382e01f95babf98389e5">_entities</a>.empty())</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <a class="code" href="class_core.html#a301de8f444ccc06c0672c31283410a65">_graph</a>-&gt;<a class="code" href="class_i_graph.html#ad093f704c4f0c13bc42ca4e494b76d20">clearWindow</a>();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> i = 0; i &lt; <a class="code" href="class_core.html#a327c3129b8e1382e01f95babf98389e5">_entities</a>.size(); i++) {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordflow">if</span> (<span class="keyword">dynamic_cast&lt;</span><a class="code" href="class_text_entity.html">TextEntity</a> *<span class="keyword">&gt;</span>(<a class="code" href="class_core.html#a327c3129b8e1382e01f95babf98389e5">_entities</a>[i].get())) {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <span class="keyword">auto</span> *text = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="class_text_entity.html">TextEntity</a> *<span class="keyword">&gt;</span>(<a class="code" href="class_core.html#a327c3129b8e1382e01f95babf98389e5">_entities</a>[i].get());</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <a class="code" href="class_core.html#a301de8f444ccc06c0672c31283410a65">_graph</a>-&gt;<a class="code" href="class_i_graph.html#adc313588d862964034f9dc7256ef0e8a">drawText</a>(text-&gt;getPos(), text-&gt;getText(), text-&gt;getColor());</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordflow">if</span> (<span class="keyword">dynamic_cast&lt;</span><a class="code" href="class_button.html">Button</a> *<span class="keyword">&gt;</span>(<a class="code" href="class_core.html#a327c3129b8e1382e01f95babf98389e5">_entities</a>[i].get())) {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="keyword">auto</span> *button = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="class_button.html">Button</a> *<span class="keyword">&gt;</span>(<a class="code" href="class_core.html#a327c3129b8e1382e01f95babf98389e5">_entities</a>[i].get());</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <a class="code" href="class_core.html#a301de8f444ccc06c0672c31283410a65">_graph</a>-&gt;<a class="code" href="class_i_graph.html#a7963d277bd33308a52c3029214e875a0">drawRect</a>(button-&gt;getPos(), button-&gt;getSize().first, button-&gt;getSize().second, <a class="code" href="struct_color.html">Color</a>(255, 255, 255, 255));</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keywordflow">if</span> (<span class="keyword">dynamic_cast&lt;</span><a class="code" href="class_object.html">Object</a> *<span class="keyword">&gt;</span>(<a class="code" href="class_core.html#a327c3129b8e1382e01f95babf98389e5">_entities</a>[i].get())) {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            <span class="keyword">auto</span> *wall = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="class_object.html">Object</a> *<span class="keyword">&gt;</span>(<a class="code" href="class_core.html#a327c3129b8e1382e01f95babf98389e5">_entities</a>[i].get());</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <span class="keywordflow">if</span> (wall-&gt;getType() == <a class="code" href="class_i_entity.html#a46d8922e2df0932c61ca624e05f85aa2abb5e4afb77e9abb1bce78998240cf14e">IEntity::POINT</a>)</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                <a class="code" href="class_core.html#a301de8f444ccc06c0672c31283410a65">_graph</a>-&gt;<a class="code" href="class_i_graph.html#ac3a39c636d2e479e9f7dd90a6a5a7f17">drawCircle</a>(wall-&gt;getPos(), 3, <a class="code" href="struct_color.html">Color</a>(255, 255, 0, 255));</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (wall-&gt;getType() == <a class="code" href="class_i_entity.html#a46d8922e2df0932c61ca624e05f85aa2a906e5f94605e5680eeeba3dbf75dcc76">IEntity::WALL</a>)</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                <a class="code" href="class_core.html#a301de8f444ccc06c0672c31283410a65">_graph</a>-&gt;<a class="code" href="class_i_graph.html#a7963d277bd33308a52c3029214e875a0">drawRect</a>(wall-&gt;getPos(), wall-&gt;getSize().first, wall-&gt;getSize().second, <a class="code" href="struct_color.html">Color</a>(0, 0, 255, 255));</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                <a class="code" href="class_core.html#a301de8f444ccc06c0672c31283410a65">_graph</a>-&gt;<a class="code" href="class_i_graph.html#ac3a39c636d2e479e9f7dd90a6a5a7f17">drawCircle</a>(wall-&gt;getPos(), 8, <a class="code" href="struct_color.html">Color</a>(255, 255, 0, 255));</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    }</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> i = 0; i &lt; <a class="code" href="class_core.html#a327c3129b8e1382e01f95babf98389e5">_entities</a>.size(); i++) {</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keywordflow">if</span> (<span class="keyword">dynamic_cast&lt;</span><a class="code" href="class_player.html">Player</a> *<span class="keyword">&gt;</span>(<a class="code" href="class_core.html#a327c3129b8e1382e01f95babf98389e5">_entities</a>[i].get())) {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            <span class="keyword">auto</span> *player = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="class_player.html">Player</a> *<span class="keyword">&gt;</span>(<a class="code" href="class_core.html#a327c3129b8e1382e01f95babf98389e5">_entities</a>[i].get());</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            <a class="code" href="class_core.html#a301de8f444ccc06c0672c31283410a65">_graph</a>-&gt;<a class="code" href="class_i_graph.html#a86710ad76190aafbdf76941ce89a34f3">drawEntity</a>(*<a class="code" href="class_core.html#a327c3129b8e1382e01f95babf98389e5">_entities</a>[i], player-&gt;getPos());</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        }</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="keywordflow">if</span> (<span class="keyword">dynamic_cast&lt;</span><a class="code" href="class_enemy.html">Enemy</a> *<span class="keyword">&gt;</span>(<a class="code" href="class_core.html#a327c3129b8e1382e01f95babf98389e5">_entities</a>[i].get())) {</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            <span class="keyword">auto</span> *enemy = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="class_enemy.html">Enemy</a> *<span class="keyword">&gt;</span>(<a class="code" href="class_core.html#a327c3129b8e1382e01f95babf98389e5">_entities</a>[i].get());</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            <a class="code" href="class_core.html#a301de8f444ccc06c0672c31283410a65">_graph</a>-&gt;<a class="code" href="class_i_graph.html#a86710ad76190aafbdf76941ce89a34f3">drawEntity</a>(*<a class="code" href="class_core.html#a327c3129b8e1382e01f95babf98389e5">_entities</a>[i], enemy-&gt;getPos());</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        }</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_core.html#ae4ebc2e4af5fce922e113a17e16a39c5">_game</a>-&gt;<a class="code" href="class_i_game.html#a9840d5dbf736c48685119790eb941bfe">getScore</a>() &gt;= 0)</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <a class="code" href="class_core.html#a301de8f444ccc06c0672c31283410a65">_graph</a>-&gt;<a class="code" href="class_i_graph.html#adc313588d862964034f9dc7256ef0e8a">drawText</a>(std::pair&lt;int, int&gt;{24, 1}, <span class="stringliteral">&quot;Score : &quot;</span> + std::to_string(<a class="code" href="class_core.html#ae4ebc2e4af5fce922e113a17e16a39c5">_game</a>-&gt;<a class="code" href="class_i_game.html#a9840d5dbf736c48685119790eb941bfe">getScore</a>()) + <span class="stringliteral">&quot;00&quot;</span>, <a class="code" href="struct_color.html">Color</a>(255, 255, 255, 255));</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <a class="code" href="class_core.html#a301de8f444ccc06c0672c31283410a65">_graph</a>-&gt;<a class="code" href="class_i_graph.html#a703f8faaae8cb3b339b8686e5f442f81">displayWindow</a>();</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a27876ea69a01d7566663e7a36c188878"></a>
@@ -406,7 +632,10 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_core_8hpp_source.html#l00155">155</a> of file <a class="el" href="_core_8hpp_source.html">Core.hpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        {</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="class_core.html#ad858916f184608421d9398d88ddb1107">_futureGame</a>;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab21af25d9a8be8a043a0568e20f12ffe"></a>
@@ -433,7 +662,10 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_core_8hpp_source.html#l00144">144</a> of file <a class="el" href="_core_8hpp_source.html">Core.hpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        {</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="class_core.html#a9cc50e25ec1e59fc183564a0dfe582fc">_futureGraph</a>;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7582b92dadba582f6533593faa0f8273"></a>
@@ -463,7 +695,10 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The current game of the core </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="_core_8hpp_source.html#l00078">78</a> of file <a class="el" href="_core_8hpp_source.html">Core.hpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="class_core.html#ae4ebc2e4af5fce922e113a17e16a39c5">_game</a>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae7f7b88218780dea96a8daff61a9992b"></a>
@@ -493,7 +728,10 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The current graphical display of the core </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="_core_8hpp_source.html#l00094">94</a> of file <a class="el" href="_core_8hpp_source.html">Core.hpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="class_core.html#a301de8f444ccc06c0672c31283410a65">_graph</a>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a2e3c7c6ec75acec8b25f52a4643c8acf"></a>
@@ -523,7 +761,10 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The current event </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="_core_8hpp_source.html#l00110">110</a> of file <a class="el" href="_core_8hpp_source.html">Core.hpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="class_core.html#a62b2479eecee9b888e2d06300f718487">_event</a>.top();</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9939066bf3375133927528e6336029dc"></a>
@@ -553,7 +794,43 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The current state of the core </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="_core_8hpp_source.html#l00064">64</a> of file <a class="el" href="_core_8hpp_source.html">Core.hpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="class_core.html#a240aefab64fa9d9760691941829b556b">_state</a>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a8748501c56664fa2e58085b792be449c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8748501c56664fa2e58085b792be449c">&#9670;&nbsp;</a></span>manageCoreKeyEvents()</h2>
 
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Core::manageCoreKeyEvents </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_core_events_8cpp_source.html#l00075">75</a> of file <a class="el" href="_core_events_8cpp_source.html">CoreEvents.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;{</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_core.html#a62b2479eecee9b888e2d06300f718487">_event</a>.top().key.key == <span class="charliteral">&#39;h&#39;</span> || <a class="code" href="class_core.html#a62b2479eecee9b888e2d06300f718487">_event</a>.top().key.key == <span class="charliteral">&#39;H&#39;</span> || <a class="code" href="class_core.html#a62b2479eecee9b888e2d06300f718487">_event</a>.top().key.key == <span class="charliteral">&#39;j&#39;</span> || <a class="code" href="class_core.html#a62b2479eecee9b888e2d06300f718487">_event</a>.top().key.key == <span class="charliteral">&#39;j&#39;</span>)</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_core.html#aaa273bb1d1a5ebd3a8c2370be99ceb0c">coreEventSwitchGame</a>();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_core.html#a62b2479eecee9b888e2d06300f718487">_event</a>.top().key.key == <span class="charliteral">&#39;k&#39;</span> || <a class="code" href="class_core.html#a62b2479eecee9b888e2d06300f718487">_event</a>.top().key.key == <span class="charliteral">&#39;K&#39;</span> || <a class="code" href="class_core.html#a62b2479eecee9b888e2d06300f718487">_event</a>.top().key.key == <span class="charliteral">&#39;l&#39;</span> || <a class="code" href="class_core.html#a62b2479eecee9b888e2d06300f718487">_event</a>.top().key.key == <span class="charliteral">&#39;L&#39;</span>)</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_core.html#a0766cfe882239abc1e4a0f2844c76e89">coreEventSwitchGraph</a>();</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a08c220acd671f2dfc7d40cbc472e231c"></a>
@@ -611,7 +888,10 @@ Public Member Functions</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>Not setting up any graphical display before polling any event will result in an <b>undefined behavior</b> </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="_core_8hpp_source.html#l00117">117</a> of file <a class="el" href="_core_8hpp_source.html">Core.hpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        {</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="class_core.html#a62b2479eecee9b888e2d06300f718487">_event</a>.pop();</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a735a297163927e6c9749f163a4223bc1"></a>
@@ -636,7 +916,63 @@ Events can be retrieved by using <b><a class="el" href="class_core.html#a2e3c7c6
 <dl class="section warning"><dt>Warning</dt><dd>Not setting up any graphical display before polling any event will result in an <b>undefined behavior</b> </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="_core_8cpp_source.html#l00120">120</a> of file <a class="el" href="_core_8cpp_source.html">Core.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;{</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_core.html#a62b2479eecee9b888e2d06300f718487">_event</a>.empty())</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="class_core.html#a62b2479eecee9b888e2d06300f718487">_event</a>.empty() &amp;&amp; <a class="code" href="class_core.html#a62b2479eecee9b888e2d06300f718487">_event</a>.top().evt_type == Arcade::Evt::EvtType::KEY)</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_core.html#a62b2479eecee9b888e2d06300f718487">_event</a>.top().evt_type == <a class="code" href="struct_arcade_1_1_evt.html#aa27a273a8c2158b5a41ae12019813ea3adff6972ae880475575afa4bd28a4c9af">Arcade::Evt::WIN_CLOSE</a>) {</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_core.html#a240aefab64fa9d9760691941829b556b">_state</a> == <a class="code" href="class_core.html#a6d8edbd01f8dcdff6a17f5ddf6b30591aa16d505f03a4b6f35486f65f6a61317e">State::MAIN_MENU</a>) {</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            <a class="code" href="class_core.html#ab559fe8e59c50be7c8910f66dbc1ae4b">_mainMenu</a>.<a class="code" href="class_main_menu.html#a27996a4ace0811fa102a5b509d707155">close</a>(<a class="code" href="class_core.html#a327c3129b8e1382e01f95babf98389e5">_entities</a>);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            <a class="code" href="class_core.html#a240aefab64fa9d9760691941829b556b">_state</a> = <a class="code" href="class_core.html#a6d8edbd01f8dcdff6a17f5ddf6b30591aa42b2fb0e720a080e79a92f4ca97d927">State::EXIT</a>;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            <a class="code" href="class_core.html#a62b2479eecee9b888e2d06300f718487">_event</a>.pop();</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        }</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_core.html#a240aefab64fa9d9760691941829b556b">_state</a> == <a class="code" href="class_core.html#a6d8edbd01f8dcdff6a17f5ddf6b30591a4504e1ed59cd9732b8a844e5424e6f13">State::GAME</a>) {</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            <a class="code" href="class_core.html#ae4ebc2e4af5fce922e113a17e16a39c5">_game</a>-&gt;<a class="code" href="class_i_game.html#a8d7aa790c266dc79c50e815557de29ae">setState</a>(<a class="code" href="class_i_game.html#a4a7309d86599d6e581f764233085c7dda09d4d696b4e935115b9313e3c412509a">IGame::GameState::STOPPED</a>);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            <a class="code" href="class_core.html#a240aefab64fa9d9760691941829b556b">_state</a> = <a class="code" href="class_core.html#a6d8edbd01f8dcdff6a17f5ddf6b30591aa16d505f03a4b6f35486f65f6a61317e">State::MAIN_MENU</a>;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            <a class="code" href="class_core.html#ae4ebc2e4af5fce922e113a17e16a39c5">_game</a> = &amp;<a class="code" href="class_core.html#ab559fe8e59c50be7c8910f66dbc1ae4b">_mainMenu</a>;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            <a class="code" href="class_core.html#a62b2479eecee9b888e2d06300f718487">_event</a>.pop();</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        }</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    }</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_core.html#ae4ebc2e4af5fce922e113a17e16a39c5">_game</a>-&gt;<a class="code" href="class_i_game.html#a44de7e08e7ee294be051445a84306299">getState</a>() == <a class="code" href="class_i_game.html#a4a7309d86599d6e581f764233085c7dda09d4d696b4e935115b9313e3c412509a">IGame::GameState::STOPPED</a>) {</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        <a class="code" href="class_core.html#a240aefab64fa9d9760691941829b556b">_state</a> = <a class="code" href="class_core.html#a6d8edbd01f8dcdff6a17f5ddf6b30591aa16d505f03a4b6f35486f65f6a61317e">State::MAIN_MENU</a>;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <a class="code" href="class_core.html#ae4ebc2e4af5fce922e113a17e16a39c5">_game</a> = &amp;<a class="code" href="class_core.html#ab559fe8e59c50be7c8910f66dbc1ae4b">_mainMenu</a>;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        <a class="code" href="class_core.html#a62b2479eecee9b888e2d06300f718487">_event</a>.pop();</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    }</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_core.html#a62b2479eecee9b888e2d06300f718487">_event</a>.top().evt_type == <a class="code" href="struct_arcade_1_1_evt.html#aa27a273a8c2158b5a41ae12019813ea3aed4592e60f9d30b31f88ceb546b2655e">Arcade::Evt::KEY</a>) {</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_core.html#a62b2479eecee9b888e2d06300f718487">_event</a>.top().key.key == <span class="charliteral">&#39;r&#39;</span> || <a class="code" href="class_core.html#a62b2479eecee9b888e2d06300f718487">_event</a>.top().key.key == <span class="charliteral">&#39;R&#39;</span>) {</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            <span class="keywordflow">try</span> {</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                std::string currentGameName = <a class="code" href="class_core.html#ae4ebc2e4af5fce922e113a17e16a39c5">_game</a>-&gt;<a class="code" href="class_i_game.html#ad4b0a0f5cf6be7c2692485907dc0f6ac">getLibraryName</a>();</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                currentGameName = <a class="code" href="class_core.html#a80b27d83fad909a23693380af89042ce">_libManager</a>.<a class="code" href="class_lib_manager.html#acdbf2b5396f6cc619a11c26f7bb401d2">fetchLibPath</a>(currentGameName);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                <a class="code" href="class_core.html#a80b27d83fad909a23693380af89042ce">_libManager</a>.<a class="code" href="class_lib_manager.html#a3d89f7b1518d47cdd8a0bf786b8dec44">closeLib</a>(currentGameName);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                <a class="code" href="class_core.html#ae4ebc2e4af5fce922e113a17e16a39c5">_game</a> = <a class="code" href="class_core.html#a80b27d83fad909a23693380af89042ce">_libManager</a>.<a class="code" href="class_lib_manager.html#ae57da9b1ed22efebbc6daceab842fb68">openGame</a>(currentGameName);</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            } <span class="keywordflow">catch</span> (...) {</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                <a class="code" href="class_core.html#a62b2479eecee9b888e2d06300f718487">_event</a>.pop();</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            }</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        }</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_core.html#a62b2479eecee9b888e2d06300f718487">_event</a>.top().key.key == <span class="charliteral">&#39;m&#39;</span> || <a class="code" href="class_core.html#a62b2479eecee9b888e2d06300f718487">_event</a>.top().key.key == <span class="charliteral">&#39;M&#39;</span>) {</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            <a class="code" href="class_core.html#ae4ebc2e4af5fce922e113a17e16a39c5">_game</a>-&gt;<a class="code" href="class_i_game.html#a674650861ce38c0c6337db9974079be5">close</a>(<a class="code" href="class_core.html#a327c3129b8e1382e01f95babf98389e5">_entities</a>);</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            <a class="code" href="class_core.html#ab559fe8e59c50be7c8910f66dbc1ae4b">_mainMenu</a>.<a class="code" href="class_main_menu.html#a1f2a0ab6540cf2f6023565feb24be3a6">init</a>(<a class="code" href="class_core.html#a327c3129b8e1382e01f95babf98389e5">_entities</a>);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            <a class="code" href="class_core.html#ae4ebc2e4af5fce922e113a17e16a39c5">_game</a> = &amp;<a class="code" href="class_core.html#ab559fe8e59c50be7c8910f66dbc1ae4b">_mainMenu</a>;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            <a class="code" href="class_core.html#ae4ebc2e4af5fce922e113a17e16a39c5">_game</a>-&gt;<a class="code" href="class_i_game.html#abdc3543ee754cecb7eb156f05ce5869d">start</a>();</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            <a class="code" href="class_core.html#a62b2479eecee9b888e2d06300f718487">_event</a>.pop();</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            <a class="code" href="class_core.html#a240aefab64fa9d9760691941829b556b">_state</a> = <a class="code" href="class_core.html#a6d8edbd01f8dcdff6a17f5ddf6b30591aa16d505f03a4b6f35486f65f6a61317e">State::MAIN_MENU</a>;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        }</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_core.html#a62b2479eecee9b888e2d06300f718487">_event</a>.top().key.key == <span class="charliteral">&#39;p&#39;</span> || <a class="code" href="class_core.html#a62b2479eecee9b888e2d06300f718487">_event</a>.top().key.key == <span class="charliteral">&#39;P&#39;</span>) {</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            <a class="code" href="class_core.html#a240aefab64fa9d9760691941829b556b">_state</a> = <a class="code" href="class_core.html#a6d8edbd01f8dcdff6a17f5ddf6b30591a4504e1ed59cd9732b8a844e5424e6f13">State::GAME</a>;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;            <a class="code" href="class_core.html#ae4ebc2e4af5fce922e113a17e16a39c5">_game</a>-&gt;<a class="code" href="class_i_game.html#a8d7aa790c266dc79c50e815557de29ae">setState</a>(<a class="code" href="class_i_game.html#a4a7309d86599d6e581f764233085c7dda99b2439e63f73ad515f7ab2447a80673">IGame::GameState::PAUSED</a>);</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            <a class="code" href="class_core.html#a62b2479eecee9b888e2d06300f718487">_event</a>.pop();</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        }</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        <a class="code" href="class_core.html#a8748501c56664fa2e58085b792be449c">manageCoreKeyEvents</a>();</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    }</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a0566a6e79df0e0b0e51a7e00b4174352"></a>
@@ -664,7 +1000,15 @@ Events can be retrieved by using <b><a class="el" href="class_core.html#a2e3c7c6
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="_core_8cpp_source.html#l00036">36</a> of file <a class="el" href="_core_8cpp_source.html">Core.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = <a class="code" href="class_core.html#a327c3129b8e1382e01f95babf98389e5">_entities</a>.begin(); it != <a class="code" href="class_core.html#a327c3129b8e1382e01f95babf98389e5">_entities</a>.end(); ++it) {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordflow">if</span> (*it == entity) {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <a class="code" href="class_core.html#a327c3129b8e1382e01f95babf98389e5">_entities</a>.erase(it);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8a5856baa5264944d4deb57b945a1134"></a>
@@ -703,7 +1047,10 @@ Events can be retrieved by using <b><a class="el" href="class_core.html#a2e3c7c6
 if the event is of type <b>WINDOW_CLOSE</b>, the core will be set to <b>EXIT</b> state </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="_core_8hpp_source.html#l00126">126</a> of file <a class="el" href="_core_8hpp_source.html">Core.hpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        {</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            <a class="code" href="class_core.html#a62b2479eecee9b888e2d06300f718487">_event</a>.push(event);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae2af62c0f839f8daa0bdc21c7ecf497c"></a>
@@ -731,7 +1078,10 @@ if the event is of type <b>WINDOW_CLOSE</b>, the core will be set to <b>EXIT</b>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_core_8hpp_source.html#l00160">160</a> of file <a class="el" href="_core_8hpp_source.html">Core.hpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        {</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            <a class="code" href="class_core.html#ad858916f184608421d9398d88ddb1107">_futureGame</a> = futureGame;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af06a2852aeeba654b9be1c99df5fd522"></a>
@@ -761,7 +1111,10 @@ if the event is of type <b>WINDOW_CLOSE</b>, the core will be set to <b>EXIT</b>
 <p>Set the future graphical display to be used. </p>
 
 <p class="definition">Definition at line <a class="el" href="_core_8hpp_source.html#l00150">150</a> of file <a class="el" href="_core_8hpp_source.html">Core.hpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        {</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            <a class="code" href="class_core.html#a9cc50e25ec1e59fc183564a0dfe582fc">_futureGraph</a> = futureGraph;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aaf5981b9e9f6146cb47ba340cfc2eddb"></a>
@@ -781,7 +1134,18 @@ if the event is of type <b>WINDOW_CLOSE</b>, the core will be set to <b>EXIT</b>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_core_8cpp_source.html#l00178">178</a> of file <a class="el" href="_core_8cpp_source.html">Core.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;{</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="class_core.html#ae4ebc2e4af5fce922e113a17e16a39c5">_game</a>-&gt;<a class="code" href="class_i_game.html#ad4b0a0f5cf6be7c2692485907dc0f6ac">getLibraryName</a>().empty() &amp;&amp; <a class="code" href="class_core.html#a240aefab64fa9d9760691941829b556b">_state</a> == <a class="code" href="class_core.html#a6d8edbd01f8dcdff6a17f5ddf6b30591a4504e1ed59cd9732b8a844e5424e6f13">State::GAME</a>) {</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        <a class="code" href="class_core.html#ae4ebc2e4af5fce922e113a17e16a39c5">_game</a>-&gt;<a class="code" href="class_i_game.html#a674650861ce38c0c6337db9974079be5">close</a>(<a class="code" href="class_core.html#a327c3129b8e1382e01f95babf98389e5">_entities</a>);</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        <a class="code" href="class_core.html#a80b27d83fad909a23693380af89042ce">_libManager</a>.<a class="code" href="class_lib_manager.html#a3d89f7b1518d47cdd8a0bf786b8dec44">closeLib</a>(<a class="code" href="class_core.html#a80b27d83fad909a23693380af89042ce">_libManager</a>.<a class="code" href="class_lib_manager.html#acdbf2b5396f6cc619a11c26f7bb401d2">fetchLibPath</a>(<a class="code" href="class_core.html#ae4ebc2e4af5fce922e113a17e16a39c5">_game</a>-&gt;<a class="code" href="class_i_game.html#ad4b0a0f5cf6be7c2692485907dc0f6ac">getLibraryName</a>()));</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    }</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <a class="code" href="class_core.html#ae4ebc2e4af5fce922e113a17e16a39c5">_game</a> = <a class="code" href="class_core.html#a80b27d83fad909a23693380af89042ce">_libManager</a>.<a class="code" href="class_lib_manager.html#ae57da9b1ed22efebbc6daceab842fb68">openGame</a>(lib);</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="class_core.html#a9cc50e25ec1e59fc183564a0dfe582fc">_futureGraph</a>.empty())</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        <a class="code" href="class_core.html#a327c3129b8e1382e01f95babf98389e5">_entities</a>.clear();</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <a class="code" href="class_core.html#ae4ebc2e4af5fce922e113a17e16a39c5">_game</a>-&gt;<a class="code" href="class_i_game.html#a7cd2c70ae9eb419516d263363eb2b3d2">init</a>(<a class="code" href="class_core.html#a327c3129b8e1382e01f95babf98389e5">_entities</a>);</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <a class="code" href="class_core.html#ae4ebc2e4af5fce922e113a17e16a39c5">_game</a>-&gt;<a class="code" href="class_i_game.html#abdc3543ee754cecb7eb156f05ce5869d">start</a>();</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a6a6a8899657bd5c6ff947f7a223b0bd0"></a>
@@ -817,7 +1181,10 @@ if the event is of type <b>WINDOW_CLOSE</b>, the core will be set to <b>EXIT</b>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="_core_8hpp_source.html#l00085">85</a> of file <a class="el" href="_core_8hpp_source.html">Core.hpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <a class="code" href="class_core.html#ae4ebc2e4af5fce922e113a17e16a39c5">_game</a> = game;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aaf3f3be3f9d1cfb2a895d6350b629809"></a>
@@ -837,7 +1204,17 @@ if the event is of type <b>WINDOW_CLOSE</b>, the core will be set to <b>EXIT</b>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_core_8cpp_source.html#l00191">191</a> of file <a class="el" href="_core_8cpp_source.html">Core.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;{</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_core.html#a301de8f444ccc06c0672c31283410a65">_graph</a>) {</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        <a class="code" href="class_core.html#a301de8f444ccc06c0672c31283410a65">_graph</a>-&gt;<a class="code" href="class_i_graph.html#ab4877a54bbdbd2663e94309d260e064b">close</a>();</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        <a class="code" href="class_core.html#a80b27d83fad909a23693380af89042ce">_libManager</a>.<a class="code" href="class_lib_manager.html#a3d89f7b1518d47cdd8a0bf786b8dec44">closeLib</a>(<a class="code" href="class_core.html#a80b27d83fad909a23693380af89042ce">_libManager</a>.<a class="code" href="class_lib_manager.html#acdbf2b5396f6cc619a11c26f7bb401d2">fetchLibPath</a>(<a class="code" href="class_core.html#a301de8f444ccc06c0672c31283410a65">_graph</a>-&gt;<a class="code" href="class_i_graph.html#a37b6f2993125bbbb12007714668eb026">getLibraryName</a>()));</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    }</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <a class="code" href="class_core.html#a301de8f444ccc06c0672c31283410a65">_graph</a> = <a class="code" href="class_core.html#a80b27d83fad909a23693380af89042ce">_libManager</a>.<a class="code" href="class_lib_manager.html#aed05c82bbedace1a4997fcd232124188">openGraph</a>(lib);</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <a class="code" href="class_core.html#a301de8f444ccc06c0672c31283410a65">_graph</a>-&gt;<a class="code" href="class_i_graph.html#a047bb5222ba4ac156f057b65ff36ef1c">init</a>();</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <a class="code" href="class_core.html#a301de8f444ccc06c0672c31283410a65">_graph</a>-&gt;<a class="code" href="class_i_graph.html#ad093f704c4f0c13bc42ca4e494b76d20">clearWindow</a>();</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <a class="code" href="class_core.html#a301de8f444ccc06c0672c31283410a65">_graph</a>-&gt;<a class="code" href="class_i_graph.html#a703f8faaae8cb3b339b8686e5f442f81">displayWindow</a>();</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="affbb83953ccca049ff375a18995dab7b"></a>
@@ -873,7 +1250,10 @@ if the event is of type <b>WINDOW_CLOSE</b>, the core will be set to <b>EXIT</b>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="_core_8hpp_source.html#l00101">101</a> of file <a class="el" href="_core_8hpp_source.html">Core.hpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        {</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <a class="code" href="class_core.html#a301de8f444ccc06c0672c31283410a65">_graph</a> = graph;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="afe619c2d034aff30644e94b953951a49"></a>
@@ -909,7 +1289,10 @@ if the event is of type <b>WINDOW_CLOSE</b>, the core will be set to <b>EXIT</b>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="_core_8hpp_source.html#l00071">71</a> of file <a class="el" href="_core_8hpp_source.html">Core.hpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <a class="code" href="class_core.html#a240aefab64fa9d9760691941829b556b">_state</a> = state;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a90dd5da2a90e0b5ca3434bcfb05c6dff"></a>
@@ -930,6 +1313,281 @@ if the event is of type <b>WINDOW_CLOSE</b>, the core will be set to <b>EXIT</b>
 <p>Update the data of all entities by passing them to the game. </p>
 
 <p class="definition">Definition at line <a class="el" href="_core_8cpp_source.html#l00046">46</a> of file <a class="el" href="_core_8cpp_source.html">Core.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="struct_arcade_1_1_evt.html">Arcade::Evt</a> evt{};</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    std::stack&lt;Arcade::Evt&gt; eventBuffer;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    std::stack&lt;Arcade::Evt&gt; eventStack;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_core.html#a327c3129b8e1382e01f95babf98389e5">_entities</a>.empty())</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">while</span> ((evt = <a class="code" href="class_core.html#a301de8f444ccc06c0672c31283410a65">_graph</a>-&gt;<a class="code" href="class_i_graph.html#ae5503da735e8b53775b3db3acaaddb35">getInput</a>()).evt_type != <a class="code" href="struct_arcade_1_1_evt.html#aa27a273a8c2158b5a41ae12019813ea3ac57fb57253518f0f6a7a06a1cfc0ae61">Arcade::Evt::NONE</a>) {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">if</span> (evt.evt_type == Arcade::Evt::EvtType::WIN_CLOSE ||</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            (evt.evt_type == Arcade::Evt::EvtType::KEY &amp;&amp;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;             evt.key.key == <span class="charliteral">&#39;9&#39;</span>)) {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <a class="code" href="class_core.html#a301de8f444ccc06c0672c31283410a65">_graph</a>-&gt;<a class="code" href="class_i_graph.html#ab4877a54bbdbd2663e94309d260e064b">close</a>();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <a class="code" href="class_core.html#ae4ebc2e4af5fce922e113a17e16a39c5">_game</a>-&gt;<a class="code" href="class_i_game.html#a674650861ce38c0c6337db9974079be5">close</a>(<a class="code" href="class_core.html#a327c3129b8e1382e01f95babf98389e5">_entities</a>);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <a class="code" href="class_core.html#a240aefab64fa9d9760691941829b556b">_state</a> = <a class="code" href="class_core.html#a6d8edbd01f8dcdff6a17f5ddf6b30591aa42b2fb0e720a080e79a92f4ca97d927">State::EXIT</a>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (evt.evt_type == Arcade::Evt::EvtType::KEY) {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <a class="code" href="class_core.html#a62b2479eecee9b888e2d06300f718487">_event</a>.push(evt);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            eventBuffer.push(evt);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">while</span> (!eventBuffer.empty()) {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        eventStack.push(eventBuffer.top());</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        eventBuffer.pop();</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_core.html#ae4ebc2e4af5fce922e113a17e16a39c5">_game</a>-&gt;<a class="code" href="class_i_game.html#afe8e58b2e0a3f52c4c532d74f6bf7852">getIsGameOver</a>())</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <a class="code" href="class_core.html#a240aefab64fa9d9760691941829b556b">_state</a> = <a class="code" href="class_core.html#a6d8edbd01f8dcdff6a17f5ddf6b30591aa16d505f03a4b6f35486f65f6a61317e">State::MAIN_MENU</a>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_core.html#a240aefab64fa9d9760691941829b556b">_state</a> == <a class="code" href="class_core.html#a6d8edbd01f8dcdff6a17f5ddf6b30591aa16d505f03a4b6f35486f65f6a61317e">State::MAIN_MENU</a>) {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <a class="code" href="class_core.html#ab559fe8e59c50be7c8910f66dbc1ae4b">_mainMenu</a>.<a class="code" href="class_main_menu.html#a119181be29b1e19051e50fbd855c9217">update</a>(<a class="code" href="class_core.html#a327c3129b8e1382e01f95babf98389e5">_entities</a>, eventStack);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="class_core.html#a240aefab64fa9d9760691941829b556b">_state</a> == <a class="code" href="class_core.html#a6d8edbd01f8dcdff6a17f5ddf6b30591a4504e1ed59cd9732b8a844e5424e6f13">State::GAME</a>) {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <a class="code" href="class_core.html#ae4ebc2e4af5fce922e113a17e16a39c5">_game</a>-&gt;<a class="code" href="class_i_game.html#a025e62ee4c27e2e9f83ebae85dea9e9c">update</a>(<a class="code" href="class_core.html#a327c3129b8e1382e01f95babf98389e5">_entities</a>, eventStack);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    } <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <a class="code" href="class_core.html#ae4ebc2e4af5fce922e113a17e16a39c5">_game</a>-&gt;<a class="code" href="class_i_game.html#a674650861ce38c0c6337db9974079be5">close</a>(<a class="code" href="class_core.html#a327c3129b8e1382e01f95babf98389e5">_entities</a>);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a327c3129b8e1382e01f95babf98389e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a327c3129b8e1382e01f95babf98389e5">&#9670;&nbsp;</a></span>_entities</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::shared_ptr&lt;<a class="el" href="class_i_entity.html">IEntity</a>&gt; &gt; Core::_entities</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The entities collection. </p>
+
+<p class="definition">Definition at line <a class="el" href="_core_8hpp_source.html#l00170">170</a> of file <a class="el" href="_core_8hpp_source.html">Core.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a62b2479eecee9b888e2d06300f718487"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62b2479eecee9b888e2d06300f718487">&#9670;&nbsp;</a></span>_event</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::stack&lt;<a class="el" href="struct_arcade_1_1_evt.html">Arcade::Evt</a>&gt; Core::_event</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The current event to be processed. </p>
+
+<p class="definition">Definition at line <a class="el" href="_core_8hpp_source.html#l00193">193</a> of file <a class="el" href="_core_8hpp_source.html">Core.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ad858916f184608421d9398d88ddb1107"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad858916f184608421d9398d88ddb1107">&#9670;&nbsp;</a></span>_futureGame</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Core::_futureGame</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The game future library path to be loaded, null terminated. </p>
+<dl class="section note"><dt>Note</dt><dd>This is set when loading a game either by the main menu or inside the game itself </dd>
+<dd>
+If there is no graphical lib to be loaded, _futureGame will be empty </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_core_8hpp_source.html#l00181">181</a> of file <a class="el" href="_core_8hpp_source.html">Core.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a9cc50e25ec1e59fc183564a0dfe582fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cc50e25ec1e59fc183564a0dfe582fc">&#9670;&nbsp;</a></span>_futureGraph</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Core::_futureGraph</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The future graphical library path, null terminated. </p>
+<dl class="section note"><dt>Note</dt><dd>This is set when loading a graphical interface either by the main menu or inside the game itself </dd>
+<dd>
+If there is no graphical lib to be load, _futureGraph will be empty </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_core_8hpp_source.html#l00190">190</a> of file <a class="el" href="_core_8hpp_source.html">Core.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ae4ebc2e4af5fce922e113a17e16a39c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4ebc2e4af5fce922e113a17e16a39c5">&#9670;&nbsp;</a></span>_game</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_i_game.html">IGame</a>* Core::_game</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The game currently running. </p>
+
+<p class="definition">Definition at line <a class="el" href="_core_8hpp_source.html#l00176">176</a> of file <a class="el" href="_core_8hpp_source.html">Core.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a301de8f444ccc06c0672c31283410a65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a301de8f444ccc06c0672c31283410a65">&#9670;&nbsp;</a></span>_graph</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_i_graph.html">IGraph</a>* Core::_graph</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The graphical interface currently running. </p>
+<dl class="section note"><dt>Note</dt><dd>Will be filled with the instance retrieved from the graphical library passed by argument (argv[1]) </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_core_8hpp_source.html#l00185">185</a> of file <a class="el" href="_core_8hpp_source.html">Core.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a80b27d83fad909a23693380af89042ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80b27d83fad909a23693380af89042ce">&#9670;&nbsp;</a></span>_libManager</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_lib_manager.html">LibManager</a> Core::_libManager</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The library manager containing all the libraries. </p>
+
+<p class="definition">Definition at line <a class="el" href="_core_8hpp_source.html#l00167">167</a> of file <a class="el" href="_core_8hpp_source.html">Core.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ab559fe8e59c50be7c8910f66dbc1ae4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab559fe8e59c50be7c8910f66dbc1ae4b">&#9670;&nbsp;</a></span>_mainMenu</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_main_menu.html">MainMenu</a> Core::_mainMenu</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The main menu. </p>
+
+<p class="definition">Definition at line <a class="el" href="_core_8hpp_source.html#l00173">173</a> of file <a class="el" href="_core_8hpp_source.html">Core.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a240aefab64fa9d9760691941829b556b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a240aefab64fa9d9760691941829b556b">&#9670;&nbsp;</a></span>_state</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_core.html#a6d8edbd01f8dcdff6a17f5ddf6b30591">State</a> Core::_state</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The current state of the core. </p>
+
+<p class="definition">Definition at line <a class="el" href="_core_8hpp_source.html#l00196">196</a> of file <a class="el" href="_core_8hpp_source.html">Core.hpp</a>.</p>
 
 </div>
 </div>
@@ -940,6 +1598,67 @@ if the event is of type <b>WINDOW_CLOSE</b>, the core will be set to <b>EXIT</b>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aclass_lib_manager_html_a3d89f7b1518d47cdd8a0bf786b8dec44"><div class="ttname"><a href="class_lib_manager.html#a3d89f7b1518d47cdd8a0bf786b8dec44">LibManager::closeLib</a></div><div class="ttdeci">void closeLib(const std::string &amp;libPath)</div><div class="ttdoc">Closes a shared library.</div><div class="ttdef"><b>Definition:</b> <a href="_lib_manager_8cpp_source.html#l00064">LibManager.cpp:64</a></div></div>
+<div class="ttc" id="aclass_i_graph_html_ae5503da735e8b53775b3db3acaaddb35"><div class="ttname"><a href="class_i_graph.html#ae5503da735e8b53775b3db3acaaddb35">IGraph::getInput</a></div><div class="ttdeci">virtual Arcade::Evt getInput()=0</div><div class="ttdoc">get input from Graphic Library to send it to the Core</div></div>
+<div class="ttc" id="aclass_i_graph_html_a7963d277bd33308a52c3029214e875a0"><div class="ttname"><a href="class_i_graph.html#a7963d277bd33308a52c3029214e875a0">IGraph::drawRect</a></div><div class="ttdeci">virtual bool drawRect(std::pair&lt; int, int &gt; pos, int width, int height, Color color)=0</div><div class="ttdoc">Create a Rectangle, set position, set width &amp; height, then display it on the window....</div></div>
+<div class="ttc" id="aclass_i_game_html_abdc3543ee754cecb7eb156f05ce5869d"><div class="ttname"><a href="class_i_game.html#abdc3543ee754cecb7eb156f05ce5869d">IGame::start</a></div><div class="ttdeci">virtual void start()=0</div><div class="ttdoc">starts the game</div></div>
+<div class="ttc" id="aclass_i_graph_html_a86710ad76190aafbdf76941ce89a34f3"><div class="ttname"><a href="class_i_graph.html#a86710ad76190aafbdf76941ce89a34f3">IGraph::drawEntity</a></div><div class="ttdeci">virtual bool drawEntity(IEntity &amp;entity, std::pair&lt; int, int &gt; pos)=0</div><div class="ttdoc">Create an Entity, set position, then display it on the window. After all destroy the Entity.</div></div>
+<div class="ttc" id="aclass_i_game_html_a4a7309d86599d6e581f764233085c7dda09d4d696b4e935115b9313e3c412509a"><div class="ttname"><a href="class_i_game.html#a4a7309d86599d6e581f764233085c7dda09d4d696b4e935115b9313e3c412509a">IGame::GameState::STOPPED</a></div><div class="ttdeci">@ STOPPED</div><div class="ttdoc">Represents the game over.</div></div>
+<div class="ttc" id="aclass_i_graph_html_a37b6f2993125bbbb12007714668eb026"><div class="ttname"><a href="class_i_graph.html#a37b6f2993125bbbb12007714668eb026">IGraph::getLibraryName</a></div><div class="ttdeci">virtual std::string getLibraryName() const =0</div><div class="ttdoc">get name of the library currently used</div></div>
+<div class="ttc" id="aclass_core_html_ab559fe8e59c50be7c8910f66dbc1ae4b"><div class="ttname"><a href="class_core.html#ab559fe8e59c50be7c8910f66dbc1ae4b">Core::_mainMenu</a></div><div class="ttdeci">MainMenu _mainMenu</div><div class="ttdoc">The main menu.</div><div class="ttdef"><b>Definition:</b> <a href="_core_8hpp_source.html#l00173">Core.hpp:173</a></div></div>
+<div class="ttc" id="aclass_i_entity_html_a46d8922e2df0932c61ca624e05f85aa2abb5e4afb77e9abb1bce78998240cf14e"><div class="ttname"><a href="class_i_entity.html#a46d8922e2df0932c61ca624e05f85aa2abb5e4afb77e9abb1bce78998240cf14e">IEntity::POINT</a></div><div class="ttdeci">@ POINT</div><div class="ttdef"><b>Definition:</b> <a href="_i_entity_8hpp_source.html#l00032">IEntity.hpp:32</a></div></div>
+<div class="ttc" id="aclass_lib_manager_html_a9dab81d6911e4118650466067bf83065"><div class="ttname"><a href="class_lib_manager.html#a9dab81d6911e4118650466067bf83065">LibManager::cycleGraphLibs</a></div><div class="ttdeci">IGraph * cycleGraphLibs(std::string &amp;currentLib, bool direction=true)</div><div class="ttdoc">Cycle through available graph libraries in the library manager and return the next/previous one (orde...</div><div class="ttdef"><b>Definition:</b> <a href="_lib_manager_8cpp_source.html#l00155">LibManager.cpp:155</a></div></div>
+<div class="ttc" id="aclass_i_game_html_a9840d5dbf736c48685119790eb941bfe"><div class="ttname"><a href="class_i_game.html#a9840d5dbf736c48685119790eb941bfe">IGame::getScore</a></div><div class="ttdeci">virtual int getScore() const =0</div><div class="ttdoc">Getter for score of the current Game.</div></div>
+<div class="ttc" id="aclass_core_html_a301de8f444ccc06c0672c31283410a65"><div class="ttname"><a href="class_core.html#a301de8f444ccc06c0672c31283410a65">Core::_graph</a></div><div class="ttdeci">IGraph * _graph</div><div class="ttdoc">The graphical interface currently running.</div><div class="ttdef"><b>Definition:</b> <a href="_core_8hpp_source.html#l00185">Core.hpp:185</a></div></div>
+<div class="ttc" id="aclass_core_html_a6d8edbd01f8dcdff6a17f5ddf6b30591a4504e1ed59cd9732b8a844e5424e6f13"><div class="ttname"><a href="class_core.html#a6d8edbd01f8dcdff6a17f5ddf6b30591a4504e1ed59cd9732b8a844e5424e6f13">Core::State::GAME</a></div><div class="ttdeci">@ GAME</div><div class="ttdoc">The Core is in a game.</div></div>
+<div class="ttc" id="aclass_lib_manager_html_aa77bc5043b5310692f96bf7134735028"><div class="ttname"><a href="class_lib_manager.html#aa77bc5043b5310692f96bf7134735028">LibManager::addLibs</a></div><div class="ttdeci">void addLibs(std::vector&lt; std::string &gt; &amp;libPaths)</div><div class="ttdoc">Add a lib to be managed by the library manager.</div><div class="ttdef"><b>Definition:</b> <a href="_lib_manager_8cpp_source.html#l00077">LibManager.cpp:77</a></div></div>
+<div class="ttc" id="astruct_arcade_1_1_evt_html_aa27a273a8c2158b5a41ae12019813ea3ac57fb57253518f0f6a7a06a1cfc0ae61"><div class="ttname"><a href="struct_arcade_1_1_evt.html#aa27a273a8c2158b5a41ae12019813ea3ac57fb57253518f0f6a7a06a1cfc0ae61">Arcade::Evt::NONE</a></div><div class="ttdeci">@ NONE</div><div class="ttdef"><b>Definition:</b> <a href="_event_8hpp_source.html#l00084">Event.hpp:84</a></div></div>
+<div class="ttc" id="aclass_text_entity_html"><div class="ttname"><a href="class_text_entity.html">TextEntity</a></div><div class="ttdoc">TextEntity class inherits from AEntity.</div><div class="ttdef"><b>Definition:</b> <a href="_text_entity_8hpp_source.html#l00018">TextEntity.hpp:18</a></div></div>
+<div class="ttc" id="aclass_core_html_aaa273bb1d1a5ebd3a8c2370be99ceb0c"><div class="ttname"><a href="class_core.html#aaa273bb1d1a5ebd3a8c2370be99ceb0c">Core::coreEventSwitchGame</a></div><div class="ttdeci">void coreEventSwitchGame()</div><div class="ttdef"><b>Definition:</b> <a href="_core_events_8cpp_source.html#l00013">CoreEvents.cpp:13</a></div></div>
+<div class="ttc" id="aclass_i_game_html_a674650861ce38c0c6337db9974079be5"><div class="ttname"><a href="class_i_game.html#a674650861ce38c0c6337db9974079be5">IGame::close</a></div><div class="ttdeci">virtual void close(std::vector&lt; std::shared_ptr&lt; IEntity &gt;&gt; &amp;entities)=0</div><div class="ttdoc">Closes the library.</div></div>
+<div class="ttc" id="aclass_i_graph_html_ab4877a54bbdbd2663e94309d260e064b"><div class="ttname"><a href="class_i_graph.html#ab4877a54bbdbd2663e94309d260e064b">IGraph::close</a></div><div class="ttdeci">virtual void close()=0</div><div class="ttdoc">Closes the library.</div></div>
+<div class="ttc" id="aclass_core_html_a8748501c56664fa2e58085b792be449c"><div class="ttname"><a href="class_core.html#a8748501c56664fa2e58085b792be449c">Core::manageCoreKeyEvents</a></div><div class="ttdeci">void manageCoreKeyEvents()</div><div class="ttdef"><b>Definition:</b> <a href="_core_events_8cpp_source.html#l00075">CoreEvents.cpp:75</a></div></div>
+<div class="ttc" id="aclass_i_graph_html_adc313588d862964034f9dc7256ef0e8a"><div class="ttname"><a href="class_i_graph.html#adc313588d862964034f9dc7256ef0e8a">IGraph::drawText</a></div><div class="ttdeci">virtual bool drawText(std::pair&lt; int, int &gt; pos, const std::string &amp;content, Color color)=0</div><div class="ttdoc">Create a text, set position, set content, set font, then display it on the window....</div></div>
+<div class="ttc" id="aclass_i_graph_html_ac3a39c636d2e479e9f7dd90a6a5a7f17"><div class="ttname"><a href="class_i_graph.html#ac3a39c636d2e479e9f7dd90a6a5a7f17">IGraph::drawCircle</a></div><div class="ttdeci">virtual bool drawCircle(std::pair&lt; int, int &gt; pos, int radius, Color color)=0</div><div class="ttdoc">Create a circle, set position, set radius, then display it on the window. After all destroy the Circl...</div></div>
+<div class="ttc" id="aclass_main_menu_html_a27996a4ace0811fa102a5b509d707155"><div class="ttname"><a href="class_main_menu.html#a27996a4ace0811fa102a5b509d707155">MainMenu::close</a></div><div class="ttdeci">void close(std::vector&lt; std::shared_ptr&lt; IEntity &gt;&gt; &amp;entities) override</div><div class="ttdoc">Close the menu &amp; clear vector of entities.</div><div class="ttdef"><b>Definition:</b> <a href="_main_menu_8cpp_source.html#l00167">MainMenu.cpp:167</a></div></div>
+<div class="ttc" id="aclass_i_graph_html_a703f8faaae8cb3b339b8686e5f442f81"><div class="ttname"><a href="class_i_graph.html#a703f8faaae8cb3b339b8686e5f442f81">IGraph::displayWindow</a></div><div class="ttdeci">virtual bool displayWindow()=0</div><div class="ttdoc">display the window</div></div>
+<div class="ttc" id="aclass_lib_manager_html_ae57da9b1ed22efebbc6daceab842fb68"><div class="ttname"><a href="class_lib_manager.html#ae57da9b1ed22efebbc6daceab842fb68">LibManager::openGame</a></div><div class="ttdeci">IGame * openGame(const std::string &amp;libPath)</div><div class="ttdoc">Opens a shared library, calls it's lib entrypoint and returns a pointer to a game instance.</div><div class="ttdef"><b>Definition:</b> <a href="_lib_manager_8cpp_source.html#l00028">LibManager.cpp:28</a></div></div>
+<div class="ttc" id="aclass_lib_manager_html_acdbf2b5396f6cc619a11c26f7bb401d2"><div class="ttname"><a href="class_lib_manager.html#acdbf2b5396f6cc619a11c26f7bb401d2">LibManager::fetchLibPath</a></div><div class="ttdeci">std::string fetchLibPath(std::string name)</div><div class="ttdoc">will fetch the lib path given it's name</div><div class="ttdef"><b>Definition:</b> <a href="_lib_manager_8cpp_source.html#l00178">LibManager.cpp:178</a></div></div>
+<div class="ttc" id="astruct_arcade_1_1_evt_html"><div class="ttname"><a href="struct_arcade_1_1_evt.html">Arcade::Evt</a></div><div class="ttdoc">Represents a generic event interface this interface is shared across all the graphical libraries.</div><div class="ttdef"><b>Definition:</b> <a href="_event_8hpp_source.html#l00019">Event.hpp:19</a></div></div>
+<div class="ttc" id="aclass_i_game_html_a44de7e08e7ee294be051445a84306299"><div class="ttname"><a href="class_i_game.html#a44de7e08e7ee294be051445a84306299">IGame::getState</a></div><div class="ttdeci">virtual GameState getState() const =0</div><div class="ttdoc">Get the game's status.</div></div>
+<div class="ttc" id="aclass_core_html_a240aefab64fa9d9760691941829b556b"><div class="ttname"><a href="class_core.html#a240aefab64fa9d9760691941829b556b">Core::_state</a></div><div class="ttdeci">State _state</div><div class="ttdoc">The current state of the core.</div><div class="ttdef"><b>Definition:</b> <a href="_core_8hpp_source.html#l00196">Core.hpp:196</a></div></div>
+<div class="ttc" id="astruct_arcade_1_1_evt_html_aa27a273a8c2158b5a41ae12019813ea3aed4592e60f9d30b31f88ceb546b2655e"><div class="ttname"><a href="struct_arcade_1_1_evt.html#aa27a273a8c2158b5a41ae12019813ea3aed4592e60f9d30b31f88ceb546b2655e">Arcade::Evt::KEY</a></div><div class="ttdeci">@ KEY</div><div class="ttdef"><b>Definition:</b> <a href="_event_8hpp_source.html#l00087">Event.hpp:87</a></div></div>
+<div class="ttc" id="aclass_logger_html_a0444040bdc1a82659a84ad918b42a61d"><div class="ttname"><a href="class_logger.html#a0444040bdc1a82659a84ad918b42a61d">Logger::INFO</a></div><div class="ttdeci">static Severity INFO()</div><div class="ttdoc">pass this function to the macros and they will log an info</div><div class="ttdef"><b>Definition:</b> <a href="_logger_8cpp_source.html#l00101">Logger.cpp:101</a></div></div>
+<div class="ttc" id="aclass_button_html"><div class="ttname"><a href="class_button.html">Button</a></div><div class="ttdoc">Represents a button object.</div><div class="ttdef"><b>Definition:</b> <a href="_button_8hpp_source.html#l00017">Button.hpp:17</a></div></div>
+<div class="ttc" id="aclass_i_graph_html_ad093f704c4f0c13bc42ca4e494b76d20"><div class="ttname"><a href="class_i_graph.html#ad093f704c4f0c13bc42ca4e494b76d20">IGraph::clearWindow</a></div><div class="ttdeci">virtual bool clearWindow()=0</div><div class="ttdoc">clear the window</div></div>
+<div class="ttc" id="aclass_object_html"><div class="ttname"><a href="class_object.html">Object</a></div><div class="ttdoc">Object class represents all the Entity not moving. Like walls, fruits.</div><div class="ttdef"><b>Definition:</b> <a href="_object_8hpp_source.html#l00017">Object.hpp:17</a></div></div>
+<div class="ttc" id="aclass_lib_manager_html_a7527ba7e4b319a267a9dfc9e29f88f83"><div class="ttname"><a href="class_lib_manager.html#a7527ba7e4b319a267a9dfc9e29f88f83">LibManager::cycleGameLibs</a></div><div class="ttdeci">IGame * cycleGameLibs(std::string &amp;currentLib, bool direction=true)</div><div class="ttdoc">Cycle through available game libraries in the library manager and return the next/previous one (order...</div><div class="ttdef"><b>Definition:</b> <a href="_lib_manager_8cpp_source.html#l00132">LibManager.cpp:132</a></div></div>
+<div class="ttc" id="aclass_i_game_html_ad4b0a0f5cf6be7c2692485907dc0f6ac"><div class="ttname"><a href="class_i_game.html#ad4b0a0f5cf6be7c2692485907dc0f6ac">IGame::getLibraryName</a></div><div class="ttdeci">virtual std::string getLibraryName() const =0</div><div class="ttdoc">Get the game's name.</div></div>
+<div class="ttc" id="aclass_core_html_a6d8edbd01f8dcdff6a17f5ddf6b30591aa42b2fb0e720a080e79a92f4ca97d927"><div class="ttname"><a href="class_core.html#a6d8edbd01f8dcdff6a17f5ddf6b30591aa42b2fb0e720a080e79a92f4ca97d927">Core::State::EXIT</a></div><div class="ttdeci">@ EXIT</div><div class="ttdoc">The Core is in the pause menu or the game over menu.</div></div>
+<div class="ttc" id="aclass_core_html_ae4ebc2e4af5fce922e113a17e16a39c5"><div class="ttname"><a href="class_core.html#ae4ebc2e4af5fce922e113a17e16a39c5">Core::_game</a></div><div class="ttdeci">IGame * _game</div><div class="ttdoc">The game currently running.</div><div class="ttdef"><b>Definition:</b> <a href="_core_8hpp_source.html#l00176">Core.hpp:176</a></div></div>
+<div class="ttc" id="aclass_lib_manager_html_a8b9e06c595680ab9852372dd67aaa0e1"><div class="ttname"><a href="class_lib_manager.html#a8b9e06c595680ab9852372dd67aaa0e1">LibManager::closeAllLibs</a></div><div class="ttdeci">void closeAllLibs()</div><div class="ttdoc">Closes all shared libraries.</div><div class="ttdef"><b>Definition:</b> <a href="_lib_manager_8cpp_source.html#l00122">LibManager.cpp:122</a></div></div>
+<div class="ttc" id="aclass_core_html_ad858916f184608421d9398d88ddb1107"><div class="ttname"><a href="class_core.html#ad858916f184608421d9398d88ddb1107">Core::_futureGame</a></div><div class="ttdeci">std::string _futureGame</div><div class="ttdoc">The game future library path to be loaded, null terminated.</div><div class="ttdef"><b>Definition:</b> <a href="_core_8hpp_source.html#l00181">Core.hpp:181</a></div></div>
+<div class="ttc" id="aclass_main_menu_html_a119181be29b1e19051e50fbd855c9217"><div class="ttname"><a href="class_main_menu.html#a119181be29b1e19051e50fbd855c9217">MainMenu::update</a></div><div class="ttdeci">void update(std::vector&lt; std::shared_ptr&lt; IEntity &gt;&gt; &amp;entities, std::stack&lt; Arcade::Evt &gt; &amp;events) override</div><div class="ttdoc">Update the game's entities.</div><div class="ttdef"><b>Definition:</b> <a href="_main_menu_8cpp_source.html#l00211">MainMenu.cpp:211</a></div></div>
+<div class="ttc" id="aclass_i_entity_html_a46d8922e2df0932c61ca624e05f85aa2a906e5f94605e5680eeeba3dbf75dcc76"><div class="ttname"><a href="class_i_entity.html#a46d8922e2df0932c61ca624e05f85aa2a906e5f94605e5680eeeba3dbf75dcc76">IEntity::WALL</a></div><div class="ttdeci">@ WALL</div><div class="ttdef"><b>Definition:</b> <a href="_i_entity_8hpp_source.html#l00028">IEntity.hpp:28</a></div></div>
+<div class="ttc" id="aclass_i_game_html_a8d7aa790c266dc79c50e815557de29ae"><div class="ttname"><a href="class_i_game.html#a8d7aa790c266dc79c50e815557de29ae">IGame::setState</a></div><div class="ttdeci">virtual void setState(GameState state)=0</div><div class="ttdoc">Set the game's status.</div></div>
+<div class="ttc" id="aclass_enemy_html"><div class="ttname"><a href="class_enemy.html">Enemy</a></div><div class="ttdoc">Enemy class inherits from AEntity.</div><div class="ttdef"><b>Definition:</b> <a href="_enemy_8hpp_source.html#l00018">Enemy.hpp:18</a></div></div>
+<div class="ttc" id="aclass_i_game_html_afe8e58b2e0a3f52c4c532d74f6bf7852"><div class="ttname"><a href="class_i_game.html#afe8e58b2e0a3f52c4c532d74f6bf7852">IGame::getIsGameOver</a></div><div class="ttdeci">virtual bool getIsGameOver()=0</div><div class="ttdoc">Getter for _isGameOver.</div></div>
+<div class="ttc" id="aclass_core_html_a80b27d83fad909a23693380af89042ce"><div class="ttname"><a href="class_core.html#a80b27d83fad909a23693380af89042ce">Core::_libManager</a></div><div class="ttdeci">LibManager _libManager</div><div class="ttdoc">The library manager containing all the libraries.</div><div class="ttdef"><b>Definition:</b> <a href="_core_8hpp_source.html#l00167">Core.hpp:167</a></div></div>
+<div class="ttc" id="aclass_i_graph_html_a047bb5222ba4ac156f057b65ff36ef1c"><div class="ttname"><a href="class_i_graph.html#a047bb5222ba4ac156f057b65ff36ef1c">IGraph::init</a></div><div class="ttdeci">virtual void init()=0</div><div class="ttdoc">Initialize the library.</div></div>
+<div class="ttc" id="aclass_i_game_html_a4a7309d86599d6e581f764233085c7dda99b2439e63f73ad515f7ab2447a80673"><div class="ttname"><a href="class_i_game.html#a4a7309d86599d6e581f764233085c7dda99b2439e63f73ad515f7ab2447a80673">IGame::GameState::PAUSED</a></div><div class="ttdeci">@ PAUSED</div><div class="ttdoc">Represents the previously running game is paused.</div></div>
+<div class="ttc" id="astruct_color_html"><div class="ttname"><a href="struct_color.html">Color</a></div><div class="ttdoc">Color structure.</div><div class="ttdef"><b>Definition:</b> <a href="_color_8hpp_source.html#l00014">Color.hpp:14</a></div></div>
+<div class="ttc" id="aclass_main_menu_html_a1f2a0ab6540cf2f6023565feb24be3a6"><div class="ttname"><a href="class_main_menu.html#a1f2a0ab6540cf2f6023565feb24be3a6">MainMenu::init</a></div><div class="ttdeci">void init(std::vector&lt; std::shared_ptr&lt; IEntity &gt;&gt; &amp;entities) override</div><div class="ttdoc">Initialize the menu &amp; initialize.</div><div class="ttdef"><b>Definition:</b> <a href="_main_menu_8cpp_source.html#l00074">MainMenu.cpp:74</a></div></div>
+<div class="ttc" id="aclass_i_game_html_a7cd2c70ae9eb419516d263363eb2b3d2"><div class="ttname"><a href="class_i_game.html#a7cd2c70ae9eb419516d263363eb2b3d2">IGame::init</a></div><div class="ttdeci">virtual void init(std::vector&lt; std::shared_ptr&lt; IEntity &gt;&gt; &amp;entities)=0</div><div class="ttdoc">Initialize the game.</div></div>
+<div class="ttc" id="aclass_core_html_a62b2479eecee9b888e2d06300f718487"><div class="ttname"><a href="class_core.html#a62b2479eecee9b888e2d06300f718487">Core::_event</a></div><div class="ttdeci">std::stack&lt; Arcade::Evt &gt; _event</div><div class="ttdoc">The current event to be processed.</div><div class="ttdef"><b>Definition:</b> <a href="_core_8hpp_source.html#l00193">Core.hpp:193</a></div></div>
+<div class="ttc" id="astruct_arcade_1_1_evt_html_aa27a273a8c2158b5a41ae12019813ea3adff6972ae880475575afa4bd28a4c9af"><div class="ttname"><a href="struct_arcade_1_1_evt.html#aa27a273a8c2158b5a41ae12019813ea3adff6972ae880475575afa4bd28a4c9af">Arcade::Evt::WIN_CLOSE</a></div><div class="ttdeci">@ WIN_CLOSE</div><div class="ttdef"><b>Definition:</b> <a href="_event_8hpp_source.html#l00085">Event.hpp:85</a></div></div>
+<div class="ttc" id="aclass_i_game_html_a025e62ee4c27e2e9f83ebae85dea9e9c"><div class="ttname"><a href="class_i_game.html#a025e62ee4c27e2e9f83ebae85dea9e9c">IGame::update</a></div><div class="ttdeci">virtual void update(std::vector&lt; std::shared_ptr&lt; IEntity &gt;&gt; &amp;entities, std::stack&lt; Arcade::Evt &gt; &amp;events)=0</div><div class="ttdoc">Update the game's status.</div></div>
+<div class="ttc" id="aclass_core_html_a6d8edbd01f8dcdff6a17f5ddf6b30591aa16d505f03a4b6f35486f65f6a61317e"><div class="ttname"><a href="class_core.html#a6d8edbd01f8dcdff6a17f5ddf6b30591aa16d505f03a4b6f35486f65f6a61317e">Core::State::MAIN_MENU</a></div><div class="ttdeci">@ MAIN_MENU</div><div class="ttdoc">The Core is in the main menu.</div></div>
+<div class="ttc" id="aclass_lib_manager_html_aed05c82bbedace1a4997fcd232124188"><div class="ttname"><a href="class_lib_manager.html#aed05c82bbedace1a4997fcd232124188">LibManager::openGraph</a></div><div class="ttdeci">IGraph * openGraph(const std::string &amp;libPath)</div><div class="ttdoc">Opens a shared library, calls it's lib entrypoint and returns a pointer to a graph instance.</div><div class="ttdef"><b>Definition:</b> <a href="_lib_manager_8cpp_source.html#l00045">LibManager.cpp:45</a></div></div>
+<div class="ttc" id="aclass_core_html_a327c3129b8e1382e01f95babf98389e5"><div class="ttname"><a href="class_core.html#a327c3129b8e1382e01f95babf98389e5">Core::_entities</a></div><div class="ttdeci">std::vector&lt; std::shared_ptr&lt; IEntity &gt; &gt; _entities</div><div class="ttdoc">The entities collection.</div><div class="ttdef"><b>Definition:</b> <a href="_core_8hpp_source.html#l00170">Core.hpp:170</a></div></div>
+<div class="ttc" id="a_exception_8hpp_html_a7b3deaa642cc474ad5eb24c1f52ab723"><div class="ttname"><a href="_exception_8hpp.html#a7b3deaa642cc474ad5eb24c1f52ab723">ArcadeEX</a></div><div class="ttdeci">#define ArcadeEX(what, severity)</div><div class="ttdef"><b>Definition:</b> <a href="_exception_8hpp_source.html#l00025">Exception.hpp:25</a></div></div>
+<div class="ttc" id="aclass_core_html_a0766cfe882239abc1e4a0f2844c76e89"><div class="ttname"><a href="class_core.html#a0766cfe882239abc1e4a0f2844c76e89">Core::coreEventSwitchGraph</a></div><div class="ttdeci">void coreEventSwitchGraph()</div><div class="ttdef"><b>Definition:</b> <a href="_core_events_8cpp_source.html#l00038">CoreEvents.cpp:38</a></div></div>
+<div class="ttc" id="aclass_player_html"><div class="ttname"><a href="class_player.html">Player</a></div><div class="ttdoc">Player class inherits from AEntity.</div><div class="ttdef"><b>Definition:</b> <a href="_player_8hpp_source.html#l00017">Player.hpp:17</a></div></div>
+<div class="ttc" id="aclass_core_html_a9cc50e25ec1e59fc183564a0dfe582fc"><div class="ttname"><a href="class_core.html#a9cc50e25ec1e59fc183564a0dfe582fc">Core::_futureGraph</a></div><div class="ttdeci">std::string _futureGraph</div><div class="ttdoc">The future graphical library path, null terminated.</div><div class="ttdef"><b>Definition:</b> <a href="_core_8hpp_source.html#l00190">Core.hpp:190</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

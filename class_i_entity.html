@@ -28,6 +28,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">arcAAAAAAAAAAAAAAAAade
    </div>
+   <div id="projectbrief">An arcade emulator that manage games and graphical display separatly</div>
   </td>
  </tr>
  </tbody>
@@ -106,8 +107,8 @@ Inheritance diagram for IEntity:</div>
 <area shape="rect" href="class_object.html" title="Object class represents all the Entity not moving. Like walls, fruits." alt="" coords="96,155,160,181"/>
 <area shape="rect" href="class_player.html" title="Player class inherits from AEntity." alt="" coords="185,155,247,181"/>
 <area shape="rect" href="class_text_entity.html" title="TextEntity class inherits from AEntity." alt="" coords="271,155,358,181"/>
-<area shape="rect" href="class_button.html" title=" " alt="" coords="51,229,117,256"/>
-<area shape="rect" href="class_score.html" title=" " alt="" coords="141,229,200,256"/>
+<area shape="rect" href="class_button.html" title="Represents a button object." alt="" coords="51,229,117,256"/>
+<area shape="rect" href="class_score.html" title="Score object." alt="" coords="141,229,200,256"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -179,7 +180,7 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>represents a generic entity within the game </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_entity_8hpp_source.html#l00016">16</a> of file <a class="el" href="_i_entity_8hpp_source.html">IEntity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_entity_8hpp_source.html#l00018">18</a> of file <a class="el" href="_i_entity_8hpp_source.html">IEntity.hpp</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="ad9ba33013aa2da542e9fa6c6fadabef5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad9ba33013aa2da542e9fa6c6fadabef5">&#9670;&nbsp;</a></span>Direction</h2>
@@ -199,8 +200,14 @@ Public Member Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="ad9ba33013aa2da542e9fa6c6fadabef5abd53b29c005e5e65eb64fa57b0c4e6e1"></a>RIGHT&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="_i_entity_8hpp_source.html#l00018">18</a> of file <a class="el" href="_i_entity_8hpp_source.html">IEntity.hpp</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="_i_entity_8hpp_source.html#l00020">20</a> of file <a class="el" href="_i_entity_8hpp_source.html">IEntity.hpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                       {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <a class="code" href="class_i_entity.html#ad9ba33013aa2da542e9fa6c6fadabef5a2b34ec0a736aa600c1680b14e31b969c">UP</a>,</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <a class="code" href="class_i_entity.html#ad9ba33013aa2da542e9fa6c6fadabef5ab9fcda39581b8b184bc10513dea2eca7">DOWN</a>,</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <a class="code" href="class_i_entity.html#ad9ba33013aa2da542e9fa6c6fadabef5aaaf1ea64fba443d2cb427142eb0a29c1">LEFT</a>,</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <a class="code" href="class_i_entity.html#ad9ba33013aa2da542e9fa6c6fadabef5abd53b29c005e5e65eb64fa57b0c4e6e1">RIGHT</a></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        };</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a46d8922e2df0932c61ca624e05f85aa2"></a>
@@ -226,8 +233,19 @@ Public Member Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="a46d8922e2df0932c61ca624e05f85aa2abc00b9d0a78f998bbb99a73aeea14ee0"></a>ENTITY_TYPE_SIZE&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="_i_entity_8hpp_source.html#l00025">25</a> of file <a class="el" href="_i_entity_8hpp_source.html">IEntity.hpp</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="_i_entity_8hpp_source.html#l00027">27</a> of file <a class="el" href="_i_entity_8hpp_source.html">IEntity.hpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                         {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <a class="code" href="class_i_entity.html#a46d8922e2df0932c61ca624e05f85aa2a906e5f94605e5680eeeba3dbf75dcc76">WALL</a> = 0,</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <a class="code" href="class_i_entity.html#a46d8922e2df0932c61ca624e05f85aa2aa8a69fc0de36d52a9422bce960f7ea6e">ENEMY</a> = 1,</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <a class="code" href="class_i_entity.html#a46d8922e2df0932c61ca624e05f85aa2a1338589f35cfb3b9caec34f1612ce430">PLAYER</a> = 2,</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <a class="code" href="class_i_entity.html#a46d8922e2df0932c61ca624e05f85aa2aa44a6be3468a3d9850c5c9253611a8d3">BONUS</a> = 3,</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <a class="code" href="class_i_entity.html#a46d8922e2df0932c61ca624e05f85aa2abb5e4afb77e9abb1bce78998240cf14e">POINT</a> = 4,</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <a class="code" href="class_i_entity.html#a46d8922e2df0932c61ca624e05f85aa2a511b0e54922ef5690738e7caf40400ff">BUTTON</a> = 5,</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <a class="code" href="class_i_entity.html#a46d8922e2df0932c61ca624e05f85aa2a90446c66bc9c31f7957c6288f84de5e3">SCORE</a> = 6,</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <a class="code" href="class_i_entity.html#a46d8922e2df0932c61ca624e05f85aa2adb8475946694194af8c3fbc011c8c386">UNDEFINED</a> = 7,</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <a class="code" href="class_i_entity.html#a46d8922e2df0932c61ca624e05f85aa2abc00b9d0a78f998bbb99a73aeea14ee0">ENTITY_TYPE_SIZE</a> = 8</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        };</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -668,6 +686,19 @@ Public Member Functions</h2></td></tr>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aclass_i_entity_html_ad9ba33013aa2da542e9fa6c6fadabef5a2b34ec0a736aa600c1680b14e31b969c"><div class="ttname"><a href="class_i_entity.html#ad9ba33013aa2da542e9fa6c6fadabef5a2b34ec0a736aa600c1680b14e31b969c">IEntity::UP</a></div><div class="ttdeci">@ UP</div><div class="ttdef"><b>Definition:</b> <a href="_i_entity_8hpp_source.html#l00021">IEntity.hpp:21</a></div></div>
+<div class="ttc" id="aclass_i_entity_html_a46d8922e2df0932c61ca624e05f85aa2abb5e4afb77e9abb1bce78998240cf14e"><div class="ttname"><a href="class_i_entity.html#a46d8922e2df0932c61ca624e05f85aa2abb5e4afb77e9abb1bce78998240cf14e">IEntity::POINT</a></div><div class="ttdeci">@ POINT</div><div class="ttdef"><b>Definition:</b> <a href="_i_entity_8hpp_source.html#l00032">IEntity.hpp:32</a></div></div>
+<div class="ttc" id="aclass_i_entity_html_a46d8922e2df0932c61ca624e05f85aa2aa44a6be3468a3d9850c5c9253611a8d3"><div class="ttname"><a href="class_i_entity.html#a46d8922e2df0932c61ca624e05f85aa2aa44a6be3468a3d9850c5c9253611a8d3">IEntity::BONUS</a></div><div class="ttdeci">@ BONUS</div><div class="ttdef"><b>Definition:</b> <a href="_i_entity_8hpp_source.html#l00031">IEntity.hpp:31</a></div></div>
+<div class="ttc" id="aclass_i_entity_html_a46d8922e2df0932c61ca624e05f85aa2adb8475946694194af8c3fbc011c8c386"><div class="ttname"><a href="class_i_entity.html#a46d8922e2df0932c61ca624e05f85aa2adb8475946694194af8c3fbc011c8c386">IEntity::UNDEFINED</a></div><div class="ttdeci">@ UNDEFINED</div><div class="ttdef"><b>Definition:</b> <a href="_i_entity_8hpp_source.html#l00035">IEntity.hpp:35</a></div></div>
+<div class="ttc" id="aclass_i_entity_html_a46d8922e2df0932c61ca624e05f85aa2a1338589f35cfb3b9caec34f1612ce430"><div class="ttname"><a href="class_i_entity.html#a46d8922e2df0932c61ca624e05f85aa2a1338589f35cfb3b9caec34f1612ce430">IEntity::PLAYER</a></div><div class="ttdeci">@ PLAYER</div><div class="ttdef"><b>Definition:</b> <a href="_i_entity_8hpp_source.html#l00030">IEntity.hpp:30</a></div></div>
+<div class="ttc" id="aclass_i_entity_html_ad9ba33013aa2da542e9fa6c6fadabef5aaaf1ea64fba443d2cb427142eb0a29c1"><div class="ttname"><a href="class_i_entity.html#ad9ba33013aa2da542e9fa6c6fadabef5aaaf1ea64fba443d2cb427142eb0a29c1">IEntity::LEFT</a></div><div class="ttdeci">@ LEFT</div><div class="ttdef"><b>Definition:</b> <a href="_i_entity_8hpp_source.html#l00023">IEntity.hpp:23</a></div></div>
+<div class="ttc" id="aclass_i_entity_html_a46d8922e2df0932c61ca624e05f85aa2abc00b9d0a78f998bbb99a73aeea14ee0"><div class="ttname"><a href="class_i_entity.html#a46d8922e2df0932c61ca624e05f85aa2abc00b9d0a78f998bbb99a73aeea14ee0">IEntity::ENTITY_TYPE_SIZE</a></div><div class="ttdeci">@ ENTITY_TYPE_SIZE</div><div class="ttdef"><b>Definition:</b> <a href="_i_entity_8hpp_source.html#l00036">IEntity.hpp:36</a></div></div>
+<div class="ttc" id="aclass_i_entity_html_ad9ba33013aa2da542e9fa6c6fadabef5ab9fcda39581b8b184bc10513dea2eca7"><div class="ttname"><a href="class_i_entity.html#ad9ba33013aa2da542e9fa6c6fadabef5ab9fcda39581b8b184bc10513dea2eca7">IEntity::DOWN</a></div><div class="ttdeci">@ DOWN</div><div class="ttdef"><b>Definition:</b> <a href="_i_entity_8hpp_source.html#l00022">IEntity.hpp:22</a></div></div>
+<div class="ttc" id="aclass_i_entity_html_ad9ba33013aa2da542e9fa6c6fadabef5abd53b29c005e5e65eb64fa57b0c4e6e1"><div class="ttname"><a href="class_i_entity.html#ad9ba33013aa2da542e9fa6c6fadabef5abd53b29c005e5e65eb64fa57b0c4e6e1">IEntity::RIGHT</a></div><div class="ttdeci">@ RIGHT</div><div class="ttdef"><b>Definition:</b> <a href="_i_entity_8hpp_source.html#l00024">IEntity.hpp:24</a></div></div>
+<div class="ttc" id="aclass_i_entity_html_a46d8922e2df0932c61ca624e05f85aa2aa8a69fc0de36d52a9422bce960f7ea6e"><div class="ttname"><a href="class_i_entity.html#a46d8922e2df0932c61ca624e05f85aa2aa8a69fc0de36d52a9422bce960f7ea6e">IEntity::ENEMY</a></div><div class="ttdeci">@ ENEMY</div><div class="ttdef"><b>Definition:</b> <a href="_i_entity_8hpp_source.html#l00029">IEntity.hpp:29</a></div></div>
+<div class="ttc" id="aclass_i_entity_html_a46d8922e2df0932c61ca624e05f85aa2a906e5f94605e5680eeeba3dbf75dcc76"><div class="ttname"><a href="class_i_entity.html#a46d8922e2df0932c61ca624e05f85aa2a906e5f94605e5680eeeba3dbf75dcc76">IEntity::WALL</a></div><div class="ttdeci">@ WALL</div><div class="ttdef"><b>Definition:</b> <a href="_i_entity_8hpp_source.html#l00028">IEntity.hpp:28</a></div></div>
+<div class="ttc" id="aclass_i_entity_html_a46d8922e2df0932c61ca624e05f85aa2a90446c66bc9c31f7957c6288f84de5e3"><div class="ttname"><a href="class_i_entity.html#a46d8922e2df0932c61ca624e05f85aa2a90446c66bc9c31f7957c6288f84de5e3">IEntity::SCORE</a></div><div class="ttdeci">@ SCORE</div><div class="ttdef"><b>Definition:</b> <a href="_i_entity_8hpp_source.html#l00034">IEntity.hpp:34</a></div></div>
+<div class="ttc" id="aclass_i_entity_html_a46d8922e2df0932c61ca624e05f85aa2a511b0e54922ef5690738e7caf40400ff"><div class="ttname"><a href="class_i_entity.html#a46d8922e2df0932c61ca624e05f85aa2a511b0e54922ef5690738e7caf40400ff">IEntity::BUTTON</a></div><div class="ttdeci">@ BUTTON</div><div class="ttdef"><b>Definition:</b> <a href="_i_entity_8hpp_source.html#l00033">IEntity.hpp:33</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

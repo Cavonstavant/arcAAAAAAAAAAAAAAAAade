@@ -23,20 +23,13 @@ for the JavaScript code in this file
 var NAVTREE =
 [
   [ "arcAAAAAAAAAAAAAAAAade", "index.html", [
-    [ "arcAAAAAAAAAAAAAAAAade <a href=\"https://github.com/Cavonstavant/arcAAAAAAAAAAAAAAAAade/actions/workflows/cmake.yml\"><img src=\"https://github.com/Cavonstavant/arcAAAAAAAAAAAAAAAAade/actions/workflows/cmake.yml/badge.svg\" alt=\"Build\"/></a> <a href=\"https://github.com/Cavonstavant/arcAAAAAAAAAAAAAAAAade/actions/workflows/doc_build.yml\"><img src=\"https://github.com/Cavonstavant/arcAAAAAAAAAAAAAAAAade/actions/workflows/doc_build.yml/badge.svg\" alt=\"GH Pages deployment\"/></a> <a href=\"https://github.com/Cavonstavant/arcAAAAAAAAAAAAAAAAade/actions/workflows/mirroring.yml\"><img src=\"https://github.com/Cavonstavant/arcAAAAAAAAAAAAAAAAade/actions/workflows/mirroring.yml/badge.svg\" alt=\"Mirroring\"/></a>", "index.html", [
-      [ "Documentation", "index.html#autotoc_md1", null ],
-      [ "Build", "index.html#autotoc_md2", [
-        [ "Tools", "index.html#autotoc_md3", null ],
-        [ "Building", "index.html#autotoc_md4", null ]
-      ] ],
-      [ "Misc", "index.html#autotoc_md5", null ]
-    ] ],
-    [ "Todo List", "todo.html", null ],
+    [ "Deprecated List", "deprecated.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
         [ "All", "namespacemembers.html", null ],
-        [ "Functions", "namespacemembers_func.html", null ]
+        [ "Functions", "namespacemembers_func.html", null ],
+        [ "Variables", "namespacemembers_vars.html", null ]
       ] ]
     ] ],
     [ "Classes", "annotated.html", [
@@ -66,8 +59,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_a_entity_8cpp.html",
-"class_game_exception.html#a2fc47f83971b856def5176360cac59a6",
-"functions_func_t.html"
+"class_core.html#afe619c2d034aff30644e94b953951a49",
+"class_pacman.html#af736cd4110dfc4d365b1ac0b00378780"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

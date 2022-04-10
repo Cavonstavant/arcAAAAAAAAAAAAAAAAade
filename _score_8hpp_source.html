@@ -28,6 +28,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">arcAAAAAAAAAAAAAAAAade
    </div>
+   <div id="projectbrief">An arcade emulator that manage games and graphical display separatly</div>
   </td>
  </tr>
  </tbody>
@@ -93,29 +94,31 @@ $(document).ready(function(){initNavTree('_score_8hpp_source.html',''); initResi
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">** Score</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">*/</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_object_8hpp.html">Object.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;functional&gt;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_score.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_score.html">Score</a> : <span class="keyword">public</span> <a class="code" href="class_object.html">Object</a> {</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <a class="code" href="class_score.html#a039c99843551e5e4b512ecee99e46617">Score</a>();</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <a class="code" href="class_score.html#a54ab36a6fdd88696f0176d9534a76883">~Score</a>();</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_score.html#a84e645a92c46f6a55bcc389711cd04b6">getScore</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_score.html#a3b68b34961003077c07072b77fd4eb4a">setScore</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> score);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> _score;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;};</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_object_8hpp.html">Object.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_score.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_score.html">Score</a> : <span class="keyword">public</span> <a class="code" href="class_object.html">Object</a> {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <a class="code" href="class_score.html#a039c99843551e5e4b512ecee99e46617">Score</a>();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="class_score.html#a54ab36a6fdd88696f0176d9534a76883">~Score</a>();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_score.html#a84e645a92c46f6a55bcc389711cd04b6">getScore</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_score.html#a3b68b34961003077c07072b77fd4eb4a">setScore</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> score);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_score.html#a7628b529413f66d2ec13b0be2ba161af">   32</a></span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_score.html#a7628b529413f66d2ec13b0be2ba161af">_score</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclass_score_html"><div class="ttname"><a href="class_score.html">Score</a></div><div class="ttdef"><b>Definition:</b> <a href="_score_8hpp_source.html#l00014">Score.hpp:14</a></div></div>
+<div class="ttc" id="aclass_score_html"><div class="ttname"><a href="class_score.html">Score</a></div><div class="ttdoc">Score object.</div><div class="ttdef"><b>Definition:</b> <a href="_score_8hpp_source.html#l00017">Score.hpp:17</a></div></div>
 <div class="ttc" id="aclass_score_html_a3b68b34961003077c07072b77fd4eb4a"><div class="ttname"><a href="class_score.html#a3b68b34961003077c07072b77fd4eb4a">Score::setScore</a></div><div class="ttdeci">void setScore(unsigned int score)</div><div class="ttdoc">Score setter.</div><div class="ttdef"><b>Definition:</b> <a href="_score_8cpp_source.html#l00021">Score.cpp:21</a></div></div>
 <div class="ttc" id="a_object_8hpp_html"><div class="ttname"><a href="_object_8hpp.html">Object.hpp</a></div></div>
+<div class="ttc" id="aclass_score_html_a7628b529413f66d2ec13b0be2ba161af"><div class="ttname"><a href="class_score.html#a7628b529413f66d2ec13b0be2ba161af">Score::_score</a></div><div class="ttdeci">unsigned int _score</div><div class="ttdef"><b>Definition:</b> <a href="_score_8hpp_source.html#l00032">Score.hpp:32</a></div></div>
 <div class="ttc" id="aclass_score_html_a54ab36a6fdd88696f0176d9534a76883"><div class="ttname"><a href="class_score.html#a54ab36a6fdd88696f0176d9534a76883">Score::~Score</a></div><div class="ttdeci">~Score()</div><div class="ttdoc">Destructor.</div></div>
-<div class="ttc" id="aclass_object_html"><div class="ttname"><a href="class_object.html">Object</a></div><div class="ttdoc">Object class represents all the Entity not moving. Like walls, fruits.</div><div class="ttdef"><b>Definition:</b> <a href="_object_8hpp_source.html#l00015">Object.hpp:15</a></div></div>
+<div class="ttc" id="aclass_object_html"><div class="ttname"><a href="class_object.html">Object</a></div><div class="ttdoc">Object class represents all the Entity not moving. Like walls, fruits.</div><div class="ttdef"><b>Definition:</b> <a href="_object_8hpp_source.html#l00017">Object.hpp:17</a></div></div>
 <div class="ttc" id="aclass_score_html_a039c99843551e5e4b512ecee99e46617"><div class="ttname"><a href="class_score.html#a039c99843551e5e4b512ecee99e46617">Score::Score</a></div><div class="ttdeci">Score()</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> <a href="_score_8cpp_source.html#l00010">Score.cpp:10</a></div></div>
 <div class="ttc" id="aclass_score_html_a84e645a92c46f6a55bcc389711cd04b6"><div class="ttname"><a href="class_score.html#a84e645a92c46f6a55bcc389711cd04b6">Score::getScore</a></div><div class="ttdeci">unsigned int getScore() const</div><div class="ttdoc">Score getter.</div><div class="ttdef"><b>Definition:</b> <a href="_score_8cpp_source.html#l00016">Score.cpp:16</a></div></div>
 <!-- start footer part -->

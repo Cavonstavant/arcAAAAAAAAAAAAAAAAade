@@ -28,6 +28,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">arcAAAAAAAAAAAAAAAAade
    </div>
+   <div id="projectbrief">An arcade emulator that manage games and graphical display separatly</div>
   </td>
  </tr>
  </tbody>
@@ -102,7 +103,7 @@ Inheritance diagram for FileCorruptedException:</div>
 <area shape="rect" title="Exception class for the factory if a file is corrupted." alt="" coords="5,304,179,331"/>
 <area shape="rect" href="class_invalid_file_exception.html" title="Exception class for the factory if a file is invalid." alt="" coords="15,229,169,256"/>
 <area shape="rect" href="class_factory_exception.html" title="Exception class for the factory." alt="" coords="25,155,159,181"/>
-<area shape="rect" href="class_arcade_exception.html" title=" " alt="" coords="27,80,157,107"/>
+<area shape="rect" href="class_arcade_exception.html" title="Base exception class for all exceptions in the project." alt="" coords="27,80,157,107"/>
 <area shape="rect" title=" " alt="" coords="35,5,149,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
@@ -114,7 +115,7 @@ Collaboration diagram for FileCorruptedException:</div>
 <area shape="rect" title="Exception class for the factory if a file is corrupted." alt="" coords="5,304,179,331"/>
 <area shape="rect" href="class_invalid_file_exception.html" title="Exception class for the factory if a file is invalid." alt="" coords="15,229,169,256"/>
 <area shape="rect" href="class_factory_exception.html" title="Exception class for the factory." alt="" coords="25,155,159,181"/>
-<area shape="rect" href="class_arcade_exception.html" title=" " alt="" coords="27,80,157,107"/>
+<area shape="rect" href="class_arcade_exception.html" title="Base exception class for all exceptions in the project." alt="" coords="27,80,157,107"/>
 <area shape="rect" title=" " alt="" coords="35,5,149,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
@@ -171,7 +172,7 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Exception class for the factory if a file is corrupted. </p>
 
-<p class="definition">Definition at line <a class="el" href="_exception_8hpp_source.html#l00114">114</a> of file <a class="el" href="_exception_8hpp_source.html">Exception.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_exception_8hpp_source.html#l00117">117</a> of file <a class="el" href="_exception_8hpp_source.html">Exception.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab823848802d79f72dd24bcd67ea8e60f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab823848802d79f72dd24bcd67ea8e60f">&#9670;&nbsp;</a></span>FileCorruptedException()</h2>
@@ -219,8 +220,12 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_exception_8hpp_source.html#l00116">116</a> of file <a class="el" href="_exception_8hpp_source.html">Exception.hpp</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="_exception_8hpp_source.html#l00119">119</a> of file <a class="el" href="_exception_8hpp_source.html">Exception.hpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                                                                                                                     : <a class="code" href="class_invalid_file_exception.html#a57aea782c01c5297ffae058b27f33bde">InvalidFileException</a>(<a class="code" href="class_arcade_exception.html#a337bc156e58344e8b1aa58033b1a05ae">what</a>, func, line, file)</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            <a class="code" href="class_arcade_exception.html#a5567e2b0f861e41f3a1ea37b7096328a">_name</a> = <span class="stringliteral">&quot;FileCorruptedException&quot;</span>;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        };</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
@@ -228,6 +233,9 @@ Additional Inherited Members</h2></td></tr>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aclass_arcade_exception_html_a5567e2b0f861e41f3a1ea37b7096328a"><div class="ttname"><a href="class_arcade_exception.html#a5567e2b0f861e41f3a1ea37b7096328a">ArcadeException::_name</a></div><div class="ttdeci">std::string _name</div><div class="ttdef"><b>Definition:</b> <a href="_exception_8hpp_source.html#l00082">Exception.hpp:82</a></div></div>
+<div class="ttc" id="aclass_arcade_exception_html_a337bc156e58344e8b1aa58033b1a05ae"><div class="ttname"><a href="class_arcade_exception.html#a337bc156e58344e8b1aa58033b1a05ae">ArcadeException::what</a></div><div class="ttdeci">const char * what() const noexcept override</div><div class="ttdoc">returns the description of the exception</div><div class="ttdef"><b>Definition:</b> <a href="_exception_8cpp_source.html#l00025">Exception.cpp:25</a></div></div>
+<div class="ttc" id="aclass_invalid_file_exception_html_a57aea782c01c5297ffae058b27f33bde"><div class="ttname"><a href="class_invalid_file_exception.html#a57aea782c01c5297ffae058b27f33bde">InvalidFileException::InvalidFileException</a></div><div class="ttdeci">InvalidFileException(std::string const &amp;what, std::string const &amp;func, int const &amp;line, std::string const &amp;file)</div><div class="ttdef"><b>Definition:</b> <a href="_exception_8hpp_source.html#l00103">Exception.hpp:103</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

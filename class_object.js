@@ -8,5 +8,7 @@ var class_object =
     [ "getType", "class_object.html#a75da801ae056164f4d2975d6fe15ab20", null ],
     [ "setColor", "class_object.html#ace0776e0fa472c649bf88c97d7b0a16b", null ],
     [ "setIsMoving", "class_object.html#a8004c95e7571e7d8d6005ac62ef0644c", null ],
-    [ "setType", "class_object.html#ac8c4351a73c172cb54e17a32b7c60aa9", null ]
+    [ "setType", "class_object.html#ac8c4351a73c172cb54e17a32b7c60aa9", null ],
+    [ "_color", "class_object.html#a2b142f1047a8d79eaaec4309108f8e80", null ],
+    [ "_type", "class_object.html#a08a20f3e6d40960cc6570465e5248ea0", null ]
 ];
