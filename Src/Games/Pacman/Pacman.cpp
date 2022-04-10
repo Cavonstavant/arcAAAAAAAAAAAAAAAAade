@@ -116,6 +116,10 @@ void Pacman::updateEnemyPos(int index)
         pos.second = _enemies[index]->getPos().second + 1;
         _enemies[index]->setPos(pos);
     }
+    if (_enemies[index]->getPos().first == 9 && _enemies[index]->getPos().second == 30)
+        _enemies[index]->setPos(std::pair<int, int>{9, 0});
+    else if (_enemies[index]->getPos().first == 9 && _enemies[index]->getPos().second == 0)
+        _enemies[index]->setPos(std::pair<int, int>{9, 30});
 }
 
 void Pacman::update(std::vector<std::shared_ptr<IEntity>> &entities, std::stack<Arcade::Evt> &events)
@@ -123,14 +127,34 @@ void Pacman::update(std::vector<std::shared_ptr<IEntity>> &entities, std::stack<
     std::random_device dev;
     std::mt19937 rng(dev());
     std::uniform_int_distribution<std::mt19937::result_type>dist4(0,3);
+    const std::string sickEnemyTexturePath = "Src/Games/Pacman/Resources/textures/enemySick.png";
+    const std::string EnemyTexturePath = "Src/Games/Pacman/Resources/textures/enemy.png";
 
-    if (std::chrono::duration_cast<std::chrono::seconds>(std::chrono::high_resolution_clock::now() - _iaClock).count() > 0 && !(_enemies[0]->getIsMoving())) {
+    if (std::chrono::duration_cast<std::chrono::seconds>(std::chrono::high_resolution_clock::now() - _bonusClock).count() > 10) {
+        _enemies[0]->setEnrage(true);
+        _enemies[0]->setTexturePath(std::filesystem::absolute(std::filesystem::path(EnemyTexturePath).string()));
+        _enemies[1]->setEnrage(true);
+        _enemies[1]->setTexturePath(std::filesystem::absolute(std::filesystem::path(EnemyTexturePath).string()));
+        _enemies[2]->setEnrage(true);
+        _enemies[2]->setTexturePath(std::filesystem::absolute(std::filesystem::path(EnemyTexturePath).string()));
+        _bonusClock = std::chrono::high_resolution_clock::now();
+    }
+    if (std::chrono::duration_cast<std::chrono::seconds>(std::chrono::high_resolution_clock::now() - _iaClock).count() > 10 && !(_enemies[0]->getIsMoving())) {
         _enemies[0]->setIsMoving(true);
         _enemies[1]->setIsMoving(true);
         _enemies[2]->setIsMoving(true);
         _iaClock = std::chrono::high_resolution_clock::now();
     }
-    if (std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::high_resolution_clock::now() - _iaClock).count() > 500 && _enemies[0]->getIsMoving()) {
+    if (std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::high_resolution_clock::now() - _iaClock).count() > 400 && _enemies[0]->getIsMoving() && _enemies[0]->getEnrage()) {
+        for (int i = 0; i < 3; i++) {
+            if (nextToTheWall(_enemies[i]->getDirection(), i))
+                _enemies[i]->setDirection(static_cast<AEntity::Direction>(dist4(rng)));
+            if (!nextToTheWall(_enemies[i]->getDirection(), i))
+                updateEnemyPos(i);
+        }
+        _iaClock = std::chrono::high_resolution_clock::now();
+    }
+    if (std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::high_resolution_clock::now() - _iaClock).count() > 900 && _enemies[0]->getIsMoving() && !_enemies[0]->getEnrage()) {
         for (int i = 0; i < 3; i++) {
             if (nextToTheWall(_enemies[i]->getDirection(), i))
                 _enemies[i]->setDirection(static_cast<AEntity::Direction>(dist4(rng)));
@@ -144,15 +168,35 @@ void Pacman::update(std::vector<std::shared_ptr<IEntity>> &entities, std::stack<
         events.pop();
     }
     if (!isThereAWallOnDirection(_player->getDirection())
-        && std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::high_resolution_clock::now() - _clock).count() > 500) {
+        && std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::high_resolution_clock::now() - _clock).count() > 400) {
         updatePlayerPos();
         _clock = std::chrono::high_resolution_clock::now();
     }
     for (auto i = entities.begin(); i != entities.end(); i++) {
-        if (i->get()->getPos() == _player->getPos() && (i->get()->getType() == IEntity::POINT || i->get()->getType() == IEntity::BONUS)) {
+        if (i->get()->getPos() == _player->getPos() && (i->get()->getType() == IEntity::POINT)) {
             entities.erase(i);
-            _score += 100;
+            _score += 10;
         }
+        if (i->get()->getPos() == _player->getPos() && i->get()->getType() == IEntity::BONUS) {
+            _enemies[0]->setEnrage(false);
+            _enemies[0]->setTexturePath(std::filesystem::absolute(std::filesystem::path(sickEnemyTexturePath).string()));
+            _enemies[1]->setEnrage(false);
+            _enemies[1]->setTexturePath(std::filesystem::absolute(std::filesystem::path(sickEnemyTexturePath).string()));
+            _enemies[2]->setEnrage(false);
+            _enemies[2]->setTexturePath(std::filesystem::absolute(std::filesystem::path(sickEnemyTexturePath).string()));
+            _bonusClock = std::chrono::high_resolution_clock::now();
+            entities.erase(i);
+        }
+        if (dynamic_cast<Enemy*>(i->get()))
+            if (i->get()->getPos() == _player->getPos() && i->get()->getType() == IEntity::ENEMY) {
+                if (!dynamic_cast<Enemy*>(i->get())->getEnrage()) {
+                    _score += 20;
+                    i->get()->setPos(std::pair<int, int>{9, 16});
+                } else {
+                    _isGameOver = true;
+                    return;
+                }
+            }
     }
 }
 
@@ -241,6 +285,10 @@ void Pacman::updatePlayerPos()
         pos.second = _player->getPos().second + 1;
         _player->setPos(pos);
     }
+    if (_player->getPos().first == 9 && _player->getPos().second == 30)
+        _player->setPos(std::pair<int, int>{9, 0});
+    else if (_player->getPos().first == 9 && _player->getPos().second == 0)
+        _player->setPos(std::pair<int, int>{9, 30});
 }
 
 void Pacman::loadMap()
@@ -251,7 +299,6 @@ void Pacman::loadMap()
     if (file.is_open()) {
         for (auto & i : _map) {
             getline(file, line);
-            std::cout << line << std::endl;
             i = line;
         }
     }
@@ -274,4 +321,19 @@ bool Pacman::nextToTheWall(Player::Direction direction, int index)
     if (direction == Player::RIGHT && _map[_enemies[index]->getPos().first][_enemies[index]->getPos().second + 1] == 'W')
         return true;
     return false;
+}
+
+void Pacman::setIsGameOver(bool isGameOver)
+{
+    _isGameOver = isGameOver;
+}
+
+bool Pacman::getIsGameOver()
+{
+    return _isGameOver;
+}
+
+int Pacman::getScore() const
+{
+    return _score;
 }
