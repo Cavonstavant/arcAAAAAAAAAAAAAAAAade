@@ -16,12 +16,14 @@
 void Pacman::init(std::vector<std::shared_ptr<IEntity>> &entities)
 {
     loadMap();
+    entities.clear();
     _clock = std::chrono::high_resolution_clock::now();
     _iaClock = std::chrono::high_resolution_clock::now();
     _gameState = GameState::LOADED;
     _score = 0;
     _direction = Player::Direction::RIGHT;
     int cpt = 0;
+    _points = 0;
     for (auto &i: _map) {
         for (int j = 0; j < MAP_WIDTH; j++)
             createEntity(i[j], entities, cpt, j);
@@ -71,6 +73,7 @@ void Pacman::createEntity(char symbol, std::vector<std::shared_ptr<IEntity>> &en
         std::shared_ptr<Object> point = std::make_shared<Object>(AEntity::ENTITY_TYPE::POINT);
         point->setPos(std::pair<int, int>{i, j});
         entities.push_back(point);
+        _points++;
     } else if (symbol == 'B') {
         std::shared_ptr<Object> point = std::make_shared<Object>(AEntity::ENTITY_TYPE::BONUS);
         point->setPos(std::pair<int, int>{i, j});
@@ -177,7 +180,8 @@ void Pacman::update(std::vector<std::shared_ptr<IEntity>> &entities, std::stack<
     for (auto i = entities.begin(); i != entities.end(); i++) {
         if (i->get()->getPos() == _player->getPos() && (i->get()->getType() == IEntity::POINT)) {
             entities.erase(i);
-            _score += 10;
+            _score += 1;
+            _points--;
         }
         if (i->get()->getPos() == _player->getPos() && i->get()->getType() == IEntity::BONUS) {
             _enemies[0]->setEnrage(false);
@@ -195,7 +199,7 @@ void Pacman::update(std::vector<std::shared_ptr<IEntity>> &entities, std::stack<
         if (dynamic_cast<Enemy *>(i->get()))
             if (i->get()->getPos() == _player->getPos() && i->get()->getType() == IEntity::ENEMY) {
                 if (!dynamic_cast<Enemy *>(i->get())->getEnrage()) {
-                    _score += 20;
+                    _score += 2;
                     i->get()->setPos(std::pair<int, int>{9, 16});
                 } else {
                     _isGameOver = true;
@@ -203,6 +207,8 @@ void Pacman::update(std::vector<std::shared_ptr<IEntity>> &entities, std::stack<
                 }
             }
     }
+    if (!_points)
+        init(entities);
 }
 
 std::string Pacman::getLibraryName() const
@@ -322,6 +328,7 @@ bool Pacman::nextToTheWall(Player::Direction direction, int index)
 
 void Pacman::setIsGameOver(bool isGameOver)
 {
+    _gameState = IGame::GameState::STOPPED;
     _isGameOver = isGameOver;
 }
 
