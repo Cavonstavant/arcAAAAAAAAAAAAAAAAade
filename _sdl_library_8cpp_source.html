@@ -182,7 +182,7 @@ $(document).ready(function(){initNavTree('_sdl_library_8cpp_source.html',''); in
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
 <div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="class_sdl_library.html#a4a08e8b4fcdb3fc490f65d44ec404403">   95</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_sdl_library.html#a4a08e8b4fcdb3fc490f65d44ec404403">SdlLibrary::drawText</a>(std::pair&lt;int, int&gt; pos, <span class="keyword">const</span> std::string &amp;content, <a class="code" href="struct_color.html">Color</a> color)</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;{</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    SDL_Color textColor = {255, 255, 255, 255};</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    SDL_Color textColor = {color.<a class="code" href="struct_color.html#aed083afcc2c689243df7fbc3da5203d3">R</a>, color.<a class="code" href="struct_color.html#a494fcf569d0e0cdcb1f16843a59173ae">G</a>, color.<a class="code" href="struct_color.html#a0460664d0d091fbe42cf4307744dcaca">B</a>, color.<a class="code" href="struct_color.html#a13db704e48f5e851817f9e9fd67ec76d">A</a>};</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    SDL_Surface *textSurface = TTF_RenderText_Blended(_font, content.c_str(), textColor);</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    SDL_Texture *textTexture = SDL_CreateTextureFromSurface(_renderer, textSurface);</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    SDL_Rect rect;</div>
