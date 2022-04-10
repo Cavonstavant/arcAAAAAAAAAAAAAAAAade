@@ -94,7 +94,7 @@ bool SdlLibrary::drawRect(std::pair<int, int> pos, int width, int height, Color 
 
 bool SdlLibrary::drawText(std::pair<int, int> pos, const std::string &content, Color color)
 {
-    SDL_Color textColor = {255, 255, 255, 255};
+    SDL_Color textColor = {color.R, color.G, color.B, color.A};
     SDL_Surface *textSurface = TTF_RenderText_Blended(_font, content.c_str(), textColor);
     SDL_Texture *textTexture = SDL_CreateTextureFromSurface(_renderer, textSurface);
     SDL_Rect rect;
