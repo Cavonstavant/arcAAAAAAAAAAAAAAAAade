@@ -48,7 +48,7 @@ bool SdlLibrary::displayWindow()
 bool SdlLibrary::drawCircle(std::pair<int, int> pos, int radius, Color color)
 {
     int diameter = (radius * 2);
-    int x = radius - 1;
+    int x = radius;
     int y = 0;
     int tx = 1;
     int ty = 1;
@@ -75,6 +75,7 @@ bool SdlLibrary::drawCircle(std::pair<int, int> pos, int radius, Color color)
         }
         SDL_SetRenderDrawColor(_renderer, color.R, color.G, color.B, color.A);
     }
+    return true;
 }
 
 bool SdlLibrary::drawRect(std::pair<int, int> pos, int width, int height, Color color)
