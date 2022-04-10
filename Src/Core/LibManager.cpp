@@ -7,16 +7,17 @@
 
 #include "LibManager.hpp"
 #include "Exception.hpp"
-#include <fstream>
-#include <string>
 #include <filesystem>
+#include <fstream>
 #include <functional>
+#include <string>
 
 extern "C" {
 #include <dlfcn.h>
 }
 
-IGame *LibManager::openGame(const std::string &libPath) {
+IGame *LibManager::openGame(const std::string &libPath)
+{
     if (_libsHandle.find(std::filesystem::absolute(std::filesystem::path(libPath))) == _libsHandle.end())
         throw ArcadeEX(libPath + " not found", Logger::HIGH);
     void *libHandle = dlopen(libPath.c_str(), RTLD_NOW);
@@ -26,13 +27,14 @@ IGame *LibManager::openGame(const std::string &libPath) {
         throw ArcadeEX(libPath + "is already opened", Logger::NONE);
     _libsHandle[libPath] = libHandle;
     void *(*getInstance)();
-    getInstance = (void *(*)()) dlsym(libHandle, "getGameInstance");
+    getInstance = (void *(*) ()) dlsym(libHandle, "getGameInstance");
     if (getInstance == nullptr)
         throw LibraryEX(dlerror(), Logger::CRITICAL);
-    return ((IGame *)getInstance());
+    return ((IGame *) getInstance());
 }
 
-IGraph *LibManager::openGraph(const std::string &libPath) {
+IGraph *LibManager::openGraph(const std::string &libPath)
+{
     if (_libsHandle.find(std::filesystem::absolute(std::filesystem::path(libPath))) == _libsHandle.end())
         throw ArcadeEX(libPath + " not found", Logger::HIGH);
     void *libHandle = dlopen(libPath.c_str(), RTLD_NOW);
@@ -42,13 +44,13 @@ IGraph *LibManager::openGraph(const std::string &libPath) {
         throw ArcadeEX(libPath + "is already opened", Logger::HIGH);
     _libsHandle[libPath] = libHandle;
     void *(*getInstance)();
-    getInstance = (void *(*)()) dlsym(libHandle, "getGraphInstance");
+    getInstance = (void *(*) ()) dlsym(libHandle, "getGraphInstance");
     if (getInstance == nullptr)
         throw LibraryEX(dlerror(), Logger::CRITICAL);
-    return ((IGraph*)getInstance());
+    return ((IGraph *) getInstance());
 }
 
-void LibManager::closeLib(const std::string& libPath)
+void LibManager::closeLib(const std::string &libPath)
 {
     auto it = _libsHandle.find(std::filesystem::absolute(std::filesystem::path(libPath)));
 
@@ -61,7 +63,8 @@ void LibManager::closeLib(const std::string& libPath)
         throw LibraryEX("Library already closed", Logger::CRITICAL);
 }
 
-void LibManager::addLibs(std::vector<std::string> &libPaths) {
+void LibManager::addLibs(std::vector<std::string> &libPaths)
+{
     std::ifstream libConf("lib.conf");
     std::string line;
     std::stringstream ss;
@@ -93,7 +96,7 @@ void LibManager::addLibs(std::vector<std::string> &libPaths) {
                 } else if (dlsym(handle, "getGameInstance")) {
                     _gameLibsName.push_back(lib.path());
                 }
-//                    dlclose(handle);
+                //                    dlclose(handle);
             } catch (std::exception &e) {
                 throw LibraryEX(e.what(), Logger::MEDIUM);
             }
@@ -127,13 +130,13 @@ IGame *LibManager::cycleGameLibs(std::string &currentLib, bool direction)
         if (libNameIt == _gameLibsName.end() || libNameIt == _gameLibsName.begin())
             return nullptr;
         if (libNameIt == _gameLibsName.end() - 1)
-            return ((IGame *)openGame(_gameLibsName[0]));
+            return ((IGame *) openGame(_gameLibsName[0]));
         return openGame(*(libNameIt - 1));
     } else {
         if (libNameIt == _gameLibsName.end() || libNameIt == _gameLibsName.begin() + 1)
             return nullptr;
         if (libNameIt == _gameLibsName.begin())
-            return ((IGame *)openGame(_gameLibsName.back()));
+            return ((IGame *) openGame(_gameLibsName.back()));
         return openGame(*(libNameIt + 1));
     }
 }
@@ -150,13 +153,13 @@ IGraph *LibManager::cycleGraphLibs(std::string &currentLib, bool direction)
         if (libNameIt == _graphLibsName.end() || libNameIt == _graphLibsName.begin())
             return nullptr;
         if (libNameIt == _graphLibsName.end() - 1)
-            return ((IGraph *)openGraph(_graphLibsName[0]));
+            return ((IGraph *) openGraph(_graphLibsName[0]));
         return openGraph(*(libNameIt - 1));
     } else {
         if (libNameIt == _graphLibsName.end() || libNameIt == _graphLibsName.begin() + 1)
             return nullptr;
         if (libNameIt == _graphLibsName.begin())
-            return ((IGraph *)openGraph(_graphLibsName.back()));
+            return ((IGraph *) openGraph(_graphLibsName.back()));
         return openGraph(*(libNameIt + 1));
     }
 }
