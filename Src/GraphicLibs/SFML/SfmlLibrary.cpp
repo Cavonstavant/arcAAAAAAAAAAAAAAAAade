@@ -293,6 +293,66 @@ Arcade::Evt SfmlLibrary::getInput()
                 keyEvt.key = 'z';
                 evt.key = keyEvt;
                 break;
+            case sf::Keyboard::Numpad0:
+            case sf::Keyboard::Num0:
+                evt.evt_type = Arcade::Evt::KEY;
+                keyEvt.key = '0';
+                evt.key = keyEvt;
+                break;
+            case sf::Keyboard::Numpad1:
+            case sf::Keyboard::Num1:
+                evt.evt_type = Arcade::Evt::KEY;
+                keyEvt.key = '1';
+                evt.key = keyEvt;
+                break;
+            case sf::Keyboard::Numpad2:
+            case sf::Keyboard::Num2:
+                evt.evt_type = Arcade::Evt::KEY;
+                keyEvt.key = '2';
+                evt.key = keyEvt;
+                break;
+            case sf::Keyboard::Numpad3:
+            case sf::Keyboard::Num3:
+                evt.evt_type = Arcade::Evt::KEY;
+                keyEvt.key = '3';
+                evt.key = keyEvt;
+                break;
+            case sf::Keyboard::Numpad4:
+            case sf::Keyboard::Num4:
+                evt.evt_type = Arcade::Evt::KEY;
+                keyEvt.key = '4';
+                evt.key = keyEvt;
+                break;
+            case sf::Keyboard::Numpad5:
+            case sf::Keyboard::Num5:
+                evt.evt_type = Arcade::Evt::KEY;
+                keyEvt.key = '5';
+                evt.key = keyEvt;
+                break;
+            case sf::Keyboard::Numpad6:
+            case sf::Keyboard::Num6:
+                evt.evt_type = Arcade::Evt::KEY;
+                keyEvt.key = '6';
+                evt.key = keyEvt;
+                break;
+            case sf::Keyboard::Numpad7:
+            case sf::Keyboard::Num7:
+                evt.evt_type = Arcade::Evt::KEY;
+                keyEvt.key = '7';
+                evt.key = keyEvt;
+                break;
+            case sf::Keyboard::Numpad8:
+            case sf::Keyboard::Num8:
+                evt.evt_type = Arcade::Evt::KEY;
+                keyEvt.key = '8';
+                evt.key = keyEvt;
+                break;
+            case sf::Keyboard::Numpad9:
+            case sf::Keyboard::Num9:
+                evt.evt_type = Arcade::Evt::KEY;
+                keyEvt.key = '9';
+                evt.key = keyEvt;
+                break;
             default:
                 break;
         }

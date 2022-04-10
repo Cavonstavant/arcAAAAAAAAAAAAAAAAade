@@ -313,6 +313,66 @@ Arcade::Evt SdlLibrary::getInput()
                     evt.key = keyEvt;
                     evt.evt_type = Arcade::Evt::KEY;
                     break;
+                case SDLK_KP_0:
+                case SDLK_0:
+                    keyEvt.key = '0';
+                    evt.key = keyEvt;
+                    evt.evt_type = Arcade::Evt::KEY;
+                    break;
+                case SDLK_KP_1:
+                case SDLK_1:
+                    keyEvt.key = '1';
+                    evt.key = keyEvt;
+                    evt.evt_type = Arcade::Evt::KEY;
+                    break;
+                case SDLK_KP_2:
+                case SDLK_2:
+                    evt.evt_type = Arcade::Evt::KEY;
+                    keyEvt.key = '2';
+                    evt.key = keyEvt;
+                    break;
+                case SDLK_KP_3:
+                case SDLK_3:
+                    evt.evt_type = Arcade::Evt::KEY;
+                    keyEvt.key = '3';
+                    evt.key = keyEvt;
+                    break;
+                case SDLK_KP_4:
+                case SDLK_4:
+                    evt.evt_type = Arcade::Evt::KEY;
+                    keyEvt.key = '4';
+                    evt.key = keyEvt;
+                    break;
+                case SDLK_KP_5:
+                case SDLK_5:
+                    evt.evt_type = Arcade::Evt::KEY;
+                    keyEvt.key = '5';
+                    evt.key = keyEvt;
+                    break;
+                case SDLK_KP_6:
+                case SDLK_6:
+                    evt.evt_type = Arcade::Evt::KEY;
+                    keyEvt.key = '6';
+                    evt.key = keyEvt;
+                    break;
+                case SDLK_KP_7:
+                case SDLK_7:
+                    evt.evt_type = Arcade::Evt::KEY;
+                    keyEvt.key = '7';
+                    evt.key = keyEvt;
+                    break;
+                case SDLK_KP_8:
+                case SDLK_8:
+                    evt.evt_type = Arcade::Evt::KEY;
+                    keyEvt.key = '8';
+                    evt.key = keyEvt;
+                    break;
+                case SDLK_KP_9:
+                case SDLK_9:
+                    evt.evt_type = Arcade::Evt::KEY;
+                    keyEvt.key = '9';
+                    evt.key = keyEvt;
+                    break;
                 default:
                     break;
             }

@@ -332,6 +332,56 @@ Arcade::Evt NcursesLibrary::getInput()
             keyEvt.key = 'z';
             evt.key = keyEvt;
             break;
+        case '0':
+            evt.evt_type = Arcade::Evt::KEY;
+            keyEvt.key = '0';
+            evt.key = keyEvt;
+            break;
+        case '1':
+            evt.evt_type = Arcade::Evt::KEY;
+            keyEvt.key = '1';
+            evt.key = keyEvt;
+            break;
+        case '2':
+            evt.evt_type = Arcade::Evt::KEY;
+            keyEvt.key = '2';
+            evt.key = keyEvt;
+            break;
+        case '3':
+            evt.evt_type = Arcade::Evt::KEY;
+            keyEvt.key = '3';
+            evt.key = keyEvt;
+            break;
+        case '4':
+            evt.evt_type = Arcade::Evt::KEY;
+            keyEvt.key = '4';
+            evt.key = keyEvt;
+            break;
+        case '5':
+            evt.evt_type = Arcade::Evt::KEY;
+            keyEvt.key = '5';
+            evt.key = keyEvt;
+            break;
+        case '6':
+            evt.evt_type = Arcade::Evt::KEY;
+            keyEvt.key = '6';
+            evt.key = keyEvt;
+            break;
+        case '7':
+            evt.evt_type = Arcade::Evt::KEY;
+            keyEvt.key = '7';
+            evt.key = keyEvt;
+            break;
+        case '8':
+            evt.evt_type = Arcade::Evt::KEY;
+            keyEvt.key = '8';
+            evt.key = keyEvt;
+            break;
+        case '9':
+            evt.evt_type = Arcade::Evt::KEY;
+            keyEvt.key = '9';
+            evt.key = keyEvt;
+            break;
         default:
             break;
     }

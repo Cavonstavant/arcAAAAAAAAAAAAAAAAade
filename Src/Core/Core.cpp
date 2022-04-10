@@ -49,7 +49,9 @@ void Core::update()
     Arcade::Evt evt{};
 
     while ((evt = _graph->getInput()).evt_type != Arcade::Evt::NONE) {
-        if (evt.evt_type == Arcade::Evt::EvtType::WIN_CLOSE) {
+        if (evt.evt_type == Arcade::Evt::EvtType::WIN_CLOSE ||
+            (evt.evt_type == Arcade::Evt::EvtType::KEY &&
+            evt.key.key == '1'/* && _state == State::MAIN_MENU*/)) {
             _graph->close();
             _game->close(_entities);
             _state = State::EXIT;
