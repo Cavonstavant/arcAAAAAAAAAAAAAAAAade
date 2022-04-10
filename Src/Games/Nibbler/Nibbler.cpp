@@ -168,7 +168,7 @@ void Nibbler::update(std::vector<std::shared_ptr<IEntity>> &entities, std::stack
     if (snakeIsDeadCollision())
         _gameState = GameState::STOPPED;
 
-    if (_snake.size() == GRID_HEIGHT * GRID_WIDTH)
+    if (_snake.size() == (GRID_HEIGHT - 2) * (GRID_WIDTH - (GRID_WIDTH / 4) - 2))
         nextLevel(entities);
 }
 
