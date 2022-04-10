@@ -7,10 +7,13 @@
 
 #include "SdlLibrary.hpp"
 #include <iostream>
+#include <filesystem>
 
 void SdlLibrary::init()
 {
+    const std::string font = "Src/GraphicLibs/Resources/Font/ARCADE_N.TTF";
     SDL_Init(SDL_INIT_EVERYTHING);
+    TTF_Init();
     _window = SDL_CreateWindow("Window",
                                SDL_WINDOWPOS_CENTERED,
                                SDL_WINDOWPOS_CENTERED,
@@ -18,7 +21,7 @@ void SdlLibrary::init()
                                SDL_WINDOW_SHOWN);
     _renderer = SDL_CreateRenderer(_window, -1, 0);
     SDL_SetRenderDrawColor(_renderer, 255, 255, 255, 255);
-    _font = TTF_OpenFont("../Resources/Font/ARCADE_N.TTF", 200);
+    _font = TTF_OpenFont(std::filesystem::absolute(std::filesystem::path(font)).c_str(), 200);
 }
 
 void SdlLibrary::close()
@@ -32,6 +35,8 @@ void SdlLibrary::close()
 
 bool SdlLibrary::clearWindow()
 {
+    SDL_SetRenderDrawColor(_renderer, 0, 0, 0, 255);
+    SDL_RenderClear(_renderer);
     return true;
 }
 
@@ -43,11 +48,34 @@ bool SdlLibrary::displayWindow()
 
 bool SdlLibrary::drawCircle(std::pair<int, int> pos, int radius, Color color)
 {
-    std::pair<int, int> topLeftCorner = pos;
+    int diameter = (radius * 2);
+    int x = radius - 1;
+    int y = 0;
+    int tx = 1;
+    int ty = 1;
+    int error = (tx - diameter);
 
-    // topLeftCorner.first -= (radius / 2);
-    // topLeftCorner.second -= (radius / 2);
-    return drawRect(topLeftCorner, 1, 1, color);
+    while (x >= y) {
+        SDL_RenderDrawPoint(_renderer, GRID_INT(pos.second) + x + 16, GRID_INT(pos.first) - y + 16);
+        SDL_RenderDrawPoint(_renderer, GRID_INT(pos.second) + x + 16, GRID_INT(pos.first) + y + 16);
+        SDL_RenderDrawPoint(_renderer, GRID_INT(pos.second) - x + 16, GRID_INT(pos.first) - y + 16);
+        SDL_RenderDrawPoint(_renderer, GRID_INT(pos.second) - x + 16, GRID_INT(pos.first) + y + 16);
+        SDL_RenderDrawPoint(_renderer, GRID_INT(pos.second) + y + 16, GRID_INT(pos.first) - x + 16);
+        SDL_RenderDrawPoint(_renderer, GRID_INT(pos.second) + y + 16, GRID_INT(pos.first) + x + 16);
+        SDL_RenderDrawPoint(_renderer, GRID_INT(pos.second) - y + 16, GRID_INT(pos.first) - x + 16);
+        SDL_RenderDrawPoint(_renderer, GRID_INT(pos.second) - y + 16, GRID_INT(pos.first) + x + 16);
+        if (error <= 0) {
+            y++;
+            error += ty;
+            ty += 2;
+        }
+        if (error > 0) {
+            x--;
+            tx += 2;
+            error += (tx - diameter);
+        }
+        SDL_SetRenderDrawColor(_renderer, color.R, color.G, color.B, color.A);
+    }
 }
 
 bool SdlLibrary::drawRect(std::pair<int, int> pos, int width, int height, Color color)
@@ -73,12 +101,11 @@ bool SdlLibrary::drawText(std::pair<int, int> pos, const std::string &content, C
 
     rect.x = GRID_INT(pos.second);
     rect.y = GRID_INT(pos.first);
-    rect.w = GRID_INT(content.length() * 15);
+    rect.w = content.length() * 15;
     rect.h = GRID_INT(1);
     SDL_RenderCopy(_renderer, textTexture, nullptr, &rect);
     SDL_DestroyTexture(textTexture);
     SDL_FreeSurface(textSurface);
-
     return true;
 }
 
