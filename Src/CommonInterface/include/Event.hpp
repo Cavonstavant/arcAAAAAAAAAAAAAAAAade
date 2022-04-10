@@ -39,7 +39,7 @@ namespace Arcade {
                     T y;
             };
 
-            /// \brief represents the direction of the mouse wheel scoll
+            /// \brief represents the direction of the mouse wheel scroll
             enum MouseWheel { UP,
                               DOWN,
                               MOUSE_WHEEL_SIZE

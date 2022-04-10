@@ -17,6 +17,7 @@
 
 Core::Core(std::vector<std::string> libsPath)
 {
+    _entities.reserve(1000);
     _mainMenu.init(_entities);
     _libManager.addLibs(libsPath);
     _game = &_mainMenu;
@@ -25,8 +26,9 @@ Core::Core(std::vector<std::string> libsPath)
     _graph = _libManager.openGraph(*libsPath.begin());
     _graph->init();
     _game->start();
-    /*_mainMenu.start();*/
-    // _state = State::GAME;
+    _state = State::MAIN_MENU;
+    _futureGame = "";
+    _futureGraph = "";
 }
 
 void Core::addEntity(const std::shared_ptr<IEntity>& entity)
@@ -48,14 +50,16 @@ void Core::update()
 {
     Arcade::Evt evt{};
 
-    evt = _graph->getInput();
-    if (evt.evt_type == Arcade::Evt::EvtType::WIN_CLOSE) {
-        _graph->close();
-        _game->close(_entities);
-        _state = State::EXIT;
+    while ((evt = _graph->getInput()).evt_type != Arcade::Evt::NONE) {
+        if (evt.evt_type == Arcade::Evt::EvtType::WIN_CLOSE) {
+            _graph->close();
+            _game->close(_entities);
+            _state = State::EXIT;
+            break;
+        }
+        else if (evt.evt_type == Arcade::Evt::EvtType::KEY)
+            _event.push(evt);
     }
-    else if (evt.evt_type == Arcade::Evt::EvtType::KEY)
-        _event.push(_graph->getInput());
     if (_state == State::MAIN_MENU) {
         _mainMenu.update(_entities, _event);
     } else if (_state == State::GAME) {
@@ -94,4 +98,69 @@ void Core::draw() {
         }
     }
     _graph->displayWindow();
+}
+
+void Core::processEvents() {
+    if (_event.empty())
+        return;
+    if (!_event.empty() && _event.top().evt_type == Arcade::Evt::EvtType::KEY)
+        return;
+    if (_event.top().evt_type == Arcade::Evt::WIN_CLOSE) {
+        if (_state == State::MAIN_MENU) {
+            _mainMenu.close(_entities);
+            _state = State::EXIT;
+            _event.pop();
+            return;
+        }
+        if (_state == State::GAME) {
+            _game->setState(IGame::GameState::STOPPED);
+            _state = State::MAIN_MENU;
+            _game = &_mainMenu;
+            _event.pop();
+            return;
+        }
+    }
+    if (_game->getState() == IGame::GameState::STOPPED) {
+        _state = State::MAIN_MENU;
+        _game = &_mainMenu;
+        _event.pop();
+        return;
+    }
+    if (_event.top().evt_type == Arcade::Evt::KEY) {
+        if (_event.top().key.key == 'r' || _event.top().key.key == 'R') {
+            try {
+                std::string currentGameName = _game->getLibraryName();
+                _libManager.closeLib(currentGameName);
+                _game = _libManager.openGame(currentGameName);
+            } catch (...) {
+                _event.pop();
+                return;
+            }
+        }
+        if (_event.top().key.key == 'm' || _event.top().key.key == 'M') {
+            _state = State::MAIN_MENU;
+            _game = &_mainMenu;
+            _event.pop();
+            return;
+        }
+        if (_event.top().key.key == 'p' || _event.top().key.key == 'P') {
+            _state = State::GAME;
+            _game->setState(IGame::GameState::PAUSED);
+            _event.pop();
+            return;
+        }
+        manageCoreKeyEvents(reinterpret_cast<std::string &>(_event.top().key.key));
+        _event.pop();
+    }
+}
+
+void Core::setGame(const std::string &libPath) {
+    _libManager.closeLib(libPath);
+    _game = _libManager.openGame(libPath);
+    _entities.clear();
+}
+
+void Core::setGraph(const std::string &libPath) {
+    _libManager.closeLib(libPath);
+    _graph = _libManager.openGraph(libPath);
 }

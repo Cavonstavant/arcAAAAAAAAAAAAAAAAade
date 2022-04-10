@@ -16,6 +16,7 @@
 #include "Event.hpp"
 #include "MainMenu/MainMenu.hpp"
 #include "LibManager.hpp"
+#include "Exception.hpp"
 #include <vector>
 
 /// \brief Core class that the transfer of data between games and displays
@@ -38,7 +39,7 @@ class Core {
         explicit Core(std::vector<std::string> libsPath);
 
         /// \brief Dtor
-        ~Core() = default;
+        inline ~Core() { _libManager.closeAllLibs(); }
 
         /// \brief Construct a core with an other core should not be possible
         Core(Core const &) = delete;
@@ -70,13 +71,17 @@ class Core {
         /// \param game The new game of the core
         inline void setGame(IGame* game) { _game = game; }
 
+        void setGame(const std::string& libPath);
+
         /// \brief Get the current graphical display of the core
         /// \return The current graphical display of the core
         [[nodiscard]] inline IGraph* getGraph() const { return _graph; }
 
         /// \brief Set the current graphical display of the core
         /// \param graph The new graphical display of the core
-        inline void setGraph(IGraph* graph) { _graph = graph; }
+        inline void setGraph(IGraph* graph)  { _graph = graph; }
+
+        void setGraph(const std::string& libPath);
 
         /// \brief Get the current event
         /// \return The current event
@@ -97,6 +102,23 @@ class Core {
 
         /// \brief Update the graphical interface by passing all the entities to the graph
         void draw();
+
+        /// \brief Process the events retrieved inside the graphical display
+        /// \note This function is called after the graphical display has been updated
+        /// \note Events can be retrieved by using <b>getLastEvent()</b>, <b>popEvent()</b> and <b>setEvent(Arcade::Evt)</b>
+        /// \warning Not setting up any graphical display before polling any event will result in an <b>undefined behavior</b>
+        void processEvents();
+
+
+        std::string getFutureGraph() { return _futureGraph; }
+
+        /// \brief Set the future graphical display to be used
+        void setFutureGraph(std::string &futureGraph) { _futureGraph = futureGraph; }
+
+        std::string getFutureGame() { return _futureGame; }
+
+        void setFutureGame(std::string &futureGame) { _futureGame = futureGame; }
+
     private:
         /// \brief The library manager containing all the libraries
         LibManager _libManager;
@@ -110,15 +132,31 @@ class Core {
         /// \brief The game currently running
         IGame *_game;
 
+        /// \brief The game future library path to be loaded, null terminated
+        /// \note This is set when loading a game either by the main menu or inside the game itself
+        /// \note If there is no graphical lib to be loaded, _futureGame will be empty
+        std::string _futureGame;
+
         /// \brief The graphical interface currently running
         /// \note Will be filled with the instance retrieved from the graphical library passed by argument (argv[1])
         IGraph *_graph;
+
+        /// \brief The future graphical library path, null terminated
+        /// \note This is set when loading a graphical interface either by the main menu or inside the game itself
+        /// \note If there is no graphical lib to be load, _futureGraph will be empty
+        std::string _futureGraph;
 
         /// \brief The current event to be processed
         std::stack<Arcade::Evt> _event;
 
         /// \brief The current state of the core
         State _state;
+
+        void coreEventSwitchGame(const std::string &key);
+
+        void coreEventSwitchGraph(const std::string &key);
+
+        void manageCoreKeyEvents(std::string &key);
 };
 
 #endif//ARCAAAAAAAAAAAAAAAAADE_CORE_HPP
