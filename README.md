@@ -38,5 +38,7 @@ Mirror repository: https://github.com/Cavonstavant/arcAAAAAAAAAAAAAAAAade
 
 ### Graphs
 
-- Graphical representation of the dependencies of the project. > By having a graphical representation of the dependencies, we can ensure that the different project parts are actually independent.
-  > ![DepsGraph](graph/deps.png)
+- Graphical representation of the dependencies of the project.
+> By having a graphical representation of the dependencies, we can ensure that the different project parts are actually independent.
+
+![DepsGraph](graph/deps.png)
