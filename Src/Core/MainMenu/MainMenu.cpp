@@ -170,7 +170,7 @@ void MainMenu::close(std::vector<std::shared_ptr<IEntity>> &entities)
         entities.pop_back();
 }
 
-void MainMenu::manageClickEvent(Arcade::Evt &event, std::vector<std::shared_ptr<IEntity>> &entities)
+void MainMenu::manageClickEvent(Arcade::Evt &event, [[maybe_unused]] std::vector<std::shared_ptr<IEntity>> &entities)
 {
     for (auto &button: _buttons) {
         if (button->isClicked(event.mouse.x, event.mouse.y)) {
@@ -179,7 +179,7 @@ void MainMenu::manageClickEvent(Arcade::Evt &event, std::vector<std::shared_ptr<
     }
 }
 
-void MainMenu::manageKeyEvent(Arcade::Evt &event, std::vector<std::shared_ptr<IEntity>> &entities)
+void MainMenu::manageKeyEvent(Arcade::Evt &event, [[maybe_unused]] std::vector<std::shared_ptr<IEntity>> &entities)
 {
     char c = 'a';
     for (auto &graph: _graphicalLibraries) {
