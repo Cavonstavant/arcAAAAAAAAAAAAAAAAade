@@ -1,8 +1,8 @@
 #include "IGraph.hpp"
 #include "SdlLibrary.hpp"
-#include <iostream>
 
-namespace Arcade {
+namespace Arcade
+{
     static IGraph *GRAPH_INSTANCE = nullptr;
 
     extern "C" IGraph *getGraphInstance()

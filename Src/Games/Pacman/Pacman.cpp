@@ -116,9 +116,9 @@ void Pacman::updateEnemyPos(int index)
         pos.second = _enemies[index]->getPos().second + 1;
         _enemies[index]->setPos(pos);
     }
-    if (_enemies[index]->getPos().first == 9 && _enemies[index]->getPos().second == 30)
+    if (_enemies[index]->getPos().first == 9 && _enemies[index]->getPos().second >= 30)
         _enemies[index]->setPos(std::pair<int, int>{9, 0});
-    else if (_enemies[index]->getPos().first == 9 && _enemies[index]->getPos().second == 0)
+    else if (_enemies[index]->getPos().first == 9 && _enemies[index]->getPos().second <= 0)
         _enemies[index]->setPos(std::pair<int, int>{9, 30});
 }
 
@@ -285,9 +285,9 @@ void Pacman::updatePlayerPos()
         pos.second = _player->getPos().second + 1;
         _player->setPos(pos);
     }
-    if (_player->getPos().first == 9 && _player->getPos().second == 30)
+    if (_player->getPos().first == 9 && _player->getPos().second >= 30)
         _player->setPos(std::pair<int, int>{9, 0});
-    else if (_player->getPos().first == 9 && _player->getPos().second == 0)
+    else if (_player->getPos().first == 9 && _player->getPos().second <= 0)
         _player->setPos(std::pair<int, int>{9, 30});
 }
 
