@@ -18,44 +18,44 @@
 
 /// \brief SFML library
 class SfmlLibrary : public IGraph {
-    public:
-        /// \brief Default Constructor
-        SfmlLibrary() = default;
+public:
+    /// \brief Default Constructor
+    SfmlLibrary() = default;
 
-        /// \brief Default destructor
-        ~SfmlLibrary() override = default;
+    /// \brief Default destructor
+    ~SfmlLibrary() override = default;
 
-        /// \brief Initialize the library
-        /// Creating & Initializing the window
-        /// Loading the member _font for Resources. ARCADE_N.TTF as default font
-        void init() override;
-        /// \brief Closes the library
-        void close() override;
+    /// \brief Initialize the library
+    /// Creating & Initializing the window
+    /// Loading the member _font for Resources. ARCADE_N.TTF as default font
+    void init() override;
+    /// \brief Closes the library
+    void close() override;
 
-        bool clearWindow() override;
-        bool displayWindow() override;
+    bool clearWindow() override;
+    bool displayWindow() override;
 
-        bool drawCircle(std::pair<int, int> pos, int radius,
-                        Color color) override;
-        bool drawRect(std::pair<int, int> pos, int width, int height,
-                      Color color) override;
-        bool drawText(std::pair<int, int> pos,
-                      const std::string &content,
-                      Color color) override;
-        bool drawEntity(IEntity &entity,
-                        std::pair<int, int> pos) override;
-        Arcade::Evt getInput() override;
-        std::string getLibraryName() const override;
+    bool drawCircle(std::pair<int, int> pos, int radius,
+                    Color color) override;
+    bool drawRect(std::pair<int, int> pos, int width, int height,
+                  Color color) override;
+    bool drawText(std::pair<int, int> pos,
+                  const std::string &content,
+                  Color color) override;
+    bool drawEntity(IEntity &entity,
+                    std::pair<int, int> pos) override;
+    Arcade::Evt getInput() override;
+    std::string getLibraryName() const override;
 
-    private:
-        /// \brief window member used to display every entities
-        sf::RenderWindow _window;
+private:
+    /// \brief window member used to display every entities
+    sf::RenderWindow _window;
 
-        /// \brief Defines Width, Height, and BitsPerPixels of the window
-        sf::VideoMode _videoMode;
+    /// \brief Defines Width, Height, and BitsPerPixels of the window
+    sf::VideoMode _videoMode;
 
-        /// \brief Default font for every sf::Text in the SfmlLibrary
-        sf::Font _font;
+    /// \brief Default font for every sf::Text in the SfmlLibrary
+    sf::Font _font;
 };
 
 
