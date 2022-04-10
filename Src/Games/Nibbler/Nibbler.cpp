@@ -12,8 +12,8 @@
 #include <random>
 #include <stack>
 
-Nibbler::Nibbler() :  _gameState(IGame::GameState::STOPPED), _lastTailDir(IEntity::Direction::RIGHT) ,_lastTailPos(std::make_pair(0, 0)), _score(std::make_shared<Score>())
-    {}
+Nibbler::Nibbler() : _gameState(IGame::GameState::STOPPED), _lastTailDir(IEntity::Direction::RIGHT), _lastTailPos(std::make_pair(0, 0)), _score(std::make_shared<Score>())
+{}
 
 Nibbler::~Nibbler() = default;
 

@@ -5,10 +5,10 @@
 ** EntryPoint
 */
 
-#include <iostream>
 #include "Core.hpp"
+#include <iostream>
 extern "C" {
-    #include <dlfcn.h>
+#include <dlfcn.h>
 }
 
 

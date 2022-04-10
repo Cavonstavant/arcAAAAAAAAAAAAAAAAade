@@ -10,7 +10,7 @@
 
 #include "../Core.hpp"
 
-void Core::coreEventSwitchGame(const std::string& key)
+void Core::coreEventSwitchGame(const std::string &key)
 {
     std::string currentGameName = _game->getLibraryName();
 

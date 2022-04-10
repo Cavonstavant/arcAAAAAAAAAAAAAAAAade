@@ -63,6 +63,7 @@ class TextEntity : public AEntity {
 
         void setIsMoving(bool isMoving) override;
         bool getIsMoving() const override;
+
     protected:
     private:
         std::string _text;

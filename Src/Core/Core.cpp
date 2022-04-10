@@ -5,15 +5,15 @@
 ** core
 */
 
-#include <vector>
-#include <string>
 #include "Core.hpp"
-#include "TextEntity.hpp"
 #include "Button.hpp"
-#include "Player.hpp"
-#include "Object.hpp"
 #include "Enemy.hpp"
+#include "Object.hpp"
+#include "Player.hpp"
+#include "TextEntity.hpp"
 #include <iostream>
+#include <string>
+#include <vector>
 
 Core::Core(std::vector<std::string> libsPath)
 {
@@ -29,12 +29,12 @@ Core::Core(std::vector<std::string> libsPath)
     _futureGraph = "";
 }
 
-void Core::addEntity(const std::shared_ptr<IEntity>& entity)
+void Core::addEntity(const std::shared_ptr<IEntity> &entity)
 {
     _entities.push_back(entity);
 }
 
-void Core::removeEntity(const std::shared_ptr<IEntity>& entity)
+void Core::removeEntity(const std::shared_ptr<IEntity> &entity)
 {
     for (auto it = _entities.begin(); it != _entities.end(); ++it) {
         if (*it == entity) {
@@ -54,8 +54,7 @@ void Core::update()
             _game->close(_entities);
             _state = State::EXIT;
             break;
-        }
-        else if (evt.evt_type == Arcade::Evt::EvtType::KEY)
+        } else if (evt.evt_type == Arcade::Evt::EvtType::KEY)
             _event.push(evt);
     }
     if (_state == State::MAIN_MENU) {
@@ -66,19 +65,20 @@ void Core::update()
         _game->close(_entities);
 }
 
-void Core::draw() {
+void Core::draw()
+{
     _graph->clearWindow();
     for (unsigned long i = 0; i < _entities.size(); i++) {
-        if (dynamic_cast<TextEntity*>(_entities[i].get())) {
-            auto *text = dynamic_cast<TextEntity*>(_entities[i].get());
+        if (dynamic_cast<TextEntity *>(_entities[i].get())) {
+            auto *text = dynamic_cast<TextEntity *>(_entities[i].get());
             _graph->drawText(text->getPos(), text->getText(), text->getColor());
         }
-        if (dynamic_cast<Button*>(_entities[i].get())) {
-            auto *button = dynamic_cast<Button*>(_entities[i].get());
+        if (dynamic_cast<Button *>(_entities[i].get())) {
+            auto *button = dynamic_cast<Button *>(_entities[i].get());
             _graph->drawRect(button->getPos(), button->getSize().first, button->getSize().second, Color(255, 255, 255, 255));
         }
-        if (dynamic_cast<Object*>(_entities[i].get())) {
-            auto *wall = dynamic_cast<Object*>(_entities[i].get());
+        if (dynamic_cast<Object *>(_entities[i].get())) {
+            auto *wall = dynamic_cast<Object *>(_entities[i].get());
             if (wall->getType() == IEntity::POINT)
                 _graph->drawCircle(wall->getPos(), 3, Color(255, 255, 0, 255));
             else if (wall->getType() == IEntity::WALL)
@@ -86,19 +86,20 @@ void Core::draw() {
             else
                 _graph->drawCircle(wall->getPos(), 8, Color(255, 255, 0, 255));
         }
-        if (dynamic_cast<Player*>(_entities[i].get())) {
-            auto *player = dynamic_cast<Player*>(_entities[i].get());
+        if (dynamic_cast<Player *>(_entities[i].get())) {
+            auto *player = dynamic_cast<Player *>(_entities[i].get());
             _graph->drawEntity(*_entities[i], player->getPos());
         }
-        if (dynamic_cast<Enemy*>(_entities[i].get())) {
-            auto *enemy = dynamic_cast<Enemy*>(_entities[i].get());
+        if (dynamic_cast<Enemy *>(_entities[i].get())) {
+            auto *enemy = dynamic_cast<Enemy *>(_entities[i].get());
             _graph->drawEntity(*_entities[i], enemy->getPos());
         }
     }
     _graph->displayWindow();
 }
 
-void Core::processEvents() {
+void Core::processEvents()
+{
     if (_event.empty())
         return;
     if (!_event.empty() && _event.top().evt_type == Arcade::Evt::EvtType::KEY)
@@ -152,15 +153,17 @@ void Core::processEvents() {
     }
 }
 
-void Core::setGame(const std::string &libPath) {
-//    if (_game)
-//        _libManager.closeLib(libPath);
+void Core::setGame(const std::string &libPath)
+{
+    //    if (_game)
+    //        _libManager.closeLib(libPath);
     _game = _libManager.openGame(libPath);
     _entities.clear();
 }
 
-void Core::setGraph(const std::string &libPath) {
-//    if (_graph)
-//        _libManager.closeLib(libPath);
+void Core::setGraph(const std::string &libPath)
+{
+    //    if (_graph)
+    //        _libManager.closeLib(libPath);
     _graph = _libManager.openGraph(libPath);
 }

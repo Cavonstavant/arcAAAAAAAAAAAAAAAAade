@@ -8,8 +8,8 @@
 #ifndef ARCADE_ENEMY_HPP
 #define ARCADE_ENEMY_HPP
 
-#include "Color.hpp"
 #include "AEntity.hpp"
+#include "Color.hpp"
 #include "Player.hpp"
 
 /// \brief Enemy class inherits from AEntity

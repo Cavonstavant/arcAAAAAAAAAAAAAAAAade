@@ -8,10 +8,10 @@
 #ifndef ARCADE_PACMAN_HPP
 #define ARCADE_PACMAN_HPP
 
-#include "IGame.hpp"
-#include "Event.hpp"
-#include "../Common/Player.hpp"
 #include "../Common/Enemy.hpp"
+#include "../Common/Player.hpp"
+#include "Event.hpp"
+#include "IGame.hpp"
 #include <chrono>
 
 #define MAP_HEIGHT 21
@@ -126,4 +126,4 @@ class Pacman : public IGame {
         bool nextToTheWall(Player::Direction direction, int index);
 };
 
-#endif //ARCADE_PACMAN_HPP
+#endif//ARCADE_PACMAN_HPP

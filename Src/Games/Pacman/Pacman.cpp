@@ -6,8 +6,8 @@
 */
 
 #include "Pacman.hpp"
-#include "../Common/Object.hpp"
 #include "../Common/AEntity.hpp"
+#include "../Common/Object.hpp"
 #include <filesystem>
 #include <fstream>
 #include <iostream>
@@ -22,7 +22,7 @@ void Pacman::init(std::vector<std::shared_ptr<IEntity>> &entities)
     _score = 0;
     _direction = Player::Direction::RIGHT;
     int cpt = 0;
-    for (auto & i : _map) {
+    for (auto &i: _map) {
         for (int j = 0; j < MAP_WIDTH; j++)
             createEntity(i[j], entities, cpt, j);
         cpt++;
@@ -35,11 +35,10 @@ void Pacman::createEntity(char symbol, std::vector<std::shared_ptr<IEntity>> &en
     const std::string enemyTexturePath = "Src/Games/Pacman/Resources/textures/enemy.png";
 
     if (symbol == 'W') {
-         std::shared_ptr<Object> obj = std::make_shared<Object>(AEntity::ENTITY_TYPE::WALL);
-         obj->setPos(std::pair<int, int>{i, j});
-         entities.push_back(obj);
-    }
-    else if (symbol == 'G') {
+        std::shared_ptr<Object> obj = std::make_shared<Object>(AEntity::ENTITY_TYPE::WALL);
+        obj->setPos(std::pair<int, int>{i, j});
+        entities.push_back(obj);
+    } else if (symbol == 'G') {
         Enemy enemy1;
         Enemy enemy2;
         Enemy enemy3;
@@ -56,8 +55,7 @@ void Pacman::createEntity(char symbol, std::vector<std::shared_ptr<IEntity>> &en
         entities.push_back(_enemies[0]);
         entities.push_back(_enemies[1]);
         entities.push_back(_enemies[2]);
-    }
-    else if (symbol == 'P') {
+    } else if (symbol == 'P') {
         Player pacman;
         pacman.setIsMoving(false);
         pacman.setBoosted(false);
@@ -65,13 +63,11 @@ void Pacman::createEntity(char symbol, std::vector<std::shared_ptr<IEntity>> &en
         _player = std::make_shared<Player>(pacman);
         _player->setPos(std::pair<int, int>{i, j});
         entities.push_back(_player);
-    }
-    else if (symbol == '.') {
+    } else if (symbol == '.') {
         std::shared_ptr<Object> point = std::make_shared<Object>(AEntity::ENTITY_TYPE::POINT);
         point->setPos(std::pair<int, int>{i, j});
         entities.push_back(point);
-    }
-    else if (symbol == 'B') {
+    } else if (symbol == 'B') {
         std::shared_ptr<Object> point = std::make_shared<Object>(AEntity::ENTITY_TYPE::BONUS);
         point->setPos(std::pair<int, int>{i, j});
         entities.push_back(point);
@@ -112,7 +108,7 @@ void Pacman::updateEnemyPos(int index)
         pos.second = _enemies[index]->getPos().second - 1;
         _enemies[index]->setPos(pos);
     } else if (_enemies[index]->getDirection() == Player::Direction::RIGHT) {
-        pos.first = _enemies[index]->getPos().first ;
+        pos.first = _enemies[index]->getPos().first;
         pos.second = _enemies[index]->getPos().second + 1;
         _enemies[index]->setPos(pos);
     }
@@ -122,7 +118,7 @@ void Pacman::update(std::vector<std::shared_ptr<IEntity>> &entities, std::stack<
 {
     std::random_device dev;
     std::mt19937 rng(dev());
-    std::uniform_int_distribution<std::mt19937::result_type>dist4(0,3);
+    std::uniform_int_distribution<std::mt19937::result_type> dist4(0, 3);
 
     if (std::chrono::duration_cast<std::chrono::seconds>(std::chrono::high_resolution_clock::now() - _iaClock).count() > 0 && !(_enemies[0]->getIsMoving())) {
         _enemies[0]->setIsMoving(true);
@@ -143,8 +139,7 @@ void Pacman::update(std::vector<std::shared_ptr<IEntity>> &entities, std::stack<
         setPlayerDirection(events.top());
         events.pop();
     }
-    if (!isThereAWallOnDirection(_player->getDirection())
-        && std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::high_resolution_clock::now() - _clock).count() > 500) {
+    if (!isThereAWallOnDirection(_player->getDirection()) && std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::high_resolution_clock::now() - _clock).count() > 500) {
         updatePlayerPos();
         _clock = std::chrono::high_resolution_clock::now();
     }
@@ -168,36 +163,28 @@ IGame::GameState Pacman::getState() const
 
 bool Pacman::moveUp(Arcade::Evt input)
 {
-    if (input.evt_type == Arcade::Evt::KEY
-        && (input.key.key == 'z'
-            || input.key.key == 'Z'))
+    if (input.evt_type == Arcade::Evt::KEY && (input.key.key == 'z' || input.key.key == 'Z'))
         return true;
     return false;
 }
 
 bool Pacman::moveDown(Arcade::Evt input)
 {
-    if (input.evt_type == Arcade::Evt::KEY
-        && (input.key.key == 's'
-            || input.key.key == 'S'))
+    if (input.evt_type == Arcade::Evt::KEY && (input.key.key == 's' || input.key.key == 'S'))
         return true;
     return false;
 }
 
 bool Pacman::moveRight(Arcade::Evt input)
 {
-    if (input.evt_type == Arcade::Evt::KEY
-        && (input.key.key == 'd'
-            || input.key.key == 'D'))
+    if (input.evt_type == Arcade::Evt::KEY && (input.key.key == 'd' || input.key.key == 'D'))
         return true;
     return false;
 }
 
 bool Pacman::moveLeft(Arcade::Evt input)
 {
-    if (input.evt_type == Arcade::Evt::KEY
-        && (input.key.key == 'q'
-            || input.key.key == 'Q'))
+    if (input.evt_type == Arcade::Evt::KEY && (input.key.key == 'q' || input.key.key == 'Q'))
         return true;
     return false;
 }
@@ -237,7 +224,7 @@ void Pacman::updatePlayerPos()
         pos.second = _player->getPos().second - 1;
         _player->setPos(pos);
     } else if (_player->getDirection() == Player::Direction::RIGHT) {
-        pos.first = _player->getPos().first ;
+        pos.first = _player->getPos().first;
         pos.second = _player->getPos().second + 1;
         _player->setPos(pos);
     }
@@ -249,7 +236,7 @@ void Pacman::loadMap()
     std::ifstream file("Src/Games/Pacman/Resources/map");
 
     if (file.is_open()) {
-        for (auto & i : _map) {
+        for (auto &i: _map) {
             getline(file, line);
             std::cout << line << std::endl;
             i = line;

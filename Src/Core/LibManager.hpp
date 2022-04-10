@@ -41,19 +41,19 @@ class LibManager {
         /// \brief Opens a shared library, calls it's lib entrypoint and returns a pointer to a game instance
         /// \param libPath Path to the library
         /// \return A pointer to a game instance
-        IGame *openGame(const std::string& libPath);
+        IGame *openGame(const std::string &libPath);
 
         /// \brief Opens a shared library, calls it's lib entrypoint and returns a pointer to a graph instance
         /// \param libPath Path to the library
         /// \return A pointer to a graph instance
-        IGraph *openGraph(const std::string& libPath);
+        IGraph *openGraph(const std::string &libPath);
 
         /// \brief Closes a shared library
         /// \param libPath Path to the library
         /// \warning Not using this method after opening a library will lead to <b>Undefined Behaviour</b>
         /// \warning Using this method before opening a library will lead to <b>Undefined Behaviour</b>
         /// \throw LibraryException if the library cannot be closed
-        void closeLib(const std::string& libPath);
+        void closeLib(const std::string &libPath);
 
         /// \brief Closes all shared libraries
         void closeAllLibs();
@@ -80,18 +80,24 @@ class LibManager {
         /// \param gamePath the game path to add
         /// \note This method is only used to differentiate between games and graph libraries, it does not actually add the game to the lib manager
         /// \warning Using this method without using addLibs() will lead to <b>Undefined Behaviour</b>
-        inline void addGame(std::string &gamePath) { _gameLibsName.push_back(gamePath); }
+        inline void addGame(std::string &gamePath)
+        {
+            _gameLibsName.push_back(gamePath);
+        }
 
         /// \brief Add a graph to the list of available graphs
         /// \param graphPath the graph path to add
         /// \note This method is only used to differentiate between games and graph libraries, it does not actually add the graph to the lib manager
         /// \warning Using this method without using addLibs() will lead to <b>Undefined Behaviour</b>
-        inline void addGraph(std::string &graphPath) { _graphLibsName.push_back(graphPath); }
+        inline void addGraph(std::string &graphPath)
+        {
+            _graphLibsName.push_back(graphPath);
+        }
 
     private:
         /// \brief private enum to represent the type of the library type
         /// Used internally
-        enum class libType{
+        enum class libType {
             GAME,
             GRAPH
         };
@@ -103,7 +109,6 @@ class LibManager {
 
         /// \brief internal representation of the a graph library
         std::vector<std::string> _graphLibsName;
-
 };
 
 

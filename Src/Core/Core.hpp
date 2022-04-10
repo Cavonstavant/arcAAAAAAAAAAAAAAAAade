@@ -10,15 +10,15 @@
 
 /// \file Core.hpp
 
+#include "Event.hpp"
+#include "Exception.hpp"
 #include "IEntity.hpp"
 #include "IGame.hpp"
 #include "IGraph.hpp"
-#include "Event.hpp"
-#include "MainMenu/MainMenu.hpp"
 #include "LibManager.hpp"
-#include "Exception.hpp"
-#include <vector>
+#include "MainMenu/MainMenu.hpp"
 #include <filesystem>
+#include <vector>
 
 /// \brief Core class that the transfer of data between games and displays
 class Core {
@@ -40,63 +40,93 @@ class Core {
         explicit Core(std::vector<std::string> libsPath);
 
         /// \brief Dtor
-        inline ~Core() { _libManager.closeAllLibs(); }
+        inline ~Core()
+        {
+            _libManager.closeAllLibs();
+        }
 
         /// \brief Construct a core with an other core should not be possible
         Core(Core const &) = delete;
 
         /// \brief Assign a core to another should not be possible
-        Core& operator=(Core const &) = delete;
+        Core &operator=(Core const &) = delete;
 
         /// \brief Add an entity to the entities collection
         /// \param entity The entity to add
-        void addEntity(const std::shared_ptr<IEntity>& entity);
+        void addEntity(const std::shared_ptr<IEntity> &entity);
 
         /// \brief Remove an entity to the entities collection
         /// \param entity The entity collection to remove
-        void removeEntity(const std::shared_ptr<IEntity>& entity);
+        void removeEntity(const std::shared_ptr<IEntity> &entity);
 
         /// \brief Get the current state of the core
         /// \return The current state of the core
-        [[nodiscard]] inline State getState() const { return _state; }
+        [[nodiscard]] inline State getState() const
+        {
+            return _state;
+        }
 
         /// \brief Set the current state of the core
         /// \param state The new state of the core
-        inline void setState(State state) { _state = state; }
+        inline void setState(State state)
+        {
+            _state = state;
+        }
 
         /// \brief Get the current game of the core
         /// \return The current game of the core
-        [[nodiscard]] inline IGame* getGame() const { return _game; }
+        [[nodiscard]] inline IGame *getGame() const
+        {
+            return _game;
+        }
 
         /// \brief Set the current game of the core
         /// \param game The new game of the core
-        inline void setGame(IGame* game) { _game = game; }
+        inline void setGame(IGame *game)
+        {
+            _game = game;
+        }
 
-        void setGame(const std::string& libPath);
+        void setGame(const std::string &libPath);
 
         /// \brief Get the current graphical display of the core
         /// \return The current graphical display of the core
-        [[nodiscard]] inline IGraph* getGraph() const { return _graph; }
+        [[nodiscard]] inline IGraph *getGraph() const
+        {
+            return _graph;
+        }
 
         /// \brief Set the current graphical display of the core
         /// \param graph The new graphical display of the core
-        inline void setGraph(IGraph* graph)  { _graph = graph; }
+        inline void setGraph(IGraph *graph)
+        {
+            _graph = graph;
+        }
 
-        void setGraph(const std::string& libPath);
+        void setGraph(const std::string &libPath);
 
         /// \brief Get the current event
         /// \return The current event
-        [[nodiscard]] inline Arcade::Evt getLastEvent() const { return _event.top(); }
+        [[nodiscard]] inline Arcade::Evt getLastEvent() const
+        {
+            return _event.top();
+        }
 
         /// \brief Pop the last event on the stack
         /// \warning Not setting up any graphical display before polling any event will result in an <b>undefined behavior</b>
-        inline void popEvent() { return _event.pop(); }
+        inline void popEvent()
+        {
+            return _event.pop();
+        }
 
         /// \brief Set the the current event
         /// \param event The new last event produced by the graphical display
         /// \note if the event is of type <b>WINDOW_CLOSE</b> while the core is in the <b>GAME</b>, the core will be set to <b>MENU</b> state
         /// \note if the event is of type <b>WINDOW_CLOSE</b>, the core will be set to <b>EXIT</b> state
-        inline void setEvent(Arcade::Evt event) { _event.push(event); }
+        inline void setEvent(Arcade::Evt event)
+        {
+            _event.push(event);
+        }
 
         /// \brief Update the data of all entities by passing them to the game
         void update();
@@ -111,14 +141,26 @@ class Core {
         void processEvents();
 
 
-        std::string getFutureGraph() { return _futureGraph; }
+        std::string getFutureGraph()
+        {
+            return _futureGraph;
+        }
 
         /// \brief Set the future graphical display to be used
-        void setFutureGraph(std::string &futureGraph) { _futureGraph = futureGraph; }
+        void setFutureGraph(std::string &futureGraph)
+        {
+            _futureGraph = futureGraph;
+        }
 
-        std::string getFutureGame() { return _futureGame; }
+        std::string getFutureGame()
+        {
+            return _futureGame;
+        }
 
-        void setFutureGame(std::string &futureGame) { _futureGame = futureGame; }
+        void setFutureGame(std::string &futureGame)
+        {
+            _futureGame = futureGame;
+        }
 
     private:
         /// \brief The library manager containing all the libraries
