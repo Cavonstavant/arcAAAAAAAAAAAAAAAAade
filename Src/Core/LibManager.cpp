@@ -61,7 +61,7 @@ IGraph *LibManager::openGraph(const std::string &libPath) {
 
 void LibManager::closeLib(const std::string& libPath)
 {
-    auto it = _libsHandle.find(libPath);
+    auto it = _libsHandle.find(std::filesystem::absolute(std::filesystem::path(libPath)));
 
     if (it == _libsHandle.end())
         throw LibraryEX("Library not found", Logger::CRITICAL);
@@ -115,6 +115,19 @@ void LibManager::closeAllLibs()
 
 IGame *LibManager::cycleGameLibs(std::string &currentLib, bool direction)
 {
+    for (const auto& it : _libsHandle) {
+        if (it.first == currentLib) {
+            for (const auto& sub_it : _libsHandle) {
+                if (direction) {
+                    if (it.first > currentLib)
+                        return openGame(it.second);
+                } else {
+                    if (it.first < currentLib)
+                        return openGame(it.second);
+                }
+            }
+        }
+    }
     return nullptr;
 }
 
