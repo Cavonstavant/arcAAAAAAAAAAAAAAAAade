@@ -47,6 +47,8 @@ void Core::removeEntity(const std::shared_ptr<IEntity> &entity)
 void Core::update()
 {
     Arcade::Evt evt{};
+    std::stack<Arcade::Evt> eventBuffer;
+    std::stack<Arcade::Evt> eventStack;
 
     while ((evt = _graph->getInput()).evt_type != Arcade::Evt::NONE) {
         if (evt.evt_type == Arcade::Evt::EvtType::WIN_CLOSE ||
@@ -56,15 +58,21 @@ void Core::update()
             _game->close(_entities);
             _state = State::EXIT;
             break;
-        } else if (evt.evt_type == Arcade::Evt::EvtType::KEY)
+        } else if (evt.evt_type == Arcade::Evt::EvtType::KEY) {
             _event.push(evt);
+            eventBuffer.push(evt);
+        }
+    }
+    while (!eventBuffer.empty()) {
+        eventStack.push(eventBuffer.top());
+        eventBuffer.pop();
     }
     if (_game->getIsGameOver())
         _state = State::MAIN_MENU;
     if (_state == State::MAIN_MENU) {
-        _mainMenu.update(_entities, _event);
+        _mainMenu.update(_entities, eventStack);
     } else if (_state == State::GAME) {
-        _game->update(_entities, _event);
+        _game->update(_entities, eventStack);
     } else
         _game->close(_entities);
 }
