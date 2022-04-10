@@ -5,6 +5,8 @@
 ** IEntity
 */
 
+/// \file Src/CommonInterface/include/IEntity.hpp
+
 #ifndef IENTITY_HPP_
 #define IENTITY_HPP_
 

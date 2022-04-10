@@ -5,6 +5,8 @@
 ** Created by hjulien,
 */
 
+/// \file Src/Games/Common/Object.hpp
+
 #ifndef ARCADE_OBJECT_HPP
 #define ARCADE_OBJECT_HPP
 

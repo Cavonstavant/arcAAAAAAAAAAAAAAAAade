@@ -5,6 +5,8 @@
 ** IDisplay
 */
 
+/// \file Src/CommonInterface/include/IGraph.hpp
+
 #ifndef ARCADE_IDISPLAY_HPP
 #define ARCADE_IDISPLAY_HPP
 

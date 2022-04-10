@@ -5,6 +5,8 @@
 ** Exception
 */
 
+/// \file Src/Core/Exception.hpp
+
 #ifndef ARCADE_EXCEPTION_HPP
 #define ARCADE_EXCEPTION_HPP
 
@@ -48,6 +50,7 @@
 #define LOGGER_COLOR_WHITE "\x1B[37m"
 #define LOGGER_COLOR_BOLD "\x1B[1m"
 
+/// \brief Base exception class for all exceptions in the project
 class ArcadeException : public std::exception {
     public:
         /// \brief DO NOT USE THIS CONSTRUCTOR, PLEASE USE THE MACROS DEFINED ABOVE IN EXCEPTION.HPP (ArcadeEX, FactoryEX, ...)

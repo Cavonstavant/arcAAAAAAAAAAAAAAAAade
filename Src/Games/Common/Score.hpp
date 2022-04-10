@@ -5,12 +5,15 @@
 ** Score
 */
 
+/// \file Src/Games/Common/Score.hpp
+
 #pragma once
 
 #include "Object.hpp"
 #include <functional>
 
-/// \class Score class
+/// \brief Score object
+/// \deprecated
 class Score : public Object {
     public:
         /// \brief Constructor

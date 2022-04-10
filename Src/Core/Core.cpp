@@ -11,7 +11,6 @@
 #include "Object.hpp"
 #include "Player.hpp"
 #include "TextEntity.hpp"
-#include <iostream>
 #include <string>
 #include <vector>
 

@@ -5,6 +5,8 @@
 ** Logger
 */
 
+/// \file Src/Core/Logger.hpp
+
 #ifndef LOGGER_HPP_
 #define LOGGER_HPP_
 

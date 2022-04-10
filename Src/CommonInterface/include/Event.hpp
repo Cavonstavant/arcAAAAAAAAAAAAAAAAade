@@ -5,11 +5,13 @@
 ** Event
 */
 
-/// \file include/Event.hpp
+/// \file Src/CommonInterface/include/Event.hpp
 
 #ifndef ARCADECOMMONINTERFACE_EVENT_HPP
 #define ARCADECOMMONINTERFACE_EVENT_HPP
 
+/// \namespace Arcade
+/// \brief Namespace for the Arcade project, used only by Evt and libraries entrypoints to avoid type collision
 namespace Arcade {
 
     /// \brief Represents a generic event interface

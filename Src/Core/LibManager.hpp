@@ -5,7 +5,7 @@
 ** LibManager
 */
 
-/// \file LibManager.hpp
+/// \file Src/Core/LibManager.hpp
 
 #ifndef ARCADE_LIBMANAGER_HPP
 #define ARCADE_LIBMANAGER_HPP

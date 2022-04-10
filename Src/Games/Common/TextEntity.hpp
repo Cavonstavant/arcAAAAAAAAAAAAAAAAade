@@ -5,6 +5,8 @@
 ** TextEntity
 */
 
+/// \file Src/Games/Common/TextEntity.hpp
+
 #ifndef ARCADE_TEXTENTITY_HPP
 #define ARCADE_TEXTENTITY_HPP
 
@@ -13,7 +15,6 @@
 #include <string>
 
 /// \brief TextEntity class inherits from AEntity
-/// \param No param to construct all value by default
 class TextEntity : public AEntity {
     public:
         /// \brief Constructor
