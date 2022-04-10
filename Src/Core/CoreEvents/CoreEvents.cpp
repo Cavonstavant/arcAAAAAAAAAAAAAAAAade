@@ -10,58 +10,58 @@
 
 #include "../Core.hpp"
 
-static void coreEventSwitchGame(const std::string& key, IGame *game, LibManager *libManager)
+void Core::coreEventSwitchGame(const std::string& key)
 {
-    std::string currentGameName = game->getLibraryName();
+    std::string currentGameName = _game->getLibraryName();
 
     if (key == "h" || key == "H") {
         try {
-            libManager->closeLib(currentGameName);
-            game = libManager->cycleGameLibs(currentGameName, false);
+            _libManager.closeLib(currentGameName);
+            _game = _libManager.cycleGameLibs(currentGameName, false);
         } catch (...) {
             return;
         }
-        ArcadeEX("Successfully changed the game library, current game library: " + game->getLibraryName(), Logger::INFO);
+        ArcadeEX("Successfully changed the game library, current game library: " + _game->getLibraryName(), Logger::INFO);
     }
     if (key == "j" || key == "J") {
         try {
-            libManager->closeLib(currentGameName);
-            game = libManager->cycleGameLibs(currentGameName, true);
+            _libManager.closeLib(currentGameName);
+            _game = _libManager.cycleGameLibs(currentGameName, true);
         } catch (...) {
             return;
         }
-        ArcadeEX("Successfully changed the game library, current game library: " + game->getLibraryName(), Logger::INFO);
+        ArcadeEX("Successfully changed the game library, current game library: " + _game->getLibraryName(), Logger::INFO);
     }
 }
 
-static void coreEventSwitchGraph(const std::string &key, IGraph *graph, LibManager *lib)
+void Core::coreEventSwitchGraph(const std::string &key)
 {
-    std::string graphName = graph->getLibraryName();
+    std::string graphName = _graph->getLibraryName();
 
     if (key == "k" || key == "K") {
         try {
-            lib->closeLib(graphName);
-            graph = lib->cycleGraphLibs(graphName, false);
+            _libManager.closeLib(graphName);
+            _graph = _libManager.cycleGraphLibs(graphName, false);
         } catch (...) {
             return;
         }
-        ArcadeEX("Successfully changed the graph library, current graph library: " + graph->getLibraryName(), Logger::INFO);
+        ArcadeEX("Successfully changed the graph library, current graph library: " + _graph->getLibraryName(), Logger::INFO);
     }
     if (key == "l" || key == "L") {
         try {
-            lib->closeLib(graphName);
-            graph = lib->cycleGraphLibs(graphName, true);
+            _libManager.closeLib(graphName);
+            _graph = _libManager.cycleGraphLibs(graphName, true);
         } catch (...) {
             return;
         }
-        ArcadeEX("Successfully changed the graph library, current graph library: " + graph->getLibraryName(), Logger::INFO);
+        ArcadeEX("Successfully changed the graph library, current graph library: " + _graph->getLibraryName(), Logger::INFO);
     }
 }
 
-void manageCoreKeyEvents(std::string &key , IGame *game, IGraph *graph, LibManager *lib)
+void Core::manageCoreKeyEvents(std::string &key)
 {
     if (key == "h" || key == "H" || key == "j" || key == "j")
-        return coreEventSwitchGame(key, game, lib);
+        return coreEventSwitchGame(key);
     if (key == "k" || key == "K" || key == "l" || key == "L")
-        return coreEventSwitchGraph(key, graph, lib);
+        return coreEventSwitchGraph(key);
 }
