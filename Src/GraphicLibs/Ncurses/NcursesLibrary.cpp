@@ -51,7 +51,7 @@ bool NcursesLibrary::clearWindow()
 bool NcursesLibrary::displayWindow()
 {
     refresh();
-    usleep(50000);
+    napms(500);
     return true;
 }
 
@@ -126,9 +126,14 @@ Arcade::Evt NcursesLibrary::getInput()
     Arcade::Evt evt{};
     Arcade::Evt::KeyEvt keyEvt{};
     // timeout(0);
-    int ch = getch();
+    int key = getch();
 
-    switch (ch) {
+    if (key == ERR) {
+        evt.evt_type = Arcade::Evt::NONE;
+        return evt;
+    }
+
+    switch (key) {
         case KEY_LEFT:
             keyEvt.key = 'Q';
             evt.key = keyEvt;
