@@ -21,11 +21,7 @@
 class LibManager {
     public:
         /// \brief Creating a library manager without at least a path to a library should be impossible
-        LibManager();
-
-        /// \brief Creating a library manager with multiple paths to libraries
-        /// \param libPaths Paths to the game libraries
-        LibManager(const std::vector<std::string>& libPaths);
+        LibManager() = default;
 
         /// \brief A library manager should be able to be copied
         LibManager(const LibManager &) = delete;
@@ -80,6 +76,18 @@ class LibManager {
         /// \throw LibraryException if the library cannot be opened
         IGraph *cycleGraphLibs(std::string &currentLib, bool direction = true);
 
+        /// \brief Add a game to the list of available games
+        /// \param gamePath the game path to add
+        /// \note This method is only used to differentiate between games and graph libraries, it does not actually add the game to the lib manager
+        /// \warning Using this method without using addLibs() will lead to <b>Undefined Behaviour</b>
+        inline void addGame(std::string &gamePath) { _gameLibsName.push_back(gamePath); }
+
+        /// \brief Add a graph to the list of available graphs
+        /// \param graphPath the graph path to add
+        /// \note This method is only used to differentiate between games and graph libraries, it does not actually add the graph to the lib manager
+        /// \warning Using this method without using addLibs() will lead to <b>Undefined Behaviour</b>
+        inline void addGraph(std::string &graphPath) { _graphLibsName.push_back(graphPath); }
+
     private:
         /// \brief private enum to represent the type of the library type
         /// Used internally
@@ -87,8 +95,14 @@ class LibManager {
             GAME,
             GRAPH
         };
-        ///\note Map of the libraries' handles represented like so {libPath, libHandle}
+        ///\brief Map of the libraries' handles represented like so {libPath, libHandle}
         std::map<std::string, void *> _libsHandle;
+
+        /// \brief internal representation of the a game library
+        std::vector<std::string> _gameLibsName;
+
+        /// \brief internal representation of the a graph library
+        std::vector<std::string> _graphLibsName;
 
 };
 

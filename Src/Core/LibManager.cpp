@@ -16,17 +16,6 @@ extern "C" {
 #include <dlfcn.h>
 }
 
-LibManager::LibManager()
-{
-}
-
-LibManager::LibManager(const std::vector<std::string>& libPaths) {
-    addLibs(const_cast<std::vector<std::string> &>(libPaths));
-    for (auto &libPath: libPaths) {
-        _libsHandle.emplace(libPath, nullptr);
-    }
-}
-
 IGame *LibManager::openGame(const std::string &libPath) {
     if (_libsHandle.find(std::filesystem::absolute(std::filesystem::path(libPath))) == _libsHandle.end())
         throw ArcadeEX(libPath + " not found", Logger::HIGH);
@@ -115,19 +104,19 @@ void LibManager::closeAllLibs()
 
 IGame *LibManager::cycleGameLibs(std::string &currentLib, bool direction)
 {
-    for (const auto& it : _libsHandle) {
-        if (it.first == currentLib) {
-            for (const auto& sub_it : _libsHandle) {
-                if (direction) {
-                    if (it.first > currentLib)
-                        return openGame(it.second);
-                } else {
-                    if (it.first < currentLib)
-                        return openGame(it.second);
-                }
-            }
-        }
-    }
+//    auto begin = _libsHandle.begin();
+//    auto end = _libsHandle.end();
+//
+//    if (!direction)
+//        std::swap(begin, end);
+//    for (auto it = begin; it != end;) {
+//        if (it->first == currentLib) {
+//            if (it == end)
+//                it = begin;
+//            return openGame(it->first);
+//        }
+//        direction ? ++it : --it;
+//    }
     return nullptr;
 }
 
