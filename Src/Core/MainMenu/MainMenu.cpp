@@ -172,6 +172,7 @@ void MainMenu::close(std::vector<std::shared_ptr<IEntity>> &entities)
 
 void MainMenu::manageClickEvent(Arcade::Evt &event, std::vector<std::shared_ptr<IEntity>> &entities)
 {
+    (void) entities;
     for (auto &button: _buttons) {
         if (button->isClicked(event.mouse.x, event.mouse.y)) {
             button->callback();
@@ -181,6 +182,7 @@ void MainMenu::manageClickEvent(Arcade::Evt &event, std::vector<std::shared_ptr<
 
 void MainMenu::manageKeyEvent(Arcade::Evt &event, std::vector<std::shared_ptr<IEntity>> &entities)
 {
+    (void) entities;
     char c = 'a';
     for (auto &graph: _graphicalLibraries) {
         if (c >= 'z')
