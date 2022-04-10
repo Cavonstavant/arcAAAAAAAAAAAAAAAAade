@@ -381,12 +381,72 @@ $(document).ready(function(){initNavTree('_sfml_library_8cpp_source.html',''); i
 <div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;                keyEvt.<a class="code" href="struct_arcade_1_1_evt_1_1_key_evt.html#ad3315d3165d4a76a92a222477b727918">key</a> = <span class="charliteral">&#39;z&#39;</span>;</div>
 <div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;                evt.<a class="code" href="struct_arcade_1_1_evt.html#a1e0216c2bf9391639cb1a34417fa8aab">key</a> = keyEvt;</div>
 <div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;                <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;            <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;                <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        }</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    }</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    <span class="keywordflow">return</span> evt;</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;}</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;            <span class="keywordflow">case</span> sf::Keyboard::Numpad0:</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;            <span class="keywordflow">case</span> sf::Keyboard::Num0:</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;                evt.<a class="code" href="struct_arcade_1_1_evt.html#a4ba7514d4153a08a310541d0806745b3">evt_type</a> = <a class="code" href="struct_arcade_1_1_evt.html#aa27a273a8c2158b5a41ae12019813ea3aed4592e60f9d30b31f88ceb546b2655e">Arcade::Evt::KEY</a>;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;                keyEvt.<a class="code" href="struct_arcade_1_1_evt_1_1_key_evt.html#ad3315d3165d4a76a92a222477b727918">key</a> = <span class="charliteral">&#39;0&#39;</span>;</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;                evt.<a class="code" href="struct_arcade_1_1_evt.html#a1e0216c2bf9391639cb1a34417fa8aab">key</a> = keyEvt;</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;            <span class="keywordflow">case</span> sf::Keyboard::Numpad1:</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;            <span class="keywordflow">case</span> sf::Keyboard::Num1:</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;                evt.<a class="code" href="struct_arcade_1_1_evt.html#a4ba7514d4153a08a310541d0806745b3">evt_type</a> = <a class="code" href="struct_arcade_1_1_evt.html#aa27a273a8c2158b5a41ae12019813ea3aed4592e60f9d30b31f88ceb546b2655e">Arcade::Evt::KEY</a>;</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;                keyEvt.<a class="code" href="struct_arcade_1_1_evt_1_1_key_evt.html#ad3315d3165d4a76a92a222477b727918">key</a> = <span class="charliteral">&#39;1&#39;</span>;</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;                evt.<a class="code" href="struct_arcade_1_1_evt.html#a1e0216c2bf9391639cb1a34417fa8aab">key</a> = keyEvt;</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;            <span class="keywordflow">case</span> sf::Keyboard::Numpad2:</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;            <span class="keywordflow">case</span> sf::Keyboard::Num2:</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;                evt.<a class="code" href="struct_arcade_1_1_evt.html#a4ba7514d4153a08a310541d0806745b3">evt_type</a> = <a class="code" href="struct_arcade_1_1_evt.html#aa27a273a8c2158b5a41ae12019813ea3aed4592e60f9d30b31f88ceb546b2655e">Arcade::Evt::KEY</a>;</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;                keyEvt.<a class="code" href="struct_arcade_1_1_evt_1_1_key_evt.html#ad3315d3165d4a76a92a222477b727918">key</a> = <span class="charliteral">&#39;2&#39;</span>;</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;                evt.<a class="code" href="struct_arcade_1_1_evt.html#a1e0216c2bf9391639cb1a34417fa8aab">key</a> = keyEvt;</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;            <span class="keywordflow">case</span> sf::Keyboard::Numpad3:</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;            <span class="keywordflow">case</span> sf::Keyboard::Num3:</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;                evt.<a class="code" href="struct_arcade_1_1_evt.html#a4ba7514d4153a08a310541d0806745b3">evt_type</a> = <a class="code" href="struct_arcade_1_1_evt.html#aa27a273a8c2158b5a41ae12019813ea3aed4592e60f9d30b31f88ceb546b2655e">Arcade::Evt::KEY</a>;</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;                keyEvt.<a class="code" href="struct_arcade_1_1_evt_1_1_key_evt.html#ad3315d3165d4a76a92a222477b727918">key</a> = <span class="charliteral">&#39;3&#39;</span>;</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;                evt.<a class="code" href="struct_arcade_1_1_evt.html#a1e0216c2bf9391639cb1a34417fa8aab">key</a> = keyEvt;</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;            <span class="keywordflow">case</span> sf::Keyboard::Numpad4:</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;            <span class="keywordflow">case</span> sf::Keyboard::Num4:</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;                evt.<a class="code" href="struct_arcade_1_1_evt.html#a4ba7514d4153a08a310541d0806745b3">evt_type</a> = <a class="code" href="struct_arcade_1_1_evt.html#aa27a273a8c2158b5a41ae12019813ea3aed4592e60f9d30b31f88ceb546b2655e">Arcade::Evt::KEY</a>;</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;                keyEvt.<a class="code" href="struct_arcade_1_1_evt_1_1_key_evt.html#ad3315d3165d4a76a92a222477b727918">key</a> = <span class="charliteral">&#39;4&#39;</span>;</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;                evt.<a class="code" href="struct_arcade_1_1_evt.html#a1e0216c2bf9391639cb1a34417fa8aab">key</a> = keyEvt;</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;            <span class="keywordflow">case</span> sf::Keyboard::Numpad5:</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;            <span class="keywordflow">case</span> sf::Keyboard::Num5:</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;                evt.<a class="code" href="struct_arcade_1_1_evt.html#a4ba7514d4153a08a310541d0806745b3">evt_type</a> = <a class="code" href="struct_arcade_1_1_evt.html#aa27a273a8c2158b5a41ae12019813ea3aed4592e60f9d30b31f88ceb546b2655e">Arcade::Evt::KEY</a>;</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;                keyEvt.<a class="code" href="struct_arcade_1_1_evt_1_1_key_evt.html#ad3315d3165d4a76a92a222477b727918">key</a> = <span class="charliteral">&#39;5&#39;</span>;</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;                evt.<a class="code" href="struct_arcade_1_1_evt.html#a1e0216c2bf9391639cb1a34417fa8aab">key</a> = keyEvt;</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;            <span class="keywordflow">case</span> sf::Keyboard::Numpad6:</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;            <span class="keywordflow">case</span> sf::Keyboard::Num6:</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;                evt.<a class="code" href="struct_arcade_1_1_evt.html#a4ba7514d4153a08a310541d0806745b3">evt_type</a> = <a class="code" href="struct_arcade_1_1_evt.html#aa27a273a8c2158b5a41ae12019813ea3aed4592e60f9d30b31f88ceb546b2655e">Arcade::Evt::KEY</a>;</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;                keyEvt.<a class="code" href="struct_arcade_1_1_evt_1_1_key_evt.html#ad3315d3165d4a76a92a222477b727918">key</a> = <span class="charliteral">&#39;6&#39;</span>;</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;                evt.<a class="code" href="struct_arcade_1_1_evt.html#a1e0216c2bf9391639cb1a34417fa8aab">key</a> = keyEvt;</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;            <span class="keywordflow">case</span> sf::Keyboard::Numpad7:</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;            <span class="keywordflow">case</span> sf::Keyboard::Num7:</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;                evt.<a class="code" href="struct_arcade_1_1_evt.html#a4ba7514d4153a08a310541d0806745b3">evt_type</a> = <a class="code" href="struct_arcade_1_1_evt.html#aa27a273a8c2158b5a41ae12019813ea3aed4592e60f9d30b31f88ceb546b2655e">Arcade::Evt::KEY</a>;</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;                keyEvt.<a class="code" href="struct_arcade_1_1_evt_1_1_key_evt.html#ad3315d3165d4a76a92a222477b727918">key</a> = <span class="charliteral">&#39;7&#39;</span>;</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;                evt.<a class="code" href="struct_arcade_1_1_evt.html#a1e0216c2bf9391639cb1a34417fa8aab">key</a> = keyEvt;</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;            <span class="keywordflow">case</span> sf::Keyboard::Numpad8:</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;            <span class="keywordflow">case</span> sf::Keyboard::Num8:</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;                evt.<a class="code" href="struct_arcade_1_1_evt.html#a4ba7514d4153a08a310541d0806745b3">evt_type</a> = <a class="code" href="struct_arcade_1_1_evt.html#aa27a273a8c2158b5a41ae12019813ea3aed4592e60f9d30b31f88ceb546b2655e">Arcade::Evt::KEY</a>;</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;                keyEvt.<a class="code" href="struct_arcade_1_1_evt_1_1_key_evt.html#ad3315d3165d4a76a92a222477b727918">key</a> = <span class="charliteral">&#39;8&#39;</span>;</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;                evt.<a class="code" href="struct_arcade_1_1_evt.html#a1e0216c2bf9391639cb1a34417fa8aab">key</a> = keyEvt;</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;            <span class="keywordflow">case</span> sf::Keyboard::Numpad9:</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;            <span class="keywordflow">case</span> sf::Keyboard::Num9:</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;                evt.<a class="code" href="struct_arcade_1_1_evt.html#a4ba7514d4153a08a310541d0806745b3">evt_type</a> = <a class="code" href="struct_arcade_1_1_evt.html#aa27a273a8c2158b5a41ae12019813ea3aed4592e60f9d30b31f88ceb546b2655e">Arcade::Evt::KEY</a>;</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;                keyEvt.<a class="code" href="struct_arcade_1_1_evt_1_1_key_evt.html#ad3315d3165d4a76a92a222477b727918">key</a> = <span class="charliteral">&#39;9&#39;</span>;</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;                evt.<a class="code" href="struct_arcade_1_1_evt.html#a1e0216c2bf9391639cb1a34417fa8aab">key</a> = keyEvt;</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;            <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;        }</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    }</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;    <span class="keywordflow">return</span> evt;</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclass_i_entity_html_a061d23192c062383f400f3789e189369"><div class="ttname"><a href="class_i_entity.html#a061d23192c062383f400f3789e189369">IEntity::getTexturePath</a></div><div class="ttdeci">virtual std::string getTexturePath(void) const =0</div><div class="ttdoc">Get the texturePAth of the Entity.</div></div>
