@@ -183,6 +183,7 @@ void Core::setGame(const std::string &lib)
     if (!_futureGraph.empty())
         _entities.clear();
     _game->init(_entities);
+    _game->start();
 }
 
 void Core::setGraph(const std::string &lib)
