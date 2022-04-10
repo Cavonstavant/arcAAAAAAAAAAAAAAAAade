@@ -28,6 +28,7 @@ void Nibbler::init(std::vector<std::shared_ptr<IEntity>> &entities)
     _lastTailPos = std::make_pair(0, 0);
     _speed = 1;
     Object fruit = createNewFruit(rand() % GRID_WIDTH, rand() % GRID_HEIGHT);
+    fruit.setPos(std::make_pair((rand() % (GRID_WIDTH - 2)) + 1, (rand() % (GRID_HEIGHT - 2)) + 1));
     _fruit = std::make_shared<Object>(fruit);
 
     initEntities(entities);
@@ -188,7 +189,7 @@ std::pair<int, int> Nibbler::getNextPos(std::pair<int, int> pos, IEntity::Direct
 
 void Nibbler::moveSnake()
 {
-    if (getClockTimeMS() * _speed > 250) {
+    if (getClockTimeMS() * _speed > 200) {
         resetClock();
         IEntity::Direction dirPrev = _snake.front()->getDirection();
         IEntity::Direction dirBuffer;
@@ -228,7 +229,7 @@ bool Nibbler::snakeIsOnAFruit(std::vector<std::shared_ptr<IEntity>> &entities)
         std::shared_ptr<Player> tailPtr = std::make_shared<Player>(tail);
         _snake.push_back(tailPtr);
         entities.push_back(tailPtr);
-        _score += 100;
+        _score += 2;
         _fruit->setPos(std::make_pair((rand() % (GRID_WIDTH - 2)) + 1, (rand() % (GRID_HEIGHT - 2)) + 1));
         return true;
     }

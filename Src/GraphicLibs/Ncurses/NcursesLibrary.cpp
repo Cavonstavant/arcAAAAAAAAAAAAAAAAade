@@ -18,8 +18,14 @@ NcursesLibrary::~NcursesLibrary()
 void NcursesLibrary::init()
 {
     initscr();
-    start_color();
+    // if (has_colors())
+    //     start_color();
     curs_set(0);
+    keypad(stdscr, TRUE);
+    cbreak();
+    noecho();
+    nodelay(stdscr, TRUE);
+    refresh();
 }
 
 void NcursesLibrary::close()
@@ -48,17 +54,20 @@ bool NcursesLibrary::drawCircle(std::pair<int, int> pos, int radius, Color color
     return drawRect(topLeftCorner, radius * 2, radius * 2, color);
 }
 
+#include <iostream>
+
 bool NcursesLibrary::drawRect(std::pair<int, int> pos, int width, int height, Color color)
 {
     init_pair(1, color.TB, color.TF);
     attron(COLOR_PAIR(1));
 
-    move(pos.first, pos.second);
+    // move(pos.first, pos.second);
     for (int i = 0; i < width; i++) {
         for (int j = 0; j < height; j++) {
-            addch(' ');
+            mvaddch(pos.first + i, pos.second + j, ' ');
+            // addch(' ');
         }
-        move(pos.first, pos.second + i);
+        // move(pos.first, pos.second + i);
     }
 
     attroff(COLOR_PAIR(1));
@@ -85,12 +94,13 @@ bool NcursesLibrary::drawEntity(IEntity &entity, std::pair<int, int> pos)
     init_pair(1, entity.getTermTexture().second.first, entity.getTermTexture().second.second);
     attron(COLOR_PAIR(1));
 
-    move(pos.first, pos.second);
+    // move(pos.first, pos.second);
     for (int i = 0; i < entity.getSize().first; i++) {
         for (int j = 0; j < entity.getSize().second; j++) {
-            addch(texture);
+            mvaddch(pos.first + i, pos.second + j, texture);
+            // addch(texture);
         }
-        move(pos.first, pos.second + i);
+        // move(pos.first, pos.second + i);
     }
 
     attroff(COLOR_PAIR(1));
@@ -107,6 +117,7 @@ Arcade::Evt NcursesLibrary::getInput()
 {
     Arcade::Evt evt{};
     Arcade::Evt::KeyEvt keyEvt{};
+    // timeout(0);
     int ch = getch();
 
     switch (ch) {
