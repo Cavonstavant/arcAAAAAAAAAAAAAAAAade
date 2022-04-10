@@ -231,17 +231,9 @@ void MainMenu::getAllLibraries()
             if (!handle)
                 continue;
             if (dlsym(handle, "getGraphInstance")) {
-                libNameFct = dlsym(handle, "getLibraryName");
-                if (!libNameFct)
-                    _graphicalLibraries.push_back(entry.path());
-                else
-                    _graphicalLibraries.push_back(reinterpret_cast<std::string(*)()>(libNameFct)());
+                _graphicalLibraries.push_back(entry.path());
             } else if (dlsym(handle, "getGameInstance")) {
-                libNameFct = dlsym(handle, "getLibraryName");
-                if (!libNameFct)
-                    _gameLibraries.push_back(entry.path());
-                else
-                    _gameLibraries.push_back(reinterpret_cast<std::string(*)()>(libNameFct)());
+                _gameLibraries.push_back(entry.path());
             }
 //            dlclose(handle);
         } catch (std::exception &e) {
