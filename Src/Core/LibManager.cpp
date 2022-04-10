@@ -44,15 +44,17 @@ IGame *LibManager::openGame(const std::string &libPath)
 
 IGraph *LibManager::openGraph(const std::string &libPath)
 {
+    void *(*getInstance)();
     if (_libsHandle.find(std::filesystem::absolute(std::filesystem::path(libPath))) == _libsHandle.end())
         throw ArcadeEX(libPath + " not found", Logger::HIGH);
+    if (_libsHandle[libPath]) {
+        getInstance = (void *(*) ()) dlsym(_libsHandle[libPath], "getGraphInstance");
+        return ((IGraph *) getInstance());
+    }
     void *libHandle = dlopen(libPath.c_str(), RTLD_NOW);
     if (libHandle == nullptr)
         throw LibraryEX(dlerror(), Logger::CRITICAL);
-    if (_libsHandle[libPath])
-        throw ArcadeEX(libPath + " is already opened", Logger::HIGH);
     _libsHandle[libPath] = libHandle;
-    void *(*getInstance)();
     getInstance = (void *(*) ()) dlsym(libHandle, "getGraphInstance");
     if (getInstance == nullptr)
         throw LibraryEX(dlerror(), Logger::CRITICAL);

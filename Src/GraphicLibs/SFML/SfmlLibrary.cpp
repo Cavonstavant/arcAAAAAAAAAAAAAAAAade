@@ -12,8 +12,8 @@ void SfmlLibrary::init()
 {
     const std::string font = "Src/GraphicLibs/Resources/Font/ARCADE_N.TTF";
 
+    _font->loadFromFile(std::filesystem::absolute(std::filesystem::path(font)).string());
     _videoMode = sf::VideoMode(DEFAULT_WINDOW_WIDTH, DEFAULT_WINDOW_HEIGHT, 32);
-    _font.loadFromFile(std::filesystem::absolute(std::filesystem::path(font)).string());
     _window.create(_videoMode, "Window");
     _window.setFramerateLimit(32);
 }
@@ -70,16 +70,17 @@ bool SfmlLibrary::drawRect(std::pair<int, int> pos, int width, int height, Color
 
 bool SfmlLibrary::drawText(std::pair<int, int> pos, const std::string &content, Color color)
 {
-    sf::Text text;
+    auto *text = new sf::Text;
     sf::Color sfColor(color.R, color.G, color.B, color.A);
-    sf::Font newFont(_font);
 
-    text.setFont(newFont);
-    text.setPosition(GRID_INT(pos.second), GRID_INT(pos.first));
-    text.setString(content);
-    text.setFillColor(sfColor);
 
-    _window.draw(text);
+    text->setFont(*_font);
+    text->setPosition(GRID_INT(pos.second), GRID_INT(pos.first));
+    text->setString(content);
+    text->setFillColor(sfColor);
+
+    _window.draw(*text);
+    delete text;
     return true;
 }
 

@@ -18,7 +18,9 @@
 class SfmlLibrary : public IGraph {
     public:
         /// \brief Default Constructor
-        SfmlLibrary() = default;
+        SfmlLibrary() : _font(new sf::Font())
+        {
+        }
 
         /// \brief Default destructor
         ~SfmlLibrary() override = default;
@@ -53,7 +55,7 @@ class SfmlLibrary : public IGraph {
         sf::VideoMode _videoMode;
 
         /// \brief Default font for every sf::Text in the SfmlLibrary
-        sf::Font _font;
+        sf::Font *_font;
 };
 
 

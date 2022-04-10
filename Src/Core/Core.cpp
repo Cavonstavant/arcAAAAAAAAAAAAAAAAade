@@ -11,7 +11,6 @@
 #include "Object.hpp"
 #include "Player.hpp"
 #include "TextEntity.hpp"
-#include <iostream>
 #include <string>
 #include <vector>
 
@@ -55,7 +54,7 @@ void Core::update()
     while ((evt = _graph->getInput()).evt_type != Arcade::Evt::NONE) {
         if (evt.evt_type == Arcade::Evt::EvtType::WIN_CLOSE ||
             (evt.evt_type == Arcade::Evt::EvtType::KEY &&
-             evt.key.key == '1' /* && _state == State::MAIN_MENU*/)) {
+             evt.key.key == '9')) {
             _graph->close();
             _game->close(_entities);
             _state = State::EXIT;
@@ -149,6 +148,7 @@ void Core::processEvents()
         if (_event.top().key.key == 'r' || _event.top().key.key == 'R') {
             try {
                 std::string currentGameName = _game->getLibraryName();
+                currentGameName = _libManager.fetchLibPath(currentGameName);
                 _libManager.closeLib(currentGameName);
                 _game = _libManager.openGame(currentGameName);
             } catch (...) {
@@ -157,9 +157,12 @@ void Core::processEvents()
             }
         }
         if (_event.top().key.key == 'm' || _event.top().key.key == 'M') {
-            _state = State::MAIN_MENU;
+            _game->close(_entities);
+            _mainMenu.init(_entities);
             _game = &_mainMenu;
+            _game->start();
             _event.pop();
+            _state = State::MAIN_MENU;
             return;
         }
         if (_event.top().key.key == 'p' || _event.top().key.key == 'P') {
@@ -168,8 +171,7 @@ void Core::processEvents()
             _event.pop();
             return;
         }
-        manageCoreKeyEvents(reinterpret_cast<std::string &>(_event.top().key.key));
-        _event.pop();
+        manageCoreKeyEvents();
     }
 }
 
