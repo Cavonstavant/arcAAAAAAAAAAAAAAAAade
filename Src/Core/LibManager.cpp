@@ -117,23 +117,46 @@ void LibManager::closeAllLibs()
 
 IGame *LibManager::cycleGameLibs(std::string &currentLib, bool direction)
 {
-//    auto begin = _libsHandle.begin();
-//    auto end = _libsHandle.end();
-//
-//    if (!direction)
-//        std::swap(begin, end);
-//    for (auto it = begin; it != end;) {
-//        if (it->first == currentLib) {
-//            if (it == end)
-//                it = begin;
-//            return openGame(it->first);
-//        }
-//        direction ? ++it : --it;
-//    }
-    return nullptr;
+    if (_gameLibsName.empty())
+        throw ArcadeEX("No game library found", Logger::CRITICAL);
+    if (currentLib.empty())
+        currentLib = _gameLibsName[0];
+    auto libNameIt = std::find(_gameLibsName.begin(), _gameLibsName.end(), currentLib);
+
+    if (direction) {
+        if (libNameIt == _gameLibsName.end() || libNameIt == _gameLibsName.begin())
+            return nullptr;
+        if (libNameIt == _gameLibsName.end() - 1)
+            return ((IGame *)openGame(_gameLibsName[0]));
+        return openGame(*(libNameIt - 1));
+    } else {
+        if (libNameIt == _gameLibsName.end() || libNameIt == _gameLibsName.begin() + 1)
+            return nullptr;
+        if (libNameIt == _gameLibsName.begin())
+            return ((IGame *)openGame(_gameLibsName.back()));
+        return openGame(*(libNameIt + 1));
+    }
 }
 
 IGraph *LibManager::cycleGraphLibs(std::string &currentLib, bool direction)
 {
-    return nullptr;
+    if (_graphLibsName.empty())
+        throw ArcadeEX("No graph library found", Logger::CRITICAL);
+    if (currentLib.empty())
+        currentLib = _graphLibsName[0];
+    auto libNameIt = std::find(_graphLibsName.begin(), _graphLibsName.end(), currentLib);
+
+    if (direction) {
+        if (libNameIt == _graphLibsName.end() || libNameIt == _graphLibsName.begin())
+            return nullptr;
+        if (libNameIt == _graphLibsName.end() - 1)
+            return ((IGraph *)openGraph(_graphLibsName[0]));
+        return openGraph(*(libNameIt - 1));
+    } else {
+        if (libNameIt == _graphLibsName.end() || libNameIt == _graphLibsName.begin() + 1)
+            return nullptr;
+        if (libNameIt == _graphLibsName.begin())
+            return ((IGraph *)openGraph(_graphLibsName.back()));
+        return openGraph(*(libNameIt + 1));
+    }
 }
