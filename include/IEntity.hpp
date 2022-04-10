@@ -12,6 +12,7 @@
 #include <string>
 
 /// \brief represents a generic entity within the game
+/// \interface IEntity
 class IEntity {
     public:
         enum Direction {
@@ -19,6 +20,18 @@ class IEntity {
             DOWN,
             LEFT,
             RIGHT
+        };
+
+        enum ENTITY_TYPE {
+            WALL = 0,
+            ENEMY = 1,
+            PLAYER = 2,
+            BONUS = 3,
+            POINT = 4,
+            BUTTON = 5,
+            SCORE = 6,
+            UNDEFINED = 7,
+            ENTITY_TYPE_SIZE = 8
         };
         /// \brief Destructor
         ~IEntity() = default;
@@ -52,6 +65,10 @@ class IEntity {
         /// \brief Set the Entity direction
         /// \param direction the direction of the entity
         virtual void setDirection(Direction direction) = 0;
+        /// \brief Set the type of the entity
+        virtual void setType(ENTITY_TYPE type) = 0;
+        /// \brief Get the entity type
+        [[nodiscard]] virtual ENTITY_TYPE getType() const = 0;
 };
 
 #endif /* !IENTITY_HPP_ */
