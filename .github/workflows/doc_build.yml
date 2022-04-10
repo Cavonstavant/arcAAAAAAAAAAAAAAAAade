@@ -6,7 +6,6 @@ on:
 
 jobs:
   deploy:
-    container: epitechcontent/epitest-docker:devel
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repository
@@ -15,6 +14,7 @@ jobs:
     - name: Install dependencies
       run: |
         sudo apt update
+        sudo apt install libsdl2-2.0-0 libsdl2-gfx-1.0-0 libsdl2-image-2.0-0 libsdl2-mixer-2.0-0 libsdl2-net-2.0-0 libsdl2-ttf-2.0-0 libsdl2-dev
         sudo apt install graphviz -y
         sudo apt install doxygen -y
 
