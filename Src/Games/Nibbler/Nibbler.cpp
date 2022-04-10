@@ -128,22 +128,22 @@ void Nibbler::resetClock()
 void Nibbler::manageKeyEvent(Arcade::Evt &event, std::vector<std::shared_ptr<IEntity>> &entities)
 {
     switch (event.key.key) {
-    case 'Z':
-        if (_lastDir != IEntity::Direction::DOWN)
-            _snake.front()->setDirection(IEntity::Direction::UP);
-        break;
-    case 'Q':
-        if (_lastDir != IEntity::Direction::RIGHT)
-            _snake.front()->setDirection(IEntity::Direction::LEFT);
-        break;
-    case 'S':
-        if (_lastDir != IEntity::Direction::UP)
-            _snake.front()->setDirection(IEntity::Direction::DOWN);
-        break;
-    case 'D':
-        if (_lastDir != IEntity::Direction::LEFT)
-            _snake.front()->setDirection(IEntity::Direction::RIGHT);
-        break;
+        case 'Z':
+            if (_lastDir != IEntity::Direction::DOWN)
+                _snake.front()->setDirection(IEntity::Direction::UP);
+            break;
+        case 'Q':
+            if (_lastDir != IEntity::Direction::RIGHT)
+                _snake.front()->setDirection(IEntity::Direction::LEFT);
+            break;
+        case 'S':
+            if (_lastDir != IEntity::Direction::UP)
+                _snake.front()->setDirection(IEntity::Direction::DOWN);
+            break;
+        case 'D':
+            if (_lastDir != IEntity::Direction::LEFT)
+                _snake.front()->setDirection(IEntity::Direction::RIGHT);
+            break;
     }
 }
 
@@ -175,16 +175,16 @@ void Nibbler::update(std::vector<std::shared_ptr<IEntity>> &entities, std::stack
 std::pair<int, int> Nibbler::getNextPos(std::pair<int, int> pos, IEntity::Direction dir)
 {
     switch (dir) {
-    case IEntity::Direction::UP:
-        return std::make_pair(pos.first - 1, pos.second);
-    case IEntity::Direction::DOWN:
-        return std::make_pair(pos.first + 1, pos.second);
-    case IEntity::Direction::LEFT:
-        return std::make_pair(pos.first, pos.second - 1);
-    case IEntity::Direction::RIGHT:
-        return std::make_pair(pos.first, pos.second + 1);
-    default:
-        return pos;
+        case IEntity::Direction::UP:
+            return std::make_pair(pos.first - 1, pos.second);
+        case IEntity::Direction::DOWN:
+            return std::make_pair(pos.first + 1, pos.second);
+        case IEntity::Direction::LEFT:
+            return std::make_pair(pos.first, pos.second - 1);
+        case IEntity::Direction::RIGHT:
+            return std::make_pair(pos.first, pos.second + 1);
+        default:
+            return pos;
     }
 }
 
