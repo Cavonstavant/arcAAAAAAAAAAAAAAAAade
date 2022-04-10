@@ -72,6 +72,9 @@ class Pacman : public IGame {
         /// \brief Simple bonusClock to know the
         std::chrono::high_resolution_clock::time_point _bonusClock;
 
+        /// \brief represents the number of points on the map
+        int _points;
+
         /// \brief The score of the game the player is currently playing
         int _score{};
 

@@ -23,6 +23,7 @@ void Pacman::init(std::vector<std::shared_ptr<IEntity>> &entities)
     _score = 0;
     _direction = Player::Direction::RIGHT;
     int cpt = 0;
+    _points = 0;
     for (auto &i: _map) {
         for (int j = 0; j < MAP_WIDTH; j++)
             createEntity(i[j], entities, cpt, j);
@@ -72,6 +73,7 @@ void Pacman::createEntity(char symbol, std::vector<std::shared_ptr<IEntity>> &en
         std::shared_ptr<Object> point = std::make_shared<Object>(AEntity::ENTITY_TYPE::POINT);
         point->setPos(std::pair<int, int>{i, j});
         entities.push_back(point);
+        _points++;
     } else if (symbol == 'B') {
         std::shared_ptr<Object> point = std::make_shared<Object>(AEntity::ENTITY_TYPE::BONUS);
         point->setPos(std::pair<int, int>{i, j});
@@ -130,7 +132,6 @@ void Pacman::update(std::vector<std::shared_ptr<IEntity>> &entities, std::stack<
     std::uniform_int_distribution<std::mt19937::result_type> dist4(0, 3);
     const std::string sickEnemyTexturePath = "Src/Games/Pacman/Resources/textures/enemySick.png";
     const std::string EnemyTexturePath = "Src/Games/Pacman/Resources/textures/enemy.png";
-    bool victory = true;
 
     if (std::chrono::duration_cast<std::chrono::seconds>(std::chrono::high_resolution_clock::now() - _bonusClock).count() > 10) {
         _enemies[0]->setEnrage(true);
@@ -180,7 +181,7 @@ void Pacman::update(std::vector<std::shared_ptr<IEntity>> &entities, std::stack<
         if (i->get()->getPos() == _player->getPos() && (i->get()->getType() == IEntity::POINT)) {
             entities.erase(i);
             _score += 1;
-            victory = false;
+            _points--;
         }
         if (i->get()->getPos() == _player->getPos() && i->get()->getType() == IEntity::BONUS) {
             _enemies[0]->setEnrage(false);
@@ -194,7 +195,6 @@ void Pacman::update(std::vector<std::shared_ptr<IEntity>> &entities, std::stack<
             _enemies[2]->setTermTexture('g', Color::TermColors::BLUE, Color::TermColors::BLACK);
             _bonusClock = std::chrono::high_resolution_clock::now();
             entities.erase(i);
-            victory = false;
         }
         if (dynamic_cast<Enemy *>(i->get()))
             if (i->get()->getPos() == _player->getPos() && i->get()->getType() == IEntity::ENEMY) {
@@ -207,7 +207,7 @@ void Pacman::update(std::vector<std::shared_ptr<IEntity>> &entities, std::stack<
                 }
             }
     }
-    if (victory)
+    if (!_points)
         init(entities);
 }
 
