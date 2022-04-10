@@ -67,7 +67,7 @@ var NAVTREEINDEX =
 [
 "_a_entity_8cpp.html",
 "class_game_exception.html#a2fc47f83971b856def5176360cac59a6",
-"functions_func_u.html"
+"functions_func_t.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

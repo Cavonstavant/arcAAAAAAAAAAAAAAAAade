@@ -1,5 +1,6 @@
 var NAVTREEINDEX2 =
 {
+"functions_func_t.html":[3,3,1,16],
 "functions_func_u.html":[3,3,1,17],
 "functions_func_v.html":[3,3,1,18],
 "functions_func_w.html":[3,3,1,19],
@@ -28,8 +29,8 @@ var NAVTREEINDEX2 =
 "globals_defs.html":[4,1,2],
 "globals_func.html":[4,1,1],
 "hierarchy.html":[3,2],
-"index.html":[0],
 "index.html":[],
+"index.html":[0],
 "index.html#autotoc_md1":[0,0],
 "index.html#autotoc_md2":[0,1],
 "index.html#autotoc_md3":[0,1,0],

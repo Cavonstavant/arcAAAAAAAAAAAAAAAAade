@@ -24,9 +24,9 @@ var class_core =
     [ "setEvent", "class_core.html#a8a5856baa5264944d4deb57b945a1134", null ],
     [ "setFutureGame", "class_core.html#ae2af62c0f839f8daa0bdc21c7ecf497c", null ],
     [ "setFutureGraph", "class_core.html#af06a2852aeeba654b9be1c99df5fd522", null ],
-    [ "setGame", "class_core.html#ab56d93dee68b29e95d008fa6b886cf30", null ],
+    [ "setGame", "class_core.html#aaf5981b9e9f6146cb47ba340cfc2eddb", null ],
     [ "setGame", "class_core.html#a6a6a8899657bd5c6ff947f7a223b0bd0", null ],
-    [ "setGraph", "class_core.html#a6e0b737d35febb314fee63d07713d473", null ],
+    [ "setGraph", "class_core.html#aaf3f3be3f9d1cfb2a895d6350b629809", null ],
     [ "setGraph", "class_core.html#affbb83953ccca049ff375a18995dab7b", null ],
     [ "setState", "class_core.html#afe619c2d034aff30644e94b953951a49", null ],
     [ "update", "class_core.html#a90dd5da2a90e0b5ca3434bcfb05c6dff", null ]

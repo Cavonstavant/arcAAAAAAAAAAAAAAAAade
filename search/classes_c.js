@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['pacman_356',['Pacman',['../class_pacman.html',1,'']]],
-  ['player_357',['Player',['../class_player.html',1,'']]]
+  ['pacman_357',['Pacman',['../class_pacman.html',1,'']]],
+  ['player_358',['Player',['../class_player.html',1,'']]]
 ];

@@ -11,6 +11,7 @@ var class_lib_manager =
     [ "closeLib", "class_lib_manager.html#a3d89f7b1518d47cdd8a0bf786b8dec44", null ],
     [ "cycleGameLibs", "class_lib_manager.html#a7527ba7e4b319a267a9dfc9e29f88f83", null ],
     [ "cycleGraphLibs", "class_lib_manager.html#a9dab81d6911e4118650466067bf83065", null ],
+    [ "fetchLibPath", "class_lib_manager.html#acdbf2b5396f6cc619a11c26f7bb401d2", null ],
     [ "openGame", "class_lib_manager.html#ae57da9b1ed22efebbc6daceab842fb68", null ],
     [ "openGraph", "class_lib_manager.html#aed05c82bbedace1a4997fcd232124188", null ],
     [ "operator=", "class_lib_manager.html#a84e8bc50673b4de646710eda756d7641", null ]
