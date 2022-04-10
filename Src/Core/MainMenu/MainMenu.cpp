@@ -11,7 +11,7 @@
 #include "../Exception.hpp"
 #include "Event.hpp"
 extern "C" {
-    #include <dlfcn.h>
+#include <dlfcn.h>
 }
 #include <filesystem>
 #include <stack>

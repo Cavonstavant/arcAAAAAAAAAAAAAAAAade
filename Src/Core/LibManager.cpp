@@ -84,21 +84,21 @@ void LibManager::addLibs(std::vector<std::string> &libPaths) {
         if (lib.path().extension() == ".so") {
             ArcadeEX("Found library: " + lib.path().filename().string(), Logger::INFO);
             _libsHandle.emplace(lib.path().string(), nullptr);
-                try {
-                    void *handle = dlopen(lib.path().c_str(), RTLD_LAZY);
-                    if (!handle)
-                        continue;
-                    if (dlsym(handle, "getGraphInstance")) {
-                        _graphLibsName.push_back(lib.path());
-                    } else if (dlsym(handle, "getGameInstance")) {
-                        _gameLibsName.push_back(lib.path());
-                    }
-//                    dlclose(handle);
-                } catch (std::exception &e) {
-                    throw LibraryEX(e.what(), Logger::MEDIUM);
+            try {
+                void *handle = dlopen(lib.path().c_str(), RTLD_LAZY);
+                if (!handle)
+                    continue;
+                if (dlsym(handle, "getGraphInstance")) {
+                    _graphLibsName.push_back(lib.path());
+                } else if (dlsym(handle, "getGameInstance")) {
+                    _gameLibsName.push_back(lib.path());
                 }
+//                    dlclose(handle);
+            } catch (std::exception &e) {
+                throw LibraryEX(e.what(), Logger::MEDIUM);
             }
         }
+    }
     ArcadeEX(std::to_string(_libsHandle.size()) + std::string(" Libraries found"), Logger::INFO);
     std::for_each(libPaths.begin(), libPaths.end(), [this](std::string &libPath) {
         _libsHandle.emplace(std::filesystem::absolute(std::filesystem::path(libPath)), nullptr);

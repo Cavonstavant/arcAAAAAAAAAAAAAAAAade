@@ -35,9 +35,9 @@ void Pacman::createEntity(char symbol, std::vector<std::shared_ptr<IEntity>> &en
     const std::string enemyTexturePath = "Src/Games/Pacman/Resources/textures/enemy.png";
 
     if (symbol == 'W') {
-         std::shared_ptr<Object> obj = std::make_shared<Object>(AEntity::ENTITY_TYPE::WALL);
-         obj->setPos(std::pair<int, int>{i, j});
-         entities.push_back(obj);
+        std::shared_ptr<Object> obj = std::make_shared<Object>(AEntity::ENTITY_TYPE::WALL);
+        obj->setPos(std::pair<int, int> {i, j});
+        entities.push_back(obj);
     }
     else if (symbol == 'G') {
         Enemy enemy1;
@@ -50,9 +50,9 @@ void Pacman::createEntity(char symbol, std::vector<std::shared_ptr<IEntity>> &en
         _enemies[0] = std::make_shared<Enemy>(enemy1);
         _enemies[1] = std::make_shared<Enemy>(enemy2);
         _enemies[2] = std::make_shared<Enemy>(enemy3);
-        _enemies[0]->setPos(std::pair<int, int>{i, j});
-        _enemies[1]->setPos(std::pair<int, int>{i + 1, j});
-        _enemies[2]->setPos(std::pair<int, int>{i + 2, j});
+        _enemies[0]->setPos(std::pair<int, int> {i, j});
+        _enemies[1]->setPos(std::pair<int, int> {i + 1, j});
+        _enemies[2]->setPos(std::pair<int, int> {i + 2, j});
         entities.push_back(_enemies[0]);
         entities.push_back(_enemies[1]);
         entities.push_back(_enemies[2]);
@@ -63,17 +63,17 @@ void Pacman::createEntity(char symbol, std::vector<std::shared_ptr<IEntity>> &en
         pacman.setBoosted(false);
         pacman.setTexturePath(std::filesystem::absolute(std::filesystem::path(texturePath)).string());
         _player = std::make_shared<Player>(pacman);
-        _player->setPos(std::pair<int, int>{i, j});
+        _player->setPos(std::pair<int, int> {i, j});
         entities.push_back(_player);
     }
     else if (symbol == '.') {
         std::shared_ptr<Object> point = std::make_shared<Object>(AEntity::ENTITY_TYPE::POINT);
-        point->setPos(std::pair<int, int>{i, j});
+        point->setPos(std::pair<int, int> {i, j});
         entities.push_back(point);
     }
     else if (symbol == 'B') {
         std::shared_ptr<Object> point = std::make_shared<Object>(AEntity::ENTITY_TYPE::BONUS);
-        point->setPos(std::pair<int, int>{i, j});
+        point->setPos(std::pair<int, int> {i, j});
         entities.push_back(point);
     }
 }
@@ -144,7 +144,7 @@ void Pacman::update(std::vector<std::shared_ptr<IEntity>> &entities, std::stack<
         events.pop();
     }
     if (!isThereAWallOnDirection(_player->getDirection())
-        && std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::high_resolution_clock::now() - _clock).count() > 500) {
+            && std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::high_resolution_clock::now() - _clock).count() > 500) {
         updatePlayerPos();
         _clock = std::chrono::high_resolution_clock::now();
     }
@@ -169,8 +169,8 @@ IGame::GameState Pacman::getState() const
 bool Pacman::moveUp(Arcade::Evt input)
 {
     if (input.evt_type == Arcade::Evt::KEY
-        && (input.key.key == 'z'
-            || input.key.key == 'Z'))
+            && (input.key.key == 'z'
+                || input.key.key == 'Z'))
         return true;
     return false;
 }
@@ -178,8 +178,8 @@ bool Pacman::moveUp(Arcade::Evt input)
 bool Pacman::moveDown(Arcade::Evt input)
 {
     if (input.evt_type == Arcade::Evt::KEY
-        && (input.key.key == 's'
-            || input.key.key == 'S'))
+            && (input.key.key == 's'
+                || input.key.key == 'S'))
         return true;
     return false;
 }
@@ -187,8 +187,8 @@ bool Pacman::moveDown(Arcade::Evt input)
 bool Pacman::moveRight(Arcade::Evt input)
 {
     if (input.evt_type == Arcade::Evt::KEY
-        && (input.key.key == 'd'
-            || input.key.key == 'D'))
+            && (input.key.key == 'd'
+                || input.key.key == 'D'))
         return true;
     return false;
 }
@@ -196,8 +196,8 @@ bool Pacman::moveRight(Arcade::Evt input)
 bool Pacman::moveLeft(Arcade::Evt input)
 {
     if (input.evt_type == Arcade::Evt::KEY
-        && (input.key.key == 'q'
-            || input.key.key == 'Q'))
+            && (input.key.key == 'q'
+                || input.key.key == 'Q'))
         return true;
     return false;
 }
