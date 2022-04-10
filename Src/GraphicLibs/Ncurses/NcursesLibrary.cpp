@@ -36,9 +36,8 @@ void NcursesLibrary::close()
 {
 
     clear();
-    endwin();
     // curs_set(1);
-    // endwin();
+    endwin();
 }
 
 bool NcursesLibrary::clearWindow()
@@ -76,14 +75,26 @@ bool NcursesLibrary::drawRect(std::pair<int, int> pos, int width, int height, Co
     init_pair(_colors, color.TF, color.TB);
     attron(COLOR_PAIR(_colors));
 
-    if (width == 1 && height == 1)
-        mvaddch(pos.first, pos.second, 'X');
-    else
-        for (int i = pos.first; i < pos.first + height; i++) {
-            for (int j = pos.second; j < pos.second + width; j++) {
-                mvaddch(i, j, '.');
-            }
+    for (int i = pos.first; i < pos.first + height; i++) {
+        for (int j = pos.second; j < pos.second + width; j++) {
+            if (i == pos.first ||
+                j == pos.second ||
+                i == pos.first + height - 1 ||
+                j == pos.second + width - 1)
+                mvaddch(i, j, 'X');
+            else
+                mvaddch(i, j, ' ');
         }
+    }
+
+    // if (width == 1 && height == 1)
+    //     mvaddch(pos.first, pos.second, 'X');
+    // else
+    //     for (int i = pos.first; i < pos.first + height; i++) {
+    //         for (int j = pos.second; j < pos.second + width; j++) {
+    //             mvaddch(i, j, '.');
+    //         }
+    //     }
 
     attroff(COLOR_PAIR(_colors));
     _colors++;
