@@ -7,11 +7,11 @@
 
 #pragma once
 
-#include "AEntity.hpp"
+#include "Object.hpp"
 #include <functional>
 
 /// \class Button class
-class Button : public AEntity {
+class Button : public Object {
     public:
         /// \brief Constructor
         Button(std::function<void()> callback, std::string actionString = "");

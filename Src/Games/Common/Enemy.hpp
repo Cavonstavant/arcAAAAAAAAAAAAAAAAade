@@ -8,8 +8,9 @@
 #ifndef ARCADE_ENEMY_HPP
 #define ARCADE_ENEMY_HPP
 
-#include "../../CommonInterface/include/Color.hpp"
 #include "AEntity.hpp"
+#include "Color.hpp"
+#include "Player.hpp"
 
 /// \brief Enemy class inherits from AEntity
 class Enemy : public AEntity {
@@ -20,7 +21,7 @@ class Enemy : public AEntity {
         /// Default _enrage = false
         Enemy();
         /// \brief Destructor override AEntity
-        ~Enemy();
+        ~Enemy() = default;
 
         /// \brief Getters & setters
         /// Set the speed of the Enemy Entity
@@ -39,18 +40,20 @@ class Enemy : public AEntity {
         /// \return Bool Enrage
         bool getEnrage() const;
         /// \brief Set the isMoving boolean of the Enemy Entity
-        void setIsMoving(bool isMoving);
+        void setIsMoving(bool isMoving) override;
         /// \brief Get the isMoving boolean of the Enemy Entity
-        bool getIsMoving() const;
+        bool getIsMoving() const override;
 
     protected:
     private:
         /// \brief Movement Speed of the Enemy Entity
         int _speed;
         /// \brief Color of the Enemy Entity. Color interface used by different Graphics Library
-        Color _color;
+        Color _color{};
         /// \brief Defines if the Enemy Entity is enrage or not
         bool _enrage;
+        /// \brief Represents the current direction of enemy with enum type (UP, DOWN, RIGHT,LEFT)
+        Player::Direction _direction;
 };
 
 #endif//ARCADE_ENEMY_HPP

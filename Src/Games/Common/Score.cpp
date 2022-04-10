@@ -7,14 +7,11 @@
 
 #include "Score.hpp"
 
-Score::Score()
+Score::Score() : Object(ENTITY_TYPE::SCORE), _score(0)
 {
-    _score = 0;
 }
 
-Score::~Score()
-{
-}
+Score::~Score() = default;
 
 unsigned int Score::getScore() const
 {

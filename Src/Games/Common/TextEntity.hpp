@@ -17,7 +17,7 @@
 class TextEntity : public AEntity {
     public:
         /// \brief Constructor
-        explicit TextEntity(const std::string &text = "placeholder", const std::string &font = "Resources/Font/ARCADE_N.TTF", const int &fontSize = 14, const Color &color = {255, 255, 255, 255}, const Color &outlineColor = {0, 0, 0, 0});
+        explicit TextEntity(const std::string &text = "placeholder", const std::string &font = "Resources/Font/ARCADE_N.TTF", const int &fontSize = 14, const Color color = {255, 255, 255, 255}, const Color &outlineColor = {0, 0, 0, 0});
         /// \brief Destructor
         ~TextEntity();
 
@@ -47,7 +47,7 @@ class TextEntity : public AEntity {
 
         /// \brief Set the color
         /// \param color the color to set
-        void setColor(const Color &color);
+        void setColor(const Color color);
 
         /// \brief Get the color
         /// \return the color
@@ -60,6 +60,9 @@ class TextEntity : public AEntity {
         /// \brief Get the outline color
         /// \return the outline color
         Color getOutlineColor() const;
+
+        void setIsMoving(bool isMoving) override;
+        bool getIsMoving() const override;
 
     protected:
     private:

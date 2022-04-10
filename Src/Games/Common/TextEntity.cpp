@@ -7,7 +7,7 @@
 
 #include "TextEntity.hpp"
 
-TextEntity::TextEntity(const std::string &text, const std::string &font, const int &fontSize, const Color &color, const Color &outlineColor) : AEntity()
+TextEntity::TextEntity(const std::string &text, const std::string &font, const int &fontSize, const Color color, const Color &outlineColor) : AEntity()
 {
     _text = text;
     _fontPath = font;
@@ -55,7 +55,7 @@ Color TextEntity::getColor() const
     return _color;
 }
 
-void TextEntity::setColor(const Color &color)
+void TextEntity::setColor(const Color color)
 {
     _color = color;
 }
@@ -68,4 +68,14 @@ Color TextEntity::getOutlineColor() const
 void TextEntity::setOutlineColor(const Color &outlineColor)
 {
     _outlineColor = outlineColor;
+}
+
+void TextEntity::setIsMoving(bool isMoving)
+{
+    _isMoving = isMoving;
+}
+
+bool TextEntity::getIsMoving() const
+{
+    return _isMoving;
 }

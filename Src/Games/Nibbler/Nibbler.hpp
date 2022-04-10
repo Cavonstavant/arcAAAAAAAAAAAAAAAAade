@@ -35,6 +35,12 @@ class Nibbler : public IGame {
         /// \brief Get the game's status
         /// \return the game's status
         GameState getState() const;
+        /// \brief Set the game's state
+        /// \param state The game's state
+        void setState(GameState state);
+        /// \brief Get the game's score
+        /// \return the game's score
+        std::shared_ptr<IEntity> getScore();
         /// \brief starts the game
         void start();
         /// \brief get the library name
@@ -56,7 +62,7 @@ class Nibbler : public IGame {
         /// \brief The last tails's last position
         std::pair<int, int> _lastTailPos;
         /// \brief The game's speed multiplier
-        float _speed;
+        float _speed{};
         /// \brief The game's score
         std::shared_ptr<Score> _score;
 

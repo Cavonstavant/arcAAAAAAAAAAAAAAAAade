@@ -7,7 +7,8 @@
 
 #pragma once
 
-#include "../../Games/Common/Button.hpp"
+#include "../LibManager.hpp"
+#include "Button.hpp"
 #include "IGame.hpp"
 #include <vector>
 
@@ -18,7 +19,7 @@ class MainMenu : public IGame {
         /// \brief Constructor
         MainMenu();
         /// \brief Destructor
-        ~MainMenu();
+        ~MainMenu() override;
 
         /// \brief Initialize the menu
         void init(std::vector<std::shared_ptr<IEntity>> &entities) override;
@@ -31,12 +32,20 @@ class MainMenu : public IGame {
         void update(std::vector<std::shared_ptr<IEntity>> &entities, std::stack<Arcade::Evt> &events) override;
         /// \brief Get the game's status
         /// \return the game's status
-        GameState getState() const;
+        [[nodiscard]] GameState getState() const override
+        {
+            return _gameState;
+        }
+
+        void setState(GameState state) override
+        {
+            _gameState = state;
+        }
+
         /// \brief starts the game
-        void start();
-        /// \brief get the library name
-        /// \return the library name
-        std::string getLibraryName() const;
+        void start() override;
+        /// \brief Get the menu's name
+        [[nodiscard]] std::string getLibraryName() const final;
 
     protected:
     private:

@@ -1,5 +1,5 @@
 #include "IGraph.hpp"
-#include "NcursesLibrary.hpp"
+#include "SfmlLibrary.hpp"
 #include <iostream>
 
 namespace Arcade {
@@ -12,13 +12,11 @@ namespace Arcade {
 
     [[gnu::constructor]] void libConstruct()
     {
-        GRAPH_INSTANCE = new NcursesLibrary();
-        std::cout << "ncurses lib loaded" << std::endl;
+        GRAPH_INSTANCE = new SfmlLibrary();
     }
 
     [[gnu::destructor]] void libDestruct()
     {
         delete GRAPH_INSTANCE;
-        std::cout << "ncurses lib unloaded" << std::endl;
     }
 }// namespace Arcade

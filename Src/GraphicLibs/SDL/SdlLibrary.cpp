@@ -50,34 +50,38 @@ bool SdlLibrary::displayWindow()
 
 bool SdlLibrary::drawCircle(std::pair<int, int> pos, int radius, Color color)
 {
-    return true;
+    std::pair<int, int> topLeftCorner = pos;
+
+    topLeftCorner.first -= (radius / 2);
+    topLeftCorner.second -= (radius / 2);
+    return drawRect(topLeftCorner, radius * 2, radius * 2, color);
 }
 
 bool SdlLibrary::drawRect(std::pair<int, int> pos, int width, int height, Color color)
 {
     SDL_Rect rect;
 
-    rect.x = pos.first;
-    rect.y = pos.second;
-    rect.w = width;
-    rect.h = height;
+    rect.x = GRID_INT(pos.first);
+    rect.y = GRID_INT(pos.second);
+    rect.w = GRID_INT(width);
+    rect.h = GRID_INT(height);
 
     SDL_SetRenderDrawColor(_renderer, color.R, color.G, color.B, color.A);
     SDL_RenderFillRect(_renderer, &rect);
     return true;
 }
 
-bool SdlLibrary::drawText(std::pair<int, int> pos, const std::string &content)
+bool SdlLibrary::drawText(std::pair<int, int> pos, const std::string &content, Color color)
 {
     SDL_Color textColor = {255, 255, 255, 255};
     SDL_Surface *textSurface = TTF_RenderText_Blended(_font, content.c_str(), textColor);
     SDL_Texture *textTexture = SDL_CreateTextureFromSurface(_renderer, textSurface);
     SDL_Rect rect;
 
-    rect.x = pos.first;
-    rect.y = pos.second;
-    rect.w = (int) (content.length() * 15);
-    rect.h = GRID_INT(1);
+    rect.x = GRID_INT(pos.first);
+    rect.y = GRID_INT(pos.second);
+    rect.w = GRID_INT((int) (content.length() * 15));
+    rect.h = GRID_INT(GRID_INT(1));
     SDL_RenderCopy(_renderer, textTexture, nullptr, &rect);
     SDL_DestroyTexture(textTexture);
     SDL_FreeSurface(textSurface);
@@ -92,8 +96,8 @@ bool SdlLibrary::drawEntity(IEntity &entity, std::pair<int, int> pos)
 
     rect.x = GRID_INT(entity.getPos().first);
     rect.y = GRID_INT(entity.getPos().second);
-    rect.w = entity.getSize().first;
-    rect.h = entity.getSize().second;
+    rect.w = GRID_INT(entity.getSize().first);
+    rect.h = GRID_INT(entity.getSize().second);
 
     SDL_QueryTexture(texture, nullptr, nullptr, &rect.w, &rect.h);
     SDL_RenderCopy(_renderer, texture, nullptr, &rect);
@@ -106,11 +110,14 @@ std::string SdlLibrary::getLibraryName() const
     return "SDL";
 }
 
-Arcade::Evt SdlLibrary::getInput() const
+Arcade::Evt SdlLibrary::getInput()
 {
     SDL_Event event;
     Arcade::Evt evt{};
     Arcade::Evt::KeyEvt keyEvt{};
+
+    if (!SDL_PollEvent(&event))
+        return evt;
 
     if (event.type == SDL_QUIT)
         evt.evt_type = Arcade::Evt::WIN_CLOSE;
@@ -256,4 +263,5 @@ Arcade::Evt SdlLibrary::getInput() const
                 break;
         }
     }
+    return evt;
 }

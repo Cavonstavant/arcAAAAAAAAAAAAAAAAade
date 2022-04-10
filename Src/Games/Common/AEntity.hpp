@@ -36,11 +36,11 @@ class AEntity : public IEntity {
         void setSize(std::pair<int, int> size) override;
 
         /// \brief Set the Entity boolean isMoving
-        virtual void setIsMoving(bool isMoving);
+        virtual void setIsMoving(bool isMoving) = 0;
 
         /// \brief Get the Entity boolean isMoving
         /// \return bool isMoving;
-        virtual bool getIsMoving() const;
+        virtual bool getIsMoving() const = 0;
 
         /// \brief Set the texturePath of the entity
         /// \param std::string texturePath represents the path to find the texture
@@ -68,6 +68,9 @@ class AEntity : public IEntity {
         /// \param direction the direction of the entity
         void setDirection(Direction direction) override;
 
+        void setType(ENTITY_TYPE type) override;
+        ENTITY_TYPE getType() const override;
+
     protected:
         std::pair<int, int> _pos;
         std::pair<int, int> _size;
@@ -75,6 +78,7 @@ class AEntity : public IEntity {
         std::string _texturePath;
         std::pair<char, std::pair<Color::TermColors, Color::TermColors>> _termTexture;
         Direction _direction;
+        ENTITY_TYPE _type;
 
     private:
 };

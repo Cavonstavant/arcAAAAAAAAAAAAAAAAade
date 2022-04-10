@@ -15,5 +15,4 @@ add_compile_options(
         "-Wall" "-Wextra" "-Wshadow" "-pedantic" "-Wpointer-arith" "-fno-gnu-unique"
 )
 
-
 add_subdirectory(Src)

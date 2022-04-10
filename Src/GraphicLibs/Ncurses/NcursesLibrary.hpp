@@ -34,12 +34,13 @@ class NcursesLibrary : public IGraph {
         bool drawRect(std::pair<int, int> pos, int width, int height,
                       Color color) override;
         bool drawText(std::pair<int, int> pos,
-                      const std::string &content) override;
+                      const std::string &content,
+                      Color color) override;
         bool drawEntity(IEntity &entity,
                         std::pair<int, int> pos) override;
 
         std::string getLibraryName() const override final;
-        Arcade::Evt getInput() const;
+        Arcade::Evt getInput();
 
     private:
 };
