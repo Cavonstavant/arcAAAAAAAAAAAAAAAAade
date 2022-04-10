@@ -12,6 +12,7 @@
 #include <string>
 
 /// \brief represents a generic entity within the game
+/// \interface IEntity
 class IEntity {
     public:
         enum Direction {
@@ -27,8 +28,10 @@ class IEntity {
             PLAYER = 2,
             BONUS = 3,
             POINT = 4,
-            UNDEFINED = 5,
-            ENTITY_TYPE_SIZE = 6
+            BUTTON = 5,
+            SCORE = 6,
+            UNDEFINED = 7,
+            ENTITY_TYPE_SIZE = 8
         };
         /// \brief Destructor
         ~IEntity() = default;

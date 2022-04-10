@@ -17,6 +17,7 @@
 #include <vector>
 
 /// \brief represents a generic graphical library
+/// \interface IGraph
 class IGraph {
 
     public:
@@ -49,7 +50,8 @@ class IGraph {
         /// int> position \param content the std::string content \return true if the
         /// text is successfully draw
         virtual bool drawText(std::pair<int, int> pos,
-                              const std::string &content) = 0;
+                              const std::string &content,
+                              Color color) = 0;
 
         /// \brief Create an Entity, set position, then display it on the window.
         /// After all destroy the Entity \param IEntity representing the entity with

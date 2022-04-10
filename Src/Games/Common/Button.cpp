@@ -7,7 +7,7 @@
 
 #include "Button.hpp"
 
-Button::Button(std::function<void()> callbackParam, std::string actionString)
+Button::Button(std::function<void()> callbackParam, std::string actionString) : Object(ENTITY_TYPE::BUTTON)
 {
     callback = callbackParam;
     _actionString = actionString;
@@ -24,14 +24,4 @@ bool Button::isClicked(int x, int y)
             x <= getPos().first + getSize().first &&
             y >= getPos().second &&
             y <= getPos().second + getSize().second);
-}
-
-void Button::setIsMoving(bool isMoving)
-{
-    _isMoving = isMoving;
-}
-
-bool Button::getIsMoving() const
-{
-    return _isMoving;
 }

@@ -26,6 +26,8 @@ function(create_arcade_game)
         ${COMMON_INCLUDE_ROOT}/Player.hpp
         ${COMMON_INCLUDE_ROOT}/TextEntity.cpp
         ${COMMON_INCLUDE_ROOT}/TextEntity.hpp
+        ${COMMON_INCLUDE_ROOT}/Score.cpp
+        ${COMMON_INCLUDE_ROOT}/Score.hpp
         )
 
     add_library(${create_arcade_game_GAME_NAME} SHARED ${LIB_SOURCES})
@@ -41,6 +43,5 @@ function(create_arcade_game)
 
 endfunction()
 
-#add_subdirectory(Common)
 add_subdirectory(Nibbler)
 add_subdirectory(Pacman)

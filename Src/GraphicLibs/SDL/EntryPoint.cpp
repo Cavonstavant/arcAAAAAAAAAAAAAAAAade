@@ -1,9 +1,7 @@
-#include <iostream>
 #include "IGraph.hpp"
 #include "SdlLibrary.hpp"
 
-namespace Arcade
-{
+namespace Arcade {
     static IGraph *GRAPH_INSTANCE = nullptr;
 
     extern "C" IGraph *getGraphInstance()
@@ -20,4 +18,4 @@ namespace Arcade
     {
         delete GRAPH_INSTANCE;
     }
-}
+}// namespace Arcade

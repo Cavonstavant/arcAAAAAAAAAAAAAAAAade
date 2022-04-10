@@ -1,5 +1,6 @@
 set(INCLUDE_ROOT ${PROJECT_SOURCE_DIR}/Src/Core)
 set(SOURCE_ROOT ${PROJECT_SOURCE_DIR}/Src/Core)
+set(CORE_EVENT_SRC ${SOURCE_ROOT}/CoreEvents)
 
 set(TARGET_LIB_NAME libarcade_core)
 set(TARGET_EXEC_NAME arcade)
@@ -32,6 +33,7 @@ set(SRC
         ${INCLUDE_ROOT}/MainMenu/MainMenu.cpp
         ${INCLUDE_ROOT}/MainMenu/MainMenu.hpp
         ${COMMON_GAME_SOURCES}
+        ${CORE_EVENT_SRC}/CoreEvents.cpp
 )
 
 set_target_properties(${TARGET_LIBNAME} PROPERTIES LINKER_LANGUAGE CXX)

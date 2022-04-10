@@ -45,7 +45,7 @@ bool SfmlLibrary::drawCircle(std::pair<int, int> pos, int radius, Color color)
     circleColor.b = color.B;
     circleColor.a = color.A;
     circleShape.setPosition(GRID_INT(pos.second), GRID_INT(pos.first));
-    circleShape.setRadius((float)radius);
+    circleShape.setRadius((float) radius);
     circleShape.setFillColor(circleColor);
     _window.draw(circleShape);
     return true;
@@ -68,13 +68,15 @@ bool SfmlLibrary::drawRect(std::pair<int, int> pos, int width, int height, Color
     return true;
 }
 
-bool SfmlLibrary::drawText(std::pair<int, int> pos, const std::string &content)
+bool SfmlLibrary::drawText(std::pair<int, int> pos, const std::string &content, Color color)
 {
     sf::Text text;
+    sf::Color sfColor(color.R, color.G, color.B, color.A);
 
     text.setFont(_font);
     text.setPosition(GRID_INT(pos.second), GRID_INT(pos.first));
     text.setString(content);
+    text.setFillColor(sfColor);
 
     _window.draw(text);
     return true;
@@ -94,7 +96,7 @@ bool SfmlLibrary::drawEntity(IEntity &entity, std::pair<int, int> pos)
         _window.draw(sprite);
         return true;
     } else {
-        defaultTextureRect.setSize(sf::Vector2f{(float)entity.getSize().first, (float)entity.getSize().second});
+        defaultTextureRect.setSize(sf::Vector2f{(float) entity.getSize().first, (float) entity.getSize().second});
         defaultTextureRect.setFillColor(sf::Color::Yellow);
         defaultTextureRect.setPosition(GRID_INT(entity.getPos().second), GRID_INT(entity.getPos().first));
         _window.draw(defaultTextureRect);

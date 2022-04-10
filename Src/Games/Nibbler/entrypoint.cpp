@@ -1,12 +1,5 @@
-/*
-** EPITECH PROJECT, 2022
-** entrypoint.cpp.c
-** File description:
-** Created by hjulien,
-*/
-
 #include "IGame.hpp"
-#include "Pacman.hpp"
+#include "Nibbler.hpp"
 #include <iostream>
 #include <vector>
 
@@ -20,7 +13,7 @@ namespace Arcade {
 
     [[gnu::constructor]] void libConstruct()
     {
-        GAME_INSTANCE = new Pacman();
+        GAME_INSTANCE = new Nibbler();
         std::cout << "lib loaded" << std::endl;
     }
 
