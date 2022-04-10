@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['verystupiduserex_599',['VeryStupidUserEX',['../_exception_8hpp.html#a0ae399b5939ece8c60638d855d9db3c0',1,'Exception.hpp']]]
+  ['switchlibex_681',['SwitchLibEX',['../_exception_8hpp.html#a50b309f4265eb573c3c000adeda9d914',1,'Exception.hpp']]]
 ];

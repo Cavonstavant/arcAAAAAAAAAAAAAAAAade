@@ -10,6 +10,7 @@ var searchData=
   ['_5fsize_7',['_size',['../class_a_entity.html#a60a8aa598b6a852c80853dd3e5c7f4a2',1,'AEntity']]],
   ['_5ftermtexture_8',['_termTexture',['../class_a_entity.html#af982652898741ac6c7e280d7b1961242',1,'AEntity']]],
   ['_5ftexturepath_9',['_texturePath',['../class_a_entity.html#a158c760eacfd71de957ff9465784fd60',1,'AEntity']]],
-  ['_5fwhat_10',['_what',['../class_arcade_exception.html#afc422037a176c5d19e81b6db14eb6130',1,'ArcadeException']]],
-  ['_5fwhere_11',['_where',['../class_arcade_exception.html#aba52f8b999ba7b7f76acfb56cc15e31c',1,'ArcadeException']]]
+  ['_5ftype_10',['_type',['../class_a_entity.html#a35c0e3ec8a2083214039a70e9bd18784',1,'AEntity']]],
+  ['_5fwhat_11',['_what',['../class_arcade_exception.html#afc422037a176c5d19e81b6db14eb6130',1,'ArcadeException']]],
+  ['_5fwhere_12',['_where',['../class_arcade_exception.html#aba52f8b999ba7b7f76acfb56cc15e31c',1,'ArcadeException']]]
 ];

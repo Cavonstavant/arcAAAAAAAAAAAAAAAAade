@@ -87,7 +87,7 @@ $(document).ready(function(){initNavTree('class_a_entity.html',''); initResizabl
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="class_a_entity-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">AEntity Class Reference</div>  </div>
+<div class="title">AEntity Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -100,14 +100,14 @@ Inheritance diagram for AEntity:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_a_entity__inherit__graph.png" border="0" usemap="#_a_entity_inherit__map" alt="Inheritance graph"/></div>
 <map name="_a_entity_inherit__map" id="_a_entity_inherit__map">
-<area shape="rect" title="Entity Abstract class." alt="" coords="183,80,253,107"/>
-<area shape="rect" href="class_button.html" title=" " alt="" coords="5,155,71,181"/>
-<area shape="rect" href="class_enemy.html" title="Enemy class inherits from AEntity." alt="" coords="95,155,162,181"/>
-<area shape="rect" href="class_object.html" title="Object class represents all the Entity not moving. Like walls, fruits." alt="" coords="186,155,250,181"/>
-<area shape="rect" href="class_player.html" title="Player class inherits from AEntity." alt="" coords="275,155,337,181"/>
-<area shape="rect" href="class_text_entity.html" title="TextEntity class inherits from AEntity." alt="" coords="361,155,448,181"/>
-<area shape="rect" href="class_i_entity.html" title="represents a generic entity within the game" alt="" coords="186,5,250,32"/>
-<area shape="rect" href="class_score.html" title=" " alt="" coords="189,229,247,256"/>
+<area shape="rect" title="Entity Abstract class." alt="" coords="137,80,207,107"/>
+<area shape="rect" href="class_enemy.html" title="Enemy class inherits from AEntity." alt="" coords="5,155,72,181"/>
+<area shape="rect" href="class_object.html" title="Object class represents all the Entity not moving. Like walls, fruits." alt="" coords="96,155,160,181"/>
+<area shape="rect" href="class_player.html" title="Player class inherits from AEntity." alt="" coords="185,155,247,181"/>
+<area shape="rect" href="class_text_entity.html" title="TextEntity class inherits from AEntity." alt="" coords="271,155,358,181"/>
+<area shape="rect" href="class_i_entity.html" title="represents a generic entity within the game" alt="" coords="140,5,204,32"/>
+<area shape="rect" href="class_button.html" title=" " alt="" coords="53,229,118,256"/>
+<area shape="rect" href="class_score.html" title=" " alt="" coords="143,229,201,256"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -140,12 +140,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aff3c2aaf5ec9fe750878c8d8d805fc14"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_entity.html#aff3c2aaf5ec9fe750878c8d8d805fc14">setSize</a> (std::pair&lt; int, int &gt; size) override</td></tr>
 <tr class="memdesc:aff3c2aaf5ec9fe750878c8d8d805fc14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the entity size.  <a href="class_a_entity.html#aff3c2aaf5ec9fe750878c8d8d805fc14">More...</a><br /></td></tr>
 <tr class="separator:aff3c2aaf5ec9fe750878c8d8d805fc14"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab368552733252f1ce634b3c5db29568d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_entity.html#ab368552733252f1ce634b3c5db29568d">setIsMoving</a> (bool isMoving)</td></tr>
-<tr class="memdesc:ab368552733252f1ce634b3c5db29568d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Entity boolean isMoving.  <a href="class_a_entity.html#ab368552733252f1ce634b3c5db29568d">More...</a><br /></td></tr>
-<tr class="separator:ab368552733252f1ce634b3c5db29568d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae71fa931609b2226a0e437fe04ab40ef"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_entity.html#ae71fa931609b2226a0e437fe04ab40ef">getIsMoving</a> () const</td></tr>
-<tr class="memdesc:ae71fa931609b2226a0e437fe04ab40ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Entity boolean isMoving.  <a href="class_a_entity.html#ae71fa931609b2226a0e437fe04ab40ef">More...</a><br /></td></tr>
-<tr class="separator:ae71fa931609b2226a0e437fe04ab40ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec1fb3750e43a16f17445ad966c06b57"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_entity.html#aec1fb3750e43a16f17445ad966c06b57">setIsMoving</a> (bool isMoving)=0</td></tr>
+<tr class="memdesc:aec1fb3750e43a16f17445ad966c06b57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Entity boolean isMoving.  <a href="class_a_entity.html#aec1fb3750e43a16f17445ad966c06b57">More...</a><br /></td></tr>
+<tr class="separator:aec1fb3750e43a16f17445ad966c06b57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88c37445cd2d7a98eb6793a5239e2834"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_entity.html#a88c37445cd2d7a98eb6793a5239e2834">getIsMoving</a> () const =0</td></tr>
+<tr class="memdesc:a88c37445cd2d7a98eb6793a5239e2834"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Entity boolean isMoving.  <a href="class_a_entity.html#a88c37445cd2d7a98eb6793a5239e2834">More...</a><br /></td></tr>
+<tr class="separator:a88c37445cd2d7a98eb6793a5239e2834"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae46771dd1354b5c4e4350d9a8c63df45"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_entity.html#ae46771dd1354b5c4e4350d9a8c63df45">setTexturePath</a> (std::string texturePath) override</td></tr>
 <tr class="memdesc:ae46771dd1354b5c4e4350d9a8c63df45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the texturePath of the entity.  <a href="class_a_entity.html#ae46771dd1354b5c4e4350d9a8c63df45">More...</a><br /></td></tr>
 <tr class="separator:ae46771dd1354b5c4e4350d9a8c63df45"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -164,10 +164,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a19ac1875464bf00f930afa1f1809ef85"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_entity.html#a19ac1875464bf00f930afa1f1809ef85">setDirection</a> (<a class="el" href="class_i_entity.html#ad9ba33013aa2da542e9fa6c6fadabef5">Direction</a> direction) override</td></tr>
 <tr class="memdesc:a19ac1875464bf00f930afa1f1809ef85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Entity direction.  <a href="class_a_entity.html#a19ac1875464bf00f930afa1f1809ef85">More...</a><br /></td></tr>
 <tr class="separator:a19ac1875464bf00f930afa1f1809ef85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e1f5f3590e6d6180286dfdf976013d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_entity.html#a4e1f5f3590e6d6180286dfdf976013d0">setType</a> (<a class="el" href="class_i_entity.html#a46d8922e2df0932c61ca624e05f85aa2">ENTITY_TYPE</a> type) override</td></tr>
+<tr class="separator:a4e1f5f3590e6d6180286dfdf976013d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a509eb75042c3169c4bfd82b1a3aaad7c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_i_entity.html#a46d8922e2df0932c61ca624e05f85aa2">ENTITY_TYPE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_entity.html#a509eb75042c3169c4bfd82b1a3aaad7c">getType</a> () const override</td></tr>
+<tr class="memdesc:a509eb75042c3169c4bfd82b1a3aaad7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the entity type.  <a href="class_a_entity.html#a509eb75042c3169c4bfd82b1a3aaad7c">More...</a><br /></td></tr>
+<tr class="separator:a509eb75042c3169c4bfd82b1a3aaad7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_i_entity"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_i_entity')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_i_entity.html">IEntity</a></td></tr>
 <tr class="memitem:acfe7cc7def33fa1cc8a2a56dc39d29e3 inherit pub_methods_class_i_entity"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_entity.html#acfe7cc7def33fa1cc8a2a56dc39d29e3">~IEntity</a> ()=default</td></tr>
 <tr class="memdesc:acfe7cc7def33fa1cc8a2a56dc39d29e3 inherit pub_methods_class_i_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="class_i_entity.html#acfe7cc7def33fa1cc8a2a56dc39d29e3">More...</a><br /></td></tr>
 <tr class="separator:acfe7cc7def33fa1cc8a2a56dc39d29e3 inherit pub_methods_class_i_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7702202a1672a34e92311b2dacf9d858 inherit pub_methods_class_i_entity"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_entity.html#a7702202a1672a34e92311b2dacf9d858">setType</a> (<a class="el" href="class_i_entity.html#a46d8922e2df0932c61ca624e05f85aa2">ENTITY_TYPE</a> type)=0</td></tr>
+<tr class="memdesc:a7702202a1672a34e92311b2dacf9d858 inherit pub_methods_class_i_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the type of the entity.  <a href="class_i_entity.html#a7702202a1672a34e92311b2dacf9d858">More...</a><br /></td></tr>
+<tr class="separator:a7702202a1672a34e92311b2dacf9d858 inherit pub_methods_class_i_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -183,6 +191,8 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:af982652898741ac6c7e280d7b1961242"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72e4de7c430bb90fda1322ac35b74f8d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_i_entity.html#ad9ba33013aa2da542e9fa6c6fadabef5">Direction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_entity.html#a72e4de7c430bb90fda1322ac35b74f8d">_direction</a></td></tr>
 <tr class="separator:a72e4de7c430bb90fda1322ac35b74f8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35c0e3ec8a2083214039a70e9bd18784"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_i_entity.html#a46d8922e2df0932c61ca624e05f85aa2">ENTITY_TYPE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_entity.html#a35c0e3ec8a2083214039a70e9bd18784">_type</a></td></tr>
+<tr class="separator:a35c0e3ec8a2083214039a70e9bd18784"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -193,6 +203,21 @@ Additional Inherited Members</h2></td></tr>
 <a class="el" href="class_i_entity.html#ad9ba33013aa2da542e9fa6c6fadabef5abd53b29c005e5e65eb64fa57b0c4e6e1">RIGHT</a>
  }</td></tr>
 <tr class="separator:ad9ba33013aa2da542e9fa6c6fadabef5 inherit pub_types_class_i_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46d8922e2df0932c61ca624e05f85aa2 inherit pub_types_class_i_entity"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_entity.html#a46d8922e2df0932c61ca624e05f85aa2">ENTITY_TYPE</a> { <br />
+&#160;&#160;<a class="el" href="class_i_entity.html#a46d8922e2df0932c61ca624e05f85aa2a906e5f94605e5680eeeba3dbf75dcc76">WALL</a> = 0, 
+<a class="el" href="class_i_entity.html#a46d8922e2df0932c61ca624e05f85aa2aa8a69fc0de36d52a9422bce960f7ea6e">ENEMY</a> = 1, 
+<a class="el" href="class_i_entity.html#a46d8922e2df0932c61ca624e05f85aa2a1338589f35cfb3b9caec34f1612ce430">PLAYER</a> = 2, 
+<a class="el" href="class_i_entity.html#a46d8922e2df0932c61ca624e05f85aa2aa44a6be3468a3d9850c5c9253611a8d3">BONUS</a> = 3, 
+<br />
+&#160;&#160;<a class="el" href="class_i_entity.html#a46d8922e2df0932c61ca624e05f85aa2abb5e4afb77e9abb1bce78998240cf14e">POINT</a> = 4, 
+<a class="el" href="class_i_entity.html#a46d8922e2df0932c61ca624e05f85aa2a511b0e54922ef5690738e7caf40400ff">BUTTON</a> = 5, 
+<a class="el" href="class_i_entity.html#a46d8922e2df0932c61ca624e05f85aa2a90446c66bc9c31f7957c6288f84de5e3">SCORE</a> = 6, 
+<a class="el" href="class_i_entity.html#a46d8922e2df0932c61ca624e05f85aa2adb8475946694194af8c3fbc011c8c386">UNDEFINED</a> = 7, 
+<br />
+&#160;&#160;<a class="el" href="class_i_entity.html#a46d8922e2df0932c61ca624e05f85aa2abc00b9d0a78f998bbb99a73aeea14ee0">ENTITY_TYPE_SIZE</a> = 8
+<br />
+ }</td></tr>
+<tr class="separator:a46d8922e2df0932c61ca624e05f85aa2 inherit pub_types_class_i_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Entity Abstract class. </p>
@@ -276,12 +301,12 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_entity.html#a98ae1ff15e9d0666daa3c23f857bf09a">IEntity</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_a_entity_8cpp_source.html#l00060">60</a> of file <a class="el" href="_a_entity_8cpp_source.html">AEntity.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_entity_8cpp_source.html#l00062">62</a> of file <a class="el" href="_a_entity_8cpp_source.html">AEntity.cpp</a>.</p>
 
 </div>
 </div>
-<a id="ae71fa931609b2226a0e437fe04ab40ef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae71fa931609b2226a0e437fe04ab40ef">&#9670;&nbsp;</a></span>getIsMoving()</h2>
+<a id="a88c37445cd2d7a98eb6793a5239e2834"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88c37445cd2d7a98eb6793a5239e2834">&#9670;&nbsp;</a></span>getIsMoving()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -298,7 +323,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -306,7 +331,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Get the Entity boolean isMoving. </p>
 <dl class="section return"><dt>Returns</dt><dd>bool isMoving; </dd></dl>
 
-<p>Reimplemented in <a class="el" href="class_object.html#a6675c531600779a9e2c1fe35947eb86a">Object</a>, <a class="el" href="class_player.html#a858b0644480fbc9f4e473c58b7c82b5c">Player</a>, and <a class="el" href="class_enemy.html#af3ad00f5db4e91c220d367196364ee55">Enemy</a>.</p>
+<p>Implemented in <a class="el" href="class_text_entity.html#a9b4266e1d9af45e9ad1ba430df056fe6">TextEntity</a>, <a class="el" href="class_enemy.html#a0ca6ff156c299788a47d2cfdd8750aa2">Enemy</a>, <a class="el" href="class_object.html#a6675c531600779a9e2c1fe35947eb86a">Object</a>, and <a class="el" href="class_player.html#a858b0644480fbc9f4e473c58b7c82b5c">Player</a>.</p>
 
 </div>
 </div>
@@ -338,7 +363,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_entity.html#ab3209bdc669cf1a5812d7a8353f1e402">IEntity</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_a_entity_8cpp_source.html#l00020">20</a> of file <a class="el" href="_a_entity_8cpp_source.html">AEntity.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_entity_8cpp_source.html#l00022">22</a> of file <a class="el" href="_a_entity_8cpp_source.html">AEntity.cpp</a>.</p>
 
 </div>
 </div>
@@ -370,7 +395,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_entity.html#a4644cf0bd8a130b0dabd59bd9bda96f5">IEntity</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_a_entity_8cpp_source.html#l00030">30</a> of file <a class="el" href="_a_entity_8cpp_source.html">AEntity.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_entity_8cpp_source.html#l00032">32</a> of file <a class="el" href="_a_entity_8cpp_source.html">AEntity.cpp</a>.</p>
 
 </div>
 </div>
@@ -403,7 +428,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_entity.html#abfc6494376db6995f4fca94200373929">IEntity</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_a_entity_8cpp_source.html#l00055">55</a> of file <a class="el" href="_a_entity_8cpp_source.html">AEntity.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_entity_8cpp_source.html#l00057">57</a> of file <a class="el" href="_a_entity_8cpp_source.html">AEntity.cpp</a>.</p>
 
 </div>
 </div>
@@ -436,7 +461,40 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_entity.html#a061d23192c062383f400f3789e189369">IEntity</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_a_entity_8cpp_source.html#l00045">45</a> of file <a class="el" href="_a_entity_8cpp_source.html">AEntity.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_entity_8cpp_source.html#l00047">47</a> of file <a class="el" href="_a_entity_8cpp_source.html">AEntity.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a509eb75042c3169c4bfd82b1a3aaad7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a509eb75042c3169c4bfd82b1a3aaad7c">&#9670;&nbsp;</a></span>getType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_i_entity.html#a46d8922e2df0932c61ca624e05f85aa2">IEntity::ENTITY_TYPE</a> AEntity::getType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the entity type. </p>
+
+<p>Implements <a class="el" href="class_i_entity.html#a3cb98990879d1b9d717f240d248e1347">IEntity</a>.</p>
+
+<p>Reimplemented in <a class="el" href="class_object.html#a75da801ae056164f4d2975d6fe15ab20">Object</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_a_entity_8cpp_source.html#l00077">77</a> of file <a class="el" href="_a_entity_8cpp_source.html">AEntity.cpp</a>.</p>
 
 </div>
 </div>
@@ -474,12 +532,12 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_entity.html#afaa98bb713d3ad51e506a331906b22a2">IEntity</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_a_entity_8cpp_source.html#l00065">65</a> of file <a class="el" href="_a_entity_8cpp_source.html">AEntity.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_entity_8cpp_source.html#l00067">67</a> of file <a class="el" href="_a_entity_8cpp_source.html">AEntity.cpp</a>.</p>
 
 </div>
 </div>
-<a id="ab368552733252f1ce634b3c5db29568d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab368552733252f1ce634b3c5db29568d">&#9670;&nbsp;</a></span>setIsMoving()</h2>
+<a id="aec1fb3750e43a16f17445ad966c06b57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec1fb3750e43a16f17445ad966c06b57">&#9670;&nbsp;</a></span>setIsMoving()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -497,14 +555,14 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Set the Entity boolean isMoving. </p>
 
-<p>Reimplemented in <a class="el" href="class_object.html#a8004c95e7571e7d8d6005ac62ef0644c">Object</a>, <a class="el" href="class_player.html#a362d0e74f9cd4daf84faee36be1fffd8">Player</a>, and <a class="el" href="class_enemy.html#aa9ab0edcac6bc6b6bbba427d159172ed">Enemy</a>.</p>
+<p>Implemented in <a class="el" href="class_text_entity.html#afe7c6a2b4bd322552dda5a1941600c90">TextEntity</a>, <a class="el" href="class_enemy.html#a2283b2aabd93b7ae2548a04777bd70bc">Enemy</a>, <a class="el" href="class_object.html#a8004c95e7571e7d8d6005ac62ef0644c">Object</a>, and <a class="el" href="class_player.html#a362d0e74f9cd4daf84faee36be1fffd8">Player</a>.</p>
 
 </div>
 </div>
@@ -542,7 +600,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_entity.html#a3dc74d4e58ee5091e5f1d54bbbcf5a13">IEntity</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_a_entity_8cpp_source.html#l00025">25</a> of file <a class="el" href="_a_entity_8cpp_source.html">AEntity.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_entity_8cpp_source.html#l00027">27</a> of file <a class="el" href="_a_entity_8cpp_source.html">AEntity.cpp</a>.</p>
 
 </div>
 </div>
@@ -580,7 +638,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_entity.html#a1868722c6177951cd8c07d83bcfbc0fa">IEntity</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_a_entity_8cpp_source.html#l00035">35</a> of file <a class="el" href="_a_entity_8cpp_source.html">AEntity.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_entity_8cpp_source.html#l00037">37</a> of file <a class="el" href="_a_entity_8cpp_source.html">AEntity.cpp</a>.</p>
 
 </div>
 </div>
@@ -636,7 +694,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_entity.html#a34bea9adcc42c97d3e5ad7661a2ac707">IEntity</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_a_entity_8cpp_source.html#l00050">50</a> of file <a class="el" href="_a_entity_8cpp_source.html">AEntity.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_entity_8cpp_source.html#l00052">52</a> of file <a class="el" href="_a_entity_8cpp_source.html">AEntity.cpp</a>.</p>
 
 </div>
 </div>
@@ -674,7 +732,35 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_entity.html#a15efc69cf999c6e502b2221fba6815ef">IEntity</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_a_entity_8cpp_source.html#l00040">40</a> of file <a class="el" href="_a_entity_8cpp_source.html">AEntity.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_entity_8cpp_source.html#l00042">42</a> of file <a class="el" href="_a_entity_8cpp_source.html">AEntity.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a4e1f5f3590e6d6180286dfdf976013d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e1f5f3590e6d6180286dfdf976013d0">&#9670;&nbsp;</a></span>setType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AEntity::setType </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_i_entity.html#a46d8922e2df0932c61ca624e05f85aa2">ENTITY_TYPE</a>&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_a_entity_8cpp_source.html#l00072">72</a> of file <a class="el" href="_a_entity_8cpp_source.html">AEntity.cpp</a>.</p>
 
 </div>
 </div>
@@ -699,7 +785,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_a_entity_8hpp_source.html#l00077">77</a> of file <a class="el" href="_a_entity_8hpp_source.html">AEntity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_entity_8hpp_source.html#l00080">80</a> of file <a class="el" href="_a_entity_8hpp_source.html">AEntity.hpp</a>.</p>
 
 </div>
 </div>
@@ -723,7 +809,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_a_entity_8hpp_source.html#l00074">74</a> of file <a class="el" href="_a_entity_8hpp_source.html">AEntity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_entity_8hpp_source.html#l00077">77</a> of file <a class="el" href="_a_entity_8hpp_source.html">AEntity.hpp</a>.</p>
 
 </div>
 </div>
@@ -747,7 +833,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_a_entity_8hpp_source.html#l00072">72</a> of file <a class="el" href="_a_entity_8hpp_source.html">AEntity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_entity_8hpp_source.html#l00075">75</a> of file <a class="el" href="_a_entity_8hpp_source.html">AEntity.hpp</a>.</p>
 
 </div>
 </div>
@@ -771,7 +857,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_a_entity_8hpp_source.html#l00073">73</a> of file <a class="el" href="_a_entity_8hpp_source.html">AEntity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_entity_8hpp_source.html#l00076">76</a> of file <a class="el" href="_a_entity_8hpp_source.html">AEntity.hpp</a>.</p>
 
 </div>
 </div>
@@ -795,7 +881,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_a_entity_8hpp_source.html#l00076">76</a> of file <a class="el" href="_a_entity_8hpp_source.html">AEntity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_entity_8hpp_source.html#l00079">79</a> of file <a class="el" href="_a_entity_8hpp_source.html">AEntity.hpp</a>.</p>
 
 </div>
 </div>
@@ -819,7 +905,31 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_a_entity_8hpp_source.html#l00075">75</a> of file <a class="el" href="_a_entity_8hpp_source.html">AEntity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_entity_8hpp_source.html#l00078">78</a> of file <a class="el" href="_a_entity_8hpp_source.html">AEntity.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a35c0e3ec8a2083214039a70e9bd18784"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35c0e3ec8a2083214039a70e9bd18784">&#9670;&nbsp;</a></span>_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_i_entity.html#a46d8922e2df0932c61ca624e05f85aa2">ENTITY_TYPE</a> AEntity::_type</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_a_entity_8hpp_source.html#l00081">81</a> of file <a class="el" href="_a_entity_8hpp_source.html">AEntity.hpp</a>.</p>
 
 </div>
 </div>

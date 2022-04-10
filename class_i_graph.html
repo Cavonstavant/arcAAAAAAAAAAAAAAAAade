@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>arcAAAAAAAAAAAAAAAAade: IGraph Class Reference</title>
+<title>arcAAAAAAAAAAAAAAAAade: IGraph Interface Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -86,7 +86,7 @@ $(document).ready(function(){initNavTree('class_i_graph.html',''); initResizable
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="class_i_graph-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">IGraph Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+<div class="title">IGraph Interface Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -123,9 +123,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7963d277bd33308a52c3029214e875a0"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graph.html#a7963d277bd33308a52c3029214e875a0">drawRect</a> (std::pair&lt; int, int &gt; pos, int width, int height, <a class="el" href="struct_color.html">Color</a> color)=0</td></tr>
 <tr class="memdesc:a7963d277bd33308a52c3029214e875a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a Rectangle, set position, set width &amp; height, then display it on the window. After all destroy the Rectangle.  <a href="class_i_graph.html#a7963d277bd33308a52c3029214e875a0">More...</a><br /></td></tr>
 <tr class="separator:a7963d277bd33308a52c3029214e875a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33dcccbd047be436bf9ace4347071f56"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graph.html#a33dcccbd047be436bf9ace4347071f56">drawText</a> (std::pair&lt; int, int &gt; pos, const std::string &amp;content)=0</td></tr>
-<tr class="memdesc:a33dcccbd047be436bf9ace4347071f56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a text, set position, set content, set font, then display it on the window. After all destroy the Text.  <a href="class_i_graph.html#a33dcccbd047be436bf9ace4347071f56">More...</a><br /></td></tr>
-<tr class="separator:a33dcccbd047be436bf9ace4347071f56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc313588d862964034f9dc7256ef0e8a"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graph.html#adc313588d862964034f9dc7256ef0e8a">drawText</a> (std::pair&lt; int, int &gt; pos, const std::string &amp;content, <a class="el" href="struct_color.html">Color</a> color)=0</td></tr>
+<tr class="memdesc:adc313588d862964034f9dc7256ef0e8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a text, set position, set content, set font, then display it on the window. After all destroy the Text.  <a href="class_i_graph.html#adc313588d862964034f9dc7256ef0e8a">More...</a><br /></td></tr>
+<tr class="separator:adc313588d862964034f9dc7256ef0e8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a86710ad76190aafbdf76941ce89a34f3"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graph.html#a86710ad76190aafbdf76941ce89a34f3">drawEntity</a> (<a class="el" href="class_i_entity.html">IEntity</a> &amp;entity, std::pair&lt; int, int &gt; pos)=0</td></tr>
 <tr class="memdesc:a86710ad76190aafbdf76941ce89a34f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an Entity, set position, then display it on the window. After all destroy the Entity.  <a href="class_i_graph.html#a86710ad76190aafbdf76941ce89a34f3">More...</a><br /></td></tr>
 <tr class="separator:a86710ad76190aafbdf76941ce89a34f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -135,9 +135,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a703f8faaae8cb3b339b8686e5f442f81"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graph.html#a703f8faaae8cb3b339b8686e5f442f81">displayWindow</a> ()=0</td></tr>
 <tr class="memdesc:a703f8faaae8cb3b339b8686e5f442f81"><td class="mdescLeft">&#160;</td><td class="mdescRight">display the window  <a href="class_i_graph.html#a703f8faaae8cb3b339b8686e5f442f81">More...</a><br /></td></tr>
 <tr class="separator:a703f8faaae8cb3b339b8686e5f442f81"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3276be081a766d713c150d087ec28e98"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="struct_arcade_1_1_evt.html">Arcade::Evt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graph.html#a3276be081a766d713c150d087ec28e98">getInput</a> () const =0</td></tr>
-<tr class="memdesc:a3276be081a766d713c150d087ec28e98"><td class="mdescLeft">&#160;</td><td class="mdescRight">get input from Graphic Library to send it to the Core  <a href="class_i_graph.html#a3276be081a766d713c150d087ec28e98">More...</a><br /></td></tr>
-<tr class="separator:a3276be081a766d713c150d087ec28e98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5503da735e8b53775b3db3acaaddb35"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="struct_arcade_1_1_evt.html">Arcade::Evt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graph.html#ae5503da735e8b53775b3db3acaaddb35">getInput</a> ()=0</td></tr>
+<tr class="memdesc:ae5503da735e8b53775b3db3acaaddb35"><td class="mdescLeft">&#160;</td><td class="mdescRight">get input from Graphic Library to send it to the <a class="el" href="class_core.html" title="Core class that the transfer of data between games and displays.">Core</a>  <a href="class_i_graph.html#ae5503da735e8b53775b3db3acaaddb35">More...</a><br /></td></tr>
+<tr class="separator:ae5503da735e8b53775b3db3acaaddb35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37b6f2993125bbbb12007714668eb026"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graph.html#a37b6f2993125bbbb12007714668eb026">getLibraryName</a> () const =0</td></tr>
 <tr class="memdesc:a37b6f2993125bbbb12007714668eb026"><td class="mdescLeft">&#160;</td><td class="mdescRight">get name of the library currently used  <a href="class_i_graph.html#a37b6f2993125bbbb12007714668eb026">More...</a><br /></td></tr>
 <tr class="separator:a37b6f2993125bbbb12007714668eb026"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -145,7 +145,7 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>represents a generic graphical library </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_graph_8hpp_source.html#l00020">20</a> of file <a class="el" href="_i_graph_8hpp_source.html">IGraph.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graph_8hpp_source.html#l00021">21</a> of file <a class="el" href="_i_graph_8hpp_source.html">IGraph.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a12f681e7abc397a40abd4abae7b8104c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a12f681e7abc397a40abd4abae7b8104c">&#9670;&nbsp;</a></span>~IGraph()</h2>
@@ -429,8 +429,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a33dcccbd047be436bf9ace4347071f56"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a33dcccbd047be436bf9ace4347071f56">&#9670;&nbsp;</a></span>drawText()</h2>
+<a id="adc313588d862964034f9dc7256ef0e8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc313588d862964034f9dc7256ef0e8a">&#9670;&nbsp;</a></span>drawText()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -448,7 +448,13 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>content</em>&#160;</td>
+          <td class="paramname"><em>content</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_color.html">Color</a>&#160;</td>
+          <td class="paramname"><em>color</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -473,12 +479,12 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if the text is successfully draw </dd></dl>
 
-<p>Implemented in <a class="el" href="class_sdl_library.html#ae7cc50a60207c8f9e972d918e25d71d0">SdlLibrary</a>, <a class="el" href="class_sfml_library.html#a2fd2127ee510180ae0f5cca4811537e7">SfmlLibrary</a>, and <a class="el" href="class_ncurses_library.html#a2f48cc458d7d3d8f562da1ba8b76c574">NcursesLibrary</a>.</p>
+<p>Implemented in <a class="el" href="class_sdl_library.html#a4a08e8b4fcdb3fc490f65d44ec404403">SdlLibrary</a>, <a class="el" href="class_sfml_library.html#a3e18118721440aaee556dc68cb735a0d">SfmlLibrary</a>, and <a class="el" href="class_ncurses_library.html#a9fcffe106eff775cbd84dd1581801131">NcursesLibrary</a>.</p>
 
 </div>
 </div>
-<a id="a3276be081a766d713c150d087ec28e98"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3276be081a766d713c150d087ec28e98">&#9670;&nbsp;</a></span>getInput()</h2>
+<a id="ae5503da735e8b53775b3db3acaaddb35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5503da735e8b53775b3db3acaaddb35">&#9670;&nbsp;</a></span>getInput()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -490,7 +496,7 @@ Public Member Functions</h2></td></tr>
           <td class="memname">virtual <a class="el" href="struct_arcade_1_1_evt.html">Arcade::Evt</a> IGraph::getInput </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td></td>
         </tr>
       </table>
   </td>
@@ -500,10 +506,10 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>get input from Graphic Library to send it to the Core </p>
+<p>get input from Graphic Library to send it to the <a class="el" href="class_core.html" title="Core class that the transfer of data between games and displays.">Core</a> </p>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="struct_arcade_1_1_evt.html" title="Represents a generic event interface this interface is shared across all the graphical libraries.">Arcade::Evt</a> representing the keyboard pressed of the event triggered </dd></dl>
 
-<p>Implemented in <a class="el" href="class_sdl_library.html#a3a247738402108cde02c99fac253072f">SdlLibrary</a>, <a class="el" href="class_sfml_library.html#ab89015ccf6dc8096b4c1ff568bce0889">SfmlLibrary</a>, and <a class="el" href="class_ncurses_library.html#a9b804de7787f5214acf7587884a7b1fc">NcursesLibrary</a>.</p>
+<p>Implemented in <a class="el" href="class_sdl_library.html#afad77dba5ec015e03530a1f99dfb52a4">SdlLibrary</a>, <a class="el" href="class_sfml_library.html#a8cc770d1efabe8d5d6f126c3390a21e0">SfmlLibrary</a>, and <a class="el" href="class_ncurses_library.html#a9ca661a5b866aec7a57f7ecedae57079">NcursesLibrary</a>.</p>
 
 </div>
 </div>
@@ -566,7 +572,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this interface was generated from the following file:<ul>
 <li>Src/CommonInterface/include/<a class="el" href="_i_graph_8hpp_source.html">IGraph.hpp</a></li>
 </ul>
 </div><!-- contents -->

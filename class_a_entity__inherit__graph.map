@@ -1,10 +1,10 @@
 <map id="AEntity" name="AEntity">
-<area shape="rect" id="node1" title="Entity Abstract class." alt="" coords="183,80,253,107"/>
-<area shape="rect" id="node3" href="$class_button.html" title=" " alt="" coords="5,155,71,181"/>
-<area shape="rect" id="node4" href="$class_enemy.html" title="Enemy class inherits from AEntity." alt="" coords="95,155,162,181"/>
-<area shape="rect" id="node5" href="$class_object.html" title="Object class represents all the Entity not moving. Like walls, fruits." alt="" coords="186,155,250,181"/>
-<area shape="rect" id="node7" href="$class_player.html" title="Player class inherits from AEntity." alt="" coords="275,155,337,181"/>
-<area shape="rect" id="node8" href="$class_text_entity.html" title="TextEntity class inherits from AEntity." alt="" coords="361,155,448,181"/>
-<area shape="rect" id="node2" href="$class_i_entity.html" title="represents a generic entity within the game" alt="" coords="186,5,250,32"/>
-<area shape="rect" id="node6" href="$class_score.html" title=" " alt="" coords="189,229,247,256"/>
+<area shape="rect" id="node1" title="Entity Abstract class." alt="" coords="137,80,207,107"/>
+<area shape="rect" id="node3" href="$class_enemy.html" title="Enemy class inherits from AEntity." alt="" coords="5,155,72,181"/>
+<area shape="rect" id="node4" href="$class_object.html" title="Object class represents all the Entity not moving. Like walls, fruits." alt="" coords="96,155,160,181"/>
+<area shape="rect" id="node7" href="$class_player.html" title="Player class inherits from AEntity." alt="" coords="185,155,247,181"/>
+<area shape="rect" id="node8" href="$class_text_entity.html" title="TextEntity class inherits from AEntity." alt="" coords="271,155,358,181"/>
+<area shape="rect" id="node2" href="$class_i_entity.html" title="represents a generic entity within the game" alt="" coords="140,5,204,32"/>
+<area shape="rect" id="node5" href="$class_button.html" title=" " alt="" coords="53,229,118,256"/>
+<area shape="rect" id="node6" href="$class_score.html" title=" " alt="" coords="143,229,201,256"/>
 </map>

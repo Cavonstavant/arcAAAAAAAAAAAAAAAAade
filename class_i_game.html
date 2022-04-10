@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>arcAAAAAAAAAAAAAAAAade: IGame Class Reference</title>
+<title>arcAAAAAAAAAAAAAAAAade: IGame Interface Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -87,12 +87,9 @@ $(document).ready(function(){initNavTree('class_i_game.html',''); initResizable(
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="class_i_game-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">IGame Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+<div class="title">IGame Interface Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>Game instance.  
- <a href="class_i_game.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_i_game_8hpp_source.html">IGame.hpp</a>&gt;</code></p>
 <div class="dynheader">
@@ -100,9 +97,10 @@ Inheritance diagram for IGame:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_i_game__inherit__graph.png" border="0" usemap="#_i_game_inherit__map" alt="Inheritance graph"/></div>
 <map name="_i_game_inherit__map" id="_i_game_inherit__map">
-<area shape="rect" title="Game instance." alt="" coords="70,5,135,32"/>
+<area shape="rect" title=" " alt="" coords="122,5,187,32"/>
 <area shape="rect" href="class_main_menu.html" title=" " alt="" coords="5,80,96,107"/>
 <area shape="rect" href="class_nibbler.html" title=" " alt="" coords="120,80,189,107"/>
+<area shape="rect" href="class_pacman.html" title=" " alt="" coords="214,80,287,107"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -132,6 +130,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a44de7e08e7ee294be051445a84306299"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_i_game.html#a4a7309d86599d6e581f764233085c7dd">GameState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_game.html#a44de7e08e7ee294be051445a84306299">getState</a> () const =0</td></tr>
 <tr class="memdesc:a44de7e08e7ee294be051445a84306299"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the game's status.  <a href="class_i_game.html#a44de7e08e7ee294be051445a84306299">More...</a><br /></td></tr>
 <tr class="separator:a44de7e08e7ee294be051445a84306299"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d7aa790c266dc79c50e815557de29ae"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_game.html#a8d7aa790c266dc79c50e815557de29ae">setState</a> (<a class="el" href="class_i_game.html#a4a7309d86599d6e581f764233085c7dd">GameState</a> state)=0</td></tr>
+<tr class="memdesc:a8d7aa790c266dc79c50e815557de29ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the game's status.  <a href="class_i_game.html#a8d7aa790c266dc79c50e815557de29ae">More...</a><br /></td></tr>
+<tr class="separator:a8d7aa790c266dc79c50e815557de29ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4b0a0f5cf6be7c2692485907dc0f6ac"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_game.html#ad4b0a0f5cf6be7c2692485907dc0f6ac">getLibraryName</a> () const =0</td></tr>
 <tr class="memdesc:ad4b0a0f5cf6be7c2692485907dc0f6ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the game's name.  <a href="class_i_game.html#ad4b0a0f5cf6be7c2692485907dc0f6ac">More...</a><br /></td></tr>
 <tr class="separator:ad4b0a0f5cf6be7c2692485907dc0f6ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -140,9 +141,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:abdc3543ee754cecb7eb156f05ce5869d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Game instance. </p>
+<div class="textblock"><p>Game instance </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_game_8hpp_source.html#l00021">21</a> of file <a class="el" href="_i_game_8hpp_source.html">IGame.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_game_8hpp_source.html#l00022">22</a> of file <a class="el" href="_i_game_8hpp_source.html">IGame.hpp</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="a4a7309d86599d6e581f764233085c7dd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4a7309d86599d6e581f764233085c7dd">&#9670;&nbsp;</a></span>GameState</h2>
@@ -176,7 +177,7 @@ Public Member Functions</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="_i_game_8hpp_source.html#l00024">24</a> of file <a class="el" href="_i_game_8hpp_source.html">IGame.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_game_8hpp_source.html#l00025">25</a> of file <a class="el" href="_i_game_8hpp_source.html">IGame.hpp</a>.</p>
 
 </div>
 </div>
@@ -233,7 +234,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Closes the library. </p>
 
-<p>Implemented in <a class="el" href="class_nibbler.html#a0c0021becfb1663a998b0239ae02ffbe">Nibbler</a>, and <a class="el" href="class_main_menu.html#a27996a4ace0811fa102a5b509d707155">MainMenu</a>.</p>
+<p>Implemented in <a class="el" href="class_pacman.html#a66ef29fbc560dc66e7f16639d347ef20">Pacman</a>, <a class="el" href="class_nibbler.html#a0c0021becfb1663a998b0239ae02ffbe">Nibbler</a>, and <a class="el" href="class_main_menu.html#a27996a4ace0811fa102a5b509d707155">MainMenu</a>.</p>
 
 </div>
 </div>
@@ -262,7 +263,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get the game's name. </p>
 
-<p>Implemented in <a class="el" href="class_nibbler.html#a2ba7dcedc156367a534047a1e7912185">Nibbler</a>, and <a class="el" href="class_main_menu.html#a2a1ff38880d4dab3e41b203aeabf2a81">MainMenu</a>.</p>
+<p>Implemented in <a class="el" href="class_pacman.html#a1166f419d4f812fe12d86b3eaf98cffa">Pacman</a>, <a class="el" href="class_main_menu.html#ae768fe510df90b6c011168c7fcc3c8b4">MainMenu</a>, and <a class="el" href="class_nibbler.html#a2ba7dcedc156367a534047a1e7912185">Nibbler</a>.</p>
 
 </div>
 </div>
@@ -292,7 +293,7 @@ Public Member Functions</h2></td></tr>
 <p>Get the game's status. </p>
 <dl class="section return"><dt>Returns</dt><dd>the game's status </dd></dl>
 
-<p>Implemented in <a class="el" href="class_nibbler.html#a7b7deb79b9758ed515ccd1a00a2ffb0c">Nibbler</a>, and <a class="el" href="class_main_menu.html#aae6fc744adbe076dc07356ae6e1a322d">MainMenu</a>.</p>
+<p>Implemented in <a class="el" href="class_pacman.html#a45631d4dc4fe4d955fcc4a788e4f30de">Pacman</a>, <a class="el" href="class_main_menu.html#aee602d0ac4f2cb396b7961183d9bff11">MainMenu</a>, and <a class="el" href="class_nibbler.html#ad9ef81e0ea41ec9600ef5bd5521ed470">Nibbler</a>.</p>
 
 </div>
 </div>
@@ -322,7 +323,43 @@ Public Member Functions</h2></td></tr>
 
 <p>Initialize the game. </p>
 
-<p>Implemented in <a class="el" href="class_nibbler.html#a491d99262a9ffefd0ba88dbf98f2c858">Nibbler</a>, and <a class="el" href="class_main_menu.html#a1f2a0ab6540cf2f6023565feb24be3a6">MainMenu</a>.</p>
+<p>Implemented in <a class="el" href="class_pacman.html#a849f426ef508da3b3d2d5fe3112e8d3b">Pacman</a>, <a class="el" href="class_nibbler.html#a491d99262a9ffefd0ba88dbf98f2c858">Nibbler</a>, and <a class="el" href="class_main_menu.html#a1f2a0ab6540cf2f6023565feb24be3a6">MainMenu</a>.</p>
+
+</div>
+</div>
+<a id="a8d7aa790c266dc79c50e815557de29ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d7aa790c266dc79c50e815557de29ae">&#9670;&nbsp;</a></span>setState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IGame::setState </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_i_game.html#a4a7309d86599d6e581f764233085c7dd">GameState</a>&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the game's status. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">state</td><td>The new game's status </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="class_main_menu.html#a6758bab9fd05dbb89015633082875198">MainMenu</a>, and <a class="el" href="class_nibbler.html#abcc4f7bafc62a1bf04668e7699ddd218">Nibbler</a>.</p>
 
 </div>
 </div>
@@ -351,7 +388,7 @@ Public Member Functions</h2></td></tr>
 
 <p>starts the game </p>
 
-<p>Implemented in <a class="el" href="class_nibbler.html#a084962c2ead391b992c4eb122ecdb95b">Nibbler</a>, and <a class="el" href="class_main_menu.html#af13a5defbd470cb18edc59d14668aaf4">MainMenu</a>.</p>
+<p>Implemented in <a class="el" href="class_pacman.html#a5f35bc7c57052922b65460bf2baa8738">Pacman</a>, <a class="el" href="class_main_menu.html#a71418e58bdc1cd32c56ad9b55f1242a5">MainMenu</a>, and <a class="el" href="class_nibbler.html#a084962c2ead391b992c4eb122ecdb95b">Nibbler</a>.</p>
 
 </div>
 </div>
@@ -398,11 +435,11 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="class_nibbler.html#a9d7cf94c38d3e95bca369ab3e7a7c21a">Nibbler</a>, and <a class="el" href="class_main_menu.html#a119181be29b1e19051e50fbd855c9217">MainMenu</a>.</p>
+<p>Implemented in <a class="el" href="class_pacman.html#a5f0809dce711e2fc5fb0640ce3652686">Pacman</a>, <a class="el" href="class_nibbler.html#a9d7cf94c38d3e95bca369ab3e7a7c21a">Nibbler</a>, and <a class="el" href="class_main_menu.html#a119181be29b1e19051e50fbd855c9217">MainMenu</a>.</p>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this interface was generated from the following file:<ul>
 <li>Src/CommonInterface/include/<a class="el" href="_i_game_8hpp_source.html">IGame.hpp</a></li>
 </ul>
 </div><!-- contents -->

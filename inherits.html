@@ -134,7 +134,8 @@ $(document).ready(function(){initNavTree('hierarchy.html',''); initResizable(); 
 <area shape="rect" href="class_library_exception.html" title="Exception class for the libraries." alt="" coords="351,157,482,184"/>
 <area shape="rect" href="class_not_implemented_exception.html" title="Exception class to throw when something is not implemented." alt="" coords="319,208,515,235"/>
 <area shape="rect" href="class_very_stupid_user_exception.html" title="Exception class when a user is very stupid and we can&#39;t do what anything for them." alt="" coords="323,259,510,285"/>
-<area shape="rect" href="class_button_close_game_exception.html" title="Exception throw when the &quot;close game&quot; button is pressed on the main menu." alt="" coords="563,56,767,83"/>
+<area shape="rect" href="class_button_close_game_exception.html" title="Exception throw when the &quot;close game&quot; button is pressed on the main menu." alt="" coords="563,5,767,32"/>
+<area shape="rect" href="class_switch_lib_exception.html" title="Exception when the core must switch a lib." alt="" coords="591,56,739,83"/>
 <area shape="rect" href="class_invalid_file_exception.html" title="Exception class for the factory if a file is invalid." alt="" coords="588,107,741,133"/>
 <area shape="rect" href="class_file_corrupted_exception.html" title="Exception class for the factory if a file is corrupted." alt="" coords="820,56,993,83"/>
 <area shape="rect" href="class_file_not_found_exception.html" title="Exception class for the factory if a file is not found." alt="" coords="821,107,992,133"/>
@@ -148,26 +149,32 @@ $(document).ready(function(){initNavTree('hierarchy.html',''); initResizable(); 
 <area shape="rect" href="struct_color.html" title="Color structure." alt="" coords="5,5,61,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_9.png" border="0" usemap="#_i_entity" alt=""/>
-<map name="_i_entity" id="_i_entity">
-<area shape="rect" href="class_i_entity.html" title="represents a generic entity within the game" alt="" coords="5,107,69,133"/>
-<area shape="rect" href="class_a_entity.html" title="Entity Abstract class." alt="" coords="117,107,187,133"/>
-<area shape="rect" href="class_button.html" title=" " alt="" coords="245,5,311,32"/>
-<area shape="rect" href="class_enemy.html" title="Enemy class inherits from AEntity." alt="" coords="245,56,311,83"/>
-<area shape="rect" href="class_object.html" title="Object class represents all the Entity not moving. Like walls, fruits." alt="" coords="246,107,310,133"/>
-<area shape="rect" href="class_player.html" title="Player class inherits from AEntity." alt="" coords="247,157,309,184"/>
-<area shape="rect" href="class_text_entity.html" title="TextEntity class inherits from AEntity." alt="" coords="235,208,321,235"/>
-<area shape="rect" href="class_score.html" title=" " alt="" coords="369,107,428,133"/>
+<tr><td><img src="inherit_graph_9.png" border="0" usemap="#_core" alt=""/>
+<map name="_core" id="_core">
+<area shape="rect" href="class_core.html" title="Core class that the transfer of data between games and displays." alt="" coords="5,5,57,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_10.png" border="0" usemap="#_i_game" alt=""/>
+<tr><td><img src="inherit_graph_10.png" border="0" usemap="#_i_entity" alt=""/>
+<map name="_i_entity" id="_i_entity">
+<area shape="rect" href="class_i_entity.html" title="represents a generic entity within the game" alt="" coords="5,81,69,108"/>
+<area shape="rect" href="class_a_entity.html" title="Entity Abstract class." alt="" coords="117,81,187,108"/>
+<area shape="rect" href="class_enemy.html" title="Enemy class inherits from AEntity." alt="" coords="245,5,311,32"/>
+<area shape="rect" href="class_object.html" title="Object class represents all the Entity not moving. Like walls, fruits." alt="" coords="246,56,310,83"/>
+<area shape="rect" href="class_player.html" title="Player class inherits from AEntity." alt="" coords="247,107,309,133"/>
+<area shape="rect" href="class_text_entity.html" title="TextEntity class inherits from AEntity." alt="" coords="235,157,321,184"/>
+<area shape="rect" href="class_button.html" title=" " alt="" coords="369,31,435,57"/>
+<area shape="rect" href="class_score.html" title=" " alt="" coords="373,81,431,108"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_11.png" border="0" usemap="#_i_game" alt=""/>
 <map name="_i_game" id="_i_game">
-<area shape="rect" href="class_i_game.html" title="Game instance." alt="" coords="5,31,71,57"/>
+<area shape="rect" href="class_i_game.html" title=" " alt="" coords="5,56,71,83"/>
 <area shape="rect" href="class_main_menu.html" title=" " alt="" coords="119,5,209,32"/>
 <area shape="rect" href="class_nibbler.html" title=" " alt="" coords="129,56,199,83"/>
+<area shape="rect" href="class_pacman.html" title=" " alt="" coords="127,107,201,133"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_11.png" border="0" usemap="#_i_graph" alt=""/>
+<tr><td><img src="inherit_graph_12.png" border="0" usemap="#_i_graph" alt=""/>
 <map name="_i_graph" id="_i_graph">
 <area shape="rect" href="class_i_graph.html" title="represents a generic graphical library" alt="" coords="5,56,71,83"/>
 <area shape="rect" href="class_ncurses_library.html" title="NCURSES library using int as template value from IGraph." alt="" coords="119,5,237,32"/>
@@ -175,12 +182,12 @@ $(document).ready(function(){initNavTree('hierarchy.html',''); initResizable(); 
 <area shape="rect" href="class_sfml_library.html" title="SFML library." alt="" coords="129,107,227,133"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_12.png" border="0" usemap="#_lib_manager" alt=""/>
+<tr><td><img src="inherit_graph_13.png" border="0" usemap="#_lib_manager" alt=""/>
 <map name="_lib_manager" id="_lib_manager">
 <area shape="rect" href="class_lib_manager.html" title="Wrapper around the dynamic library CRUD operations." alt="" coords="5,5,104,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_13.png" border="0" usemap="#_logger" alt=""/>
+<tr><td><img src="inherit_graph_14.png" border="0" usemap="#_logger" alt=""/>
 <map name="_logger" id="_logger">
 <area shape="rect" href="class_logger.html" title="Logger class to log exceptions." alt="" coords="5,5,72,32"/>
 </map>

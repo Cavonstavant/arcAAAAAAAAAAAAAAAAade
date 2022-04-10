@@ -6,6 +6,7 @@ var annotated_dup =
     [ "Button", "class_button.html", "class_button" ],
     [ "ButtonCloseGameException", "class_button_close_game_exception.html", "class_button_close_game_exception" ],
     [ "Color", "struct_color.html", "struct_color" ],
+    [ "Core", "class_core.html", "class_core" ],
     [ "Enemy", "class_enemy.html", "class_enemy" ],
     [ "EntityException", "class_entity_exception.html", "class_entity_exception" ],
     [ "EventException", "class_event_exception.html", "class_event_exception" ],
@@ -27,10 +28,12 @@ var annotated_dup =
     [ "Nibbler", "class_nibbler.html", "class_nibbler" ],
     [ "NotImplementedException", "class_not_implemented_exception.html", "class_not_implemented_exception" ],
     [ "Object", "class_object.html", "class_object" ],
+    [ "Pacman", "class_pacman.html", "class_pacman" ],
     [ "Player", "class_player.html", "class_player" ],
     [ "Score", "class_score.html", "class_score" ],
     [ "SdlLibrary", "class_sdl_library.html", "class_sdl_library" ],
     [ "SfmlLibrary", "class_sfml_library.html", "class_sfml_library" ],
+    [ "SwitchLibException", "class_switch_lib_exception.html", "class_switch_lib_exception" ],
     [ "TextEntity", "class_text_entity.html", "class_text_entity" ],
     [ "VeryStupidUserException", "class_very_stupid_user_exception.html", "class_very_stupid_user_exception" ]
 ];

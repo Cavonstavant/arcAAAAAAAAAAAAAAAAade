@@ -1,6 +1,6 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$class_i_graph.html" title="represents a generic graphical library" alt="" coords="5,56,71,83"/>
-<area shape="rect" id="node2" href="$class_ncurses_library.html" title="NCURSES library using int as template value from IGraph." alt="" coords="119,5,237,32"/>
-<area shape="rect" id="node3" href="$class_sdl_library.html" title="SDL Library." alt="" coords="135,56,221,83"/>
-<area shape="rect" id="node4" href="$class_sfml_library.html" title="SFML library." alt="" coords="129,107,227,133"/>
+<area shape="rect" id="node1" href="$class_i_game.html" title=" " alt="" coords="5,56,71,83"/>
+<area shape="rect" id="node2" href="$class_main_menu.html" title=" " alt="" coords="119,5,209,32"/>
+<area shape="rect" id="node3" href="$class_nibbler.html" title=" " alt="" coords="129,56,199,83"/>
+<area shape="rect" id="node4" href="$class_pacman.html" title=" " alt="" coords="127,107,201,133"/>
 </map>

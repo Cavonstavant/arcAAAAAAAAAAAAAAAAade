@@ -8,8 +8,8 @@ var class_sdl_library =
     [ "drawCircle", "class_sdl_library.html#a0879579af9657f74bee683fac75bd579", null ],
     [ "drawEntity", "class_sdl_library.html#a906e0b9da52caef24f36a9e4b5a128e5", null ],
     [ "drawRect", "class_sdl_library.html#afff0086520ae806620474c45e5a1afbf", null ],
-    [ "drawText", "class_sdl_library.html#ae7cc50a60207c8f9e972d918e25d71d0", null ],
-    [ "getInput", "class_sdl_library.html#a3a247738402108cde02c99fac253072f", null ],
+    [ "drawText", "class_sdl_library.html#a4a08e8b4fcdb3fc490f65d44ec404403", null ],
+    [ "getInput", "class_sdl_library.html#afad77dba5ec015e03530a1f99dfb52a4", null ],
     [ "getLibraryName", "class_sdl_library.html#aaaaad183fbed74c5219cbc1a5047ae7f", null ],
     [ "init", "class_sdl_library.html#a974697cc4836b42f912d1454c3d19cf9", null ]
 ];

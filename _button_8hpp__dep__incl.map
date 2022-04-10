@@ -1,6 +1,10 @@
 <map id="Src/Games/Common/Button.hpp" name="Src/Games/Common/Button.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="175,5,406,32"/>
-<area shape="rect" id="node2" href="$_main_menu_8hpp.html" title="MainMenu class." alt="" coords="5,80,253,107"/>
-<area shape="rect" id="node3" href="$_main_menu_8cpp.html" title=" " alt="" coords="86,155,333,181"/>
-<area shape="rect" id="node4" href="$_button_8cpp.html" title=" " alt="" coords="328,80,557,107"/>
+<area shape="rect" id="node1" title=" " alt="" coords="414,5,645,32"/>
+<area shape="rect" id="node2" href="$_main_menu_8hpp.html" title="MainMenu class." alt="" coords="219,80,467,107"/>
+<area shape="rect" id="node4" href="$_core_8cpp.html" title=" " alt="" coords="434,237,571,263"/>
+<area shape="rect" id="node7" href="$_main_menu_8cpp.html" title=" " alt="" coords="271,155,518,181"/>
+<area shape="rect" id="node8" href="$_button_8cpp.html" title=" " alt="" coords="592,80,821,107"/>
+<area shape="rect" id="node3" href="$_core_8hpp.html" title=" " alt="" coords="108,155,247,181"/>
+<area shape="rect" id="node5" href="$_core_events_8cpp.html" title=" " alt="" coords="5,229,160,271"/>
+<area shape="rect" id="node6" href="$_core_2_entry_point_8cpp.html" title=" " alt="" coords="185,237,359,263"/>
 </map>

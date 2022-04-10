@@ -8,5 +8,7 @@ var _grid_8hpp =
     [ "GRID_PAIR", "_grid_8hpp.html#a5daf3bcc83f834645310cd1dbe83d4fd", null ],
     [ "GRID_WIDTH", "_grid_8hpp.html#a804eeb9892adae7306540eb33f2326eb", null ],
     [ "MINIMUM_TERM_HEIGHT", "_grid_8hpp.html#a2a775ce5d9c130069ff3fd2a30748fd7", null ],
-    [ "MINIMUM_TERM_WIDTH", "_grid_8hpp.html#afd38ae118476112b8d260e49baf26bbf", null ]
+    [ "MINIMUM_TERM_WIDTH", "_grid_8hpp.html#afd38ae118476112b8d260e49baf26bbf", null ],
+    [ "UNGRID_INT", "_grid_8hpp.html#a9432d335ebf90fe8bf1f668a82c4e0d5", null ],
+    [ "UNGRID_PAIR", "_grid_8hpp.html#a34923afea61fc8bf8b862444b8e7b349", null ]
 ];

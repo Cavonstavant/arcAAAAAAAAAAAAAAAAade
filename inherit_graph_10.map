@@ -1,5 +1,10 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$class_i_game.html" title="Game instance." alt="" coords="5,31,71,57"/>
-<area shape="rect" id="node2" href="$class_main_menu.html" title=" " alt="" coords="119,5,209,32"/>
-<area shape="rect" id="node3" href="$class_nibbler.html" title=" " alt="" coords="129,56,199,83"/>
+<area shape="rect" id="node1" href="$class_i_entity.html" title="represents a generic entity within the game" alt="" coords="5,81,69,108"/>
+<area shape="rect" id="node2" href="$class_a_entity.html" title="Entity Abstract class." alt="" coords="117,81,187,108"/>
+<area shape="rect" id="node3" href="$class_enemy.html" title="Enemy class inherits from AEntity." alt="" coords="245,5,311,32"/>
+<area shape="rect" id="node4" href="$class_object.html" title="Object class represents all the Entity not moving. Like walls, fruits." alt="" coords="246,56,310,83"/>
+<area shape="rect" id="node7" href="$class_player.html" title="Player class inherits from AEntity." alt="" coords="247,107,309,133"/>
+<area shape="rect" id="node8" href="$class_text_entity.html" title="TextEntity class inherits from AEntity." alt="" coords="235,157,321,184"/>
+<area shape="rect" id="node5" href="$class_button.html" title=" " alt="" coords="369,31,435,57"/>
+<area shape="rect" id="node6" href="$class_score.html" title=" " alt="" coords="373,81,431,108"/>
 </map>

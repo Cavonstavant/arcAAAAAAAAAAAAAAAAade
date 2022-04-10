@@ -1,5 +1,6 @@
 <map id="IGame" name="IGame">
-<area shape="rect" id="node1" title="Game instance." alt="" coords="70,5,135,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="122,5,187,32"/>
 <area shape="rect" id="node2" href="$class_main_menu.html" title=" " alt="" coords="5,80,96,107"/>
 <area shape="rect" id="node3" href="$class_nibbler.html" title=" " alt="" coords="120,80,189,107"/>
+<area shape="rect" id="node4" href="$class_pacman.html" title=" " alt="" coords="214,80,287,107"/>
 </map>

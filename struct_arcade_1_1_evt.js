@@ -7,6 +7,7 @@ var struct_arcade_1_1_evt =
     [ "Key", "struct_arcade_1_1_evt.html#a78b2518f45e430c64eeefa2e4275fff4", null ],
     [ "State", "struct_arcade_1_1_evt.html#a4a807167a98f0b8b6df67ebabee49e56", null ],
     [ "EvtType", "struct_arcade_1_1_evt.html#aa27a273a8c2158b5a41ae12019813ea3", [
+      [ "NONE", "struct_arcade_1_1_evt.html#aa27a273a8c2158b5a41ae12019813ea3ac57fb57253518f0f6a7a06a1cfc0ae61", null ],
       [ "WIN_CLOSE", "struct_arcade_1_1_evt.html#aa27a273a8c2158b5a41ae12019813ea3adff6972ae880475575afa4bd28a4c9af", null ],
       [ "WIN_RESIZE", "struct_arcade_1_1_evt.html#aa27a273a8c2158b5a41ae12019813ea3aac180205e819eeba81df63706fc584f3", null ],
       [ "KEY", "struct_arcade_1_1_evt.html#aa27a273a8c2158b5a41ae12019813ea3aed4592e60f9d30b31f88ceb546b2655e", null ],

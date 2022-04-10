@@ -1,12 +1,14 @@
 var hierarchy =
 [
     [ "Color", "struct_color.html", null ],
+    [ "Core", "class_core.html", null ],
     [ "Arcade::Evt", "struct_arcade_1_1_evt.html", null ],
     [ "exception", null, [
       [ "ArcadeException", "class_arcade_exception.html", [
         [ "EntityException", "class_entity_exception.html", null ],
         [ "EventException", "class_event_exception.html", [
-          [ "ButtonCloseGameException", "class_button_close_game_exception.html", null ]
+          [ "ButtonCloseGameException", "class_button_close_game_exception.html", null ],
+          [ "SwitchLibException", "class_switch_lib_exception.html", null ]
         ] ],
         [ "FactoryException", "class_factory_exception.html", [
           [ "InvalidFileException", "class_invalid_file_exception.html", [
@@ -25,9 +27,9 @@ var hierarchy =
     ] ],
     [ "IEntity", "class_i_entity.html", [
       [ "AEntity", "class_a_entity.html", [
-        [ "Button", "class_button.html", null ],
         [ "Enemy", "class_enemy.html", null ],
         [ "Object", "class_object.html", [
+          [ "Button", "class_button.html", null ],
           [ "Score", "class_score.html", null ]
         ] ],
         [ "Player", "class_player.html", null ],
@@ -36,7 +38,8 @@ var hierarchy =
     ] ],
     [ "IGame", "class_i_game.html", [
       [ "MainMenu", "class_main_menu.html", null ],
-      [ "Nibbler", "class_nibbler.html", null ]
+      [ "Nibbler", "class_nibbler.html", null ],
+      [ "Pacman", "class_pacman.html", null ]
     ] ],
     [ "IGraph", "class_i_graph.html", [
       [ "NcursesLibrary", "class_ncurses_library.html", null ],

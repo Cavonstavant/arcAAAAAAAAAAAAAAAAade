@@ -7,8 +7,8 @@ var class_i_graph =
     [ "drawCircle", "class_i_graph.html#ac3a39c636d2e479e9f7dd90a6a5a7f17", null ],
     [ "drawEntity", "class_i_graph.html#a86710ad76190aafbdf76941ce89a34f3", null ],
     [ "drawRect", "class_i_graph.html#a7963d277bd33308a52c3029214e875a0", null ],
-    [ "drawText", "class_i_graph.html#a33dcccbd047be436bf9ace4347071f56", null ],
-    [ "getInput", "class_i_graph.html#a3276be081a766d713c150d087ec28e98", null ],
+    [ "drawText", "class_i_graph.html#adc313588d862964034f9dc7256ef0e8a", null ],
+    [ "getInput", "class_i_graph.html#ae5503da735e8b53775b3db3acaaddb35", null ],
     [ "getLibraryName", "class_i_graph.html#a37b6f2993125bbbb12007714668eb026", null ],
     [ "init", "class_i_graph.html#a047bb5222ba4ac156f057b65ff36ef1c", null ]
 ];
