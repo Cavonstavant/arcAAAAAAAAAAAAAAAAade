@@ -37,7 +37,6 @@ void Nibbler::init(std::vector<std::shared_ptr<IEntity>> &entities)
 
 void Nibbler::close(std::vector<std::shared_ptr<IEntity>> &entities)
 {
-    _gameState = GameState::STOPPED;
     _snake.clear();
     entities.clear();
 }
