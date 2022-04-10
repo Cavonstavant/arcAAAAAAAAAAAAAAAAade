@@ -11,6 +11,7 @@
 #include <filesystem>
 #include <random>
 #include <stack>
+#include <iostream>
 
 Nibbler::Nibbler() :  _gameState(IGame::GameState::STOPPED), _lastTailDir(IEntity::Direction::RIGHT) ,_lastTailPos(std::make_pair(0, 0)), _score(std::make_shared<Score>())
     {}
@@ -22,6 +23,7 @@ void Nibbler::init(std::vector<std::shared_ptr<IEntity>> &entities)
 {
     srand((unsigned) time(NULL));
     _gameState = GameState::LOADED;
+    _lastDir = IEntity::Direction::RIGHT;
     _lastTailDir = IEntity::Direction::RIGHT;
     _lastTailPos = std::make_pair(0, 0);
     _speed = 1;
@@ -67,8 +69,27 @@ Object Nibbler::createNewFruit(int x, int y)
     return fruit;
 }
 
+Object Nibbler::createNewWall(int x, int y)
+{
+    Object wall(Object::ENTITY_TYPE::WALL);
+
+    wall.setPos(std::make_pair(x, y));
+    wall.setTermTexture(' ', Color::TermColors::BLACK, Color::TermColors::WHITE);
+    return wall;
+}
+
 void Nibbler::initEntities(std::vector<std::shared_ptr<IEntity>> &entities)
 {
+    for (int i = 0; i < GRID_HEIGHT; i++) {
+        for (int j = 0; j < GRID_WIDTH; j++) {
+            if (i == 0 || i == GRID_HEIGHT - 1 || j == 0 || j == GRID_WIDTH - 1) {
+                std::shared_ptr<Object> wall = std::make_shared<Object>(createNewWall(j, i));
+                entities.push_back(wall);
+                _walls.push_back(wall);
+            }
+        }
+    }
+
     Player head = createNewHead(GRID_WIDTH / 2, GRID_HEIGHT / 2 + 1);
     Player tail1 = createNewTail(GRID_WIDTH / 2, GRID_HEIGHT / 2);
     Player tail2 = createNewTail(GRID_WIDTH / 2, GRID_HEIGHT / 2 - 1);
@@ -107,19 +128,19 @@ void Nibbler::manageKeyEvent(Arcade::Evt &event, std::vector<std::shared_ptr<IEn
 {
     switch (event.key.key) {
         case 'Z':
-            if (_snake.front()->getDirection() != IEntity::Direction::DOWN)
+            if (_lastDir != IEntity::Direction::DOWN)
                 _snake.front()->setDirection(IEntity::Direction::UP);
             break;
         case 'Q':
-            if (_snake.front()->getDirection() != IEntity::Direction::RIGHT)
+            if (_lastDir != IEntity::Direction::RIGHT)
                 _snake.front()->setDirection(IEntity::Direction::LEFT);
             break;
         case 'S':
-            if (_snake.front()->getDirection() != IEntity::Direction::UP)
+            if (_lastDir != IEntity::Direction::UP)
                 _snake.front()->setDirection(IEntity::Direction::DOWN);
             break;
         case 'D':
-            if (_snake.front()->getDirection() != IEntity::Direction::LEFT)
+            if (_lastDir != IEntity::Direction::LEFT)
                 _snake.front()->setDirection(IEntity::Direction::RIGHT);
             break;
     }
@@ -143,14 +164,14 @@ void Nibbler::update(std::vector<std::shared_ptr<IEntity>> &entities, std::stack
         snakeIsOnAFruit(entities);
     }
 
-    if (snakeIsOnItself())
+    if (snakeIsDeadCollision())
         _gameState = GameState::STOPPED;
 
     if (_snake.size() == GRID_HEIGHT * GRID_WIDTH)
         nextLevel(entities);
 }
 
-static std::pair<int, int> getNextPos(std::pair<int, int> pos, int dir)
+std::pair<int, int> Nibbler::getNextPos(std::pair<int, int> pos, IEntity::Direction dir)
 {
     switch (dir) {
         case IEntity::Direction::UP:
@@ -174,6 +195,7 @@ void Nibbler::moveSnake()
         IEntity::Direction dirBuffer;
         _lastTailDir = _snake.back()->getDirection();
         _lastTailPos = _snake.back()->getPos();
+        _lastDir = _snake.front()->getDirection();
         for (auto &it: _snake) {
             dirBuffer = it->getDirection();
             it->setPos(getNextPos(it->getPos(), dirBuffer));
@@ -186,10 +208,14 @@ void Nibbler::moveSnake()
     }
 }
 
-bool Nibbler::snakeIsOnItself()
+bool Nibbler::snakeIsDeadCollision()
 {
     for (auto &it: _snake) {
         if (it != _snake.front() && it->getPos() == _snake.front()->getPos())
+            return true;
+    }
+    for (auto &it: _walls) {
+        if (_snake.front()->getPos() == it->getPos())
             return true;
     }
     return false;
@@ -203,8 +229,8 @@ bool Nibbler::snakeIsOnAFruit(std::vector<std::shared_ptr<IEntity>> &entities)
         std::shared_ptr<Player> tailPtr = std::make_shared<Player>(tail);
         _snake.push_back(tailPtr);
         entities.push_back(tailPtr);
-        _fruit->setPos(std::make_pair(rand() % GRID_WIDTH, rand() % GRID_HEIGHT));
         _score->setScore(_score->getScore() + 100);
+        _fruit->setPos(std::make_pair((rand() % (GRID_WIDTH - 2)) + 1, (rand() % (GRID_HEIGHT - 2)) + 1));
         return true;
     }
     return false;

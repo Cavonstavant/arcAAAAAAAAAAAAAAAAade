@@ -49,10 +49,14 @@ class Nibbler : public IGame {
 
     protected:
     private:
+        /// \brief The snake's direction on its last movement
+        IEntity::Direction _lastDir;
         /// \brief The game's state
         GameState _gameState;
         /// \brief The snake (list of all its parts)
         std::list<std::shared_ptr<Player>> _snake;
+        /// \brief The walls
+        std::list<std::shared_ptr<Object>> _walls;
         /// \brief The game clock
         std::chrono::high_resolution_clock::time_point _clock;
         /// \brief The fruit
@@ -96,14 +100,24 @@ class Nibbler : public IGame {
         void initEntities(std::vector<std::shared_ptr<IEntity>> &entities);
         /// \brief Create new head
         /// \param entities The entity vector of the game
+        /// \return the created head
         Player createNewHead(int x, int y);
         /// \brief Create new tail
         /// \param entities The entity vector of the game
+        /// \return the created tail
         Player createNewTail(int x, int y);
         /// \brief Create new fruit
         /// \param entities The entity vector of the game
+        /// \return the created fruit
         Object createNewFruit(int x, int y);
-        /// \brief Check if the snake is on itself
-        /// \return true if the snake is on itself, false otherwise
-        bool snakeIsOnItself();
+        /// \brief Create new wall
+        /// \param entities The entity vector of the game
+        /// \return the created wall
+        Object createNewWall(int x, int y);
+        /// \brief Check if the snake hits itself or a wall
+        /// \return true if the snake hits itself or a wall, false otherwise
+        bool snakeIsDeadCollision();
+        /// \brief Get the next position of the snake's head
+        /// \return the next position of the snake's head
+        std::pair<int, int> getNextPos(std::pair<int, int> pos, IEntity::Direction dir);
 };
