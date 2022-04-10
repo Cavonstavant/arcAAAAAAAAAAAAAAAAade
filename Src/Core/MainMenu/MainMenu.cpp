@@ -83,22 +83,22 @@ void MainMenu::init(std::vector<std::shared_ptr<IEntity>> &entities)
     titleText.setPos(std::make_pair(0, 0));
     std::shared_ptr<TextEntity> titleTextPtr = std::make_shared<TextEntity>(titleText);
 
-    Button closeGameButton(&closeGameCallback);
-    closeGameButton.setPos(std::make_pair(11, 2));
-    closeGameButton.setSize(std::make_pair(1, 1));
-    std::shared_ptr<Button> closeGameButtonPtr = std::make_shared<Button>(closeGameButton);
-
     createBox(entities, 1, 1, GRID_INT(1) / 8, GRID_HEIGHT - 1);
     createBox(entities, 1, GRID_INT(1) / 8 + 2, GRID_INT(1) / 3 + 3, GRID_HEIGHT - 1);
     createBox(entities, 1, GRID_INT(1) / 8 + 2 + GRID_INT(1) / 3 + 3 + 1, GRID_INT(1) / 3 + 3, GRID_HEIGHT - 1);
+
+    Button closeGameButton(&closeGameCallback);
+    closeGameButton.setPos(std::make_pair(5, 2));
+    closeGameButton.setSize(std::make_pair(1, 1));
+    std::shared_ptr<Button> closeGameButtonPtr = std::make_shared<Button>(closeGameButton);
 
     _buttons.push_back(closeGameButtonPtr);
     entities.push_back(closeGameButtonPtr);
     entities.push_back(titleTextPtr);
 
-    createText(entities, "1", 11, 2, {0, 0, 0, 255, Color::TermColors::BLACK, Color::TermColors::WHITE});
+    createText(entities, "1", 5, 2, {0, 0, 0, 255, Color::TermColors::BLACK, Color::TermColors::WHITE});
 
-    createVerticalText(entities, "Close", 12, 2);
+    createVerticalText(entities, "Close", 6, 2);
 
     int x = 2;
     int y = 7;
