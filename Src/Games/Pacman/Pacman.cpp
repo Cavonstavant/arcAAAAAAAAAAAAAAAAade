@@ -39,7 +39,7 @@ void Pacman::createEntity(char symbol, std::vector<std::shared_ptr<IEntity>> &en
 
     if (symbol == 'W') {
         std::shared_ptr<Object> obj = std::make_shared<Object>(AEntity::ENTITY_TYPE::WALL);
-        obj->setPos(std::pair<int, int> {i, j});
+        obj->setPos(std::pair<int, int>{i, j});
         entities.push_back(obj);
     } else if (symbol == 'G') {
         Enemy enemy1;
@@ -55,9 +55,9 @@ void Pacman::createEntity(char symbol, std::vector<std::shared_ptr<IEntity>> &en
         _enemies[0] = std::make_shared<Enemy>(enemy1);
         _enemies[1] = std::make_shared<Enemy>(enemy2);
         _enemies[2] = std::make_shared<Enemy>(enemy3);
-        _enemies[0]->setPos(std::pair<int, int> {i, j});
-        _enemies[1]->setPos(std::pair<int, int> {i + 1, j});
-        _enemies[2]->setPos(std::pair<int, int> {i + 2, j});
+        _enemies[0]->setPos(std::pair<int, int>{i, j});
+        _enemies[1]->setPos(std::pair<int, int>{i + 1, j});
+        _enemies[2]->setPos(std::pair<int, int>{i + 2, j});
         entities.push_back(_enemies[0]);
         entities.push_back(_enemies[1]);
         entities.push_back(_enemies[2]);
@@ -68,16 +68,16 @@ void Pacman::createEntity(char symbol, std::vector<std::shared_ptr<IEntity>> &en
         pacman.setTexturePath(std::filesystem::absolute(std::filesystem::path(texturePath)).string());
         pacman.setTermTexture('<', Color::TermColors::GREEN, Color::TermColors::BLACK);
         _player = std::make_shared<Player>(pacman);
-        _player->setPos(std::pair<int, int> {i, j});
+        _player->setPos(std::pair<int, int>{i, j});
         entities.push_back(_player);
     } else if (symbol == '.') {
         std::shared_ptr<Object> point = std::make_shared<Object>(AEntity::ENTITY_TYPE::POINT);
-        point->setPos(std::pair<int, int> {i, j});
+        point->setPos(std::pair<int, int>{i, j});
         entities.push_back(point);
         _points++;
     } else if (symbol == 'B') {
         std::shared_ptr<Object> point = std::make_shared<Object>(AEntity::ENTITY_TYPE::BONUS);
-        point->setPos(std::pair<int, int> {i, j});
+        point->setPos(std::pair<int, int>{i, j});
         entities.push_back(point);
     }
 }
@@ -121,9 +121,9 @@ void Pacman::updateEnemyPos(int index)
         _enemies[index]->setPos(pos);
     }
     if (_enemies[index]->getPos().first == 9 && _enemies[index]->getPos().second >= 30)
-        _enemies[index]->setPos(std::pair<int, int> {9, 0});
+        _enemies[index]->setPos(std::pair<int, int>{9, 0});
     else if (_enemies[index]->getPos().first == 9 && _enemies[index]->getPos().second <= 0)
-        _enemies[index]->setPos(std::pair<int, int> {9, 30});
+        _enemies[index]->setPos(std::pair<int, int>{9, 30});
 }
 
 void Pacman::update(std::vector<std::shared_ptr<IEntity>> &entities, std::stack<Arcade::Evt> &events)
@@ -201,7 +201,7 @@ void Pacman::update(std::vector<std::shared_ptr<IEntity>> &entities, std::stack<
             if (i->get()->getPos() == _player->getPos() && i->get()->getType() == IEntity::ENEMY) {
                 if (!dynamic_cast<Enemy *>(i->get())->getEnrage()) {
                     _score += 2;
-                    i->get()->setPos(std::pair<int, int> {9, 16});
+                    i->get()->setPos(std::pair<int, int>{9, 16});
                 } else {
                     _isGameOver = true;
                     return;
@@ -290,9 +290,9 @@ void Pacman::updatePlayerPos()
         _player->setPos(pos);
     }
     if (_player->getPos().first == 9 && _player->getPos().second >= 30)
-        _player->setPos(std::pair<int, int> {9, 0});
+        _player->setPos(std::pair<int, int>{9, 0});
     else if (_player->getPos().first == 9 && _player->getPos().second <= 0)
-        _player->setPos(std::pair<int, int> {9, 30});
+        _player->setPos(std::pair<int, int>{9, 30});
 }
 
 void Pacman::loadMap()
