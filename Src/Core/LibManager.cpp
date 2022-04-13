@@ -7,7 +7,6 @@
 
 #include "LibManager.hpp"
 #include "Exception.hpp"
-#include <algorithm>
 #include <filesystem>
 #include <fstream>
 #include <functional>
@@ -17,68 +16,41 @@ extern "C" {
 #include <dlfcn.h>
 }
 
-LibManager::LibManager(const std::vector<std::string> &libPaths)
-{
-    addLibs(const_cast<std::vector<std::string> &>(libPaths));
-    for (auto &libPath: libPaths) {
-        _libsHandle.emplace(libPath, nullptr);
-    }
-}
-
 IGame *LibManager::openGame(const std::string &libPath)
 {
-    if (_libsHandle.find(std::filesystem::absolute(std::filesystem::path(libPath))) == _libsHandle.end())
-        throw ArcadeEX(libPath + " not found", Logger::HIGH);
-    void *libHandle = dlopen(libPath.c_str(), RTLD_NOW);
-    if (!libHandle)
-        throw LibraryEX(dlerror(), Logger::CRITICAL);
-    if (_libsHandle[libPath])
-        throw ArcadeEX(libPath + " is already opened", Logger::NONE);
-    _libsHandle[libPath] = libHandle;
-    void *(*getInstance)();
-    getInstance = (void *(*) ()) dlsym(libHandle, "getGameInstance");
-    if (getInstance == nullptr)
-        throw LibraryEX(dlerror(), Logger::CRITICAL);
-    return ((IGame *) getInstance());
+    unsigned long gamePathIdx = 0;
+    std::string absolutePath = std::filesystem::absolute(libPath).string();
+
+    for (; gamePathIdx < _gameLibsPaths.size(); gamePathIdx++) {
+        if (_gameLibsPaths[gamePathIdx] == absolutePath)
+            break;
+    }
+    if (gamePathIdx == _gameLibsPaths.size())
+        throw FileNotFoundEX(libPath, Logger::CRITICAL);
+    return _gameLibsInstances[gamePathIdx];
 }
 
 IGraph *LibManager::openGraph(const std::string &libPath)
 {
-    void *(*getInstance)();
-    if (_libsHandle.find(std::filesystem::absolute(std::filesystem::path(libPath))) == _libsHandle.end())
-        throw ArcadeEX(libPath + " not found", Logger::HIGH);
-    if (_libsHandle[libPath]) {
-        getInstance = (void *(*) ()) dlsym(_libsHandle[libPath], "getGraphInstance");
-        return ((IGraph *) getInstance());
+    unsigned long graphPathIdx = 0;
+    std::string absolute_path = std::filesystem::absolute(libPath).string();
+
+    for (; graphPathIdx < _graphLibsPaths.size(); graphPathIdx++) {
+        if (_graphLibsPaths[graphPathIdx] == absolute_path)
+            break;
     }
-    void *libHandle = dlopen(libPath.c_str(), RTLD_NOW);
-    if (libHandle == nullptr)
-        throw LibraryEX(dlerror(), Logger::CRITICAL);
-    _libsHandle[libPath] = libHandle;
-    getInstance = (void *(*) ()) dlsym(libHandle, "getGraphInstance");
-    if (getInstance == nullptr)
-        throw LibraryEX(dlerror(), Logger::CRITICAL);
-    return ((IGraph *) getInstance());
+    if (graphPathIdx == _graphLibsPaths.size())
+        throw FileNotFoundEX(libPath, Logger::CRITICAL);
+    return _graphLibsInstances[graphPathIdx];
 }
 
-void LibManager::closeLib(const std::string &libPath)
-{
-    auto it = _libsHandle.find(std::filesystem::absolute(std::filesystem::path(libPath)));
-
-    if (it == _libsHandle.end())
-        throw LibraryEX("Library not found", Logger::CRITICAL);
-    if (it->second != nullptr) {
-        dlclose(it->second);
-        it->second = nullptr;
-    } else
-        throw LibraryEX(libPath + ": Library already closed", Logger::CRITICAL);
-}
-
-void LibManager::addLibs(std::vector<std::string> &libPaths)
+void LibManager::addLibs()
 {
     std::ifstream libConf("lib.conf");
     std::string line;
     std::stringstream ss;
+    void *(*getGameInstance)();
+    void *(*getGraphInstance)();
 
     if (libConf.is_open()) {
         while (std::getline(libConf, line)) {
@@ -95,94 +67,86 @@ void LibManager::addLibs(std::vector<std::string> &libPaths)
         LibraryEX("lib.conf not found at root", Logger::INFO);
     std::filesystem::path libDir(line.empty() ? "lib" : line);
     for (auto &lib: std::filesystem::directory_iterator(std::filesystem::absolute(libDir))) {
+        getGameInstance = nullptr;
+        getGraphInstance = nullptr;
         if (lib.path().extension() == ".so") {
             ArcadeEX("Found library: " + lib.path().filename().string(), Logger::INFO);
-            _libsHandle.emplace(lib.path().string(), nullptr);
             try {
                 void *handle = dlopen(lib.path().c_str(), RTLD_LAZY);
                 if (!handle)
-                    continue;
-                if (dlsym(handle, "getGraphInstance")) {
-                    _graphLibsName.push_back(lib.path());
-                } else if (dlsym(handle, "getGameInstance")) {
-                    _gameLibsName.push_back(lib.path());
+                    throw FileCorruptedEX(lib.path().c_str(), Logger::HIGH);
+                getGraphInstance = (void *(*) ()) dlsym(handle, "getGraphInstance");
+                if (getGraphInstance != nullptr) {
+                    _graphLibsInstances.push_back((IGraph *) getGraphInstance());
+                    _graphLibsPaths.push_back(lib.path().string());
                 }
-                //                    dlclose(handle);
+                getGameInstance = (void *(*) ()) dlsym(handle, "getGameInstance");
+                if (getGameInstance != nullptr) {
+                    _gameLibsInstances.push_back((IGame *) getGameInstance());
+                    _gameLibsPaths.push_back(lib.path().string());
+                }
+                if ((getGameInstance == nullptr && getGraphInstance == nullptr) ||
+                    (getGameInstance != nullptr && getGraphInstance != nullptr))
+                    throw LibraryEX(dlerror(), Logger::CRITICAL);
+                dlclose(handle);
             } catch (std::exception &e) {
                 throw LibraryEX(e.what(), Logger::MEDIUM);
             }
         }
     }
-    ArcadeEX(std::to_string(_libsHandle.size()) + std::string(" Libraries found"), Logger::INFO);
-    std::for_each(libPaths.begin(), libPaths.end(), [this](std::string &libPath) {
-        _libsHandle.emplace(std::filesystem::absolute(std::filesystem::path(libPath)), nullptr);
-    });
+    ArcadeEX(std::to_string(_gameLibsInstances.size() + _graphLibsInstances.size()) + std::string(" Libraries found"), Logger::INFO);
 }
 
 void LibManager::closeAllLibs()
 {
-    for (auto &lib: _libsHandle) {
-        if (lib.second != nullptr) {
-            dlclose(lib.second);
-            lib.second = nullptr;
-        }
-    }
+    std::for_each(_gameLibsInstances.begin(), _gameLibsInstances.end(), [](auto &lib) {
+        delete lib;
+    });
+    std::for_each(_graphLibsInstances.begin(), _graphLibsInstances.end(), [](auto &lib) {
+        delete lib;
+    });
 }
 
 IGame *LibManager::cycleGameLibs(std::string &currentLib, bool direction)
 {
-    if (_gameLibsName.empty())
-        throw ArcadeEX("No game library found", Logger::CRITICAL);
-    if (currentLib.empty())
-        currentLib = _gameLibsName[0];
-    auto libNameIt = std::find(_gameLibsName.begin(), _gameLibsName.end(), currentLib);
+    unsigned int i;
 
     if (direction) {
-        if (libNameIt == _gameLibsName.end() || libNameIt == _gameLibsName.begin())
-            return nullptr;
-        if (libNameIt == _gameLibsName.end() - 1)
-            return ((IGame *) openGame(_gameLibsName[0]));
-        return openGame(*(libNameIt - 1));
+        if (currentLib == _gameLibsInstances.front()->getLibraryName())
+            return _gameLibsInstances[_gameLibsInstances.size() - 1];
+        for (i = 0; i < _gameLibsInstances.size(); i++) {
+            if (_gameLibsInstances[i]->getLibraryName() == currentLib)
+                return (_gameLibsInstances[i - 1]);
+        }
     } else {
-        if (libNameIt == _gameLibsName.end() || libNameIt == _gameLibsName.begin() + 1)
-            return nullptr;
-        if (libNameIt == _gameLibsName.begin())
-            return ((IGame *) openGame(_gameLibsName.back()));
-        return openGame(*(libNameIt + 1));
+        if (currentLib == _gameLibsInstances.back()->getLibraryName())
+            return _gameLibsInstances[0];
+        for (i = 0; i < _gameLibsInstances.size(); i++) {
+            if (_gameLibsInstances[i]->getLibraryName() == currentLib)
+                return (_gameLibsInstances[i + 1]);
+        }
     }
+    return nullptr;
 }
 
 IGraph *LibManager::cycleGraphLibs(std::string &currentLib, bool direction)
 {
-    if (_graphLibsName.empty())
-        throw ArcadeEX("No graph library found", Logger::CRITICAL);
-    if (currentLib.empty())
-        currentLib = _graphLibsName[0];
-    auto libNameIt = std::find(_graphLibsName.begin(), _graphLibsName.end(), currentLib);
+    unsigned int i;
 
     if (direction) {
-        if (libNameIt == _graphLibsName.end() || libNameIt == _graphLibsName.begin())
-            return nullptr;
-        if (libNameIt == _graphLibsName.end() - 1)
-            return ((IGraph *) openGraph(_graphLibsName[0]));
-        return openGraph(*(libNameIt - 1));
+        if (currentLib == _graphLibsInstances.front()->getLibraryName())
+            return _graphLibsInstances[_graphLibsInstances.size() - 1];
+        for (i = 0; i < _graphLibsInstances.size(); i++) {
+            if (_graphLibsInstances[i]->getLibraryName() == currentLib)
+                return (_graphLibsInstances[i - 1]);
+        }
     } else {
-        if (libNameIt == _graphLibsName.end() || libNameIt == _graphLibsName.begin() + 1)
-            return nullptr;
-        if (libNameIt == _graphLibsName.begin())
-            return ((IGraph *) openGraph(_graphLibsName.back()));
-        return openGraph(*(libNameIt + 1));
+        if (currentLib == _graphLibsInstances.back()->getLibraryName())
+            return _graphLibsInstances[0];
+        for (i = 0; i < _graphLibsInstances.size(); i++) {
+            if (_graphLibsInstances[i]->getLibraryName() == currentLib)
+                return (_graphLibsInstances[i + 1]);
+        }
     }
-}
-
-std::string LibManager::fetchLibPath(std::string name)
-{
-    std::transform(name.begin(), name.end(), name.begin(), ::tolower);
-    for (auto &gameLib: _gameLibsName)
-        if (gameLib.find(name) != std::string::npos)
-            return gameLib;
-    for (auto &graphLib: _graphLibsName)
-        if (graphLib.find(name) != std::string::npos)
-            return graphLib;
-    return "";
+    return nullptr;
 }

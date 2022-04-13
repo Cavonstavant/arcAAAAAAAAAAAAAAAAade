@@ -27,6 +27,5 @@ namespace Arcade {
     [[gnu::destructor]] void libDestruct()
     {
         delete GAME_INSTANCE;
-        std::cout << " lib unloaded" << std::endl;
     }
 }// namespace Arcade

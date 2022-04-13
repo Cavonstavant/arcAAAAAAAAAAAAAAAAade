@@ -40,10 +40,7 @@ class Core {
         explicit Core(std::vector<std::string> libsPath);
 
         /// \brief Dtor
-        inline ~Core()
-        {
-            _libManager.closeAllLibs();
-        }
+        ~Core() = default;
 
         /// \brief Construct a core with an other core should not be possible
         Core(Core const &) = delete;
@@ -51,17 +48,9 @@ class Core {
         /// \brief Assign a core to another should not be possible
         Core &operator=(Core const &) = delete;
 
-        /// \brief Add an entity to the entities collection
-        /// \param entity The entity to add
-        void addEntity(const std::shared_ptr<IEntity> &entity);
-
-        /// \brief Remove an entity to the entities collection
-        /// \param entity The entity collection to remove
-        void removeEntity(const std::shared_ptr<IEntity> &entity);
-
         /// \brief Get the current state of the core
         /// \return The current state of the core
-        [[nodiscard]] inline State getState() const
+        State getState() const
         {
             return _state;
         }
