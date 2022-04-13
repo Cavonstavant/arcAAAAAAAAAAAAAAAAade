@@ -8,7 +8,7 @@ set(SRC
 )
 
 create_arcade_game(
-        GAME_NAME arcade_pacman
-        SRC ${SRC}
-        INCLUDE_DIRS ${INCLUDE_ROOT}
+    GAME_NAME arcade_pacman
+    SRC ${SRC}
+    INCLUDE_DIRS ${INCLUDE_ROOT}
 )

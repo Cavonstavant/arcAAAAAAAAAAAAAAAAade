@@ -23,10 +23,6 @@ class LibManager {
         /// \brief Creating a library manager without at least a path to a library should be possible
         LibManager() = default;
 
-        /// \brief Creating a library manager with multiple paths to libraries
-        /// \param libPaths Paths to the game libraries
-        LibManager(const std::vector<std::string> &libPaths);
-
         /// \brief A library manager should be able to be copied
         LibManager(const LibManager &) = delete;
 
@@ -40,7 +36,7 @@ class LibManager {
         /// \param libPath Path to the library
         /// \throw FileNotFoundException if the library cannot be found
         /// \throw LibraryException if the library cannot be opened
-        void addLibs(std::vector<std::string> &libPaths);
+        void addLibs();
 
         /// \brief Opens a shared library, calls it's lib entrypoint and returns a pointer to a game instance
         /// \param libPath Path to the library
@@ -51,13 +47,6 @@ class LibManager {
         /// \param libPath Path to the library
         /// \return A pointer to a graph instance
         IGraph *openGraph(const std::string &libPath);
-
-        /// \brief Closes a shared library
-        /// \param libPath Path to the library
-        /// \warning Not using this method after opening a library will lead to <b>Undefined Behaviour</b>
-        /// \warning Using this method before opening a library will lead to <b>Undefined Behaviour</b>
-        /// \throw LibraryException if the library cannot be closed
-        void closeLib(const std::string &libPath);
 
         /// \brief Closes all shared libraries
         void closeAllLibs();
@@ -80,45 +69,20 @@ class LibManager {
         /// \throw LibraryException if the library cannot be opened
         IGraph *cycleGraphLibs(std::string &currentLib, bool direction = true);
 
-        /// \brief Add a game to the list of available games
-        /// \param gamePath the game path to add
-        /// \note This method is only used to differentiate between games and graph libraries, it does not actually add the game to the lib manager
-        /// \warning Using this method without using addLibs() will lead to <b>Undefined Behaviour</b>
-        inline void addGame(std::string &gamePath)
-        {
-            _gameLibsName.push_back(gamePath);
-        }
-
-        /// \brief Add a graph to the list of available graphs
-        /// \param graphPath the graph path to add
-        /// \note This method is only used to differentiate between games and graph libraries, it does not actually add the graph to the lib manager
-        /// \warning Using this method without using addLibs() will lead to <b>Undefined Behaviour</b>
-        inline void addGraph(std::string &graphPath)
-        {
-            _graphLibsName.push_back(graphPath);
-        }
-
-        /// \brief will fetch the lib path given it's name
-        /// \param libName the name of the lib
-        /// \return the lib path
-        ///  \note This is used to translate getLibraryName() to the stored lib path
-        [[nodiscard]] std::string fetchLibPath(std::string name);
 
     private:
-        /// \brief private enum to represent the type of the library type
-        /// Used internally
-        enum class libType {
-            GAME,
-            GRAPH
-        };
-        ///\brief Map of the libraries' handles represented like so {libPath, libHandle}
-        std::map<std::string, void *> _libsHandle;
+
+        /// \brief collection of the game libs paths
+        std::vector<std::string> _gameLibsPaths;
 
         /// \brief internal representation of the a game library
-        std::vector<std::string> _gameLibsName;
+        std::vector<IGame*> _gameLibsInstances;
+
+        /// \brief collection of the graph libs paths
+        std::vector<std::string> _graphLibsPaths;
 
         /// \brief internal representation of the a graph library
-        std::vector<std::string> _graphLibsName;
+        std::vector<IGraph*> _graphLibsInstances;
 };
 
 

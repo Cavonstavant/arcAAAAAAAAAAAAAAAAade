@@ -22,6 +22,7 @@ void Pacman::init(std::vector<std::shared_ptr<IEntity>> &entities)
     _gameState = GameState::LOADED;
     _score = 0;
     _direction = Player::Direction::RIGHT;
+    _isGameOver = false;
     int cpt = 0;
     _points = 0;
     for (auto &i: _map) {

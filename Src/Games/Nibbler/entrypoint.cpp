@@ -14,12 +14,10 @@ namespace Arcade {
     [[gnu::constructor]] void libConstruct()
     {
         GAME_INSTANCE = new Nibbler();
-        std::cout << "lib loaded" << std::endl;
     }
 
     [[gnu::destructor]] void libDestruct()
     {
         delete GAME_INSTANCE;
-        std::cout << " lib unloaded" << std::endl;
     }
 }// namespace Arcade

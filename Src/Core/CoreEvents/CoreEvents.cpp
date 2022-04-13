@@ -13,22 +13,36 @@
 void Core::coreEventSwitchGame()
 {
     std::string currentGameName = _game->getLibraryName();
-    currentGameName = _libManager.fetchLibPath(currentGameName);
 
     if (_event.top().key.key == 'h' || _event.top().key.key == 'H') {
         try {
-            _libManager.closeLib(currentGameName);
+            _game->close(_entities);
             _game = _libManager.cycleGameLibs(currentGameName, false);
+            _game->setState(IGame::GameState::RUNNING);
+            _game->init(_entities);
+            _game->start();
+            _event.pop();
+            _event.pop();
         } catch (...) {
+            _event.pop();
+            _event.pop();
             return;
         }
         ArcadeEX("Successfully changed the game library, current game library: " + _game->getLibraryName(), Logger::INFO);
     }
     if (_event.top().key.key == 'j' || _event.top().key.key == 'J') {
         try {
-            _libManager.closeLib(currentGameName);
+            _game->close(_entities);
             _game = _libManager.cycleGameLibs(currentGameName, true);
+            _entities.clear();
+            _game->setState(IGame::GameState::RUNNING);
+            _game->init(_entities);
+            _game->start();
+            _event.pop();
+            _event.pop();
         } catch (...) {
+            _event.pop();
+            _event.pop();
             return;
         }
         ArcadeEX("Successfully changed the game library, current game library: " + _game->getLibraryName(), Logger::INFO);
@@ -38,12 +52,10 @@ void Core::coreEventSwitchGame()
 void Core::coreEventSwitchGraph()
 {
     std::string graphName = _graph->getLibraryName();
-    graphName = _libManager.fetchLibPath(graphName);
 
     if (_event.top().key.key == 'k' || _event.top().key.key == 'K') {
         try {
             _graph->close();
-            _libManager.closeLib(graphName);
             _graph = _libManager.cycleGraphLibs(graphName, false);
             _graph->init();
             _event.pop();
@@ -58,7 +70,6 @@ void Core::coreEventSwitchGraph()
     if (_event.top().key.key == 'l' || _event.top().key.key == 'L') {
         try {
             _graph->close();
-            _libManager.closeLib(graphName);
             _graph = _libManager.cycleGraphLibs(graphName, true);
             _graph->init();
             _event.pop();
