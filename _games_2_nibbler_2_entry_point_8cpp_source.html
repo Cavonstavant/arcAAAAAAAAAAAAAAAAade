@@ -103,15 +103,13 @@ $(document).ready(function(){initNavTree('_games_2_nibbler_2_entry_point_8cpp_so
 <div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="namespace_arcade.html#ad87e24468d19c08ceff1e079301dded4">   14</a></span>&#160;    [[gnu::constructor]] <span class="keywordtype">void</span> <a class="code" href="namespace_arcade.html#ad87e24468d19c08ceff1e079301dded4">libConstruct</a>()</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    {</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <a class="code" href="namespace_arcade.html#a0d207e1b255986cbb9dde6b192e0dcc2">GAME_INSTANCE</a> = <span class="keyword">new</span> <a class="code" href="class_nibbler.html">Nibbler</a>();</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;lib loaded&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    }</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="namespace_arcade.html#a845ad281586d107c4c5baf5485fba3a4">   20</a></span>&#160;    [[gnu::destructor]] <span class="keywordtype">void</span> <a class="code" href="namespace_arcade.html#a845ad281586d107c4c5baf5485fba3a4">libDestruct</a>()</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keyword">delete</span> <a class="code" href="namespace_arcade.html#a0d207e1b255986cbb9dde6b192e0dcc2">GAME_INSTANCE</a>;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot; lib unloaded&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    }</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}<span class="comment">// namespace Arcade</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    }</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="namespace_arcade.html#a845ad281586d107c4c5baf5485fba3a4">   19</a></span>&#160;    [[gnu::destructor]] <span class="keywordtype">void</span> <a class="code" href="namespace_arcade.html#a845ad281586d107c4c5baf5485fba3a4">libDestruct</a>()</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keyword">delete</span> <a class="code" href="namespace_arcade.html#a0d207e1b255986cbb9dde6b192e0dcc2">GAME_INSTANCE</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    }</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}<span class="comment">// namespace Arcade</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="anamespace_arcade_html_ad87e24468d19c08ceff1e079301dded4"><div class="ttname"><a href="namespace_arcade.html#ad87e24468d19c08ceff1e079301dded4">Arcade::libConstruct</a></div><div class="ttdeci">void libConstruct()</div><div class="ttdef"><b>Definition:</b> <a href="_games_2_nibbler_2_entry_point_8cpp_source.html#l00014">entrypoint.cpp:14</a></div></div>
@@ -120,7 +118,7 @@ $(document).ready(function(){initNavTree('_games_2_nibbler_2_entry_point_8cpp_so
 <div class="ttc" id="a_nibbler_8hpp_html"><div class="ttname"><a href="_nibbler_8hpp.html">Nibbler.hpp</a></div><div class="ttdoc">Nibbler class.</div></div>
 <div class="ttc" id="anamespace_arcade_html"><div class="ttname"><a href="namespace_arcade.html">Arcade</a></div><div class="ttdoc">Namespace for the Arcade project, used only by Evt and libraries entrypoints to avoid type collision.</div></div>
 <div class="ttc" id="anamespace_arcade_html_a1204ecdd24dfbe24d33792dd060cb2ec"><div class="ttname"><a href="namespace_arcade.html#a1204ecdd24dfbe24d33792dd060cb2ec">Arcade::getGameInstance</a></div><div class="ttdeci">IGame * getGameInstance()</div><div class="ttdef"><b>Definition:</b> <a href="_games_2_nibbler_2_entry_point_8cpp_source.html#l00009">entrypoint.cpp:9</a></div></div>
-<div class="ttc" id="anamespace_arcade_html_a845ad281586d107c4c5baf5485fba3a4"><div class="ttname"><a href="namespace_arcade.html#a845ad281586d107c4c5baf5485fba3a4">Arcade::libDestruct</a></div><div class="ttdeci">void libDestruct()</div><div class="ttdef"><b>Definition:</b> <a href="_games_2_nibbler_2_entry_point_8cpp_source.html#l00020">entrypoint.cpp:20</a></div></div>
+<div class="ttc" id="anamespace_arcade_html_a845ad281586d107c4c5baf5485fba3a4"><div class="ttname"><a href="namespace_arcade.html#a845ad281586d107c4c5baf5485fba3a4">Arcade::libDestruct</a></div><div class="ttdeci">void libDestruct()</div><div class="ttdef"><b>Definition:</b> <a href="_games_2_nibbler_2_entry_point_8cpp_source.html#l00019">entrypoint.cpp:19</a></div></div>
 <div class="ttc" id="anamespace_arcade_html_a0d207e1b255986cbb9dde6b192e0dcc2"><div class="ttname"><a href="namespace_arcade.html#a0d207e1b255986cbb9dde6b192e0dcc2">Arcade::GAME_INSTANCE</a></div><div class="ttdeci">static IGame * GAME_INSTANCE</div><div class="ttdef"><b>Definition:</b> <a href="_games_2_nibbler_2_entry_point_8cpp_source.html#l00007">entrypoint.cpp:7</a></div></div>
 <div class="ttc" id="aclass_nibbler_html"><div class="ttname"><a href="class_nibbler.html">Nibbler</a></div><div class="ttdef"><b>Definition:</b> <a href="_nibbler_8hpp_source.html#l00020">Nibbler.hpp:20</a></div></div>
 <!-- start footer part -->

@@ -192,9 +192,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:acfe7cc7def33fa1cc8a2a56dc39d29e3 inherit pub_methods_class_i_entity"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_entity.html#acfe7cc7def33fa1cc8a2a56dc39d29e3">~IEntity</a> ()=default</td></tr>
 <tr class="memdesc:acfe7cc7def33fa1cc8a2a56dc39d29e3 inherit pub_methods_class_i_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="class_i_entity.html#acfe7cc7def33fa1cc8a2a56dc39d29e3">More...</a><br /></td></tr>
 <tr class="separator:acfe7cc7def33fa1cc8a2a56dc39d29e3 inherit pub_methods_class_i_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7702202a1672a34e92311b2dacf9d858 inherit pub_methods_class_i_entity"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_entity.html#a7702202a1672a34e92311b2dacf9d858">setType</a> (<a class="el" href="class_i_entity.html#a46d8922e2df0932c61ca624e05f85aa2">ENTITY_TYPE</a> type)=0</td></tr>
-<tr class="memdesc:a7702202a1672a34e92311b2dacf9d858 inherit pub_methods_class_i_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the type of the entity.  <a href="class_i_entity.html#a7702202a1672a34e92311b2dacf9d858">More...</a><br /></td></tr>
-<tr class="separator:a7702202a1672a34e92311b2dacf9d858 inherit pub_methods_class_i_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -287,7 +284,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">Object::Object </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_i_entity.html#a46d8922e2df0932c61ca624e05f85aa2">ENTITY_TYPE</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="class_i_entity.html#a46d8922e2df0932c61ca624e05f85aa2">AEntity::ENTITY_TYPE</a>&#160;</td>
           <td class="paramname"><em>type</em></td><td>)</td>
           <td></td>
         </tr>
@@ -301,6 +298,30 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Constructor with the type of the object you want to create. </p>
 
+<p class="definition">Definition at line <a class="el" href="_object_8cpp_source.html#l00010">10</a> of file <a class="el" href="_object_8cpp_source.html">Object.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;                                      : <a class="code" href="class_a_entity.html#aa420ad119608e8fa166868154f77c0d0">AEntity</a>()</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="class_object.html#a08a20f3e6d40960cc6570465e5248ea0">_type</a> = type;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_object.html#a08a20f3e6d40960cc6570465e5248ea0">_type</a> == <a class="code" href="class_i_entity.html#a46d8922e2df0932c61ca624e05f85aa2abb5e4afb77e9abb1bce78998240cf14e">POINT</a> || <a class="code" href="class_object.html#a08a20f3e6d40960cc6570465e5248ea0">_type</a> == <a class="code" href="class_i_entity.html#a46d8922e2df0932c61ca624e05f85aa2aa44a6be3468a3d9850c5c9253611a8d3">BONUS</a>) {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <a class="code" href="class_object.html#a2b142f1047a8d79eaaec4309108f8e80">_color</a>.<a class="code" href="struct_color.html#aed083afcc2c689243df7fbc3da5203d3">R</a> = 255;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <a class="code" href="class_object.html#a2b142f1047a8d79eaaec4309108f8e80">_color</a>.<a class="code" href="struct_color.html#a494fcf569d0e0cdcb1f16843a59173ae">G</a> = 255;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <a class="code" href="class_object.html#a2b142f1047a8d79eaaec4309108f8e80">_color</a>.<a class="code" href="struct_color.html#a0460664d0d091fbe42cf4307744dcaca">B</a> = 0;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <a class="code" href="class_object.html#a2b142f1047a8d79eaaec4309108f8e80">_color</a>.<a class="code" href="struct_color.html#a13db704e48f5e851817f9e9fd67ec76d">A</a> = 255;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <a class="code" href="class_a_entity.html#af982652898741ac6c7e280d7b1961242">_termTexture</a> = std::make_pair(type == <a class="code" href="class_i_entity.html#a46d8922e2df0932c61ca624e05f85aa2aa44a6be3468a3d9850c5c9253611a8d3">BONUS</a> ? <span class="charliteral">&#39;o&#39;</span> : <span class="charliteral">&#39;.&#39;</span>, std::make_pair(Color::TermColors::YELLOW, Color::TermColors::BLACK));</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="class_object.html#a08a20f3e6d40960cc6570465e5248ea0">_type</a> == <a class="code" href="class_i_entity.html#a46d8922e2df0932c61ca624e05f85aa2a906e5f94605e5680eeeba3dbf75dcc76">WALL</a>) {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <a class="code" href="class_object.html#a2b142f1047a8d79eaaec4309108f8e80">_color</a>.<a class="code" href="struct_color.html#aed083afcc2c689243df7fbc3da5203d3">R</a> = 0;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <a class="code" href="class_object.html#a2b142f1047a8d79eaaec4309108f8e80">_color</a>.<a class="code" href="struct_color.html#a494fcf569d0e0cdcb1f16843a59173ae">G</a> = 0;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="class_object.html#a2b142f1047a8d79eaaec4309108f8e80">_color</a>.<a class="code" href="struct_color.html#a0460664d0d091fbe42cf4307744dcaca">B</a> = 255;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <a class="code" href="class_object.html#a2b142f1047a8d79eaaec4309108f8e80">_color</a>.<a class="code" href="struct_color.html#a13db704e48f5e851817f9e9fd67ec76d">A</a> = 255;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <a class="code" href="class_a_entity.html#af982652898741ac6c7e280d7b1961242">_termTexture</a> = std::make_pair(<span class="charliteral">&#39;X&#39;</span>, std::make_pair(Color::TermColors::BLUE, Color::TermColors::WHITE));</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <a class="code" href="class_object.html#a2b142f1047a8d79eaaec4309108f8e80">_color</a>.<a class="code" href="struct_color.html#aed083afcc2c689243df7fbc3da5203d3">R</a> = 255;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <a class="code" href="class_object.html#a2b142f1047a8d79eaaec4309108f8e80">_color</a>.<a class="code" href="struct_color.html#a494fcf569d0e0cdcb1f16843a59173ae">G</a> = 255;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="class_object.html#a2b142f1047a8d79eaaec4309108f8e80">_color</a>.<a class="code" href="struct_color.html#a0460664d0d091fbe42cf4307744dcaca">B</a> = 255;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <a class="code" href="class_object.html#a2b142f1047a8d79eaaec4309108f8e80">_color</a>.<a class="code" href="struct_color.html#a13db704e48f5e851817f9e9fd67ec76d">A</a> = 255;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae8f5483f459e46687bd01e6f9977afd3"></a>
@@ -491,6 +512,9 @@ Additional Inherited Members</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void Object::setType </td>
@@ -500,9 +524,16 @@ Additional Inherited Members</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Set the _type. </p>
+
+<p>Implements <a class="el" href="class_i_entity.html#a7702202a1672a34e92311b2dacf9d858">IEntity</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_object_8cpp_source.html#l00061">61</a> of file <a class="el" href="_object_8cpp_source.html">Object.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;{</div>
@@ -568,8 +599,13 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- doc-content -->
 <div class="ttc" id="aclass_object_html_a08a20f3e6d40960cc6570465e5248ea0"><div class="ttname"><a href="class_object.html#a08a20f3e6d40960cc6570465e5248ea0">Object::_type</a></div><div class="ttdeci">ENTITY_TYPE _type</div><div class="ttdef"><b>Definition:</b> <a href="_object_8hpp_source.html#l00044">Object.hpp:44</a></div></div>
 <div class="ttc" id="astruct_color_html_a0460664d0d091fbe42cf4307744dcaca"><div class="ttname"><a href="struct_color.html#a0460664d0d091fbe42cf4307744dcaca">Color::B</a></div><div class="ttdeci">int B</div><div class="ttdoc">Blue amount on a scale of 0 to 255.</div><div class="ttdef"><b>Definition:</b> <a href="_color_8hpp_source.html#l00047">Color.hpp:47</a></div></div>
+<div class="ttc" id="aclass_i_entity_html_a46d8922e2df0932c61ca624e05f85aa2abb5e4afb77e9abb1bce78998240cf14e"><div class="ttname"><a href="class_i_entity.html#a46d8922e2df0932c61ca624e05f85aa2abb5e4afb77e9abb1bce78998240cf14e">IEntity::POINT</a></div><div class="ttdeci">@ POINT</div><div class="ttdef"><b>Definition:</b> <a href="_i_entity_8hpp_source.html#l00032">IEntity.hpp:32</a></div></div>
+<div class="ttc" id="aclass_i_entity_html_a46d8922e2df0932c61ca624e05f85aa2aa44a6be3468a3d9850c5c9253611a8d3"><div class="ttname"><a href="class_i_entity.html#a46d8922e2df0932c61ca624e05f85aa2aa44a6be3468a3d9850c5c9253611a8d3">IEntity::BONUS</a></div><div class="ttdeci">@ BONUS</div><div class="ttdef"><b>Definition:</b> <a href="_i_entity_8hpp_source.html#l00031">IEntity.hpp:31</a></div></div>
 <div class="ttc" id="astruct_color_html_a13db704e48f5e851817f9e9fd67ec76d"><div class="ttname"><a href="struct_color.html#a13db704e48f5e851817f9e9fd67ec76d">Color::A</a></div><div class="ttdeci">int A</div><div class="ttdoc">Alpha amount on a scale of 0 to 255.</div><div class="ttdef"><b>Definition:</b> <a href="_color_8hpp_source.html#l00049">Color.hpp:49</a></div></div>
+<div class="ttc" id="aclass_a_entity_html_af982652898741ac6c7e280d7b1961242"><div class="ttname"><a href="class_a_entity.html#af982652898741ac6c7e280d7b1961242">AEntity::_termTexture</a></div><div class="ttdeci">std::pair&lt; char, std::pair&lt; Color::TermColors, Color::TermColors &gt; &gt; _termTexture</div><div class="ttdef"><b>Definition:</b> <a href="_a_entity_8hpp_source.html#l00081">AEntity.hpp:81</a></div></div>
+<div class="ttc" id="aclass_a_entity_html_aa420ad119608e8fa166868154f77c0d0"><div class="ttname"><a href="class_a_entity.html#aa420ad119608e8fa166868154f77c0d0">AEntity::AEntity</a></div><div class="ttdeci">AEntity()</div><div class="ttdoc">Default Constructor.</div><div class="ttdef"><b>Definition:</b> <a href="_a_entity_8cpp_source.html#l00010">AEntity.cpp:10</a></div></div>
 <div class="ttc" id="astruct_color_html_aed083afcc2c689243df7fbc3da5203d3"><div class="ttname"><a href="struct_color.html#aed083afcc2c689243df7fbc3da5203d3">Color::R</a></div><div class="ttdeci">int R</div><div class="ttdoc">Red amount on a scale of 0 to 255.</div><div class="ttdef"><b>Definition:</b> <a href="_color_8hpp_source.html#l00043">Color.hpp:43</a></div></div>
+<div class="ttc" id="aclass_i_entity_html_a46d8922e2df0932c61ca624e05f85aa2a906e5f94605e5680eeeba3dbf75dcc76"><div class="ttname"><a href="class_i_entity.html#a46d8922e2df0932c61ca624e05f85aa2a906e5f94605e5680eeeba3dbf75dcc76">IEntity::WALL</a></div><div class="ttdeci">@ WALL</div><div class="ttdef"><b>Definition:</b> <a href="_i_entity_8hpp_source.html#l00028">IEntity.hpp:28</a></div></div>
 <div class="ttc" id="aclass_object_html_a2b142f1047a8d79eaaec4309108f8e80"><div class="ttname"><a href="class_object.html#a2b142f1047a8d79eaaec4309108f8e80">Object::_color</a></div><div class="ttdeci">Color _color</div><div class="ttdef"><b>Definition:</b> <a href="_object_8hpp_source.html#l00043">Object.hpp:43</a></div></div>
 <div class="ttc" id="astruct_color_html_a494fcf569d0e0cdcb1f16843a59173ae"><div class="ttname"><a href="struct_color.html#a494fcf569d0e0cdcb1f16843a59173ae">Color::G</a></div><div class="ttdeci">int G</div><div class="ttdoc">Green amount on a scale of 0 to 255.</div><div class="ttdef"><b>Definition:</b> <a href="_color_8hpp_source.html#l00045">Color.hpp:45</a></div></div>
 <div class="ttc" id="aclass_a_entity_html_adb13f68060a9aa6c516f5cc82a8cd715"><div class="ttname"><a href="class_a_entity.html#adb13f68060a9aa6c516f5cc82a8cd715">AEntity::_isMoving</a></div><div class="ttdeci">bool _isMoving</div><div class="ttdef"><b>Definition:</b> <a href="_a_entity_8hpp_source.html#l00079">AEntity.hpp:79</a></div></div>

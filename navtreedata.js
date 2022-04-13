@@ -28,8 +28,12 @@ var NAVTREE =
       [ "Tools", "index.html#autotoc_md3", null ],
       [ "Building", "index.html#autotoc_md4", null ]
     ] ],
-    [ "Misc", "index.html#autotoc_md5", [
-      [ "Graphs", "index.html#autotoc_md6", null ]
+    [ "How to play", "index.html#autotoc_md5", [
+      [ "Keybindings", "index.html#autotoc_md6", null ]
+    ] ],
+    [ "Creating and adding your own game and graphical display", "index.html#autotoc_md7", null ],
+    [ "Misc", "index.html#autotoc_md9", [
+      [ "Graphs", "index.html#autotoc_md11", null ]
     ] ],
     [ "Deprecated List", "deprecated.html", null ],
     [ "Namespaces", "namespaces.html", [
@@ -67,8 +71,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_a_entity_8cpp.html",
-"class_core.html#afe619c2d034aff30644e94b953951a49",
-"class_pacman.html#af736cd4110dfc4d365b1ac0b00378780"
+"class_enemy.html",
+"class_player.html#ab2d62dec653793f9ef33073f73050b60"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

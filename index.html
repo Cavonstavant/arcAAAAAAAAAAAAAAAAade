@@ -112,11 +112,60 @@ Building</h2>
 <div class="line">cmake . --build</div>
 <div class="line">cd ../</div>
 </div><!-- fragment --><h1><a class="anchor" id="autotoc_md5"></a>
+How to play</h1>
+<h2><a class="anchor" id="autotoc_md6"></a>
+Keybindings</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Key </th><th class="markdownTableHeadNone"><a class="el" href="class_core.html" title="Core class that the transfer of data between games and displays.">Core</a> Event  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">'h' / 'j' </td><td class="markdownTableBodyNone">Cycle through the available games, h: backward / j:forward  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">'k' / 'l' </td><td class="markdownTableBodyNone">Cycle through the available graphic libraries, k: backward / l: forward  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">'m' </td><td class="markdownTableBodyNone">Switch to the main menu  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">'r' </td><td class="markdownTableBodyNone">Reload the current game  </td></tr>
+</table>
+<h1><a class="anchor" id="autotoc_md7"></a>
+Creating and adding your own game and graphical display</h1>
+<hr  />
+<p>In order to create your own game and use it inside arcAAAAAAAAAAAAAAAAade, you need to do multiple things:</p>
+<ol type="1">
+<li>Create a new game folder in the <code>Src/Games</code> directory</li>
+<li>Add a CMakeLists.txt file to the game folder that call the function CMake<code>create_arcade_game</code> with multiple arguments:<ol type="a">
+<li>GAME_NAME: The name of the game, this will also be the name of the created library</li>
+<li>SRC: All the game sources files</li>
+<li>INCLUDE_DIRS: The <code>include</code> path to the game headers files</li>
+</ol>
+</li>
+<li>Add the subdirectory to be compiled by adding it to the <code>Src/Games/CMakeLists.txt</code> file</li>
+<li>Create a class that inherits from the <code><a class="el" href="class_i_game.html" title="represents a Game instance (pacman, nibbler, ...)">IGame</a></code> interface</li>
+<li>Set its state to '<a class="el" href="class_i_game.html#a4a7309d86599d6e581f764233085c7dda43491564ebcfd38568918efbd6e840fd" title="Represents the game when running.">IGame::GameState::RUNNING</a>' when update is called for the first time</li>
+<li>Set its state to '<a class="el" href="class_i_game.html#a4a7309d86599d6e581f764233085c7dda09d4d696b4e935115b9313e3c412509a" title="Represents the game over.">IGame::GameState::STOPPED</a>' when the game is stopped</li>
+<li>All methods of <a class="el" href="class_i_game.html" title="represents a Game instance (pacman, nibbler, ...)">IGame</a> needs to be implemented</li>
+</ol>
+<p>In order to create your own graphical display and use it inside arcAAAAAAAAAAAAAAAAade, you need to do multiple things:</p>
+<ol type="1">
+<li>Create a new folder in the <code>Src/GraphicLibs</code> directory</li>
+<li>Add a CMakeLists.txt file to the display folder that call the function CMake<code>create_arcade_display</code> with multiple arguments:<ol type="a">
+<li>GRAPHIC_LIB_NAME: The name of the display, this will also be the name of the created library</li>
+<li>SRC: All the display sources files</li>
+<li>INCLUDE_DIRS: The <code>include</code> path to the display headers files</li>
+<li>DEPS: The library dependencies (e.g: SDL2::Main SDL2::Image , ${SFML_LIBRARIES} etc..)</li>
+</ol>
+</li>
+<li>Add the subdirectory to be compiled by adding it to the <code>Src/GraphicLibs/CMakeLists.txt</code> file</li>
+<li>Create a class that inherits from the <code><a class="el" href="class_i_graph.html" title="represents a generic graphical library">IGraph</a></code> interface</li>
+<li>All methods of IDisplay needs to be implemented</li>
+</ol>
+<h1><a class="anchor" id="autotoc_md9"></a>
 Misc</h1>
+<hr  />
 <p>Other group leader: <a href="#" onclick="location.href='mai'+'lto:'+'hen'+'ri'+'.ch'+'au'+'vet'+'@e'+'pit'+'ec'+'h.e'+'u'; return false;">henri<span style="display: none;">.nosp@m.</span>.cha<span style="display: none;">.nosp@m.</span>uvet@<span style="display: none;">.nosp@m.</span>epit<span style="display: none;">.nosp@m.</span>ech.e<span style="display: none;">.nosp@m.</span>u</a></p>
 <p>Epitech repository: <a href="https://github.com/EpitechPromo2025/B-OOP-400-NAN-4-1-arcade-constant.vigneron">https://github.com/EpitechPromo2025/B-OOP-400-NAN-4-1-arcade-constant.vigneron</a></p>
 <p>Mirror repository: <a href="https://github.com/Cavonstavant/arcAAAAAAAAAAAAAAAAade">https://github.com/Cavonstavant/arcAAAAAAAAAAAAAAAAade</a></p>
-<h2><a class="anchor" id="autotoc_md6"></a>
+<h2><a class="anchor" id="autotoc_md11"></a>
 Graphs</h2>
 <ul>
 <li>Graphical representation of the dependencies of the project. <blockquote class="doxtable">
