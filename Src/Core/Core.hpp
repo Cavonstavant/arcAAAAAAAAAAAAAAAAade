@@ -61,7 +61,7 @@ class Core {
 
         /// \brief Get the current state of the core
         /// \return The current state of the core
-        [[nodiscard]] inline State getState() const
+        State getState() const
         {
             return _state;
         }

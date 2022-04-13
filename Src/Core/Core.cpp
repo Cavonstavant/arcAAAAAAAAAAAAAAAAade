@@ -13,6 +13,7 @@
 #include "TextEntity.hpp"
 #include <string>
 #include <vector>
+#include <iostream>
 
 Core::Core(std::vector<std::string> libsPath)
 {
@@ -74,8 +75,7 @@ void Core::update()
         _mainMenu.update(_entities, eventStack);
     } else if (_state == State::GAME) {
         _game->update(_entities, eventStack);
-    } else
-        _game->close(_entities);
+    }
 }
 
 void Core::draw()
@@ -121,36 +121,27 @@ void Core::processEvents()
 {
     if (_event.empty())
         return;
-    if (!_event.empty() && _event.top().evt_type == Arcade::Evt::EvtType::KEY)
-        return;
+    /*if (!_event.empty() && _event.top().evt_type == Arcade::Evt::EvtType::KEY)
+        return;*/
     if (_event.top().evt_type == Arcade::Evt::WIN_CLOSE) {
         if (_state == State::MAIN_MENU) {
             _mainMenu.close(_entities);
+            _graph->close();
             _state = State::EXIT;
             _event.pop();
-            return;
-        }
-        if (_state == State::GAME) {
-            _game->setState(IGame::GameState::STOPPED);
-            _state = State::MAIN_MENU;
-            _game = &_mainMenu;
+        } else if (_state == State::GAME) {
+            _state = State::EXIT;
+            _game->close(_entities);
+            _graph->close();
             _event.pop();
-            return;
         }
-    }
-    if (_game->getState() == IGame::GameState::STOPPED) {
-        _state = State::MAIN_MENU;
-        _game = &_mainMenu;
-        _event.pop();
         return;
     }
     if (_event.top().evt_type == Arcade::Evt::KEY) {
         if (_event.top().key.key == 'r' || _event.top().key.key == 'R') {
             try {
-                std::string currentGameName = _game->getLibraryName();
-                currentGameName = _libManager.fetchLibPath(currentGameName);
-                _libManager.closeLib(currentGameName);
-                _game = _libManager.openGame(currentGameName);
+                _game->close(_entities);
+                _game->init(_entities);
             } catch (...) {
                 _event.pop();
                 return;
