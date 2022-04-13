@@ -86,7 +86,7 @@ void LibManager::addLibs()
                     _gameLibsPaths.push_back(lib.path().string());
                 }
                 if ((getGameInstance == nullptr && getGraphInstance == nullptr) ||
-                    (getGameInstance != nullptr && getGraphInstance != nullptr))
+                        (getGameInstance != nullptr && getGraphInstance != nullptr))
                     throw LibraryEX(dlerror(), Logger::CRITICAL);
                 dlclose(handle);
             } catch (std::exception &e) {
@@ -100,8 +100,12 @@ void LibManager::addLibs()
 
 void LibManager::closeAllLibs()
 {
-    std::for_each(_gameLibsInstances.begin(), _gameLibsInstances.end(), [](auto &lib) { delete lib; });
-    std::for_each(_graphLibsInstances.begin(), _graphLibsInstances.end(), [](auto &lib) { delete lib; });
+    std::for_each(_gameLibsInstances.begin(), _gameLibsInstances.end(), [](auto &lib) {
+        delete lib;
+    });
+    std::for_each(_graphLibsInstances.begin(), _graphLibsInstances.end(), [](auto &lib) {
+        delete lib;
+    });
 }
 
 IGame *LibManager::cycleGameLibs(std::string &currentLib, bool direction)

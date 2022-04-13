@@ -11,21 +11,21 @@
 #include <vector>
 
 namespace Arcade {
-    static IGame *GAME_INSTANCE = nullptr;
+static IGame *GAME_INSTANCE = nullptr;
 
-    extern "C" IGame *getGameInstance()
-    {
-        return GAME_INSTANCE;
-    }
+extern "C" IGame *getGameInstance()
+{
+    return GAME_INSTANCE;
+}
 
-    [[gnu::constructor]] void libConstruct()
-    {
-        GAME_INSTANCE = new Pacman();
-        std::cout << "lib loaded" << std::endl;
-    }
+[[gnu::constructor]] void libConstruct()
+{
+    GAME_INSTANCE = new Pacman();
+    std::cout << "lib loaded" << std::endl;
+}
 
-    [[gnu::destructor]] void libDestruct()
-    {
-        delete GAME_INSTANCE;
-    }
+[[gnu::destructor]] void libDestruct()
+{
+    delete GAME_INSTANCE;
+}
 }// namespace Arcade

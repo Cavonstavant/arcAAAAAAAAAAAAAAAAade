@@ -39,14 +39,13 @@ void Core::update()
         return;
     while ((evt = _graph->getInput()).evt_type != Arcade::Evt::NONE) {
         if (evt.evt_type == Arcade::Evt::EvtType::WIN_CLOSE ||
-            (evt.evt_type == Arcade::Evt::EvtType::KEY &&
-             evt.key.key == '9')) {
+                (evt.evt_type == Arcade::Evt::EvtType::KEY &&
+                 evt.key.key == '9')) {
             _graph->close();
             _game->close(_entities);
             _state = State::EXIT;
             break;
-        } else
-        if (evt.evt_type == Arcade::Evt::EvtType::KEY) {
+        } else if (evt.evt_type == Arcade::Evt::EvtType::KEY) {
             _event.push(evt);
             eventBuffer.push(evt);
         }
@@ -105,7 +104,7 @@ void Core::draw()
         }
     }
     if (_game->getScore() >= 0)
-        _graph->drawText(std::pair<int, int>{24, 1}, "Score : " + std::to_string(_game->getScore()) + "00", Color(255, 255, 255, 255));
+        _graph->drawText(std::pair<int, int> {24, 1}, "Score : " + std::to_string(_game->getScore()) + "00", Color(255, 255, 255, 255));
     _graph->displayWindow();
 }
 
