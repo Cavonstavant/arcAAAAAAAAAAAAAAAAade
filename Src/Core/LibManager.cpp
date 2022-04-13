@@ -75,12 +75,12 @@ void LibManager::addLibs()
                 void *handle = dlopen(lib.path().c_str(), RTLD_LAZY);
                 if (!handle)
                     throw FileCorruptedEX(lib.path().c_str(), Logger::HIGH);
-                getGraphInstance = (void *(*)()) dlsym(handle, "getGraphInstance");
+                getGraphInstance = (void *(*) ()) dlsym(handle, "getGraphInstance");
                 if (getGraphInstance != nullptr) {
                     _graphLibsInstances.push_back((IGraph *) getGraphInstance());
                     _graphLibsPaths.push_back(lib.path().string());
                 }
-                getGameInstance = (void *(*)()) dlsym(handle, "getGameInstance");
+                getGameInstance = (void *(*) ()) dlsym(handle, "getGameInstance");
                 if (getGameInstance != nullptr) {
                     _gameLibsInstances.push_back((IGame *) getGameInstance());
                     _gameLibsPaths.push_back(lib.path().string());
@@ -92,7 +92,6 @@ void LibManager::addLibs()
             } catch (std::exception &e) {
                 throw LibraryEX(e.what(), Logger::MEDIUM);
             }
-
         }
     }
     ArcadeEX(std::to_string(_gameLibsInstances.size() + _graphLibsInstances.size()) + std::string(" Libraries found"), Logger::INFO);
@@ -100,8 +99,12 @@ void LibManager::addLibs()
 
 void LibManager::closeAllLibs()
 {
-    std::for_each(_gameLibsInstances.begin(), _gameLibsInstances.end(), [](auto &lib) { delete lib; });
-    std::for_each(_graphLibsInstances.begin(), _graphLibsInstances.end(), [](auto &lib) { delete lib; });
+    std::for_each(_gameLibsInstances.begin(), _gameLibsInstances.end(), [](auto &lib) {
+        delete lib;
+    });
+    std::for_each(_graphLibsInstances.begin(), _graphLibsInstances.end(), [](auto &lib) {
+        delete lib;
+    });
 }
 
 IGame *LibManager::cycleGameLibs(std::string &currentLib, bool direction)

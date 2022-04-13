@@ -71,18 +71,17 @@ class LibManager {
 
 
     private:
-
         /// \brief collection of the game libs paths
         std::vector<std::string> _gameLibsPaths;
 
         /// \brief internal representation of the a game library
-        std::vector<IGame*> _gameLibsInstances;
+        std::vector<IGame *> _gameLibsInstances;
 
         /// \brief collection of the graph libs paths
         std::vector<std::string> _graphLibsPaths;
 
         /// \brief internal representation of the a graph library
-        std::vector<IGraph*> _graphLibsInstances;
+        std::vector<IGraph *> _graphLibsInstances;
 };
 
 
