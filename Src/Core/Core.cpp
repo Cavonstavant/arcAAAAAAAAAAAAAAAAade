@@ -158,7 +158,6 @@ void Core::setGame(const std::string &lib)
 {
     if (!_game->getLibraryName().empty() && _state == State::GAME) {
         _game->close(_entities);
-        //        _libManager.closeLib(_libManager.fetchLibPath(_game->getLibraryName()));
     }
     _game = _libManager.openGame(lib);
     if (!_futureGraph.empty())
@@ -171,7 +170,6 @@ void Core::setGraph(const std::string &lib)
 {
     if (_graph) {
         _graph->close();
-        //        _libManager.closeLib(_libManager.fetchLibPath(_graph->getLibraryName()));
     }
     _graph = _libManager.openGraph(lib);
     _graph->init();

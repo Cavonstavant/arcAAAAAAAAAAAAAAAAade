@@ -85,8 +85,10 @@ void Core::coreEventSwitchGraph()
 
 void Core::manageCoreKeyEvents()
 {
-    if (_event.top().key.key == 'h' || _event.top().key.key == 'H' || _event.top().key.key == 'j' || _event.top().key.key == 'j')
+    if ((_event.top().key.key == 'h' || _event.top().key.key == 'H' || _event.top().key.key == 'j' || _event.top().key.key == 'j') &&
+        _state != State::MAIN_MENU)
         return coreEventSwitchGame();
-    if (_event.top().key.key == 'k' || _event.top().key.key == 'K' || _event.top().key.key == 'l' || _event.top().key.key == 'L')
+    if ((_event.top().key.key == 'k' || _event.top().key.key == 'K' || _event.top().key.key == 'l' || _event.top().key.key == 'L') &&
+        _state != State::MAIN_MENU)
         return coreEventSwitchGraph();
 }
