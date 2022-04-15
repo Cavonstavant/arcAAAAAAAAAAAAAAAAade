@@ -112,22 +112,6 @@ void Core::processEvents()
 {
     if (_event.empty())
         return;
-    /*if (!_event.empty() && _event.top().evt_type == Arcade::Evt::EvtType::KEY)
-        return;*/
-    //    if (_event.top().evt_type == Arcade::Evt::WIN_CLOSE) {
-    //        if (_state == State::MAIN_MENU) {
-    //            _mainMenu.close(_entities);
-    //            _graph->close();
-    //            _state = State::EXIT;
-    //            _event.pop();
-    //        } else if (_state == State::GAME) {
-    //            _state = State::EXIT;
-    //            _game->close(_entities);
-    //            _graph->close();
-    //            _event.pop();
-    //        }
-    //        return;
-    //    }
     if (_event.top().evt_type == Arcade::Evt::KEY) {
         if ((_event.top().key.key == 'r' || _event.top().key.key == 'R') && _state != State::MAIN_MENU) {
             _entities.clear();
@@ -158,6 +142,7 @@ void Core::setGame(const std::string &lib)
 {
     if (!_game->getLibraryName().empty() && _state == State::GAME) {
         _game->close(_entities);
+        //        _libManager.closeLib(_libManager.fetchLibPath(_game->getLibraryName()));
     }
     _game = _libManager.openGame(lib);
     if (!_futureGraph.empty())
@@ -170,6 +155,7 @@ void Core::setGraph(const std::string &lib)
 {
     if (_graph) {
         _graph->close();
+        //        _libManager.closeLib(_libManager.fetchLibPath(_graph->getLibraryName()));
     }
     _graph = _libManager.openGraph(lib);
     _graph->init();
