@@ -136,7 +136,7 @@ $(document).ready(function(){initNavTree('_nibbler_8cpp_source.html',''); initRe
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    head.<a class="code" href="class_a_entity.html#a4de390d62596a386c52a0ac1e28ae03e">setPos</a>(std::make_pair(x, y));</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    head.<a class="code" href="class_a_entity.html#ae46771dd1354b5c4e4350d9a8c63df45">setTexturePath</a>(std::filesystem::absolute(std::filesystem::path(<span class="stringliteral">&quot;Src/Games/Nibbler/Resources/Textures/Snake/SnakeHead.png&quot;</span>)).<span class="keywordtype">string</span>());</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    head.<a class="code" href="class_a_entity.html#a4150c9d56ce22e79c9d979392ab7ffec">setTermTexture</a>(<span class="charliteral">&#39;o&#39;</span>, Color::TermColors::RED, Color::TermColors::BLACK);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    head.<a class="code" href="class_a_entity.html#a4150c9d56ce22e79c9d979392ab7ffec">setTermTexture</a>((<span class="keywordtype">char</span>)123, Color::TermColors::RED, Color::TermColors::BLACK);</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">return</span> head;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
@@ -146,7 +146,7 @@ $(document).ready(function(){initNavTree('_nibbler_8cpp_source.html',''); initRe
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    tail.<a class="code" href="class_a_entity.html#a4de390d62596a386c52a0ac1e28ae03e">setPos</a>(std::make_pair(x, y));</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    tail.<a class="code" href="class_a_entity.html#ae46771dd1354b5c4e4350d9a8c63df45">setTexturePath</a>(std::filesystem::absolute(std::filesystem::path(<span class="stringliteral">&quot;Src/Games/Nibbler/Resources/Textures/Snake/SnakeTail.png&quot;</span>)).<span class="keywordtype">string</span>());</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    tail.<a class="code" href="class_a_entity.html#a4150c9d56ce22e79c9d979392ab7ffec">setTermTexture</a>(<span class="charliteral">&#39;.&#39;</span>, Color::TermColors::GREEN, Color::TermColors::BLACK);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    tail.<a class="code" href="class_a_entity.html#a4150c9d56ce22e79c9d979392ab7ffec">setTermTexture</a>((<span class="keywordtype">char</span>)97, Color::TermColors::GREEN, Color::TermColors::BLACK);</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">return</span> tail;</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
@@ -155,7 +155,7 @@ $(document).ready(function(){initNavTree('_nibbler_8cpp_source.html',''); initRe
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="class_object.html">Object</a> fruit(Object::ENTITY_TYPE::BONUS);</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    fruit.<a class="code" href="class_a_entity.html#a4de390d62596a386c52a0ac1e28ae03e">setPos</a>(std::make_pair(x, y));</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    fruit.<a class="code" href="class_a_entity.html#a4150c9d56ce22e79c9d979392ab7ffec">setTermTexture</a>(<span class="charliteral">&#39;*&#39;</span>, Color::TermColors::YELLOW, Color::TermColors::BLACK);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    fruit.<a class="code" href="class_a_entity.html#a4150c9d56ce22e79c9d979392ab7ffec">setTermTexture</a>((<span class="keywordtype">char</span>)43, Color::TermColors::YELLOW, Color::TermColors::BLACK);</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">return</span> fruit;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>

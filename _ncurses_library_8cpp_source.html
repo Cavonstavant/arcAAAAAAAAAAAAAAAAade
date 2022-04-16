@@ -147,9 +147,9 @@ $(document).ready(function(){initNavTree('_ncurses_library_8cpp_source.html','')
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    attron(COLOR_PAIR(<a class="code" href="class_ncurses_library.html#a00f93e85255f5ff934b98074dcd302f5">_colors</a>));</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">if</span> (radius &lt;= 5)</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        mvaddch(pos.first, pos.second, <span class="charliteral">&#39;.&#39;</span>);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        mvaddch(pos.first, pos.second, (<span class="keywordtype">char</span>)102 | A_ALTCHARSET);</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        mvaddch(pos.first, pos.second, <span class="charliteral">&#39;*&#39;</span>);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        mvaddch(pos.first, pos.second, (<span class="keywordtype">char</span>)96 | A_ALTCHARSET);</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    attroff(COLOR_PAIR(<a class="code" href="class_ncurses_library.html#a00f93e85255f5ff934b98074dcd302f5">_colors</a>));</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="class_ncurses_library.html#a00f93e85255f5ff934b98074dcd302f5">_colors</a>++;</div>
@@ -167,7 +167,7 @@ $(document).ready(function(){initNavTree('_ncurses_library_8cpp_source.html','')
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                j == pos.second ||</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                i == pos.first + height - 1 ||</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                j == pos.second + width - 1)</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                mvaddch(i, j, <span class="charliteral">&#39;X&#39;</span>);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                mvaddch(i, j, ACS_CKBOARD);</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                mvaddch(i, j, <span class="charliteral">&#39; &#39;</span>);</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        }</div>
@@ -199,7 +199,7 @@ $(document).ready(function(){initNavTree('_ncurses_library_8cpp_source.html','')
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = pos.first; i &lt; pos.first + entity.<a class="code" href="class_i_entity.html#a4644cf0bd8a130b0dabd59bd9bda96f5">getSize</a>().first; i++) {</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = pos.second; j &lt; pos.second + entity.<a class="code" href="class_i_entity.html#a4644cf0bd8a130b0dabd59bd9bda96f5">getSize</a>().second; j++) {</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            mvaddch(i, j, texture);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            mvaddch(i, j, texture | A_ALTCHARSET);</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        }</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    }</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
