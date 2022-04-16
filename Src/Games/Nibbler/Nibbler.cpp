@@ -47,7 +47,7 @@ Player Nibbler::createNewHead(int x, int y)
 
     head.setPos(std::make_pair(x, y));
     head.setTexturePath(std::filesystem::absolute(std::filesystem::path("Src/Games/Nibbler/Resources/Textures/Snake/SnakeHead.png")).string());
-    head.setTermTexture('o', Color::TermColors::RED, Color::TermColors::BLACK);
+    head.setTermTexture((char)123, Color::TermColors::RED, Color::TermColors::BLACK);
     return head;
 }
 
@@ -57,7 +57,7 @@ Player Nibbler::createNewTail(int x, int y)
 
     tail.setPos(std::make_pair(x, y));
     tail.setTexturePath(std::filesystem::absolute(std::filesystem::path("Src/Games/Nibbler/Resources/Textures/Snake/SnakeTail.png")).string());
-    tail.setTermTexture('.', Color::TermColors::GREEN, Color::TermColors::BLACK);
+    tail.setTermTexture((char)97, Color::TermColors::GREEN, Color::TermColors::BLACK);
     return tail;
 }
 
@@ -66,7 +66,7 @@ Object Nibbler::createNewFruit(int x, int y)
     Object fruit(Object::ENTITY_TYPE::BONUS);
 
     fruit.setPos(std::make_pair(x, y));
-    fruit.setTermTexture('*', Color::TermColors::YELLOW, Color::TermColors::BLACK);
+    fruit.setTermTexture((char)43, Color::TermColors::YELLOW, Color::TermColors::BLACK);
     return fruit;
 }
 

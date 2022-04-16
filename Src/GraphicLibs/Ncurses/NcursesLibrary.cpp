@@ -58,9 +58,9 @@ bool NcursesLibrary::drawCircle(std::pair<int, int> pos, int radius, Color color
     attron(COLOR_PAIR(_colors));
 
     if (radius <= 5)
-        mvaddch(pos.first, pos.second, '.');
+        mvaddch(pos.first, pos.second, (char)102 | A_ALTCHARSET);
     else
-        mvaddch(pos.first, pos.second, '*');
+        mvaddch(pos.first, pos.second, (char)96 | A_ALTCHARSET);
 
     attroff(COLOR_PAIR(_colors));
     _colors++;
@@ -78,7 +78,7 @@ bool NcursesLibrary::drawRect(std::pair<int, int> pos, int width, int height, Co
                 j == pos.second ||
                 i == pos.first + height - 1 ||
                 j == pos.second + width - 1)
-                mvaddch(i, j, 'X');
+                mvaddch(i, j, ACS_CKBOARD);
             else
                 mvaddch(i, j, ' ');
         }
@@ -110,7 +110,7 @@ bool NcursesLibrary::drawEntity(IEntity &entity, std::pair<int, int> pos)
 
     for (int i = pos.first; i < pos.first + entity.getSize().first; i++) {
         for (int j = pos.second; j < pos.second + entity.getSize().second; j++) {
-            mvaddch(i, j, texture);
+            mvaddch(i, j, texture | A_ALTCHARSET);
         }
     }
 

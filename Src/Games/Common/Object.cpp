@@ -15,7 +15,7 @@ Object::Object(AEntity::ENTITY_TYPE type) : AEntity()
         _color.G = 255;
         _color.B = 0;
         _color.A = 255;
-        _termTexture = std::make_pair(type == BONUS ? 'o' : '.', std::make_pair(Color::TermColors::YELLOW, Color::TermColors::BLACK));
+        _termTexture = std::make_pair(type == BONUS ? (char)96 : (char)186, std::make_pair(Color::TermColors::YELLOW, Color::TermColors::BLACK));
     } else if (_type == WALL) {
         _color.R = 0;
         _color.G = 0;
