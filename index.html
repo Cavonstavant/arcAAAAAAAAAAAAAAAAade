@@ -141,9 +141,9 @@ Creating and adding your own game and graphical display</h1>
 </li>
 <li>Add the subdirectory to be compiled by adding it to the <code>Src/Games/CMakeLists.txt</code> file</li>
 <li>Create a class that inherits from the <code><a class="el" href="class_i_game.html" title="represents a Game instance (pacman, nibbler, ...)">IGame</a></code> interface</li>
-<li>Set its state to '<a class="el" href="class_i_game.html#a4a7309d86599d6e581f764233085c7dda43491564ebcfd38568918efbd6e840fd" title="Represents the game when running.">IGame::GameState::RUNNING</a>' when update is called for the first time</li>
-<li>Set its state to '<a class="el" href="class_i_game.html#a4a7309d86599d6e581f764233085c7dda09d4d696b4e935115b9313e3c412509a" title="Represents the game over.">IGame::GameState::STOPPED</a>' when the game is stopped</li>
-<li>All methods of <a class="el" href="class_i_game.html" title="represents a Game instance (pacman, nibbler, ...)">IGame</a> needs to be implemented</li>
+<li>Set its state to <code><a class="el" href="class_i_game.html#a4a7309d86599d6e581f764233085c7dda43491564ebcfd38568918efbd6e840fd" title="Represents the game when running.">IGame::GameState::RUNNING</a></code> when update is called for the first time</li>
+<li>Set its state to <code><a class="el" href="class_i_game.html#a4a7309d86599d6e581f764233085c7dda09d4d696b4e935115b9313e3c412509a" title="Represents the game over.">IGame::GameState::STOPPED</a></code> when the game is stopped</li>
+<li>All methods of <code><a class="el" href="class_i_game.html" title="represents a Game instance (pacman, nibbler, ...)">IGame</a></code> needs to be implemented</li>
 </ol>
 <p>In order to create your own graphical display and use it inside arcAAAAAAAAAAAAAAAAade, you need to do multiple things:</p>
 <ol type="1">
@@ -157,7 +157,7 @@ Creating and adding your own game and graphical display</h1>
 </li>
 <li>Add the subdirectory to be compiled by adding it to the <code>Src/GraphicLibs/CMakeLists.txt</code> file</li>
 <li>Create a class that inherits from the <code><a class="el" href="class_i_graph.html" title="represents a generic graphical library">IGraph</a></code> interface</li>
-<li>All methods of IDisplay needs to be implemented</li>
+<li>All methods of <code><a class="el" href="class_i_graph.html" title="represents a generic graphical library">IGraph</a></code> needs to be implemented</li>
 </ol>
 <h1><a class="anchor" id="autotoc_md9"></a>
 Misc</h1>
