@@ -52,9 +52,9 @@ In order to create your own game and use it inside arcAAAAAAAAAAAAAAAAade, you n
    3. INCLUDE_DIRS: The `include` path to the game headers files
 3. Add the subdirectory to be compiled by adding it to the `Src/Games/CMakeLists.txt` file
 4. Create a class that inherits from the `IGame` interface
-5. Set its state to 'IGame::GameState::RUNNING' when update is called for the first time
-6. Set its state to 'IGame::GameState::STOPPED' when the game is stopped
-7. All methods of IGame needs to be implemented
+5. Set its state to `IGame::GameState::RUNNING` when update is called for the first time
+6. Set its state to `IGame::GameState::STOPPED` when the game is stopped
+7. All methods of `IGame` needs to be implemented
 
 In order to create your own graphical display and use it inside arcAAAAAAAAAAAAAAAAade, you need to do multiple things:
 
@@ -66,7 +66,7 @@ In order to create your own graphical display and use it inside arcAAAAAAAAAAAAA
    4. DEPS: The library dependencies (e.g: SDL2::Main SDL2::Image , ${SFML_LIBRARIES} etc..)
 3. Add the subdirectory to be compiled by adding it to the `Src/GraphicLibs/CMakeLists.txt` file
 4. Create a class that inherits from the `IGraph` interface
-5. All methods of IDisplay needs to be implemented
+5. All methods of `IGraph` needs to be implemented
 
 ## Misc
 
